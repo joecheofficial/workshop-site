@@ -7,7 +7,7 @@ type Fbq = {
   push: Fbq
   loaded: boolean
   version: string
-  disablePushState: boolean
+  disablePushState?: boolean
   consent?: unknown
 }
 
@@ -32,7 +32,6 @@ export function ensureFbqStub(): void {
   n.loaded = true
   n.version = '2.0'
   n.queue = []
-  n.disablePushState = true
   window.fbq = n
 }
 

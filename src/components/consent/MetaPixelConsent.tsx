@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { usePathname } from 'next/navigation'
 import { CONSENT_REQUIRED_COOKIE, META_CONSENT_COOKIE, cookieDomainFor, isLocalHost, parseCookieHeader, pickConsentValue, serializeCookie } from '@/lib/meta-consent'
 import { ensureFbqStub, initPixelsOnce, loadFbeventsOnce, trackMeta } from '@/lib/meta-pixel'
 
@@ -19,8 +18,7 @@ function writeConsent(value: 'granted' | 'denied'): void {
 }
 
 export default function MetaPixelConsent() {
-  const pathname = usePathname()
-  const lastTrackedPathname = useRef<string | null>(null)
+  const initialPageViewSent = useRef(false)
   const [showBanner, setShowBanner] = useState<boolean | null>(null)
 
   useEffect(() => {
@@ -66,11 +64,16 @@ export default function MetaPixelConsent() {
     }
   }, [])
 
+  // PageView: fire once for the initial page load only. fbevents fires a
+  // single manual PageView per pixel per document and ignores repeats, so
+  // client-side route changes are tracked by fbevents' own pushState handler
+  // (automatic SPA PageView, once per URL change). Do not set
+  // fbq.disablePushState or SPA navigations stop being tracked.
   useEffect(() => {
-    if (pathname === null || pathname === lastTrackedPathname.current) return
-    lastTrackedPathname.current = pathname
+    if (initialPageViewSent.current) return
+    initialPageViewSent.current = true
     trackMeta('PageView')
-  }, [pathname])
+  }, [])
 
   const choose = (value: 'granted' | 'denied') => {
     writeConsent(value)
