@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "gitCommitHash": "17dba3b0bdf386e0f275919e58ef3d58a44768a0",
-  "generatedAt": "2026-10-08T20:10:28.193Z",
+  "gitCommitHash": "1210e01bd4839b23ab211d4c5025148955beb7cd",
+  "generatedAt": "2026-10-12T20:06:45.560Z",
   "files": {
     ".claude/settings.json": {
       "filePath": ".claude/settings.json",
@@ -235,12 +235,12 @@
     },
     "docs/giveaways/PROCESS.md": {
       "filePath": "docs/giveaways/PROCESS.md",
-      "contentHash": "7a06422d7f74e8b870dcfabe5ca096ca402d8d5dc95f54d2992a783f721b48ef",
+      "contentHash": "7a24b85771d46b20610c7bced10f50ae4777c5cea7d81fd687c0f877bdc7f9a9",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 529,
+      "totalLines": 540,
       "hasStructuralAnalysis": true
     },
     "docs/giveaways/USEFULNESS-RUBRIC.md": {
@@ -419,12 +419,12 @@
     },
     "public/2x-with-ai-playbook.html": {
       "filePath": "public/2x-with-ai-playbook.html",
-      "contentHash": "7e9d62bf7598f0dcd2900a0cc1eaf0109c5dedc2f149bce2775f7447bb808dc3",
+      "contentHash": "21f2858ffcc82ea1a896f037084f04fa8ed84af1291aa08c78e47651fce51749",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 1449,
+      "totalLines": 1450,
       "hasStructuralAnalysis": false
     },
     "public/2x-with-ai-playbook.html.kg.json": {
@@ -439,12 +439,12 @@
     },
     "public/ai-os-architecture.html": {
       "filePath": "public/ai-os-architecture.html",
-      "contentHash": "654cad6a4749f7f10bb1560e2771508eb5ff9ba0f7925468b615ac47448f3215",
+      "contentHash": "96509256960fa5c550cdfc6ce60bd26671893a0e0c975de934b494ae91d1a39f",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 202,
+      "totalLines": 203,
       "hasStructuralAnalysis": false
     },
     "public/ai-os-architecture.html.kg.json": {
@@ -459,12 +459,12 @@
     },
     "public/automation-audit-sample.html": {
       "filePath": "public/automation-audit-sample.html",
-      "contentHash": "2f012d04a43f08b52cb6f7a0cfa1b84812dcfeaf5e793b54283f8c710f9f53c8",
+      "contentHash": "02d84e74f2f830730e3a946a612613a1d4803c38da43e04e8b27b308630d4182",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 651,
+      "totalLines": 652,
       "hasStructuralAnalysis": false
     },
     "public/automation-audit-sample.html.kg.json": {
@@ -489,12 +489,12 @@
     },
     "public/coach-kit-onboarding-matrix.html": {
       "filePath": "public/coach-kit-onboarding-matrix.html",
-      "contentHash": "73bdadb7a7bc9f06c0eb4eec147deea8f7fff09be57b6c9191f204369c2db128",
+      "contentHash": "789ffcaecd80f4b7446835e4579d33949000db6b9f989fb0a429bfa4f6cf5fb1",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 1109,
+      "totalLines": 1110,
       "hasStructuralAnalysis": false
     },
     "public/coach-kit-onboarding-matrix.html.kg.json": {
@@ -566,12 +566,12 @@
     },
     "public/hated-task-prompts.html": {
       "filePath": "public/hated-task-prompts.html",
-      "contentHash": "0dbc443ab669bcc59d5e6eebd40c1557841910dc37a6a61176db395ee7c40230",
+      "contentHash": "bb1b8515349466f4099ce45868eac94645bb90ba99b62885a3000cc4db20e81e",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 371,
+      "totalLines": 372,
       "hasStructuralAnalysis": false
     },
     "public/hated-task-prompts.html.kg.json": {
@@ -706,12 +706,12 @@
     },
     "public/lead-magnet.html": {
       "filePath": "public/lead-magnet.html",
-      "contentHash": "7a92a9f6a6d7970496f01672c93bc92c430200a4408cfa7ddabce08e0a78946d",
+      "contentHash": "e583855e4c3ab8e3a9e0cd3eb440bc6b6fffa24efca71f1a952a7d5f23be390d",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 817,
+      "totalLines": 818,
       "hasStructuralAnalysis": false
     },
     "public/lead-magnet.html.kg.json": {
@@ -733,6 +733,16 @@
       "exports": [],
       "totalLines": 49,
       "hasStructuralAnalysis": false
+    },
+    "public/mhq-consent.js": {
+      "filePath": "public/mhq-consent.js",
+      "contentHash": "690d6dbea62986688db0d76ca56ab47bcd528ff98e4987b33624b6d517444c2b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 161,
+      "hasStructuralAnalysis": true
     },
     "public/unlearning-success.pdf.kg.json": {
       "filePath": "public/unlearning-success.pdf.kg.json",
@@ -1050,7 +1060,7 @@
     },
     "src/app/100-ai/page.tsx": {
       "filePath": "src/app/100-ai/page.tsx",
-      "contentHash": "d81dae40c8d9e44771d70e8c9831f4bac582e3b9982f87cf4e927ceef86d556f",
+      "contentHash": "05581180fd7574f075f53e488b14ae36c26bf3e9a3433e0203e4756709ed04cd",
       "functions": [
         {
           "name": "getCountdown",
@@ -1063,11 +1073,17 @@
           "name": "PassiveIncome100Page",
           "params": [],
           "exported": true,
-          "lineCount": 271
+          "lineCount": 272
         }
       ],
       "classes": [],
       "imports": [
+        {
+          "source": "@/lib/meta-pixel",
+          "specifiers": [
+            "trackMeta"
+          ]
+        },
         {
           "source": "react",
           "specifiers": [
@@ -1085,12 +1101,12 @@
       "exports": [
         "PassiveIncome100Page"
       ],
-      "totalLines": 317,
+      "totalLines": 320,
       "hasStructuralAnalysis": true
     },
     "src/app/ai-agent-income/AiAgentIncomeCheckoutForm.tsx": {
       "filePath": "src/app/ai-agent-income/AiAgentIncomeCheckoutForm.tsx",
-      "contentHash": "3d401c18c480eefb820bdb9628f75b3e8bb1ca93171d52fd44dcd6423dd0e40c",
+      "contentHash": "ab904a1a36656bc0e125d52fd3776bb286fcd80db8ace64120efc6b4b4ad5251",
       "functions": [
         {
           "name": "AiAgentIncomeCheckoutForm",
@@ -1098,11 +1114,17 @@
             "{ compact = false }"
           ],
           "exported": true,
-          "lineCount": 66
+          "lineCount": 68
         }
       ],
       "classes": [],
       "imports": [
+        {
+          "source": "@/lib/meta-pixel",
+          "specifiers": [
+            "trackMeta"
+          ]
+        },
         {
           "source": "react",
           "specifiers": [
@@ -1120,18 +1142,18 @@
       "exports": [
         "AiAgentIncomeCheckoutForm"
       ],
-      "totalLines": 76,
+      "totalLines": 80,
       "hasStructuralAnalysis": true
     },
     "src/app/ai-agent-income/page.tsx": {
       "filePath": "src/app/ai-agent-income/page.tsx",
-      "contentHash": "cc6895fc9959057a46bef062463c2437c2533f48ddd8b54bf30abb6ad5993d74",
+      "contentHash": "d81411df046fb1ea6f198dc739b559c4ae6f7d372b765ef3dd4e1909b9905c6d",
       "functions": [
         {
           "name": "AiAgentIncomePage",
           "params": [],
           "exported": true,
-          "lineCount": 139
+          "lineCount": 140
         }
       ],
       "classes": [],
@@ -1153,13 +1175,19 @@
           "specifiers": [
             "PromptPackRequestForm"
           ]
+        },
+        {
+          "source": "./PurchaseTracker",
+          "specifiers": [
+            "PurchaseTracker"
+          ]
         }
       ],
       "exports": [
         "metadata",
         "AiAgentIncomePage"
       ],
-      "totalLines": 177,
+      "totalLines": 179,
       "hasStructuralAnalysis": true
     },
     "src/app/ai-agent-income/PromptPackRequestForm.tsx": {
@@ -1190,6 +1218,38 @@
       "totalLines": 51,
       "hasStructuralAnalysis": true
     },
+    "src/app/ai-agent-income/PurchaseTracker.tsx": {
+      "filePath": "src/app/ai-agent-income/PurchaseTracker.tsx",
+      "contentHash": "7e903867f768d5a9b9aa78242aa54bc49b7e8c93af8eb488963d20f4eed2ed5b",
+      "functions": [
+        {
+          "name": "PurchaseTracker",
+          "params": [],
+          "exported": true,
+          "lineCount": 7
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "useEffect"
+          ]
+        },
+        {
+          "source": "@/lib/meta-pixel",
+          "specifiers": [
+            "fetchAndTrackPurchase"
+          ]
+        }
+      ],
+      "exports": [
+        "PurchaseTracker"
+      ],
+      "totalLines": 13,
+      "hasStructuralAnalysis": true
+    },
     "src/app/ai-os-architecture/page.tsx": {
       "filePath": "src/app/ai-os-architecture/page.tsx",
       "contentHash": "4a5607d151fe502ed000969fbe6f4bf74c4171f228243442e011a88d1bb29b2f",
@@ -1212,7 +1272,7 @@
     },
     "src/app/api/ai-agent-income/checkout/route.ts": {
       "filePath": "src/app/api/ai-agent-income/checkout/route.ts",
-      "contentHash": "3713bc8268822a24a3c7e3c6b9ec798c9a2155f2b882b0468f6c17e7780c1dad",
+      "contentHash": "8cdc5a7540405fc5639a533172db1989d212796f55cbc773fa730a8c7ddece36",
       "functions": [
         {
           "name": "requireEnv",
@@ -1236,11 +1296,17 @@
             "request"
           ],
           "exported": true,
-          "lineCount": 59
+          "lineCount": 65
         }
       ],
       "classes": [],
       "imports": [
+        {
+          "source": "@/lib/meta-consent",
+          "specifiers": [
+            "buildMetaCheckoutMetadata"
+          ]
+        },
         {
           "source": "next/server",
           "specifiers": [
@@ -1272,7 +1338,7 @@
         "runtime",
         "POST"
       ],
-      "totalLines": 93,
+      "totalLines": 100,
       "hasStructuralAnalysis": true
     },
     "src/app/api/ai-agent-income/prompt-pack/request/route.ts": {
@@ -1407,7 +1473,7 @@
     },
     "src/app/api/ai-agent-income/webhook/route.ts": {
       "filePath": "src/app/api/ai-agent-income/webhook/route.ts",
-      "contentHash": "9a64f20df1ce2b168a76349ae6cac5cb38d9f77e0bf76a539bda39edcf128d62",
+      "contentHash": "c169aab63beb22992b0ee42824eb10c24fa2a59bb170e01dc424c13135ef0125",
       "functions": [
         {
           "name": "getWebhookSecret",
@@ -1431,6 +1497,14 @@
           "returnType": "string | null",
           "exported": false,
           "lineCount": 13
+        },
+        {
+          "name": "isPlaybook",
+          "params": [
+            "metadata"
+          ],
+          "exported": false,
+          "lineCount": 3
         },
         {
           "name": "emailForCustomer",
@@ -1490,7 +1564,7 @@
             "request"
           ],
           "exported": true,
-          "lineCount": 86
+          "lineCount": 87
         }
       ],
       "classes": [],
@@ -1531,7 +1605,46 @@
         "maxDuration",
         "POST"
       ],
-      "totalLines": 213,
+      "totalLines": 223,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/api/consent/region/route.ts": {
+      "filePath": "src/app/api/consent/region/route.ts",
+      "contentHash": "0085149f61fea6b1744c2c1769cd7617bc5522d469ad4c9174115da600c92347",
+      "functions": [
+        {
+          "name": "GET",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextResponse"
+          ]
+        },
+        {
+          "source": "@/lib/meta-consent",
+          "specifiers": [
+            "CONSENT_REQUIRED_COOKIE",
+            "isConsentRequiredCountry",
+            "isLocalHost",
+            "serializeCookie"
+          ]
+        }
+      ],
+      "exports": [
+        "runtime",
+        "dynamic",
+        "GET"
+      ],
+      "totalLines": 18,
       "hasStructuralAnalysis": true
     },
     "src/app/api/events/[slug]/calendar/route.ts": {
@@ -1805,7 +1918,7 @@
     },
     "src/app/api/events/checkout-session/route.ts": {
       "filePath": "src/app/api/events/checkout-session/route.ts",
-      "contentHash": "e8c046fe9e1e4d1d2b943abe62937102149af3504d4c00c0c5385a4200efaec9",
+      "contentHash": "be2e2320e4193680c95414e20753238b023c23c4f0bed980ff7fe961470d9faf",
       "functions": [
         {
           "name": "getBaseUrl",
@@ -1821,11 +1934,17 @@
             "request"
           ],
           "exported": true,
-          "lineCount": 432
+          "lineCount": 443
         }
       ],
       "classes": [],
       "imports": [
+        {
+          "source": "@/lib/meta-consent",
+          "specifiers": [
+            "buildMetaCheckoutMetadata"
+          ]
+        },
         {
           "source": "next/server",
           "specifiers": [
@@ -1954,7 +2073,7 @@
         "runtime",
         "POST"
       ],
-      "totalLines": 479,
+      "totalLines": 491,
       "hasStructuralAnalysis": true
     },
     "src/app/api/events/finalize-registration/route.ts": {
@@ -2791,17 +2910,18 @@
     },
     "src/app/api/lead-magnet/route.ts": {
       "filePath": "src/app/api/lead-magnet/route.ts",
-      "contentHash": "d7fb80bd824029a3b6f214a96d9f0ff19b06600fdd6d4754c74bcbcdfca85728",
+      "contentHash": "cd5206fdd8cc8ea46499f91253736dd69e39cf29600e2750356fbf0dd490b12a",
       "functions": [
         {
           "name": "sendViaResend",
           "params": [
             "email",
             "source",
-            "idempotencyKey"
+            "idempotencyKey",
+            "generic"
           ],
           "exported": false,
-          "lineCount": 551
+          "lineCount": 571
         },
         {
           "name": "ingestIntoCrm",
@@ -2818,7 +2938,7 @@
             "request"
           ],
           "exported": true,
-          "lineCount": 126
+          "lineCount": 158
         }
       ],
       "classes": [],
@@ -2904,12 +3024,21 @@
             "buildQuizGiveawayEmail",
             "isQuizGiveawaySource"
           ]
+        },
+        {
+          "source": "@/lib/generic-giveaway-email",
+          "specifiers": [
+            "buildGenericGiveawayEmail",
+            "isValidManychatSecret",
+            "sanitizeGiveawayName",
+            "validateGiveawayLink"
+          ]
         }
       ],
       "exports": [
         "POST"
       ],
-      "totalLines": 734,
+      "totalLines": 792,
       "hasStructuralAnalysis": true
     },
     "src/app/api/lead-magnets/claudemd/route 2.ts": {
@@ -3087,6 +3216,61 @@
         "POST"
       ],
       "totalLines": 161,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/api/meta/purchase/route.ts": {
+      "filePath": "src/app/api/meta/purchase/route.ts",
+      "contentHash": "f9389454dd9f4bdf810e4862d74c6040b10af235648a4a5f075d30fdc9464587",
+      "functions": [
+        {
+          "name": "GET",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 20
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextResponse"
+          ]
+        },
+        {
+          "source": "@/lib/rate-limit",
+          "specifiers": [
+            "checkRateLimit",
+            "getClientIp"
+          ]
+        },
+        {
+          "source": "@/lib/stripe",
+          "specifiers": [
+            "createStripeClient"
+          ]
+        },
+        {
+          "source": "@/app/api/ai-agent-income/stripe",
+          "specifiers": [
+            "createAiAgentIncomeStripeClient"
+          ]
+        },
+        {
+          "source": "@/lib/meta-consent",
+          "specifiers": [
+            "stripeAmountToMajor"
+          ]
+        }
+      ],
+      "exports": [
+        "runtime",
+        "dynamic",
+        "GET"
+      ],
+      "totalLines": 30,
       "hasStructuralAnalysis": true
     },
     "src/app/api/stripe/webhook/route.ts": {
@@ -4241,17 +4425,23 @@
     },
     "src/app/giveaways/client-launch-checklist/LeadMagnetExampleForm.tsx": {
       "filePath": "src/app/giveaways/client-launch-checklist/LeadMagnetExampleForm.tsx",
-      "contentHash": "b8f25794f0f3f68f7d496160a497d932cdba9dc48f85533a81bae2bef175ef1d",
+      "contentHash": "1fb5908455e33cb121b76ab993f8ef5381268ba52629843e3d27ac59cc80f1a8",
       "functions": [
         {
           "name": "LeadMagnetExampleForm",
           "params": [],
           "exported": true,
-          "lineCount": 122
+          "lineCount": 123
         }
       ],
       "classes": [],
       "imports": [
+        {
+          "source": "@/lib/meta-pixel",
+          "specifiers": [
+            "trackMeta"
+          ]
+        },
         {
           "source": "react",
           "specifiers": [
@@ -4262,7 +4452,7 @@
       "exports": [
         "LeadMagnetExampleForm"
       ],
-      "totalLines": 134,
+      "totalLines": 137,
       "hasStructuralAnalysis": true
     },
     "src/app/giveaways/client-launch-checklist/page.tsx": {
@@ -4712,17 +4902,23 @@
     },
     "src/app/giveaways/cult-brand-playbook/GiveawayForm.tsx": {
       "filePath": "src/app/giveaways/cult-brand-playbook/GiveawayForm.tsx",
-      "contentHash": "1abce079954c7f328ad4600fb1d15041d099a41990ba72ca7e5e4f6b9ea604c3",
+      "contentHash": "4540d9e6d1036f528b3939a05191baf42cf2031bfd5ac2684fb21e5edc1d5760",
       "functions": [
         {
           "name": "GiveawayForm",
           "params": [],
           "exported": true,
-          "lineCount": 61
+          "lineCount": 62
         }
       ],
       "classes": [],
       "imports": [
+        {
+          "source": "@/lib/meta-pixel",
+          "specifiers": [
+            "trackMeta"
+          ]
+        },
         {
           "source": "react",
           "specifiers": [
@@ -4739,7 +4935,7 @@
       "exports": [
         "GiveawayForm"
       ],
-      "totalLines": 67,
+      "totalLines": 70,
       "hasStructuralAnalysis": true
     },
     "src/app/giveaways/cult-brand-playbook/page.tsx": {
@@ -5771,7 +5967,7 @@
     },
     "src/app/giveaways/guardog/layout.tsx": {
       "filePath": "src/app/giveaways/guardog/layout.tsx",
-      "contentHash": "84f4b3f7737550ab6c6b7d88d58d529e56f2557958ac4bd66b4a708ff996ac45",
+      "contentHash": "99e0f26590d097a39ef7ba796ed39575e516feb3c0d84bda10063036bfdaab73",
       "functions": [
         {
           "name": "GuardogLayout",
@@ -5806,7 +6002,7 @@
     },
     "src/app/giveaways/guardog/page.tsx": {
       "filePath": "src/app/giveaways/guardog/page.tsx",
-      "contentHash": "052a9e78c7f6ad96f1b5316c6a598a9fea07f57e14334dc4fd03732f6a205619",
+      "contentHash": "f9bf1f87c99a2868d856e8881acc99939b9e2b796c0627f2f8e2b76a5f3572d3",
       "functions": [
         {
           "name": "useMagnet",
@@ -6217,17 +6413,23 @@
     },
     "src/app/giveaways/lead-machine/LeadMachineForm.tsx": {
       "filePath": "src/app/giveaways/lead-machine/LeadMachineForm.tsx",
-      "contentHash": "f34e555bab4455e433c2154e53ea57abd1c9ddfe40324f6fad6e8c3ae459239f",
+      "contentHash": "43a9ee1f2b7945a9f81a3bb09d4f741d43b363c7bfb19f2426b367cb533e29b3",
       "functions": [
         {
           "name": "LeadMachineForm",
           "params": [],
           "exported": true,
-          "lineCount": 87
+          "lineCount": 88
         }
       ],
       "classes": [],
       "imports": [
+        {
+          "source": "@/lib/meta-pixel",
+          "specifiers": [
+            "trackMeta"
+          ]
+        },
         {
           "source": "react",
           "specifiers": [
@@ -6244,7 +6446,7 @@
       "exports": [
         "LeadMachineForm"
       ],
-      "totalLines": 97,
+      "totalLines": 100,
       "hasStructuralAnalysis": true
     },
     "src/app/giveaways/lead-machine/page.tsx": {
@@ -6345,17 +6547,23 @@
     },
     "src/app/giveaways/lead-magnet/page.tsx": {
       "filePath": "src/app/giveaways/lead-magnet/page.tsx",
-      "contentHash": "9b65c73f93e88469dd13663f2ffb8ebd351111591d004bf7171fce6c3b77efa7",
+      "contentHash": "24919f82fe3042e8d8f1e36855929a7ca543424e09ccf84c801116e47c4907ae",
       "functions": [
         {
           "name": "LeadMagnetPage",
           "params": [],
           "exported": true,
-          "lineCount": 213
+          "lineCount": 214
         }
       ],
       "classes": [],
       "imports": [
+        {
+          "source": "@/lib/meta-pixel",
+          "specifiers": [
+            "trackMeta"
+          ]
+        },
         {
           "source": "react",
           "specifiers": [
@@ -6378,7 +6586,7 @@
       "exports": [
         "LeadMagnetPage"
       ],
-      "totalLines": 230,
+      "totalLines": 233,
       "hasStructuralAnalysis": true
     },
     "src/app/giveaways/logo-maker-guide/layout.tsx": {
@@ -6473,17 +6681,23 @@
     },
     "src/app/giveaways/maccleaner/GiveawayForm.tsx": {
       "filePath": "src/app/giveaways/maccleaner/GiveawayForm.tsx",
-      "contentHash": "88330ff356bf2172c623d3caa6073a4a8c2ad1b52f5c29f22e6cf1051f1b8bfa",
+      "contentHash": "983e7e5291d60492e2db43f801b8615f170d06a4e8911905ad51c5b1f39edf9a",
       "functions": [
         {
           "name": "GiveawayForm",
           "params": [],
           "exported": true,
-          "lineCount": 71
+          "lineCount": 72
         }
       ],
       "classes": [],
       "imports": [
+        {
+          "source": "@/lib/meta-pixel",
+          "specifiers": [
+            "trackMeta"
+          ]
+        },
         {
           "source": "react",
           "specifiers": [
@@ -6500,7 +6714,7 @@
       "exports": [
         "GiveawayForm"
       ],
-      "totalLines": 79,
+      "totalLines": 82,
       "hasStructuralAnalysis": true
     },
     "src/app/giveaways/maccleaner/layout.tsx": {
@@ -6643,7 +6857,7 @@
     },
     "src/app/giveaways/ray-dalio-council/layout.tsx": {
       "filePath": "src/app/giveaways/ray-dalio-council/layout.tsx",
-      "contentHash": "0a7e9fb3e652462c61b1543a99cb2f346fc130ad02512c93464f532080e2708a",
+      "contentHash": "ababdba810f850a309690c5922112b844ea4574308e9faa8334ccc47b7d8b33c",
       "functions": [
         {
           "name": "RayDalioCouncilLayout",
@@ -6678,7 +6892,7 @@
     },
     "src/app/giveaways/ray-dalio-council/page.tsx": {
       "filePath": "src/app/giveaways/ray-dalio-council/page.tsx",
-      "contentHash": "8011d1d9d8d8a0e5c77feb8ef67fee133364cfac9e8a13feff03010a74a659c3",
+      "contentHash": "7a644985656aa42c4b6caf9ff993ee2606cd7107970391478f4bd2518ab88ff3",
       "functions": [
         {
           "name": "useMagnet",
@@ -6692,7 +6906,7 @@
           "name": "RayDalioCouncilPage",
           "params": [],
           "exported": true,
-          "lineCount": 600
+          "lineCount": 603
         },
         {
           "name": "MastermindCTA",
@@ -6756,7 +6970,7 @@
       "exports": [
         "RayDalioCouncilPage"
       ],
-      "totalLines": 805,
+      "totalLines": 808,
       "hasStructuralAnalysis": true
     },
     "src/app/giveaways/speak-human/layout.tsx": {
@@ -7293,7 +7507,7 @@
     },
     "src/app/giveaways/web-design-arsenal/page.tsx": {
       "filePath": "src/app/giveaways/web-design-arsenal/page.tsx",
-      "contentHash": "031cd3f32a0a891e455d64d246b6a9f6296f5e840a802e2a9833c34cb4cd0344",
+      "contentHash": "bb786ddb58436982afce9b5c65ee77731a8a0f218ce1f606fb2e9fe9145873cd",
       "functions": [
         {
           "name": "useMagnet",
@@ -7307,7 +7521,7 @@
           "name": "WebDesignArsenalPage",
           "params": [],
           "exported": true,
-          "lineCount": 728
+          "lineCount": 729
         },
         {
           "name": "MastermindCTA",
@@ -7334,6 +7548,12 @@
       ],
       "classes": [],
       "imports": [
+        {
+          "source": "@/lib/meta-pixel",
+          "specifiers": [
+            "trackMeta"
+          ]
+        },
         {
           "source": "react",
           "specifiers": [
@@ -7377,7 +7597,7 @@
       "exports": [
         "WebDesignArsenalPage"
       ],
-      "totalLines": 1015,
+      "totalLines": 1018,
       "hasStructuralAnalysis": true
     },
     "src/app/globals.css": {
@@ -7392,7 +7612,7 @@
     },
     "src/app/illy/content.ts": {
       "filePath": "src/app/illy/content.ts",
-      "contentHash": "9695ff78f5f92fa39878483274bd50763ac6636d136acfb2bea10ddaf454857d",
+      "contentHash": "a55a2b29e79b9f45ab5b4a3120a007189cfbac94a6e96c19e40efd37991311d6",
       "functions": [],
       "classes": [],
       "imports": [],
@@ -7564,7 +7784,7 @@
     },
     "src/app/layout.tsx": {
       "filePath": "src/app/layout.tsx",
-      "contentHash": "10774aff094ae9fa70b1abd2d40823cd3d438f2ef7b4ee8365d9cfaa982003ca",
+      "contentHash": "0003a55b7e14aa902ae3dd3055f64fe4239e532c593ee698e2d04a62f40c2c8c",
       "functions": [
         {
           "name": "RootLayout",
@@ -7572,7 +7792,7 @@
             "{\n  children,\n}"
           ],
           "exported": true,
-          "lineCount": 24
+          "lineCount": 14
         }
       ],
       "classes": [],
@@ -7590,9 +7810,9 @@
           ]
         },
         {
-          "source": "next/script",
+          "source": "@/components/consent/MetaPixelConsent",
           "specifiers": [
-            "Script"
+            "MetaPixelConsent"
           ]
         },
         {
@@ -7610,7 +7830,7 @@
         "metadata",
         "RootLayout"
       ],
-      "totalLines": 73,
+      "totalLines": 63,
       "hasStructuralAnalysis": true
     },
     "src/app/lead-magnets/layout.tsx": {
@@ -7673,17 +7893,23 @@
     },
     "src/app/lead-magnets/ultimate-claudemd/page.tsx": {
       "filePath": "src/app/lead-magnets/ultimate-claudemd/page.tsx",
-      "contentHash": "4cfc944c288c7230be44850ba7d769cc3985f5b999b80ad7cd94bc219b86d9de",
+      "contentHash": "a7af75b19f52e1b889f49d0afdf3cf67e7f78c077d793aa3851948b4a0eb0037",
       "functions": [
         {
           "name": "UltimateClaudeMDPage",
           "params": [],
           "exported": true,
-          "lineCount": 176
+          "lineCount": 177
         }
       ],
       "classes": [],
       "imports": [
+        {
+          "source": "@/lib/meta-pixel",
+          "specifiers": [
+            "trackMeta"
+          ]
+        },
         {
           "source": "react",
           "specifiers": [
@@ -7700,7 +7926,7 @@
       "exports": [
         "UltimateClaudeMDPage"
       ],
-      "totalLines": 190,
+      "totalLines": 193,
       "hasStructuralAnalysis": true
     },
     "src/app/page.tsx": {
@@ -9922,6 +10148,85 @@
       "totalLines": 158,
       "hasStructuralAnalysis": true
     },
+    "src/components/consent/MetaPixelConsent.tsx": {
+      "filePath": "src/components/consent/MetaPixelConsent.tsx",
+      "contentHash": "a39fbcff5ff77daecc58a6ac2755fe947004b4a63e15adf47d44fc671a29e3dd",
+      "functions": [
+        {
+          "name": "requiresConsent",
+          "params": [],
+          "returnType": "boolean",
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "expireHostConsent",
+          "params": [],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "writeConsent",
+          "params": [
+            "value"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "MetaPixelConsent",
+          "params": [],
+          "exported": true,
+          "lineCount": 80
+        },
+        {
+          "name": "CookieSettingsLink",
+          "params": [],
+          "exported": true,
+          "lineCount": 11
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "useEffect",
+            "useRef",
+            "useState"
+          ]
+        },
+        {
+          "source": "@/lib/meta-consent",
+          "specifiers": [
+            "CONSENT_REQUIRED_COOKIE",
+            "META_CONSENT_COOKIE",
+            "cookieDomainFor",
+            "isLocalHost",
+            "parseCookieHeader",
+            "pickConsentValue",
+            "serializeCookie"
+          ]
+        },
+        {
+          "source": "@/lib/meta-pixel",
+          "specifiers": [
+            "ensureFbqStub",
+            "initPixelsOnce",
+            "loadFbeventsOnce",
+            "trackMeta"
+          ]
+        }
+      ],
+      "exports": [
+        "MetaPixelConsent",
+        "CookieSettingsLink"
+      ],
+      "totalLines": 112,
+      "hasStructuralAnalysis": true
+    },
     "src/components/events/ask-an-ai-expert-quotes.ts": {
       "filePath": "src/components/events/ask-an-ai-expert-quotes.ts",
       "contentHash": "038b7b3deaff449e5606a3a6b2aeb62094906c5f169539eb483def01116674bc",
@@ -10226,7 +10531,7 @@
     },
     "src/components/events/EventRegistrationSection.tsx": {
       "filePath": "src/components/events/EventRegistrationSection.tsx",
-      "contentHash": "fb4bf63b4d78e10c66e3d692e03cfd4d8238f3f89fad0ce23a75ee4699b4193f",
+      "contentHash": "eb456dabfce6dcf5a9334067ef962c3d15a651dc829e1cead84976fb966c4e68",
       "functions": [
         {
           "name": "useAnimatedNumber",
@@ -10244,11 +10549,18 @@
             "{\n  event,\n  publishableKey,\n  initialPromoCode,\n  initialPromoAmount,\n  initialPromoMessage,\n}"
           ],
           "exported": true,
-          "lineCount": 914
+          "lineCount": 919
         }
       ],
       "classes": [],
       "imports": [
+        {
+          "source": "@/lib/meta-pixel",
+          "specifiers": [
+            "fetchAndTrackPurchase",
+            "trackMeta"
+          ]
+        },
         {
           "source": "react",
           "specifiers": [
@@ -10317,7 +10629,7 @@
       "exports": [
         "EventRegistrationSection"
       ],
-      "totalLines": 1020,
+      "totalLines": 1027,
       "hasStructuralAnalysis": true
     },
     "src/components/events/HeroVideo.tsx": {
@@ -10385,7 +10697,7 @@
     },
     "src/components/events/WaitlistJoinForm.tsx": {
       "filePath": "src/components/events/WaitlistJoinForm.tsx",
-      "contentHash": "48e5a4d83b444086ab18f385a563eaada1a57644cdb1b6e4dbeeaa1a6dd9b5f4",
+      "contentHash": "4662f3b294ba3131ddaadbb4d679e287854f519cc2aa7fd2b44193481476e61a",
       "functions": [
         {
           "name": "WaitlistJoinForm",
@@ -10393,11 +10705,17 @@
             "{ durationLabel, eventSlug, eventTitle, initialName = '', initialEmail = '' }"
           ],
           "exported": true,
-          "lineCount": 130
+          "lineCount": 131
         }
       ],
       "classes": [],
       "imports": [
+        {
+          "source": "@/lib/meta-pixel",
+          "specifiers": [
+            "trackMeta"
+          ]
+        },
         {
           "source": "react",
           "specifiers": [
@@ -10415,7 +10733,7 @@
       "exports": [
         "WaitlistJoinForm"
       ],
-      "totalLines": 144,
+      "totalLines": 147,
       "hasStructuralAnalysis": true
     },
     "src/components/giveaways/FreeAiToolPage.tsx": {
@@ -10588,7 +10906,7 @@
     },
     "src/components/giveaways/GiveawayEmailModal.tsx": {
       "filePath": "src/components/giveaways/GiveawayEmailModal.tsx",
-      "contentHash": "e20ce94882017791d66bbdb2fdf2686bd4214167f04fd9fec56ba7d404334ea5",
+      "contentHash": "bb3f0b4c79ff40b092038575612908be3cdaae4f8f1068e1128cd08abc1ee3f3",
       "functions": [
         {
           "name": "GiveawayEmailModal",
@@ -10596,11 +10914,17 @@
             "{ slug, isOpen, onClose, headingOverride, showCopiedBadge = true }"
           ],
           "exported": true,
-          "lineCount": 157
+          "lineCount": 158
         }
       ],
       "classes": [],
       "imports": [
+        {
+          "source": "@/lib/meta-pixel",
+          "specifiers": [
+            "trackMeta"
+          ]
+        },
         {
           "source": "react",
           "specifiers": [
@@ -10613,7 +10937,7 @@
       "exports": [
         "GiveawayEmailModal"
       ],
-      "totalLines": 174,
+      "totalLines": 177,
       "hasStructuralAnalysis": true
     },
     "src/components/PageParticles.tsx": {
@@ -10907,21 +11231,28 @@
     },
     "src/components/SiteFooter.tsx": {
       "filePath": "src/components/SiteFooter.tsx",
-      "contentHash": "5211a9a03fec34f79fc40ca63f5e16af3fc1430db9505082831c6c85d580b9c4",
+      "contentHash": "ae4f1ee0c1aa8c493641c24578dec5d4d573f9e498f75b06c60684951d11a03c",
       "functions": [
         {
           "name": "SiteFooter",
           "params": [],
           "exported": true,
-          "lineCount": 70
+          "lineCount": 71
         }
       ],
       "classes": [],
-      "imports": [],
+      "imports": [
+        {
+          "source": "@/components/consent/MetaPixelConsent",
+          "specifiers": [
+            "CookieSettingsLink"
+          ]
+        }
+      ],
       "exports": [
         "SiteFooter"
       ],
-      "totalLines": 71,
+      "totalLines": 74,
       "hasStructuralAnalysis": true
     },
     "src/components/SiteHeader.tsx": {
@@ -13457,7 +13788,7 @@
     },
     "src/lib/event-checkout.ts": {
       "filePath": "src/lib/event-checkout.ts",
-      "contentHash": "f6ed23f9a06b295bc8aeba21d8a50cab15bab15d88e7b54fff420dec10a797a6",
+      "contentHash": "04f5bfb255e6be7ac79d43b2c78f371559c300d59f2334da69ccb62136fe852f",
       "functions": [
         {
           "name": "resolveCheckoutMode",
@@ -13481,11 +13812,11 @@
         {
           "name": "buildEventCheckoutSessionParams",
           "params": [
-            "{\n  event,\n  attendeeName,\n  attendeeEmail,\n  amount,\n  promo,\n  baseUrl,\n  mode,\n  seatReservation,\n}"
+            "{\n  event,\n  attendeeName,\n  attendeeEmail,\n  amount,\n  promo,\n  baseUrl,\n  mode,\n  seatReservation,\n  metaMetadata,\n}"
           ],
           "returnType": "Stripe.Checkout.SessionCreateParams",
           "exported": true,
-          "lineCount": 81
+          "lineCount": 85
         }
       ],
       "classes": [],
@@ -13527,7 +13858,7 @@
         "resolveEventCheckoutAmount",
         "buildEventCheckoutSessionParams"
       ],
-      "totalLines": 118,
+      "totalLines": 122,
       "hasStructuralAnalysis": true
     },
     "src/lib/event-confirmation-email.ts": {
@@ -14615,9 +14946,102 @@
       "totalLines": 388,
       "hasStructuralAnalysis": true
     },
+    "src/lib/generic-giveaway-email.ts": {
+      "filePath": "src/lib/generic-giveaway-email.ts",
+      "contentHash": "170ddf3b12270c8cfcc17c65e59b4cdb51ac42a13d978c165b72b87f4d109875",
+      "functions": [
+        {
+          "name": "esc",
+          "params": [
+            "value"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "isMastermindsHost",
+          "params": [
+            "host"
+          ],
+          "returnType": "boolean",
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "validateGiveawayLink",
+          "params": [
+            "raw"
+          ],
+          "returnType": "string | null",
+          "exported": true,
+          "lineCount": 21
+        },
+        {
+          "name": "titleCaseSlug",
+          "params": [
+            "slug"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "sanitizeGiveawayName",
+          "params": [
+            "raw",
+            "source"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "isValidManychatSecret",
+          "params": [
+            "provided",
+            "expected"
+          ],
+          "returnType": "boolean",
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "buildGenericGiveawayEmail",
+          "params": [
+            "{\n  source,\n  name,\n  link,\n  unsubscribeFooter,\n  unsubscribeUrl,\n}"
+          ],
+          "exported": true,
+          "lineCount": 51
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:crypto",
+          "specifiers": [
+            "timingSafeEqual"
+          ]
+        },
+        {
+          "source": "./utm",
+          "specifiers": [
+            "withUtm"
+          ]
+        }
+      ],
+      "exports": [
+        "validateGiveawayLink",
+        "sanitizeGiveawayName",
+        "isValidManychatSecret",
+        "buildGenericGiveawayEmail"
+      ],
+      "totalLines": 150,
+      "hasStructuralAnalysis": true
+    },
     "src/lib/giveaways.ts": {
       "filePath": "src/lib/giveaways.ts",
-      "contentHash": "f49f2040e15ffa8fa668d80a168c0adad914ced5c8e73afc86c5b1da1f225b78",
+      "contentHash": "0491f3f07c39dc48937e001e060340bbd683eb26a6adf4b1d7ad6baf23bacecc",
       "functions": [
         {
           "name": "getGiveaway",
@@ -15363,6 +15787,231 @@
       "totalLines": 37,
       "hasStructuralAnalysis": true
     },
+    "src/lib/meta-consent.ts": {
+      "filePath": "src/lib/meta-consent.ts",
+      "contentHash": "81d623684019bffffe3521908afeb59dea19eae40f15e371a8ad6f0241602abe",
+      "functions": [
+        {
+          "name": "normalizedHost",
+          "params": [
+            "host"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "isLocalHost",
+          "params": [
+            "host"
+          ],
+          "returnType": "boolean",
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "isConsentRequiredCountry",
+          "params": [
+            "country"
+          ],
+          "returnType": "boolean",
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "cookieDomainFor",
+          "params": [
+            "host"
+          ],
+          "returnType": "string | null",
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "serializeCookie",
+          "params": [
+            "name",
+            "value",
+            "{ host, maxAge }"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "parseCookieHeader",
+          "params": [
+            "header"
+          ],
+          "returnType": "Map<string, string[]>",
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "pickConsentValue",
+          "params": [
+            "values"
+          ],
+          "returnType": "string | undefined",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "resolveServerConsentState",
+          "params": [
+            "{ host, country, crCookie, consentCookie }"
+          ],
+          "returnType": "MetaConsentState",
+          "exported": true,
+          "lineCount": 16
+        },
+        {
+          "name": "extractFbclid",
+          "params": [
+            "urls"
+          ],
+          "returnType": "string | null",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "buildMetaCheckoutMetadata",
+          "params": [
+            "request",
+            "opts"
+          ],
+          "returnType": "Record<string, string>",
+          "exported": true,
+          "lineCount": 18
+        },
+        {
+          "name": "stripeAmountToMajor",
+          "params": [
+            "amount",
+            "currency"
+          ],
+          "returnType": "number",
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "META_PIXEL_IDS",
+        "FBEVENTS_SRC",
+        "CONSENT_REQUIRED_COUNTRIES",
+        "CONSENT_REQUIRED_COOKIE",
+        "META_CONSENT_COOKIE",
+        "isLocalHost",
+        "isConsentRequiredCountry",
+        "cookieDomainFor",
+        "serializeCookie",
+        "parseCookieHeader",
+        "pickConsentValue",
+        "resolveServerConsentState",
+        "extractFbclid",
+        "buildMetaCheckoutMetadata",
+        "stripeAmountToMajor"
+      ],
+      "totalLines": 107,
+      "hasStructuralAnalysis": true
+    },
+    "src/lib/meta-pixel.ts": {
+      "filePath": "src/lib/meta-pixel.ts",
+      "contentHash": "6395380b2b604ebc800b3796f3f3fb5597e003f173e1cfae488df37389076e3a",
+      "functions": [
+        {
+          "name": "ensureFbqStub",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "initPixelsOnce",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "loadFbeventsOnce",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "trackMeta",
+          "params": [
+            "event",
+            "params",
+            "options"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "wasSent",
+          "params": [
+            "key"
+          ],
+          "returnType": "boolean",
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "markSent",
+          "params": [
+            "key"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "trackPurchaseOnce",
+          "params": [
+            "{ sessionId, value, currency }"
+          ],
+          "returnType": "boolean",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "fetchAndTrackPurchase",
+          "params": [
+            "sessionId",
+            "source"
+          ],
+          "returnType": "Promise<void>",
+          "exported": true,
+          "lineCount": 21
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/lib/meta-consent",
+          "specifiers": [
+            "META_PIXEL_IDS",
+            "FBEVENTS_SRC"
+          ]
+        }
+      ],
+      "exports": [
+        "ensureFbqStub",
+        "initPixelsOnce",
+        "loadFbeventsOnce",
+        "trackMeta",
+        "trackPurchaseOnce",
+        "fetchAndTrackPurchase"
+      ],
+      "totalLines": 108,
+      "hasStructuralAnalysis": true
+    },
     "src/lib/quiz-giveaway-email.ts": {
       "filePath": "src/lib/quiz-giveaway-email.ts",
       "contentHash": "2aed0540f593f152f01a41d76bd3774d46b54fd5aca2bf997a5750c121b6d25e",
@@ -15927,6 +16576,45 @@
         "withTimeout"
       ],
       "totalLines": 18,
+      "hasStructuralAnalysis": true
+    },
+    "src/proxy.ts": {
+      "filePath": "src/proxy.ts",
+      "contentHash": "9f6733b037c37b8bfb2dc4b935d037a905edf8973424127423b4617a6c9449e5",
+      "functions": [
+        {
+          "name": "proxy",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 16
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextResponse",
+            "NextRequest"
+          ]
+        },
+        {
+          "source": "@/lib/meta-consent",
+          "specifiers": [
+            "CONSENT_REQUIRED_COOKIE",
+            "isLocalHost",
+            "isConsentRequiredCountry",
+            "serializeCookie"
+          ]
+        }
+      ],
+      "exports": [
+        "proxy",
+        "config"
+      ],
+      "totalLines": 22,
       "hasStructuralAnalysis": true
     },
     "src/templates/session-guide-template.tsx": {
@@ -17252,6 +17940,60 @@
       "totalLines": 52,
       "hasStructuralAnalysis": true
     },
+    "tests/generic-giveaway-email.test.ts": {
+      "filePath": "tests/generic-giveaway-email.test.ts",
+      "contentHash": "dee385ebd25da117ac146888c91428d952d14890d1ac23d3358b39dfe9b1504d",
+      "functions": [
+        {
+          "name": "build",
+          "params": [
+            "name",
+            "link"
+          ],
+          "exported": false,
+          "lineCount": 9
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:assert/strict",
+          "specifiers": [
+            "assert"
+          ]
+        },
+        {
+          "source": "node:test",
+          "specifiers": [
+            "test"
+          ]
+        },
+        {
+          "source": "node:fs",
+          "specifiers": [
+            "readFileSync"
+          ]
+        },
+        {
+          "source": "node:path",
+          "specifiers": [
+            "join"
+          ]
+        },
+        {
+          "source": "../src/lib/generic-giveaway-email",
+          "specifiers": [
+            "buildGenericGiveawayEmail",
+            "isValidManychatSecret",
+            "sanitizeGiveawayName",
+            "validateGiveawayLink"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 93,
+      "hasStructuralAnalysis": true
+    },
     "tests/giveaway-email-collection.test.ts": {
       "filePath": "tests/giveaway-email-collection.test.ts",
       "contentHash": "9d2ac64015177befa36aa02f5d069dd80a00ef4b4452da9b03515d2324036c6a",
@@ -17540,6 +18282,79 @@
       ],
       "exports": [],
       "totalLines": 200,
+      "hasStructuralAnalysis": true
+    },
+    "tests/meta-consent.test.ts": {
+      "filePath": "tests/meta-consent.test.ts",
+      "contentHash": "a12294bca4da2758b394f403a437589d6469544b53b279ab671a713b2ead569e",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:assert/strict",
+          "specifiers": [
+            "assert"
+          ]
+        },
+        {
+          "source": "node:test",
+          "specifiers": [
+            "test"
+          ]
+        },
+        {
+          "source": "../src/lib/event-checkout",
+          "specifiers": [
+            "buildEventCheckoutSessionParams"
+          ]
+        },
+        {
+          "source": "../src/lib/events",
+          "specifiers": [
+            "getEventBySlug"
+          ]
+        },
+        {
+          "source": "../src/lib/meta-consent",
+          "specifiers": [
+            "buildMetaCheckoutMetadata",
+            "cookieDomainFor",
+            "extractFbclid",
+            "isConsentRequiredCountry",
+            "isLocalHost",
+            "parseCookieHeader",
+            "pickConsentValue",
+            "resolveServerConsentState",
+            "serializeCookie",
+            "stripeAmountToMajor"
+          ]
+        },
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextRequest"
+          ]
+        },
+        {
+          "source": "../src/proxy",
+          "specifiers": [
+            "proxy"
+          ]
+        },
+        {
+          "source": "../src/lib/meta-pixel",
+          "specifiers": [
+            "ensureFbqStub",
+            "fetchAndTrackPurchase",
+            "initPixelsOnce",
+            "loadFbeventsOnce",
+            "trackMeta",
+            "trackPurchaseOnce"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 170,
       "hasStructuralAnalysis": true
     },
     "tests/quiz-giveaway-email.test.ts": {

@@ -155,7 +155,7 @@
     {
       "path": "docs/giveaways/PROCESS.md",
       "language": "markdown",
-      "sizeLines": 528,
+      "sizeLines": 539,
       "fileCategory": "docs"
     },
     {
@@ -239,7 +239,7 @@
     {
       "path": "public/2x-with-ai-playbook.html",
       "language": "html",
-      "sizeLines": 1448,
+      "sizeLines": 1449,
       "fileCategory": "markup"
     },
     {
@@ -251,7 +251,7 @@
     {
       "path": "public/ai-os-architecture.html",
       "language": "html",
-      "sizeLines": 201,
+      "sizeLines": 202,
       "fileCategory": "markup"
     },
     {
@@ -263,7 +263,7 @@
     {
       "path": "public/automation-audit-sample.html",
       "language": "html",
-      "sizeLines": 650,
+      "sizeLines": 651,
       "fileCategory": "markup"
     },
     {
@@ -281,7 +281,7 @@
     {
       "path": "public/coach-kit-onboarding-matrix.html",
       "language": "html",
-      "sizeLines": 1108,
+      "sizeLines": 1109,
       "fileCategory": "markup"
     },
     {
@@ -323,7 +323,7 @@
     {
       "path": "public/hated-task-prompts.html",
       "language": "html",
-      "sizeLines": 370,
+      "sizeLines": 371,
       "fileCategory": "markup"
     },
     {
@@ -407,7 +407,7 @@
     {
       "path": "public/lead-magnet.html",
       "language": "html",
-      "sizeLines": 816,
+      "sizeLines": 817,
       "fileCategory": "markup"
     },
     {
@@ -421,6 +421,12 @@
       "language": "txt",
       "sizeLines": 48,
       "fileCategory": "docs"
+    },
+    {
+      "path": "public/mhq-consent.js",
+      "language": "javascript",
+      "sizeLines": 160,
+      "fileCategory": "code"
     },
     {
       "path": "public/unlearning-success.pdf.kg.json",
@@ -479,25 +485,31 @@
     {
       "path": "src/app/100-ai/page.tsx",
       "language": "typescript",
-      "sizeLines": 316,
+      "sizeLines": 319,
       "fileCategory": "code"
     },
     {
       "path": "src/app/ai-agent-income/AiAgentIncomeCheckoutForm.tsx",
       "language": "typescript",
-      "sizeLines": 75,
+      "sizeLines": 79,
       "fileCategory": "code"
     },
     {
       "path": "src/app/ai-agent-income/page.tsx",
       "language": "typescript",
-      "sizeLines": 176,
+      "sizeLines": 178,
       "fileCategory": "code"
     },
     {
       "path": "src/app/ai-agent-income/PromptPackRequestForm.tsx",
       "language": "typescript",
       "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/ai-agent-income/PurchaseTracker.tsx",
+      "language": "typescript",
+      "sizeLines": 12,
       "fileCategory": "code"
     },
     {
@@ -509,7 +521,7 @@
     {
       "path": "src/app/api/ai-agent-income/checkout/route.ts",
       "language": "typescript",
-      "sizeLines": 92,
+      "sizeLines": 99,
       "fileCategory": "code"
     },
     {
@@ -533,7 +545,13 @@
     {
       "path": "src/app/api/ai-agent-income/webhook/route.ts",
       "language": "typescript",
-      "sizeLines": 212,
+      "sizeLines": 222,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/api/consent/region/route.ts",
+      "language": "typescript",
+      "sizeLines": 17,
       "fileCategory": "code"
     },
     {
@@ -563,7 +581,7 @@
     {
       "path": "src/app/api/events/checkout-session/route.ts",
       "language": "typescript",
-      "sizeLines": 478,
+      "sizeLines": 490,
       "fileCategory": "code"
     },
     {
@@ -641,7 +659,7 @@
     {
       "path": "src/app/api/lead-magnet/route.ts",
       "language": "typescript",
-      "sizeLines": 733,
+      "sizeLines": 791,
       "fileCategory": "code"
     },
     {
@@ -660,6 +678,12 @@
       "path": "src/app/api/lead-magnets/passive-income-100/route.ts",
       "language": "typescript",
       "sizeLines": 160,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/api/meta/purchase/route.ts",
+      "language": "typescript",
+      "sizeLines": 29,
       "fileCategory": "code"
     },
     {
@@ -803,7 +827,7 @@
     {
       "path": "src/app/giveaways/client-launch-checklist/LeadMagnetExampleForm.tsx",
       "language": "typescript",
-      "sizeLines": 133,
+      "sizeLines": 136,
       "fileCategory": "code"
     },
     {
@@ -857,7 +881,7 @@
     {
       "path": "src/app/giveaways/cult-brand-playbook/GiveawayForm.tsx",
       "language": "typescript",
-      "sizeLines": 66,
+      "sizeLines": 69,
       "fileCategory": "code"
     },
     {
@@ -1079,7 +1103,7 @@
     {
       "path": "src/app/giveaways/lead-machine/LeadMachineForm.tsx",
       "language": "typescript",
-      "sizeLines": 96,
+      "sizeLines": 99,
       "fileCategory": "code"
     },
     {
@@ -1097,7 +1121,7 @@
     {
       "path": "src/app/giveaways/lead-magnet/page.tsx",
       "language": "typescript",
-      "sizeLines": 229,
+      "sizeLines": 232,
       "fileCategory": "code"
     },
     {
@@ -1115,7 +1139,7 @@
     {
       "path": "src/app/giveaways/maccleaner/GiveawayForm.tsx",
       "language": "typescript",
-      "sizeLines": 78,
+      "sizeLines": 81,
       "fileCategory": "code"
     },
     {
@@ -1145,7 +1169,7 @@
     {
       "path": "src/app/giveaways/ray-dalio-council/page.tsx",
       "language": "typescript",
-      "sizeLines": 804,
+      "sizeLines": 807,
       "fileCategory": "code"
     },
     {
@@ -1211,7 +1235,7 @@
     {
       "path": "src/app/giveaways/web-design-arsenal/page.tsx",
       "language": "typescript",
-      "sizeLines": 1014,
+      "sizeLines": 1017,
       "fileCategory": "code"
     },
     {
@@ -1247,7 +1271,7 @@
     {
       "path": "src/app/layout.tsx",
       "language": "typescript",
-      "sizeLines": 72,
+      "sizeLines": 62,
       "fileCategory": "code"
     },
     {
@@ -1265,7 +1289,7 @@
     {
       "path": "src/app/lead-magnets/ultimate-claudemd/page.tsx",
       "language": "typescript",
-      "sizeLines": 189,
+      "sizeLines": 192,
       "fileCategory": "code"
     },
     {
@@ -1545,6 +1569,12 @@
       "fileCategory": "code"
     },
     {
+      "path": "src/components/consent/MetaPixelConsent.tsx",
+      "language": "typescript",
+      "sizeLines": 111,
+      "fileCategory": "code"
+    },
+    {
       "path": "src/components/events/ask-an-ai-expert-quotes.ts",
       "language": "typescript",
       "sizeLines": 310,
@@ -1571,7 +1601,7 @@
     {
       "path": "src/components/events/EventRegistrationSection.tsx",
       "language": "typescript",
-      "sizeLines": 1019,
+      "sizeLines": 1026,
       "fileCategory": "code"
     },
     {
@@ -1589,7 +1619,7 @@
     {
       "path": "src/components/events/WaitlistJoinForm.tsx",
       "language": "typescript",
-      "sizeLines": 143,
+      "sizeLines": 146,
       "fileCategory": "code"
     },
     {
@@ -1613,7 +1643,7 @@
     {
       "path": "src/components/giveaways/GiveawayEmailModal.tsx",
       "language": "typescript",
-      "sizeLines": 173,
+      "sizeLines": 176,
       "fileCategory": "code"
     },
     {
@@ -1673,7 +1703,7 @@
     {
       "path": "src/components/SiteFooter.tsx",
       "language": "typescript",
-      "sizeLines": 70,
+      "sizeLines": 73,
       "fileCategory": "code"
     },
     {
@@ -1931,7 +1961,7 @@
     {
       "path": "src/lib/event-checkout.ts",
       "language": "typescript",
-      "sizeLines": 117,
+      "sizeLines": 121,
       "fileCategory": "code"
     },
     {
@@ -2007,6 +2037,12 @@
       "fileCategory": "code"
     },
     {
+      "path": "src/lib/generic-giveaway-email.ts",
+      "language": "typescript",
+      "sizeLines": 149,
+      "fileCategory": "code"
+    },
+    {
       "path": "src/lib/giveaways.ts",
       "language": "typescript",
       "sizeLines": 316,
@@ -2070,6 +2106,18 @@
       "path": "src/lib/masterminds-checkout-branding.ts",
       "language": "typescript",
       "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/lib/meta-consent.ts",
+      "language": "typescript",
+      "sizeLines": 106,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/lib/meta-pixel.ts",
+      "language": "typescript",
+      "sizeLines": 107,
       "fileCategory": "code"
     },
     {
@@ -2160,6 +2208,12 @@
       "path": "src/lib/with-timeout.ts",
       "language": "typescript",
       "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/proxy.ts",
+      "language": "typescript",
+      "sizeLines": 21,
       "fileCategory": "code"
     },
     {
@@ -2427,6 +2481,12 @@
       "fileCategory": "code"
     },
     {
+      "path": "tests/generic-giveaway-email.test.ts",
+      "language": "typescript",
+      "sizeLines": 92,
+      "fileCategory": "code"
+    },
+    {
       "path": "tests/giveaway-email-collection.test.ts",
       "language": "typescript",
       "sizeLines": 190,
@@ -2460,6 +2520,12 @@
       "path": "tests/list-unsubscribe.test.ts",
       "language": "typescript",
       "sizeLines": 199,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/meta-consent.test.ts",
+      "language": "typescript",
+      "sizeLines": 169,
       "fileCategory": "code"
     },
     {
@@ -2598,6 +2664,7 @@
     "public/lead-magnet.html": [],
     "public/lead-magnet.html.kg.json": [],
     "public/llms.txt": [],
+    "public/mhq-consent.js": [],
     "public/unlearning-success.pdf.kg.json": [],
     "repo-access.v1.json": [],
     "scripts/abandoned-checkout-control.mjs": [],
@@ -2611,17 +2678,26 @@
     "scripts/lib/estimate-ai-level.mjs": [],
     "scripts/send-dinner-tonight-reminder.mjs": [],
     "scripts/sync-abandoned-checkout-suppressions.mjs": [],
-    "src/app/100-ai/page.tsx": [],
-    "src/app/ai-agent-income/AiAgentIncomeCheckoutForm.tsx": [],
+    "src/app/100-ai/page.tsx": [
+      "src/lib/meta-pixel.ts"
+    ],
+    "src/app/ai-agent-income/AiAgentIncomeCheckoutForm.tsx": [
+      "src/lib/meta-pixel.ts"
+    ],
     "src/app/ai-agent-income/page.tsx": [
       "src/app/ai-agent-income/AiAgentIncomeCheckoutForm.tsx",
-      "src/app/ai-agent-income/PromptPackRequestForm.tsx"
+      "src/app/ai-agent-income/PromptPackRequestForm.tsx",
+      "src/app/ai-agent-income/PurchaseTracker.tsx"
     ],
     "src/app/ai-agent-income/PromptPackRequestForm.tsx": [],
+    "src/app/ai-agent-income/PurchaseTracker.tsx": [
+      "src/lib/meta-pixel.ts"
+    ],
     "src/app/ai-os-architecture/page.tsx": [],
     "src/app/api/ai-agent-income/checkout/route.ts": [
       "src/app/api/ai-agent-income/stripe.ts",
       "src/lib/email-validation.ts",
+      "src/lib/meta-consent.ts",
       "src/lib/rate-limit.ts"
     ],
     "src/app/api/ai-agent-income/prompt-pack/request/route.ts": [
@@ -2638,6 +2714,9 @@
       "src/app/api/ai-agent-income/stripe.ts",
       "src/lib/ai-agent-income-prompt-pack.ts",
       "src/lib/supabase.ts"
+    ],
+    "src/app/api/consent/region/route.ts": [
+      "src/lib/meta-consent.ts"
     ],
     "src/app/api/events/[slug]/calendar/route.ts": [
       "src/lib/calendar.ts",
@@ -2668,6 +2747,7 @@
       "src/lib/events.tsx",
       "src/lib/insight-to-fix.ts",
       "src/lib/legacy-event-schedule.ts",
+      "src/lib/meta-consent.ts",
       "src/lib/rate-limit.ts",
       "src/lib/registration-profile-token.ts",
       "src/lib/stripe-amount.ts",
@@ -2743,6 +2823,7 @@
       "src/lib/email-suppressions.ts",
       "src/lib/free-ai-tool-email.ts",
       "src/lib/free-ai-tools.ts",
+      "src/lib/generic-giveaway-email.ts",
       "src/lib/html-to-text.ts",
       "src/lib/insight-to-fix.ts",
       "src/lib/lead-magnets.ts",
@@ -2763,6 +2844,12 @@
       "src/lib/email-suppressions.ts",
       "src/lib/list-unsubscribe.ts",
       "src/lib/rate-limit.ts"
+    ],
+    "src/app/api/meta/purchase/route.ts": [
+      "src/app/api/ai-agent-income/stripe.ts",
+      "src/lib/meta-consent.ts",
+      "src/lib/rate-limit.ts",
+      "src/lib/stripe.ts"
     ],
     "src/app/api/stripe/webhook/route.ts": [
       "src/lib/event-capacity.ts",
@@ -2838,7 +2925,9 @@
       "src/lib/copyWithConfetti.ts"
     ],
     "src/app/giveaways/client-launch-checklist/layout.tsx": [],
-    "src/app/giveaways/client-launch-checklist/LeadMagnetExampleForm.tsx": [],
+    "src/app/giveaways/client-launch-checklist/LeadMagnetExampleForm.tsx": [
+      "src/lib/meta-pixel.ts"
+    ],
     "src/app/giveaways/client-launch-checklist/page.tsx": [
       "src/app/giveaways/client-launch-checklist/LeadMagnetExampleForm.tsx",
       "src/components/giveaways/GiveawayAutoModal.tsx",
@@ -2866,7 +2955,9 @@
       "src/components/sections/MastermindReactionsSection.tsx",
       "src/lib/copyWithConfetti.ts"
     ],
-    "src/app/giveaways/cult-brand-playbook/GiveawayForm.tsx": [],
+    "src/app/giveaways/cult-brand-playbook/GiveawayForm.tsx": [
+      "src/lib/meta-pixel.ts"
+    ],
     "src/app/giveaways/cult-brand-playbook/page.tsx": [
       "src/app/giveaways/cult-brand-playbook/GiveawayForm.tsx",
       "src/components/giveaways/GiveawayAutoModal.tsx",
@@ -2968,7 +3059,9 @@
       "src/components/giveaways/GiveawayCopyEmailGate.tsx"
     ],
     "src/app/giveaways/lead-machine/layout.tsx": [],
-    "src/app/giveaways/lead-machine/LeadMachineForm.tsx": [],
+    "src/app/giveaways/lead-machine/LeadMachineForm.tsx": [
+      "src/lib/meta-pixel.ts"
+    ],
     "src/app/giveaways/lead-machine/page.tsx": [
       "src/app/giveaways/lead-machine/LeadMachineForm.tsx",
       "src/components/giveaways/GiveawayAutoModal.tsx",
@@ -2976,14 +3069,17 @@
     ],
     "src/app/giveaways/lead-magnet/layout.tsx": [],
     "src/app/giveaways/lead-magnet/page.tsx": [
-      "src/components/giveaways/GiveawayAutoModal.tsx"
+      "src/components/giveaways/GiveawayAutoModal.tsx",
+      "src/lib/meta-pixel.ts"
     ],
     "src/app/giveaways/logo-maker-guide/layout.tsx": [],
     "src/app/giveaways/logo-maker-guide/page.tsx": [
       "src/components/giveaways/GiveawayAutoModal.tsx",
       "src/components/sections/MastermindReactionsSection.tsx"
     ],
-    "src/app/giveaways/maccleaner/GiveawayForm.tsx": [],
+    "src/app/giveaways/maccleaner/GiveawayForm.tsx": [
+      "src/lib/meta-pixel.ts"
+    ],
     "src/app/giveaways/maccleaner/layout.tsx": [],
     "src/app/giveaways/maccleaner/page.tsx": [
       "src/app/giveaways/maccleaner/GiveawayForm.tsx",
@@ -3033,7 +3129,8 @@
     "src/app/giveaways/web-design-arsenal/layout.tsx": [],
     "src/app/giveaways/web-design-arsenal/page.tsx": [
       "src/components/giveaways/GiveawayEmailModal.tsx",
-      "src/lib/copyWithConfetti.ts"
+      "src/lib/copyWithConfetti.ts",
+      "src/lib/meta-pixel.ts"
     ],
     "src/app/globals.css": [],
     "src/app/illy/content.ts": [],
@@ -3046,11 +3143,14 @@
     ],
     "src/app/layout.tsx": [
       "src/app/globals.css",
+      "src/components/consent/MetaPixelConsent.tsx",
       "src/components/SiteChrome.tsx"
     ],
     "src/app/lead-magnets/layout.tsx": [],
     "src/app/lead-magnets/ultimate-claudemd/layout.tsx": [],
-    "src/app/lead-magnets/ultimate-claudemd/page.tsx": [],
+    "src/app/lead-magnets/ultimate-claudemd/page.tsx": [
+      "src/lib/meta-pixel.ts"
+    ],
     "src/app/page.tsx": [
       "src/components/Reveal.tsx",
       "src/components/SessionCard.tsx",
@@ -3242,6 +3342,10 @@
     "src/components/CodeBlock.tsx": [
       "src/lib/copyWithConfetti.ts"
     ],
+    "src/components/consent/MetaPixelConsent.tsx": [
+      "src/lib/meta-consent.ts",
+      "src/lib/meta-pixel.ts"
+    ],
     "src/components/events/ask-an-ai-expert-quotes.ts": [],
     "src/components/events/AskAnAiExpertQuoteStrip.tsx": [
       "src/components/events/ask-an-ai-expert-quotes.ts"
@@ -3264,14 +3368,16 @@
       "src/lib/celebrate.ts",
       "src/lib/email-validation.ts",
       "src/lib/event-intake.ts",
-      "src/lib/event-registration-flow.ts"
+      "src/lib/event-registration-flow.ts",
+      "src/lib/meta-pixel.ts"
     ],
     "src/components/events/HeroVideo.tsx": [
       "src/components/events/EventMediaVideo.tsx"
     ],
     "src/components/events/ScrollToRegisterButton.tsx": [],
     "src/components/events/WaitlistJoinForm.tsx": [
-      "src/lib/email-validation.ts"
+      "src/lib/email-validation.ts",
+      "src/lib/meta-pixel.ts"
     ],
     "src/components/giveaways/FreeAiToolPage.tsx": [
       "src/components/sections/MastermindReactionsSection.tsx",
@@ -3284,7 +3390,9 @@
       "src/components/giveaways/GiveawayEmailModal.tsx",
       "src/lib/copyWithConfetti.ts"
     ],
-    "src/components/giveaways/GiveawayEmailModal.tsx": [],
+    "src/components/giveaways/GiveawayEmailModal.tsx": [
+      "src/lib/meta-pixel.ts"
+    ],
     "src/components/PageParticles.tsx": [],
     "src/components/ParticipantCarousel.tsx": [],
     "src/components/PrepChecklistItem.tsx": [],
@@ -3300,7 +3408,9 @@
       "src/components/SiteFooter.tsx",
       "src/components/SiteHeader.tsx"
     ],
-    "src/components/SiteFooter.tsx": [],
+    "src/components/SiteFooter.tsx": [
+      "src/components/consent/MetaPixelConsent.tsx"
+    ],
     "src/components/SiteHeader.tsx": [],
     "src/components/StaggerList.tsx": [],
     "src/components/StepCard.tsx": [],
@@ -3498,6 +3608,9 @@
       "src/lib/utm.ts"
     ],
     "src/lib/free-ai-tools.ts": [],
+    "src/lib/generic-giveaway-email.ts": [
+      "src/lib/utm.ts"
+    ],
     "src/lib/giveaways.ts": [],
     "src/lib/google-calendar-invite.ts": [
       "src/lib/calendar.ts",
@@ -3529,6 +3642,10 @@
     ],
     "src/lib/locks.ts": [],
     "src/lib/masterminds-checkout-branding.ts": [],
+    "src/lib/meta-consent.ts": [],
+    "src/lib/meta-pixel.ts": [
+      "src/lib/meta-consent.ts"
+    ],
     "src/lib/quiz-giveaway-email.ts": [
       "src/lib/utm.ts"
     ],
@@ -3557,6 +3674,9 @@
     "src/lib/utm.ts": [],
     "src/lib/waitlist-notify-windows.ts": [],
     "src/lib/with-timeout.ts": [],
+    "src/proxy.ts": [
+      "src/lib/meta-consent.ts"
+    ],
     "src/templates/session-guide-template.tsx": [
       "src/components/CodeBlock.tsx",
       "src/components/ProTip.tsx",
@@ -3679,6 +3799,9 @@
       "src/lib/giveaways.ts",
       "src/lib/lead-magnets.ts"
     ],
+    "tests/generic-giveaway-email.test.ts": [
+      "src/lib/generic-giveaway-email.ts"
+    ],
     "tests/giveaway-email-collection.test.ts": [],
     "tests/giveaway-template-structure.test.ts": [],
     "tests/google-calendar-invite.test.ts": [
@@ -3695,6 +3818,13 @@
     ],
     "tests/list-unsubscribe.test.ts": [
       "src/lib/list-unsubscribe.ts"
+    ],
+    "tests/meta-consent.test.ts": [
+      "src/lib/event-checkout.ts",
+      "src/lib/events.tsx",
+      "src/lib/meta-consent.ts",
+      "src/lib/meta-pixel.ts",
+      "src/proxy.ts"
     ],
     "tests/quiz-giveaway-email.test.ts": [
       "src/lib/giveaways.ts",
@@ -3739,7 +3869,34 @@
     "vercel.json": []
   },
   "complexity": "high",
-  "filteredByIgnore": 6,
-  "totalFiles": 419,
-  "estimatedComplexity": "large"
+  "filteredByIgnore": 10,
+  "totalFiles": 430,
+  "estimatedComplexity": "large",
+  "stats": {
+    "filesScanned": 430,
+    "byCategory": {
+      "config": 22,
+      "docs": 22,
+      "code": 359,
+      "markup": 9,
+      "script": 1,
+      "data": 17
+    },
+    "byLanguage": {
+      "json": 21,
+      "markdown": 21,
+      "config": 1,
+      "patch": 2,
+      "unknown": 1,
+      "typescript": 335,
+      "html": 8,
+      "javascript": 10,
+      "sha256": 1,
+      "shell": 1,
+      "webp": 10,
+      "txt": 1,
+      "css": 1,
+      "sql": 17
+    }
+  }
 }
