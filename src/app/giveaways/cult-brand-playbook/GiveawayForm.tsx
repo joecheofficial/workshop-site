@@ -1,5 +1,7 @@
 'use client'
 
+import { trackMeta } from '@/lib/meta-pixel'
+
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 
@@ -18,6 +20,7 @@ export default function GiveawayForm() {
         body: JSON.stringify({ email: email.trim(), source: 'cult-brand-playbook' }),
       })
       if (!res.ok) throw new Error('Request failed')
+      trackMeta('Lead', { content_name: 'cult-brand-playbook' })
       setStatus('done')
     } catch {
       setStatus('error')

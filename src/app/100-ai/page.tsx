@@ -1,5 +1,7 @@
 'use client'
 
+import { trackMeta } from '@/lib/meta-pixel'
+
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 
@@ -69,6 +71,7 @@ export default function PassiveIncome100Page() {
         body: JSON.stringify({ firstName, email }),
       })
       if (!res.ok) throw new Error('Failed')
+      trackMeta('Lead', { content_name: '100-ai' })
       setSubmitted(true)
     } catch {
       setError('Something went wrong. Please try again.')

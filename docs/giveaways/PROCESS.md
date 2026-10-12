@@ -303,37 +303,48 @@ curl -s -X POST http://localhost:3000/api/manychat-giveaways \
   -d '{"comment_keyword":"<KEYWORD>","giveaway_name":"<title>","giveaway_description":"<one line>","giveaway_link":"<url>","dynamic_tag":"Career_Funnel","draft":true}'
 ```
 
-Returns the new row id. Keep it for step 3.
+Returns the new row id (instadm.js finds the row by keyword).
 
-**Step 2: create the flow with the agent browser (WORKS, verified 2026-10-02 on TOKENS).** The public API cannot write flows, but the logged-in agent Chrome (CDP port 9223) can:
+**Step 2: build the v2 DM flow (the standard since 2026-10-12).** Illy's rule: a lead-magnet request is
+NEVER just a button. Every giveaway keyword runs the personalised DM for 100% of people: comment ->
+"hey {first_name}! you asked for X" + **send it** -> "what should I call you?" -> "what's the best email
+for you?" -> link in the DM + a copy by email. No reply: nudge at 2h, link anyway at ~20h. People already
+on the list get the link straight away. Template: "MASTER v2 - Name+Email (DO NOT TRIGGER)"
+`content20261007062026_787774` (never attach a trigger to it). The old one-step "Click Get It Now"
+master is legacy (`raw-cdp-create.js --old-master` only).
 
 ```bash
 cd ~/.myos/workspace/agents/manychat
-node src/browser.js auto-create --keyword "<KEYWORD>" --name "<title>" \
-  --description "<one-line DM teaser>" \
-  --link "https://workshop.mastermindshq.business/giveaways/<slug>" --tag "Career_Funnel"
-# verify the DM really carries the link (dry run, prints matching nodes):
-node src/swap-link.js --ns <flowNs> --from "<link>" --to "<link>"
-# then mark the DB row live (snapshot first):
-sqlite3 ~/.myos/workspace/data/manychat-giveaways.db "UPDATE giveaways SET manychat_flow_id='<flowNs>', status='active' WHERE id=<id>;"
+# build the v2 copy, trigger stays DRAFT (keyword set, all posts):
+node src/instadm.js prepare "<KEYWORD>" --one-line "<plain one-line benefit, lowercase, no full stop>"
+#   --slug defaults to the last path segment of giveaway_link (the /api/lead-magnet source)
+# scope it to the post: open the printed v2 flow in the builder, set the comment trigger's post,
+# do NOT click Update (Update publishes AND activates every trigger), then go live:
+node src/instadm.js activate "<KEYWORD>"
+# rollback for any keyword, one step, back to its previous flow:
+node src/instadm.js off "<KEYWORD>"
+node src/instadm.js status
 ```
 
-If auto-create reports a content-injection failure, run `node src/browser.js inject-content --ns <flowNs> --name ... --description ... --link ...` (see agents/manychat/CONTEXT.md). If the agent browser is logged out, run `node src/browser.js sync-session` or log in at app.manychat.com in the agent browser. The manual UI build below is the fallback only.
+`prepare`/`activate` update the DB row (`manychat_flow_id`, `status`) and `sync_log` for you, and record
+the keyword in `agents/manychat/data/instadm-config.json`. Full SOP: `agents/manychat/skills/instadm/SKILL.md`.
 
-**Manual fallback:** build the flow by hand in the ManyChat UI.
+**The email copy.** The flow's External Request posts `{email, source:<slug>, name, link}` with the
+`x-mhq-manychat-secret` header to `/api/lead-magnet`. A slug with its own template
+(`DELIVERABLE_LEAD_MAGNET_SOURCES` in `src/lib/lead-magnets.ts`) sends that template; any other giveaway
+gets the generic pretty-light "here's your link" email (`src/lib/generic-giveaway-email.ts`), as long as
+the link is on an allowlisted host (mastermindshq.business and subdomains, github.com/josephtandle,
+workshop-site-sigma.vercel.app, betterplayaguideai.musecafe.vip). A link on any other host gets no
+email (the lead is still saved): add the host to the allowlist first.
 
-**The manual build (this is the only path):**
-1. Open ManyChat → Automation → Flows
-2. Open the MASTER flow directly: **`content20260318104931_653756`** ("MASTER- Effects all new Automations through All Sorted") at
-   `https://app.manychat.com/fb1703817/cms/files/content20260318104931_653756`.
-   Do not clone SpeakHuman or any other giveaway; they carry their own keyword and link.
-3. Duplicate it
-4. Set the comment trigger keyword to `<KEYWORD>`
-5. Update the delivery link in the DM message to `https://workshop.mastermindshq.business/giveaways/<slug>`
-6. Activate the flow — copy the NS (e.g. `ns:12345`) from the flow URL
-7. In Mission Control → Manychat Giveaways → Edit this entry → paste the NS → Save
+**Sales pages and events are not giveaways.** MASTERMIND, BOOK, META, ADS, TEAM, BUILD stay on their own
+flows (listed in `instadm-config.json` `notV2`) until Illy decides otherwise.
 
-Flow structure: comment trigger (KEYWORD) → DM ask for email → email capture → delivery message with link + follow button.
+**Manual fallback** (agent browser down): in ManyChat open the v2 master
+`https://app.manychat.com/fb1703817/cms/files/content20261007062026_787774`, duplicate it, replace
+`[NAME]`, `[ONE-LINE]`, `[LINK]` (text and the `https://placeholder.example/LINK` buttons), `[SLUG]`
+(the three External Requests) and `[KEYWORD]`, set the comment trigger keyword and post, then publish.
+Publishing activates the trigger, so set the keyword and post first. Paste the new ns into the DB row.
 
 ---
 

@@ -1,5 +1,7 @@
 'use client'
 
+import { trackMeta } from '@/lib/meta-pixel'
+
 import { useEffect, useRef, useState } from 'react'
 
 type Props = {
@@ -75,6 +77,7 @@ export default function GiveawayEmailModal({ slug, isOpen, onClose, headingOverr
         const body = await res.json().catch(() => ({}))
         throw new Error(body.error || 'Something went wrong')
       }
+      trackMeta('Lead', { content_name: slug })
       setStatus('success')
       closeTimerRef.current = window.setTimeout(() => {
         onClose()

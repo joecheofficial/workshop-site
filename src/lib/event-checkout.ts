@@ -43,6 +43,7 @@ export function buildEventCheckoutSessionParams({
   baseUrl,
   mode,
   seatReservation,
+  metaMetadata,
 }: {
   event: EventDefinition
   attendeeName: string
@@ -51,6 +52,7 @@ export function buildEventCheckoutSessionParams({
   promo: EventPromoCode | null
   baseUrl: string
   mode: EventCheckoutMode
+  metaMetadata?: Record<string, string>
   seatReservation?: {
     reservationId: string
     expiresAtUnix: number
@@ -106,7 +108,9 @@ export function buildEventCheckoutSessionParams({
         },
       },
     ],
-    metadata,
+    metadata: metaMetadata
+      ? { ...metadata, ...Object.fromEntries(Object.entries(metaMetadata).filter(([key]) => !(key in metadata))) }
+      : metadata,
     payment_intent_data: {
       metadata,
     },

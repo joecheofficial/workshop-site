@@ -1,3 +1,5 @@
+import { CookieSettingsLink } from '@/components/consent/MetaPixelConsent'
+
 export default function SiteFooter() {
   return (
     <footer className="footer-glow border-t border-white/[0.06] mt-24 py-10">
@@ -63,6 +65,7 @@ export default function SiteFooter() {
 
         <p className="text-xs text-[#FCF4EB]/30">
           Copyright 2026, Masterminds HQ. All Rights Reserved.
+          <CookieSettingsLink />
         </p>
       </div>
     </footer>

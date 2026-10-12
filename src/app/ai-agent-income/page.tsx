@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import AiAgentIncomeCheckoutForm from './AiAgentIncomeCheckoutForm'
 import PromptPackRequestForm from './PromptPackRequestForm'
+import PurchaseTracker from './PurchaseTracker'
 
 export const metadata: Metadata = {
   title: {
@@ -38,6 +39,7 @@ const audience = [
 export default function AiAgentIncomePage() {
   return (
     <main className="overflow-hidden bg-[#151515]">
+      <PurchaseTracker />
       <section className="relative">
         <div className="absolute inset-0 bg-gradient-to-b from-[#1a1520] via-[#151515] to-[#151515]" />
         <div className="relative mx-auto grid max-w-6xl gap-12 px-6 pb-16 pt-16 lg:grid-cols-[1.08fr_0.92fr] lg:items-center lg:pb-24 lg:pt-24">
