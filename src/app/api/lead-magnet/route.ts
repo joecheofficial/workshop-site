@@ -11,10 +11,21 @@ import { buildSpeakHumanEmail } from '@/lib/speak-human-email'
 import { buildFreeAiToolEmail } from '@/lib/free-ai-tool-email'
 import { isFreeAiToolSource } from '@/lib/free-ai-tools'
 import { buildQuizGiveawayEmail, isQuizGiveawaySource } from '@/lib/quiz-giveaway-email'
+import {
+  buildGenericGiveawayEmail,
+  isValidManychatSecret,
+  sanitizeGiveawayName,
+  validateGiveawayLink,
+} from '@/lib/generic-giveaway-email'
 
 const RESEND_API_KEY = process.env.RESEND_API_KEY
 
-async function sendViaResend(email: string, source: string, idempotencyKey: string) {
+async function sendViaResend(
+  email: string,
+  source: string,
+  idempotencyKey: string,
+  generic?: { name: string; link: string },
+) {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://workshop.mastermindshq.business'
   const unsubscribeUrl = buildUnsubscribeUrl(email)
   // Omit the link entirely (rather than a dead/unverifiable href) when the
@@ -536,6 +547,20 @@ Remind me to run guardog analyze &lt;package-name&gt; &lt;npm or pypi&gt; before
     subject = quizEmail.subject
     html = quizEmail.html
     text = quizEmail.text
+  } else if (generic) {
+    // ManyChat IG giveaway with no bespoke template: generic "here's your
+    // link" letter. Only reachable when the POST handler has verified the
+    // ManyChat secret and allowlisted the link, see generic-giveaway-email.ts.
+    const genericEmail = buildGenericGiveawayEmail({
+      source,
+      name: generic.name,
+      link: generic.link,
+      unsubscribeFooter,
+      unsubscribeUrl,
+    })
+    subject = genericEmail.subject
+    html = genericEmail.html
+    text = genericEmail.text
   } else {
     // Fail closed. This branch used to send the Un-Learning Success PDF to any
     // unrecognised source, which meant roughly eighteen giveaway pages emailed
@@ -607,12 +632,21 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 export async function POST(request: Request) {
   try {
-    const { ok: rateLimitOk } = await checkRateLimit(`lead-magnet:${getClientIp(request)}`, 10, 60)
+    // ManyChat calls come from ManyChat's shared server IPs, so a per-IP
+    // bucket would drop leads during a burst. Authenticated ManyChat calls
+    // get their own, larger bucket.
+    const isManychat = isValidManychatSecret(
+      request.headers.get('x-mhq-manychat-secret'),
+      process.env.MANYCHAT_LEAD_SECRET,
+    )
+    const { ok: rateLimitOk } = isManychat
+      ? await checkRateLimit('lead-magnet:manychat', 300, 60)
+      : await checkRateLimit(`lead-magnet:${getClientIp(request)}`, 10, 60)
     if (!rateLimitOk) {
       return NextResponse.json({ error: 'Too many requests. Please try again shortly.' }, { status: 429 })
     }
 
-    const { email, source: rawSource, journeyId = null } = await request.json()
+    const { email, source: rawSource, journeyId = null, name: rawName, link: rawLink } = await request.json()
     const source = typeof rawSource === 'string' && rawSource.trim() ? rawSource.trim() : 'lead-magnet'
 
     if (!email || typeof email !== 'string' || email.length > 256 || !EMAIL_RE.test(email.trim())) {
@@ -656,6 +690,29 @@ export async function POST(request: Request) {
     // captured above, which is the part worth keeping. What we must not do is
     // fall through to some other magnet's PDF, and what we must not do either
     // is quietly return success as though something was delivered.
+    // ManyChat IG giveaways without a bespoke template: send the generic
+    // "here's your link" email so the DM's "copy's on its way" promise holds.
+    // Website callers (no secret) keep the fail-closed 422 below.
+    const genericLink = isManychat ? validateGiveawayLink(rawLink) : null
+    if (!isDeliverableLeadMagnetSource(source) && genericLink) {
+      const genericName = sanitizeGiveawayName(rawName, source)
+      const idempotencyKey = `lead-magnet/${source}/${email.trim().toLowerCase()}`
+      await sendViaResend(email, source, idempotencyKey, { name: genericName, link: genericLink })
+      await trackInsightEvent('initial_email_sent', {
+        route: '/api/lead-magnet',
+        email,
+        sessionId: typeof journeyId === 'string' ? journeyId : null,
+        properties: { source, email_type: 'lead_magnet_delivery', generic: true },
+      })
+      await trackInsightEvent('delivery_completed', {
+        route: '/api/lead-magnet',
+        email,
+        sessionId: typeof journeyId === 'string' ? journeyId : null,
+        properties: { source, delivery_type: 'lead_magnet', generic: true },
+      })
+      return NextResponse.json({ success: true, generic: true })
+    }
+
     if (!isDeliverableLeadMagnetSource(source)) {
       console.error(
         `lead-magnet: no asset registered for source "${source}" (email captured, nothing sent). ` +
