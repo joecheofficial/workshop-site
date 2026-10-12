@@ -1162,7 +1162,7 @@ footer{position:relative;z-index:1;text-align:center;color:rgba(157,143,224,.6);
 </tr>
 <tr>
 <td>SAFE</td>
-<td>Guardog</td>
+<td>GuardDog</td>
 <td>active</td>
 <td>live</td>
 <td>8</td>
