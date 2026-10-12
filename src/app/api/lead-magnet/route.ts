@@ -343,19 +343,20 @@ Remind me to run guardog analyze &lt;package-name&gt; &lt;npm or pypi&gt; before
       </div>
     `
   } else if (source === 'web-design-arsenal') {
-    subject = "You're on the list"
+    subject = 'Your 24 web design skills and effects'
     html = `
       <div style="font-family: system-ui, sans-serif; max-width: 560px; margin: 0 auto; padding: 40px 20px; color: #1a1a1a;">
-        <h1 style="font-size: 22px; margin-bottom: 16px;">You're on the list.</h1>
+        <h1 style="font-size: 22px; margin-bottom: 16px;">Here are your 24 web design skills.</h1>
         <p style="font-size: 16px; line-height: 1.7; margin-bottom: 16px;">
-          I'll let you know when new skills and resources drop.
+          It's one prompt. Paste it into Claude Code and it installs all 24 design tools and effects for you. No coding, no subscriptions.
+        </p>
+        <p style="margin-bottom: 24px;">
+          <a href="${withUtm('https://workshop.mastermindshq.business/giveaways/web-design-arsenal', { campaign: 'lead-magnet', content: 'web-design-arsenal' })}" style="display:inline-block;background:#8B79D4;color:#fff;font-weight:600;text-decoration:none;padding:12px 20px;border-radius:8px;">Get the prompt</a>
         </p>
         <p style="font-size: 15px; line-height: 1.7; margin-bottom: 24px; color: #444;">
-          In the meantime, if you want to see what's possible when people use these tools in a live mastermind session,
-          come check out what we're building at
-          <a href="${withUtm('https://mastermindshq.business', { campaign: 'lead-magnet', content: 'web-design-arsenal' })}" style="color: #8B79D4; font-weight: 600;">mastermindshq.business</a>.
+          Stuck on anything? Just reply to this email.
         </p>
-        <p style="font-size: 14px; color: #999; margin-top: 32px;">Joe Che</p>
+        <p style="font-size: 14px; color: #999; margin-top: 32px;">Joe</p>
         ${unsubscribeFooter}
       </div>
     `
