@@ -132,7 +132,7 @@ test('browser pixel lifecycle queues safely, loads once and deduplicates purchas
     initPixelsOnce()
     initPixelsOnce()
     assert.ok(browser.fbq)
-    assert.equal(browser.fbq.disablePushState, true)
+    assert.equal(browser.fbq.disablePushState, undefined)
     assert.equal(browser.fbq, browser._fbq)
     assert.equal(browser.fbq.queue.length, 2)
     trackMeta('PageView')
