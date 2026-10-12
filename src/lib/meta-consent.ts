@@ -62,8 +62,10 @@ export function resolveServerConsentState({ host, country, crCookie, consentCook
   // An explicit choice always wins, so a visitor who declined is never sent
   // server-side even when their current IP is outside the consent region.
   if (consentCookie === 'granted' || consentCookie === 'denied') return consentCookie
-  const required = country !== null && country !== undefined
-    ? isConsentRequiredCountry(country) : crCookie !== '0'
+  // mhq_cr=1 means the browser treated this visitor as consent-required and
+  // loaded nothing, so the server must not override that with today's IP.
+  const required = crCookie === '1' || (country !== null && country !== undefined
+    ? isConsentRequiredCountry(country) : crCookie !== '0')
   return required ? 'unknown' : 'not_required'
 }
 

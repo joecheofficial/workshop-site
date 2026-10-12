@@ -47,6 +47,7 @@ test('server consent matrix: explicit choice first, then country header, then re
   assert.equal(resolve('example.com', '', '0'), 'unknown')
   assert.equal(resolve('example.com', 'DE', '0'), 'unknown')
   assert.equal(resolve('workshop.mastermindshq.business', 'US', '0', 'denied'), 'denied')
+  assert.equal(resolve('workshop.mastermindshq.business', 'US', '1'), 'unknown')
   assert.equal(resolve('workshop.mastermindshq.business', 'US', '0', 'granted'), 'granted')
 })
 
@@ -102,12 +103,13 @@ test('checkout metadata includes identifiers only when consent allows them', () 
   assert.ok(bodyMetadata.meta_fbc.endsWith('.bodyClick'))
 })
 
-test('proxy sets the region cookie only when a desired value is known and differs', () => {
+test('proxy sets the region cookie only when a desired value is known and the cookie is missing', () => {
   const request = (host: string, headers: Record<string, string> = {}) => new NextRequest(`https://${host}/events`, { headers: { host, ...headers } })
   assert.match(proxy(request('workshop.mastermindshq.business', { 'x-vercel-ip-country': 'DE' })).headers.get('set-cookie') ?? '', /mhq_cr=1; Max-Age=86400; Domain=\.mastermindshq\.business/)
   assert.match(proxy(request('workshop-site.vercel.app', { 'x-vercel-ip-country': 'US' })).headers.get('set-cookie') ?? '', /^mhq_cr=0; Max-Age=86400; Path=\/; SameSite=Lax; Secure$/)
   assert.equal(proxy(request('example.com')).headers.get('set-cookie'), null)
   assert.equal(proxy(request('example.com', { cookie: 'mhq_cr=1', 'x-vercel-ip-country': 'DE' })).headers.get('set-cookie'), null)
+  assert.equal(proxy(request('workshop.mastermindshq.business', { cookie: 'mhq_cr=1', 'x-vercel-ip-country': 'US' })).headers.get('set-cookie'), null)
   assert.match(proxy(request('localhost:3000')).headers.get('set-cookie') ?? '', /^mhq_cr=0.*SameSite=Lax$/)
 })
 
