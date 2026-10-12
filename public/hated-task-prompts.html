@@ -135,13 +135,13 @@
     <div class="eyebrow">AI Business Mastermind · Joe Che</div>
     <h1>The Hated-Task <span class="em">Prompt Pack</span></h1>
     <p class="lede">Nine prompts for the work you'd rather never do again. Fill in the blanks, then send it straight to Claude or ChatGPT in one click.</p>
-    <div class="byline"><span>Your secret bonus for bringing a friend</span><span class="dot"></span><span>Free AI class, Tuesday Sept 29</span></div>
+    <div class="byline"><span>Free from Joe Che</span><span class="dot"></span><span>@joe.che.official</span></div>
   </header>
 
   <section class="opener">
     <div class="kick">Start here</div>
     <h2>What's the one task you'd pay to never do again?</h2>
-    <p>Name it now, while it stings. This is the one you bring to class on Tuesday. The nine tools below handle the everyday stuff so you have room to think about the big one.</p>
+    <p>Name it now, while it stings. Keep it in mind as you go. The nine tools below handle the everyday stuff so you have room to think about the big one.</p>
     <div class="row">
       <input type="text" id="worstTask" placeholder="e.g. writing proposals, chasing payments, editing videos...">
       <button class="btn btn-claude" id="lockBtn" type="button">Lock it in</button>
@@ -150,7 +150,7 @@
   </section>
 
   <div class="note">
-    <p>You signed up for the class because there's a task you dread. Good. <strong>That's the whole point.</strong></p>
+    <p>There's a task you dread. Good. <strong>That's the whole point.</strong></p>
     <p>Here are the everyday ones most people quietly hate. Type your details into each, and it builds the finished prompt for you. Then one click drops it into Claude or ChatGPT, ready to run.</p>
     <p>None of these are clever. They just work, and they take a minute instead of an hour.</p>
     <p class="sign">Joe</p>
@@ -160,12 +160,12 @@
   <div id="cards"></div>
 
   <div class="closing">
-    <p class="big">One task down. Bring the worst one Tuesday.</p>
-    <p>These handle the everyday work. The class is for the one that's been sitting on your list for months, the one you'd pay to never touch again. Bring it. We take it apart live, and you leave without it.</p>
-    <p class="sign">See you there. Joe</p>
+    <p class="big">One task down. Now the big one.</p>
+    <p>These handle the everyday work. The one you named up top, the one that's been sitting on your list for months, is worth an afternoon. Pick the prompt above that comes closest, run it on that task today, and see how far it gets you.</p>
+    <p class="sign">Joe</p>
   </div>
 
-  <p class="footer">mastermindshq.business · Made for the people who came, and the ones they brought.</p>
+  <p class="footer">mastermindshq.business · Made for anyone with a task they'd pay to never do again.</p>
 </div>
 
 <script>
@@ -350,13 +350,13 @@
     host.appendChild(card);
   });
 
-  // opener: name your worst task, remember it, tie to Tuesday
+  // opener: name your worst task, remember it
   const worstInput = document.getElementById('worstTask');
   const lockBtn = document.getElementById('lockBtn');
   const lockedMsg = document.getElementById('lockedMsg');
   try { const saved = localStorage.getItem('htpp_worst'); if (saved) { worstInput.value = saved; showLocked(saved); } } catch(e){}
   function showLocked(task){
-    lockedMsg.innerHTML = 'Locked in: <b>' + esc(task) + '</b>.<br>Bring that one to class on Tuesday. We take it apart live, and you leave without it.';
+    lockedMsg.innerHTML = 'Locked in: <b>' + esc(task) + '</b>.<br>That\'s your big one. Start with the prompts below, then come back to it.';
     lockedMsg.style.display = 'block';
   }
   lockBtn.addEventListener('click', () => {
