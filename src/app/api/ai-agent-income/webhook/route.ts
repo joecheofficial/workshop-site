@@ -34,6 +34,15 @@ function subscriptionPeriodEnd(sub: Stripe.Subscription): string | null {
   return null
 }
 
+// This endpoint is registered on the main MHQ Stripe account, so it receives
+// every checkout and subscription event (cohorts, workshops, portal). Only act
+// on objects created by the playbook checkout.
+const PRODUCT_KEY = 'ai_agent_income_playbook'
+
+function isPlaybook(metadata: Stripe.Metadata | null | undefined) {
+  return metadata?.product_key === PRODUCT_KEY
+}
+
 async function emailForCustomer(customerId: string, fallback?: string | null) {
   if (fallback) return fallback
 
@@ -150,12 +159,13 @@ export async function POST(request: Request) {
     switch (event.type) {
       case 'checkout.session.completed': {
         const session = event.data.object as Stripe.Checkout.Session
+        if (!isPlaybook(session.metadata)) break
         const email = session.customer_details?.email || session.customer_email || session.metadata?.email || null
         const stripeCustomerId = customerIdFrom(session.customer)
 
         if (session.subscription) {
           const sub = await stripe.subscriptions.retrieve(session.subscription as string)
-          await upsertSubscription(sub, email)
+          if (isPlaybook(sub.metadata)) await upsertSubscription(sub, email)
         }
 
         if (email && stripeCustomerId) {
@@ -169,7 +179,7 @@ export async function POST(request: Request) {
       case 'customer.subscription.updated':
       case 'customer.subscription.deleted': {
         const sub = event.data.object as Stripe.Subscription
-        await upsertSubscription(sub)
+        if (isPlaybook(sub.metadata)) await upsertSubscription(sub)
         break
       }
 
@@ -192,7 +202,7 @@ export async function POST(request: Request) {
 
       case 'customer.subscription.trial_will_end': {
         const sub = event.data.object as Stripe.Subscription
-        await upsertSubscription(sub)
+        if (isPlaybook(sub.metadata)) await upsertSubscription(sub)
         break
       }
 
