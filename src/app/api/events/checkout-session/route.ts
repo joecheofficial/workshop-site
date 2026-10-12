@@ -1,3 +1,4 @@
+import { buildMetaCheckoutMetadata } from '@/lib/meta-consent'
 import { NextResponse } from 'next/server'
 import { createRegistrationProfileToken } from '@/lib/registration-profile-token'
 import { getEventBySlug } from '@/lib/events'
@@ -417,6 +418,16 @@ export async function POST(request: Request) {
         }
       : undefined
 
+    let metaMetadata: Record<string, string> = {}
+    try {
+      const search = typeof body.search === 'string' ? body.search.trim() : ''
+      metaMetadata = buildMetaCheckoutMetadata(request, { extraUrls: [
+        search && !search.startsWith('?') ? '?' + search : search,
+        referrer,
+        acquisitionQuery && !acquisitionQuery.startsWith('?') ? '?' + acquisitionQuery : acquisitionQuery,
+      ] })
+    } catch { /* Metadata must never block checkout. */ }
+
     const session = await stripe.checkout.sessions.create(
       buildEventCheckoutSessionParams({
         event,
@@ -427,6 +438,7 @@ export async function POST(request: Request) {
         baseUrl,
         mode: checkoutMode,
         seatReservation,
+        metaMetadata,
       }),
     )
 

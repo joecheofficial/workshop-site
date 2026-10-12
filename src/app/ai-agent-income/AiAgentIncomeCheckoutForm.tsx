@@ -1,5 +1,7 @@
 'use client'
 
+import { trackMeta } from '@/lib/meta-pixel'
+
 import type { FormEvent } from 'react'
 import { useId, useState } from 'react'
 
@@ -32,6 +34,8 @@ export default function AiAgentIncomeCheckoutForm({ compact = false }: CheckoutF
         throw new Error(data?.error || 'Unable to start checkout. Please try again.')
       }
 
+      trackMeta('InitiateCheckout', { value: 1, currency: 'USD', content_name: 'AI Agent Income Playbook trial' })
+      await new Promise(resolve => setTimeout(resolve, 300))
       window.location.assign(data.url)
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Unable to start checkout. Please try again.')

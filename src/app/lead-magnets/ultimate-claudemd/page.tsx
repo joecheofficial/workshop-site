@@ -1,5 +1,7 @@
 'use client'
 
+import { trackMeta } from '@/lib/meta-pixel'
+
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 
@@ -30,6 +32,7 @@ export default function UltimateClaudeMDPage() {
         body: JSON.stringify({ firstName, email }),
       })
       if (!res.ok) throw new Error('Failed')
+      trackMeta('Lead', { content_name: 'ultimate-claudemd' })
       setSubmitted(true)
     } catch {
       setError('Something went wrong. Please try again.')

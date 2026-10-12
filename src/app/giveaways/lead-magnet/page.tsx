@@ -1,5 +1,7 @@
 'use client'
 
+import { trackMeta } from '@/lib/meta-pixel'
+
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import GiveawayAutoModal from '@/components/giveaways/GiveawayAutoModal'
@@ -33,6 +35,7 @@ export default function LeadMagnetPage() {
         body: JSON.stringify({ email }),
       })
       if (!res.ok) throw new Error('Failed to subscribe')
+      trackMeta('Lead', { content_name: 'lead-magnet' })
       setSubmitted(true)
     } catch {
       setError('Something went wrong. Please try again.')

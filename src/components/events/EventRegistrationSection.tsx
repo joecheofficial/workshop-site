@@ -1,5 +1,7 @@
 'use client'
 
+import { fetchAndTrackPurchase, trackMeta } from '@/lib/meta-pixel'
+
 import { useEffect, useRef, useMemo, useState, useTransition } from 'react'
 
 function useAnimatedNumber(target: number, duration = 750): number {
@@ -269,6 +271,7 @@ export default function EventRegistrationSection({
       // markSuccess then falls back to this event's own success copy rather
       // than an internal sync status.
       markSuccess(payload.message || undefined)
+      void fetchAndTrackPurchase(sessionId, 'events')
     } catch (finalizeError) {
       const message = finalizeError instanceof Error ? finalizeError.message : 'Unable to finalize registration.'
       setError(message)
@@ -392,6 +395,7 @@ export default function EventRegistrationSection({
     setAppliedPromoCode(payload.appliedPromoCode)
     setAppliedAmount(typeof payload.amount === 'number' ? payload.amount : null)
     if (payload.completed) {
+      trackMeta('CompleteRegistration', { content_name: event.title, value: 0, currency: 'USD', status: 'free' })
       // The free path always returns the same generic message, which would mask
       // an event's own successDetail. Prefer successDetail on plain success, but
       // still surface payload.message when it carries a real warning (e.g. the
@@ -409,6 +413,8 @@ export default function EventRegistrationSection({
       return
     }
     if (typeof payload.checkoutUrl === 'string' && payload.checkoutUrl) {
+      trackMeta('InitiateCheckout', { value: typeof payload.amount === 'number' ? payload.amount : event.pricing.fullPrice, currency: 'USD', content_name: event.title })
+      await new Promise(resolve => setTimeout(resolve, 300))
       window.location.assign(payload.checkoutUrl)
       return
     }
@@ -422,6 +428,7 @@ export default function EventRegistrationSection({
     }
 
     setCheckoutSessionId(payload.sessionId ?? null)
+    trackMeta('InitiateCheckout', { value: typeof payload.amount === 'number' ? payload.amount : event.pricing.fullPrice, currency: 'USD', content_name: event.title })
     setClientSecret(payload.clientSecret)
   }
 
