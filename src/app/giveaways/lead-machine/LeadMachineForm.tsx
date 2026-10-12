@@ -1,5 +1,7 @@
 'use client'
 
+import { trackMeta } from '@/lib/meta-pixel'
+
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 
@@ -25,6 +27,7 @@ export default function LeadMachineForm() {
         body: JSON.stringify({ email: email.trim(), source: 'lead-machine', journeyId }),
       })
       if (!res.ok) throw new Error('Request failed')
+      trackMeta('Lead', { content_name: 'lead-machine' })
       setStatus('done')
     } catch {
       setStatus('error')

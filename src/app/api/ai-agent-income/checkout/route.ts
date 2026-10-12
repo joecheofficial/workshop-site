@@ -1,3 +1,4 @@
+import { buildMetaCheckoutMetadata } from '@/lib/meta-consent'
 import { NextResponse } from 'next/server'
 import { isValidEmail, normaliseEmail } from '@/lib/email-validation'
 import { checkRateLimit, getClientIp } from '@/lib/rate-limit'
@@ -50,6 +51,11 @@ export async function POST(request: Request) {
     const stripe = createAiAgentIncomeStripeClient()
     const customerId = await findOrCreateCustomer(email)
 
+    let metaMetadata: Record<string, string> = {}
+    try {
+      metaMetadata = buildMetaCheckoutMetadata(request)
+    } catch { /* Metadata must never block checkout. */ }
+
     const session = await stripe.checkout.sessions.create({
       mode: 'subscription',
       customer: customerId,
@@ -77,6 +83,7 @@ export async function POST(request: Request) {
       metadata: {
         product_key: 'ai_agent_income_playbook',
         email,
+        ...metaMetadata,
       },
     })
 

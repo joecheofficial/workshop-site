@@ -1,5 +1,7 @@
 'use client'
 
+import { trackMeta } from '@/lib/meta-pixel'
+
 import { useState } from 'react'
 import { isValidEmail, normaliseEmail } from '@/lib/email-validation'
 
@@ -42,6 +44,7 @@ export default function WaitlistJoinForm({ durationLabel, eventSlug, eventTitle,
       if (!response.ok) {
         throw new Error(payload.error || 'Unable to join waitlist.')
       }
+      trackMeta('Lead', { content_name: 'event_waitlist' })
       setSuccess(true)
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Unable to join waitlist.')

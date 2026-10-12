@@ -1,5 +1,7 @@
 'use client'
 
+import { trackMeta } from '@/lib/meta-pixel'
+
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
@@ -333,6 +335,7 @@ export default function WebDesignArsenalPage() {
         body: JSON.stringify({ email, source: 'web-design-arsenal' }),
       })
       if (!res.ok) throw new Error()
+      trackMeta('Lead', { content_name: 'web-design-arsenal' })
       setSubmitted(true)
     } catch {
       setEmailError('Something went wrong. Please try again.')

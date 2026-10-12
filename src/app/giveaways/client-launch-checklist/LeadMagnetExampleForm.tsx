@@ -1,5 +1,7 @@
 'use client'
 
+import { trackMeta } from '@/lib/meta-pixel'
+
 import { useState } from 'react'
 
 type Status = 'idle' | 'loading' | 'done' | 'error'
@@ -42,6 +44,7 @@ export default function LeadMagnetExampleForm() {
         throw new Error('Subscription failed')
       }
 
+      trackMeta('Lead', { content_name: 'client-launch-checklist' })
       setStatus('done')
     } catch {
       setStatus('error')
