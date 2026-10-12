@@ -12,7 +12,7 @@ import GiveawayEmailModal from '@/components/giveaways/GiveawayEmailModal'
 const MASTERMIND_URL = 'https://www.mastermindshq.business'
 const GITHUB_URL = 'https://github.com/josephtandle/ray-dalio-council'
 
-const INSTALL_COMMAND = `mkdir -p ~/.claude/skills && curl -fsSL https://raw.githubusercontent.com/josephtandle/ray-dalio-council/main/dalio-council.md -o ~/.claude/skills/dalio-council.md`
+const INSTALL_COMMAND = `mkdir -p ~/.claude/skills/dalio ~/.codex/skills/dalio && curl -fsSL https://raw.githubusercontent.com/josephtandle/ray-dalio-council/main/dalio/SKILL.md -o ~/.claude/skills/dalio/SKILL.md && cp ~/.claude/skills/dalio/SKILL.md ~/.codex/skills/dalio/SKILL.md`
 
 const SKILL_SECTIONS = [
   {
@@ -207,9 +207,9 @@ export default function RayDalioCouncilPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
-    name: 'Install the Ray Dalio Council Skill for Claude Code',
+    name: 'Install the Ray Dalio Council Skill for Claude Code and Codex',
     description:
-      'A free Claude Code skill that runs a Ray Dalio-style believability-weighted decision council. Five scouts argue your question. One synthesizer weighs them. You get PROCEED, HOLD, or INVESTIGATE.',
+      'A free Claude Code and Codex skill that runs a Ray Dalio-style believability-weighted decision council. Five scouts argue your question. One synthesizer weighs them. You get PROCEED, HOLD, or INVESTIGATE.',
     author: {
       '@type': 'Person',
       name: 'Joe Che',
@@ -230,18 +230,19 @@ export default function RayDalioCouncilPage() {
       {
         '@type': 'HowToStep',
         name: 'Run it in your terminal',
-        text: 'Paste and run the command in your terminal. It clones the repo, copies the skill to your Claude skills directory, and cleans up.',
+        text: 'Paste and run the command in your terminal. It downloads one file into your Claude Code and Codex skills folders. No git needed.',
         position: 2,
       },
       {
         '@type': 'HowToStep',
-        name: 'Type /dalio in Claude Code',
-        text: 'Open Claude Code and type /dalio followed by any decision. The council runs immediately.',
+        name: 'Type /dalio in Claude Code or $dalio in Codex',
+        text: 'Open Claude Code and type /dalio followed by any decision, or open Codex and type $dalio. The council runs immediately.',
         position: 3,
       },
     ],
     tool: [
       { '@type': 'HowToTool', name: 'Claude Code' },
+      { '@type': 'HowToTool', name: 'Codex' },
       { '@type': 'HowToTool', name: 'Terminal' },
     ],
     totalTime: 'PT2M',
@@ -344,7 +345,7 @@ export default function RayDalioCouncilPage() {
                 paddingBottom: '0.05em',
               }}
             >
-              The Ray Dalio Council Skill for Claude Code
+              The Ray Dalio Council Skill for Claude Code and Codex
             </motion.h1>
 
             {/* Subheadline */}
@@ -369,7 +370,7 @@ export default function RayDalioCouncilPage() {
               transition={{ duration: 0.55, delay: 1.6 }}
               className="text-[#FCF4EB]/55 text-base sm:text-lg leading-relaxed max-w-xl mx-auto mb-6"
             >
-              Install it once in Claude Code. Type /dalio followed by any decision you are wrestling with. Five specialist scouts argue the question from different angles, a synthesizer weighs them by believability, and you get a clear PROCEED, HOLD, or INVESTIGATE verdict with a confidence score and the dissenting view.
+              Install it once. Type /dalio in Claude Code, or $dalio in Codex, followed by any decision you are wrestling with. Five specialist scouts argue the question from different angles, a synthesizer weighs them by believability, and you get a clear PROCEED, HOLD, or INVESTIGATE verdict with a confidence score and the dissenting view.
             </motion.p>
 
             {/* Works in strip */}
@@ -380,20 +381,22 @@ export default function RayDalioCouncilPage() {
               className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5 mb-6"
             >
               <span className="text-[#FCF4EB]/28 text-xs uppercase tracking-widest">Works in</span>
-              <div className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/[0.05] border border-[#8B79D4]/35 transition-all duration-200">
-                <span className="text-[#9D8FE0] text-sm">◆</span>
-                <span className="text-[#FCF4EB]/75 text-sm font-medium">Claude Code</span>
-                <span
-                  className="text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full"
-                  style={{
-                    background: 'rgba(139,121,212,0.18)',
-                    color: '#9D8FE0',
-                    border: '1px solid rgba(139,121,212,0.3)',
-                  }}
-                >
-                  Skill
-                </span>
-              </div>
+              {['Claude Code', 'Codex'].map((host) => (
+                <div key={host} className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/[0.05] border border-[#8B79D4]/35 transition-all duration-200">
+                  <span className="text-[#9D8FE0] text-sm">◆</span>
+                  <span className="text-[#FCF4EB]/75 text-sm font-medium">{host}</span>
+                  <span
+                    className="text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full"
+                    style={{
+                      background: 'rgba(139,121,212,0.18)',
+                      color: '#9D8FE0',
+                      border: '1px solid rgba(139,121,212,0.3)',
+                    }}
+                  >
+                    Skill
+                  </span>
+                </div>
+              ))}
             </motion.div>
 
             <motion.div
@@ -464,8 +467,8 @@ export default function RayDalioCouncilPage() {
           <div className="grid gap-5 sm:grid-cols-3">
             {[
               { step: '01', title: 'Copy the install command', body: 'One line. Copy it from the box below.' },
-              { step: '02', title: 'Run it in your terminal', body: 'Paste it in your terminal and run. It clones the repo, drops the skill file in the right place, and cleans up. Done in seconds.' },
-              { step: '03', title: 'Type /dalio [your question]', body: 'Open Claude Code and type /dalio followed by any decision. The council convenes, argues the question, and delivers a verdict immediately.' },
+              { step: '02', title: 'Run it in your terminal', body: 'Paste it in your terminal and run. It downloads one file into your Claude Code and Codex skills folders. No git needed. Done in seconds.' },
+              { step: '03', title: 'Type /dalio [your question]', body: 'Open Claude Code and type /dalio, or open Codex and type $dalio, followed by any decision. The council convenes, argues the question, and delivers a verdict immediately.' },
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -514,7 +517,7 @@ export default function RayDalioCouncilPage() {
                 <a href={MASTERMIND_URL} target="_blank" rel="noopener noreferrer" className="text-[#9D8FE0] hover:text-[#BDB3E8] transition-colors">
                   Business Automation Mastermind
                 </a>
-                , this is the council we run before every major program decision. One command in your terminal and it is ready in Claude Code.
+                , this is the council we run before every major program decision. One command in your terminal and it is ready in Claude Code and Codex.
               </p>
             </div>
 
@@ -536,7 +539,7 @@ export default function RayDalioCouncilPage() {
             <InstallCopyButton command={INSTALL_COMMAND} onAfterCopy={() => setEmailModalOpen(true)} />
 
             <p className="text-[#FCF4EB]/20 text-[11px] text-center mt-5 max-w-md mx-auto leading-relaxed">
-              Requires Git. Copies the skill to <code className="font-mono">~/.claude/skills/dalio-council.md</code>. If your Claude Code skills live somewhere else,{' '}
+              No git needed, just curl. Puts the skill at <code className="font-mono">~/.claude/skills/dalio/SKILL.md</code> and <code className="font-mono">~/.codex/skills/dalio/SKILL.md</code>. If your skills live somewhere else,{' '}
               <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" className="text-[#9D8FE0]/60 hover:text-[#9D8FE0] transition-colors underline underline-offset-2">
                 check the README
               </a>{' '}

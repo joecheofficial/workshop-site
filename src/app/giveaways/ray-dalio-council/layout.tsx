@@ -5,10 +5,10 @@ const BASE = 'https://workshop.mastermindshq.business'
 const URL = `${BASE}/giveaways/ray-dalio-council`
 
 export const metadata: Metadata = {
-  title: 'Ray Dalio Council -- Free Claude Code Skill',
-  description: 'A free Claude Code skill that runs a believability-weighted decision council. Five scouts argue your question. One synthesizer weighs them. You get PROCEED, HOLD, or INVESTIGATE with a confidence score.',
+  title: 'Ray Dalio Council -- Free Claude Code and Codex Skill',
+  description: 'A free Claude Code and Codex skill that runs a believability-weighted decision council. Five scouts argue your question. One synthesizer weighs them. You get PROCEED, HOLD, or INVESTIGATE with a confidence score.',
   keywords: [
-    'Ray Dalio Council', 'Claude Code skill', 'decision making', 'believability weighted',
+    'Ray Dalio Council', 'Claude Code skill', 'Codex skill', 'decision making', 'believability weighted',
     'AI decision council', 'Claude Code', 'business decisions', 'Ray Dalio Bridgewater',
     'Business Automation Mastermind', 'Joe Che',
   ],
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   alternates: { canonical: URL },
   openGraph: {
-    title: 'Ray Dalio Council -- Free Claude Code Skill',
+    title: 'Ray Dalio Council -- Free Claude Code and Codex Skill',
     description: 'Five scouts argue every decision. One synthesizer weighs them. PROCEED, HOLD, or INVESTIGATE. Free from the Business Automation Mastermind.',
     url: URL,
     siteName: 'Business Automation Mastermind Workshop',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ray Dalio Council -- Free Claude Code Skill',
+    title: 'Ray Dalio Council -- Free Claude Code and Codex Skill',
     description: 'Five scouts argue every decision. One synthesizer weighs them. PROCEED, HOLD, or INVESTIGATE. One command to install. Free.',
     creator: '@joecheuk',
   },
