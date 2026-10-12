@@ -80,7 +80,7 @@ const SCANNER_SECTIONS = [
     name: 'VirusTotal (optional)',
     count: 70,
     items: [
-      { name: '70+ antivirus engines', desc: 'With a free VirusTotal API key, Guardog submits the package URL or file hash for scanning across 70+ AV engines simultaneously. Takes about 5 seconds.' },
+      { name: '70+ antivirus engines', desc: 'With a free VirusTotal API key, GuardDog submits the package URL or file hash for scanning across 70+ AV engines simultaneously. Takes about 5 seconds.' },
       { name: 'Free tier is enough', desc: '4 requests per minute, 500 per day. More than sufficient for scanning packages before you install them. Sign up takes 2 minutes.' },
       { name: 'Works without it', desc: 'CVE lookups, reputation checks, and pattern analysis all run without a key. VirusTotal adds a deeper malware layer on top. Recommended but not required.' },
     ],
@@ -89,7 +89,7 @@ const SCANNER_SECTIONS = [
     name: 'Claude Code Skill',
     count: 1,
     items: [
-      { name: '/guardog command', desc: 'After install, type /guardog followed by any package name in Claude Code. Guardog runs the scan and Claude interprets the results in plain English.' },
+      { name: '/guardog command', desc: 'After install, type /guardog followed by any package name in Claude Code. GuardDog runs the scan and Claude interprets the results in plain English.' },
       { name: 'Three verdicts', desc: 'SILENT means safe to install. WHINE means suspicious, review before installing. BARK means dangerous, do not install. No ambiguity.' },
       { name: 'Also works from terminal', desc: 'node ~/guardog/src/index.js analyze lodash npm -- run it directly without Claude Code if you prefer.' },
     ],
@@ -249,7 +249,7 @@ export default function GuardogPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
-    name: 'Install Guardog for Claude Code',
+    name: 'Install GuardDog for Claude Code',
     description:
       'A free package security scanner that checks npm and PyPI packages for malware, CVEs, and suspicious patterns before you install them.',
     author: {
@@ -278,7 +278,7 @@ export default function GuardogPage() {
       {
         '@type': 'HowToStep',
         name: 'Type /guardog in Claude Code',
-        text: 'Open Claude Code and type /guardog followed by any package name. Guardog scans it and tells you whether it is safe to install.',
+        text: 'Open Claude Code and type /guardog followed by any package name. GuardDog scans it and tells you whether it is safe to install.',
         position: 3,
       },
     ],
@@ -405,7 +405,7 @@ export default function GuardogPage() {
                 paddingBottom: '0.05em',
               }}
             >
-              Guardog: Package Security Scanner
+              GuardDog: Package Security Scanner
             </motion.h1>
 
             {/* Subheadline */}
@@ -542,7 +542,7 @@ export default function GuardogPage() {
                   <div>
                     <h3 className="text-[#FCF4EB] font-semibold text-base mb-2">Scans the files you download</h3>
                     <p className="text-[#FCF4EB]/44 text-sm leading-relaxed">
-                      When you run Guardog, it reads the actual package code sitting on your disk. It checks for credential harvesters, obfuscated scripts, crypto miners, reverse shells, and 25+ other malicious patterns. No sample or summary. The real files.
+                      When you run GuardDog, it reads the actual package code sitting on your disk. It checks for credential harvesters, obfuscated scripts, crypto miners, reverse shells, and 25+ other malicious patterns. No sample or summary. The real files.
                     </p>
                   </div>
                 </div>
@@ -561,7 +561,7 @@ export default function GuardogPage() {
                   <div>
                     <h3 className="text-[#FCF4EB] font-semibold text-base mb-2">Checks the internet for new threats daily</h3>
                     <p className="text-[#FCF4EB]/44 text-sm leading-relaxed">
-                      A package that was clean last month may have a critical CVE discovered today. Guardog queries live vulnerability databases every time you run it, so you are always checking against the latest known threats. Not a snapshot. Live data.
+                      A package that was clean last month may have a critical CVE discovered today. GuardDog queries live vulnerability databases every time you run it, so you are always checking against the latest known threats. Not a snapshot. Live data.
                     </p>
                   </div>
                 </div>
@@ -866,7 +866,7 @@ export default function GuardogPage() {
             className="text-center mb-10"
           >
             <h2 className="text-2xl sm:text-3xl font-bold text-[#FCF4EB] mb-3">
-              What Guardog checks
+              What GuardDog checks
             </h2>
             <p className="text-[#FCF4EB]/35 text-sm max-w-lg mx-auto">
               Four scanning layers run on every package. VirusTotal is optional but recommended. Everything else works without any setup.
@@ -942,7 +942,7 @@ export default function GuardogPage() {
           className="max-w-2xl mx-auto px-6 pb-16 text-center"
         >
           <p className="text-[#FCF4EB]/22 text-sm leading-relaxed italic">
-            P.S. Supply chain attacks through npm and PyPI have hit companies you have heard of. The packages look real. The names are close. The installs are silent. Guardog takes 3 seconds to run and costs nothing.
+            P.S. Supply chain attacks through npm and PyPI have hit companies you have heard of. The packages look real. The names are close. The installs are silent. GuardDog takes 3 seconds to run and costs nothing.
           </p>
         </motion.div>
 
