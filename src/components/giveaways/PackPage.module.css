@@ -15,9 +15,9 @@
   --ink: #151515;
   --yes: #a8dcbd;
   --no: #f3abae;
-  --display: var(--font-pack-display), 'Cormorant Garamond', Georgia, serif;
+  --display: 'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
   --body: var(--font-plus-jakarta), system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --mono: var(--font-pack-mono), ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  --mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
   color: var(--cream);
   font-family: var(--body);
   font-size: 16px;

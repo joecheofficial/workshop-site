@@ -3,20 +3,19 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import type { MouseEvent } from 'react'
 import Image from 'next/image'
-import { Cormorant_Garamond, JetBrains_Mono } from 'next/font/google'
 import GiveawayEmailModal from '@/components/giveaways/GiveawayEmailModal'
 import { isFromDmVisit } from '@/lib/giveaway-dm'
 import { offerForLevel } from '@/lib/giveaway-offers'
 import type { PackPageContent, PackTagTone } from '@/lib/pack-page'
 import styles from './PackPage.module.css'
 
-const display = Cormorant_Garamond({
-  subsets: ['latin'],
-  weight: ['500', '600', '700'],
-  style: ['normal', 'italic'],
-  variable: '--font-pack-display',
-})
-const mono = JetBrains_Mono({ subsets: ['latin'], weight: ['400', '500'], variable: '--font-pack-mono' })
+// Same font links as the other giveaway pages (deduped by data-font), so the
+// browser shares one cached copy. next/font is avoided here on purpose: in a
+// client component it breaks the local Turbopack build.
+const FONT_LINKS = [
+  { key: 'cormorant', href: 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,600;1,700&display=swap' },
+  { key: 'jetbrains-mono', href: 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap' },
+]
 
 const COPY_LABEL = 'Copy the prompt'
 const TAG_TONE: Record<PackTagTone, string> = {
@@ -45,6 +44,17 @@ export default function PackPage({ slug, content }: { slug: string; content: Pac
   const [askedAfterCopy, setAskedAfterCopy] = useState(false)
   const [copyLabel, setCopyLabel] = useState(COPY_LABEL)
   const [promptOpen, setPromptOpen] = useState(false)
+
+  useEffect(() => {
+    for (const f of FONT_LINKS) {
+      if (document.querySelector(`link[data-font="${f.key}"]`)) continue
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = f.href
+      link.setAttribute('data-font', f.key)
+      document.head.appendChild(link)
+    }
+  }, [])
 
   useEffect(() => {
     fromDm.current = isFromDmVisit()
@@ -109,7 +119,7 @@ export default function PackPage({ slug, content }: { slug: string; content: Pac
   const sectionId = (name: string) => `${slug}-${name}`
 
   return (
-    <div className={`${styles.page} ${display.variable} ${mono.variable}`}>
+    <div className={styles.page}>
       <section className={`${styles.hero} ${styles.glow}`}>
         <div className={styles.wrap}>
           <div className={styles.topline}>
