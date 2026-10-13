@@ -63,7 +63,35 @@ Create two files:
 - `src/app/giveaways/<slug>/page.tsx`
 - `src/app/giveaways/<slug>/layout.tsx`
 
-**Template rule: clone `guardog`. Nothing else. Ever.**
+**Pack page template (Illy, 2026-10-13). The template for new giveaway pages.**
+
+Every new giveaway page, and every old one as it gets rebuilt, renders the shared `<PackPage slug="<slug>" content={...} />` from `src/components/giveaways/PackPage.tsx`. The page only supplies words in a `content.ts` (shape: `src/lib/pack-page.ts`). Reference implementation: `src/app/giveaways/lead-machine/` (first page moved, 13 Oct 2026). Structure copied from Avi Grondin's free-pack page; teardown and approved prototype: `~/.myos/workspace/tasks/swarms/2026-10-13-avi-giveaway-packaging/` (NOTES.md).
+
+Block order, all built into the component:
+
+| # | Block | What it does |
+|---|-------|--------------|
+| 1 | Hero | "You asked for this", the free thing named and called free, one button to it, "No sign-up" ticks, three jump tiles: Get it / Use it now / Get unstuck |
+| 2 | Get it | Download button(s) and the PDF guide, visible with no email. Phone vs computer said up front |
+| 3 | It does / It does not | Two short lists. Kills the fear that it sends, guesses or logs in on its own |
+| 4 | What it looks like | A small example chat with made-up names, "Words it understands", "What is in the folder" |
+| 5 | Use it now | The real prompt in a card: Copy, Open ChatGPT, Open Claude |
+| 6 | Three ways to run it | Each way tagged by what you need (Any AI chat, Phone OK, Computer, Needs a terminal) |
+| 7 | Stuck? Find your line | Real problems in the reader's own words, the last one is a support email |
+| 8 | The offer | One paid next step, matched to the page's AI level, at the very end. "Not for you? Close this page. Everything above stays free." |
+
+Rules for pack pages:
+- **Email (Illy, 2026-10-13):** never a form in front of the free thing and never a timed popup. Visitors whose link carries `?via=dm` (the ManyChat flow already has their email) are never asked. Everyone else gets ONE ask, the shared `GiveawayEmailModal`, after their first copy or download, once per tab. `src/lib/giveaway-dm.ts`.
+- **Offer (Illy, 2026-10-13, replaces element 10 below for pack pages):** no `MastermindCTA`. The page declares `level: 'beginner' | 'builder'` and gets the offer from `src/lib/giveaway-offers.ts`. Beginner = the $67 Website Workshop. Builder has no offer yet (null, so no offer block renders) until Illy picks one. Never hand-write an offer block on a page.
+- **No testimonial quote or carousel** (elements 9 and 11 do not apply to pack pages). Illy's approved design has none, and the current featured homepage quotes are money and time results, which the 2026-09-23 FTC endorsement audit flagged.
+- The site chrome already draws the header, particles, aurora and footer. Do not add another logo bar or particle canvas.
+- No em dashes. Plain, short words. Facts on the page come from the giveaway's own files (README, START-HERE) or the live offer page, never from memory.
+- When the giveaway ships a prompt in a download, the copy card must be byte-identical to it, with a drift test (see `tests/pack-page.test.ts`).
+- Going live for a keyword: the ManyChat flow must add `?via=dm` to the link only in the branch where the email was captured, never in the no-reply fallback.
+
+Gates: `npm test -- tests/pack-page.test.ts tests/giveaway-template-structure.test.ts tests/giveaway-email-collection.test.ts`.
+
+**Legacy template (pages not moved yet): clone `guardog`.** The rest of this step describes the old template. Use it only to fix an old page that has not been rebuilt on `PackPage` yet.
 
 The canonical reference implementation is `src/app/giveaways/guardog/page.tsx`. Clone that file as your starting point regardless of whether the new giveaway is a copy-prompt, a guide, a comparison, a checklist, or a reference page. Content type does not determine the template — `guardog` is the structural baseline for every modern giveaway.
 
@@ -72,9 +100,9 @@ The canonical reference implementation is `src/app/giveaways/guardog/page.tsx`. 
 - `src/app/giveaways/compare/page.tsx` — was initially cloned from benchmark, kept as canonical only after the 2026-06-08 rebuild
 - Any page that does not import `MastermindReactionsSection` — by definition non-conforming
 
-If you are about to clone something other than `guardog`, stop. There is no exception.
+If you are about to clone something other than `guardog` for a legacy page, stop. New pages use `PackPage` instead.
 
-**Required elements — every giveaway page, regardless of content type:**
+**Required elements for legacy template pages, regardless of content type:**
 
 | # | Element | Where it lives |
 |---|---------|----------------|
