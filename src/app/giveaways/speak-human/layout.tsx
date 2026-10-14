@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   keywords: [
     'Speak Human', 'Claude Code skill', 'AI writing humanizer', 'remove AI patterns',
     'humanize AI text', 'Claude Code', 'AI writing tool', 'voice profile',
-    'Business Automation Mastermind', 'Joe Che', 'ManyChat human giveaway',
+    'AI Business Mastermind', 'Joe Che', 'ManyChat human giveaway',
   ],
   authors: [{ name: 'Joe Che', url: 'https://www.mastermindshq.business' }],
   robots: { index: true, follow: true },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: 'Speak Human | Free Claude Code Skill',
     description: 'Install Joe Che’s free Claude Code skill from GitHub. It strips AI writing patterns, explains what it changes, and rewrites copy in a human voice.',
     url: URL,
-    siteName: 'Business Automation Mastermind Workshop',
+    siteName: 'Masterminds Workshop',
     type: 'website',
     locale: 'en_US',
   },

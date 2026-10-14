@@ -38,7 +38,7 @@ test('PackPage wires the shared email modal and skips it for DM visitors', () =>
   assert.match(PACK_SRC, /from\s+['"]@\/components\/giveaways\/GiveawayEmailModal['"]/, 'PackPage must use the shared GiveawayEmailModal (it posts to /api/lead-magnet)')
   assert.match(PACK_SRC, /<GiveawayEmailModal\b[\s\S]{0,200}?slug=\{slug\}/, 'the modal must be tagged with the page slug')
   assert.match(PACK_SRC, /isFromDmVisit\(\)/, 'PackPage must check the DM marker')
-  assert.match(PACK_SRC, /if\s*\(\s*fromDm\.current\s*\)\s*return/, 'the ask must return early for DM visitors')
+  assert.match(PACK_SRC, /if\s*\(\s*fromDm\.current\b/, 'the ask must return early for DM visitors')
 })
 
 test('PackPage asks only after a copy or a download, never on a timer', () => {
@@ -130,4 +130,17 @@ test('every pack page content passes the pack page rules', async () => {
     }
   }
   assert.ok(checked >= 1, 'no pack page content found')
+})
+
+test('every Free AI Tools page passes the pack page rules', async () => {
+  const { FREE_AI_TOOL_SLUGS } = await import('../src/lib/free-ai-tools')
+  const { freeAiToolPack } = await import('../src/lib/free-ai-tool-pack')
+  assert.ok(FREE_AI_TOOL_SLUGS.length >= 10)
+  for (const slug of FREE_AI_TOOL_SLUGS) {
+    const pack = freeAiToolPack(slug)
+    assert.equal(pack.slug, slug)
+    assert.deepEqual(validatePackContent(pack), [], `${slug}: ${validatePackContent(pack).join('; ')}`)
+    const page = readFileSync(join(GIVEAWAYS_DIR, slug, 'page.tsx'), 'utf8')
+    assert.match(page, new RegExp(`<PackPage\\b[\\s\\S]{0,200}?slug="${slug}"`), `${slug}/page.tsx must render PackPage with its own slug`)
+  }
 })

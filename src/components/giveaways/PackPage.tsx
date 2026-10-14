@@ -1,13 +1,13 @@
 'use client'
 
-import { useCallback, useEffect, useRef, useState } from 'react'
-import type { MouseEvent } from 'react'
+import { createContext, useCallback, useContext, useEffect, useRef, useState } from 'react'
+import type { MouseEvent, ReactNode } from 'react'
 import Image from 'next/image'
 import GiveawayEmailModal from '@/components/giveaways/GiveawayEmailModal'
 import { isFromDmVisit } from '@/lib/giveaway-dm'
 import { offerForLevel } from '@/lib/giveaway-offers'
-import { packHasAction, packSections } from '@/lib/pack-page'
-import type { PackGuideSection, PackPageContent, PackSectionId, PackTagTone } from '@/lib/pack-page'
+import { fillPrompt, packHasAction, packSections } from '@/lib/pack-page'
+import type { PackGuideSection, PackPageContent, PackPromptCard, PackSectionId, PackTagTone } from '@/lib/pack-page'
 import styles from './PackPage.module.css'
 
 // Same font links as the other giveaway pages (deduped by data-font), so the
@@ -26,6 +26,13 @@ const TAG_TONE: Record<PackTagTone, string> = {
 
 type AskKind = 'copy' | 'download' | 'finish'
 
+const PackAskContext = createContext<(kind: AskKind) => void>(() => {})
+
+/** For an interactive body inside PackPage (a quiz): call it at the moment the visitor has used the thing. Same rules: never for DM visitors, once per tab. */
+export function usePackAsk() {
+  return useContext(PackAskContext)
+}
+
 // ---------------------------------------------------------------------------
 // PackPage: the pack-style giveaway template (Illy, 2026-10-13).
 //
@@ -39,11 +46,21 @@ type AskKind = 'copy' | 'download' | 'finish'
 // Offer rule: the one paid offer at the end comes from offerForLevel(), so it
 // always matches the page's AI level. Rules: docs/giveaways/PROCESS.md.
 // ---------------------------------------------------------------------------
-export default function PackPage({ slug, content }: { slug: string; content: PackPageContent }) {
+export default function PackPage({
+  slug,
+  content,
+  children,
+}: {
+  slug: string
+  content: PackPageContent
+  /** An interactive body (a quiz, a prompt builder) shown inside the guide block, after its sections. */
+  children?: ReactNode
+}) {
   const c = content
   const offer = offerForLevel(c.level, slug)
   const sections = packSections(c)
-  const hasAction = packHasAction(c)
+  // An interactive body is something to use, so the ask waits for a copy or download, not the end of the page.
+  const hasAction = packHasAction(c) || Boolean(children)
   const fromDm = useRef(false)
   const askTimer = useRef<number | null>(null)
   const stuckRef = useRef<HTMLElement>(null)
@@ -72,7 +89,7 @@ export default function PackPage({ slug, content }: { slug: string; content: Pac
 
   const askForEmailOnce = useCallback(
     (kind: AskKind) => {
-      if (fromDm.current) return
+      if (fromDm.current || c.noEmailAsk) return
       const key = `pack-email-asked-${slug}`
       try {
         if (window.sessionStorage.getItem(key)) return
@@ -84,7 +101,7 @@ export default function PackPage({ slug, content }: { slug: string; content: Pac
       setAskedAfterCopy(kind === 'copy')
       askTimer.current = window.setTimeout(() => setEmailOpen(true), kind === 'copy' ? 700 : 1200)
     },
-    [slug],
+    [slug, c.noEmailAsk],
   )
 
   // Nothing to copy or download: ask once when the reader reaches "Stuck?".
@@ -202,8 +219,9 @@ export default function PackPage({ slug, content }: { slug: string; content: Pac
                     <a
                       className={`${styles.btn} ${styles.btnMain}`}
                       href={c.get.primary.href}
-                      target="_blank"
+                      target={c.get.primary.download ? undefined : '_blank'}
                       rel="noopener"
+                      download={c.get.primary.download}
                       onClick={() => askForEmailOnce('download')}
                     >
                       {c.get.primary.label}
@@ -215,8 +233,9 @@ export default function PackPage({ slug, content }: { slug: string; content: Pac
                       key={s.href}
                       className={`${styles.btn} ${styles.btnGhost}`}
                       href={s.href}
-                      target="_blank"
+                      target={s.download ? undefined : '_blank'}
                       rel="noopener"
+                      download={s.download}
                       onClick={() => askForEmailOnce('download')}
                     >
                       {s.label}
@@ -281,6 +300,11 @@ export default function PackPage({ slug, content }: { slug: string; content: Pac
                 />
               ))}
             </div>
+            {children ? (
+              <div className={styles.custom}>
+                <PackAskContext.Provider value={askForEmailOnce}>{children}</PackAskContext.Provider>
+              </div>
+            ) : null}
           </div>
         </section>
       ) : null}
@@ -399,12 +423,13 @@ export default function PackPage({ slug, content }: { slug: string; content: Pac
                   </p>
                   <PromptBox
                     copyKey={key}
-                    prompt={card.prompt}
+                    card={card}
                     open={Boolean(openPrompts[key])}
                     onToggle={() => setOpenPrompts((v) => ({ ...v, [key]: !v[key] }))}
                     buttonLabel={copyLabel(key, total > 1 ? `Copy card ${i + 1}` : 'Copy the prompt')}
                     buttonClass={copyClass(key)}
                     onCopy={copyText}
+                    onOpen={() => askForEmailOnce('download')}
                     openLinks={c.use!.openLinks}
                     boxId={sectionId('use') + `-prompt-${i}`}
                   />
@@ -523,13 +548,15 @@ export default function PackPage({ slug, content }: { slug: string; content: Pac
         </div>
       </div>
 
-      <GiveawayEmailModal
-        slug={slug}
-        isOpen={emailOpen}
-        onClose={() => setEmailOpen(false)}
-        showCopiedBadge={askedAfterCopy}
-        headingOverride={c.emailHeading}
-      />
+      {c.noEmailAsk ? null : (
+        <GiveawayEmailModal
+          slug={slug}
+          isOpen={emailOpen}
+          onClose={() => setEmailOpen(false)}
+          showCopiedBadge={askedAfterCopy}
+          headingOverride={c.emailHeading}
+        />
+      )}
     </div>
   )
 }
@@ -567,46 +594,115 @@ function CommandBlock({
 
 function PromptBox({
   copyKey,
-  prompt,
+  card,
   open,
   onToggle,
   buttonLabel,
   buttonClass,
   onCopy,
+  onOpen,
   openLinks,
   boxId,
 }: {
   copyKey: string
-  prompt: string
+  card: PackPromptCard
   open: boolean
   onToggle: () => void
   buttonLabel: string
   buttonClass: string
   onCopy: CopyFn
+  onOpen: () => void
   openLinks: { label: string; href: string }[]
   boxId: string
 }) {
   const pre = useRef<HTMLPreElement>(null)
-  const long = prompt.length > 600
+  const [values, setValues] = useState<Record<string, string>>({})
+  const filled = fillPrompt(card, values)
+  const long = filled.length > 600
+  const fieldId = (key: string) => `${boxId}-${key}`
   return (
     <>
+      {card.fields && card.fields.length ? (
+        <div className={styles.fields}>
+          {card.fields.map((f) => (
+            <label key={f.key} className={styles.field} htmlFor={fieldId(f.key)}>
+              <span>{f.label}</span>
+              {f.options ? (
+                <select
+                  id={fieldId(f.key)}
+                  value={values[f.key] || ''}
+                  onChange={(e) => setValues((v) => ({ ...v, [f.key]: e.target.value }))}
+                >
+                  <option value="">{f.token}</option>
+                  {f.options.map((o) => (
+                    <option key={o} value={o}>
+                      {o}
+                    </option>
+                  ))}
+                </select>
+              ) : f.multiline ? (
+                <textarea
+                  id={fieldId(f.key)}
+                  rows={3}
+                  placeholder={f.token}
+                  value={values[f.key] || ''}
+                  onChange={(e) => setValues((v) => ({ ...v, [f.key]: e.target.value }))}
+                />
+              ) : (
+                <input
+                  id={fieldId(f.key)}
+                  type="text"
+                  placeholder={f.token}
+                  value={values[f.key] || ''}
+                  onChange={(e) => setValues((v) => ({ ...v, [f.key]: e.target.value }))}
+                />
+              )}
+            </label>
+          ))}
+        </div>
+      ) : null}
       <div className={styles.cardActions}>
-        <button type="button" className={buttonClass} onClick={() => onCopy(copyKey, prompt, pre.current)} aria-live="polite">
+        <button type="button" className={buttonClass} onClick={() => onCopy(copyKey, filled, pre.current)} aria-live="polite">
           {buttonLabel}
         </button>
         {openLinks.map((l) => (
-          <a key={l.href} className={styles.chipBtn} href={l.href} target="_blank" rel="noopener">
+          <a
+            key={l.href}
+            className={styles.chipBtn}
+            href={l.href.includes('{prompt}') ? l.href.replace('{prompt}', encodeURIComponent(filled)) : l.href}
+            target="_blank"
+            rel="noopener"
+            onClick={l.href.includes('{prompt}') ? onOpen : undefined}
+          >
             {l.label} &#8599;
           </a>
         ))}
       </div>
+      {card.fields && card.fields.length ? <div className={styles.promptLabel}>Your finished prompt</div> : null}
       <div id={boxId} className={`${styles.promptBox} ${open || !long ? styles.promptOpen : ''}`}>
-        <pre ref={pre}>{prompt}</pre>
+        <pre ref={pre}>{filled}</pre>
       </div>
       {long ? (
         <button type="button" className={styles.expand} aria-controls={boxId} aria-expanded={open} onClick={onToggle}>
           {open ? 'Show less' : 'Show the whole prompt'}
         </button>
+      ) : null}
+      {card.example ? (
+        <details className={`${styles.details} ${styles.exampleDetails}`}>
+          <summary>See it work</summary>
+          <div className={styles.dBody}>
+            <div className={styles.beforeAfter}>
+              <div>
+                <h4>What you paste</h4>
+                <pre>{card.example.before}</pre>
+              </div>
+              <div>
+                <h4>What you get back</h4>
+                <pre>{card.example.after}</pre>
+              </div>
+            </div>
+          </div>
+        </details>
       ) : null}
     </>
   )

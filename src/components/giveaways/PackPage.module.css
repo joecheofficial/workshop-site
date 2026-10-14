@@ -1015,3 +1015,85 @@
 .term_note {
   color: var(--blush);
 }
+
+/* interactive body (quiz, prompt builder) */
+.custom {
+  margin-top: 22px;
+  min-width: 0;
+}
+
+/* fill-in fields on prompt cards */
+.fields {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+}
+.field {
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--cream);
+}
+.field input,
+.field textarea,
+.field select {
+  width: 100%;
+  min-width: 0;
+  padding: 11px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--line-2);
+  background: var(--well);
+  color: var(--cream);
+  font: 400 15px/1.45 var(--body);
+}
+.field textarea {
+  resize: vertical;
+}
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--faint);
+}
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+  outline: none;
+  border-color: var(--lilac);
+}
+.promptLabel {
+  margin: 4px 0 8px;
+  font: 500 10.5px/1 var(--mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+.exampleDetails {
+  margin-top: 12px;
+  background: var(--panel-2);
+}
+.beforeAfter {
+  display: grid;
+  gap: 10px;
+}
+@media (min-width: 560px) {
+  .beforeAfter {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.beforeAfter h4 {
+  margin: 0 0 6px;
+  font: 500 10.5px/1 var(--mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+.beforeAfter pre {
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: var(--well);
+  font: 400 12.5px/1.55 var(--mono);
+  color: #ddd5e6;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     description:
       'Turn on the Instagram settings that help your account stay recommendable, remixable, measurable, and easy to grow.',
     url: URL,
-    siteName: 'Business Automation Mastermind Workshop',
+    siteName: 'Masterminds Workshop',
     type: 'website',
     locale: 'en_US',
   },
