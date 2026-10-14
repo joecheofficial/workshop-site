@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     description:
       'The architecture for making large AI capability systems leaner, smarter, and more portable across CLIs. Includes a universal migration prompt and PDF.',
     url: URL,
-    siteName: 'Business Automation Mastermind Workshop',
+    siteName: 'Masterminds Workshop',
     type: 'website',
     locale: 'en_US',
   },

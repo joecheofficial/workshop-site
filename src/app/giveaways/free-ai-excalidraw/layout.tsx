@@ -6,7 +6,7 @@ const URL = 'https://workshop.mastermindshq.business/giveaways/free-ai-excalidra
 export const metadata: Metadata = {
   title: 'Excalidraw: Explain anything in one picture',
   description: 'A free whiteboard in your browser with a friendly hand-drawn look. No download and no account. Free setup notes from Joe Che: 3 steps, tips and links.',
-  keywords: ['Excalidraw', 'free AI tools', 'open source', 'AI for small business', 'Joe Che', 'Business Automation Mastermind'],
+  keywords: ['Excalidraw', 'free AI tools', 'open source', 'AI for small business', 'Joe Che', 'AI Business Mastermind'],
   authors: [{ name: 'Joe Che', url: 'https://www.mastermindshq.business' }],
   robots: { index: true, follow: true },
   alternates: { canonical: URL },
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: 'Excalidraw: Explain anything in one picture',
     description: 'A free whiteboard in your browser with a hand-drawn look. No download, no account.',
     url: URL,
-    siteName: 'Business Automation Mastermind Workshop',
+    siteName: 'Masterminds Workshop',
     type: 'website',
     locale: 'en_US',
   },

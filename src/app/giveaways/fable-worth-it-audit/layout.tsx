@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'AI agents',
     'codebase audit',
     'Claude Managed Agents',
-    'Business Automation Mastermind',
+    'AI Business Mastermind',
     'Joe Che',
   ],
   authors: [{ name: 'Joe Che', url: 'https://www.mastermindshq.business' }],
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     description:
       'Find the 5 places in your codebase where Claude Fable 5 is actually worth the cost.',
     url: URL,
-    siteName: 'Business Automation Mastermind Workshop',
+    siteName: 'Masterminds Workshop',
     type: 'website',
     locale: 'en_US',
   },

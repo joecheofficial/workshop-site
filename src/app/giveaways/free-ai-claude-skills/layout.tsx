@@ -6,7 +6,7 @@ const URL = 'https://workshop.mastermindshq.business/giveaways/free-ai-claude-sk
 export const metadata: Metadata = {
   title: 'Claude Skills: Teach Claude your way of working once',
   description: 'Anthropic\'s own library of Claude skills. A skill is a short recipe that teaches Claude how to do one job your way, every time. Free setup notes from Joe Che: 3 steps, tips and links.',
-  keywords: ['Claude Skills', 'free AI tools', 'open source', 'AI for small business', 'Joe Che', 'Business Automation Mastermind'],
+  keywords: ['Claude Skills', 'free AI tools', 'open source', 'AI for small business', 'Joe Che', 'AI Business Mastermind'],
   authors: [{ name: 'Joe Che', url: 'https://www.mastermindshq.business' }],
   robots: { index: true, follow: true },
   alternates: { canonical: URL },
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: 'Claude Skills: Teach Claude your way of working once',
     description: 'Anthropic\'s free library of Claude skills: real Word, PowerPoint and Excel files, your brand on every one.',
     url: URL,
-    siteName: 'Business Automation Mastermind Workshop',
+    siteName: 'Masterminds Workshop',
     type: 'website',
     locale: 'en_US',
   },

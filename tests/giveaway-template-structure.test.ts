@@ -59,10 +59,17 @@ function listGiveawayPages(): Page[] {
 function importsModal(src: string): boolean {
   // Either the bare email modal or the auto-modal wrapper counts as wiring the
   // capture surface. The auto-modal imports GiveawayEmailModal internally.
+  // The pack page template (PackPage) wires the modal itself; its own rules
+  // are asserted in tests/pack-page.test.ts.
   return (
     /from\s+['"]@\/components\/giveaways\/GiveawayEmailModal['"]/.test(src) ||
-    /from\s+['"]@\/components\/giveaways\/GiveawayAutoModal['"]/.test(src)
+    /from\s+['"]@\/components\/giveaways\/GiveawayAutoModal['"]/.test(src) ||
+    usesPackPage(src)
   )
+}
+
+function usesPackPage(src: string): boolean {
+  return /from\s+['"]@\/components\/giveaways\/PackPage['"]/.test(src) && /<PackPage\b/.test(src)
 }
 
 function hasCopyPromptTrigger(src: string): boolean {
@@ -98,9 +105,11 @@ test('every giveaway page wires either the copy-prompt trigger or the auto-popup
 
     const copyTrigger = hasCopyPromptTrigger(page.source)
     const autoTrigger = hasAutoPopupTrigger(page.source)
+    // PackPage asks once, after the first copy or download (never for ?via=dm visitors).
+    const packTrigger = usesPackPage(page.source)
 
     assert.ok(
-      copyTrigger || autoTrigger,
+      copyTrigger || autoTrigger || packTrigger,
       `giveaway/${page.slug}/page.tsx imports GiveawayEmailModal but wires neither trigger.\n` +
         '  Copy-prompt: every Copy button must call onAfterCopy={() => setEmailModalOpen(true)}.\n' +
         '  Non-copy-prompt: page must open the modal on a setTimeout suppressed by sessionStorage with key `giveaway-auto-modal-shown-<slug>`.\n' +
@@ -114,6 +123,7 @@ test('non-copy-prompt giveaways set showCopiedBadge={false} on the modal', () =>
   for (const page of pages) {
     if (EXEMPT_SLUGS.has(page.slug)) continue
     if (!importsModal(page.source)) continue
+    if (usesPackPage(page.source)) continue
     if (hasCopyPromptTrigger(page.source)) continue
     if (!hasAutoPopupTrigger(page.source)) continue
 

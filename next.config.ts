@@ -11,6 +11,13 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // The TASK prompt pack moved from a static file to the pack page template (2026-10-14).
+      // Query strings pass through, so ?via=dm from the Instagram DM still reaches the page.
+      {
+        source: '/hated-task-prompts.html',
+        destination: '/giveaways/hated-task-prompts',
+        permanent: false,
+      },
       // Slug was shared without the year in WhatsApp groups (Sept 2026); keep those links working.
       {
         source: '/events/joe-ches-connection-dinner-sunday-october-04',

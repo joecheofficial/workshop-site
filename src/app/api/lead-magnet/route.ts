@@ -15,8 +15,7 @@ import {
   buildGenericGiveawayEmail,
   isValidManychatSecret,
   sanitizeGiveawayName,
-  validateGiveawayLink,
-} from '@/lib/generic-giveaway-email'
+  validateGiveawayLink, websiteGiveawayEmail } from '@/lib/generic-giveaway-email'
 
 const RESEND_API_KEY = process.env.RESEND_API_KEY
 
@@ -694,9 +693,12 @@ export async function POST(request: Request) {
     // ManyChat IG giveaways without a bespoke template: send the generic
     // "here's your link" email so the DM's "copy's on its way" promise holds.
     // Website callers (no secret) keep the fail-closed 422 below.
-    const genericLink = isManychat ? validateGiveawayLink(rawLink) : null
+    // Website callers on the pack pages listed in WEBSITE_GENERIC_GIVEAWAYS get the same email,
+    // linking back to that page (Illy, 2026-10-14). Anything else keeps the fail-closed 422 below.
+    const websiteGeneric = isManychat ? null : websiteGiveawayEmail(source)
+    const genericLink = isManychat ? validateGiveawayLink(rawLink) : websiteGeneric?.link ?? null
     if (!isDeliverableLeadMagnetSource(source) && genericLink) {
-      const genericName = sanitizeGiveawayName(rawName, source)
+      const genericName = websiteGeneric ? websiteGeneric.name : sanitizeGiveawayName(rawName, source)
       const idempotencyKey = `lead-magnet/${source}/${email.trim().toLowerCase()}`
       await sendViaResend(email, source, idempotencyKey, { name: genericName, link: genericLink })
       await trackInsightEvent('initial_email_sent', {

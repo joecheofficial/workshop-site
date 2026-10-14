@@ -1,0 +1,2 @@
+// Copied character for character from the old speak-human page (INSTALL_COMMAND).
+export const SPEAK_HUMAN_INSTALL = `Install Speak Human from https://github.com/josephtandle/speak-human for the assistant I am using. Read the repository's INSTALL.md, install the current release in the right skills folder for this assistant, check it works, and tell me the version and where you installed it. Then help me try it on: Our team will utilize the new form starting Monday.`

@@ -7,7 +7,7 @@ const URL = `${BASE}/giveaways/business-builder-quiz`
 export const metadata: Metadata = {
   title: 'Do You Have What It Takes to Build Your Own Business? | Take the Quiz',
   description:
-    '6 questions that score your founder readiness across 5 research-backed levels, from not yet to built for this. Free from the Business Automation Mastermind.',
+    '6 questions that score your founder readiness across 5 research-backed levels, from not yet to built for this. Free from the AI Business Mastermind.',
   keywords: [
     'do you have what it takes',
     'entrepreneur quiz',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     'entrepreneurial mindset test',
     'grit quiz',
     'business builder quiz',
-    'Business Automation Mastermind',
+    'AI Business Mastermind',
     'Joe Che',
   ],
   authors: [{ name: 'Joe Che', url: 'https://www.mastermindshq.business' }],
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Do You Have What It Takes to Build Your Own Business?',
     description:
-      '6 questions to score your founder readiness across 5 levels. Backed by research from Rotter, Sarasvathy, Baker & Nelson, Duckworth, and Shane. Free from the Business Automation Mastermind.',
+      '6 questions to score your founder readiness across 5 levels. Backed by research from Rotter, Sarasvathy, Baker & Nelson, Duckworth, and Shane. Free from the AI Business Mastermind.',
     url: URL,
-    siteName: 'Business Automation Mastermind Workshop',
+    siteName: 'Masterminds Workshop',
     type: 'website',
     locale: 'en_US',
   },
