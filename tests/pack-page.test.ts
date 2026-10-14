@@ -50,12 +50,20 @@ test('PackPage asks only after a copy or a download, never on a timer', () => {
   assert.equal(opens.length, 1, 'the modal must have exactly one opener, inside askForEmailOnce')
 })
 
-test('every offer sits at its own level, and builder pages have no offer until one is chosen', () => {
+test('every offer sits at its own level; builder pages end with Get Found (Illy, 2026-10-14)', () => {
   for (const [level, offer] of Object.entries(GIVEAWAY_OFFERS)) {
     if (offer) assert.equal(offer.level, level, `offer ${offer.id} is filed under ${level} but declares ${offer.level}`)
   }
-  assert.equal(GIVEAWAY_OFFERS.builder, null)
-  assert.equal(offerForLevel('builder', 'tokens'), null)
+  const g = offerForLevel('builder', 'tokens')
+  assert.ok(g)
+  assert.equal(g.id, 'get-found-kit')
+  const url = new URL(g.cta.href)
+  assert.equal(url.searchParams.get('deal'), 'get-found-kit')
+  assert.equal(url.searchParams.get('utm_campaign'), 'tokens')
+  // Copy guardrails (12 Oct): found = findable for name and service; never rankings or guarantees.
+  const words = JSON.stringify(g).toLowerCase()
+  for (const banned of ['guarantee', 'rank #1', 'first page', 'will recommend you']) assert.ok(!words.includes(banned), banned)
+  assert.ok(g.bridge, 'shared builder offer carries its own bridge line')
 })
 
 test('the beginner offer is the Website Workshop, tagged with the giveaway slug', () => {
