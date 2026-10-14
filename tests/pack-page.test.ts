@@ -144,3 +144,28 @@ test('every Free AI Tools page passes the pack page rules', async () => {
     assert.match(page, new RegExp(`<PackPage\\b[\\s\\S]{0,200}?slug="${slug}"`), `${slug}/page.tsx must render PackPage with its own slug`)
   }
 })
+
+test('every pack page that asks for an email has an email to send back', async () => {
+  const { isDeliverableLeadMagnetSource } = await import('../src/lib/lead-magnets')
+  const { websiteGiveawayEmail } = await import('../src/lib/generic-giveaway-email')
+  const missing: string[] = []
+  for (const entry of readdirSync(GIVEAWAYS_DIR, { withFileTypes: true })) {
+    if (!entry.isDirectory()) continue
+    const pagePath = join(GIVEAWAYS_DIR, entry.name, 'page.tsx')
+    try { if (!statSync(pagePath).isFile()) continue } catch { continue }
+    const src = readFileSync(pagePath, 'utf8')
+    const m = src.match(/<PackPage\b[\s\S]{0,200}?slug="([^"]+)"/)
+    if (!m) continue
+    let noAsk = false
+    try {
+      const mod = (await import(join(GIVEAWAYS_DIR, entry.name, 'pack.ts'))) as Record<string, unknown>
+      noAsk = Object.values(mod).some((v) => isPackContent(v) && Boolean(v.noEmailAsk))
+    } catch { /* no pack.ts (Free AI Tools use the shared table) */ }
+    if (noAsk) continue
+    if (!isDeliverableLeadMagnetSource(m[1]) && !websiteGiveawayEmail(m[1])) missing.push(m[1])
+  }
+  assert.deepEqual(missing, [], `these pack pages ask for an email but nothing would be sent: ${missing.join(', ')}`)
+  const g = websiteGiveawayEmail('compare')
+  assert.equal(g?.link, 'https://workshop.mastermindshq.business/giveaways/compare')
+  assert.equal(websiteGiveawayEmail('not-a-page'), null)
+})

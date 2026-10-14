@@ -147,3 +147,30 @@ export function buildGenericGiveawayEmail({
 
   return { subject, html, text }
 }
+
+// ---------------------------------------------------------------------------
+// Website visitors on giveaways that have no email of their own (Illy, 2026-10-14).
+// The pack page asks once for the email; until now these sources returned 422
+// and the visitor saw an error even though the lead was saved. They now get the
+// same generic "here is your link" email as DM sign-ups, pointing back to the
+// page. Only these exact slugs, and the link is always our own page.
+// ---------------------------------------------------------------------------
+export const WEBSITE_GENERIC_GIVEAWAYS: Readonly<Record<string, string>> = {
+  'anthropic-safety-checklist': 'The Anthropic Ban Risk Audit',
+  benchmark: 'The AI Model Benchmark Comparison',
+  'claude-md': 'The Ultimate CLAUDE.md file',
+  compare: 'The 5 Versions of Claude',
+  'cross-cli-compatibility-routing': 'Cross CLI Compatibility Routing',
+  'fable-worth-it-audit': 'The Fable Worth-It Audit',
+  'hated-task-prompts': 'The Hated-Task Prompt Pack',
+  'ig-settings': 'The Instagram Settings Checklist',
+  'ray-dalio-council': 'The Ray Dalio Council',
+  'squarespace-escape': 'The Squarespace Escape Kit',
+  'viral-hooks': 'The Visual Hooks guide',
+}
+
+/** For a website caller: the generic email's name and link for this source, or null. */
+export function websiteGiveawayEmail(source: string): { name: string; link: string } | null {
+  const name = WEBSITE_GENERIC_GIVEAWAYS[source]
+  return name ? { name, link: `https://workshop.mastermindshq.business/giveaways/${source}` } : null
+}
