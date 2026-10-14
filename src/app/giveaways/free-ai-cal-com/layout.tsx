@@ -6,7 +6,7 @@ const URL = 'https://workshop.mastermindshq.business/giveaways/free-ai-cal-com'
 export const metadata: Metadata = {
   title: 'Cal.com: One link. No more back and forth',
   description: 'A free booking page. You share one link, people pick an open time from your calendar, and it books the call and sends reminders. Free setup notes from Joe Che: 3 steps, tips and links.',
-  keywords: ['Cal.com', 'free AI tools', 'open source', 'AI for small business', 'Joe Che', 'Business Automation Mastermind'],
+  keywords: ['Cal.com', 'free AI tools', 'open source', 'AI for small business', 'Joe Che', 'AI Business Mastermind'],
   authors: [{ name: 'Joe Che', url: 'https://www.mastermindshq.business' }],
   robots: { index: true, follow: true },
   alternates: { canonical: URL },
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: 'Cal.com: One link. No more back and forth',
     description: 'A free booking page: people pick a time from your calendar and it books the call and sends the reminders.',
     url: URL,
-    siteName: 'Business Automation Mastermind Workshop',
+    siteName: 'Masterminds Workshop',
     type: 'website',
     locale: 'en_US',
   },

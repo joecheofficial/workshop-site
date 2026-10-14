@@ -226,6 +226,21 @@ export default function BusinessBuilderQuiz() {
 
   return (
     <>
+      <style>{`
+        .glow-card { transition: box-shadow 0.3s ease, border-color 0.3s ease; }
+        .glow-card:hover {
+          box-shadow: 0 0 28px rgba(139,121,212,0.12), 0 0 0 1px rgba(139,121,212,0.18);
+          border-color: rgba(139,121,212,0.22) !important;
+        }
+        .glow-btn { transition: box-shadow 0.2s ease, background-color 0.15s ease, transform 0.1s ease-out; }
+        .glow-btn:hover { box-shadow: 0 0 32px rgba(139,121,212,0.45), 0 0 60px rgba(139,121,212,0.2); }
+        .glow-btn-pink:hover { box-shadow: 0 0 32px rgba(245,195,198,0.5), 0 0 60px rgba(245,195,198,0.2); }
+        .option-btn { transition: border-color 0.15s ease, background 0.15s ease; }
+        .option-btn:hover:not(.option-selected) {
+          border-color: rgba(139,121,212,0.35) !important;
+          background: rgba(139,121,212,0.07) !important;
+        }
+      `}</style>
       {!quizStarted && (
         <div className="flex justify-center pb-6">
           <StartButton onClick={handleStart} />

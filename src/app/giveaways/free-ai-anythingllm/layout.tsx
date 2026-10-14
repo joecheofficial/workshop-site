@@ -6,7 +6,7 @@ const URL = 'https://workshop.mastermindshq.business/giveaways/free-ai-anythingl
 export const metadata: Metadata = {
   title: 'AnythingLLM: A private ChatGPT that has read your files',
   description: 'A free desktop app that turns your own files into an AI you can ask questions. Think of it as a private ChatGPT that has read your documents. Free setup notes from Joe Che: 3 steps, tips and links.',
-  keywords: ['AnythingLLM', 'free AI tools', 'open source', 'AI for small business', 'Joe Che', 'Business Automation Mastermind'],
+  keywords: ['AnythingLLM', 'free AI tools', 'open source', 'AI for small business', 'Joe Che', 'AI Business Mastermind'],
   authors: [{ name: 'Joe Che', url: 'https://www.mastermindshq.business' }],
   robots: { index: true, follow: true },
   alternates: { canonical: URL },
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: 'AnythingLLM: A private ChatGPT that has read your files',
     description: 'Drag in your course PDFs, SOPs and client notes, then ask questions and get answers with sources.',
     url: URL,
-    siteName: 'Business Automation Mastermind Workshop',
+    siteName: 'Masterminds Workshop',
     type: 'website',
     locale: 'en_US',
   },

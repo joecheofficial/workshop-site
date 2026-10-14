@@ -7,7 +7,7 @@ const URL = `${BASE}/giveaways/cost-stack`
 export const metadata: Metadata = {
   title: 'The Cost Stack Audit: What Your Software Actually Costs You',
   description:
-    'A free calculator that adds up what you pay every year for business software, hosting, freelancers and subscriptions, then shows which lines members of the AI Business Mastermind replaced themselves.',
+    'A free calculator that adds up what you pay every year for business software, hosting, freelancers and subscriptions, then writes one AI prompt that shows which parts you could run yourself.',
   keywords: [
     'software cost calculator', 'SaaS audit', 'cancel subscriptions', 'GoHighLevel alternative',
     'Kajabi alternative', 'Mailchimp alternative', 'small business software costs',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'The Cost Stack Audit: What Your Software Actually Costs You',
     description:
-      'Add up what you pay every year, then see which lines someone in the mastermind already replaced and said so on the record. Free, takes about 60 seconds.',
+      'Add up what you pay every year, then get one prompt that shows what you could stop paying for. Free, takes about 60 seconds.',
     url: URL,
     siteName: 'AI Business Mastermind Workshop',
     type: 'website',
