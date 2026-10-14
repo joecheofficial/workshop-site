@@ -520,7 +520,7 @@ export default function PackPage({
             </div>
             <div className={styles.bridge}>
               <Image src={offer.photo.src} alt={offer.photo.alt} width={124} height={124} />
-              <p>{c.bridge}</p>
+              <p>{offer.bridge ?? c.bridge}</p>
             </div>
             <p className={styles.muted}>{offer.body}</p>
             <ul className={styles.checks}>
