@@ -6,10 +6,12 @@
 // pack page declares its level and gets the offer for that level; there is no
 // way to put a high-level product on a beginner page by accident.
 //
-// Builder-level giveaways have no evergreen offer yet (13 Oct 2026: the Meta
-// Ads course is live and mid-run), so the 'builder' slot is intentionally
-// empty until Illy picks one. Facts below are copied from the live Website
-// Workshop page (mastermindshq.business/masterminds-website-workshop).
+// Builder-level giveaways (people already in Claude Code) end with Get Found on
+// Google and ChatGPT, $47 one-time (Illy, 2026-10-14). The Meta Ads with Claude
+// Code course replaces it once it is sold as evergreen recordings. Beginner facts
+// come from the live Website Workshop page; Get Found facts and the three promise
+// tiers come from agents/seo-monitor/get-found-kit/README.md and the 12 Oct copy
+// guardrails (found = findable for your name and service, never rankings).
 // ---------------------------------------------------------------------------
 
 export type GiveawayLevel = 'beginner' | 'builder'
@@ -25,9 +27,12 @@ export type GiveawayOffer = {
   promise: { value: string; text: string }
   cta: { label: string; meta: string; href: string }
   photo: { src: string; alt: string }
+  /** Replaces the page's own bridge line, for offers shared by many different pages. */
+  bridge?: string
 }
 
 export const WEBSITE_WORKSHOP_URL = 'https://mastermindshq.business/masterminds-website-workshop'
+export const GET_FOUND_CHECKOUT_URL = 'https://mastermindshq.business/api/mhq-checkout?deal=get-found-kit'
 
 export const GIVEAWAY_OFFERS: Record<GiveawayLevel, GiveawayOffer | null> = {
   beginner: {
@@ -54,7 +59,33 @@ export const GIVEAWAY_OFFERS: Record<GiveawayLevel, GiveawayOffer | null> = {
     cta: { label: 'See the Website Workshop', meta: '$67 · one payment · next page', href: WEBSITE_WORKSHOP_URL },
     photo: { src: '/images/events/joe-che-bio-bw.jpg', alt: 'Joe Che' },
   },
-  builder: null,
+  builder: {
+    id: 'get-found-kit',
+    level: 'builder',
+    name: 'Get Found on Google and ChatGPT.',
+    stats: [
+      { value: '$47', label: 'one payment, no monthly fee' },
+      { value: '0', label: 'API keys or paid services' },
+      { value: '1', label: 'prompt per step, run by your Claude Code' },
+      { value: '14', label: 'day found check: day 1, 7 and 14' },
+    ],
+    body:
+      'Get your website listed on Google and Bing so people (and ChatGPT) can find you by your name and your service. ChatGPT finds websites mostly through Bing, so we tell Bing about you too. Your own Claude Code does the work on your computer, one prompt at a time.',
+    checks: [
+      'What it does: sets up Google and Bing, your Google Business Profile, posts that answer real customer questions, and a monthly check.',
+      'What usually happens: your site shows up when people search your name or business name within a few weeks.',
+      'What it cannot promise: ranking for competitive searches like "best X near me". That takes months of steady posts.',
+      'You need a website in a folder Claude Code can open, Node.js 20 or newer, and a free Google account. It is not for Squarespace or Wix sites.',
+    ],
+    promise: {
+      value: '$47',
+      text: 'One payment. No monthly fee. Your own Claude Code runs it, so nobody else needs access to your accounts.',
+    },
+    cta: { label: 'Get the kit', meta: '$47 · one payment · secure checkout', href: GET_FOUND_CHECKOUT_URL },
+    photo: { src: '/images/events/joe-che-bio-bw.jpg', alt: 'Joe Che' },
+    bridge:
+      'You came for one piece of my Claude Code setup. If you have your own website, the next useful job for that setup is getting the site found.',
+  },
 }
 
 /** The end-of-page offer for a giveaway level, with campaign tags so sales can be traced to the giveaway. */
