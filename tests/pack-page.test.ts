@@ -5,7 +5,9 @@ import { readdirSync, readFileSync, statSync } from 'node:fs'
 import { join } from 'node:path'
 import { hasDmMarker } from '../src/lib/giveaway-dm'
 import { GIVEAWAY_OFFERS, WEBSITE_WORKSHOP_URL, offerForLevel } from '../src/lib/giveaway-offers'
-import { LEAD_MACHINE_CONTENT } from '../src/app/giveaways/lead-machine/content'
+import { LEAD_MACHINE_CONTENT } from '../src/app/giveaways/lead-machine/pack'
+import { validatePackContent } from '../src/lib/pack-page'
+import type { PackPageContent } from '../src/lib/pack-page'
 import { LEAD_MACHINE_PROMPT } from '../src/app/giveaways/lead-machine/prompt'
 
 // ---------------------------------------------------------------------------
@@ -77,7 +79,7 @@ test('the Lead Machine copy card is exactly the prompt inside the download', () 
   const zip = join(ROOT, 'public', 'lead-machine-starter.zip')
   const shipped = execFileSync('unzip', ['-p', zip, 'lead-machine/PASTE-INTO-CHATGPT-OR-CLAUDE.txt'], { encoding: 'utf8' }).replace(/\s+$/, '')
   assert.equal(LEAD_MACHINE_PROMPT, shipped, 'prompt.ts drifted from the zip. Regenerate it (command in prompt.ts).')
-  assert.equal(LEAD_MACHINE_CONTENT.use.prompt, LEAD_MACHINE_PROMPT)
+  assert.equal(LEAD_MACHINE_CONTENT.use?.cards[0].prompt, LEAD_MACHINE_PROMPT)
 })
 
 test('pack page words contain no em dashes', () => {
@@ -101,4 +103,31 @@ test('every page on the pack template passes its own directory as the slug', () 
     if (!m) continue
     assert.equal(m[1], entry.name, `giveaways/${entry.name} renders PackPage with slug="${m[1]}"`)
   }
+})
+
+// Every page on the pack template, found by its pack.ts, must pass the validator.
+function isPackContent(v: unknown): v is PackPageContent {
+  return Boolean(v && typeof v === 'object' && 'slug' in v && 'hero' in v && 'stuck' in v && 'level' in v)
+}
+
+test('every pack page content passes the pack page rules', async () => {
+  let checked = 0
+  for (const entry of readdirSync(GIVEAWAYS_DIR, { withFileTypes: true })) {
+    if (!entry.isDirectory()) continue
+    const contentPath = join(GIVEAWAYS_DIR, entry.name, 'pack.ts')
+    try {
+      if (!statSync(contentPath).isFile()) continue
+    } catch {
+      continue
+    }
+    const mod = (await import(contentPath)) as Record<string, unknown>
+    const contents = Object.values(mod).filter(isPackContent)
+    assert.ok(contents.length > 0, `giveaways/${entry.name}/pack.ts exports no pack page content`)
+    for (const c of contents) {
+      assert.equal(c.slug, entry.name, `giveaways/${entry.name}/pack.ts has slug "${c.slug}"`)
+      assert.deepEqual(validatePackContent(c), [], `giveaways/${entry.name}: ${validatePackContent(c).join('; ')}`)
+      checked++
+    }
+  }
+  assert.ok(checked >= 1, 'no pack page content found')
 })

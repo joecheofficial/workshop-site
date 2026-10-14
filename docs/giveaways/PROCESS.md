@@ -65,7 +65,7 @@ Create two files:
 
 **Pack page template (Illy, 2026-10-13). The template for new giveaway pages.**
 
-Every new giveaway page, and every old one as it gets rebuilt, renders the shared `<PackPage slug="<slug>" content={...} />` from `src/components/giveaways/PackPage.tsx`. The page only supplies words in a `content.ts` (shape: `src/lib/pack-page.ts`). Reference implementation: `src/app/giveaways/lead-machine/` (first page moved, 13 Oct 2026). Structure copied from Avi Grondin's free-pack page; teardown and approved prototype: `~/.myos/workspace/tasks/swarms/2026-10-13-avi-giveaway-packaging/` (NOTES.md).
+Every new giveaway page, and every old one as it gets rebuilt, renders the shared `<PackPage slug="<slug>" content={...} />` from `src/components/giveaways/PackPage.tsx`. The page only supplies words in a `pack.ts` next to it (shape and validator: `src/lib/pack-page.ts`). Reference implementation: `src/app/giveaways/lead-machine/` (first page moved, 13 Oct 2026). Structure copied from Avi Grondin's free-pack page; teardown and approved prototype: `~/.myos/workspace/tasks/swarms/2026-10-13-avi-giveaway-packaging/` (NOTES.md).
 
 Block order, all built into the component:
 

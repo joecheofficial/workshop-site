@@ -6,7 +6,8 @@ import Image from 'next/image'
 import GiveawayEmailModal from '@/components/giveaways/GiveawayEmailModal'
 import { isFromDmVisit } from '@/lib/giveaway-dm'
 import { offerForLevel } from '@/lib/giveaway-offers'
-import type { PackPageContent, PackTagTone } from '@/lib/pack-page'
+import { packHasAction, packSections } from '@/lib/pack-page'
+import type { PackGuideSection, PackPageContent, PackSectionId, PackTagTone } from '@/lib/pack-page'
 import styles from './PackPage.module.css'
 
 // Same font links as the other giveaway pages (deduped by data-font), so the
@@ -17,33 +18,39 @@ const FONT_LINKS = [
   { key: 'jetbrains-mono', href: 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap' },
 ]
 
-const COPY_LABEL = 'Copy the prompt'
 const TAG_TONE: Record<PackTagTone, string> = {
   easy: `${styles.tag} ${styles.tagEasy}`,
   warn: `${styles.tag} ${styles.tagWarn}`,
   plain: styles.tag,
 }
 
+type AskKind = 'copy' | 'download' | 'finish'
+
 // ---------------------------------------------------------------------------
 // PackPage: the pack-style giveaway template (Illy, 2026-10-13).
 //
 // Email rule: people who came from the DM (?via=dm) already gave their email,
-// so they are never asked again. Everyone else gets ONE ask, after their first
-// copy or download, once per tab. No timed popup, no form in front of the
-// free thing. The ask is the shared GiveawayEmailModal -> /api/lead-magnet.
+// so they are never asked again. Everyone else gets ONE ask, once per tab,
+// right after they first copy or download something. A page with nothing to
+// copy or download asks once when the reader reaches "Stuck?". Never a form
+// in front of the free thing, never a timed popup. The ask is the shared
+// GiveawayEmailModal -> /api/lead-magnet.
 //
 // Offer rule: the one paid offer at the end comes from offerForLevel(), so it
 // always matches the page's AI level. Rules: docs/giveaways/PROCESS.md.
 // ---------------------------------------------------------------------------
 export default function PackPage({ slug, content }: { slug: string; content: PackPageContent }) {
-  const offer = offerForLevel(content.level, slug)
+  const c = content
+  const offer = offerForLevel(c.level, slug)
+  const sections = packSections(c)
+  const hasAction = packHasAction(c)
   const fromDm = useRef(false)
   const askTimer = useRef<number | null>(null)
-  const preRef = useRef<HTMLPreElement>(null)
+  const stuckRef = useRef<HTMLElement>(null)
   const [emailOpen, setEmailOpen] = useState(false)
   const [askedAfterCopy, setAskedAfterCopy] = useState(false)
-  const [copyLabel, setCopyLabel] = useState(COPY_LABEL)
-  const [promptOpen, setPromptOpen] = useState(false)
+  const [copied, setCopied] = useState<string | null>(null)
+  const [openPrompts, setOpenPrompts] = useState<Record<string, boolean>>({})
 
   useEffect(() => {
     for (const f of FONT_LINKS) {
@@ -64,7 +71,7 @@ export default function PackPage({ slug, content }: { slug: string; content: Pac
   }, [])
 
   const askForEmailOnce = useCallback(
-    (kind: 'copy' | 'download') => {
+    (kind: AskKind) => {
       if (fromDm.current) return
       const key = `pack-email-asked-${slug}`
       try {
@@ -80,32 +87,46 @@ export default function PackPage({ slug, content }: { slug: string; content: Pac
     [slug],
   )
 
-  const showCopied = useCallback((label: string) => {
-    setCopyLabel(label)
-    window.setTimeout(() => setCopyLabel(COPY_LABEL), 2600)
-  }, [])
+  // Nothing to copy or download: ask once when the reader reaches "Stuck?".
+  useEffect(() => {
+    if (hasAction) return
+    const el = stuckRef.current
+    if (!el || typeof IntersectionObserver === 'undefined') return
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          io.disconnect()
+          askForEmailOnce('finish')
+        }
+      },
+      { threshold: 0.2 },
+    )
+    io.observe(el)
+    return () => io.disconnect()
+  }, [askForEmailOnce, hasAction])
 
-  const selectPrompt = useCallback(() => {
-    const pre = preRef.current
-    if (!pre) return
-    const range = document.createRange()
-    range.selectNodeContents(pre)
-    const selection = window.getSelection()
-    selection?.removeAllRanges()
-    selection?.addRange(range)
-  }, [])
+  const copyText = useCallback(
+    async (key: string, text: string, pre: HTMLElement | null) => {
+      try {
+        await navigator.clipboard.writeText(text)
+        setCopied(key)
+      } catch {
+        if (pre) {
+          const range = document.createRange()
+          range.selectNodeContents(pre)
+          const selection = window.getSelection()
+          selection?.removeAllRanges()
+          selection?.addRange(range)
+        }
+        setCopied(`${key}:selected`)
+      }
+      window.setTimeout(() => setCopied((v) => (v && v.startsWith(key) ? null : v)), 2600)
+      askForEmailOnce('copy')
+    },
+    [askForEmailOnce],
+  )
 
-  const handleCopy = useCallback(async () => {
-    try {
-      await navigator.clipboard.writeText(content.use.prompt)
-      showCopied('Copied. Now paste it into a new chat.')
-    } catch {
-      selectPrompt()
-      showCopied('Selected. Press copy on your keyboard.')
-    }
-    askForEmailOnce('copy')
-  }, [askForEmailOnce, content.use.prompt, selectPrompt, showCopied])
-
+  const sectionId = (name: PackSectionId) => `${slug}-${name}`
   const jumpTo = useCallback((event: MouseEvent<HTMLAnchorElement>, id: string) => {
     const target = document.getElementById(id)
     if (!target) return
@@ -114,9 +135,15 @@ export default function PackPage({ slug, content }: { slug: string; content: Pac
     target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' })
     window.history.replaceState(null, '', `#${id}`)
   }, [])
+  const jumpLink = (target: PackSectionId) => ({
+    href: `#${sectionId(target)}`,
+    onClick: (e: MouseEvent<HTMLAnchorElement>) => jumpTo(e, sectionId(target)),
+  })
 
-  const c = content
-  const sectionId = (name: string) => `${slug}-${name}`
+  const copyLabel = (key: string, idle: string, done = 'Copied. Now paste it into a new chat.') =>
+    copied === key ? done : copied === `${key}:selected` ? 'Selected. Press copy on your keyboard.' : idle
+  const copyClass = (key: string) =>
+    `${styles.chipBtn} ${styles.copyBtn} ${copied === key || copied === `${key}:selected` ? styles.copyDone : ''}`
 
   return (
     <div className={styles.page}>
@@ -132,7 +159,7 @@ export default function PackPage({ slug, content }: { slug: string; content: Pac
             {c.hero.title} <span className={styles.free}>{c.hero.free}</span>
           </h1>
           <p className={styles.lede}>{c.hero.lede}</p>
-          <a className={`${styles.btn} ${styles.btnMain}`} href={`#${sectionId('get')}`} onClick={(e) => jumpTo(e, sectionId('get'))}>
+          <a className={`${styles.btn} ${styles.btnMain}`} {...jumpLink(c.hero.button.target)}>
             {c.hero.button.label}
             <small>{c.hero.button.meta}</small>
           </a>
@@ -142,13 +169,9 @@ export default function PackPage({ slug, content }: { slug: string; content: Pac
             ))}
           </div>
           <nav className={styles.jumps} aria-label="On this page">
-            {[
-              { id: 'get', n: '01', label: 'Get it', text: c.jumps.get },
-              { id: 'use', n: '02', label: 'Use it now', text: c.jumps.use },
-              { id: 'stuck', n: '03', label: 'Get unstuck', text: c.jumps.stuck },
-            ].map((j) => (
-              <a key={j.id} className={styles.jump} href={`#${sectionId(j.id)}`} onClick={(e) => jumpTo(e, sectionId(j.id))}>
-                <span className={styles.num}>{j.n}</span>
+            {c.jumps.map((j, i) => (
+              <a key={j.target + j.label} className={styles.jump} {...jumpLink(j.target)}>
+                <span className={styles.num}>{String(i + 1).padStart(2, '0')}</span>
                 <div>
                   <b>{j.label}</b>
                   <span>{j.text}</span>
@@ -159,211 +182,277 @@ export default function PackPage({ slug, content }: { slug: string; content: Pac
         </div>
       </section>
 
-      <section id={sectionId('get')} className={styles.section}>
-        <div className={styles.wrap}>
-          <p className={styles.eyebrow}>&#10022; Get it</p>
-          <h2>{c.get.heading}</h2>
-          <p className={styles.muted}>{c.get.intro}</p>
-          <p className={styles.need}>
-            {c.get.phone.lead}{' '}
-            <a href={`#${sectionId('use')}`} onClick={(e) => jumpTo(e, sectionId('use'))}>
-              {c.get.phone.link}
-            </a>{' '}
-            {c.get.phone.rest}
-          </p>
-          <div className={styles.btnRow}>
-            <a
-              className={`${styles.btn} ${styles.btnMain}`}
-              href={c.get.primary.href}
-              target="_blank"
-              rel="noopener"
-              onClick={() => askForEmailOnce('download')}
-            >
-              {c.get.primary.label}
-              <small>{c.get.primary.meta}</small>
-            </a>
-            {c.get.secondary ? (
-              <a
-                className={`${styles.btn} ${styles.btnGhost}`}
-                href={c.get.secondary.href}
-                target="_blank"
-                rel="noopener"
-                onClick={() => askForEmailOnce('download')}
-              >
-                {c.get.secondary.label}
-              </a>
+      {sections.includes('get') ? (
+        <section id={sectionId('get')} className={styles.section}>
+          <div className={styles.wrap}>
+            {c.get ? (
+              <>
+                <p className={styles.eyebrow}>&#10022; Get it</p>
+                <h2>{c.get.heading}</h2>
+                <p className={styles.muted}>{c.get.intro}</p>
+                {c.get.note ? (
+                  <p className={styles.need}>
+                    {c.get.note.lead}{' '}
+                    {c.get.note.link ? <a {...jumpLink(c.get.note.link.target)}>{c.get.note.link.label}</a> : null}{' '}
+                    {c.get.note.rest}
+                  </p>
+                ) : null}
+                <div className={styles.btnRow}>
+                  {c.get.primary ? (
+                    <a
+                      className={`${styles.btn} ${styles.btnMain}`}
+                      href={c.get.primary.href}
+                      target="_blank"
+                      rel="noopener"
+                      onClick={() => askForEmailOnce('download')}
+                    >
+                      {c.get.primary.label}
+                      {c.get.primary.meta ? <small>{c.get.primary.meta}</small> : null}
+                    </a>
+                  ) : null}
+                  {(c.get.secondary || []).map((s) => (
+                    <a
+                      key={s.href}
+                      className={`${styles.btn} ${styles.btnGhost}`}
+                      href={s.href}
+                      target="_blank"
+                      rel="noopener"
+                      onClick={() => askForEmailOnce('download')}
+                    >
+                      {s.label}
+                    </a>
+                  ))}
+                </div>
+                {c.get.command ? (
+                  <CommandBlock
+                    label={c.get.command.label}
+                    text={c.get.command.text}
+                    copyKey="get-command"
+                    buttonLabel={copyLabel('get-command', 'Copy', 'Copied.')}
+                    buttonClass={copyClass('get-command')}
+                    onCopy={copyText}
+                  />
+                ) : null}
+              </>
+            ) : null}
+
+            {c.promise ? (
+              <>
+                <h3 className={c.get ? styles.subhead : undefined}>{c.promise.heading}</h3>
+                <div className={styles.doesnt}>
+                  <div className={`${styles.col} ${styles.colNo}`}>
+                    <h4>It does not</h4>
+                    <ul>
+                      {c.promise.doesNot.map((t) => (
+                        <li key={t}>{t}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className={`${styles.col} ${styles.colYes}`}>
+                    <h4>It does</h4>
+                    <ul>
+                      {c.promise.does.map((t) => (
+                        <li key={t}>{t}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </>
             ) : null}
           </div>
+        </section>
+      ) : null}
 
-          <h3 className={styles.subhead}>{c.doesHeading}</h3>
-          <div className={styles.doesnt}>
-            <div className={`${styles.col} ${styles.colNo}`}>
-              <h4>It does not</h4>
-              <ul>
-                {c.doesNot.map((t) => (
-                  <li key={t}>{t}</li>
-                ))}
-              </ul>
-            </div>
-            <div className={`${styles.col} ${styles.colYes}`}>
-              <h4>It does</h4>
-              <ul>
-                {c.does.map((t) => (
-                  <li key={t}>{t}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id={sectionId('inside')} className={styles.section}>
-        <div className={styles.wrap}>
-          <p className={styles.eyebrow}>&#10022; What it looks like</p>
-          <h2>{c.example.heading}</h2>
-          <div className={styles.chat} role="img" aria-label={c.example.label}>
-            <div className={styles.chatHead}>
-              <i />
-              <i />
-              <i />
-              &nbsp;{c.example.chatTitle}
-            </div>
-            <div className={styles.chatBody}>
-              {c.example.messages.map((m, i) =>
-                m.from === 'me' ? (
-                  <div key={i} className={`${styles.msg} ${styles.msgMe}`}>
-                    {m.file ? <span className={styles.fileChip}>{m.file}</span> : m.text}
-                  </div>
-                ) : (
-                  <div key={i} className={`${styles.msg} ${styles.msgAi}`}>
-                    {m.text}
-                    {m.list ? (
-                      <ol>
-                        {m.list.map((l) => (
-                          <li key={l.line}>
-                            {l.line}
-                            <br />
-                            <span className={styles.contact}>{l.contact}</span>
-                          </li>
-                        ))}
-                      </ol>
-                    ) : null}
-                    {m.after}
-                  </div>
-                ),
-              )}
-            </div>
-            <div className={styles.chatNote}>
-              {c.example.note} <b>Nothing is sent.</b> You reach out yourself.
-            </div>
-          </div>
-
-          <h3 className={styles.subhead}>Words it understands</h3>
-          <div className={styles.words}>
-            {c.words.map((w) => (
-              <div key={w.word} className={styles.word}>
-                <code>{w.word}</code>
-                <span>{w.text}</span>
-              </div>
-            ))}
-          </div>
-
-          <details className={`${styles.details} ${styles.spaced}`}>
-            <summary>What is in the folder</summary>
-            <div className={styles.dBody}>
-              <ul className={styles.insideList}>
-                {c.files.map((f) => (
-                  <li key={f.name}>
-                    <code>{f.name}</code>
-                    <span>{f.text}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </details>
-        </div>
-      </section>
-
-      <section id={sectionId('use')} className={styles.section}>
-        <div className={styles.wrap}>
-          <p className={styles.eyebrow}>&#10022; Use it now</p>
-          <h2>{c.use.heading}</h2>
-          <p className={styles.muted}>{c.use.intro}</p>
-          <div className={styles.card}>
-            <div className={styles.cardLabel}>
-              <b>Start here</b> &middot; {c.use.cardLabel}
-            </div>
-            <h3>{c.use.cardTitle}</h3>
-            <p className={styles.small} style={{ margin: 0 }}>
-              {c.use.cardText}
-            </p>
-            <div className={styles.cardActions}>
-              <button
-                type="button"
-                className={`${styles.chipBtn} ${styles.copyBtn} ${copyLabel !== COPY_LABEL ? styles.copyDone : ''}`}
-                onClick={handleCopy}
-                aria-live="polite"
-              >
-                {copyLabel}
-              </button>
-              {c.use.openLinks.map((l) => (
-                <a key={l.href} className={styles.chipBtn} href={l.href} target="_blank" rel="noopener">
-                  {l.label} &#8599;
-                </a>
+      {c.guide ? (
+        <section id={sectionId('guide')} className={styles.section}>
+          <div className={styles.wrap}>
+            <p className={styles.eyebrow}>&#10022; {c.guide.eyebrow}</p>
+            <h2>{c.guide.heading}</h2>
+            {c.guide.intro ? <p className={styles.muted}>{c.guide.intro}</p> : null}
+            <div className={styles.guide}>
+              {c.guide.sections.map((s, i) => (
+                <GuideBlock
+                  key={s.title}
+                  section={s}
+                  copyKey={`guide-${i}`}
+                  buttonLabel={copyLabel(`guide-${i}`, 'Copy', 'Copied.')}
+                  buttonClass={copyClass(`guide-${i}`)}
+                  onCopy={copyText}
+                />
               ))}
             </div>
-            <div id={sectionId('prompt')} className={`${styles.promptBox} ${promptOpen ? styles.promptOpen : ''}`}>
-              <pre ref={preRef}>{c.use.prompt}</pre>
-            </div>
-            <button
-              type="button"
-              className={styles.expand}
-              aria-controls={sectionId('prompt')}
-              aria-expanded={promptOpen}
-              onClick={() => setPromptOpen((v) => !v)}
-            >
-              {promptOpen ? 'Show less' : 'Show the whole prompt'}
-            </button>
           </div>
-        </div>
-      </section>
+        </section>
+      ) : null}
 
-      <section id={sectionId('ways')} className={styles.section}>
-        <div className={styles.wrap}>
-          <p className={styles.eyebrow}>&#10022; Pick your way</p>
-          <h2>Three ways to run it</h2>
-          <p className={styles.muted}>Pick the one that matches what you have. Tap a way to see its steps.</p>
-          {c.ways.map((w, i) => (
-            <details key={w.title} className={`${styles.details} ${styles.way}`} open={i === 0}>
-              <summary>
-                <span className={styles.num}>{String(i + 1).padStart(2, '0')}</span>
-                <span className={styles.wayText}>
-                  {w.title}
-                  <small>{w.sub}</small>
-                  <span className={styles.wayTags}>
-                    {w.tags.map((t) => (
-                      <span key={t.label} className={TAG_TONE[t.tone]}>
-                        {t.label}
-                      </span>
+      {c.inside ? (
+        <section id={sectionId('inside')} className={styles.section}>
+          <div className={styles.wrap}>
+            <p className={styles.eyebrow}>&#10022; What it looks like</p>
+            <h2>{c.inside.heading}</h2>
+            {c.inside.example ? (
+              <div className={styles.chat} role="img" aria-label={c.inside.example.label}>
+                <div className={styles.chatHead}>
+                  <i />
+                  <i />
+                  <i />
+                  &nbsp;{c.inside.example.title}
+                </div>
+                {c.inside.example.kind === 'chat' ? (
+                  <div className={styles.chatBody}>
+                    {(c.inside.example.messages || []).map((m, i) =>
+                      m.from === 'me' ? (
+                        <div key={i} className={`${styles.msg} ${styles.msgMe}`}>
+                          {m.file ? <span className={styles.fileChip}>{m.file}</span> : m.text}
+                        </div>
+                      ) : (
+                        <div key={i} className={`${styles.msg} ${styles.msgAi}`}>
+                          {m.text}
+                          {m.list ? (
+                            <ol>
+                              {m.list.map((l) => (
+                                <li key={l.line}>
+                                  {l.line}
+                                  <br />
+                                  <span className={styles.contact}>{l.contact}</span>
+                                </li>
+                              ))}
+                            </ol>
+                          ) : null}
+                          {m.after}
+                        </div>
+                      ),
+                    )}
+                  </div>
+                ) : (
+                  <div className={styles.term}>
+                    {(c.inside.example.lines || []).map((l, i) => (
+                      <div key={i} className={styles[`term_${l.kind}`]}>
+                        {l.kind === 'cmd' ? '> ' : l.kind === 'ok' ? 'done ' : l.kind === 'note' ? 'note ' : ''}
+                        {l.text}
+                      </div>
                     ))}
-                  </span>
-                </span>
-              </summary>
-              <div className={styles.dBody}>
-                <ol className={styles.steps}>
-                  {w.steps.map((s) => (
-                    <li key={s}>{s}</li>
-                  ))}
-                </ol>
-                {w.note ? <p className={styles.stepNote}>{w.note}</p> : null}
-                {w.after ? <p className={styles.after}>{w.after}</p> : null}
+                  </div>
+                )}
+                <div className={styles.chatNote}>{c.inside.example.note}</div>
               </div>
-            </details>
-          ))}
-        </div>
-      </section>
+            ) : null}
 
-      <section id={sectionId('stuck')} className={styles.section}>
+            {c.inside.words ? (
+              <>
+                <h3 className={styles.subhead}>{c.inside.words.heading}</h3>
+                <div className={styles.words}>
+                  {c.inside.words.items.map((w) => (
+                    <div key={w.word} className={styles.word}>
+                      <code>{w.word}</code>
+                      <span>{w.text}</span>
+                    </div>
+                  ))}
+                </div>
+              </>
+            ) : null}
+
+            {c.inside.files ? (
+              <details className={`${styles.details} ${styles.spaced}`}>
+                <summary>{c.inside.files.heading}</summary>
+                <div className={styles.dBody}>
+                  <ul className={styles.insideList}>
+                    {c.inside.files.items.map((f) => (
+                      <li key={f.name}>
+                        <code>{f.name}</code>
+                        <span>{f.text}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </details>
+            ) : null}
+          </div>
+        </section>
+      ) : null}
+
+      {c.use && c.use.cards.length ? (
+        <section id={sectionId('use')} className={styles.section}>
+          <div className={styles.wrap}>
+            <p className={styles.eyebrow}>&#10022; Use it now</p>
+            <h2>{c.use.heading}</h2>
+            <p className={styles.muted}>{c.use.intro}</p>
+            {c.use.cards.map((card, i) => {
+              const key = `card-${i}`
+              const total = c.use!.cards.length
+              return (
+                <div key={card.title} className={`${styles.card} ${i === 0 ? styles.cardFirst : ''}`}>
+                  <div className={styles.cardLabel}>
+                    {total > 1 ? (
+                      <>
+                        Card {i + 1} of {total}
+                        {i === 0 ? <b> &middot; start here</b> : null}
+                      </>
+                    ) : (
+                      <b>Start here</b>
+                    )}{' '}
+                    &middot; {card.label}
+                  </div>
+                  <h3>{card.title}</h3>
+                  <p className={styles.small} style={{ margin: 0 }}>
+                    {card.text}
+                  </p>
+                  <PromptBox
+                    copyKey={key}
+                    prompt={card.prompt}
+                    open={Boolean(openPrompts[key])}
+                    onToggle={() => setOpenPrompts((v) => ({ ...v, [key]: !v[key] }))}
+                    buttonLabel={copyLabel(key, total > 1 ? `Copy card ${i + 1}` : 'Copy the prompt')}
+                    buttonClass={copyClass(key)}
+                    onCopy={copyText}
+                    openLinks={c.use!.openLinks}
+                    boxId={sectionId('use') + `-prompt-${i}`}
+                  />
+                </div>
+              )
+            })}
+          </div>
+        </section>
+      ) : null}
+
+      {c.ways && c.ways.items.length ? (
+        <section id={sectionId('ways')} className={styles.section}>
+          <div className={styles.wrap}>
+            <p className={styles.eyebrow}>&#10022; Pick your way</p>
+            <h2>{c.ways.heading}</h2>
+            <p className={styles.muted}>{c.ways.intro}</p>
+            {c.ways.items.map((w, i) => (
+              <details key={w.title} className={`${styles.details} ${styles.way}`} open={i === 0}>
+                <summary>
+                  <span className={styles.num}>{String(i + 1).padStart(2, '0')}</span>
+                  <span className={styles.wayText}>
+                    {w.title}
+                    <small>{w.sub}</small>
+                    <span className={styles.wayTags}>
+                      {w.tags.map((t) => (
+                        <span key={t.label} className={TAG_TONE[t.tone]}>
+                          {t.label}
+                        </span>
+                      ))}
+                    </span>
+                  </span>
+                </summary>
+                <div className={styles.dBody}>
+                  <ol className={styles.steps}>
+                    {w.steps.map((s) => (
+                      <li key={s}>{s}</li>
+                    ))}
+                  </ol>
+                  {w.note ? <p className={styles.stepNote}>{w.note}</p> : null}
+                  {w.after ? <p className={styles.after}>{w.after}</p> : null}
+                </div>
+              </details>
+            ))}
+          </div>
+        </section>
+      ) : null}
+
+      <section id={sectionId('stuck')} ref={stuckRef} className={styles.section}>
         <div className={styles.wrap}>
           <p className={styles.eyebrow}>&#10022; Get unstuck</p>
           <h2>Stuck? Find your line.</h2>
@@ -441,6 +530,169 @@ export default function PackPage({ slug, content }: { slug: string; content: Pac
         showCopiedBadge={askedAfterCopy}
         headingOverride={c.emailHeading}
       />
+    </div>
+  )
+}
+
+type CopyFn = (key: string, text: string, pre: HTMLElement | null) => void
+
+function CommandBlock({
+  label,
+  text,
+  copyKey,
+  buttonLabel,
+  buttonClass,
+  onCopy,
+}: {
+  label: string
+  text: string
+  copyKey: string
+  buttonLabel: string
+  buttonClass: string
+  onCopy: CopyFn
+}) {
+  const pre = useRef<HTMLPreElement>(null)
+  return (
+    <div className={styles.command}>
+      <div className={styles.commandHead}>
+        <span>{label}</span>
+        <button type="button" className={buttonClass} onClick={() => onCopy(copyKey, text, pre.current)} aria-live="polite">
+          {buttonLabel}
+        </button>
+      </div>
+      <pre ref={pre}>{text}</pre>
+    </div>
+  )
+}
+
+function PromptBox({
+  copyKey,
+  prompt,
+  open,
+  onToggle,
+  buttonLabel,
+  buttonClass,
+  onCopy,
+  openLinks,
+  boxId,
+}: {
+  copyKey: string
+  prompt: string
+  open: boolean
+  onToggle: () => void
+  buttonLabel: string
+  buttonClass: string
+  onCopy: CopyFn
+  openLinks: { label: string; href: string }[]
+  boxId: string
+}) {
+  const pre = useRef<HTMLPreElement>(null)
+  const long = prompt.length > 600
+  return (
+    <>
+      <div className={styles.cardActions}>
+        <button type="button" className={buttonClass} onClick={() => onCopy(copyKey, prompt, pre.current)} aria-live="polite">
+          {buttonLabel}
+        </button>
+        {openLinks.map((l) => (
+          <a key={l.href} className={styles.chipBtn} href={l.href} target="_blank" rel="noopener">
+            {l.label} &#8599;
+          </a>
+        ))}
+      </div>
+      <div id={boxId} className={`${styles.promptBox} ${open || !long ? styles.promptOpen : ''}`}>
+        <pre ref={pre}>{prompt}</pre>
+      </div>
+      {long ? (
+        <button type="button" className={styles.expand} aria-controls={boxId} aria-expanded={open} onClick={onToggle}>
+          {open ? 'Show less' : 'Show the whole prompt'}
+        </button>
+      ) : null}
+    </>
+  )
+}
+
+function GuideBlock({
+  section,
+  copyKey,
+  buttonLabel,
+  buttonClass,
+  onCopy,
+}: {
+  section: PackGuideSection
+  copyKey: string
+  buttonLabel: string
+  buttonClass: string
+  onCopy: CopyFn
+}) {
+  const s = section
+  return (
+    <div className={styles.guideBlock}>
+      <h3>{s.title}</h3>
+      {s.text ? <p className={styles.muted}>{s.text}</p> : null}
+      {s.bullets ? (
+        <ul className={styles.bullets}>
+          {s.bullets.map((b) => (
+            <li key={b}>{b}</li>
+          ))}
+        </ul>
+      ) : null}
+      {s.steps ? (
+        <ol className={styles.steps}>
+          {s.steps.map((b) => (
+            <li key={b}>{b}</li>
+          ))}
+        </ol>
+      ) : null}
+      {s.table ? (
+        <div className={styles.tableWrap}>
+          <table className={styles.table}>
+            <thead>
+              <tr>
+                {s.table.head.map((h) => (
+                  <th key={h}>{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {s.table.rows.map((r, i) => (
+                <tr key={i}>
+                  {r.map((cell, j) => (
+                    <td key={j}>{cell}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      ) : null}
+      {s.video ? (
+        <figure className={styles.video}>
+          <video src={s.video.src} controls playsInline preload="metadata" />
+          {s.video.caption ? <figcaption>{s.video.caption}</figcaption> : null}
+        </figure>
+      ) : null}
+      {s.prompt ? (
+        <CommandBlock
+          label={s.prompt.label}
+          text={s.prompt.text}
+          copyKey={copyKey}
+          buttonLabel={buttonLabel}
+          buttonClass={buttonClass}
+          onCopy={onCopy}
+        />
+      ) : null}
+      {s.links ? (
+        <ul className={styles.links}>
+          {s.links.map((l) => (
+            <li key={l.href}>
+              <a href={l.href} target="_blank" rel="noopener">
+                {l.label} &#8599;
+              </a>
+            </li>
+          ))}
+        </ul>
+      ) : null}
     </div>
   )
 }

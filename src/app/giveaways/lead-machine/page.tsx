@@ -1,8 +1,8 @@
 import PackPage from '@/components/giveaways/PackPage'
-import { LEAD_MACHINE_CONTENT } from './content'
+import { LEAD_MACHINE_CONTENT } from './pack'
 
 // Lead Machine giveaway, on the pack page template (Illy, 2026-10-13).
-// Email ask, layout and the end offer live in PackPage; words in ./content.ts.
+// Email ask, layout and the end offer live in PackPage; words in ./pack.ts.
 
 const jsonLd = {
   '@context': 'https://schema.org',
