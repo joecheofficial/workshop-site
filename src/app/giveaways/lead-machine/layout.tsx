@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   keywords: [
     'Lead Machine', 'lead generation', 'cold outreach', 'ChatGPT prompt', 'Claude prompt',
     'business leads', 'AI prompt', 'Claude Code', 'Codex', 'Gemini CLI',
-    'Business Automation Mastermind', 'Joe Che',
+    'AI Business Mastermind', 'Joe Che',
   ],
   authors: [{ name: 'Joe Che', url: 'https://www.mastermindshq.business' }],
   robots: { index: true, follow: true },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: 'The Lead Machine: Free from Joe Che',
     description: 'Paste one prompt into ChatGPT or Claude and get 25 real businesses that fit who you serve, each with a real public way to reach them. Free.',
     url: URL,
-    siteName: 'Business Automation Mastermind Workshop',
+    siteName: 'Masterminds Workshop',
     type: 'website',
     locale: 'en_US',
   },

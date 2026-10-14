@@ -1,20 +1,15 @@
-'use client'
+import PackPage from '@/components/giveaways/PackPage'
+import { freeAiToolJsonLd, freeAiToolPack } from '@/lib/free-ai-tool-pack'
 
-import FreeAiToolPage from '@/components/giveaways/FreeAiToolPage'
-import GiveawayAutoModal from '@/components/giveaways/GiveawayAutoModal'
-import { getFreeAiTool } from '@/lib/free-ai-tools'
+// Free AI Tools batch, keyword SKILL, on the pack page template (Illy, 2026-10-14).
+// Words live in src/lib/free-ai-tools.ts, shared with the delivery email.
+const SLUG = 'free-ai-claude-skills'
 
-const TOOL = getFreeAiTool('free-ai-claude-skills')
-
-// Free AI Tools batch, keyword SKILL. Copy lives in src/lib/free-ai-tools.ts.
 export default function FreeAiClaudeSkillsPage() {
   return (
     <>
-      <FreeAiToolPage tool={TOOL} />
-      <GiveawayAutoModal
-        slug="free-ai-claude-skills"
-        headingOverride="Want my Claude Skills setup notes in your inbox?"
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(freeAiToolJsonLd(SLUG)) }} />
+      <PackPage slug="free-ai-claude-skills" content={freeAiToolPack(SLUG)} />
     </>
   )
 }

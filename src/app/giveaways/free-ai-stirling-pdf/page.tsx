@@ -1,20 +1,15 @@
-'use client'
+import PackPage from '@/components/giveaways/PackPage'
+import { freeAiToolJsonLd, freeAiToolPack } from '@/lib/free-ai-tool-pack'
 
-import FreeAiToolPage from '@/components/giveaways/FreeAiToolPage'
-import GiveawayAutoModal from '@/components/giveaways/GiveawayAutoModal'
-import { getFreeAiTool } from '@/lib/free-ai-tools'
+// Free AI Tools batch, keyword PAPER, on the pack page template (Illy, 2026-10-14).
+// Words live in src/lib/free-ai-tools.ts, shared with the delivery email.
+const SLUG = 'free-ai-stirling-pdf'
 
-const TOOL = getFreeAiTool('free-ai-stirling-pdf')
-
-// Free AI Tools batch, keyword PAPER. Copy lives in src/lib/free-ai-tools.ts.
 export default function FreeAiStirlingPdfPage() {
   return (
     <>
-      <FreeAiToolPage tool={TOOL} />
-      <GiveawayAutoModal
-        slug="free-ai-stirling-pdf"
-        headingOverride="Want my Stirling PDF setup notes in your inbox?"
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(freeAiToolJsonLd(SLUG)) }} />
+      <PackPage slug="free-ai-stirling-pdf" content={freeAiToolPack(SLUG)} />
     </>
   )
 }

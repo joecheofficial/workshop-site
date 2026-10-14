@@ -6,7 +6,7 @@ const URL = 'https://workshop.mastermindshq.business/giveaways/free-ai-upscayl'
 export const metadata: Metadata = {
   title: 'Upscayl: Blurry photo in, sharp photo out',
   description: 'A free app that uses AI to make small or blurry images bigger and sharper. Free setup notes from Joe Che: 3 steps, tips and links.',
-  keywords: ['Upscayl', 'free AI tools', 'open source', 'AI for small business', 'Joe Che', 'Business Automation Mastermind'],
+  keywords: ['Upscayl', 'free AI tools', 'open source', 'AI for small business', 'Joe Che', 'AI Business Mastermind'],
   authors: [{ name: 'Joe Che', url: 'https://www.mastermindshq.business' }],
   robots: { index: true, follow: true },
   alternates: { canonical: URL },
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: 'Upscayl: Blurry photo in, sharp photo out',
     description: 'Drag in a small or blurry image and AI makes it bigger and sharper. Free, and your photos stay on your computer.',
     url: URL,
-    siteName: 'Business Automation Mastermind Workshop',
+    siteName: 'Masterminds Workshop',
     type: 'website',
     locale: 'en_US',
   },

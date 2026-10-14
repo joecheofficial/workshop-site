@@ -161,6 +161,7 @@ function extractModalSlugs(src: string): string[] {
   const patterns = [
     /<GiveawayEmailModal\b[\s\S]{0,400}?slug=["']([^"']+)["']/g,
     /<GiveawayAutoModal\b[\s\S]{0,400}?slug=["']([^"']+)["']/g,
+    /<PackPage\b[\s\S]{0,400}?slug=["']([^"']+)["']/g,
   ]
   for (const re of patterns) {
     let m: RegExpExecArray | null

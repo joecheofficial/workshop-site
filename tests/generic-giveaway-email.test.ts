@@ -84,9 +84,11 @@ test('third-party links are not UTM tagged', () => {
   assert.ok(!e.html.includes('github.com/josephtandle/x?utm'))
 })
 
-test('route only sends the generic email for authenticated ManyChat calls', () => {
+test('only authenticated ManyChat calls may supply the link; website callers get our own page from a fixed list', () => {
   const route = readFileSync(join(process.cwd(), 'src/app/api/lead-magnet/route.ts'), 'utf8')
   assert.ok(route.includes("checkRateLimit('lead-magnet:manychat', 300, 60)"))
-  assert.ok(route.includes('isManychat ? validateGiveawayLink(rawLink) : null'))
+  // rawLink is read only on the ManyChat branch; a website caller can never choose the link.
+  assert.ok(route.includes('isManychat ? validateGiveawayLink(rawLink) : websiteGeneric?.link ?? null'))
+  assert.ok(route.includes('const websiteGeneric = isManychat ? null : websiteGiveawayEmail(source)'))
   assert.ok(route.includes('generic: true'))
 })

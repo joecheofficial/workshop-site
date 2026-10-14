@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'Terminal to Claude Desktop | Free Video Walkthrough',
     description: 'Follow Joe’s walkthrough of using Claude Code inside the Claude Desktop app. Free to watch with no signup required.',
     url: URL,
-    siteName: 'Business Automation Mastermind Workshop',
+    siteName: 'Masterminds Workshop',
     type: 'website',
     locale: 'en_US',
   },
