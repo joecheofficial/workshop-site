@@ -3,12 +3,11 @@ import { INSTALL_PROMPT } from './content'
 
 // Words for the HookLab pack page (moved onto PackPage 15 Oct 2026).
 // Layout, the email ask and the end offer live in src/components/giveaways/PackPage.tsx.
-// Facts come from the install prompt in ./content.ts (the quick hook-lab skill) and
-// the README + skill/SKILL.md of github.com/josephtandle/ultimate-hooklab-skill (the
-// full HookLab). The old page mixed the two; this page names which one does what.
-
-export const HOOKLAB_REPO = 'https://github.com/josephtandle/ultimate-hooklab-skill'
-export const HOOKLAB_INSTALL_COMMAND = 'curl -fsSL https://raw.githubusercontent.com/josephtandle/ultimate-hooklab-skill/main/install.sh | bash'
+// Facts come from the install prompt in ./content.ts (the free hook-lab skill).
+// The old page also described features of the full HookLab (15 candidates, three
+// modes, a 50 point score, niche research). That version is now the paid $47
+// HookLab kit (agents/hooklab-kit), so this page gives away and describes only
+// the free skill (rule: paid stays paid).
 
 export const HOOKLAB_PACK: PackPageContent = {
   slug: 'hooklab',
@@ -44,13 +43,12 @@ export const HOOKLAB_PACK: PackPageContent = {
   get: {
     heading: 'Install HookLab',
     intro:
-      'Free, from Joe Che. Paste the prompt below into your Claude Code chat. It creates the hook-lab skill file for you, so there is nothing to set up by hand. Want the full version with niche research and a CTA-first mode? That one installs from GitHub, see way 02.',
+      'Free, from Joe Che. Paste the prompt below into your Claude Code chat. It creates the hook-lab skill file for you at ~/.claude/skills/hook-lab/SKILL.md, so there is nothing to set up by hand.',
     note: {
       lead: 'Needs Claude Code.',
-      link: { label: 'See both ways to install.', target: 'ways' },
-      rest: 'The Claude desktop app works too.',
+      link: { label: 'Then run it.', target: 'use' },
+      rest: 'The Claude desktop app works too. You do not need Terminal.',
     },
-    secondary: [{ label: 'The full HookLab on GitHub', href: HOOKLAB_REPO }],
     command: { label: 'Paste into your Claude Code chat', text: INSTALL_PROMPT },
   },
   promise: {
@@ -121,24 +119,6 @@ export const HOOKLAB_PACK: PackPageContent = {
           'Your no-go list: words, phrases and tones you would never use.',
         ],
       },
-      {
-        title: 'The full HookLab on GitHub',
-        text: 'The bigger version of the same idea. It lives in ~/.hooklab/ and you run it with /hooklab.',
-        table: {
-          head: ['Mode', 'Use it when'],
-          rows: [
-            ['Standard', 'You want hooks from your brand voice and this week\'s topic. It writes 15, scores them all and keeps the best 5, with 2 winners.'],
-            ['Mode 1: Reverse engineer', 'You want to see what is working in your niche first, then rebuild the best hooks in your voice.'],
-            ['Mode 2: CTA first', 'You know your giveaway or lead magnet and want hooks that lead to it.'],
-          ],
-        },
-        bullets: [
-          'Scores every hook out of 50 on five things: concreteness, mechanism, voice fidelity, self-recognition and thumb stop.',
-          'Keeps a kill list of tired openers it never uses.',
-          'Needs Claude Code, Node.js for the niche research, and 3 to 5 Instagram accounts in your niche to study.',
-        ],
-        links: [{ label: 'josephtandle/ultimate-hooklab-skill', href: HOOKLAB_REPO }],
-      },
     ],
   },
   use: {
@@ -164,42 +144,6 @@ export const HOOKLAB_PACK: PackPageContent = {
       },
     ],
     openLinks: [],
-  },
-  ways: {
-    heading: 'Two ways to install it',
-    intro: 'Pick the one that matches how you work. Tap a way to see its steps.',
-    items: [
-      {
-        title: 'Paste the prompt into Claude Code',
-        sub: 'The quick hook-lab skill. Claude Code writes the file.',
-        tags: [
-          { label: 'Easiest', tone: 'easy' },
-          { label: 'No Terminal needed', tone: 'plain' },
-        ],
-        steps: [
-          'Copy the install prompt, above.',
-          'Open Claude Code. The Claude desktop app works too.',
-          'Paste it into the chat and send. It creates ~/.claude/skills/hook-lab/SKILL.md.',
-          'Start a new session and type /hook-lab.',
-        ],
-      },
-      {
-        title: 'Install the full HookLab from GitHub',
-        sub: 'Niche research, CTA-first mode and a 50 point score.',
-        tags: [
-          { label: 'Needs a terminal', tone: 'warn' },
-          { label: 'Node.js', tone: 'plain' },
-        ],
-        steps: [
-          `In Terminal, run: ${HOOKLAB_INSTALL_COMMAND}`,
-          'Fill in ~/.hooklab/personal/my-brand-voice.md completely. Every blank field makes a weaker hook.',
-          'Add 3 to 5 Instagram accounts in your niche to ~/.hooklab/personal/research-accounts.md.',
-          'Add this week\'s topic to ~/.hooklab/personal/this-week.md.',
-          'In Claude Code, type /hooklab and pick Standard, Mode 1 or Mode 2.',
-        ],
-        note: 'It is for your own use: the license says never sell or share it. It updates itself every week and backs up your own files first.',
-      },
-    ],
   },
   stuck: [
     {
