@@ -51,15 +51,19 @@ export function getLeadMagnet(slug: string): LeadMagnet | undefined {
  *
  * Known gap the fail-closed behaviour exposes: several live giveaway pages
  * (agent-infrastructure, anthropic-safety-checklist,
- * benchmark, claude-md, client-launch-checklist, compare,
+ * benchmark, claude-md, compare,
  * cross-cli-compatibility-routing, fable-worth-it-audit, ig-settings,
  * logo-maker-guide, ray-dalio-council, squarespace-escape,
- * viral-hooks, ...) post sources with no template. They used to receive the
+ * viral-hooks, ...) post sources with no template. Website callers on the
+ * pack pages among them get the generic link email instead
+ * (WEBSITE_GENERIC_GIVEAWAYS in src/lib/generic-giveaway-email.ts). They used to receive the
  * Un-Learning Success PDF by accident. They now receive nothing, which is the
  * correct failure until each one gets a real asset.
  */
 export const DELIVERABLE_LEAD_MAGNET_SOURCES: ReadonlySet<string> = new Set([
   'business-builder-quiz',
+  // Pack page (15 Oct 2026): sends the LEAD_MAGNETS PDF welcome email above.
+  'client-launch-checklist',
   'cost-stack',
   'cult-brand-playbook',
   'guardog',

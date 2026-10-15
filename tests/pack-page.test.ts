@@ -199,3 +199,31 @@ test('every pack page that asks for an email has an email to send back', async (
   assert.equal(g?.link, 'https://workshop.mastermindshq.business/giveaways/compare')
   assert.equal(websiteGiveawayEmail('not-a-page'), null)
 })
+
+test('the six older giveaways moved onto PackPage (15 Oct 2026) keep their downloads and levels', async () => {
+  const levels: Record<string, string> = {
+    hooklab: 'builder',
+    'agent-infrastructure': 'builder',
+    'logo-maker-guide': 'beginner',
+    'client-launch-checklist': 'beginner',
+    'cult-brand-playbook': 'beginner',
+    'geometry-dash-fun-build': 'beginner',
+  }
+  for (const [slug, level] of Object.entries(levels)) {
+    const mod = (await import(join(GIVEAWAYS_DIR, slug, 'pack.ts'))) as Record<string, unknown>
+    const c = Object.values(mod).find(isPackContent)
+    assert.ok(c, `${slug} has pack content`)
+    assert.equal(c.level, level, `${slug} level`)
+  }
+  const { CLIENT_LAUNCH_CHECKLIST_PACK } = await import('../src/app/giveaways/client-launch-checklist/pack')
+  const pdf = CLIENT_LAUNCH_CHECKLIST_PACK.get?.primary?.href
+  assert.ok(pdf && statSync(join(ROOT, 'public', pdf)).size > 1000, 'the checklist PDF must ship in public/')
+  // Fiverr's old /logo-design path is a 404; the guide points at the Logo Design category.
+  const logo = readFileSync(join(GIVEAWAYS_DIR, 'logo-maker-guide', 'pack.ts'), 'utf8')
+  assert.doesNotMatch(logo, /fiverr\.com\/logo-design/)
+  assert.match(logo, /fiverr\.com\/categories\/graphics-design\/creative-logo-design/)
+  // The HookLab copy box is the install prompt itself.
+  const { HOOKLAB_PACK } = await import('../src/app/giveaways/hooklab/pack')
+  const { INSTALL_PROMPT } = await import('../src/app/giveaways/hooklab/content')
+  assert.equal(HOOKLAB_PACK.get?.command?.text, INSTALL_PROMPT)
+})
