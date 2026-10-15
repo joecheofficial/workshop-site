@@ -70,6 +70,7 @@ export const DELIVERABLE_LEAD_MAGNET_SOURCES: ReadonlySet<string> = new Set([
   'speak-human',
   'tokens',
   'web-design-arsenal',
+  'whatsapp-agent',
   // Free AI Tools batch (2026-10-08): one template for all ten, see src/lib/free-ai-tool-email.ts.
   ...FREE_AI_TOOL_SLUGS,
   // AI quiz giveaways, IG keywords LEVEL and BEHAVIOR (2026-10-08), see src/lib/quiz-giveaway-email.ts.

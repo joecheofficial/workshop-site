@@ -309,6 +309,14 @@ export const giveaways: Giveaway[] = [
     badge: 'Prompt',
     badgeVariant: 'purple',
   },
+  {
+    slug: 'whatsapp-agent',
+    title: 'Give Claude its own WhatsApp number',
+    description: "A WhatsApp receptionist that answers your clients and books appointments, even at midnight. Built with Claude Code on WhatsApp's official API, no third-party WhatsApp tool.",
+    icon: '◈',
+    badge: 'Build',
+    badgeVariant: 'pink',
+  },
 ]
 
 export function getGiveaway(slug: string): Giveaway | undefined {

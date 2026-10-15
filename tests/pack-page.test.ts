@@ -9,6 +9,8 @@ import { LEAD_MACHINE_CONTENT } from '../src/app/giveaways/lead-machine/pack'
 import { validatePackContent } from '../src/lib/pack-page'
 import type { PackPageContent } from '../src/lib/pack-page'
 import { LEAD_MACHINE_PROMPT } from '../src/app/giveaways/lead-machine/prompt'
+import { WHATSAPP_AGENT_CONTENT } from '../src/app/giveaways/whatsapp-agent/pack'
+import { WHATSAPP_AGENT_PROMPT } from '../src/app/giveaways/whatsapp-agent/prompt'
 
 // ---------------------------------------------------------------------------
 // Pack page template rules (Illy, 2026-10-13). docs/giveaways/PROCESS.md,
@@ -88,6 +90,26 @@ test('the Lead Machine copy card is exactly the prompt inside the download', () 
   const shipped = execFileSync('unzip', ['-p', zip, 'lead-machine/PASTE-INTO-CHATGPT-OR-CLAUDE.txt'], { encoding: 'utf8' }).replace(/\s+$/, '')
   assert.equal(LEAD_MACHINE_PROMPT, shipped, 'prompt.ts drifted from the zip. Regenerate it (command in prompt.ts).')
   assert.equal(LEAD_MACHINE_CONTENT.use?.cards[0].prompt, LEAD_MACHINE_PROMPT)
+})
+
+test('WhatsApp receptionist is a builder pack page that ends with the builder offer', () => {
+  assert.equal(WHATSAPP_AGENT_CONTENT.slug, 'whatsapp-agent')
+  assert.equal(WHATSAPP_AGENT_CONTENT.level, 'builder')
+  assert.equal(offerForLevel('builder', 'whatsapp-agent')?.id, 'get-found-kit')
+  const page = readFileSync(join(GIVEAWAYS_DIR, 'whatsapp-agent', 'page.tsx'), 'utf8')
+  assert.match(page, /<PackPage\b[\s\S]{0,200}?slug="whatsapp-agent"/)
+  for (const href of [WHATSAPP_AGENT_CONTENT.get?.primary?.href, ...(WHATSAPP_AGENT_CONTENT.get?.secondary || []).map((s) => s.href)]) {
+    assert.ok(href && statSync(join(ROOT, 'public', href)).size > 1000, `${href} must ship in public/`)
+  }
+})
+
+test('the WhatsApp receptionist copy card is exactly the START-HERE prompt inside the download', () => {
+  const zip = join(ROOT, 'public', 'whatsapp-receptionist.zip')
+  const startHere = execFileSync('unzip', ['-p', zip, 'whatsapp-receptionist/START-HERE.md'], { encoding: 'utf8' })
+  const block = startHere.match(/```text\n([\s\S]*?)\n```/)
+  assert.ok(block, 'START-HERE.md has no ```text prompt block')
+  assert.equal(WHATSAPP_AGENT_PROMPT, block[1], 'prompt.ts drifted from START-HERE.md in the zip')
+  assert.equal(WHATSAPP_AGENT_CONTENT.use?.cards[0].prompt, WHATSAPP_AGENT_PROMPT)
 })
 
 test('pack page words contain no em dashes', () => {
