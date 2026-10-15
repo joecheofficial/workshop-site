@@ -9,6 +9,8 @@ import { LEAD_MACHINE_CONTENT } from '../src/app/giveaways/lead-machine/pack'
 import { validatePackContent } from '../src/lib/pack-page'
 import type { PackPageContent } from '../src/lib/pack-page'
 import { LEAD_MACHINE_PROMPT } from '../src/app/giveaways/lead-machine/prompt'
+import { WHATSAPP_AGENT_CONTENT } from '../src/app/giveaways/whatsapp-agent/pack'
+import { WHATSAPP_AGENT_PROMPT } from '../src/app/giveaways/whatsapp-agent/prompt'
 
 // ---------------------------------------------------------------------------
 // Pack page template rules (Illy, 2026-10-13). docs/giveaways/PROCESS.md,
@@ -88,6 +90,26 @@ test('the Lead Machine copy card is exactly the prompt inside the download', () 
   const shipped = execFileSync('unzip', ['-p', zip, 'lead-machine/PASTE-INTO-CHATGPT-OR-CLAUDE.txt'], { encoding: 'utf8' }).replace(/\s+$/, '')
   assert.equal(LEAD_MACHINE_PROMPT, shipped, 'prompt.ts drifted from the zip. Regenerate it (command in prompt.ts).')
   assert.equal(LEAD_MACHINE_CONTENT.use?.cards[0].prompt, LEAD_MACHINE_PROMPT)
+})
+
+test('WhatsApp receptionist is a builder pack page that ends with the builder offer', () => {
+  assert.equal(WHATSAPP_AGENT_CONTENT.slug, 'whatsapp-agent')
+  assert.equal(WHATSAPP_AGENT_CONTENT.level, 'builder')
+  assert.equal(offerForLevel('builder', 'whatsapp-agent')?.id, 'get-found-kit')
+  const page = readFileSync(join(GIVEAWAYS_DIR, 'whatsapp-agent', 'page.tsx'), 'utf8')
+  assert.match(page, /<PackPage\b[\s\S]{0,200}?slug="whatsapp-agent"/)
+  for (const href of [WHATSAPP_AGENT_CONTENT.get?.primary?.href, ...(WHATSAPP_AGENT_CONTENT.get?.secondary || []).map((s) => s.href)]) {
+    assert.ok(href && statSync(join(ROOT, 'public', href)).size > 1000, `${href} must ship in public/`)
+  }
+})
+
+test('the WhatsApp receptionist copy card is exactly the START-HERE prompt inside the download', () => {
+  const zip = join(ROOT, 'public', 'whatsapp-receptionist.zip')
+  const startHere = execFileSync('unzip', ['-p', zip, 'whatsapp-receptionist/START-HERE.md'], { encoding: 'utf8' })
+  const block = startHere.match(/```text\n([\s\S]*?)\n```/)
+  assert.ok(block, 'START-HERE.md has no ```text prompt block')
+  assert.equal(WHATSAPP_AGENT_PROMPT, block[1], 'prompt.ts drifted from START-HERE.md in the zip')
+  assert.equal(WHATSAPP_AGENT_CONTENT.use?.cards[0].prompt, WHATSAPP_AGENT_PROMPT)
 })
 
 test('pack page words contain no em dashes', () => {
@@ -176,4 +198,32 @@ test('every pack page that asks for an email has an email to send back', async (
   const g = websiteGiveawayEmail('compare')
   assert.equal(g?.link, 'https://workshop.mastermindshq.business/giveaways/compare')
   assert.equal(websiteGiveawayEmail('not-a-page'), null)
+})
+
+test('the six older giveaways moved onto PackPage (15 Oct 2026) keep their downloads and levels', async () => {
+  const levels: Record<string, string> = {
+    hooklab: 'builder',
+    'agent-infrastructure': 'builder',
+    'logo-maker-guide': 'beginner',
+    'client-launch-checklist': 'beginner',
+    'cult-brand-playbook': 'beginner',
+    'geometry-dash-fun-build': 'beginner',
+  }
+  for (const [slug, level] of Object.entries(levels)) {
+    const mod = (await import(join(GIVEAWAYS_DIR, slug, 'pack.ts'))) as Record<string, unknown>
+    const c = Object.values(mod).find(isPackContent)
+    assert.ok(c, `${slug} has pack content`)
+    assert.equal(c.level, level, `${slug} level`)
+  }
+  const { CLIENT_LAUNCH_CHECKLIST_PACK } = await import('../src/app/giveaways/client-launch-checklist/pack')
+  const pdf = CLIENT_LAUNCH_CHECKLIST_PACK.get?.primary?.href
+  assert.ok(pdf && statSync(join(ROOT, 'public', pdf)).size > 1000, 'the checklist PDF must ship in public/')
+  // Fiverr's old /logo-design path is a 404; the guide points at the Logo Design category.
+  const logo = readFileSync(join(GIVEAWAYS_DIR, 'logo-maker-guide', 'pack.ts'), 'utf8')
+  assert.doesNotMatch(logo, /fiverr\.com\/logo-design/)
+  assert.match(logo, /fiverr\.com\/categories\/graphics-design\/creative-logo-design/)
+  // The HookLab copy box is the install prompt itself.
+  const { HOOKLAB_PACK } = await import('../src/app/giveaways/hooklab/pack')
+  const { INSTALL_PROMPT } = await import('../src/app/giveaways/hooklab/content')
+  assert.equal(HOOKLAB_PACK.get?.command?.text, INSTALL_PROMPT)
 })

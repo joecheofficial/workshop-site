@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   keywords: [
     'Geometry Dash clone', 'p5.js game', 'vibe coding', 'build a game with AI',
     'game development for beginners', 'p5.js tutorial', 'Claude Code game',
-    'Business Automation Mastermind', 'Joe Che', 'learn to code',
+    'AI Business Mastermind', 'Joe Che', 'learn to code',
   ],
   authors: [{ name: 'Joe Che', url: 'https://www.mastermindshq.business' }],
   robots: { index: true, follow: true },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: 'Geometry Dash Fun Build | Vibe Code a Game with p5.js',
     description: 'Copy the full game code, paste it into editor.p5js.org, and play your own Geometry Dash clone in under 2 minutes. Then make it yours.',
     url: URL,
-    siteName: 'Business Automation Mastermind Workshop',
+    siteName: 'Masterminds Workshop',
     type: 'website',
     locale: 'en_US',
   },

@@ -156,14 +156,18 @@ export function buildGenericGiveawayEmail({
 // page. Only these exact slugs, and the link is always our own page.
 // ---------------------------------------------------------------------------
 export const WEBSITE_GENERIC_GIVEAWAYS: Readonly<Record<string, string>> = {
+  'agent-infrastructure': 'The Agent Infrastructure Guide',
   'anthropic-safety-checklist': 'The Anthropic Ban Risk Audit',
   benchmark: 'The AI Model Benchmark Comparison',
   'claude-md': 'The Ultimate CLAUDE.md file',
   compare: 'The 5 Versions of Claude',
   'cross-cli-compatibility-routing': 'Cross CLI Compatibility Routing',
   'fable-worth-it-audit': 'The Fable Worth-It Audit',
+  'geometry-dash-fun-build': 'The Geometry Dash Fun Build',
   'hated-task-prompts': 'The Hated-Task Prompt Pack',
+  hooklab: 'HookLab',
   'ig-settings': 'The Instagram Settings Checklist',
+  'logo-maker-guide': 'The Logo Maker Guide',
   'ray-dalio-council': 'The Ray Dalio Council',
   'squarespace-escape': 'The Squarespace Escape Kit',
   'viral-hooks': 'The Visual Hooks guide',
