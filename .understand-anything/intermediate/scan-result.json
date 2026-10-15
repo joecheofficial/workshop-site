@@ -1,18 +1,4 @@
 {
-  "projectName": "Workshop Site",
-  "description": "Next.js event registration and giveaway platform for Mastermind workshops",
-  "languages": [
-    "html",
-    "javascript",
-    "json",
-    "markdown",
-    "sql",
-    "typescript"
-  ],
-  "frameworks": [
-    "Next.js",
-    "React"
-  ],
   "files": [
     {
       "path": ".claude/settings.json",
@@ -229,6 +215,12 @@
       "language": "javascript",
       "sizeLines": 53,
       "fileCategory": "code"
+    },
+    {
+      "path": "pdf/whatsapp-receptionist-guide.html",
+      "language": "html",
+      "sizeLines": 70,
+      "fileCategory": "markup"
     },
     {
       "path": "postcss.config.mjs",
@@ -659,7 +651,7 @@
     {
       "path": "src/app/api/lead-magnet/route.ts",
       "language": "typescript",
-      "sizeLines": 793,
+      "sizeLines": 809,
       "fileCategory": "code"
     },
     {
@@ -741,9 +733,15 @@
       "fileCategory": "code"
     },
     {
+      "path": "src/app/giveaways/agent-infrastructure/pack.ts",
+      "language": "typescript",
+      "sizeLines": 135,
+      "fileCategory": "code"
+    },
+    {
       "path": "src/app/giveaways/agent-infrastructure/page.tsx",
       "language": "typescript",
-      "sizeLines": 539,
+      "sizeLines": 10,
       "fileCategory": "code"
     },
     {
@@ -879,15 +877,15 @@
       "fileCategory": "code"
     },
     {
-      "path": "src/app/giveaways/client-launch-checklist/LeadMagnetExampleForm.tsx",
+      "path": "src/app/giveaways/client-launch-checklist/pack.ts",
       "language": "typescript",
-      "sizeLines": 136,
+      "sizeLines": 192,
       "fileCategory": "code"
     },
     {
       "path": "src/app/giveaways/client-launch-checklist/page.tsx",
       "language": "typescript",
-      "sizeLines": 176,
+      "sizeLines": 21,
       "fileCategory": "code"
     },
     {
@@ -957,15 +955,15 @@
       "fileCategory": "code"
     },
     {
-      "path": "src/app/giveaways/cult-brand-playbook/GiveawayForm.tsx",
+      "path": "src/app/giveaways/cult-brand-playbook/pack.ts",
       "language": "typescript",
-      "sizeLines": 69,
+      "sizeLines": 177,
       "fileCategory": "code"
     },
     {
       "path": "src/app/giveaways/cult-brand-playbook/page.tsx",
       "language": "typescript",
-      "sizeLines": 234,
+      "sizeLines": 21,
       "fileCategory": "code"
     },
     {
@@ -1113,15 +1111,27 @@
       "fileCategory": "code"
     },
     {
+      "path": "src/app/giveaways/geometry-dash-fun-build/game.ts",
+      "language": "typescript",
+      "sizeLines": 295,
+      "fileCategory": "code"
+    },
+    {
       "path": "src/app/giveaways/geometry-dash-fun-build/layout.tsx",
       "language": "typescript",
       "sizeLines": 36,
       "fileCategory": "code"
     },
     {
+      "path": "src/app/giveaways/geometry-dash-fun-build/pack.ts",
+      "language": "typescript",
+      "sizeLines": 196,
+      "fileCategory": "code"
+    },
+    {
       "path": "src/app/giveaways/geometry-dash-fun-build/page.tsx",
       "language": "typescript",
-      "sizeLines": 1055,
+      "sizeLines": 31,
       "fileCategory": "code"
     },
     {
@@ -1185,9 +1195,15 @@
       "fileCategory": "code"
     },
     {
+      "path": "src/app/giveaways/hooklab/pack.ts",
+      "language": "typescript",
+      "sizeLines": 182,
+      "fileCategory": "code"
+    },
+    {
       "path": "src/app/giveaways/hooklab/page.tsx",
       "language": "typescript",
-      "sizeLines": 689,
+      "sizeLines": 32,
       "fileCategory": "code"
     },
     {
@@ -1275,9 +1291,15 @@
       "fileCategory": "code"
     },
     {
+      "path": "src/app/giveaways/logo-maker-guide/pack.ts",
+      "language": "typescript",
+      "sizeLines": 251,
+      "fileCategory": "code"
+    },
+    {
       "path": "src/app/giveaways/logo-maker-guide/page.tsx",
       "language": "typescript",
-      "sizeLines": 940,
+      "sizeLines": 9,
       "fileCategory": "code"
     },
     {
@@ -1452,6 +1474,30 @@
       "path": "src/app/giveaways/web-design-arsenal/prompts.ts",
       "language": "typescript",
       "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/giveaways/whatsapp-agent/layout.tsx",
+      "language": "typescript",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/giveaways/whatsapp-agent/pack.ts",
+      "language": "typescript",
+      "sizeLines": 246,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/giveaways/whatsapp-agent/page.tsx",
+      "language": "typescript",
+      "sizeLines": 37,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/giveaways/whatsapp-agent/prompt.ts",
+      "language": "typescript",
+      "sizeLines": 6,
       "fileCategory": "code"
     },
     {
@@ -1775,7 +1821,7 @@
     {
       "path": "src/app/sitemap.ts",
       "language": "typescript",
-      "sizeLines": 29,
+      "sizeLines": 30,
       "fileCategory": "code"
     },
     {
@@ -1859,7 +1905,7 @@
     {
       "path": "src/components/giveaways/PackPage.module.css",
       "language": "css",
-      "sizeLines": 1099,
+      "sizeLines": 1103,
       "fileCategory": "markup"
     },
     {
@@ -2267,7 +2313,7 @@
     {
       "path": "src/lib/generic-giveaway-email.ts",
       "language": "typescript",
-      "sizeLines": 176,
+      "sizeLines": 180,
       "fileCategory": "code"
     },
     {
@@ -2285,7 +2331,7 @@
     {
       "path": "src/lib/giveaways.ts",
       "language": "typescript",
-      "sizeLines": 316,
+      "sizeLines": 324,
       "fileCategory": "code"
     },
     {
@@ -2315,7 +2361,7 @@
     {
       "path": "src/lib/lead-magnets.ts",
       "language": "typescript",
-      "sizeLines": 141,
+      "sizeLines": 146,
       "fileCategory": "code"
     },
     {
@@ -2448,6 +2494,12 @@
       "path": "src/lib/waitlist-notify-windows.ts",
       "language": "typescript",
       "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/lib/whatsapp-agent-email.ts",
+      "language": "typescript",
+      "sizeLines": 72,
       "fileCategory": "code"
     },
     {
@@ -2777,7 +2829,7 @@
     {
       "path": "tests/pack-page.test.ts",
       "language": "typescript",
-      "sizeLines": 179,
+      "sizeLines": 229,
       "fileCategory": "code"
     },
     {
@@ -2829,6 +2881,12 @@
       "fileCategory": "code"
     },
     {
+      "path": "tests/whatsapp-agent-email.test.ts",
+      "language": "typescript",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
       "path": "tests/with-timeout.test.ts",
       "language": "typescript",
       "sizeLines": 8,
@@ -2846,6 +2904,31 @@
       "sizeLines": 47,
       "fileCategory": "config"
     }
+  ],
+  "totalFiles": 484,
+  "filteredByIgnore": 19,
+  "estimatedComplexity": "large",
+  "name": "masterminds-workshop",
+  "description": "Next.js event registration and giveaway platform for Mastermind workshops",
+  "languages": [
+    "config",
+    "css",
+    "html",
+    "javascript",
+    "json",
+    "markdown",
+    "patch",
+    "sha256",
+    "shell",
+    "sql",
+    "txt",
+    "typescript",
+    "unknown",
+    "webp"
+  ],
+  "frameworks": [
+    "Next.js",
+    "React"
   ],
   "importMap": {
     ".claude/settings.json": [],
@@ -2884,6 +2967,7 @@
     "pdf/cross-cli-compatibility-routing-guide.html.kg.json": [],
     "pdf/render-client-launch-checklist.js": [],
     "pdf/render-cross-cli-compatibility-routing-guide.js": [],
+    "pdf/whatsapp-receptionist-guide.html": [],
     "postcss.config.mjs": [],
     "public/2x-with-ai-playbook.html": [],
     "public/2x-with-ai-playbook.html.kg.json": [],
@@ -3083,7 +3167,8 @@
       "src/lib/quiz-giveaway-email.ts",
       "src/lib/rate-limit.ts",
       "src/lib/speak-human-email.ts",
-      "src/lib/utm.ts"
+      "src/lib/utm.ts",
+      "src/lib/whatsapp-agent-email.ts"
     ],
     "src/app/api/lead-magnets/claudemd/route 2.ts": [],
     "src/app/api/lead-magnets/claudemd/route.ts": [
@@ -3139,12 +3224,22 @@
       "src/lib/events.tsx"
     ],
     "src/app/giveaways/agent-infrastructure/layout.tsx": [],
+    "src/app/giveaways/agent-infrastructure/pack.ts": [
+      "src/lib/pack-page.ts"
+    ],
     "src/app/giveaways/agent-infrastructure/page.tsx": [
-      "src/components/giveaways/GiveawayAutoModal.tsx"
+      "src/app/giveaways/agent-infrastructure/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/ai-behavior-quiz/pack.ts": [
+      "src/lib/pack-page.ts"
     ],
     "src/app/giveaways/ai-behavior-quiz/page.tsx": [
       "src/app/giveaways/ai-behavior-quiz/pack.ts",
       "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/ai-levels-quiz/pack.ts": [
+      "src/lib/pack-page.ts"
     ],
     "src/app/giveaways/ai-levels-quiz/page.tsx": [
       "src/app/giveaways/ai-levels-quiz/pack.ts",
@@ -3157,41 +3252,68 @@
       "src/components/sections/MastermindReactionsSection.tsx"
     ],
     "src/app/giveaways/anthropic-safety-checklist/layout.tsx": [],
+    "src/app/giveaways/anthropic-safety-checklist/pack.ts": [
+      "src/app/giveaways/anthropic-safety-checklist/prompts.ts",
+      "src/lib/pack-page.ts"
+    ],
     "src/app/giveaways/anthropic-safety-checklist/page.tsx": [
       "src/app/giveaways/anthropic-safety-checklist/pack.ts",
       "src/components/giveaways/PackPage.tsx"
     ],
+    "src/app/giveaways/anthropic-safety-checklist/prompts.ts": [],
     "src/app/giveaways/benchmark/layout.tsx": [],
+    "src/app/giveaways/benchmark/pack.ts": [
+      "src/lib/pack-page.ts"
+    ],
     "src/app/giveaways/benchmark/page.tsx": [
       "src/app/giveaways/benchmark/pack.ts",
       "src/components/giveaways/PackPage.tsx"
     ],
+    "src/app/giveaways/business-builder-quiz/BusinessBuilderQuiz.tsx": [
+      "src/components/giveaways/PackPage.tsx"
+    ],
     "src/app/giveaways/business-builder-quiz/layout.tsx": [],
+    "src/app/giveaways/business-builder-quiz/pack.ts": [
+      "src/lib/pack-page.ts"
+    ],
     "src/app/giveaways/business-builder-quiz/page.tsx": [
       "src/app/giveaways/business-builder-quiz/BusinessBuilderQuiz.tsx",
       "src/app/giveaways/business-builder-quiz/pack.ts",
       "src/components/giveaways/PackPage.tsx"
     ],
     "src/app/giveaways/claude-md/layout.tsx": [],
+    "src/app/giveaways/claude-md/pack.ts": [
+      "src/app/giveaways/claude-md/prompts.ts",
+      "src/lib/pack-page.ts"
+    ],
     "src/app/giveaways/claude-md/page.tsx": [
       "src/app/giveaways/claude-md/pack.ts",
       "src/components/giveaways/PackPage.tsx"
     ],
+    "src/app/giveaways/claude-md/prompts.ts": [],
     "src/app/giveaways/client-launch-checklist/layout.tsx": [],
-    "src/app/giveaways/client-launch-checklist/LeadMagnetExampleForm.tsx": [
-      "src/lib/meta-pixel.ts"
+    "src/app/giveaways/client-launch-checklist/pack.ts": [
+      "src/lib/pack-page.ts"
     ],
     "src/app/giveaways/client-launch-checklist/page.tsx": [
-      "src/app/giveaways/client-launch-checklist/LeadMagnetExampleForm.tsx",
-      "src/components/giveaways/GiveawayAutoModal.tsx",
-      "src/components/Reveal.tsx"
+      "src/app/giveaways/client-launch-checklist/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
     ],
     "src/app/giveaways/compare/layout.tsx": [],
+    "src/app/giveaways/compare/pack.ts": [
+      "src/lib/pack-page.ts"
+    ],
     "src/app/giveaways/compare/page.tsx": [
       "src/app/giveaways/compare/pack.ts",
       "src/components/giveaways/PackPage.tsx"
     ],
+    "src/app/giveaways/cost-stack/CostStackCalculator.tsx": [
+      "src/components/giveaways/PackPage.tsx"
+    ],
     "src/app/giveaways/cost-stack/layout.tsx": [],
+    "src/app/giveaways/cost-stack/pack.ts": [
+      "src/lib/pack-page.ts"
+    ],
     "src/app/giveaways/cost-stack/page.tsx": [
       "src/app/giveaways/cost-stack/CostStackCalculator.tsx",
       "src/app/giveaways/cost-stack/pack.ts",
@@ -3199,23 +3321,31 @@
     ],
     "src/app/giveaways/cross-cli-compatibility-routing/content.ts": [],
     "src/app/giveaways/cross-cli-compatibility-routing/layout.tsx": [],
+    "src/app/giveaways/cross-cli-compatibility-routing/pack.ts": [
+      "src/app/giveaways/cross-cli-compatibility-routing/content.ts",
+      "src/lib/pack-page.ts"
+    ],
     "src/app/giveaways/cross-cli-compatibility-routing/page.tsx": [
       "src/app/giveaways/cross-cli-compatibility-routing/pack.ts",
       "src/components/giveaways/PackPage.tsx"
     ],
-    "src/app/giveaways/cult-brand-playbook/GiveawayForm.tsx": [
-      "src/lib/meta-pixel.ts"
+    "src/app/giveaways/cult-brand-playbook/pack.ts": [
+      "src/lib/pack-page.ts"
     ],
     "src/app/giveaways/cult-brand-playbook/page.tsx": [
-      "src/app/giveaways/cult-brand-playbook/GiveawayForm.tsx",
-      "src/components/giveaways/GiveawayAutoModal.tsx",
-      "src/components/Reveal.tsx"
+      "src/app/giveaways/cult-brand-playbook/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
     ],
     "src/app/giveaways/fable-worth-it-audit/layout.tsx": [],
+    "src/app/giveaways/fable-worth-it-audit/pack.ts": [
+      "src/app/giveaways/fable-worth-it-audit/prompts.ts",
+      "src/lib/pack-page.ts"
+    ],
     "src/app/giveaways/fable-worth-it-audit/page.tsx": [
       "src/app/giveaways/fable-worth-it-audit/pack.ts",
       "src/components/giveaways/PackPage.tsx"
     ],
+    "src/app/giveaways/fable-worth-it-audit/prompts.ts": [],
     "src/app/giveaways/free-ai-anythingllm/layout.tsx": [],
     "src/app/giveaways/free-ai-anythingllm/page.tsx": [
       "src/components/giveaways/PackPage.tsx",
@@ -3266,28 +3396,54 @@
       "src/components/giveaways/PackPage.tsx",
       "src/lib/free-ai-tool-pack.ts"
     ],
+    "src/app/giveaways/geometry-dash-fun-build/game.ts": [],
     "src/app/giveaways/geometry-dash-fun-build/layout.tsx": [],
+    "src/app/giveaways/geometry-dash-fun-build/pack.ts": [
+      "src/app/giveaways/geometry-dash-fun-build/game.ts",
+      "src/lib/pack-page.ts"
+    ],
     "src/app/giveaways/geometry-dash-fun-build/page.tsx": [
-      "src/components/giveaways/GiveawayEmailModal.tsx",
-      "src/components/sections/MastermindReactionsSection.tsx",
-      "src/lib/copyWithConfetti.ts"
+      "src/app/giveaways/geometry-dash-fun-build/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
     ],
     "src/app/giveaways/guardog/layout.tsx": [],
+    "src/app/giveaways/guardog/pack.ts": [
+      "src/app/giveaways/guardog/prompts.ts",
+      "src/lib/pack-page.ts"
+    ],
     "src/app/giveaways/guardog/page.tsx": [
       "src/app/giveaways/guardog/pack.ts",
       "src/components/giveaways/PackPage.tsx"
     ],
+    "src/app/giveaways/guardog/prompts.ts": [],
+    "src/app/giveaways/hated-task-prompts/layout.tsx": [],
+    "src/app/giveaways/hated-task-prompts/pack.ts": [
+      "src/app/giveaways/hated-task-prompts/prompts.ts",
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/hated-task-prompts/page.tsx": [
+      "src/app/giveaways/hated-task-prompts/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/hated-task-prompts/prompts.ts": [
+      "src/lib/pack-page.ts"
+    ],
     "src/app/giveaways/hooklab/content.ts": [],
     "src/app/giveaways/hooklab/layout.tsx": [],
-    "src/app/giveaways/hooklab/page.tsx": [
+    "src/app/giveaways/hooklab/pack.ts": [
       "src/app/giveaways/hooklab/content.ts",
-      "src/components/giveaways/GiveawayEmailModal.tsx",
-      "src/components/sections/MastermindReactionsSection.tsx",
-      "src/lib/copyWithConfetti.ts"
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/hooklab/page.tsx": [
+      "src/app/giveaways/hooklab/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
     ],
     "src/app/giveaways/human/layout.tsx": [],
     "src/app/giveaways/human/page.tsx": [],
     "src/app/giveaways/ig-settings/layout.tsx": [],
+    "src/app/giveaways/ig-settings/pack.ts": [
+      "src/lib/pack-page.ts"
+    ],
     "src/app/giveaways/ig-settings/page.tsx": [
       "src/app/giveaways/ig-settings/pack.ts",
       "src/components/giveaways/PackPage.tsx"
@@ -3296,27 +3452,35 @@
       "src/components/giveaways/GiveawayCopyEmailGate.tsx"
     ],
     "src/app/giveaways/lead-machine/layout.tsx": [],
-    "src/app/giveaways/lead-machine/LeadMachineForm.tsx": [
-      "src/lib/meta-pixel.ts"
+    "src/app/giveaways/lead-machine/pack.ts": [
+      "src/app/giveaways/lead-machine/prompt.ts",
+      "src/lib/pack-page.ts"
     ],
     "src/app/giveaways/lead-machine/page.tsx": [
       "src/app/giveaways/lead-machine/pack.ts",
       "src/components/giveaways/PackPage.tsx"
     ],
+    "src/app/giveaways/lead-machine/prompt.ts": [],
     "src/app/giveaways/lead-magnet/layout.tsx": [],
+    "src/app/giveaways/lead-magnet/pack.ts": [
+      "src/lib/pack-page.ts"
+    ],
     "src/app/giveaways/lead-magnet/page.tsx": [
       "src/app/giveaways/lead-magnet/pack.ts",
       "src/components/giveaways/PackPage.tsx"
     ],
     "src/app/giveaways/logo-maker-guide/layout.tsx": [],
-    "src/app/giveaways/logo-maker-guide/page.tsx": [
-      "src/components/giveaways/GiveawayAutoModal.tsx",
-      "src/components/sections/MastermindReactionsSection.tsx"
+    "src/app/giveaways/logo-maker-guide/pack.ts": [
+      "src/lib/pack-page.ts"
     ],
-    "src/app/giveaways/maccleaner/GiveawayForm.tsx": [
-      "src/lib/meta-pixel.ts"
+    "src/app/giveaways/logo-maker-guide/page.tsx": [
+      "src/app/giveaways/logo-maker-guide/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
     ],
     "src/app/giveaways/maccleaner/layout.tsx": [],
+    "src/app/giveaways/maccleaner/pack.ts": [
+      "src/lib/pack-page.ts"
+    ],
     "src/app/giveaways/maccleaner/page.tsx": [
       "src/app/giveaways/maccleaner/pack.ts",
       "src/components/giveaways/PackPage.tsx"
@@ -3328,39 +3492,81 @@
       "src/lib/giveaways.ts"
     ],
     "src/app/giveaways/ray-dalio-council/layout.tsx": [],
+    "src/app/giveaways/ray-dalio-council/pack.ts": [
+      "src/app/giveaways/ray-dalio-council/prompts.ts",
+      "src/lib/pack-page.ts"
+    ],
     "src/app/giveaways/ray-dalio-council/page.tsx": [
       "src/app/giveaways/ray-dalio-council/pack.ts",
       "src/components/giveaways/PackPage.tsx"
     ],
+    "src/app/giveaways/ray-dalio-council/prompts.ts": [],
     "src/app/giveaways/speak-human/layout.tsx": [],
+    "src/app/giveaways/speak-human/pack.ts": [
+      "src/app/giveaways/speak-human/prompts.ts",
+      "src/lib/pack-page.ts"
+    ],
     "src/app/giveaways/speak-human/page.tsx": [
       "src/app/giveaways/speak-human/pack.ts",
       "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/speak-human/prompts.ts": [],
+    "src/app/giveaways/squarespace-escape/pack.ts": [
+      "src/app/giveaways/squarespace-escape/prompts.ts",
+      "src/lib/claude-links.ts",
+      "src/lib/pack-page.ts"
     ],
     "src/app/giveaways/squarespace-escape/page.tsx": [
       "src/app/giveaways/squarespace-escape/pack.ts",
       "src/components/giveaways/PackPage.tsx"
     ],
+    "src/app/giveaways/squarespace-escape/prompts.ts": [],
     "src/app/giveaways/terminal-to-claude-desktop/layout.tsx": [],
+    "src/app/giveaways/terminal-to-claude-desktop/pack.ts": [
+      "src/lib/pack-page.ts"
+    ],
     "src/app/giveaways/terminal-to-claude-desktop/page.tsx": [
       "src/app/giveaways/terminal-to-claude-desktop/pack.ts",
       "src/components/giveaways/PackPage.tsx"
     ],
     "src/app/giveaways/tokens/layout.tsx": [],
+    "src/app/giveaways/tokens/pack.ts": [
+      "src/app/giveaways/tokens/prompts.ts",
+      "src/lib/pack-page.ts"
+    ],
     "src/app/giveaways/tokens/page.tsx": [
       "src/app/giveaways/tokens/pack.ts",
       "src/components/giveaways/PackPage.tsx"
     ],
+    "src/app/giveaways/tokens/prompts.ts": [],
     "src/app/giveaways/viral-hooks/layout.tsx": [],
+    "src/app/giveaways/viral-hooks/pack.ts": [
+      "src/lib/pack-page.ts"
+    ],
     "src/app/giveaways/viral-hooks/page.tsx": [
       "src/app/giveaways/viral-hooks/pack.ts",
       "src/components/giveaways/PackPage.tsx"
     ],
     "src/app/giveaways/web-design-arsenal/layout.tsx": [],
+    "src/app/giveaways/web-design-arsenal/pack.ts": [
+      "src/app/giveaways/web-design-arsenal/prompts.ts",
+      "src/lib/pack-page.ts"
+    ],
     "src/app/giveaways/web-design-arsenal/page.tsx": [
       "src/app/giveaways/web-design-arsenal/pack.ts",
       "src/components/giveaways/PackPage.tsx"
     ],
+    "src/app/giveaways/web-design-arsenal/prompts.ts": [],
+    "src/app/giveaways/whatsapp-agent/layout.tsx": [],
+    "src/app/giveaways/whatsapp-agent/pack.ts": [
+      "src/app/giveaways/whatsapp-agent/prompt.ts",
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/whatsapp-agent/page.tsx": [
+      "src/app/giveaways/whatsapp-agent/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/whatsapp-agent/prompt.ts": [],
     "src/app/globals.css": [],
     "src/app/illy/content.ts": [],
     "src/app/illy/page.tsx": [
@@ -3608,10 +3814,6 @@
       "src/lib/email-validation.ts",
       "src/lib/meta-pixel.ts"
     ],
-    "src/components/giveaways/FreeAiToolPage.tsx": [
-      "src/components/sections/MastermindReactionsSection.tsx",
-      "src/lib/free-ai-tools.ts"
-    ],
     "src/components/giveaways/GiveawayAutoModal.tsx": [
       "src/components/giveaways/GiveawayEmailModal.tsx"
     ],
@@ -3621,6 +3823,14 @@
     ],
     "src/components/giveaways/GiveawayEmailModal.tsx": [
       "src/lib/meta-pixel.ts"
+    ],
+    "src/components/giveaways/PackPage.module.css": [],
+    "src/components/giveaways/PackPage.tsx": [
+      "src/components/giveaways/GiveawayEmailModal.tsx",
+      "src/components/giveaways/PackPage.module.css",
+      "src/lib/giveaway-dm.ts",
+      "src/lib/giveaway-offers.ts",
+      "src/lib/pack-page.ts"
     ],
     "src/components/PageParticles.tsx": [],
     "src/components/ParticipantCarousel.tsx": [],
@@ -3836,10 +4046,16 @@
       "src/lib/free-ai-tools.ts",
       "src/lib/utm.ts"
     ],
+    "src/lib/free-ai-tool-pack.ts": [
+      "src/lib/free-ai-tools.ts",
+      "src/lib/pack-page.ts"
+    ],
     "src/lib/free-ai-tools.ts": [],
     "src/lib/generic-giveaway-email.ts": [
       "src/lib/utm.ts"
     ],
+    "src/lib/giveaway-dm.ts": [],
+    "src/lib/giveaway-offers.ts": [],
     "src/lib/giveaways.ts": [],
     "src/lib/google-calendar-invite.ts": [
       "src/lib/calendar.ts",
@@ -3875,6 +4091,9 @@
     "src/lib/meta-pixel.ts": [
       "src/lib/meta-consent.ts"
     ],
+    "src/lib/pack-page.ts": [
+      "src/lib/giveaway-offers.ts"
+    ],
     "src/lib/quiz-giveaway-email.ts": [
       "src/lib/utm.ts"
     ],
@@ -3902,6 +4121,9 @@
     "src/lib/url-utils.ts": [],
     "src/lib/utm.ts": [],
     "src/lib/waitlist-notify-windows.ts": [],
+    "src/lib/whatsapp-agent-email.ts": [
+      "src/lib/utm.ts"
+    ],
     "src/lib/with-timeout.ts": [],
     "src/proxy.ts": [
       "src/lib/meta-consent.ts"
@@ -4055,6 +4277,15 @@
       "src/lib/meta-pixel.ts",
       "src/proxy.ts"
     ],
+    "tests/pack-page.test.ts": [
+      "src/app/giveaways/lead-machine/pack.ts",
+      "src/app/giveaways/lead-machine/prompt.ts",
+      "src/app/giveaways/whatsapp-agent/pack.ts",
+      "src/app/giveaways/whatsapp-agent/prompt.ts",
+      "src/lib/giveaway-dm.ts",
+      "src/lib/giveaway-offers.ts",
+      "src/lib/pack-page.ts"
+    ],
     "tests/quiz-giveaway-email.test.ts": [
       "src/lib/giveaways.ts",
       "src/lib/lead-magnets.ts",
@@ -4091,172 +4322,14 @@
     "tests/waitlist-join-validation.test.ts": [
       "src/lib/email-validation.ts"
     ],
+    "tests/whatsapp-agent-email.test.ts": [
+      "src/lib/lead-magnets.ts",
+      "src/lib/whatsapp-agent-email.ts"
+    ],
     "tests/with-timeout.test.ts": [
       "src/lib/with-timeout.ts"
     ],
     "tsconfig.json": [],
-    "vercel.json": [],
-    "src/app/giveaways/ai-behavior-quiz/pack.ts": [
-      "src/lib/pack-page.ts"
-    ],
-    "src/app/giveaways/ai-levels-quiz/pack.ts": [
-      "src/lib/pack-page.ts"
-    ],
-    "src/app/giveaways/anthropic-safety-checklist/pack.ts": [
-      "src/app/giveaways/anthropic-safety-checklist/prompts.ts",
-      "src/lib/pack-page.ts"
-    ],
-    "src/app/giveaways/anthropic-safety-checklist/prompts.ts": [],
-    "src/app/giveaways/benchmark/pack.ts": [
-      "src/lib/pack-page.ts"
-    ],
-    "src/app/giveaways/business-builder-quiz/BusinessBuilderQuiz.tsx": [
-      "src/components/giveaways/PackPage.tsx"
-    ],
-    "src/app/giveaways/business-builder-quiz/pack.ts": [
-      "src/lib/pack-page.ts"
-    ],
-    "src/app/giveaways/claude-md/pack.ts": [
-      "src/app/giveaways/claude-md/prompts.ts",
-      "src/lib/pack-page.ts"
-    ],
-    "src/app/giveaways/claude-md/prompts.ts": [],
-    "src/app/giveaways/compare/pack.ts": [
-      "src/lib/pack-page.ts"
-    ],
-    "src/app/giveaways/cost-stack/CostStackCalculator.tsx": [
-      "src/components/giveaways/PackPage.tsx"
-    ],
-    "src/app/giveaways/cost-stack/pack.ts": [
-      "src/lib/pack-page.ts"
-    ],
-    "src/app/giveaways/cross-cli-compatibility-routing/pack.ts": [
-      "src/app/giveaways/cross-cli-compatibility-routing/content.ts",
-      "src/lib/pack-page.ts"
-    ],
-    "src/app/giveaways/fable-worth-it-audit/pack.ts": [
-      "src/app/giveaways/fable-worth-it-audit/prompts.ts",
-      "src/lib/pack-page.ts"
-    ],
-    "src/app/giveaways/fable-worth-it-audit/prompts.ts": [],
-    "src/app/giveaways/guardog/pack.ts": [
-      "src/app/giveaways/guardog/prompts.ts",
-      "src/lib/pack-page.ts"
-    ],
-    "src/app/giveaways/guardog/prompts.ts": [],
-    "src/app/giveaways/hated-task-prompts/layout.tsx": [],
-    "src/app/giveaways/hated-task-prompts/pack.ts": [
-      "src/app/giveaways/hated-task-prompts/prompts.ts",
-      "src/lib/pack-page.ts"
-    ],
-    "src/app/giveaways/hated-task-prompts/page.tsx": [
-      "src/app/giveaways/hated-task-prompts/pack.ts",
-      "src/components/giveaways/PackPage.tsx"
-    ],
-    "src/app/giveaways/hated-task-prompts/prompts.ts": [
-      "src/lib/pack-page.ts"
-    ],
-    "src/app/giveaways/ig-settings/pack.ts": [
-      "src/lib/pack-page.ts"
-    ],
-    "src/app/giveaways/lead-machine/pack.ts": [
-      "src/app/giveaways/lead-machine/prompt.ts",
-      "src/lib/pack-page.ts"
-    ],
-    "src/app/giveaways/lead-machine/prompt.ts": [],
-    "src/app/giveaways/lead-magnet/pack.ts": [
-      "src/lib/pack-page.ts"
-    ],
-    "src/app/giveaways/maccleaner/pack.ts": [
-      "src/lib/pack-page.ts"
-    ],
-    "src/app/giveaways/ray-dalio-council/pack.ts": [
-      "src/app/giveaways/ray-dalio-council/prompts.ts",
-      "src/lib/pack-page.ts"
-    ],
-    "src/app/giveaways/ray-dalio-council/prompts.ts": [],
-    "src/app/giveaways/speak-human/pack.ts": [
-      "src/app/giveaways/speak-human/prompts.ts",
-      "src/lib/pack-page.ts"
-    ],
-    "src/app/giveaways/speak-human/prompts.ts": [],
-    "src/app/giveaways/squarespace-escape/pack.ts": [
-      "src/app/giveaways/squarespace-escape/prompts.ts",
-      "src/lib/claude-links.ts",
-      "src/lib/pack-page.ts"
-    ],
-    "src/app/giveaways/squarespace-escape/prompts.ts": [],
-    "src/app/giveaways/terminal-to-claude-desktop/pack.ts": [
-      "src/lib/pack-page.ts"
-    ],
-    "src/app/giveaways/tokens/pack.ts": [
-      "src/app/giveaways/tokens/prompts.ts",
-      "src/lib/pack-page.ts"
-    ],
-    "src/app/giveaways/tokens/prompts.ts": [],
-    "src/app/giveaways/viral-hooks/pack.ts": [
-      "src/lib/pack-page.ts"
-    ],
-    "src/app/giveaways/web-design-arsenal/pack.ts": [
-      "src/app/giveaways/web-design-arsenal/prompts.ts",
-      "src/lib/pack-page.ts"
-    ],
-    "src/app/giveaways/web-design-arsenal/prompts.ts": [],
-    "src/components/giveaways/PackPage.module.css": [],
-    "src/components/giveaways/PackPage.tsx": [
-      "src/components/giveaways/GiveawayEmailModal.tsx",
-      "src/components/giveaways/PackPage.module.css",
-      "src/lib/giveaway-dm.ts",
-      "src/lib/giveaway-offers.ts",
-      "src/lib/pack-page.ts"
-    ],
-    "src/lib/free-ai-tool-pack.ts": [
-      "src/lib/free-ai-tools.ts",
-      "src/lib/pack-page.ts"
-    ],
-    "src/lib/giveaway-dm.ts": [],
-    "src/lib/giveaway-offers.ts": [],
-    "src/lib/pack-page.ts": [
-      "src/lib/giveaway-offers.ts"
-    ],
-    "tests/pack-page.test.ts": [
-      "src/app/giveaways/lead-machine/pack.ts",
-      "src/app/giveaways/lead-machine/prompt.ts",
-      "src/lib/giveaway-dm.ts",
-      "src/lib/giveaway-offers.ts",
-      "src/lib/pack-page.ts"
-    ]
-  },
-  "complexity": "high",
-  "filteredByIgnore": 15,
-  "totalFiles": 472,
-  "estimatedComplexity": "large",
-  "stats": {
-    "filesScanned": 472,
-    "byCategory": {
-      "config": 22,
-      "docs": 22,
-      "code": 400,
-      "markup": 10,
-      "script": 1,
-      "data": 17
-    },
-    "byLanguage": {
-      "json": 21,
-      "markdown": 21,
-      "config": 1,
-      "patch": 2,
-      "unknown": 1,
-      "typescript": 376,
-      "html": 8,
-      "javascript": 10,
-      "sha256": 1,
-      "shell": 1,
-      "webp": 10,
-      "txt": 1,
-      "css": 2,
-      "sql": 17
-    }
-  },
-  "scriptCompleted": true
+    "vercel.json": []
+  }
 }

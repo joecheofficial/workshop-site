@@ -1,20 +1,63 @@
 {
   "mode": "incremental",
-  "filesAnalyzed": 108,
-  "changedPaths": 111,
-  "deletedFiles": [
-    "src/app/giveaways/lead-machine/LeadMachineForm.tsx",
-    "src/app/giveaways/maccleaner/GiveawayForm.tsx",
-    "src/components/giveaways/FreeAiToolPage.tsx"
+  "gitCommitHash": "8289670ed37ca9c8cec5ee29ee647e7ec38f7a65",
+  "previousGitCommitHash": "09e4fa371ed6259785725f5f928649ff9b7f1e57",
+  "completedAt": "2026-10-15T20:07:25.853460+00:00",
+  "changedPaths": 34,
+  "filesAnalyzed": 30,
+  "totalInventoryFiles": 484,
+  "analyzedFileCategories": {
+    "code": 28,
+    "markup": 2
+  },
+  "analyzedPaths": [
+    "pdf/whatsapp-receptionist-guide.html",
+    "src/app/api/lead-magnet/route.ts",
+    "src/app/giveaways/agent-infrastructure/layout.tsx",
+    "src/app/giveaways/agent-infrastructure/pack.ts",
+    "src/app/giveaways/agent-infrastructure/page.tsx",
+    "src/app/giveaways/client-launch-checklist/pack.ts",
+    "src/app/giveaways/client-launch-checklist/page.tsx",
+    "src/app/giveaways/cult-brand-playbook/pack.ts",
+    "src/app/giveaways/cult-brand-playbook/page.tsx",
+    "src/app/giveaways/geometry-dash-fun-build/game.ts",
+    "src/app/giveaways/geometry-dash-fun-build/layout.tsx",
+    "src/app/giveaways/geometry-dash-fun-build/pack.ts",
+    "src/app/giveaways/geometry-dash-fun-build/page.tsx",
+    "src/app/giveaways/hooklab/layout.tsx",
+    "src/app/giveaways/hooklab/pack.ts",
+    "src/app/giveaways/hooklab/page.tsx",
+    "src/app/giveaways/logo-maker-guide/pack.ts",
+    "src/app/giveaways/logo-maker-guide/page.tsx",
+    "src/app/giveaways/whatsapp-agent/layout.tsx",
+    "src/app/giveaways/whatsapp-agent/pack.ts",
+    "src/app/giveaways/whatsapp-agent/page.tsx",
+    "src/app/giveaways/whatsapp-agent/prompt.ts",
+    "src/app/sitemap.ts",
+    "src/components/giveaways/PackPage.module.css",
+    "src/lib/generic-giveaway-email.ts",
+    "src/lib/giveaways.ts",
+    "src/lib/lead-magnets.ts",
+    "src/lib/whatsapp-agent-email.ts",
+    "tests/pack-page.test.ts",
+    "tests/whatsapp-agent-email.test.ts"
+  ],
+  "deletedPaths": [
+    "src/app/giveaways/client-launch-checklist/LeadMagnetExampleForm.tsx",
+    "src/app/giveaways/cult-brand-playbook/GiveawayForm.tsx"
+  ],
+  "excludedAssets": [
+    "public/whatsapp-receptionist-guide.pdf",
+    "public/whatsapp-receptionist.zip"
   ],
   "stats": {
-    "totalNodes": 641,
-    "totalEdges": 1154,
+    "totalNodes": 661,
+    "totalEdges": 1161,
     "totalLayers": 10,
-    "tourSteps": 14,
+    "tourSteps": 15,
     "nodeTypes": {
-      "function": 334,
-      "file": 249,
+      "function": 341,
+      "file": 262,
       "class": 8,
       "concept": 36,
       "document": 8,
@@ -22,27 +65,2195 @@
       "config": 4
     },
     "edgeTypes": {
-      "calls": 221,
+      "calls": 219,
       "transforms": 2,
       "depends_on": 61,
       "similar_to": 1,
-      "contains": 262,
-      "imports": 318,
-      "exports": 178,
+      "contains": 269,
+      "imports": 332,
+      "exports": 180,
       "tested_by": 30,
       "deploys": 1,
       "configures": 5,
       "documents": 29,
-      "related": 39,
+      "related": 30,
       "publishes": 1,
-      "reads_from": 1,
-      "routes": 5
+      "reads_from": 1
     }
   },
-  "phases": {
-    "2": "Subagent dispatch failed: thread-store error. Extraction and analysis completed in primary session.",
-    "3": "Initial preparation root-path error and noncanonical existing-batch filename corrected; complete graph re-merged."
+  "schemaValidation": "PASS",
+  "integrityIssues": [],
+  "warnings": [
+    "Node 'function:src/lib/event-confirmation-email.ts:sendWaitlistConfirmationEmail' has no edges (orphan)",
+    "Node 'function:src/lib/event-confirmation-email.ts:sendWaitlistSpotNotificationEmail' has no edges (orphan)",
+    "Node 'function:src/lib/event-confirmation-email.ts:buildConfirmationIdempotencyKey' has no edges (orphan)",
+    "Node 'function:src/lib/event-confirmation-email.ts:buildAskAnAiExpertWelcomeIdempotencyKey' has no edges (orphan)",
+    "Node 'function:src/lib/session-reminder.ts:buildSessionReminderIdempotencyKey' has no edges (orphan)",
+    "Node 'function:src/lib/legacy-event-schedule.ts:syncLegacyRegistration (inferred)' has no edges (orphan)",
+    "Node 'concept:pre-flight-checklist' has no edges (orphan)",
+    "Node 'concept:giveaway-delivery-domain' has no edges (orphan)",
+    "Node 'function:src/app/api/events/finalize-registration/route.ts:POST' has no edges (orphan)",
+    "Node 'function:src/app/api/events/validate-promo/route.ts:POST' has no edges (orphan)",
+    "Node 'function:src/app/api/events/waitlist/join/route.ts:POST' has no edges (orphan)",
+    "Node 'function:src/app/api/stripe/webhook/route.ts:POST' has no edges (orphan)",
+    "Node 'file:src/app/giveaways/lead-magnet/layout.tsx' has no edges (orphan)",
+    "Node 'file:src/app/session/9/guide/page.tsx' has no edges (orphan)",
+    "Node 'file:src/components/PrepChecklistItem.tsx' has no edges (orphan)",
+    "Node 'file:src/components/ScreenshotCard.tsx' has no edges (orphan)",
+    "Node 'file:src/components/SessionCard.tsx' has no edges (orphan)",
+    "Node 'table:supabase/migrations/016_event_registration_ai_grades_and_attendance.sql' has no edges (orphan)",
+    "Node 'table:supabase/migrations/017_event_registration_intake_rls.sql' has no edges (orphan)",
+    "Node 'config:package.json' has no edges (orphan)",
+    "Node 'config:vercel.json' has no edges (orphan)",
+    "Node 'document:docs/giveaways/LESSONS.md' has no edges (orphan)",
+    "Node 'config:public/Lead-Machine-Quick-Start.pdf.kg.json' has no edges (orphan)",
+    "Node 'file:.understandignore' has no edges (orphan)",
+    "Node 'file:tests/event-registration-intake-rls.test.ts' has no edges (orphan)",
+    "Node 'file:src/app/illy/content.ts' has no edges (orphan)",
+    "Node 'file:pdf/whatsapp-receptionist-guide.html' has no edges (orphan)"
+  ],
+  "assemblyReview": {
+    "fixedSectionOk": true,
+    "nodesRecovered": 0,
+    "edgesRestored": 6,
+    "crossBatchEdgesAdded": 0,
+    "typesRemapped": 0,
+    "complexityRemapped": 0,
+    "notes": [
+      "Merge and normalization reported zero ID or complexity corrections; no malformed recoverable nodes were reported.",
+      "Preserved changed-files-only analysis: real unchanged dependencies absent from inherited graph were reported without source reanalysis or invented placeholder nodes.",
+      "Restored only historical incoming edges from unchanged-source files to changed-target files when both endpoint IDs survived; no outgoing edges from changed-file nodes were restored.",
+      "All current importMap relationships whose source and target file nodes exist are represented.",
+      "Eleven dropped dangling edges in the merge report reference absent inherited dependencies insight-to-fix.ts, list-unsubscribe.ts and utm.ts or their function nodes.",
+      "Inherited graph file coverage is limited; 318 import relationships cannot be represented because one or both file nodes are absent."
+    ],
+    "restoredIncomingEdges": [
+      {
+        "id": "edge_giveaways_index_to_data",
+        "source": "file:src/app/giveaways/page.tsx",
+        "target": "file:src/lib/giveaways.ts",
+        "relationship": "imports",
+        "bidirectional": false,
+        "direction": "forward",
+        "type": "related",
+        "weight": 0.5,
+        "description": "maps over giveaways data to render list"
+      },
+      {
+        "id": "edge_logo_maker_layout_to_page",
+        "source": "file:src/app/giveaways/logo-maker-guide/layout.tsx",
+        "target": "file:src/app/giveaways/logo-maker-guide/page.tsx",
+        "relationship": "parent_layout",
+        "bidirectional": true,
+        "direction": "forward",
+        "type": "related",
+        "weight": 0.5,
+        "description": "wraps page with metadata"
+      },
+      {
+        "source": "document:docs/giveaways/PROCESS.md",
+        "target": "file:src/lib/lead-magnets.ts",
+        "type": "documents",
+        "direction": "forward",
+        "weight": 0.5
+      },
+      {
+        "source": "document:docs/giveaways/PROCESS.md",
+        "target": "file:src/lib/giveaways.ts",
+        "type": "documents",
+        "direction": "forward",
+        "weight": 0.5
+      },
+      {
+        "source": "document:docs/giveaways/PROCESS.md",
+        "target": "file:tests/pack-page.test.ts",
+        "type": "documents",
+        "direction": "forward",
+        "weight": 0.5
+      },
+      {
+        "source": "document:docs/giveaways/PROCESS.md",
+        "target": "file:src/lib/generic-giveaway-email.ts",
+        "type": "documents",
+        "direction": "forward",
+        "weight": 0.5
+      }
+    ],
+    "missingImportRelationships": [
+      {
+        "source": "scripts/abandoned-checkout-run.ts",
+        "target": "src/lib/abandoned-checkout-followups.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/api/ai-agent-income/checkout/route.ts",
+        "target": "src/app/api/ai-agent-income/stripe.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/api/ai-agent-income/checkout/route.ts",
+        "target": "src/lib/email-validation.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/api/ai-agent-income/prompt-pack/request/route.ts",
+        "target": "src/lib/email-validation.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/api/ai-agent-income/webhook/route.ts",
+        "target": "src/app/api/ai-agent-income/stripe.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/api/events/[slug]/calendar/route.ts",
+        "target": "src/lib/calendar.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/api/events/[slug]/calendar/route.ts",
+        "target": "src/lib/events.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/abandoned-checkout-followups-t12h/route.ts",
+        "target": "src/lib/abandoned-checkout-followups.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/api/events/abandoned-checkout-followups-t12h/route.ts",
+        "target": "src/lib/supabase.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/abandoned-checkout-followups/route.ts",
+        "target": "src/lib/abandoned-checkout-followups.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/api/events/abandoned-checkout-followups/route.ts",
+        "target": "src/lib/supabase.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/cancel/route.ts",
+        "target": "src/lib/event-confirmation-email.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/cancel/route.ts",
+        "target": "src/lib/event-registration-db.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/cancel/route.ts",
+        "target": "src/lib/events.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/checkout-session/route.ts",
+        "target": "src/lib/email-validation.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/api/events/checkout-session/route.ts",
+        "target": "src/lib/event-status.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/api/events/checkout-session/route.ts",
+        "target": "src/lib/insight-to-fix.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/api/events/checkout-session/route.ts",
+        "target": "src/lib/registration-profile-token.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/api/events/checkout-session/route.ts",
+        "target": "src/lib/stripe.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/api/events/checkout-session/route.ts",
+        "target": "src/lib/url-utils.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/api/events/checkout-session/route.ts",
+        "target": "src/lib/with-timeout.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/api/events/finalize-registration/route.ts",
+        "target": "src/lib/events.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/finalize-registration/route.ts",
+        "target": "src/lib/insight-to-fix.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/api/events/finalize-registration/route.ts",
+        "target": "src/lib/legacy-event-schedule.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/followups/route.ts",
+        "target": "src/lib/email-suppressions.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/followups/route.ts",
+        "target": "src/lib/event-followup.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/followups/route.ts",
+        "target": "src/lib/event-registration-db.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/followups/route.ts",
+        "target": "src/lib/events.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/followups/route.ts",
+        "target": "src/lib/supabase.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/location-reminders/route.ts",
+        "target": "src/lib/event-confirmation-email.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/location-reminders/route.ts",
+        "target": "src/lib/event-email-ledger.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/location-reminders/route.ts",
+        "target": "src/lib/event-registration-db.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/location-reminders/route.ts",
+        "target": "src/lib/events.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/location-reminders/route.ts",
+        "target": "src/lib/legacy-event-schedule.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/location-reminders/route.ts",
+        "target": "src/lib/location-reminder.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/location-reminders/route.ts",
+        "target": "src/lib/supabase.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/reconcile-registrations/route.ts",
+        "target": "src/lib/event-tokens.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/api/events/reconcile-registrations/route.ts",
+        "target": "src/lib/stripe.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/api/events/reconcile-registrations/route.ts",
+        "target": "src/lib/supabase.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/registration-profile/route.ts",
+        "target": "src/lib/email-validation.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/api/events/registration-profile/route.ts",
+        "target": "src/lib/event-intake.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/registration-profile/route.ts",
+        "target": "src/lib/event-registration-db.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/registration-profile/route.ts",
+        "target": "src/lib/events.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/registration-profile/route.ts",
+        "target": "src/lib/registration-profile-token.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/api/events/session-reminders/route.ts",
+        "target": "src/lib/event-confirmation-email.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/session-reminders/route.ts",
+        "target": "src/lib/event-registration-db.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/session-reminders/route.ts",
+        "target": "src/lib/events.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/session-reminders/route.ts",
+        "target": "src/lib/session-reminder.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/session-reminders/route.ts",
+        "target": "src/lib/supabase.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/validate-promo/route.ts",
+        "target": "src/lib/events.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/validate-promo/route.ts",
+        "target": "src/lib/rate-limit.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/waitlist/join/route.ts",
+        "target": "src/lib/email-validation.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/api/events/waitlist/join/route.ts",
+        "target": "src/lib/event-confirmation-email.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/waitlist/join/route.ts",
+        "target": "src/lib/event-registration-db.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/waitlist/join/route.ts",
+        "target": "src/lib/event-status.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/api/events/waitlist/join/route.ts",
+        "target": "src/lib/events.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/waitlist/join/route.ts",
+        "target": "src/lib/rate-limit.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/waitlist/notify/route.ts",
+        "target": "src/lib/event-confirmation-email.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/waitlist/notify/route.ts",
+        "target": "src/lib/event-registration-db.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/waitlist/notify/route.ts",
+        "target": "src/lib/events.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/waitlist/notify/route.ts",
+        "target": "src/lib/supabase.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/waitlist/notify/route.ts",
+        "target": "src/lib/waitlist-notify-windows.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/events/waitlist/remove/route.ts",
+        "target": "src/lib/event-registration-db.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/lead-magnet/route.ts",
+        "target": "src/lib/insight-to-fix.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/api/lead-magnet/route.ts",
+        "target": "src/lib/list-unsubscribe.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/api/lead-magnet/route.ts",
+        "target": "src/lib/utm.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/api/lead-magnets/claudemd/route.ts",
+        "target": "src/lib/email-suppressions.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/lead-magnets/claudemd/route.ts",
+        "target": "src/lib/list-unsubscribe.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/api/lead-magnets/claudemd/route.ts",
+        "target": "src/lib/rate-limit.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/lead-magnets/claudemd/route.ts",
+        "target": "src/lib/utm.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/api/lead-magnets/passive-income-100/route.ts",
+        "target": "src/lib/email-suppressions.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/lead-magnets/passive-income-100/route.ts",
+        "target": "src/lib/list-unsubscribe.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/api/lead-magnets/passive-income-100/route.ts",
+        "target": "src/lib/rate-limit.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/meta/purchase/route.ts",
+        "target": "src/app/api/ai-agent-income/stripe.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/api/meta/purchase/route.ts",
+        "target": "src/lib/stripe.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/api/stripe/webhook/route.ts",
+        "target": "src/lib/event-capacity.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/stripe/webhook/route.ts",
+        "target": "src/lib/events.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/stripe/webhook/route.ts",
+        "target": "src/lib/insight-to-fix.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/api/stripe/webhook/route.ts",
+        "target": "src/lib/legacy-event-schedule.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/stripe/webhook/route.ts",
+        "target": "src/lib/stripe.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/api/subscribe/route.ts",
+        "target": "src/lib/email-suppressions.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/subscribe/route.ts",
+        "target": "src/lib/resend-sender.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/api/subscribe/route.ts",
+        "target": "src/lib/subscribe.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/api/unsubscribe/route.ts",
+        "target": "src/lib/email-suppressions.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/api/unsubscribe/route.ts",
+        "target": "src/lib/list-unsubscribe.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/events/[slug]/page.tsx",
+        "target": "src/lib/image-size.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/events/[slug]/page.tsx",
+        "target": "src/lib/stripe.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/giveaways/all-sorted-overview/page.tsx",
+        "target": "src/components/giveaways/GiveawayAutoModal.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/giveaways/all-sorted-overview/page.tsx",
+        "target": "src/components/giveaways/GiveawayEmailModal.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/giveaways/all-sorted-overview/page.tsx",
+        "target": "src/components/sections/MastermindReactionsSection.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/giveaways/cross-cli-compatibility-routing/pack.ts",
+        "target": "src/app/giveaways/cross-cli-compatibility-routing/content.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/giveaways/squarespace-escape/pack.ts",
+        "target": "src/lib/claude-links.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/illy/page.tsx",
+        "target": "src/app/illy/content.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/jill/page.tsx",
+        "target": "src/app/jill/content.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/layout.tsx",
+        "target": "src/app/globals.css",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/page.tsx",
+        "target": "src/components/Reveal.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/page.tsx",
+        "target": "src/components/SessionCard.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/page.tsx",
+        "target": "src/components/StaggerList.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/page.tsx",
+        "target": "src/components/TabNav.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/page.tsx",
+        "target": "src/lib/sessions.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/resource-vault/automated-ghost-computer-use/page.tsx",
+        "target": "src/components/CodeBlock.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/resource-vault/automated-ghost-computer-use/page.tsx",
+        "target": "src/components/ProTip.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/resource-vault/automated-ghost-computer-use/page.tsx",
+        "target": "src/components/StepCard.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/resource-vault/connecting-to-google-sheets/page.tsx",
+        "target": "src/components/CodeBlock.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/resource-vault/connecting-to-google-sheets/page.tsx",
+        "target": "src/components/ProTip.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/resource-vault/connecting-to-google-sheets/page.tsx",
+        "target": "src/components/StepCard.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/resource-vault/connecting-to-xero/page.tsx",
+        "target": "src/components/CodeBlock.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/resource-vault/connecting-to-xero/page.tsx",
+        "target": "src/components/ProTip.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/resource-vault/connecting-to-xero/page.tsx",
+        "target": "src/components/ScreenshotCard.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/resource-vault/connecting-to-xero/page.tsx",
+        "target": "src/components/StepCard.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/resource-vault/eric-investor-pipeline/page.tsx",
+        "target": "src/components/CodeBlock.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/resource-vault/eric-investor-pipeline/page.tsx",
+        "target": "src/components/ProTip.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/resource-vault/eric-investor-pipeline/page.tsx",
+        "target": "src/components/StepCard.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/resource-vault/how-to-stand-out-in-the-age-of-ai/page.tsx",
+        "target": "src/components/TianaSessionFooter.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/resource-vault/how-to-stand-out-in-the-age-of-ai/page.tsx",
+        "target": "src/content/tiana-ai-positioning-workshop.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/resource-vault/page.tsx",
+        "target": "src/components/TabNav.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/resource-vault/reza-website-control/page.tsx",
+        "target": "src/components/CodeBlock.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/resource-vault/reza-website-control/page.tsx",
+        "target": "src/components/ProTip.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/resource-vault/reza-website-control/page.tsx",
+        "target": "src/components/StepCard.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/resource-vault/wordpress-api/page.tsx",
+        "target": "src/components/CodeBlock.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/resource-vault/wordpress-api/page.tsx",
+        "target": "src/components/ProTip.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/resource-vault/wordpress-api/page.tsx",
+        "target": "src/components/StepCard.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/resource-vault/wordpress-api/page.tsx",
+        "target": "src/components/StickyVideoPlayer.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/[slug]/bonus/page 2.tsx",
+        "target": "src/content/session-1-bonus.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/[slug]/bonus/page 2.tsx",
+        "target": "src/lib/sessions.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/[slug]/bonus/page.tsx",
+        "target": "src/content/session-1-bonus.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/[slug]/bonus/page.tsx",
+        "target": "src/lib/sessions.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/[slug]/guide-brain/page.tsx",
+        "target": "src/content/session-4-guide.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/[slug]/guide-brain/page.tsx",
+        "target": "src/lib/sessions.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/[slug]/guide/page.tsx",
+        "target": "src/content/session-1-guide.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/[slug]/guide/page.tsx",
+        "target": "src/content/session-2-guide.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/[slug]/guide/page.tsx",
+        "target": "src/content/session-3-guide.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/[slug]/guide/page.tsx",
+        "target": "src/content/session-6-guide.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/[slug]/guide/page.tsx",
+        "target": "src/content/session-7-guide.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/[slug]/guide/page.tsx",
+        "target": "src/lib/locks.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/[slug]/guide/page.tsx",
+        "target": "src/lib/sessions.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/[slug]/page.tsx",
+        "target": "src/components/Reveal.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/session/[slug]/page.tsx",
+        "target": "src/lib/locks.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/[slug]/page.tsx",
+        "target": "src/lib/sessions.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/[slug]/prep/page.tsx",
+        "target": "src/content/session-1-prep.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/[slug]/prep/page.tsx",
+        "target": "src/content/session-2-prep.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/[slug]/prep/page.tsx",
+        "target": "src/content/session-3-prep.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/[slug]/prep/page.tsx",
+        "target": "src/content/session-5-prep.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/[slug]/prep/page.tsx",
+        "target": "src/content/session-6-prep.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/[slug]/prep/page.tsx",
+        "target": "src/content/session-7-prep.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/session/[slug]/prep/page.tsx",
+        "target": "src/lib/sessions.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/1/prep-codex/page 2.tsx",
+        "target": "src/content/session-1-prep-codex.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/1/prep-codex/page.tsx",
+        "target": "src/content/session-1-prep-codex.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/10/instagram/page.tsx",
+        "target": "src/content/session-10-instagram-agent.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/2/auto-lead-magnet/page 2.tsx",
+        "target": "src/components/CodeBlock.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/session/2/auto-lead-magnet/page.tsx",
+        "target": "src/components/CodeBlock.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/session/2/guide-codex/page.tsx",
+        "target": "src/content/session-2-guide-codex.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/3/custom-domain/page.tsx",
+        "target": "src/components/StepCard.tsx",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/3/homework/page.tsx",
+        "target": "src/components/StepCard.tsx",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/3/homework/page.tsx",
+        "target": "src/components/StickyVideoPlayer.tsx",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/4/custom-domain/page.tsx",
+        "target": "src/components/StepCard.tsx",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/4/guide/page.tsx",
+        "target": "src/content/session-4-guide.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/4/homework/page.tsx",
+        "target": "src/components/StepCard.tsx",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/4/homework/page.tsx",
+        "target": "src/components/StickyVideoPlayer.tsx",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/4/wrapup/page 2.tsx",
+        "target": "src/components/StickyVideoPlayer.tsx",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/4/wrapup/page.tsx",
+        "target": "src/components/StickyVideoPlayer.tsx",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/5/hook-writer/page 2.tsx",
+        "target": "src/components/CodeBlock.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/session/5/hook-writer/page 2.tsx",
+        "target": "src/lib/copyWithConfetti.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/session/5/hook-writer/page.tsx",
+        "target": "src/components/CodeBlock.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/session/5/prep-hooks/page 2.tsx",
+        "target": "src/content/session-4-prep.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/5/prep-hooks/page.tsx",
+        "target": "src/content/session-4-prep.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/5/wrapup/page.tsx",
+        "target": "src/components/StickyVideoPlayer.tsx",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/6/hook-writer/page.tsx",
+        "target": "src/components/CodeBlock.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/session/6/hook-writer/page.tsx",
+        "target": "src/lib/copyWithConfetti.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/session/6/prep-hooks/page.tsx",
+        "target": "src/content/session-4-prep.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/7/descript/page 2.tsx",
+        "target": "src/content/session-7-descript-guide.tsx",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/7/descript/page.tsx",
+        "target": "src/content/session-7-descript-guide.tsx",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/7/guide/page.tsx",
+        "target": "src/content/session-7-guide.tsx",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/7/prep/page 2.tsx",
+        "target": "src/content/session-7-prep.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/app/session/8/guide/page.tsx",
+        "target": "src/content/session-8-guide.tsx",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/8/prep/page.tsx",
+        "target": "src/content/session-8-prep.tsx",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/app/session/9/guide/page.tsx",
+        "target": "src/content/session-9-guide.tsx",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/components/events/EventPageView.tsx",
+        "target": "src/lib/calendar.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/components/events/EventPageView.tsx",
+        "target": "src/lib/event-status.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/components/events/EventRegistrationSection.tsx",
+        "target": "src/data/ai-levels-signup.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/components/events/EventRegistrationSection.tsx",
+        "target": "src/lib/celebrate.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/components/events/EventRegistrationSection.tsx",
+        "target": "src/lib/email-validation.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/components/events/WaitlistJoinForm.tsx",
+        "target": "src/lib/email-validation.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/components/SiteChrome.tsx",
+        "target": "src/components/SiteHeader.tsx",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-1-bonus.tsx",
+        "target": "src/components/ProTip.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/content/session-1-bonus.tsx",
+        "target": "src/components/StepCard.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-1-guide.tsx",
+        "target": "src/components/StickyVideoPlayer.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-1-prep-codex.tsx",
+        "target": "src/components/ProTip.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/content/session-1-prep-codex.tsx",
+        "target": "src/components/StickyVideoPlayer.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-1-prep-codex.tsx",
+        "target": "src/lib/celebrate.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-1-prep.tsx",
+        "target": "src/components/ProTip.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/content/session-1-prep.tsx",
+        "target": "src/components/StickyVideoPlayer.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-1-prep.tsx",
+        "target": "src/lib/celebrate.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-1-prep.tsx",
+        "target": "src/lib/claude-links.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-10-guide-part1.tsx",
+        "target": "src/components/ProTip.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/content/session-10-guide-part1.tsx",
+        "target": "src/components/StepCard.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-10-instagram-agent.tsx",
+        "target": "src/components/CodeBlock.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/content/session-10-instagram-agent.tsx",
+        "target": "src/components/ProTip.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/content/session-10-instagram-agent.tsx",
+        "target": "src/components/StepCard.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-10-prep.tsx",
+        "target": "src/components/ProTip.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/content/session-10-prep.tsx",
+        "target": "src/lib/celebrate.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-10-prep.tsx",
+        "target": "src/lib/claude-links.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-2-guide-codex.tsx",
+        "target": "src/components/CodeBlock.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/content/session-2-guide-codex.tsx",
+        "target": "src/components/ProTip.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/content/session-2-guide-codex.tsx",
+        "target": "src/components/StepCard.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-2-guide-codex.tsx",
+        "target": "src/components/StickyVideoPlayer.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-2-guide.tsx",
+        "target": "src/components/CodeBlock.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/content/session-2-guide.tsx",
+        "target": "src/components/ProTip.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/content/session-2-guide.tsx",
+        "target": "src/components/StepCard.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-2-guide.tsx",
+        "target": "src/components/StickyVideoPlayer.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-2-prep.tsx",
+        "target": "src/components/ProTip.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/content/session-2-prep.tsx",
+        "target": "src/lib/celebrate.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-3-guide.tsx",
+        "target": "src/components/CodeBlock.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/content/session-3-guide.tsx",
+        "target": "src/components/ProTip.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/content/session-3-guide.tsx",
+        "target": "src/components/StepCard.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-3-guide.tsx",
+        "target": "src/components/StickyVideoPlayer.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-3-prep.tsx",
+        "target": "src/components/ProTip.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/content/session-3-prep.tsx",
+        "target": "src/lib/celebrate.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-4-guide.tsx",
+        "target": "src/components/CodeBlock.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/content/session-4-guide.tsx",
+        "target": "src/components/ProTip.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/content/session-4-guide.tsx",
+        "target": "src/components/StepCard.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-4-guide.tsx",
+        "target": "src/components/StickyVideoPlayer.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-4-guide.tsx",
+        "target": "src/lib/celebrate.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-4-guide.tsx",
+        "target": "src/lib/claude-links.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-4-prep.tsx",
+        "target": "src/lib/celebrate.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-5-prep.tsx",
+        "target": "src/components/ProTip.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/content/session-5-prep.tsx",
+        "target": "src/components/ScreenshotCard.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/content/session-5-prep.tsx",
+        "target": "src/lib/celebrate.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-6-guide.tsx",
+        "target": "src/components/CodeBlock.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/content/session-6-guide.tsx",
+        "target": "src/components/ProTip.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/content/session-6-guide.tsx",
+        "target": "src/components/StepCard.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-6-guide.tsx",
+        "target": "src/components/StickyVideoPlayer.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-6-prep.tsx",
+        "target": "src/components/ProTip.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/content/session-6-prep.tsx",
+        "target": "src/lib/celebrate.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-7-descript-guide.tsx",
+        "target": "src/components/CodeBlock.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/content/session-7-descript-guide.tsx",
+        "target": "src/components/ProTip.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/content/session-7-descript-guide.tsx",
+        "target": "src/components/StepCard.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-7-guide.tsx",
+        "target": "src/components/CodeBlock.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/content/session-7-guide.tsx",
+        "target": "src/components/ProTip.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/content/session-7-guide.tsx",
+        "target": "src/components/StepCard.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-7-guide.tsx",
+        "target": "src/components/StickyVideoPlayer.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-7-guide.tsx",
+        "target": "src/lib/celebrate.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-7-prep.tsx",
+        "target": "src/lib/celebrate.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-8-guide.tsx",
+        "target": "src/components/CodeBlock.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/content/session-8-guide.tsx",
+        "target": "src/components/ProTip.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/content/session-8-guide.tsx",
+        "target": "src/components/StepCard.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-8-guide.tsx",
+        "target": "src/components/StickyVideoPlayer.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-8-prep.tsx",
+        "target": "src/components/ProTip.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/content/session-8-prep.tsx",
+        "target": "src/lib/celebrate.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/session-9-guide.tsx",
+        "target": "src/components/CodeBlock.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/content/session-9-guide.tsx",
+        "target": "src/components/ProTip.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/content/session-9-guide.tsx",
+        "target": "src/components/StepCard.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/content/tiana-ai-positioning-workshop.tsx",
+        "target": "src/components/CodeBlock.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/content/tiana-ai-positioning-workshop.tsx",
+        "target": "src/components/ProTip.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/content/tiana-ai-positioning-workshop.tsx",
+        "target": "src/components/StepCard.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/lib/abandoned-checkout-followups.ts",
+        "target": "src/lib/email-suppressions.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/lib/abandoned-checkout-followups.ts",
+        "target": "src/lib/events.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/lib/abandoned-checkout-followups.ts",
+        "target": "src/lib/list-unsubscribe.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/lib/abandoned-checkout-followups.ts",
+        "target": "src/lib/stripe.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/lib/abandoned-checkout-followups.ts",
+        "target": "src/lib/url-utils.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/lib/abandoned-checkout-followups.ts",
+        "target": "src/lib/utm.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/lib/ai-agent-income-prompt-pack.ts",
+        "target": "src/lib/email-validation.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/lib/ai-agent-income-prompt-pack.ts",
+        "target": "src/lib/resend-sender.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/lib/ai-agent-income-prompt-pack.ts",
+        "target": "src/lib/subscribe.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/lib/event-confirmation-email.ts",
+        "target": "src/lib/calendar.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/lib/event-confirmation-email.ts",
+        "target": "src/lib/list-unsubscribe.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/lib/event-confirmation-email.ts",
+        "target": "src/lib/utm.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/lib/event-followup.ts",
+        "target": "src/lib/list-unsubscribe.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/lib/event-registration-db.ts",
+        "target": "src/lib/event-tokens.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/lib/event-status.ts",
+        "target": "src/lib/events.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/lib/free-ai-tool-email.ts",
+        "target": "src/lib/utm.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/lib/generic-giveaway-email.ts",
+        "target": "src/lib/utm.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/lib/google-calendar-invite.ts",
+        "target": "src/lib/calendar.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/lib/google-calendar-invite.ts",
+        "target": "src/lib/events.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/lib/lead-magnets.ts",
+        "target": "src/lib/list-unsubscribe.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/lib/lead-magnets.ts",
+        "target": "src/lib/utm.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/lib/legacy-event-schedule.ts",
+        "target": "src/lib/google-calendar-invite.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/lib/legacy-event-schedule.ts",
+        "target": "src/lib/insight-to-fix.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/lib/legacy-event-schedule.ts",
+        "target": "src/lib/stripe.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/lib/quiz-giveaway-email.ts",
+        "target": "src/lib/utm.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/lib/rate-limit.ts",
+        "target": "src/lib/with-timeout.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/lib/resend-sender.ts",
+        "target": "src/lib/subscribe.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/lib/subscribe.ts",
+        "target": "src/lib/lead-magnets.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/lib/subscribe.ts",
+        "target": "src/lib/list-unsubscribe.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "src/lib/whatsapp-agent-email.ts",
+        "target": "src/lib/utm.ts",
+        "missingSource": false,
+        "missingTarget": true
+      },
+      {
+        "source": "src/templates/session-guide-template.tsx",
+        "target": "src/components/CodeBlock.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/templates/session-guide-template.tsx",
+        "target": "src/components/ProTip.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "src/templates/session-guide-template.tsx",
+        "target": "src/components/StepCard.tsx",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "tests/abandoned-checkout-followups.test.ts",
+        "target": "src/lib/abandoned-checkout-followups.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "tests/calendar.test.ts",
+        "target": "src/lib/calendar.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "tests/claude-referral-link.test.ts",
+        "target": "src/lib/claude-links.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "tests/event-cancellation.test.ts",
+        "target": "src/lib/event-registration-db.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "tests/event-cancellation.test.ts",
+        "target": "src/lib/supabase.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "tests/event-capacity-checkout-route.test.ts",
+        "target": "src/app/api/events/checkout-session/route.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "tests/event-capacity-checkout-route.test.ts",
+        "target": "src/lib/supabase.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "tests/event-capacity.test.ts",
+        "target": "src/lib/event-capacity.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "tests/event-capacity.test.ts",
+        "target": "src/lib/events.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "tests/event-capacity.test.ts",
+        "target": "src/lib/supabase.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "tests/event-pricing-and-data.test.ts",
+        "target": "src/lib/event-status.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "tests/event-pricing-and-data.test.ts",
+        "target": "src/lib/events.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "tests/event-pricing-and-data.test.ts",
+        "target": "src/lib/url-utils.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "tests/event-pricing-and-data.test.ts",
+        "target": "src/lib/waitlist-notify-windows.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "tests/event-status.test.ts",
+        "target": "src/lib/event-status.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "tests/event-status.test.ts",
+        "target": "src/lib/events.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "tests/event-tokens.test.ts",
+        "target": "src/lib/event-tokens.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "tests/google-calendar-invite.test.ts",
+        "target": "src/lib/events.tsx",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "tests/google-calendar-invite.test.ts",
+        "target": "src/lib/google-calendar-invite.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "tests/lead-magnet-speak-human-email.test.ts",
+        "target": "src/lib/speak-human-email.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "tests/list-unsubscribe.test.ts",
+        "target": "src/lib/list-unsubscribe.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "tests/registration-profile.test.ts",
+        "target": "src/data/ai-levels-signup.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "tests/registration-profile.test.ts",
+        "target": "src/lib/event-intake.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "tests/registration-profile.test.ts",
+        "target": "src/lib/registration-profile-token.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "tests/subscribe-lead-magnet.test.ts",
+        "target": "src/lib/lead-magnets.ts",
+        "missingSource": true,
+        "missingTarget": false
+      },
+      {
+        "source": "tests/subscribe-lead-magnet.test.ts",
+        "target": "src/lib/resend-sender.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "tests/subscribe-lead-magnet.test.ts",
+        "target": "src/lib/subscribe.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "tests/utm.test.ts",
+        "target": "src/lib/utm.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "tests/waitlist-join-validation.test.ts",
+        "target": "src/lib/email-validation.ts",
+        "missingSource": true,
+        "missingTarget": true
+      },
+      {
+        "source": "tests/with-timeout.test.ts",
+        "target": "src/lib/with-timeout.ts",
+        "missingSource": true,
+        "missingTarget": true
+      }
+    ],
+    "missingImportSourceFiles": [
+      "scripts/abandoned-checkout-run.ts",
+      "src/app/api/events/[slug]/calendar/route.ts",
+      "src/app/api/events/abandoned-checkout-followups-t12h/route.ts",
+      "src/app/api/events/abandoned-checkout-followups/route.ts",
+      "src/app/api/events/cancel/route.ts",
+      "src/app/api/events/finalize-registration/route.ts",
+      "src/app/api/events/followups/route.ts",
+      "src/app/api/events/location-reminders/route.ts",
+      "src/app/api/events/reconcile-registrations/route.ts",
+      "src/app/api/events/registration-profile/route.ts",
+      "src/app/api/events/session-reminders/route.ts",
+      "src/app/api/events/validate-promo/route.ts",
+      "src/app/api/events/waitlist/join/route.ts",
+      "src/app/api/events/waitlist/notify/route.ts",
+      "src/app/api/events/waitlist/remove/route.ts",
+      "src/app/api/lead-magnets/claudemd/route.ts",
+      "src/app/api/lead-magnets/passive-income-100/route.ts",
+      "src/app/api/stripe/webhook/route.ts",
+      "src/app/api/subscribe/route.ts",
+      "src/app/api/unsubscribe/route.ts",
+      "src/app/giveaways/all-sorted-overview/page.tsx",
+      "src/app/illy/page.tsx",
+      "src/app/jill/page.tsx",
+      "src/app/page.tsx",
+      "src/app/resource-vault/automated-ghost-computer-use/page.tsx",
+      "src/app/resource-vault/connecting-to-google-sheets/page.tsx",
+      "src/app/resource-vault/connecting-to-xero/page.tsx",
+      "src/app/resource-vault/eric-investor-pipeline/page.tsx",
+      "src/app/resource-vault/how-to-stand-out-in-the-age-of-ai/page.tsx",
+      "src/app/resource-vault/page.tsx",
+      "src/app/resource-vault/reza-website-control/page.tsx",
+      "src/app/resource-vault/wordpress-api/page.tsx",
+      "src/app/session/1/prep-codex/page 2.tsx",
+      "src/app/session/1/prep-codex/page.tsx",
+      "src/app/session/10/instagram/page.tsx",
+      "src/app/session/2/auto-lead-magnet/page 2.tsx",
+      "src/app/session/2/auto-lead-magnet/page.tsx",
+      "src/app/session/2/guide-codex/page.tsx",
+      "src/app/session/4/guide/page.tsx",
+      "src/app/session/5/hook-writer/page 2.tsx",
+      "src/app/session/5/hook-writer/page.tsx",
+      "src/app/session/5/prep-hooks/page 2.tsx",
+      "src/app/session/5/prep-hooks/page.tsx",
+      "src/app/session/6/hook-writer/page.tsx",
+      "src/app/session/6/prep-hooks/page.tsx",
+      "src/app/session/7/prep/page 2.tsx",
+      "src/app/session/[slug]/bonus/page 2.tsx",
+      "src/app/session/[slug]/bonus/page.tsx",
+      "src/app/session/[slug]/guide-brain/page.tsx",
+      "src/app/session/[slug]/guide/page.tsx",
+      "src/app/session/[slug]/page.tsx",
+      "src/app/session/[slug]/prep/page.tsx",
+      "src/content/session-1-bonus.tsx",
+      "src/content/session-1-guide.tsx",
+      "src/content/session-1-prep-codex.tsx",
+      "src/content/session-1-prep.tsx",
+      "src/content/session-10-guide-part1.tsx",
+      "src/content/session-10-instagram-agent.tsx",
+      "src/content/session-10-prep.tsx",
+      "src/content/session-2-guide-codex.tsx",
+      "src/content/session-2-guide.tsx",
+      "src/content/session-2-prep.tsx",
+      "src/content/session-3-guide.tsx",
+      "src/content/session-3-prep.tsx",
+      "src/content/session-4-guide.tsx",
+      "src/content/session-4-prep.tsx",
+      "src/content/session-5-prep.tsx",
+      "src/content/session-6-guide.tsx",
+      "src/content/session-6-prep.tsx",
+      "src/content/session-7-descript-guide.tsx",
+      "src/content/session-7-guide.tsx",
+      "src/content/session-8-guide.tsx",
+      "src/content/session-8-prep.tsx",
+      "src/content/session-9-guide.tsx",
+      "src/content/tiana-ai-positioning-workshop.tsx",
+      "src/lib/abandoned-checkout-followups.ts",
+      "src/lib/event-status.ts",
+      "src/lib/google-calendar-invite.ts",
+      "src/lib/resend-sender.ts",
+      "src/lib/subscribe.ts",
+      "src/templates/session-guide-template.tsx",
+      "tests/abandoned-checkout-followups.test.ts",
+      "tests/calendar.test.ts",
+      "tests/claude-referral-link.test.ts",
+      "tests/event-cancellation.test.ts",
+      "tests/event-capacity-checkout-route.test.ts",
+      "tests/event-capacity.test.ts",
+      "tests/event-pricing-and-data.test.ts",
+      "tests/event-status.test.ts",
+      "tests/event-tokens.test.ts",
+      "tests/google-calendar-invite.test.ts",
+      "tests/lead-magnet-speak-human-email.test.ts",
+      "tests/list-unsubscribe.test.ts",
+      "tests/registration-profile.test.ts",
+      "tests/subscribe-lead-magnet.test.ts",
+      "tests/utm.test.ts",
+      "tests/waitlist-join-validation.test.ts",
+      "tests/with-timeout.test.ts"
+    ],
+    "missingImportTargetFiles": [
+      "src/app/api/ai-agent-income/stripe.ts",
+      "src/app/giveaways/cross-cli-compatibility-routing/content.ts",
+      "src/app/globals.css",
+      "src/app/jill/content.ts",
+      "src/components/SiteHeader.tsx",
+      "src/components/StepCard.tsx",
+      "src/components/StickyVideoPlayer.tsx",
+      "src/components/TianaSessionFooter.tsx",
+      "src/content/session-1-bonus.tsx",
+      "src/content/session-1-guide.tsx",
+      "src/content/session-1-prep-codex.tsx",
+      "src/content/session-1-prep.tsx",
+      "src/content/session-10-instagram-agent.tsx",
+      "src/content/session-2-guide-codex.tsx",
+      "src/content/session-2-guide.tsx",
+      "src/content/session-2-prep.tsx",
+      "src/content/session-3-guide.tsx",
+      "src/content/session-3-prep.tsx",
+      "src/content/session-4-guide.tsx",
+      "src/content/session-4-prep.tsx",
+      "src/content/session-5-prep.tsx",
+      "src/content/session-6-guide.tsx",
+      "src/content/session-6-prep.tsx",
+      "src/content/session-7-descript-guide.tsx",
+      "src/content/session-7-guide.tsx",
+      "src/content/session-8-guide.tsx",
+      "src/content/session-8-prep.tsx",
+      "src/content/session-9-guide.tsx",
+      "src/content/tiana-ai-positioning-workshop.tsx",
+      "src/data/ai-levels-signup.ts",
+      "src/lib/abandoned-checkout-followups.ts",
+      "src/lib/calendar.ts",
+      "src/lib/celebrate.ts",
+      "src/lib/claude-links.ts",
+      "src/lib/email-validation.ts",
+      "src/lib/event-status.ts",
+      "src/lib/event-tokens.ts",
+      "src/lib/google-calendar-invite.ts",
+      "src/lib/image-size.ts",
+      "src/lib/insight-to-fix.ts",
+      "src/lib/list-unsubscribe.ts",
+      "src/lib/locks.ts",
+      "src/lib/registration-profile-token.ts",
+      "src/lib/resend-sender.ts",
+      "src/lib/sessions.ts",
+      "src/lib/stripe.ts",
+      "src/lib/subscribe.ts",
+      "src/lib/url-utils.ts",
+      "src/lib/utm.ts",
+      "src/lib/with-timeout.ts"
+    ],
+    "unknownNodeTypes": {},
+    "unknownComplexityValues": {},
+    "nodeCount": 661,
+    "edgeCount": 1161
   },
-  "validationIssues": [],
-  "orphanNodes": 26
+  "fingerprintFiles": 484,
+  "pipelineNotes": [
+    "Initial native agent dispatch failed with missing parent thread context; retry without inherited context succeeded.",
+    "Filtered compute-batches output to changed files only.",
+    "Used numeric batch-0.json because merge ignores batch-existing.json.",
+    "All batches normalized before Python 3.11 merge; graph edge/node ratio verified.",
+    "11 edges to helpers absent from inherited graph were dropped; unchanged files were not reanalyzed.",
+    "Dashboard launch skipped for this non-interactive graph refresh."
+  ],
+  "graphPath": "/Users/myos/.myos/workspace/projects/mastermind/workshop-site/.understand-anything/knowledge-graph.json"
 }

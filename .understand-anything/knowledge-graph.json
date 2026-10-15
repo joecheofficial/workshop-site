@@ -2691,32 +2691,6 @@
       "complexity": "moderate"
     },
     {
-      "id": "file:src/app/giveaways/agent-infrastructure/layout.tsx",
-      "type": "file",
-      "name": "AgentInfrastructureLayout",
-      "filePath": "src/app/giveaways/agent-infrastructure/layout.tsx",
-      "summary": "React layout component with metadata for agent infrastructure giveaway page",
-      "tags": [
-        "layout",
-        "react",
-        "component"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "file:src/app/giveaways/agent-infrastructure/page.tsx",
-      "type": "file",
-      "name": "AgentInfrastructurePage",
-      "filePath": "src/app/giveaways/agent-infrastructure/page.tsx",
-      "summary": "React client page component displaying interactive agent infrastructure giveaway content",
-      "tags": [
-        "page",
-        "react",
-        "client-component"
-      ],
-      "complexity": "complex"
-    },
-    {
       "id": "file:src/app/giveaways/page.tsx",
       "type": "file",
       "language": "typescript",
@@ -2769,42 +2743,6 @@
       ]
     },
     {
-      "id": "file:src/app/giveaways/hooklab/page.tsx",
-      "type": "file",
-      "language": "typescript",
-      "key_concepts": [
-        "ai_skill_showcase",
-        "installation_guide",
-        "psychological_hooks",
-        "brand_voice_integration",
-        "scoring_system",
-        "interactive_sections",
-        "particle_effects"
-      ],
-      "dependencies": [
-        "MastermindReactionsSection",
-        "GiveawayEmailModal",
-        "copyWithConfetti",
-        "useMagnet"
-      ],
-      "exports": [
-        "HookLabPage"
-      ],
-      "constants": [
-        "MASTERMIND_URL",
-        "MANYCHAT_KEYWORD",
-        "MODES",
-        "SCORE_AXES"
-      ],
-      "complexity": "moderate",
-      "filePath": "src/app/giveaways/hooklab/page.tsx",
-      "name": "HookLab Giveaway",
-      "summary": "Interactive landing page for HookLab, a Claude Code skill that generates Instagram Reel hooks using psychological mechanisms and brand voice analysis.",
-      "tags": [
-        "file"
-      ]
-    },
-    {
       "id": "file:src/app/giveaways/hooklab/content.ts",
       "type": "file",
       "language": "typescript",
@@ -2831,105 +2769,6 @@
       "filePath": "src/app/giveaways/hooklab/content.ts",
       "name": "HookLab Content/Prompt",
       "summary": "Master prompt for the HookLab Claude Code skill, containing the Hook Lab methodology with five psychological mechanisms for Instagram Reel hooks.",
-      "tags": [
-        "file"
-      ]
-    },
-    {
-      "id": "file:src/app/giveaways/hooklab/layout.tsx",
-      "type": "file",
-      "name": "layout.tsx",
-      "filePath": "src/app/giveaways/hooklab/layout.tsx",
-      "summary": "Sets SEO and social metadata for HookLab, a Claude Code skill that generates scored Instagram Reel hooks from brand context.",
-      "tags": [
-        "configuration",
-        "metadata",
-        "seo",
-        "giveaway"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "file:src/app/giveaways/geometry-dash-fun-build/page.tsx",
-      "type": "file",
-      "language": "typescript",
-      "key_concepts": [
-        "p5js_game",
-        "game_customization",
-        "level_design",
-        "physics_engine",
-        "particle_effects",
-        "color_customization",
-        "game_state_management",
-        "collision_detection",
-        "interactive_preview"
-      ],
-      "dependencies": [
-        "MastermindReactionsSection",
-        "copyWithConfetti",
-        "GiveawayEmailModal"
-      ],
-      "exports": [
-        "GeometryDashPage"
-      ],
-      "constants": [
-        "MASTERMIND_URL",
-        "P5_EDITOR_URL",
-        "MANYCHAT_KEYWORD",
-        "GAME_CODE",
-        "LEVEL_DEFS"
-      ],
-      "complexity": "moderate",
-      "filePath": "src/app/giveaways/geometry-dash-fun-build/page.tsx",
-      "name": "Geometry Dash Fun Build",
-      "summary": "Interactive p5.js game clone landing page - a customizable Geometry Dash-like game with particle effects, obstacle types, and configurable difficulty parameters.",
-      "tags": [
-        "file"
-      ]
-    },
-    {
-      "id": "file:src/app/giveaways/geometry-dash-fun-build/layout.tsx",
-      "type": "file",
-      "name": "layout.tsx",
-      "filePath": "src/app/giveaways/geometry-dash-fun-build/layout.tsx",
-      "summary": "Sets SEO and social metadata for a beginner giveaway that guides readers through building a Geometry Dash-style game with p5.js.",
-      "tags": [
-        "configuration",
-        "metadata",
-        "seo",
-        "giveaway"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "file:src/app/giveaways/logo-maker-guide/page.tsx",
-      "type": "file",
-      "language": "typescript",
-      "key_concepts": [
-        "logo_design_guide",
-        "tool_recommendations",
-        "design_strategy",
-        "budget_tiers",
-        "designer_hiring",
-        "api_approaches",
-        "accordion_interface",
-        "resource_curation"
-      ],
-      "dependencies": [
-        "GiveawayAutoModal"
-      ],
-      "exports": [
-        "LogoMakerGuidePage"
-      ],
-      "constants": [
-        "MASTERMIND_URL",
-        "PATHS",
-        "ACCORDION_SECTIONS"
-      ],
-      "complexity": "moderate",
-      "filePath": "src/app/giveaways/logo-maker-guide/page.tsx",
-      "name": "Logo Maker Guide",
-      "summary": "Comprehensive guide for creating business logos with curated tool recommendations, from free DIY options to hiring designers and API-based builders.",
       "tags": [
         "file"
       ]
@@ -3256,20 +3095,6 @@
       "tags": [
         "file"
       ]
-    },
-    {
-      "id": "file:src/app/sitemap.ts",
-      "type": "file",
-      "name": "sitemap.ts",
-      "filePath": "src/app/sitemap.ts",
-      "summary": "Builds the public sitemap entries for the workshop site and associated decks, assigning update frequencies and search priorities.",
-      "tags": [
-        "entry-point",
-        "sitemap",
-        "seo",
-        "routing"
-      ],
-      "complexity": "simple"
     },
     {
       "id": "file:src/components/CodeBlock.tsx",
@@ -4284,99 +4109,6 @@
       "complexity": "moderate"
     },
     {
-      "id": "file:src/lib/lead-magnets.ts",
-      "type": "file",
-      "name": "lead-magnets.ts",
-      "filePath": "src/lib/lead-magnets.ts",
-      "summary": "Defines downloadable lead magnets and builds welcome emails, with source validation and download URL selection.",
-      "tags": [
-        "lead-magnet",
-        "utility",
-        "tested"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:src/lib/lead-magnets.ts:getLeadMagnet",
-      "type": "function",
-      "name": "getLeadMagnet",
-      "filePath": "src/lib/lead-magnets.ts",
-      "lineRange": [
-        35,
-        37
-      ],
-      "summary": "Implements getLeadMagnet within lead-magnets.ts.",
-      "tags": [
-        "lead-magnet",
-        "utility"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:src/lib/lead-magnets.ts:isDeliverableLeadMagnetSource",
-      "type": "function",
-      "name": "isDeliverableLeadMagnetSource",
-      "filePath": "src/lib/lead-magnets.ts",
-      "lineRange": [
-        80,
-        82
-      ],
-      "summary": "Implements isDeliverableLeadMagnetSource within lead-magnets.ts.",
-      "tags": [
-        "lead-magnet",
-        "utility"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:src/lib/lead-magnets.ts:downloadUrlFor",
-      "type": "function",
-      "name": "downloadUrlFor",
-      "filePath": "src/lib/lead-magnets.ts",
-      "lineRange": [
-        95,
-        97
-      ],
-      "summary": "Implements downloadUrlFor within lead-magnets.ts.",
-      "tags": [
-        "lead-magnet",
-        "utility"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:src/lib/lead-magnets.ts:buildWelcomeEmail",
-      "type": "function",
-      "name": "buildWelcomeEmail",
-      "filePath": "src/lib/lead-magnets.ts",
-      "lineRange": [
-        100,
-        133
-      ],
-      "summary": "Builds a welcome email containing the selected lead magnet download information.",
-      "tags": [
-        "lead-magnet",
-        "utility"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "class:src/lib/lead-magnets.ts:UnknownLeadMagnetSourceError",
-      "type": "class",
-      "name": "UnknownLeadMagnetSourceError",
-      "filePath": "src/lib/lead-magnets.ts",
-      "lineRange": [
-        85,
-        93
-      ],
-      "summary": "Represents UnknownLeadMagnetSourceError used for lead magnet source validation.",
-      "tags": [
-        "data-model",
-        "validation"
-      ],
-      "complexity": "simple"
-    },
-    {
       "id": "file:src/lib/quiz-giveaway-email.ts",
       "type": "file",
       "name": "quiz-giveaway-email.ts",
@@ -4830,36 +4562,6 @@
         "page",
         "component",
         "checklist"
-      ],
-      "complexity": "complex"
-    },
-    {
-      "id": "file:src/app/giveaways/cult-brand-playbook/page.tsx",
-      "type": "file",
-      "name": "page.tsx",
-      "filePath": "src/app/giveaways/cult-brand-playbook/page.tsx",
-      "summary": "Presents the Cult Brand Playbook guide using its seven brand elements, reveal effects, giveaway form, and automatic modal.",
-      "tags": [
-        "component",
-        "giveaway",
-        "page"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:src/app/giveaways/cult-brand-playbook/page.tsx:CultBrandPlaybookPage",
-      "type": "function",
-      "name": "CultBrandPlaybookPage",
-      "filePath": "src/app/giveaways/cult-brand-playbook/page.tsx",
-      "lineRange": [
-        73,
-        234
-      ],
-      "summary": "Renders the Cult Brand Playbook guide and its seven-element content.",
-      "tags": [
-        "page",
-        "component",
-        "brand-guide"
       ],
       "complexity": "complex"
     },
@@ -5551,58 +5253,6 @@
       "complexity": "simple"
     },
     {
-      "id": "function:src/app/giveaways/geometry-dash-fun-build/layout.tsx:GeometryDashLayout",
-      "type": "function",
-      "name": "GeometryDashLayout",
-      "filePath": "src/app/giveaways/geometry-dash-fun-build/layout.tsx",
-      "lineRange": [
-        34,
-        36
-      ],
-      "summary": "Provides the GeometryDashLayout route layout wrapper for Geometry Dash game building.",
-      "tags": [
-        "component",
-        "layout",
-        "metadata"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/app/giveaways/hooklab/layout.tsx:HookLabLayout",
-      "type": "function",
-      "name": "HookLabLayout",
-      "filePath": "src/app/giveaways/hooklab/layout.tsx",
-      "lineRange": [
-        33,
-        35
-      ],
-      "summary": "Provides the HookLabLayout route layout wrapper for HookLab Reel hook generation.",
-      "tags": [
-        "component",
-        "layout",
-        "metadata"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/app/sitemap.ts:sitemap",
-      "type": "function",
-      "name": "sitemap",
-      "filePath": "src/app/sitemap.ts",
-      "lineRange": [
-        6,
-        29
-      ],
-      "summary": "Returns sitemap metadata for the workshop homepage and giveaway routes.",
-      "tags": [
-        "entry-point",
-        "sitemap",
-        "seo",
-        "routing"
-      ],
-      "complexity": "moderate"
-    },
-    {
       "id": "file:tests/event-registration-intake-rls.test.ts",
       "type": "file",
       "name": "event-registration-intake-rls.test.ts",
@@ -5632,24 +5282,6 @@
       "lineRange": [
         1,
         176
-      ]
-    },
-    {
-      "id": "file:src/lib/giveaways.ts",
-      "type": "file",
-      "name": "giveaways.ts",
-      "filePath": "src/lib/giveaways.ts",
-      "summary": "Defines the typed giveaway catalog used to populate the giveaway index, including slugs, descriptions, icons, and badge styles. Exposes a lookup helper for retrieving catalog entries by slug.",
-      "tags": [
-        "data-model",
-        "giveaway",
-        "registry",
-        "lookup"
-      ],
-      "complexity": "complex",
-      "lineRange": [
-        1,
-        316
       ]
     },
     {
@@ -6170,96 +5802,6 @@
       "lineRange": [
         1,
         169
-      ]
-    },
-    {
-      "id": "file:src/app/giveaways/client-launch-checklist/LeadMagnetExampleForm.tsx",
-      "type": "file",
-      "name": "LeadMagnetExampleForm.tsx",
-      "filePath": "src/app/giveaways/client-launch-checklist/LeadMagnetExampleForm.tsx",
-      "summary": "Captures first name, optional last name, and email to request the Client Launch Checklist through the subscribe API. Displays delivery feedback and records a Meta lead event after success.",
-      "tags": [
-        "component",
-        "lead-magnet",
-        "subscription",
-        "conversion-tracking"
-      ],
-      "complexity": "moderate",
-      "lineRange": [
-        1,
-        136
-      ]
-    },
-    {
-      "id": "function:src/app/giveaways/client-launch-checklist/LeadMagnetExampleForm.tsx:LeadMagnetExampleForm",
-      "type": "function",
-      "name": "LeadMagnetExampleForm",
-      "filePath": "src/app/giveaways/client-launch-checklist/LeadMagnetExampleForm.tsx",
-      "summary": "Captures first name, optional last name, and email to request the Client Launch Checklist through the subscribe API. Displays delivery feedback and records a Meta lead event after success.",
-      "tags": [
-        "component",
-        "lead-magnet",
-        "subscription",
-        "conversion-tracking"
-      ],
-      "complexity": "moderate",
-      "lineRange": [
-        14,
-        136
-      ]
-    },
-    {
-      "id": "file:src/app/giveaways/cult-brand-playbook/GiveawayForm.tsx",
-      "type": "file",
-      "name": "GiveawayForm.tsx",
-      "filePath": "src/app/giveaways/cult-brand-playbook/GiveawayForm.tsx",
-      "summary": "Provides an email signup form for the Cult Brand Playbook, posting its source slug to the lead-magnet API. Shows animated delivery confirmation and tracks successful lead conversion.",
-      "tags": [
-        "component",
-        "lead-magnet",
-        "email-capture",
-        "conversion-tracking"
-      ],
-      "complexity": "moderate",
-      "lineRange": [
-        1,
-        69
-      ]
-    },
-    {
-      "id": "function:src/app/giveaways/cult-brand-playbook/GiveawayForm.tsx:GiveawayForm",
-      "type": "function",
-      "name": "GiveawayForm",
-      "filePath": "src/app/giveaways/cult-brand-playbook/GiveawayForm.tsx",
-      "summary": "Provides an email signup form for the Cult Brand Playbook, posting its source slug to the lead-magnet API. Shows animated delivery confirmation and tracks successful lead conversion.",
-      "tags": [
-        "component",
-        "lead-magnet",
-        "email-capture",
-        "conversion-tracking"
-      ],
-      "complexity": "moderate",
-      "lineRange": [
-        8,
-        69
-      ]
-    },
-    {
-      "id": "function:src/lib/giveaways.ts:getGiveaway",
-      "type": "function",
-      "name": "getGiveaway",
-      "filePath": "src/lib/giveaways.ts",
-      "summary": "Returns the giveaway catalog entry matching a supplied slug, or undefined when no entry exists.",
-      "tags": [
-        "data-model",
-        "giveaway",
-        "registry",
-        "lookup"
-      ],
-      "complexity": "simple",
-      "lineRange": [
-        314,
-        316
       ]
     },
     {
@@ -7501,19 +7043,6 @@
       "complexity": "moderate"
     },
     {
-      "id": "file:tests/pack-page.test.ts",
-      "type": "file",
-      "name": "pack-page.test.ts",
-      "filePath": "tests/pack-page.test.ts",
-      "summary": "Checks pack content validation, visible section and action helpers, DM attribution, and level-specific offers against real giveaway content.",
-      "tags": [
-        "typescript",
-        "giveaway",
-        "test"
-      ],
-      "complexity": "moderate"
-    },
-    {
       "id": "file:src/app/giveaways/anthropic-safety-checklist/pack.ts",
       "type": "file",
       "name": "pack.ts",
@@ -8213,58 +7742,6 @@
       "tags": [
         "typescript",
         "code"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "file:src/app/api/lead-magnet/route.ts",
-      "type": "file",
-      "name": "route.ts",
-      "filePath": "src/app/api/lead-magnet/route.ts",
-      "summary": "Accepts rate-limited lead magnet submissions, validates sources and ManyChat requests, records leads, and dispatches resource-specific delivery through Resend with suppression and idempotency checks.",
-      "tags": [
-        "typescript",
-        "code"
-      ],
-      "complexity": "complex"
-    },
-    {
-      "id": "function:src/app/api/lead-magnet/route.ts:sendViaResend",
-      "type": "function",
-      "name": "sendViaResend",
-      "filePath": "src/app/api/lead-magnet/route.ts",
-      "line": 22,
-      "summary": "Selects the lead-magnet email template, adds unsubscribe content, and delivers through Resend using an idempotency key.",
-      "tags": [
-        "typescript",
-        "code"
-      ],
-      "complexity": "complex"
-    },
-    {
-      "id": "function:src/app/api/lead-magnet/route.ts:ingestIntoCrm",
-      "type": "function",
-      "name": "ingestIntoCrm",
-      "filePath": "src/app/api/lead-magnet/route.ts",
-      "line": 614,
-      "summary": "Submits lead contact and source attribution to CRM ingestion.",
-      "tags": [
-        "typescript",
-        "code"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:src/app/api/lead-magnet/route.ts:POST",
-      "type": "function",
-      "name": "POST",
-      "filePath": "src/app/api/lead-magnet/route.ts",
-      "line": 633,
-      "summary": "Validates and rate-limits lead magnet requests, persists lead state, and coordinates CRM ingestion and email delivery.",
-      "tags": [
-        "typescript",
-        "code",
-        "export"
       ],
       "complexity": "moderate"
     },
@@ -9619,18 +9096,6 @@
       "complexity": "moderate"
     },
     {
-      "id": "file:src/components/giveaways/PackPage.module.css",
-      "type": "file",
-      "name": "PackPage.module.css",
-      "filePath": "src/components/giveaways/PackPage.module.css",
-      "summary": "Styles the shared pack template, responsive cards, prompt controls, guide sections, and paid offer block.",
-      "tags": [
-        "css",
-        "giveaway"
-      ],
-      "complexity": "complex"
-    },
-    {
       "id": "file:src/components/giveaways/PackPage.tsx",
       "type": "file",
       "name": "PackPage.tsx",
@@ -9706,89 +9171,6 @@
       "tags": [
         "typescript",
         "giveaway"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "file:src/lib/generic-giveaway-email.ts",
-      "type": "file",
-      "name": "generic-giveaway-email.ts",
-      "filePath": "src/lib/generic-giveaway-email.ts",
-      "summary": "Validates giveaway links and ManyChat authentication, sanitizes display names, and creates delivery emails for generic and registered website giveaways.",
-      "tags": [
-        "typescript",
-        "giveaway",
-        "tested"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:src/lib/generic-giveaway-email.ts:validateGiveawayLink",
-      "type": "function",
-      "name": "validateGiveawayLink",
-      "filePath": "src/lib/generic-giveaway-email.ts",
-      "line": 36,
-      "summary": "Accepts supported HTTP or HTTPS giveaway destinations and rejects unsafe or misleading hosts.",
-      "tags": [
-        "typescript",
-        "giveaway",
-        "export"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:src/lib/generic-giveaway-email.ts:sanitizeGiveawayName",
-      "type": "function",
-      "name": "sanitizeGiveawayName",
-      "filePath": "src/lib/generic-giveaway-email.ts",
-      "line": 71,
-      "summary": "Normalizes giveaway names for safe, readable email subjects and content.",
-      "tags": [
-        "typescript",
-        "giveaway",
-        "export"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:src/lib/generic-giveaway-email.ts:isValidManychatSecret",
-      "type": "function",
-      "name": "isValidManychatSecret",
-      "filePath": "src/lib/generic-giveaway-email.ts",
-      "line": 87,
-      "summary": "Checks the submitted ManyChat secret against the configured value using a timing-safe comparison.",
-      "tags": [
-        "typescript",
-        "giveaway",
-        "export"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:src/lib/generic-giveaway-email.ts:buildGenericGiveawayEmail",
-      "type": "function",
-      "name": "buildGenericGiveawayEmail",
-      "filePath": "src/lib/generic-giveaway-email.ts",
-      "line": 99,
-      "summary": "Builds sanitized HTML and plain-text delivery content for an approved giveaway link.",
-      "tags": [
-        "typescript",
-        "giveaway",
-        "export"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:src/lib/generic-giveaway-email.ts:websiteGiveawayEmail",
-      "type": "function",
-      "name": "websiteGiveawayEmail",
-      "filePath": "src/lib/generic-giveaway-email.ts",
-      "line": 173,
-      "summary": "Looks up registered giveaway details and builds its website delivery email.",
-      "tags": [
-        "typescript",
-        "giveaway",
-        "export"
       ],
       "complexity": "moderate"
     },
@@ -9886,6 +9268,871 @@
         "test"
       ],
       "complexity": "moderate"
+    },
+    {
+      "id": "file:src/app/giveaways/agent-infrastructure/pack.ts",
+      "type": "file",
+      "name": "pack.ts",
+      "filePath": "src/app/giveaways/agent-infrastructure/pack.ts",
+      "summary": "Defines the builder giveaway content explaining six layers of multi-agent infrastructure: memory, navigation, learning, coordination, dispatch and reusable parts.",
+      "tags": [
+        "giveaway",
+        "content-model",
+        "agent-infrastructure"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/app/giveaways/agent-infrastructure/page.tsx",
+      "type": "file",
+      "name": "page.tsx",
+      "filePath": "src/app/giveaways/agent-infrastructure/page.tsx",
+      "summary": "Renders the agent infrastructure guide through the shared PackPage template.",
+      "tags": [
+        "entry-point",
+        "giveaway",
+        "component"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/app/giveaways/agent-infrastructure/page.tsx:AgentInfrastructurePage",
+      "type": "function",
+      "name": "AgentInfrastructurePage",
+      "filePath": "src/app/giveaways/agent-infrastructure/page.tsx",
+      "lineRange": [
+        8,
+        10
+      ],
+      "summary": "Returns the shared PackPage view populated with the agent infrastructure guide content.",
+      "tags": [
+        "component",
+        "giveaway",
+        "route-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/app/giveaways/client-launch-checklist/pack.ts",
+      "type": "file",
+      "name": "pack.ts",
+      "filePath": "src/app/giveaways/client-launch-checklist/pack.ts",
+      "summary": "Defines a beginner launch checklist giveaway with the printable PDF and five steps for packaging, measuring and launching a paid service offer.",
+      "tags": [
+        "giveaway",
+        "content-model",
+        "client-launch"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/app/giveaways/client-launch-checklist/page.tsx",
+      "type": "file",
+      "name": "page.tsx",
+      "filePath": "src/app/giveaways/client-launch-checklist/page.tsx",
+      "summary": "Renders the five-step client launch checklist through the shared PackPage template. Supplies page and Open Graph metadata.",
+      "tags": [
+        "entry-point",
+        "giveaway",
+        "component"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/app/giveaways/client-launch-checklist/page.tsx:ClientLaunchChecklistPage",
+      "type": "function",
+      "name": "ClientLaunchChecklistPage",
+      "filePath": "src/app/giveaways/client-launch-checklist/page.tsx",
+      "lineRange": [
+        19,
+        21
+      ],
+      "summary": "Returns the shared PackPage view populated with the five-step client launch checklist content.",
+      "tags": [
+        "component",
+        "giveaway",
+        "route-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/app/giveaways/cult-brand-playbook/pack.ts",
+      "type": "file",
+      "name": "pack.ts",
+      "filePath": "src/app/giveaways/cult-brand-playbook/pack.ts",
+      "summary": "Defines the complete brand playbook giveaway, including seven identity and community elements, exercises and a 30-day implementation sprint.",
+      "tags": [
+        "giveaway",
+        "content-model",
+        "branding"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/app/giveaways/cult-brand-playbook/page.tsx",
+      "type": "file",
+      "name": "page.tsx",
+      "filePath": "src/app/giveaways/cult-brand-playbook/page.tsx",
+      "summary": "Renders the seven-element brand playbook through the shared PackPage template. Supplies page and Open Graph metadata.",
+      "tags": [
+        "entry-point",
+        "giveaway",
+        "component"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/app/giveaways/cult-brand-playbook/page.tsx:CultBrandPlaybookPage",
+      "type": "function",
+      "name": "CultBrandPlaybookPage",
+      "filePath": "src/app/giveaways/cult-brand-playbook/page.tsx",
+      "lineRange": [
+        19,
+        21
+      ],
+      "summary": "Returns the shared PackPage view populated with the seven-element brand playbook content.",
+      "tags": [
+        "component",
+        "giveaway",
+        "route-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/app/giveaways/geometry-dash-fun-build/game.ts",
+      "type": "file",
+      "name": "game.ts",
+      "filePath": "src/app/giveaways/geometry-dash-fun-build/game.ts",
+      "summary": "Exports the complete p5.js Geometry Dash game as copyable source text, with adjustable physics, obstacles, visual effects and progress tracking.",
+      "tags": [
+        "giveaway",
+        "game-source",
+        "p5js"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/app/giveaways/geometry-dash-fun-build/pack.ts",
+      "type": "file",
+      "name": "pack.ts",
+      "filePath": "src/app/giveaways/geometry-dash-fun-build/pack.ts",
+      "summary": "Defines the beginner game-building giveaway with copyable p5.js game code, editor access, customization steps and an AI feature prompt.",
+      "tags": [
+        "giveaway",
+        "content-model",
+        "game-development"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/app/giveaways/geometry-dash-fun-build/page.tsx",
+      "type": "file",
+      "name": "page.tsx",
+      "filePath": "src/app/giveaways/geometry-dash-fun-build/page.tsx",
+      "summary": "Renders the Geometry Dash game-building tutorial through the shared PackPage template. Includes HowTo JSON-LD describing the setup steps.",
+      "tags": [
+        "entry-point",
+        "giveaway",
+        "component"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/app/giveaways/geometry-dash-fun-build/page.tsx:GeometryDashPage",
+      "type": "function",
+      "name": "GeometryDashPage",
+      "filePath": "src/app/giveaways/geometry-dash-fun-build/page.tsx",
+      "lineRange": [
+        24,
+        31
+      ],
+      "summary": "Returns the shared PackPage view populated with the Geometry Dash game-building tutorial content. Adds structured HowTo data for search engines.",
+      "tags": [
+        "component",
+        "giveaway",
+        "route-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/app/giveaways/hooklab/pack.ts",
+      "type": "file",
+      "name": "pack.ts",
+      "filePath": "src/app/giveaways/hooklab/pack.ts",
+      "summary": "Defines the free HookLab builder giveaway with its install prompt, five scored Reel hooks, scripts and brand-voice usage guidance.",
+      "tags": [
+        "giveaway",
+        "content-model",
+        "social-content"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/app/giveaways/hooklab/page.tsx",
+      "type": "file",
+      "name": "page.tsx",
+      "filePath": "src/app/giveaways/hooklab/page.tsx",
+      "summary": "Renders the free HookLab installation guide through the shared PackPage template. Includes HowTo JSON-LD describing the setup steps.",
+      "tags": [
+        "entry-point",
+        "giveaway",
+        "component"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/app/giveaways/hooklab/page.tsx:HookLabPage",
+      "type": "function",
+      "name": "HookLabPage",
+      "filePath": "src/app/giveaways/hooklab/page.tsx",
+      "lineRange": [
+        25,
+        32
+      ],
+      "summary": "Returns the shared PackPage view populated with the free HookLab installation guide content. Adds structured HowTo data for search engines.",
+      "tags": [
+        "component",
+        "giveaway",
+        "route-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/app/giveaways/logo-maker-guide/pack.ts",
+      "type": "file",
+      "name": "pack.ts",
+      "filePath": "src/app/giveaways/logo-maker-guide/pack.ts",
+      "summary": "Defines a beginner logo guide comparing free tools, paid services, hiring designers and building with APIs, including practical tool links and implementation notes.",
+      "tags": [
+        "giveaway",
+        "content-model",
+        "logo-design"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/app/giveaways/logo-maker-guide/page.tsx",
+      "type": "file",
+      "name": "page.tsx",
+      "filePath": "src/app/giveaways/logo-maker-guide/page.tsx",
+      "summary": "Renders the logo maker comparison guide through the shared PackPage template.",
+      "tags": [
+        "entry-point",
+        "giveaway",
+        "component"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/app/giveaways/logo-maker-guide/page.tsx:LogoMakerGuidePage",
+      "type": "function",
+      "name": "LogoMakerGuidePage",
+      "filePath": "src/app/giveaways/logo-maker-guide/page.tsx",
+      "lineRange": [
+        7,
+        9
+      ],
+      "summary": "Returns the shared PackPage view populated with the logo maker comparison guide content.",
+      "tags": [
+        "component",
+        "giveaway",
+        "route-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/app/giveaways/whatsapp-agent/pack.ts",
+      "type": "file",
+      "name": "pack.ts",
+      "filePath": "src/app/giveaways/whatsapp-agent/pack.ts",
+      "summary": "Defines the WhatsApp receptionist builder giveaway with downloadable code and PDF, setup instructions, owner commands and the copyable installation prompt.",
+      "tags": [
+        "giveaway",
+        "content-model",
+        "whatsapp",
+        "tested"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/app/giveaways/whatsapp-agent/page.tsx",
+      "type": "file",
+      "name": "page.tsx",
+      "filePath": "src/app/giveaways/whatsapp-agent/page.tsx",
+      "summary": "Renders the WhatsApp receptionist setup guide through the shared PackPage template. Includes HowTo JSON-LD describing the setup steps.",
+      "tags": [
+        "entry-point",
+        "giveaway",
+        "component"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/app/giveaways/whatsapp-agent/page.tsx:WhatsAppAgentPage",
+      "type": "function",
+      "name": "WhatsAppAgentPage",
+      "filePath": "src/app/giveaways/whatsapp-agent/page.tsx",
+      "lineRange": [
+        30,
+        37
+      ],
+      "summary": "Returns the shared PackPage view populated with the WhatsApp receptionist setup guide content. Adds structured HowTo data for search engines.",
+      "tags": [
+        "component",
+        "giveaway",
+        "route-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/app/giveaways/whatsapp-agent/prompt.ts",
+      "type": "file",
+      "name": "prompt.ts",
+      "filePath": "src/app/giveaways/whatsapp-agent/prompt.ts",
+      "summary": "Exports the complete START-HERE setup prompt mirrored from the receptionist download, covering testing, business details, Meta setup, Cloudflare deployment and secret handling.",
+      "tags": [
+        "giveaway",
+        "setup-prompt",
+        "whatsapp",
+        "tested"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:tests/pack-page.test.ts",
+      "type": "file",
+      "name": "pack-page.test.ts",
+      "filePath": "tests/pack-page.test.ts",
+      "summary": "Verifies shared giveaway rules for DM email suppression, action-triggered signup, level-matched offers, valid pack content and byte-identical prompts in downloadable archives.",
+      "tags": [
+        "test",
+        "giveaway",
+        "content-validation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/app/api/lead-magnet/route.ts",
+      "type": "file",
+      "name": "route.ts",
+      "filePath": "src/app/api/lead-magnet/route.ts",
+      "summary": "Captures giveaway leads, records journey events and CRM intake, and dispatches the matching email through Resend. Applies rate limits, suppression checks, trusted generic-link delivery and explicit failure for unsupported sources.",
+      "tags": [
+        "api-handler",
+        "lead-capture",
+        "email-delivery",
+        "validation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/app/api/lead-magnet/route.ts:sendViaResend",
+      "type": "function",
+      "name": "sendViaResend",
+      "filePath": "src/app/api/lead-magnet/route.ts",
+      "lineRange": [
+        23,
+        607
+      ],
+      "summary": "Selects the requested giveaway template, attaches unsubscribe metadata and tracked links, and submits an idempotent HTML and text delivery through Resend.",
+      "tags": [
+        "api-handler",
+        "lead-capture",
+        "email-delivery"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/app/api/lead-magnet/route.ts:ingestIntoCrm",
+      "type": "function",
+      "name": "ingestIntoCrm",
+      "filePath": "src/app/api/lead-magnet/route.ts",
+      "lineRange": [
+        630,
+        645
+      ],
+      "summary": "Posts the captured email and giveaway source to the Mission Control CRM intake endpoint.",
+      "tags": [
+        "api-handler",
+        "lead-capture",
+        "email-delivery"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/app/api/lead-magnet/route.ts:POST",
+      "type": "function",
+      "name": "POST",
+      "filePath": "src/app/api/lead-magnet/route.ts",
+      "lineRange": [
+        649,
+        809
+      ],
+      "summary": "Validates and rate-limits incoming leads, records capture and CRM intake, checks marketing suppression, and dispatches a supported or trusted generic giveaway email with delivery telemetry.",
+      "tags": [
+        "api-handler",
+        "lead-capture",
+        "email-delivery"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/lib/generic-giveaway-email.ts",
+      "type": "file",
+      "name": "generic-giveaway-email.ts",
+      "filePath": "src/lib/generic-giveaway-email.ts",
+      "summary": "Validates trusted giveaway URLs and ManyChat secrets, sanitizes display names, and builds tracked HTML and plain-text link emails. Provides approved generic delivery metadata for website giveaways.",
+      "tags": [
+        "email-template",
+        "validation",
+        "security",
+        "giveaway"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/generic-giveaway-email.ts:validateGiveawayLink",
+      "type": "function",
+      "name": "validateGiveawayLink",
+      "filePath": "src/lib/generic-giveaway-email.ts",
+      "lineRange": [
+        36,
+        56
+      ],
+      "summary": "Accepts only normalized HTTPS URLs on explicitly trusted hosts or the approved GitHub owner path, rejecting credentials, ports and oversized input.",
+      "tags": [
+        "email-template",
+        "validation",
+        "security"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/generic-giveaway-email.ts:sanitizeGiveawayName",
+      "type": "function",
+      "name": "sanitizeGiveawayName",
+      "filePath": "src/lib/generic-giveaway-email.ts",
+      "lineRange": [
+        71,
+        84
+      ],
+      "summary": "Strips markup and control characters, normalizes and caps giveaway names, and falls back to a readable source slug.",
+      "tags": [
+        "email-template",
+        "validation",
+        "security"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/generic-giveaway-email.ts:isValidManychatSecret",
+      "type": "function",
+      "name": "isValidManychatSecret",
+      "filePath": "src/lib/generic-giveaway-email.ts",
+      "lineRange": [
+        87,
+        97
+      ],
+      "summary": "Compares the configured and supplied ManyChat secrets in constant time and rejects missing or mismatched inputs.",
+      "tags": [
+        "email-template",
+        "validation",
+        "security"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/generic-giveaway-email.ts:buildGenericGiveawayEmail",
+      "type": "function",
+      "name": "buildGenericGiveawayEmail",
+      "filePath": "src/lib/generic-giveaway-email.ts",
+      "lineRange": [
+        99,
+        149
+      ],
+      "summary": "Builds a lightweight HTML and plain-text giveaway link email with tracked internal URLs and unsubscribe content.",
+      "tags": [
+        "email-template",
+        "validation",
+        "security"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/generic-giveaway-email.ts:websiteGiveawayEmail",
+      "type": "function",
+      "name": "websiteGiveawayEmail",
+      "filePath": "src/lib/generic-giveaway-email.ts",
+      "lineRange": [
+        177,
+        180
+      ],
+      "summary": "Looks up the approved generic email name and link for a website giveaway source.",
+      "tags": [
+        "email-template",
+        "validation",
+        "security"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/lib/giveaways.ts",
+      "type": "file",
+      "name": "giveaways.ts",
+      "filePath": "src/lib/giveaways.ts",
+      "summary": "Defines the giveaway catalogue used to render the giveaway index, with titles, descriptions, icons and badge metadata. Exposes lookup by slug.",
+      "tags": [
+        "data-model",
+        "giveaway",
+        "registry"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/lib/giveaways.ts:getGiveaway",
+      "type": "function",
+      "name": "getGiveaway",
+      "filePath": "src/lib/giveaways.ts",
+      "lineRange": [
+        322,
+        324
+      ],
+      "summary": "Returns the giveaway catalogue entry matching a slug.",
+      "tags": [
+        "data-model",
+        "giveaway",
+        "registry"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/lib/lead-magnets.ts",
+      "type": "file",
+      "name": "lead-magnets.ts",
+      "filePath": "src/lib/lead-magnets.ts",
+      "summary": "Defines registered downloadable magnets and the allowlist of sources with actual delivery templates. Builds personalized welcome emails with tracked download links and unsubscribe support, and exposes an explicit unknown-source error.",
+      "tags": [
+        "registry",
+        "email-template",
+        "validation",
+        "lead-magnet",
+        "tested"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/lead-magnets.ts:getLeadMagnet",
+      "type": "function",
+      "name": "getLeadMagnet",
+      "filePath": "src/lib/lead-magnets.ts",
+      "lineRange": [
+        35,
+        37
+      ],
+      "summary": "Returns registered lead magnet metadata for a slug without falling back to another asset.",
+      "tags": [
+        "registry",
+        "email-template",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/lead-magnets.ts:isDeliverableLeadMagnetSource",
+      "type": "function",
+      "name": "isDeliverableLeadMagnetSource",
+      "filePath": "src/lib/lead-magnets.ts",
+      "lineRange": [
+        85,
+        87
+      ],
+      "summary": "Checks whether a source is explicitly registered as deliverable by the lead magnet route.",
+      "tags": [
+        "registry",
+        "email-template",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/lead-magnets.ts:downloadUrlFor",
+      "type": "function",
+      "name": "downloadUrlFor",
+      "filePath": "src/lib/lead-magnets.ts",
+      "lineRange": [
+        100,
+        102
+      ],
+      "summary": "Constructs the absolute public download URL from a lead magnet asset path.",
+      "tags": [
+        "registry",
+        "email-template",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/lead-magnets.ts:buildWelcomeEmail",
+      "type": "function",
+      "name": "buildWelcomeEmail",
+      "filePath": "src/lib/lead-magnets.ts",
+      "lineRange": [
+        105,
+        138
+      ],
+      "summary": "Builds a personalized download email with a tracked asset URL, escaped display content and recipient unsubscribe link.",
+      "tags": [
+        "registry",
+        "email-template",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:src/lib/lead-magnets.ts:UnknownLeadMagnetSourceError",
+      "type": "class",
+      "name": "UnknownLeadMagnetSourceError",
+      "filePath": "src/lib/lead-magnets.ts",
+      "lineRange": [
+        90,
+        98
+      ],
+      "summary": "Represents an unsupported lead magnet source and preserves its slug for explicit delivery error handling.",
+      "tags": [
+        "registry",
+        "email-template",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/lib/whatsapp-agent-email.ts",
+      "type": "file",
+      "name": "whatsapp-agent-email.ts",
+      "filePath": "src/lib/whatsapp-agent-email.ts",
+      "summary": "Builds the WhatsApp receptionist giveaway email in HTML and plain text, linking the downloadable folder, PDF guide and help page with campaign tracking. Includes setup steps and unsubscribe content.",
+      "tags": [
+        "email-template",
+        "giveaway",
+        "whatsapp",
+        "utm",
+        "tested"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/whatsapp-agent-email.ts:buildWhatsAppAgentEmail",
+      "type": "function",
+      "name": "buildWhatsAppAgentEmail",
+      "filePath": "src/lib/whatsapp-agent-email.ts",
+      "lineRange": [
+        12,
+        72
+      ],
+      "summary": "Builds HTML and plain-text WhatsApp receptionist delivery copy with tracked ZIP, PDF and giveaway-page links plus setup and unsubscribe instructions.",
+      "tags": [
+        "email-template",
+        "giveaway",
+        "whatsapp"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/whatsapp-agent-email.test.ts",
+      "type": "file",
+      "name": "whatsapp-agent-email.test.ts",
+      "filePath": "tests/whatsapp-agent-email.test.ts",
+      "summary": "Checks WhatsApp giveaway deliverability and route integration, and verifies the email includes the download, guide, page and unsubscribe links. Also guards the intended lightweight HTML format.",
+      "tags": [
+        "test",
+        "email-delivery",
+        "whatsapp",
+        "regression"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:pdf/whatsapp-receptionist-guide.html",
+      "type": "file",
+      "name": "whatsapp-receptionist-guide.html",
+      "filePath": "pdf/whatsapp-receptionist-guide.html",
+      "summary": "Print-ready setup guide for a Claude-powered WhatsApp receptionist using Meta Cloud API and Cloudflare Workers. Covers credential setup, webhook connection, appointment commands, messaging rules, costs, launch steps, and troubleshooting.",
+      "tags": [
+        "documentation",
+        "whatsapp",
+        "setup-guide",
+        "print-layout"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/app/giveaways/agent-infrastructure/layout.tsx",
+      "type": "file",
+      "name": "layout.tsx",
+      "filePath": "src/app/giveaways/agent-infrastructure/layout.tsx",
+      "summary": "Supplies canonical, search, Open Graph, and Twitter metadata for the multi-agent infrastructure giveaway while passing page children through unchanged.",
+      "tags": [
+        "layout",
+        "metadata",
+        "seo",
+        "giveaway"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/app/giveaways/agent-infrastructure/layout.tsx:AgentInfrastructureLayout",
+      "type": "function",
+      "name": "AgentInfrastructureLayout",
+      "filePath": "src/app/giveaways/agent-infrastructure/layout.tsx",
+      "lineRange": [
+        34,
+        36
+      ],
+      "summary": "Returns the infrastructure giveaway children so route metadata can be applied without introducing additional markup.",
+      "tags": [
+        "layout",
+        "component",
+        "giveaway"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/app/giveaways/geometry-dash-fun-build/layout.tsx",
+      "type": "file",
+      "name": "layout.tsx",
+      "filePath": "src/app/giveaways/geometry-dash-fun-build/layout.tsx",
+      "summary": "Defines search and social sharing metadata for the p5.js Geometry Dash giveaway, with a layout that returns its page children.",
+      "tags": [
+        "layout",
+        "metadata",
+        "seo",
+        "giveaway"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/app/giveaways/geometry-dash-fun-build/layout.tsx:GeometryDashLayout",
+      "type": "function",
+      "name": "GeometryDashLayout",
+      "filePath": "src/app/giveaways/geometry-dash-fun-build/layout.tsx",
+      "lineRange": [
+        34,
+        36
+      ],
+      "summary": "Returns the Geometry Dash giveaway children without adding a wrapper element.",
+      "tags": [
+        "layout",
+        "component",
+        "giveaway"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/app/giveaways/hooklab/layout.tsx",
+      "type": "file",
+      "name": "layout.tsx",
+      "filePath": "src/app/giveaways/hooklab/layout.tsx",
+      "summary": "Defines canonical and social metadata for the HookLab Instagram Reel hook generator giveaway and passes through its page content.",
+      "tags": [
+        "layout",
+        "metadata",
+        "seo",
+        "giveaway"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/app/giveaways/hooklab/layout.tsx:HookLabLayout",
+      "type": "function",
+      "name": "HookLabLayout",
+      "filePath": "src/app/giveaways/hooklab/layout.tsx",
+      "lineRange": [
+        33,
+        35
+      ],
+      "summary": "Passes HookLab giveaway children through while the route exports its search and social metadata.",
+      "tags": [
+        "layout",
+        "component",
+        "giveaway"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/app/giveaways/whatsapp-agent/layout.tsx",
+      "type": "file",
+      "name": "layout.tsx",
+      "filePath": "src/app/giveaways/whatsapp-agent/layout.tsx",
+      "summary": "Provides canonical, search, and social sharing metadata for the WhatsApp receptionist giveaway, preserving its child page content.",
+      "tags": [
+        "layout",
+        "metadata",
+        "seo",
+        "whatsapp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/app/giveaways/whatsapp-agent/layout.tsx:WhatsAppAgentLayout",
+      "type": "function",
+      "name": "WhatsAppAgentLayout",
+      "filePath": "src/app/giveaways/whatsapp-agent/layout.tsx",
+      "lineRange": [
+        36,
+        38
+      ],
+      "summary": "Returns the WhatsApp agent giveaway children unchanged under the route metadata.",
+      "tags": [
+        "layout",
+        "component",
+        "giveaway"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/app/sitemap.ts",
+      "type": "file",
+      "name": "sitemap.ts",
+      "filePath": "src/app/sitemap.ts",
+      "summary": "Generates the Next.js sitemap for the workshop home, selected giveaways, lead magnet, and external presentation site, assigning priorities, update frequencies, and a shared modification timestamp.",
+      "tags": [
+        "seo",
+        "sitemap",
+        "metadata",
+        "routing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/app/sitemap.ts:sitemap",
+      "type": "function",
+      "name": "sitemap",
+      "filePath": "src/app/sitemap.ts",
+      "lineRange": [
+        6,
+        30
+      ],
+      "summary": "Returns prioritized sitemap entries for public workshop resources with shared modification dates and per-page change frequencies.",
+      "tags": [
+        "seo",
+        "sitemap",
+        "metadata"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/giveaways/PackPage.module.css",
+      "type": "file",
+      "name": "PackPage.module.css",
+      "filePath": "src/components/giveaways/PackPage.module.css",
+      "summary": "Styles the reusable pack giveaway page with a narrow reading column, brand color tokens, hero effects, offers, guide blocks, command panels, and form fields. Includes responsive layouts, visible focus states, and reduced-motion rules.",
+      "tags": [
+        "css-module",
+        "giveaway",
+        "responsive",
+        "accessibility"
+      ],
+      "complexity": "complex"
     }
   ],
   "edges": [
@@ -10401,28 +10648,28 @@
       "source": "file:src/lib/stripe-amount.ts",
       "target": "function:src/lib/stripe-amount.ts:toStripeUnitAmount",
       "type": "contains",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward"
     },
     {
       "source": "file:src/lib/waitlist-notify-windows.ts",
       "target": "function:src/lib/waitlist-notify-windows.ts:hoursUntilEvent",
       "type": "contains",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward"
     },
     {
       "source": "file:src/lib/waitlist-notify-windows.ts",
       "target": "function:src/lib/waitlist-notify-windows.ts:resolveNotifyWindow",
       "type": "contains",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward"
     },
     {
       "source": "file:src/lib/waitlist-notify-windows.ts",
       "target": "class:src/lib/waitlist-notify-windows.ts:NotifyWindow",
       "type": "contains",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward"
     },
     {
@@ -10465,21 +10712,21 @@
       "source": "file:src/lib/email-suppressions.ts",
       "target": "function:src/lib/email-suppressions.ts:isSuppressed",
       "type": "contains",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward"
     },
     {
       "source": "file:src/lib/email-suppressions.ts",
       "target": "function:src/lib/email-suppressions.ts:recordSuppression",
       "type": "contains",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward"
     },
     {
       "source": "file:src/lib/email-suppressions.ts",
       "target": "class:src/lib/email-suppressions.ts:SuppressionSource",
       "type": "contains",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward"
     },
     {
@@ -10502,112 +10749,112 @@
       "source": "file:src/lib/event-registration-db.ts",
       "target": "function:src/lib/event-registration-db.ts:saveRegistrationProfile",
       "type": "contains",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward"
     },
     {
       "source": "file:src/lib/event-registration-db.ts",
       "target": "function:src/lib/event-registration-db.ts:saveRegistrationIntake",
       "type": "contains",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward"
     },
     {
       "source": "file:src/lib/event-registration-db.ts",
       "target": "function:src/lib/event-registration-db.ts:getRegistrationIntake",
       "type": "contains",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward"
     },
     {
       "source": "file:src/lib/event-registration-db.ts",
       "target": "function:src/lib/event-registration-db.ts:saveRegistration",
       "type": "contains",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward"
     },
     {
       "source": "file:src/lib/event-registration-db.ts",
       "target": "function:src/lib/event-registration-db.ts:isAlreadyRegistered",
       "type": "contains",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward"
     },
     {
       "source": "file:src/lib/event-registration-db.ts",
       "target": "function:src/lib/event-registration-db.ts:isAlreadyOnWaitlist",
       "type": "contains",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward"
     },
     {
       "source": "file:src/lib/event-registration-db.ts",
       "target": "function:src/lib/event-registration-db.ts:cancelRegistration",
       "type": "contains",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward"
     },
     {
       "source": "file:src/lib/event-registration-db.ts",
       "target": "function:src/lib/event-registration-db.ts:getConfirmedCount",
       "type": "contains",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward"
     },
     {
       "source": "file:src/lib/event-registration-db.ts",
       "target": "function:src/lib/event-registration-db.ts:getConfirmedRegistrationsForEvent",
       "type": "contains",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward"
     },
     {
       "source": "file:src/lib/event-registration-db.ts",
       "target": "function:src/lib/event-registration-db.ts:addToWaitlist",
       "type": "contains",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward"
     },
     {
       "source": "file:src/lib/event-registration-db.ts",
       "target": "function:src/lib/event-registration-db.ts:removeFromWaitlist",
       "type": "contains",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward"
     },
     {
       "source": "file:src/lib/event-registration-db.ts",
       "target": "function:src/lib/event-registration-db.ts:getActiveWaitlist",
       "type": "contains",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward"
     },
     {
       "source": "file:src/lib/event-registration-db.ts",
       "target": "function:src/lib/event-registration-db.ts:hasOpenSpots",
       "type": "contains",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward"
     },
     {
       "source": "file:src/lib/event-registration-db.ts",
       "target": "class:src/lib/event-registration-db.ts:Registration",
       "type": "contains",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward"
     },
     {
       "source": "file:src/lib/event-registration-db.ts",
       "target": "class:src/lib/event-registration-db.ts:RegistrationIntake",
       "type": "contains",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward"
     },
     {
       "source": "file:src/lib/event-registration-db.ts",
       "target": "class:src/lib/event-registration-db.ts:WaitlistEntry",
       "type": "contains",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward"
     },
     {
@@ -10622,21 +10869,21 @@
       "source": "file:src/lib/event-registration-flow.ts",
       "target": "function:src/lib/event-registration-flow.ts:resolveAcquisitionRef",
       "type": "contains",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward"
     },
     {
       "source": "file:src/lib/event-registration-flow.ts",
       "target": "function:src/lib/event-registration-flow.ts:buildEventCheckoutRequestBody",
       "type": "contains",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward"
     },
     {
       "source": "file:src/lib/event-registration-flow.ts",
       "target": "class:src/lib/event-registration-flow.ts:UNTAGGED_ACQUISITION_REF",
       "type": "contains",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward"
     },
     {
@@ -10659,14 +10906,14 @@
       "source": "file:src/lib/rate-limit.ts",
       "target": "function:src/lib/rate-limit.ts:getClientIp",
       "type": "contains",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward"
     },
     {
       "source": "file:src/lib/rate-limit.ts",
       "target": "function:src/lib/rate-limit.ts:checkRateLimit",
       "type": "contains",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward"
     },
     {
@@ -10915,7 +11162,7 @@
       "source": "concept:phase1-technical-setup",
       "target": "concept:giveaway-launch-workflow",
       "type": "contains",
-      "weight": 1,
+      "weight": 1.0,
       "description": "Phase 1 is part of the overall giveaway launch workflow",
       "direction": "forward"
     },
@@ -10923,7 +11170,7 @@
       "source": "concept:phase2-content-creation",
       "target": "concept:giveaway-launch-workflow",
       "type": "contains",
-      "weight": 1,
+      "weight": 1.0,
       "description": "Phase 2 follows Phase 1 in the giveaway launch workflow",
       "direction": "forward"
     },
@@ -10931,7 +11178,7 @@
       "source": "concept:phase3-publishing",
       "target": "concept:giveaway-launch-workflow",
       "type": "contains",
-      "weight": 1,
+      "weight": 1.0,
       "description": "Phase 3 completes the giveaway launch workflow",
       "direction": "forward"
     },
@@ -11051,7 +11298,7 @@
       "source": "function:src/app/api/events/followups/route.ts:GET",
       "target": "function:src/app/api/events/followups/route.ts:isAuthorized",
       "type": "calls",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward",
       "description": "call"
     },
@@ -11059,7 +11306,7 @@
       "source": "function:src/app/api/events/followups/route.ts:GET",
       "target": "function:src/app/api/events/followups/route.ts:acquireEventWindowLock",
       "type": "calls",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward",
       "description": "call"
     },
@@ -11067,7 +11314,7 @@
       "source": "function:src/app/api/events/location-reminders/route.ts:GET",
       "target": "function:src/app/api/events/location-reminders/route.ts:isAuthorized",
       "type": "calls",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward",
       "description": "call"
     },
@@ -11075,7 +11322,7 @@
       "source": "function:src/app/api/events/location-reminders/route.ts:GET",
       "target": "function:src/app/api/events/location-reminders/route.ts:acquireEventWindowLock",
       "type": "calls",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward",
       "description": "call"
     },
@@ -11083,7 +11330,7 @@
       "source": "function:src/app/api/events/reconcile-registrations/route.ts:GET",
       "target": "function:src/app/api/events/reconcile-registrations/route.ts:isAuthorized",
       "type": "calls",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward",
       "description": "call"
     },
@@ -11091,7 +11338,7 @@
       "source": "function:src/app/api/events/reconcile-registrations/route.ts:GET",
       "target": "function:src/app/api/events/reconcile-registrations/route.ts:isLikelyTest",
       "type": "calls",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward",
       "description": "call"
     },
@@ -11099,7 +11346,7 @@
       "source": "function:src/app/api/events/session-reminders/route.ts:GET",
       "target": "function:src/app/api/events/session-reminders/route.ts:isAuthorized",
       "type": "calls",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward",
       "description": "call"
     },
@@ -11107,7 +11354,7 @@
       "source": "function:src/app/api/events/session-reminders/route.ts:GET",
       "target": "function:src/app/api/events/session-reminders/route.ts:acquireEventWindowLock",
       "type": "calls",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward",
       "description": "call"
     },
@@ -11115,7 +11362,7 @@
       "source": "function:src/app/api/events/waitlist/notify/route.ts:GET",
       "target": "function:src/app/api/events/waitlist/notify/route.ts:isAuthorized",
       "type": "calls",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward",
       "description": "call"
     },
@@ -11123,7 +11370,7 @@
       "source": "function:src/app/api/events/waitlist/notify/route.ts:GET",
       "target": "function:src/app/api/events/waitlist/notify/route.ts:buildIdempotencyKey",
       "type": "calls",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward",
       "description": "call"
     },
@@ -11131,7 +11378,7 @@
       "source": "function:src/app/api/events/waitlist/remove/route.ts:GET",
       "target": "function:src/app/api/events/waitlist/remove/route.ts:htmlPage",
       "type": "calls",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward",
       "description": "call"
     },
@@ -11139,7 +11386,7 @@
       "source": "function:src/app/api/illy-auth/route.ts:POST",
       "target": "function:src/app/api/illy-auth/route.ts:sha256",
       "type": "calls",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward",
       "description": "call"
     },
@@ -11147,7 +11394,7 @@
       "source": "function:src/app/api/illy-auth/route.ts:POST",
       "target": "function:src/app/api/illy-auth/route.ts:matchesPassword",
       "type": "calls",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward",
       "description": "call"
     },
@@ -11155,7 +11402,7 @@
       "source": "function:src/app/api/illy-auth/route.ts:POST",
       "target": "function:src/app/api/illy-auth/route.ts:grantAccess",
       "type": "calls",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward",
       "description": "call"
     },
@@ -11163,7 +11410,7 @@
       "source": "function:src/app/api/illy-auth/route.ts:GET",
       "target": "function:src/app/api/illy-auth/route.ts:sha256",
       "type": "calls",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward",
       "description": "call"
     },
@@ -11171,7 +11418,7 @@
       "source": "function:src/app/api/illy-auth/route.ts:GET",
       "target": "function:src/app/api/illy-auth/route.ts:matchesPassword",
       "type": "calls",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward",
       "description": "call"
     },
@@ -11179,7 +11426,7 @@
       "source": "function:src/app/api/illy-auth/route.ts:GET",
       "target": "function:src/app/api/illy-auth/route.ts:grantAccess",
       "type": "calls",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward",
       "description": "call"
     },
@@ -11187,7 +11434,7 @@
       "source": "function:src/app/api/jill-auth/route.ts:POST",
       "target": "function:src/app/api/jill-auth/route.ts:sha256",
       "type": "calls",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward",
       "description": "call"
     },
@@ -11195,7 +11442,7 @@
       "source": "function:src/app/api/jill-auth/route.ts:POST",
       "target": "function:src/app/api/jill-auth/route.ts:matchesPassword",
       "type": "calls",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward",
       "description": "call"
     },
@@ -11203,7 +11450,7 @@
       "source": "function:src/app/api/jill-auth/route.ts:POST",
       "target": "function:src/app/api/jill-auth/route.ts:grantAccess",
       "type": "calls",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward",
       "description": "call"
     },
@@ -11211,7 +11458,7 @@
       "source": "function:src/app/api/jill-auth/route.ts:GET",
       "target": "function:src/app/api/jill-auth/route.ts:sha256",
       "type": "calls",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward",
       "description": "call"
     },
@@ -11219,7 +11466,7 @@
       "source": "function:src/app/api/jill-auth/route.ts:GET",
       "target": "function:src/app/api/jill-auth/route.ts:matchesPassword",
       "type": "calls",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward",
       "description": "call"
     },
@@ -11227,7 +11474,7 @@
       "source": "function:src/app/api/jill-auth/route.ts:GET",
       "target": "function:src/app/api/jill-auth/route.ts:grantAccess",
       "type": "calls",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward",
       "description": "call"
     },
@@ -11235,7 +11482,7 @@
       "source": "function:src/app/api/lead-magnets/claudemd/route 2.ts:POST",
       "target": "function:src/app/api/lead-magnets/claudemd/route 2.ts:sendViaResend",
       "type": "calls",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward",
       "description": "call"
     },
@@ -11243,7 +11490,7 @@
       "source": "function:src/app/api/lead-magnets/claudemd/route.ts:POST",
       "target": "function:src/app/api/lead-magnets/claudemd/route.ts:sendViaResend",
       "type": "calls",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward",
       "description": "call"
     },
@@ -11251,7 +11498,7 @@
       "source": "function:src/app/api/lead-magnets/passive-income-100/route.ts:POST",
       "target": "function:src/app/api/lead-magnets/passive-income-100/route.ts:sendViaResend",
       "type": "calls",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward",
       "description": "call"
     },
@@ -11259,7 +11506,7 @@
       "source": "function:src/app/api/subscribe/route.ts:POST",
       "target": "function:src/app/api/subscribe/route.ts:supabase",
       "type": "calls",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward",
       "description": "call"
     },
@@ -11267,7 +11514,7 @@
       "source": "function:src/app/api/unsubscribe/route.ts:POST",
       "target": "function:src/app/api/unsubscribe/route.ts:recordUnsubscribeFromToken",
       "type": "calls",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward",
       "description": "call"
     },
@@ -11275,7 +11522,7 @@
       "source": "function:src/app/api/unsubscribe/route.ts:GET",
       "target": "function:src/app/api/unsubscribe/route.ts:htmlPage",
       "type": "calls",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward",
       "description": "call"
     },
@@ -11283,7 +11530,7 @@
       "source": "function:src/app/api/unsubscribe/route.ts:GET",
       "target": "function:src/app/api/unsubscribe/route.ts:recordUnsubscribeFromToken",
       "type": "calls",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward",
       "description": "call"
     },
@@ -11291,7 +11538,7 @@
       "source": "file:src/app/events/[slug]/page.tsx",
       "target": "function:src/app/events/[slug]/page.tsx:generateMetadata",
       "type": "calls",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward",
       "description": "call"
     },
@@ -11299,7 +11546,7 @@
       "source": "file:src/app/events/[slug]/page.tsx",
       "target": "function:src/app/events/[slug]/page.tsx:getPromoParam",
       "type": "calls",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward",
       "description": "call"
     },
@@ -11307,7 +11554,7 @@
       "source": "file:src/app/events/[slug]/setup/page.tsx",
       "target": "function:src/app/events/[slug]/setup/page.tsx:generateMetadata",
       "type": "calls",
-      "weight": 1,
+      "weight": 1.0,
       "direction": "forward",
       "description": "call"
     },
@@ -11345,17 +11592,6 @@
       "description": "uses tabnav for navigation"
     },
     {
-      "id": "edge_giveaways_index_to_data",
-      "source": "file:src/app/giveaways/page.tsx",
-      "target": "file:src/lib/giveaways.ts",
-      "relationship": "imports",
-      "bidirectional": false,
-      "direction": "forward",
-      "type": "related",
-      "weight": 0.5,
-      "description": "maps over giveaways data to render list"
-    },
-    {
       "id": "edge_root_layout_to_email_gate",
       "source": "file:src/app/giveaways/layout.tsx",
       "target": "file:src/components/giveaways/GiveawayCopyEmailGate.tsx",
@@ -11365,127 +11601,6 @@
       "type": "related",
       "weight": 0.5,
       "description": "wraps all giveaway routes with email gate"
-    },
-    {
-      "id": "edge_hooklab_to_reactions",
-      "source": "file:src/app/giveaways/hooklab/page.tsx",
-      "target": "file:src/components/sections/MastermindReactionsSection.tsx",
-      "relationship": "imports",
-      "bidirectional": false,
-      "direction": "forward",
-      "type": "related",
-      "weight": 0.5,
-      "description": "displays reactions section"
-    },
-    {
-      "id": "edge_hooklab_to_modal",
-      "source": "file:src/app/giveaways/hooklab/page.tsx",
-      "target": "file:src/components/giveaways/GiveawayEmailModal.tsx",
-      "relationship": "imports",
-      "bidirectional": false,
-      "direction": "forward",
-      "type": "related",
-      "weight": 0.5,
-      "description": "uses email modal for capture"
-    },
-    {
-      "id": "edge_hooklab_to_copy_util",
-      "source": "file:src/app/giveaways/hooklab/page.tsx",
-      "target": "file:src/lib/copyWithConfetti.ts",
-      "relationship": "imports",
-      "bidirectional": false,
-      "direction": "forward",
-      "type": "related",
-      "weight": 0.5,
-      "description": "copies install command with confetti"
-    },
-    {
-      "id": "edge_hooklab_to_content",
-      "source": "file:src/app/giveaways/hooklab/page.tsx",
-      "target": "file:src/app/giveaways/hooklab/content.ts",
-      "relationship": "imports",
-      "bidirectional": false,
-      "direction": "forward",
-      "type": "related",
-      "weight": 0.5,
-      "description": "imports install prompt from content file"
-    },
-    {
-      "id": "edge_geometry_dash_to_reactions",
-      "source": "file:src/app/giveaways/geometry-dash-fun-build/page.tsx",
-      "target": "file:src/components/sections/MastermindReactionsSection.tsx",
-      "relationship": "imports",
-      "bidirectional": false,
-      "direction": "forward",
-      "type": "related",
-      "weight": 0.5,
-      "description": "displays reactions section"
-    },
-    {
-      "id": "edge_geometry_dash_to_modal",
-      "source": "file:src/app/giveaways/geometry-dash-fun-build/page.tsx",
-      "target": "file:src/components/giveaways/GiveawayEmailModal.tsx",
-      "relationship": "imports",
-      "bidirectional": false,
-      "direction": "forward",
-      "type": "related",
-      "weight": 0.5,
-      "description": "uses email modal for access"
-    },
-    {
-      "id": "edge_geometry_dash_to_copy_util",
-      "source": "file:src/app/giveaways/geometry-dash-fun-build/page.tsx",
-      "target": "file:src/lib/copyWithConfetti.ts",
-      "relationship": "imports",
-      "bidirectional": false,
-      "direction": "forward",
-      "type": "related",
-      "weight": 0.5,
-      "description": "copies game code with confetti"
-    },
-    {
-      "id": "edge_logo_maker_to_auto_modal",
-      "source": "file:src/app/giveaways/logo-maker-guide/page.tsx",
-      "target": "file:src/components/giveaways/GiveawayAutoModal.tsx",
-      "relationship": "imports",
-      "bidirectional": false,
-      "direction": "forward",
-      "type": "related",
-      "weight": 0.5,
-      "description": "uses auto-modal for secondary capture"
-    },
-    {
-      "id": "edge_hooklab_layout_to_hooklab_page",
-      "source": "file:src/app/giveaways/hooklab/layout.tsx",
-      "target": "file:src/app/giveaways/hooklab/page.tsx",
-      "relationship": "parent_layout",
-      "bidirectional": true,
-      "direction": "forward",
-      "type": "related",
-      "weight": 0.5,
-      "description": "wraps page with metadata"
-    },
-    {
-      "id": "edge_geometry_dash_layout_to_page",
-      "source": "file:src/app/giveaways/geometry-dash-fun-build/layout.tsx",
-      "target": "file:src/app/giveaways/geometry-dash-fun-build/page.tsx",
-      "relationship": "parent_layout",
-      "bidirectional": true,
-      "direction": "forward",
-      "type": "related",
-      "weight": 0.5,
-      "description": "wraps page with metadata"
-    },
-    {
-      "id": "edge_logo_maker_layout_to_page",
-      "source": "file:src/app/giveaways/logo-maker-guide/layout.tsx",
-      "target": "file:src/app/giveaways/logo-maker-guide/page.tsx",
-      "relationship": "parent_layout",
-      "bidirectional": true,
-      "direction": "forward",
-      "type": "related",
-      "weight": 0.5,
-      "description": "wraps page with metadata"
     },
     {
       "id": "edge_human_layout_to_page",
@@ -11642,66 +11757,11 @@
       "description": "potential usage"
     },
     {
-      "source": "file:src/app/sitemap.ts",
-      "target": "file:src/app/session/7/guide/page.tsx",
-      "type": "routes",
-      "metadata": {
-        "url": "/session/7/guide"
-      },
-      "direction": "forward",
-      "weight": 0.5,
-      "description": "route reference"
-    },
-    {
-      "source": "file:src/app/sitemap.ts",
-      "target": "file:src/app/session/7/prep/page.tsx",
-      "type": "routes",
-      "metadata": {
-        "url": "/session/7/prep"
-      },
-      "direction": "forward",
-      "weight": 0.5,
-      "description": "route reference"
-    },
-    {
-      "source": "file:src/app/sitemap.ts",
-      "target": "file:src/app/session/8/guide/page.tsx",
-      "type": "routes",
-      "metadata": {
-        "url": "/session/8/guide"
-      },
-      "direction": "forward",
-      "weight": 0.5,
-      "description": "route reference"
-    },
-    {
-      "source": "file:src/app/sitemap.ts",
-      "target": "file:src/app/session/8/prep/page.tsx",
-      "type": "routes",
-      "metadata": {
-        "url": "/session/8/prep"
-      },
-      "direction": "forward",
-      "weight": 0.5,
-      "description": "route reference"
-    },
-    {
-      "source": "file:src/app/sitemap.ts",
-      "target": "file:src/app/session/9/guide/page.tsx",
-      "type": "routes",
-      "metadata": {
-        "url": "/session/9/guide"
-      },
-      "direction": "forward",
-      "weight": 0.5,
-      "description": "route reference"
-    },
-    {
       "source": "file:src/lib/event-capacity.ts",
       "target": "function:src/lib/event-capacity.ts:claimEventSeat",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/event-capacity.ts",
@@ -11715,7 +11775,7 @@
       "target": "function:src/lib/event-capacity.ts:confirmEventSeat",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/event-capacity.ts",
@@ -11729,7 +11789,7 @@
       "target": "function:src/lib/event-capacity.ts:attachCheckoutToEventSeat",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/event-capacity.ts",
@@ -11743,7 +11803,7 @@
       "target": "function:src/lib/event-capacity.ts:releaseEventSeat",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/event-capacity.ts",
@@ -11757,7 +11817,7 @@
       "target": "function:src/lib/event-capacity.ts:releaseEventSeatByCheckout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/event-capacity.ts",
@@ -11771,7 +11831,7 @@
       "target": "function:src/lib/event-capacity.ts:settleAttachedCheckout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/event-capacity.ts",
@@ -11799,7 +11859,7 @@
       "target": "function:src/lib/event-intake.ts:countPhoneDigits",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/event-intake.ts",
@@ -11813,7 +11873,7 @@
       "target": "function:src/lib/event-intake.ts:toE164",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/event-intake.ts",
@@ -11827,7 +11887,7 @@
       "target": "function:src/lib/event-intake.ts:normalizeWhatsappNumber",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/event-intake.ts",
@@ -11841,7 +11901,7 @@
       "target": "function:src/lib/event-intake.ts:validateWhatsappNumber",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/event-intake.ts",
@@ -11855,7 +11915,7 @@
       "target": "function:src/lib/event-intake.ts:validateBusinessContext",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/event-intake.ts",
@@ -11869,7 +11929,7 @@
       "target": "function:src/lib/event-intake.ts:validateIntakeFields",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/event-intake.ts",
@@ -11883,7 +11943,7 @@
       "target": "function:src/lib/event-intake.ts:hasIntakeErrors",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/event-intake.ts",
@@ -11897,7 +11957,7 @@
       "target": "function:src/lib/event-intake.ts:isValidAiLevel",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/event-intake.ts",
@@ -11911,7 +11971,7 @@
       "target": "function:src/lib/events.tsx:getEventDiscountedPrice",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/events.tsx",
@@ -11925,7 +11985,7 @@
       "target": "function:src/lib/events.tsx:resolvePromoCode",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/events.tsx",
@@ -11939,7 +11999,7 @@
       "target": "function:src/lib/events.tsx:formatEventPrice",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/events.tsx",
@@ -11953,7 +12013,7 @@
       "target": "function:src/lib/events.tsx:getEventBySlug",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/events.tsx",
@@ -11967,7 +12027,7 @@
       "target": "function:src/lib/events.tsx:getLiveEvents",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/events.tsx",
@@ -11981,7 +12041,7 @@
       "target": "function:src/lib/events.tsx:getUpcomingLiveEvents",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/events.tsx",
@@ -12016,14 +12076,14 @@
       "target": "function:tests/settle-attached-checkout.test.ts:fakeRpc",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:tests/settle-attached-checkout.test.ts",
       "target": "function:tests/settle-attached-checkout.test.ts:sessions",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:tests/settle-attached-checkout.test.ts",
@@ -12093,7 +12153,7 @@
       "target": "function:src/lib/free-ai-tool-email.ts:buildFreeAiToolEmail",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/free-ai-tool-email.ts",
@@ -12114,7 +12174,7 @@
       "target": "function:src/lib/html-to-text.ts:htmlToText",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/html-to-text.ts",
@@ -12124,95 +12184,11 @@
       "weight": 0.8
     },
     {
-      "source": "file:src/lib/lead-magnets.ts",
-      "target": "function:src/lib/lead-magnets.ts:getLeadMagnet",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/lib/lead-magnets.ts",
-      "target": "function:src/lib/lead-magnets.ts:getLeadMagnet",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/lead-magnets.ts",
-      "target": "function:src/lib/lead-magnets.ts:isDeliverableLeadMagnetSource",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/lib/lead-magnets.ts",
-      "target": "function:src/lib/lead-magnets.ts:isDeliverableLeadMagnetSource",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/lead-magnets.ts",
-      "target": "function:src/lib/lead-magnets.ts:downloadUrlFor",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/lib/lead-magnets.ts",
-      "target": "function:src/lib/lead-magnets.ts:downloadUrlFor",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/lead-magnets.ts",
-      "target": "function:src/lib/lead-magnets.ts:buildWelcomeEmail",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/lib/lead-magnets.ts",
-      "target": "function:src/lib/lead-magnets.ts:buildWelcomeEmail",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/lead-magnets.ts",
-      "target": "class:src/lib/lead-magnets.ts:UnknownLeadMagnetSourceError",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/lib/lead-magnets.ts",
-      "target": "class:src/lib/lead-magnets.ts:UnknownLeadMagnetSourceError",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/lead-magnets.ts",
-      "target": "file:src/lib/free-ai-tools.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/lib/lead-magnets.ts",
-      "target": "file:src/lib/quiz-giveaway-email.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
       "source": "file:src/lib/quiz-giveaway-email.ts",
       "target": "function:src/lib/quiz-giveaway-email.ts:isQuizGiveawaySource",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/quiz-giveaway-email.ts",
@@ -12226,7 +12202,7 @@
       "target": "function:src/lib/quiz-giveaway-email.ts:buildQuizGiveawayEmail",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/quiz-giveaway-email.ts",
@@ -12240,7 +12216,7 @@
       "target": "function:src/lib/speak-human-email.ts:buildSpeakHumanEmail",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/speak-human-email.ts",
@@ -12264,20 +12240,6 @@
       "weight": 0.7
     },
     {
-      "source": "file:tests/free-ai-tools.test.ts",
-      "target": "file:src/lib/lead-magnets.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:tests/quiz-giveaway-email.test.ts",
-      "target": "file:src/lib/lead-magnets.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
       "source": "file:tests/quiz-giveaway-email.test.ts",
       "target": "file:src/lib/quiz-giveaway-email.ts",
       "type": "imports",
@@ -12287,13 +12249,6 @@
     {
       "source": "file:tests/registration-invite-and-lead-magnet-fail-closed.test.ts",
       "target": "file:src/lib/free-ai-tools.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:tests/registration-invite-and-lead-magnet-fail-closed.test.ts",
-      "target": "file:src/lib/lead-magnets.ts",
       "type": "imports",
       "direction": "forward",
       "weight": 0.7
@@ -12320,20 +12275,6 @@
       "weight": 0.5
     },
     {
-      "source": "file:src/lib/lead-magnets.ts",
-      "target": "file:tests/free-ai-tools.test.ts",
-      "type": "tested_by",
-      "direction": "forward",
-      "weight": 0.5
-    },
-    {
-      "source": "file:src/lib/lead-magnets.ts",
-      "target": "file:tests/quiz-giveaway-email.test.ts",
-      "type": "tested_by",
-      "direction": "forward",
-      "weight": 0.5
-    },
-    {
       "source": "file:src/lib/quiz-giveaway-email.ts",
       "target": "file:tests/quiz-giveaway-email.test.ts",
       "type": "tested_by",
@@ -12342,13 +12283,6 @@
     },
     {
       "source": "file:src/lib/free-ai-tools.ts",
-      "target": "file:tests/registration-invite-and-lead-magnet-fail-closed.test.ts",
-      "type": "tested_by",
-      "direction": "forward",
-      "weight": 0.5
-    },
-    {
-      "source": "file:src/lib/lead-magnets.ts",
       "target": "file:tests/registration-invite-and-lead-magnet-fail-closed.test.ts",
       "type": "tested_by",
       "direction": "forward",
@@ -12366,14 +12300,14 @@
       "target": "function:src/app/session/3/custom-domain/page.tsx:DnsRecord",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/session/3/custom-domain/page.tsx",
       "target": "function:src/app/session/3/custom-domain/page.tsx:CustomDomainPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/session/3/custom-domain/page.tsx",
@@ -12401,14 +12335,14 @@
       "target": "function:src/app/session/3/homework/page.tsx:DnsRecord",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/session/3/homework/page.tsx",
       "target": "function:src/app/session/3/homework/page.tsx:Session3Homework",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/session/3/homework/page.tsx",
@@ -12436,14 +12370,14 @@
       "target": "function:src/app/session/4/custom-domain/page.tsx:DnsRecord",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/session/4/custom-domain/page.tsx",
       "target": "function:src/app/session/4/custom-domain/page.tsx:CustomDomainPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/session/4/custom-domain/page.tsx",
@@ -12471,14 +12405,14 @@
       "target": "function:src/app/session/4/homework/page.tsx:DnsRecord",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/session/4/homework/page.tsx",
       "target": "function:src/app/session/4/homework/page.tsx:Session3Homework",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/session/4/homework/page.tsx",
@@ -12506,7 +12440,7 @@
       "target": "function:src/app/session/7/descript/page 2.tsx:Session7DescriptPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/session/7/descript/page 2.tsx",
@@ -12520,7 +12454,7 @@
       "target": "function:src/app/session/7/descript/page.tsx:Session7DescriptPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/session/7/descript/page.tsx",
@@ -12534,7 +12468,7 @@
       "target": "function:src/lib/free-ai-tools.ts:getFreeAiTool",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/free-ai-tools.ts",
@@ -12548,7 +12482,7 @@
       "target": "function:src/lib/free-ai-tools.ts:isFreeAiToolSource",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/free-ai-tools.ts",
@@ -12562,7 +12496,7 @@
       "target": "function:src/lib/free-ai-tools.ts:formatStars",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/free-ai-tools.ts",
@@ -12576,21 +12510,21 @@
       "target": "function:src/content/session-7-prep.tsx:Checkbox",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/content/session-7-prep.tsx",
       "target": "function:src/content/session-7-prep.tsx:SectionCard",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/content/session-7-prep.tsx",
       "target": "function:src/content/session-7-prep.tsx:Session7Prep",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/content/session-7-prep.tsx",
@@ -12607,32 +12541,11 @@
       "weight": 0.7
     },
     {
-      "source": "file:src/app/giveaways/cult-brand-playbook/page.tsx",
-      "target": "function:src/app/giveaways/cult-brand-playbook/page.tsx:CultBrandPlaybookPage",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/app/giveaways/cult-brand-playbook/page.tsx",
-      "target": "function:src/app/giveaways/cult-brand-playbook/page.tsx:CultBrandPlaybookPage",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/app/giveaways/cult-brand-playbook/page.tsx",
-      "target": "file:src/components/Reveal.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
       "source": "file:src/app/session/4/wrapup/page 2.tsx",
       "target": "function:src/app/session/4/wrapup/page 2.tsx:Session4WrapUp",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/session/4/wrapup/page 2.tsx",
@@ -12660,7 +12573,7 @@
       "target": "function:src/app/session/4/wrapup/page.tsx:Session4WrapUp",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/session/4/wrapup/page.tsx",
@@ -12688,7 +12601,7 @@
       "target": "function:src/app/session/5/wrapup/page.tsx:Session5WrapUp",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/session/5/wrapup/page.tsx",
@@ -12751,7 +12664,7 @@
       "target": "function:src/app/api/ai-agent-income/prompt-pack/request/route.ts:POST",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/api/ai-agent-income/prompt-pack/request/route.ts",
@@ -12765,7 +12678,7 @@
       "target": "function:src/app/api/ai-agent-income/prompt-pack/route.ts:GET",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/api/ai-agent-income/prompt-pack/route.ts",
@@ -12779,7 +12692,7 @@
       "target": "function:src/lib/ai-agent-income-prompt-pack.ts:emailLookupPattern",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/ai-agent-income-prompt-pack.ts",
@@ -12793,7 +12706,7 @@
       "target": "function:src/lib/ai-agent-income-prompt-pack.ts:createPackToken",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/ai-agent-income-prompt-pack.ts",
@@ -12807,7 +12720,7 @@
       "target": "function:src/lib/ai-agent-income-prompt-pack.ts:verifyPackToken",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/ai-agent-income-prompt-pack.ts",
@@ -12821,7 +12734,7 @@
       "target": "function:src/lib/ai-agent-income-prompt-pack.ts:packDownloadUrl",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/ai-agent-income-prompt-pack.ts",
@@ -12835,7 +12748,7 @@
       "target": "function:src/lib/ai-agent-income-prompt-pack.ts:buildPackEmail",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/ai-agent-income-prompt-pack.ts",
@@ -12849,7 +12762,7 @@
       "target": "function:src/lib/ai-agent-income-prompt-pack.ts:sendPackEmail",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/ai-agent-income-prompt-pack.ts",
@@ -12919,7 +12832,7 @@
       "target": "function:scripts/estimate-ai-levels.mjs:runEstimateAiLevels",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:scripts/estimate-ai-levels.mjs",
@@ -12933,7 +12846,7 @@
       "target": "function:scripts/lib/estimate-ai-level.mjs:estimateAiLevel",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:scripts/lib/estimate-ai-level.mjs",
@@ -12968,7 +12881,7 @@
       "target": "function:src/app/ai-agent-income/PromptPackRequestForm.tsx:PromptPackRequestForm",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/ai-agent-income/PromptPackRequestForm.tsx",
@@ -13017,28 +12930,28 @@
       "target": "function:scripts/backfill-event-registrations.mjs:isTestEntry",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:scripts/backfill-event-registrations.mjs",
       "target": "function:scripts/backfill-event-registrations.mjs:fetchPaidSessions",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:scripts/backfill-event-registrations.mjs",
       "target": "function:scripts/backfill-event-registrations.mjs:main",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/ai-os-architecture/page.tsx",
       "target": "function:src/app/ai-os-architecture/page.tsx:AIArchitecturePage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/ai-os-architecture/page.tsx",
@@ -13052,53 +12965,11 @@
       "target": "function:src/app/giveaways/all-sorted-overview/layout.tsx:AllSortedOverviewLayout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/all-sorted-overview/layout.tsx",
       "target": "function:src/app/giveaways/all-sorted-overview/layout.tsx:AllSortedOverviewLayout",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/app/giveaways/geometry-dash-fun-build/layout.tsx",
-      "target": "function:src/app/giveaways/geometry-dash-fun-build/layout.tsx:GeometryDashLayout",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/app/giveaways/geometry-dash-fun-build/layout.tsx",
-      "target": "function:src/app/giveaways/geometry-dash-fun-build/layout.tsx:GeometryDashLayout",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/app/giveaways/hooklab/layout.tsx",
-      "target": "function:src/app/giveaways/hooklab/layout.tsx:HookLabLayout",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/app/giveaways/hooklab/layout.tsx",
-      "target": "function:src/app/giveaways/hooklab/layout.tsx:HookLabLayout",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/app/sitemap.ts",
-      "target": "function:src/app/sitemap.ts:sitemap",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/app/sitemap.ts",
-      "target": "function:src/app/sitemap.ts:sitemap",
       "type": "exports",
       "direction": "forward",
       "weight": 0.8
@@ -14385,62 +14256,6 @@
       "weight": 0.5
     },
     {
-      "source": "file:src/app/giveaways/client-launch-checklist/LeadMagnetExampleForm.tsx",
-      "target": "file:src/lib/meta-pixel.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/app/giveaways/client-launch-checklist/LeadMagnetExampleForm.tsx",
-      "target": "function:src/app/giveaways/client-launch-checklist/LeadMagnetExampleForm.tsx:LeadMagnetExampleForm",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/app/giveaways/client-launch-checklist/LeadMagnetExampleForm.tsx",
-      "target": "function:src/app/giveaways/client-launch-checklist/LeadMagnetExampleForm.tsx:LeadMagnetExampleForm",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/app/giveaways/cult-brand-playbook/GiveawayForm.tsx",
-      "target": "file:src/lib/meta-pixel.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/app/giveaways/cult-brand-playbook/GiveawayForm.tsx",
-      "target": "function:src/app/giveaways/cult-brand-playbook/GiveawayForm.tsx:GiveawayForm",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/app/giveaways/cult-brand-playbook/GiveawayForm.tsx",
-      "target": "function:src/app/giveaways/cult-brand-playbook/GiveawayForm.tsx:GiveawayForm",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/giveaways.ts",
-      "target": "function:src/lib/giveaways.ts:getGiveaway",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/giveaways.ts",
-      "target": "function:src/lib/giveaways.ts:getGiveaway",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
       "source": "file:src/components/giveaways/GiveawayEmailModal.tsx",
       "target": "file:src/lib/meta-pixel.ts",
       "type": "imports",
@@ -14634,91 +14449,91 @@
       "target": "function:public/2x-with-ai-playbook.html:nearestSlideIndex",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:public/coach-kit-onboarding-matrix.html",
       "target": "function:public/coach-kit-onboarding-matrix.html:aiSuggestion",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:public/coach-kit-onboarding-matrix.html",
       "target": "function:public/coach-kit-onboarding-matrix.html:loadState",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:public/coach-kit-onboarding-matrix.html",
       "target": "function:public/coach-kit-onboarding-matrix.html:renderChips",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:public/coach-kit-onboarding-matrix.html",
       "target": "function:public/coach-kit-onboarding-matrix.html:addTask",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:public/coach-kit-onboarding-matrix.html",
       "target": "function:public/coach-kit-onboarding-matrix.html:render",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:public/coach-kit-onboarding-matrix.html",
       "target": "function:public/coach-kit-onboarding-matrix.html:attachDrag",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:public/coach-kit-onboarding-matrix.html",
       "target": "function:public/coach-kit-onboarding-matrix.html:onDown",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:public/coach-kit-onboarding-matrix.html",
       "target": "function:public/coach-kit-onboarding-matrix.html:onMove",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:public/coach-kit-onboarding-matrix.html",
       "target": "function:public/coach-kit-onboarding-matrix.html:onUp",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:public/coach-kit-onboarding-matrix.html",
       "target": "function:public/coach-kit-onboarding-matrix.html:openEditor",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:public/coach-kit-onboarding-matrix.html",
       "target": "function:public/coach-kit-onboarding-matrix.html:renderReport",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:public/coach-kit-onboarding-matrix.html",
       "target": "function:public/coach-kit-onboarding-matrix.html:rowHtml",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "function:public/coach-kit-onboarding-matrix.html:renderChips",
@@ -15232,14 +15047,6 @@
       "weight": 0.7
     },
     {
-      "source": "file:src/app/giveaways/cult-brand-playbook/page.tsx",
-      "target": "file:src/app/giveaways/cult-brand-playbook/GiveawayForm.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
       "source": "file:src/components/events/EventPageView.tsx",
       "target": "file:src/components/events/EventRegistrationSection.tsx",
       "type": "imports",
@@ -15280,22 +15087,6 @@
       "recoveredFromImportMap": true
     },
     {
-      "source": "file:tests/free-ai-tools.test.ts",
-      "target": "file:src/lib/giveaways.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
-      "source": "file:tests/quiz-giveaway-email.test.ts",
-      "target": "file:src/lib/giveaways.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
       "source": "file:src/app/bonus-workshops/page.tsx",
       "target": "file:src/components/TabNav.tsx",
       "type": "imports",
@@ -15303,85 +15094,8 @@
       "weight": 0.7
     },
     {
-      "source": "file:src/app/giveaways/agent-infrastructure/page.tsx",
-      "target": "file:src/components/giveaways/GiveawayAutoModal.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/app/giveaways/cult-brand-playbook/page.tsx",
-      "target": "file:src/components/giveaways/GiveawayAutoModal.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/app/giveaways/geometry-dash-fun-build/page.tsx",
-      "target": "file:src/components/giveaways/GiveawayEmailModal.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/app/giveaways/geometry-dash-fun-build/page.tsx",
-      "target": "file:src/components/sections/MastermindReactionsSection.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/app/giveaways/geometry-dash-fun-build/page.tsx",
-      "target": "file:src/lib/copyWithConfetti.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/app/giveaways/hooklab/page.tsx",
-      "target": "file:src/app/giveaways/hooklab/content.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/app/giveaways/hooklab/page.tsx",
-      "target": "file:src/components/giveaways/GiveawayEmailModal.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/app/giveaways/hooklab/page.tsx",
-      "target": "file:src/components/sections/MastermindReactionsSection.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/app/giveaways/hooklab/page.tsx",
-      "target": "file:src/lib/copyWithConfetti.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
       "source": "file:src/app/giveaways/layout.tsx",
       "target": "file:src/components/giveaways/GiveawayCopyEmailGate.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/app/giveaways/logo-maker-guide/page.tsx",
-      "target": "file:src/components/giveaways/GiveawayAutoModal.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/app/giveaways/logo-maker-guide/page.tsx",
-      "target": "file:src/components/sections/MastermindReactionsSection.tsx",
       "type": "imports",
       "direction": "forward",
       "weight": 0.7
@@ -15403,13 +15117,6 @@
     {
       "source": "file:src/app/giveaways/page.tsx",
       "target": "file:src/components/TabNav.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/app/giveaways/page.tsx",
-      "target": "file:src/lib/giveaways.ts",
       "type": "imports",
       "direction": "forward",
       "weight": 0.7
@@ -15479,20 +15186,6 @@
     },
     {
       "source": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
-      "target": "function:src/lib/meta-pixel.ts:trackMeta",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/giveaways/client-launch-checklist/LeadMagnetExampleForm.tsx:LeadMagnetExampleForm",
-      "target": "function:src/lib/meta-pixel.ts:trackMeta",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/giveaways/cult-brand-playbook/GiveawayForm.tsx:GiveawayForm",
       "target": "function:src/lib/meta-pixel.ts:trackMeta",
       "type": "calls",
       "direction": "forward",
@@ -15636,7 +15329,7 @@
       "target": "function:src/app/giveaways/lead-machine/page.tsx:LeadMachinePage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/lead-machine/page.tsx",
@@ -15650,7 +15343,7 @@
       "target": "function:src/lib/free-ai-tool-pack.ts:freeAiToolPack",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/free-ai-tool-pack.ts",
@@ -15664,7 +15357,7 @@
       "target": "function:src/lib/free-ai-tool-pack.ts:freeAiToolJsonLd",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/free-ai-tool-pack.ts",
@@ -15678,7 +15371,7 @@
       "target": "function:src/lib/giveaway-dm.ts:hasDmMarker",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/giveaway-dm.ts",
@@ -15692,7 +15385,7 @@
       "target": "function:src/lib/giveaway-dm.ts:isFromDmVisit",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/giveaway-dm.ts",
@@ -15706,7 +15399,7 @@
       "target": "function:src/lib/giveaway-offers.ts:offerForLevel",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/giveaway-offers.ts",
@@ -15720,7 +15413,7 @@
       "target": "function:src/lib/pack-page.ts:fillPrompt",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/pack-page.ts",
@@ -15734,7 +15427,7 @@
       "target": "function:src/lib/pack-page.ts:packSections",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/pack-page.ts",
@@ -15748,7 +15441,7 @@
       "target": "function:src/lib/pack-page.ts:packHasAction",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/pack-page.ts",
@@ -15762,7 +15455,7 @@
       "target": "function:src/lib/pack-page.ts:validatePackContent",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/pack-page.ts",
@@ -15863,81 +15556,11 @@
       "weight": 0.8
     },
     {
-      "source": "file:tests/pack-page.test.ts",
-      "target": "file:src/app/giveaways/lead-machine/pack.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/app/giveaways/lead-machine/pack.ts",
-      "target": "file:tests/pack-page.test.ts",
-      "type": "tested_by",
-      "direction": "forward",
-      "weight": 0.5
-    },
-    {
-      "source": "file:tests/pack-page.test.ts",
-      "target": "file:src/app/giveaways/lead-machine/prompt.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/app/giveaways/lead-machine/prompt.ts",
-      "target": "file:tests/pack-page.test.ts",
-      "type": "tested_by",
-      "direction": "forward",
-      "weight": 0.5
-    },
-    {
-      "source": "file:tests/pack-page.test.ts",
-      "target": "file:src/lib/giveaway-dm.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/lib/giveaway-dm.ts",
-      "target": "file:tests/pack-page.test.ts",
-      "type": "tested_by",
-      "direction": "forward",
-      "weight": 0.5
-    },
-    {
-      "source": "file:tests/pack-page.test.ts",
-      "target": "file:src/lib/giveaway-offers.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/lib/giveaway-offers.ts",
-      "target": "file:tests/pack-page.test.ts",
-      "type": "tested_by",
-      "direction": "forward",
-      "weight": 0.5
-    },
-    {
-      "source": "file:tests/pack-page.test.ts",
-      "target": "file:src/lib/pack-page.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/lib/pack-page.ts",
-      "target": "file:tests/pack-page.test.ts",
-      "type": "tested_by",
-      "direction": "forward",
-      "weight": 0.5
-    },
-    {
       "source": "file:src/app/giveaways/anthropic-safety-checklist/page.tsx",
       "target": "function:src/app/giveaways/anthropic-safety-checklist/page.tsx:AnthropicSafetyChecklistPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/anthropic-safety-checklist/page.tsx",
@@ -15986,14 +15609,14 @@
       "target": "function:src/app/giveaways/business-builder-quiz/BusinessBuilderQuiz.tsx:useMagnet",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/business-builder-quiz/BusinessBuilderQuiz.tsx",
       "target": "function:src/app/giveaways/business-builder-quiz/BusinessBuilderQuiz.tsx:BusinessBuilderQuiz",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/business-builder-quiz/BusinessBuilderQuiz.tsx",
@@ -16007,21 +15630,21 @@
       "target": "function:src/app/giveaways/business-builder-quiz/BusinessBuilderQuiz.tsx:StartButton",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/business-builder-quiz/BusinessBuilderQuiz.tsx",
       "target": "function:src/app/giveaways/business-builder-quiz/BusinessBuilderQuiz.tsx:NextButton",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/business-builder-quiz/page.tsx",
       "target": "function:src/app/giveaways/business-builder-quiz/page.tsx:BusinessBuilderQuizPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/business-builder-quiz/page.tsx",
@@ -16105,7 +15728,7 @@
       "target": "function:src/app/giveaways/claude-md/page.tsx:ClaudeMdPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/claude-md/page.tsx",
@@ -16154,7 +15777,7 @@
       "target": "function:src/app/giveaways/cost-stack/CostStackCalculator.tsx:CostStackCalculator",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/cost-stack/CostStackCalculator.tsx",
@@ -16168,7 +15791,7 @@
       "target": "function:src/app/giveaways/cost-stack/page.tsx:CostStackPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/cost-stack/page.tsx",
@@ -16238,7 +15861,7 @@
       "target": "function:src/app/giveaways/fable-worth-it-audit/page.tsx:FableWorthItAuditPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/fable-worth-it-audit/page.tsx",
@@ -16287,7 +15910,7 @@
       "target": "function:src/app/giveaways/guardog/page.tsx:GuardogPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/guardog/page.tsx",
@@ -16336,7 +15959,7 @@
       "target": "function:src/app/giveaways/hated-task-prompts/page.tsx:HatedTaskPromptsPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/hated-task-prompts/page.tsx",
@@ -16392,7 +16015,7 @@
       "target": "function:src/app/giveaways/ray-dalio-council/page.tsx:RayDalioCouncilPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/ray-dalio-council/page.tsx",
@@ -16441,7 +16064,7 @@
       "target": "function:src/app/giveaways/speak-human/page.tsx:SpeakHumanPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/speak-human/page.tsx",
@@ -16490,7 +16113,7 @@
       "target": "function:src/app/giveaways/squarespace-escape/page.tsx:SquarespaceEscapePage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/squarespace-escape/page.tsx",
@@ -16539,7 +16162,7 @@
       "target": "function:src/app/giveaways/tokens/page.tsx:TokensPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/tokens/page.tsx",
@@ -16588,7 +16211,7 @@
       "target": "function:src/app/giveaways/web-design-arsenal/page.tsx:WebDesignArsenalPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/web-design-arsenal/page.tsx",
@@ -16641,13 +16264,6 @@
     },
     {
       "source": "document:docs/giveaways/PROCESS.md",
-      "target": "file:src/lib/lead-magnets.ts",
-      "type": "documents",
-      "direction": "forward",
-      "weight": 0.5
-    },
-    {
-      "source": "document:docs/giveaways/PROCESS.md",
       "target": "document:docs/giveaways/USEFULNESS-RUBRIC.md",
       "type": "documents",
       "direction": "forward",
@@ -16656,13 +16272,6 @@
     {
       "source": "document:docs/giveaways/PROCESS.md",
       "target": "file:src/components/giveaways/GiveawayEmailModal.tsx",
-      "type": "documents",
-      "direction": "forward",
-      "weight": 0.5
-    },
-    {
-      "source": "document:docs/giveaways/PROCESS.md",
-      "target": "file:src/lib/giveaways.ts",
       "type": "documents",
       "direction": "forward",
       "weight": 0.5
@@ -16684,13 +16293,6 @@
     {
       "source": "document:docs/giveaways/PROCESS.md",
       "target": "file:src/lib/pack-page.ts",
-      "type": "documents",
-      "direction": "forward",
-      "weight": 0.5
-    },
-    {
-      "source": "document:docs/giveaways/PROCESS.md",
-      "target": "file:tests/pack-page.test.ts",
       "type": "documents",
       "direction": "forward",
       "weight": 0.5
@@ -16725,13 +16327,6 @@
     },
     {
       "source": "document:docs/giveaways/PROCESS.md",
-      "target": "file:src/lib/generic-giveaway-email.ts",
-      "type": "documents",
-      "direction": "forward",
-      "weight": 0.5
-    },
-    {
-      "source": "document:docs/giveaways/PROCESS.md",
       "target": "file:tests/giveaway-email-collection.test.ts",
       "type": "documents",
       "direction": "forward",
@@ -16745,39 +16340,11 @@
       "weight": 0.5
     },
     {
-      "source": "file:src/app/api/lead-magnet/route.ts",
-      "target": "function:src/app/api/lead-magnet/route.ts:sendViaResend",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/app/api/lead-magnet/route.ts",
-      "target": "function:src/app/api/lead-magnet/route.ts:ingestIntoCrm",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/app/api/lead-magnet/route.ts",
-      "target": "function:src/app/api/lead-magnet/route.ts:POST",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/app/api/lead-magnet/route.ts",
-      "target": "function:src/app/api/lead-magnet/route.ts:POST",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
       "source": "file:src/app/giveaways/ai-behavior-quiz/page.tsx",
       "target": "function:src/app/giveaways/ai-behavior-quiz/page.tsx:AiBehaviorQuizPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/ai-behavior-quiz/page.tsx",
@@ -16791,7 +16358,7 @@
       "target": "function:src/app/giveaways/ai-levels-quiz/page.tsx:AiLevelsQuizPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/ai-levels-quiz/page.tsx",
@@ -16805,194 +16372,12 @@
       "target": "function:src/app/giveaways/benchmark/page.tsx:BenchmarkPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/benchmark/page.tsx",
       "target": "function:src/app/giveaways/benchmark/page.tsx:BenchmarkPage",
       "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/app/api/lead-magnet/route.ts",
-      "target": "file:src/lib/email-suppressions.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/app/api/lead-magnet/route.ts",
-      "target": "file:src/lib/free-ai-tool-email.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/app/api/lead-magnet/route.ts",
-      "target": "file:src/lib/free-ai-tools.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/app/api/lead-magnet/route.ts",
-      "target": "file:src/lib/generic-giveaway-email.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/app/api/lead-magnet/route.ts",
-      "target": "file:src/lib/html-to-text.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/app/api/lead-magnet/route.ts",
-      "target": "file:src/lib/lead-magnets.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/app/api/lead-magnet/route.ts",
-      "target": "file:src/lib/quiz-giveaway-email.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/app/api/lead-magnet/route.ts",
-      "target": "file:src/lib/rate-limit.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/app/api/lead-magnet/route.ts",
-      "target": "file:src/lib/speak-human-email.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "function:src/app/api/lead-magnet/route.ts:sendViaResend",
-      "target": "function:src/lib/speak-human-email.ts:buildSpeakHumanEmail",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/api/lead-magnet/route.ts:sendViaResend",
-      "target": "function:src/lib/free-ai-tools.ts:isFreeAiToolSource",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/api/lead-magnet/route.ts:sendViaResend",
-      "target": "function:src/lib/free-ai-tool-email.ts:buildFreeAiToolEmail",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/api/lead-magnet/route.ts:sendViaResend",
-      "target": "function:src/lib/quiz-giveaway-email.ts:isQuizGiveawaySource",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/api/lead-magnet/route.ts:sendViaResend",
-      "target": "function:src/lib/quiz-giveaway-email.ts:buildQuizGiveawayEmail",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/api/lead-magnet/route.ts:sendViaResend",
-      "target": "function:src/lib/generic-giveaway-email.ts:buildGenericGiveawayEmail",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/api/lead-magnet/route.ts:sendViaResend",
-      "target": "function:src/lib/html-to-text.ts:htmlToText",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/api/lead-magnet/route.ts:POST",
-      "target": "function:src/lib/generic-giveaway-email.ts:isValidManychatSecret",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/api/lead-magnet/route.ts:POST",
-      "target": "function:src/lib/rate-limit.ts:checkRateLimit",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/api/lead-magnet/route.ts:POST",
-      "target": "function:src/lib/rate-limit.ts:getClientIp",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/api/lead-magnet/route.ts:POST",
-      "target": "function:src/app/api/lead-magnet/route.ts:ingestIntoCrm",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/api/lead-magnet/route.ts:POST",
-      "target": "function:src/lib/email-suppressions.ts:isSuppressed",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/api/lead-magnet/route.ts:POST",
-      "target": "function:src/lib/generic-giveaway-email.ts:websiteGiveawayEmail",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/api/lead-magnet/route.ts:POST",
-      "target": "function:src/lib/generic-giveaway-email.ts:validateGiveawayLink",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/api/lead-magnet/route.ts:POST",
-      "target": "function:src/lib/lead-magnets.ts:isDeliverableLeadMagnetSource",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/api/lead-magnet/route.ts:POST",
-      "target": "function:src/lib/generic-giveaway-email.ts:sanitizeGiveawayName",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/api/lead-magnet/route.ts:POST",
-      "target": "function:src/app/api/lead-magnet/route.ts:sendViaResend",
-      "type": "calls",
       "direction": "forward",
       "weight": 0.8
     },
@@ -17085,7 +16470,7 @@
       "target": "function:src/app/giveaways/business-builder-quiz/layout.tsx:BusinessBuilderQuizLayout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/business-builder-quiz/layout.tsx",
@@ -17099,7 +16484,7 @@
       "target": "function:src/app/giveaways/claude-md/layout.tsx:ClaudeMdLayout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/claude-md/layout.tsx",
@@ -17113,7 +16498,7 @@
       "target": "function:src/app/giveaways/compare/page.tsx:ComparePage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/compare/page.tsx",
@@ -17127,7 +16512,7 @@
       "target": "function:src/app/giveaways/cost-stack/layout.tsx:CostStackLayout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/cost-stack/layout.tsx",
@@ -17141,7 +16526,7 @@
       "target": "function:src/app/giveaways/cross-cli-compatibility-routing/layout.tsx:CrossCliCompatibilityRoutingLayout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/cross-cli-compatibility-routing/layout.tsx",
@@ -17155,7 +16540,7 @@
       "target": "function:src/app/giveaways/cross-cli-compatibility-routing/page.tsx:CrossCliCompatibilityRoutingPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/cross-cli-compatibility-routing/page.tsx",
@@ -17169,7 +16554,7 @@
       "target": "function:src/app/giveaways/fable-worth-it-audit/layout.tsx:FableWorthItAuditLayout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/fable-worth-it-audit/layout.tsx",
@@ -17183,7 +16568,7 @@
       "target": "function:src/app/giveaways/free-ai-anythingllm/layout.tsx:Layout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/free-ai-anythingllm/layout.tsx",
@@ -17197,7 +16582,7 @@
       "target": "function:src/app/giveaways/free-ai-anythingllm/page.tsx:FreeAiAnythingllmPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/free-ai-anythingllm/page.tsx",
@@ -17211,7 +16596,7 @@
       "target": "function:src/app/giveaways/free-ai-buzz/layout.tsx:Layout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/free-ai-buzz/layout.tsx",
@@ -17225,7 +16610,7 @@
       "target": "function:src/app/giveaways/free-ai-buzz/page.tsx:FreeAiBuzzPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/free-ai-buzz/page.tsx",
@@ -17239,7 +16624,7 @@
       "target": "function:src/app/giveaways/free-ai-cal-com/layout.tsx:Layout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/free-ai-cal-com/layout.tsx",
@@ -17253,7 +16638,7 @@
       "target": "function:src/app/giveaways/free-ai-cal-com/page.tsx:FreeAiCalComPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/free-ai-cal-com/page.tsx",
@@ -17267,7 +16652,7 @@
       "target": "function:src/app/giveaways/free-ai-claude-skills/layout.tsx:Layout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/free-ai-claude-skills/layout.tsx",
@@ -17281,7 +16666,7 @@
       "target": "function:src/app/giveaways/free-ai-claude-skills/page.tsx:FreeAiClaudeSkillsPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/free-ai-claude-skills/page.tsx",
@@ -17295,7 +16680,7 @@
       "target": "function:src/app/giveaways/free-ai-documenso/layout.tsx:Layout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/free-ai-documenso/layout.tsx",
@@ -17309,7 +16694,7 @@
       "target": "function:src/app/giveaways/free-ai-documenso/page.tsx:FreeAiDocumensoPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/free-ai-documenso/page.tsx",
@@ -17323,7 +16708,7 @@
       "target": "function:src/app/giveaways/free-ai-excalidraw/layout.tsx:Layout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/free-ai-excalidraw/layout.tsx",
@@ -17337,7 +16722,7 @@
       "target": "function:src/app/giveaways/free-ai-excalidraw/page.tsx:FreeAiExcalidrawPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/free-ai-excalidraw/page.tsx",
@@ -17351,7 +16736,7 @@
       "target": "function:src/app/giveaways/free-ai-handy/layout.tsx:Layout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/free-ai-handy/layout.tsx",
@@ -17631,7 +17016,7 @@
       "target": "function:src/app/giveaways/free-ai-handy/page.tsx:FreeAiHandyPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/free-ai-handy/page.tsx",
@@ -17645,7 +17030,7 @@
       "target": "function:src/app/giveaways/free-ai-jan/layout.tsx:Layout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/free-ai-jan/layout.tsx",
@@ -17659,7 +17044,7 @@
       "target": "function:src/app/giveaways/free-ai-jan/page.tsx:FreeAiJanPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/free-ai-jan/page.tsx",
@@ -17673,7 +17058,7 @@
       "target": "function:src/app/giveaways/free-ai-stirling-pdf/layout.tsx:Layout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/free-ai-stirling-pdf/layout.tsx",
@@ -17687,7 +17072,7 @@
       "target": "function:src/app/giveaways/free-ai-stirling-pdf/page.tsx:FreeAiStirlingPdfPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/free-ai-stirling-pdf/page.tsx",
@@ -17701,7 +17086,7 @@
       "target": "function:src/app/giveaways/free-ai-upscayl/layout.tsx:Layout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/free-ai-upscayl/layout.tsx",
@@ -17715,7 +17100,7 @@
       "target": "function:src/app/giveaways/free-ai-upscayl/page.tsx:FreeAiUpscaylPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/free-ai-upscayl/page.tsx",
@@ -17729,7 +17114,7 @@
       "target": "function:src/app/giveaways/guardog/layout.tsx:GuardogLayout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/guardog/layout.tsx",
@@ -17743,7 +17128,7 @@
       "target": "function:src/app/giveaways/hated-task-prompts/layout.tsx:HatedTaskPromptsLayout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/hated-task-prompts/layout.tsx",
@@ -17757,7 +17142,7 @@
       "target": "function:src/app/giveaways/ig-settings/layout.tsx:IgSettingsLayout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/ig-settings/layout.tsx",
@@ -17771,7 +17156,7 @@
       "target": "function:src/app/giveaways/ig-settings/page.tsx:IgSettingsPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/ig-settings/page.tsx",
@@ -17785,7 +17170,7 @@
       "target": "function:src/app/giveaways/lead-machine/layout.tsx:LeadMachineLayout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/lead-machine/layout.tsx",
@@ -17799,7 +17184,7 @@
       "target": "function:src/app/giveaways/lead-magnet/page.tsx:LeadMagnetPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/lead-magnet/page.tsx",
@@ -17813,7 +17198,7 @@
       "target": "function:src/app/giveaways/maccleaner/layout.tsx:MacCleanerLayout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/maccleaner/layout.tsx",
@@ -17827,7 +17212,7 @@
       "target": "function:src/app/giveaways/maccleaner/page.tsx:MacCleanerPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/maccleaner/page.tsx",
@@ -17841,7 +17226,7 @@
       "target": "function:src/app/giveaways/ray-dalio-council/layout.tsx:RayDalioCouncilLayout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/ray-dalio-council/layout.tsx",
@@ -18079,7 +17464,7 @@
       "target": "function:src/app/giveaways/speak-human/layout.tsx:SpeakHumanLayout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/speak-human/layout.tsx",
@@ -18093,7 +17478,7 @@
       "target": "function:src/app/giveaways/terminal-to-claude-desktop/layout.tsx:TerminalToClaudeDesktopLayout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/terminal-to-claude-desktop/layout.tsx",
@@ -18107,7 +17492,7 @@
       "target": "function:src/app/giveaways/terminal-to-claude-desktop/page.tsx:TerminalToClaudeDesktopPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/terminal-to-claude-desktop/page.tsx",
@@ -18121,7 +17506,7 @@
       "target": "function:src/app/giveaways/tokens/layout.tsx:TokensLayout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/tokens/layout.tsx",
@@ -18135,7 +17520,7 @@
       "target": "function:src/app/giveaways/viral-hooks/layout.tsx:ViralHooksLayout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/viral-hooks/layout.tsx",
@@ -18149,7 +17534,7 @@
       "target": "function:src/app/giveaways/viral-hooks/page.tsx:ViralHooksPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/viral-hooks/page.tsx",
@@ -18163,7 +17548,7 @@
       "target": "function:src/components/giveaways/PackPage.tsx:usePackAsk",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/components/giveaways/PackPage.tsx",
@@ -18177,7 +17562,7 @@
       "target": "function:src/components/giveaways/PackPage.tsx:PackPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/components/giveaways/PackPage.tsx",
@@ -18191,91 +17576,21 @@
       "target": "function:src/components/giveaways/PackPage.tsx:CommandBlock",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/components/giveaways/PackPage.tsx",
       "target": "function:src/components/giveaways/PackPage.tsx:PromptBox",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/components/giveaways/PackPage.tsx",
       "target": "function:src/components/giveaways/PackPage.tsx:GuideBlock",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/lib/generic-giveaway-email.ts",
-      "target": "function:src/lib/generic-giveaway-email.ts:validateGiveawayLink",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/lib/generic-giveaway-email.ts",
-      "target": "function:src/lib/generic-giveaway-email.ts:validateGiveawayLink",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/generic-giveaway-email.ts",
-      "target": "function:src/lib/generic-giveaway-email.ts:sanitizeGiveawayName",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/lib/generic-giveaway-email.ts",
-      "target": "function:src/lib/generic-giveaway-email.ts:sanitizeGiveawayName",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/generic-giveaway-email.ts",
-      "target": "function:src/lib/generic-giveaway-email.ts:isValidManychatSecret",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/lib/generic-giveaway-email.ts",
-      "target": "function:src/lib/generic-giveaway-email.ts:isValidManychatSecret",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/generic-giveaway-email.ts",
-      "target": "function:src/lib/generic-giveaway-email.ts:buildGenericGiveawayEmail",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/lib/generic-giveaway-email.ts",
-      "target": "function:src/lib/generic-giveaway-email.ts:buildGenericGiveawayEmail",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/generic-giveaway-email.ts",
-      "target": "function:src/lib/generic-giveaway-email.ts:websiteGiveawayEmail",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/lib/generic-giveaway-email.ts",
-      "target": "function:src/lib/generic-giveaway-email.ts:websiteGiveawayEmail",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/terminal-to-claude-desktop/pack.ts",
@@ -18336,13 +17651,6 @@
     {
       "source": "file:src/components/giveaways/PackPage.tsx",
       "target": "file:src/components/giveaways/GiveawayEmailModal.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/components/giveaways/PackPage.tsx",
-      "target": "file:src/components/giveaways/PackPage.module.css",
       "type": "imports",
       "direction": "forward",
       "weight": 0.7
@@ -18415,42 +17723,28 @@
       "target": "function:tests/giveaway-email-collection.test.ts:listGiveawayPages",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:tests/giveaway-email-collection.test.ts",
       "target": "function:tests/giveaway-email-collection.test.ts:extractModalSlugs",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:tests/giveaway-template-structure.test.ts",
       "target": "function:tests/giveaway-template-structure.test.ts:listGiveawayPages",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:tests/giveaway-template-structure.test.ts",
       "target": "function:tests/giveaway-template-structure.test.ts:importsModal",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:tests/generic-giveaway-email.test.ts",
-      "target": "file:src/lib/generic-giveaway-email.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/lib/generic-giveaway-email.ts",
-      "target": "file:tests/generic-giveaway-email.test.ts",
-      "type": "tested_by",
-      "direction": "forward",
-      "weight": 0.5
+      "weight": 1.0
     },
     {
       "source": "config:next.config.ts",
@@ -18472,8 +17766,976 @@
       "type": "configures",
       "direction": "forward",
       "weight": 0.6
+    },
+    {
+      "source": "file:src/app/giveaways/agent-infrastructure/pack.ts",
+      "target": "file:src/lib/pack-page.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/agent-infrastructure/page.tsx",
+      "target": "function:src/app/giveaways/agent-infrastructure/page.tsx:AgentInfrastructurePage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/app/giveaways/agent-infrastructure/page.tsx",
+      "target": "function:src/app/giveaways/agent-infrastructure/page.tsx:AgentInfrastructurePage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/giveaways/agent-infrastructure/page.tsx",
+      "target": "file:src/app/giveaways/agent-infrastructure/pack.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/agent-infrastructure/page.tsx",
+      "target": "file:src/components/giveaways/PackPage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/client-launch-checklist/pack.ts",
+      "target": "file:src/lib/pack-page.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/client-launch-checklist/page.tsx",
+      "target": "function:src/app/giveaways/client-launch-checklist/page.tsx:ClientLaunchChecklistPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/app/giveaways/client-launch-checklist/page.tsx",
+      "target": "function:src/app/giveaways/client-launch-checklist/page.tsx:ClientLaunchChecklistPage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/giveaways/client-launch-checklist/page.tsx",
+      "target": "file:src/app/giveaways/client-launch-checklist/pack.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/client-launch-checklist/page.tsx",
+      "target": "file:src/components/giveaways/PackPage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/cult-brand-playbook/pack.ts",
+      "target": "file:src/lib/pack-page.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/cult-brand-playbook/page.tsx",
+      "target": "function:src/app/giveaways/cult-brand-playbook/page.tsx:CultBrandPlaybookPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/app/giveaways/cult-brand-playbook/page.tsx",
+      "target": "function:src/app/giveaways/cult-brand-playbook/page.tsx:CultBrandPlaybookPage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/giveaways/cult-brand-playbook/page.tsx",
+      "target": "file:src/app/giveaways/cult-brand-playbook/pack.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/cult-brand-playbook/page.tsx",
+      "target": "file:src/components/giveaways/PackPage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/geometry-dash-fun-build/pack.ts",
+      "target": "file:src/app/giveaways/geometry-dash-fun-build/game.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/geometry-dash-fun-build/pack.ts",
+      "target": "file:src/lib/pack-page.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/geometry-dash-fun-build/page.tsx",
+      "target": "function:src/app/giveaways/geometry-dash-fun-build/page.tsx:GeometryDashPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/app/giveaways/geometry-dash-fun-build/page.tsx",
+      "target": "function:src/app/giveaways/geometry-dash-fun-build/page.tsx:GeometryDashPage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/giveaways/geometry-dash-fun-build/page.tsx",
+      "target": "file:src/app/giveaways/geometry-dash-fun-build/pack.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/geometry-dash-fun-build/page.tsx",
+      "target": "file:src/components/giveaways/PackPage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/hooklab/pack.ts",
+      "target": "file:src/app/giveaways/hooklab/content.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/hooklab/pack.ts",
+      "target": "file:src/lib/pack-page.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/hooklab/page.tsx",
+      "target": "function:src/app/giveaways/hooklab/page.tsx:HookLabPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/app/giveaways/hooklab/page.tsx",
+      "target": "function:src/app/giveaways/hooklab/page.tsx:HookLabPage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/giveaways/hooklab/page.tsx",
+      "target": "file:src/app/giveaways/hooklab/pack.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/hooklab/page.tsx",
+      "target": "file:src/components/giveaways/PackPage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/logo-maker-guide/pack.ts",
+      "target": "file:src/lib/pack-page.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/logo-maker-guide/page.tsx",
+      "target": "function:src/app/giveaways/logo-maker-guide/page.tsx:LogoMakerGuidePage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/app/giveaways/logo-maker-guide/page.tsx",
+      "target": "function:src/app/giveaways/logo-maker-guide/page.tsx:LogoMakerGuidePage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/giveaways/logo-maker-guide/page.tsx",
+      "target": "file:src/app/giveaways/logo-maker-guide/pack.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/logo-maker-guide/page.tsx",
+      "target": "file:src/components/giveaways/PackPage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/whatsapp-agent/pack.ts",
+      "target": "file:src/app/giveaways/whatsapp-agent/prompt.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/whatsapp-agent/pack.ts",
+      "target": "file:src/lib/pack-page.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/whatsapp-agent/page.tsx",
+      "target": "function:src/app/giveaways/whatsapp-agent/page.tsx:WhatsAppAgentPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/app/giveaways/whatsapp-agent/page.tsx",
+      "target": "function:src/app/giveaways/whatsapp-agent/page.tsx:WhatsAppAgentPage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/giveaways/whatsapp-agent/page.tsx",
+      "target": "file:src/app/giveaways/whatsapp-agent/pack.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/whatsapp-agent/page.tsx",
+      "target": "file:src/components/giveaways/PackPage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:tests/pack-page.test.ts",
+      "target": "file:src/app/giveaways/lead-machine/pack.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/lead-machine/pack.ts",
+      "target": "file:tests/pack-page.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:tests/pack-page.test.ts",
+      "target": "file:src/app/giveaways/lead-machine/prompt.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/lead-machine/prompt.ts",
+      "target": "file:tests/pack-page.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:tests/pack-page.test.ts",
+      "target": "file:src/app/giveaways/whatsapp-agent/pack.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/whatsapp-agent/pack.ts",
+      "target": "file:tests/pack-page.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:tests/pack-page.test.ts",
+      "target": "file:src/app/giveaways/whatsapp-agent/prompt.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/whatsapp-agent/prompt.ts",
+      "target": "file:tests/pack-page.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:tests/pack-page.test.ts",
+      "target": "file:src/lib/giveaway-dm.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/giveaway-dm.ts",
+      "target": "file:tests/pack-page.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:tests/pack-page.test.ts",
+      "target": "file:src/lib/giveaway-offers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/giveaway-offers.ts",
+      "target": "file:tests/pack-page.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:tests/pack-page.test.ts",
+      "target": "file:src/lib/pack-page.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/pack-page.ts",
+      "target": "file:tests/pack-page.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/app/api/lead-magnet/route.ts",
+      "target": "function:src/app/api/lead-magnet/route.ts:sendViaResend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/app/api/lead-magnet/route.ts",
+      "target": "function:src/app/api/lead-magnet/route.ts:ingestIntoCrm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/app/api/lead-magnet/route.ts",
+      "target": "function:src/app/api/lead-magnet/route.ts:POST",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/app/api/lead-magnet/route.ts",
+      "target": "function:src/app/api/lead-magnet/route.ts:POST",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/api/lead-magnet/route.ts",
+      "target": "file:src/lib/email-suppressions.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/api/lead-magnet/route.ts",
+      "target": "file:src/lib/free-ai-tool-email.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/api/lead-magnet/route.ts",
+      "target": "file:src/lib/free-ai-tools.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/api/lead-magnet/route.ts",
+      "target": "file:src/lib/generic-giveaway-email.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/api/lead-magnet/route.ts",
+      "target": "file:src/lib/html-to-text.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/api/lead-magnet/route.ts",
+      "target": "file:src/lib/lead-magnets.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/api/lead-magnet/route.ts",
+      "target": "file:src/lib/quiz-giveaway-email.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/api/lead-magnet/route.ts",
+      "target": "file:src/lib/rate-limit.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/api/lead-magnet/route.ts",
+      "target": "file:src/lib/speak-human-email.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/api/lead-magnet/route.ts",
+      "target": "file:src/lib/whatsapp-agent-email.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:validateGiveawayLink",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:validateGiveawayLink",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:sanitizeGiveawayName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:sanitizeGiveawayName",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:isValidManychatSecret",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:isValidManychatSecret",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:buildGenericGiveawayEmail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:buildGenericGiveawayEmail",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:websiteGiveawayEmail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:websiteGiveawayEmail",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/giveaways.ts",
+      "target": "function:src/lib/giveaways.ts:getGiveaway",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/giveaways.ts",
+      "target": "function:src/lib/giveaways.ts:getGiveaway",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/lead-magnets.ts",
+      "target": "function:src/lib/lead-magnets.ts:getLeadMagnet",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/lead-magnets.ts",
+      "target": "function:src/lib/lead-magnets.ts:getLeadMagnet",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/lead-magnets.ts",
+      "target": "function:src/lib/lead-magnets.ts:isDeliverableLeadMagnetSource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/lead-magnets.ts",
+      "target": "function:src/lib/lead-magnets.ts:isDeliverableLeadMagnetSource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/lead-magnets.ts",
+      "target": "function:src/lib/lead-magnets.ts:downloadUrlFor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/lead-magnets.ts",
+      "target": "function:src/lib/lead-magnets.ts:downloadUrlFor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/lead-magnets.ts",
+      "target": "function:src/lib/lead-magnets.ts:buildWelcomeEmail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/lead-magnets.ts",
+      "target": "function:src/lib/lead-magnets.ts:buildWelcomeEmail",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/lead-magnets.ts",
+      "target": "class:src/lib/lead-magnets.ts:UnknownLeadMagnetSourceError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/lead-magnets.ts",
+      "target": "class:src/lib/lead-magnets.ts:UnknownLeadMagnetSourceError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/lead-magnets.ts",
+      "target": "file:src/lib/free-ai-tools.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/lead-magnets.ts",
+      "target": "file:src/lib/quiz-giveaway-email.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:src/app/api/lead-magnet/route.ts:sendViaResend",
+      "target": "function:src/lib/speak-human-email.ts:buildSpeakHumanEmail",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/app/api/lead-magnet/route.ts:sendViaResend",
+      "target": "function:src/lib/whatsapp-agent-email.ts:buildWhatsAppAgentEmail",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/app/api/lead-magnet/route.ts:sendViaResend",
+      "target": "function:src/lib/lead-magnets.ts:buildWelcomeEmail",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/app/api/lead-magnet/route.ts:sendViaResend",
+      "target": "function:src/lib/lead-magnets.ts:getLeadMagnet",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/app/api/lead-magnet/route.ts:sendViaResend",
+      "target": "function:src/lib/quiz-giveaway-email.ts:isQuizGiveawaySource",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/app/api/lead-magnet/route.ts:sendViaResend",
+      "target": "function:src/lib/quiz-giveaway-email.ts:buildQuizGiveawayEmail",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/app/api/lead-magnet/route.ts:sendViaResend",
+      "target": "function:src/lib/generic-giveaway-email.ts:buildGenericGiveawayEmail",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/app/api/lead-magnet/route.ts:POST",
+      "target": "function:src/lib/generic-giveaway-email.ts:isValidManychatSecret",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/app/api/lead-magnet/route.ts:POST",
+      "target": "function:src/lib/rate-limit.ts:checkRateLimit",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/app/api/lead-magnet/route.ts:POST",
+      "target": "function:src/lib/rate-limit.ts:getClientIp",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/app/api/lead-magnet/route.ts:POST",
+      "target": "function:src/app/api/lead-magnet/route.ts:ingestIntoCrm",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/app/api/lead-magnet/route.ts:POST",
+      "target": "function:src/lib/generic-giveaway-email.ts:websiteGiveawayEmail",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/app/api/lead-magnet/route.ts:POST",
+      "target": "function:src/lib/generic-giveaway-email.ts:validateGiveawayLink",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/app/api/lead-magnet/route.ts:POST",
+      "target": "function:src/lib/lead-magnets.ts:isDeliverableLeadMagnetSource",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/app/api/lead-magnet/route.ts:POST",
+      "target": "function:src/lib/generic-giveaway-email.ts:sanitizeGiveawayName",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/app/api/lead-magnet/route.ts:POST",
+      "target": "function:src/app/api/lead-magnet/route.ts:sendViaResend",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/lib/lead-magnets.ts:buildWelcomeEmail",
+      "target": "function:src/lib/lead-magnets.ts:downloadUrlFor",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/whatsapp-agent-email.ts",
+      "target": "function:src/lib/whatsapp-agent-email.ts:buildWhatsAppAgentEmail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/whatsapp-agent-email.ts",
+      "target": "function:src/lib/whatsapp-agent-email.ts:buildWhatsAppAgentEmail",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tests/whatsapp-agent-email.test.ts",
+      "target": "file:src/lib/lead-magnets.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:tests/whatsapp-agent-email.test.ts",
+      "target": "file:src/lib/whatsapp-agent-email.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/lead-magnets.ts",
+      "target": "file:tests/whatsapp-agent-email.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/lib/whatsapp-agent-email.ts",
+      "target": "file:tests/whatsapp-agent-email.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/app/giveaways/agent-infrastructure/layout.tsx",
+      "target": "function:src/app/giveaways/agent-infrastructure/layout.tsx:AgentInfrastructureLayout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/app/giveaways/geometry-dash-fun-build/layout.tsx",
+      "target": "function:src/app/giveaways/geometry-dash-fun-build/layout.tsx:GeometryDashLayout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/app/giveaways/hooklab/layout.tsx",
+      "target": "function:src/app/giveaways/hooklab/layout.tsx:HookLabLayout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/app/giveaways/whatsapp-agent/layout.tsx",
+      "target": "function:src/app/giveaways/whatsapp-agent/layout.tsx:WhatsAppAgentLayout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/app/sitemap.ts",
+      "target": "function:src/app/sitemap.ts:sitemap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/giveaways/PackPage.module.css",
+      "target": "file:src/components/giveaways/PackPage.tsx",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/app/giveaways/page.tsx",
+      "target": "file:src/lib/giveaways.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/components/giveaways/PackPage.tsx",
+      "target": "file:src/components/giveaways/PackPage.module.css",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:tests/free-ai-tools.test.ts",
+      "target": "file:src/lib/giveaways.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:tests/free-ai-tools.test.ts",
+      "target": "file:src/lib/lead-magnets.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:tests/generic-giveaway-email.test.ts",
+      "target": "file:src/lib/generic-giveaway-email.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:tests/quiz-giveaway-email.test.ts",
+      "target": "file:src/lib/giveaways.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:tests/quiz-giveaway-email.test.ts",
+      "target": "file:src/lib/lead-magnets.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:tests/registration-invite-and-lead-magnet-fail-closed.test.ts",
+      "target": "file:src/lib/lead-magnets.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "id": "edge_giveaways_index_to_data",
+      "source": "file:src/app/giveaways/page.tsx",
+      "target": "file:src/lib/giveaways.ts",
+      "relationship": "imports",
+      "bidirectional": false,
+      "direction": "forward",
+      "type": "related",
+      "weight": 0.5,
+      "description": "maps over giveaways data to render list"
+    },
+    {
+      "id": "edge_logo_maker_layout_to_page",
+      "source": "file:src/app/giveaways/logo-maker-guide/layout.tsx",
+      "target": "file:src/app/giveaways/logo-maker-guide/page.tsx",
+      "relationship": "parent_layout",
+      "bidirectional": true,
+      "direction": "forward",
+      "type": "related",
+      "weight": 0.5,
+      "description": "wraps page with metadata"
+    },
+    {
+      "source": "document:docs/giveaways/PROCESS.md",
+      "target": "file:src/lib/lead-magnets.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/giveaways/PROCESS.md",
+      "target": "file:src/lib/giveaways.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/giveaways/PROCESS.md",
+      "target": "file:tests/pack-page.test.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/giveaways/PROCESS.md",
+      "target": "file:src/lib/generic-giveaway-email.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
     }
   ],
+  "version": "1.0.0",
+  "project": {
+    "name": "Workshop Site",
+    "languages": [
+      "css",
+      "html",
+      "javascript",
+      "json",
+      "markdown",
+      "shell",
+      "sql",
+      "typescript"
+    ],
+    "frameworks": [
+      "Next.js",
+      "React"
+    ],
+    "description": "A Next.js premium workshop portal integrating Stripe payments, event management, giveaways, and lead magnets.",
+    "gitCommitHash": "8289670ed37ca9c8cec5ee29ee647e7ec38f7a65",
+    "analyzedAt": "2026-10-15T20:06:56.921729+00:00"
+  },
   "layers": [
     {
       "id": "layer:presentation",
@@ -18503,14 +18765,13 @@
         "file:src/app/giveaways/business-builder-quiz/page.tsx",
         "file:src/app/giveaways/claude-md/layout.tsx",
         "file:src/app/giveaways/claude-md/page.tsx",
-        "file:src/app/giveaways/client-launch-checklist/LeadMagnetExampleForm.tsx",
+        "file:src/app/giveaways/client-launch-checklist/page.tsx",
         "file:src/app/giveaways/compare/page.tsx",
         "file:src/app/giveaways/cost-stack/CostStackCalculator.tsx",
         "file:src/app/giveaways/cost-stack/layout.tsx",
         "file:src/app/giveaways/cost-stack/page.tsx",
         "file:src/app/giveaways/cross-cli-compatibility-routing/layout.tsx",
         "file:src/app/giveaways/cross-cli-compatibility-routing/page.tsx",
-        "file:src/app/giveaways/cult-brand-playbook/GiveawayForm.tsx",
         "file:src/app/giveaways/cult-brand-playbook/page.tsx",
         "file:src/app/giveaways/fable-worth-it-audit/layout.tsx",
         "file:src/app/giveaways/fable-worth-it-audit/page.tsx",
@@ -18568,6 +18829,8 @@
         "file:src/app/giveaways/viral-hooks/layout.tsx",
         "file:src/app/giveaways/viral-hooks/page.tsx",
         "file:src/app/giveaways/web-design-arsenal/page.tsx",
+        "file:src/app/giveaways/whatsapp-agent/layout.tsx",
+        "file:src/app/giveaways/whatsapp-agent/page.tsx",
         "file:src/app/layout.tsx",
         "file:src/app/lead-magnets/ultimate-claudemd/page.tsx",
         "file:src/app/session/3/custom-domain/page.tsx",
@@ -18659,7 +18922,8 @@
         "file:src/lib/quiz-giveaway-email.ts",
         "file:src/lib/session-reminder.ts",
         "file:src/lib/speak-human-email.ts",
-        "file:src/lib/waitlist-notify-windows.ts"
+        "file:src/lib/waitlist-notify-windows.ts",
+        "file:src/lib/whatsapp-agent-email.ts"
       ]
     },
     {
@@ -18691,14 +18955,16 @@
     {
       "id": "layer:content",
       "name": "Content & Static Data Layer",
-      "description": "Workshop resources, giveaway pack definitions, reusable prompts, and static tools provide educational content independently from shared rendering.",
+      "description": "Workshop resources, giveaway pack definitions, reusable prompts, copyable game code, and printable setup guides provide educational content independently from shared rendering.",
       "nodeIds": [
+        "file:pdf/whatsapp-receptionist-guide.html",
         "file:public/2x-with-ai-playbook.html",
         "file:public/ai-os-architecture.html",
         "file:public/automation-audit-sample.html",
         "file:public/coach-kit-onboarding-matrix.html",
         "file:public/hated-task-prompts.html",
         "file:public/lead-magnet.html",
+        "file:src/app/giveaways/agent-infrastructure/pack.ts",
         "file:src/app/giveaways/ai-behavior-quiz/pack.ts",
         "file:src/app/giveaways/ai-levels-quiz/pack.ts",
         "file:src/app/giveaways/anthropic-safety-checklist/pack.ts",
@@ -18707,20 +18973,26 @@
         "file:src/app/giveaways/business-builder-quiz/pack.ts",
         "file:src/app/giveaways/claude-md/pack.ts",
         "file:src/app/giveaways/claude-md/prompts.ts",
+        "file:src/app/giveaways/client-launch-checklist/pack.ts",
         "file:src/app/giveaways/compare/pack.ts",
         "file:src/app/giveaways/cost-stack/pack.ts",
         "file:src/app/giveaways/cross-cli-compatibility-routing/pack.ts",
+        "file:src/app/giveaways/cult-brand-playbook/pack.ts",
         "file:src/app/giveaways/fable-worth-it-audit/pack.ts",
         "file:src/app/giveaways/fable-worth-it-audit/prompts.ts",
+        "file:src/app/giveaways/geometry-dash-fun-build/game.ts",
+        "file:src/app/giveaways/geometry-dash-fun-build/pack.ts",
         "file:src/app/giveaways/guardog/pack.ts",
         "file:src/app/giveaways/guardog/prompts.ts",
         "file:src/app/giveaways/hated-task-prompts/pack.ts",
         "file:src/app/giveaways/hated-task-prompts/prompts.ts",
         "file:src/app/giveaways/hooklab/content.ts",
+        "file:src/app/giveaways/hooklab/pack.ts",
         "file:src/app/giveaways/ig-settings/pack.ts",
         "file:src/app/giveaways/lead-machine/pack.ts",
         "file:src/app/giveaways/lead-machine/prompt.ts",
         "file:src/app/giveaways/lead-magnet/pack.ts",
+        "file:src/app/giveaways/logo-maker-guide/pack.ts",
         "file:src/app/giveaways/maccleaner/pack.ts",
         "file:src/app/giveaways/ray-dalio-council/pack.ts",
         "file:src/app/giveaways/ray-dalio-council/prompts.ts",
@@ -18734,6 +19006,8 @@
         "file:src/app/giveaways/viral-hooks/pack.ts",
         "file:src/app/giveaways/web-design-arsenal/pack.ts",
         "file:src/app/giveaways/web-design-arsenal/prompts.ts",
+        "file:src/app/giveaways/whatsapp-agent/pack.ts",
+        "file:src/app/giveaways/whatsapp-agent/prompt.ts",
         "file:src/app/illy/content.ts",
         "file:src/content/session-7-prep.tsx"
       ]
@@ -18741,7 +19015,7 @@
     {
       "id": "layer:test",
       "name": "Test Layer",
-      "description": "Automated suites verify checkout, enrollment, email delivery, consent, lead magnets, AI-level assessment, and intake row security.",
+      "description": "Automated suites verify checkout, enrollment, email and WhatsApp resource delivery, consent, lead magnets, AI-level assessment, pack integrity, and intake row security.",
       "nodeIds": [
         "file:tests/ai-agent-income-prompt-pack.test.ts",
         "file:tests/checkout-branding.test.ts",
@@ -18767,7 +19041,8 @@
         "file:tests/quiz-giveaway-email.test.ts",
         "file:tests/registration-invite-and-lead-magnet-fail-closed.test.ts",
         "file:tests/session-reminder.test.ts",
-        "file:tests/settle-attached-checkout.test.ts"
+        "file:tests/settle-attached-checkout.test.ts",
+        "file:tests/whatsapp-agent-email.test.ts"
       ]
     },
     {
@@ -18775,12 +19050,12 @@
       "name": "Configuration",
       "description": "Package, Next.js, Vercel, analysis exclusion, checkout branding, and asset metadata settings govern build, routing, deployment schedules, and presentation defaults.",
       "nodeIds": [
+        "file:.understandignore",
         "config:next.config.ts",
         "config:package.json",
         "config:public/Lead-Machine-Quick-Start.pdf.kg.json",
-        "config:vercel.json",
-        "file:.understandignore",
-        "file:src/lib/masterminds-checkout-branding.ts"
+        "file:src/lib/masterminds-checkout-branding.ts",
+        "config:vercel.json"
       ]
     },
     {
@@ -18898,8 +19173,8 @@
     },
     {
       "order": 9,
-      "title": "Giveaways and Lead Capture",
-      "description": "Giveaway routes now supply typed pack content to a shared rendering component. Trace copying and downloads through the post-action email request, including direct-message visitor exemptions and the once-per-tab rule.",
+      "title": "Shared Giveaway Delivery",
+      "description": "The giveaway catalog leads visitors into typed resource packs rendered by the shared PackPage component, the graph\u2019s most widely referenced file. Trace copying and downloads into the post-action email request, including direct-message exemptions and the once-per-tab rule, before following individual resource content in the next stops.",
       "nodeIds": [
         "file:src/lib/giveaways.ts",
         "file:src/components/giveaways/PackPage.tsx",
@@ -18910,7 +19185,7 @@
     },
     {
       "title": "Pack Content and Offers",
-      "description": "The Lead Machine pack shows how resource copy, prompts, downloads, and navigation are defined separately from the template. Free AI tools adapt their shared catalog into the same shape, while offer selection follows the declared AI level.",
+      "description": "The Lead Machine pack shows how resource copy, prompts, downloads and navigation remain separate from the shared template. Free AI tools adapt their catalog into the same content contract, and level-specific offers supply the next step. The pack tests check that content, resource prompts and delivery rules stay aligned.",
       "nodeIds": [
         "file:src/app/giveaways/lead-machine/pack.ts",
         "file:src/lib/free-ai-tool-pack.ts",
@@ -18918,6 +19193,17 @@
         "file:tests/pack-page.test.ts"
       ],
       "order": 10
+    },
+    {
+      "title": "WhatsApp Receptionist Pack",
+      "description": "Apply the same pack structure to the WhatsApp receptionist: its route adds HowTo structured data while the content definition supplies the code download, printable guide and setup instructions. The separate START-HERE prompt mirrors the download and guides Meta Cloud API and Cloudflare setup. Read the printable guide beside the prompt to understand how the website delivers a complete resource through the shared template.",
+      "nodeIds": [
+        "file:src/app/giveaways/whatsapp-agent/page.tsx",
+        "file:src/app/giveaways/whatsapp-agent/pack.ts",
+        "file:src/app/giveaways/whatsapp-agent/prompt.ts",
+        "file:pdf/whatsapp-receptionist-guide.html"
+      ],
+      "order": 11
     },
     {
       "title": "Giveaway Email Delivery",
@@ -18928,10 +19214,10 @@
         "file:tests/generic-giveaway-email.test.ts",
         "file:tests/giveaway-email-collection.test.ts"
       ],
-      "order": 11
+      "order": 12
     },
     {
-      "order": 12,
+      "order": 13,
       "title": "Content Launch Standards",
       "description": "The giveaway launch protocol explains how the preceding components become a released resource, from canonical templates and email collection through deployment, grading and publishing. The usefulness rubric supplies the release criteria, while the standalone playbook deck and interactive coaching matrix illustrate the static educational experiences that share consent handling.",
       "nodeIds": [
@@ -18942,7 +19228,7 @@
       ]
     },
     {
-      "order": 13,
+      "order": 14,
       "title": "Behavioral Verification",
       "description": "Now inspect tests that exercise the boundaries established by the previous steps: event pricing and checkout modes, consent metadata, resource delivery, signed prompt-pack access and database intake security. These suites provide examples of observable contracts and mocked integration behavior; the package test commands determine how the available checks are invoked.",
       "nodeIds": [
@@ -18954,7 +19240,7 @@
       ]
     },
     {
-      "order": 14,
+      "order": 15,
       "title": "Deployment and Scheduled Operations",
       "description": "Finish with Vercel configuration to connect the application journeys to production routing and scheduled operations. Host rewrites select product landing pages, while cron schedules invoke event follow-up, reminder and reconciliation routes; the package manifest supplies the runtime requirement and development, build and test commands used around that deployment.",
       "nodeIds": [
@@ -18962,26 +19248,5 @@
         "config:package.json"
       ]
     }
-  ],
-  "version": "1.0.0",
-  "project": {
-    "name": "Workshop Site",
-    "languages": [
-      "css",
-      "html",
-      "javascript",
-      "json",
-      "markdown",
-      "shell",
-      "sql",
-      "typescript"
-    ],
-    "frameworks": [
-      "Next.js",
-      "React"
-    ],
-    "description": "A Next.js premium workshop portal integrating Stripe payments, event management, giveaways, and lead magnets.",
-    "gitCommitHash": "09e4fa371ed6259785725f5f928649ff9b7f1e57",
-    "analyzedAt": "2026-10-14T20:06:18.644723+00:00"
-  }
+  ]
 }
