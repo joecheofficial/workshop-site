@@ -9,6 +9,7 @@ import { withUtm } from '@/lib/utm'
 import { htmlToText } from '@/lib/html-to-text'
 import { buildSpeakHumanEmail } from '@/lib/speak-human-email'
 import { buildFreeAiToolEmail } from '@/lib/free-ai-tool-email'
+import { buildWhatsAppAgentEmail } from '@/lib/whatsapp-agent-email'
 import { isFreeAiToolSource } from '@/lib/free-ai-tools'
 import { buildQuizGiveawayEmail, isQuizGiveawaySource } from '@/lib/quiz-giveaway-email'
 import {
@@ -533,6 +534,13 @@ Remind me to run guardog analyze &lt;package-name&gt; &lt;npm or pypi&gt; before
         ${unsubscribeFooter}
       </div>
     `
+  } else if (source === 'whatsapp-agent') {
+    // WhatsApp receptionist giveaway: zip, PDF guide and page links in the
+    // pretty-light letter format, see src/lib/whatsapp-agent-email.ts.
+    const whatsappEmail = buildWhatsAppAgentEmail({ unsubscribeFooter, unsubscribeUrl })
+    subject = whatsappEmail.subject
+    html = whatsappEmail.html
+    text = whatsappEmail.text
   } else if (isFreeAiToolSource(source)) {
     // Free AI Tools batch (/giveaways/free-ai-<tool>): setup notes in the
     // pretty-light letter format, content from src/lib/free-ai-tools.ts.
@@ -606,6 +614,7 @@ const GIVEAWAY_SOURCE_MAP: Record<string, string> = {
   'speak-human': 'giveaway-speak-human',
   'business-builder-quiz': 'giveaway-business-builder-quiz',
   'lead-machine': 'giveaway-lead-machine',
+  'whatsapp-agent': 'giveaway-whatsapp-agent',
   'tokens': 'giveaway-tokens',
   'ai-levels-quiz': 'giveaway-ai-levels-quiz',
   'ai-behavior-quiz': 'giveaway-ai-behavior-quiz',
