@@ -4,7 +4,7 @@ import { checkRateLimit, getClientIp } from '@/lib/rate-limit'
 import { trackInsightEvent } from '@/lib/insight-to-fix'
 import { buildUnsubscribeHeaders, buildUnsubscribeUrl } from '@/lib/list-unsubscribe'
 import { isSuppressed } from '@/lib/email-suppressions'
-import { isDeliverableLeadMagnetSource, UnknownLeadMagnetSourceError } from '@/lib/lead-magnets'
+import { buildWelcomeEmail, getLeadMagnet, isDeliverableLeadMagnetSource, UnknownLeadMagnetSourceError } from '@/lib/lead-magnets'
 import { withUtm } from '@/lib/utm'
 import { htmlToText } from '@/lib/html-to-text'
 import { buildSpeakHumanEmail } from '@/lib/speak-human-email'
@@ -541,6 +541,13 @@ Remind me to run guardog analyze &lt;package-name&gt; &lt;npm or pypi&gt; before
     subject = whatsappEmail.subject
     html = whatsappEmail.html
     text = whatsappEmail.text
+  } else if (source === 'client-launch-checklist') {
+    // Client Launch Checklist pack page (15 Oct 2026): the same PDF welcome
+    // email /api/subscribe sends, built from LEAD_MAGNETS in src/lib/lead-magnets.ts.
+    // The pack page ask has no name field, so it greets "Hi there".
+    const welcome = buildWelcomeEmail('there', getLeadMagnet('client-launch-checklist')!, email)
+    subject = welcome.subject
+    html = welcome.html
   } else if (isFreeAiToolSource(source)) {
     // Free AI Tools batch (/giveaways/free-ai-<tool>): setup notes in the
     // pretty-light letter format, content from src/lib/free-ai-tools.ts.

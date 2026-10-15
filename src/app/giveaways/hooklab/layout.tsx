@@ -6,19 +6,19 @@ const URL = `${BASE}/giveaways/hooklab`
 
 export const metadata: Metadata = {
   title: 'HookLab | Free Instagram Reel Hook Generator',
-  description: 'A free Claude Code skill that generates scored Instagram Reel hooks from your brand voice, top posts in your niche, or a specific CTA.',
+  description: 'A free Claude Code skill that writes five scored Instagram Reel hooks, with a full script for each, from your brand voice profile.',
   keywords: [
     'HookLab', 'Instagram hooks', 'Reel hooks', 'Claude Code skill', 'content hooks',
-    'viral hooks', 'brand voice', 'Instagram content', 'Business Automation Mastermind', 'Joe Che',
+    'viral hooks', 'brand voice', 'Instagram content', 'AI Business Mastermind', 'Joe Che',
   ],
   authors: [{ name: 'Joe Che', url: 'https://www.mastermindshq.business' }],
   robots: { index: true, follow: true },
   alternates: { canonical: URL },
   openGraph: {
     title: 'HookLab | Free Instagram Reel Hook Generator',
-    description: 'Generate scored Instagram Reel hooks from your brand voice, live niche research, or a specific giveaway CTA. Free from the Business Automation Mastermind.',
+    description: 'Five scored Instagram Reel hooks and a full script for each, written in your brand voice. Free from Joe Che.',
     url: URL,
-    siteName: 'Business Automation Mastermind Workshop',
+    siteName: 'Masterminds Workshop',
     type: 'website',
     locale: 'en_US',
   },
