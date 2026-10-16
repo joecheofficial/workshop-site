@@ -9,6 +9,7 @@ import { withUtm } from '@/lib/utm'
 import { htmlToText } from '@/lib/html-to-text'
 import { buildSpeakHumanEmail } from '@/lib/speak-human-email'
 import { buildFreeAiToolEmail } from '@/lib/free-ai-tool-email'
+import { buildFreeAiToolsHubEmail } from '@/lib/free-ai-tools-hub-email'
 import { buildWhatsAppAgentEmail } from '@/lib/whatsapp-agent-email'
 import { isFreeAiToolSource } from '@/lib/free-ai-tools'
 import { buildQuizGiveawayEmail, isQuizGiveawaySource } from '@/lib/quiz-giveaway-email'
@@ -548,6 +549,13 @@ Remind me to run guardog analyze &lt;package-name&gt; &lt;npm or pypi&gt; before
     const welcome = buildWelcomeEmail('there', getLeadMagnet('client-launch-checklist')!, email)
     subject = welcome.subject
     html = welcome.html
+  } else if (source === 'free-ai-tools') {
+    // Free AI Tools hub (/giveaways/free-ai-tools, keyword SWAP): all ten swaps
+    // in one pretty-light letter, see src/lib/free-ai-tools-hub-email.ts.
+    const hubEmail = buildFreeAiToolsHubEmail({ unsubscribeFooter, unsubscribeUrl })
+    subject = hubEmail.subject
+    html = hubEmail.html
+    text = hubEmail.text
   } else if (isFreeAiToolSource(source)) {
     // Free AI Tools batch (/giveaways/free-ai-<tool>): setup notes in the
     // pretty-light letter format, content from src/lib/free-ai-tools.ts.

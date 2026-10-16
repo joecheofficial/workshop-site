@@ -1,6 +1,6 @@
 import { formatStars, getFreeAiTool } from './free-ai-tools'
 import type { FreeAiTool } from './free-ai-tools'
-import type { PackPageContent } from './pack-page'
+import type { PackGuideSection, PackPageContent } from './pack-page'
 
 // ---------------------------------------------------------------------------
 // Free AI Tools pages on the pack page template (Illy, 2026-10-14).
@@ -12,10 +12,13 @@ const MASTERMIND_URL = 'https://www.mastermindshq.business'
 
 export function freeAiToolPack(slug: string): PackPageContent {
   const t: FreeAiTool = getFreeAiTool(slug)
+  // Week 2 tools (2026-10-16) carry a one-prompt Claude Code setup and honest limits.
+  // The first ten have none of the optional fields and render exactly as before.
+  if (t.claudePrompt) return setupNotesPack(t)
   const sameAsTool = t.githubUrl === t.toolUrl
   return {
     slug: t.slug,
-    level: 'beginner',
+    level: t.level ?? 'beginner',
     hero: {
       title: `Here is ${t.name}.`,
       free: 'It is free.',
@@ -56,6 +59,65 @@ export function freeAiToolPack(slug: string): PackPageContent {
         a: `Apps change their screens. Use the official links above, which the people who make ${t.name} keep up to date.`,
       },
       { q: 'Is there a catch?', a: t.goodToKnow },
+      { q: 'None of these fixed it', email: 'joe@mastermindshq.business', a: 'Say which step you were on and paste what you saw.' },
+    ],
+    bridge: `You came for a free tool. The next step is a website you own, built by you, that you can change any time.`,
+    emailHeading: `Want my ${t.name} setup notes in your inbox?`,
+  }
+}
+
+/** Setup-notes page: the one Claude Code prompt and the download first, then the manual steps, limits and fixes. */
+function setupNotesPack(t: FreeAiTool): PackPageContent {
+  const sameAsTool = t.githubUrl === t.toolUrl
+  const n = t.steps.length
+  const sections: PackGuideSection[] = []
+  if (t.who) sections.push({ title: "Who it's for", text: t.who })
+  if (t.requirements?.length) sections.push({ title: 'What you need', bullets: t.requirements })
+  sections.push({ title: 'The steps by hand', steps: t.steps })
+  if (t.usePrompt) sections.push({ title: t.usePrompt.title, prompt: { label: 'Copy this', text: t.usePrompt.text } })
+  sections.push({ title: "How I'd use it", bullets: t.howIUse })
+  if (t.limits?.length) sections.push({ title: 'Honest limits, costs and licence', bullets: t.limits })
+  sections.push({ title: 'Links', links: t.links.map((l) => ({ label: l.label, href: l.url })) })
+  sections.push({
+    title: 'Why I share it',
+    text: `I don't make ${t.name} and nobody pays me to share it. It's a free tool I think is worth ten minutes of your time. Try it this week and tell me what you used it for first.`,
+  })
+  return {
+    slug: t.slug,
+    level: t.level ?? 'beginner',
+    hero: {
+      title: `Here are my ${t.name} setup notes.`,
+      free: 'They are free.',
+      lede: t.subline,
+      button: { label: 'Show me the setup', meta: `one prompt or ${n} steps · on this page`, target: 'get' },
+      ticks: t.ticks ?? ['No sign-up here', 'Free and open source', `${formatStars(t.stars)} stars on GitHub`],
+    },
+    jumps: [
+      { target: 'get', label: 'Get it', text: `The official link, and one prompt that sets ${t.name} up in Claude Code.` },
+      { target: 'guide', label: 'Set it up', text: `${n} steps by hand, plus the honest limits and costs.` },
+      { target: 'stuck', label: 'Get unstuck', text: 'The usual problems, and the fix for each.' },
+    ],
+    get: {
+      heading: t.name,
+      intro: t.intro,
+      ...(t.needs ? { note: { lead: 'What you need.', rest: t.needs } } : {}),
+      primary: { label: t.primaryLabel, meta: 'official link', href: t.toolUrl },
+      secondary: sameAsTool ? [] : [{ label: 'See it on GitHub', href: t.githubUrl }],
+      command: { label: 'Use Claude Code? Paste this and it sets it up for you', text: t.claudePrompt as string },
+    },
+    ...(t.does?.length && t.doesNot?.length
+      ? { promise: { heading: `What ${t.name} does, and what it does not`, does: t.does, doesNot: t.doesNot } }
+      : {}),
+    guide: {
+      eyebrow: 'Set it up',
+      heading: `Set it up in ${n} steps`,
+      intro: t.tagline,
+      sections,
+    },
+    stuck: [
+      ...(t.stuck ?? []),
+      { q: 'Is there a catch?', a: t.goodToKnow },
+      { q: 'My screen looks different from the steps', a: `Apps change their screens. Use the official links above, which the people who make ${t.name} keep up to date.` },
       { q: 'None of these fixed it', email: 'joe@mastermindshq.business', a: 'Say which step you were on and paste what you saw.' },
     ],
     bridge: `You came for a free tool. The next step is a website you own, built by you, that you can change any time.`,
