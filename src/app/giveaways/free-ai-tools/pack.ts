@@ -24,22 +24,8 @@ export const FREE_AI_TOOLS_HUB_PACK: PackPageContent = {
   },
   jumps: [
     { target: 'guide', label: 'The 10 swaps', text: 'Paid app, free tool, one line each.' },
-    { target: 'get', label: 'Before you cancel', text: 'What this list is, and what it is not.' },
     { target: 'stuck', label: 'Get unstuck', text: 'The usual questions, and the answer to each.' },
   ],
-  promise: {
-    heading: 'Before you cancel anything',
-    doesNot: [
-      'It is not sponsored. Nobody pays me to share these tools.',
-      'It does not promise every free plan does everything the paid app does.',
-      'It does not ask for a card. None of these need one to start.',
-    ],
-    does: [
-      'Every swap has a free plan or is open source.',
-      'Each one links to my setup notes: 3 steps, how I would use it, and the catch.',
-      'Free plan limits are written down, so you know before you switch.',
-    ],
-  },
   guide: {
     eyebrow: 'The swaps',
     heading: 'Paid app, free swap',
@@ -48,6 +34,14 @@ export const FREE_AI_TOOLS_HUB_PACK: PackPageContent = {
       {
         title: 'The 10 swaps',
         links: rows.map((r) => ({ label: `${r.paid} to ${r.tool.name}: ${r.line}`, href: r.path })),
+      },
+      {
+        title: 'Before you cancel anything',
+        bullets: [
+          'Every swap has a free plan or is open source. None of them need a card to start.',
+          'A free plan does not always do everything the paid app does. Each tool page says exactly what the free plan covers.',
+          'This list is not sponsored. Nobody pays me to share these tools.',
+        ],
       },
       {
         title: 'Where to start',
