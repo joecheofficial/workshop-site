@@ -24,7 +24,9 @@ test('every Free AI Tool has a page, a layout and a registry entry', () => {
     const dir = join(__dirname, '..', 'src', 'app', 'giveaways', t.slug)
     assert.ok(existsSync(join(dir, 'page.tsx')), `${t.slug} page.tsx missing`)
     assert.ok(existsSync(join(dir, 'layout.tsx')), `${t.slug} layout.tsx missing`)
-    assert.ok(readFileSync(join(dir, 'page.tsx'), 'utf8').includes(`getFreeAiTool('${t.slug}')`), `${t.slug} page reads the wrong tool`)
+    // Since 14 Oct the pages render PackPage from the shared table via freeAiToolPack(SLUG).
+    const page = readFileSync(join(dir, 'page.tsx'), 'utf8')
+    assert.ok(page.includes(`const SLUG = '${t.slug}'`) && page.includes('freeAiToolPack(SLUG)'), `${t.slug} page reads the wrong tool`)
     assert.ok(giveaways.some((g) => g.slug === t.slug), `${t.slug} not in the giveaways registry`)
   }
 })
@@ -46,6 +48,7 @@ test('every Free AI Tool slug is deliverable and its email carries the real link
 test('page copy has no em dashes', () => {
   const src = readFileSync(join(__dirname, '..', 'src', 'lib', 'free-ai-tools.ts'), 'utf8')
   assert.ok(!src.includes('—'))
-  const comp = readFileSync(join(__dirname, '..', 'src', 'components', 'giveaways', 'FreeAiToolPage.tsx'), 'utf8')
+  // FreeAiToolPage.tsx was replaced by the pack page adapter on 14 Oct.
+  const comp = readFileSync(join(__dirname, '..', 'src', 'lib', 'free-ai-tool-pack.ts'), 'utf8')
   assert.ok(!comp.includes('—'))
 })

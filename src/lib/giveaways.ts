@@ -14,6 +14,14 @@ export interface Giveaway {
 // ---------------------------------------------------------------------------
 export const giveaways: Giveaway[] = [
   {
+    slug: 'free-ai-tools',
+    title: 'Free AI Tools: 10 free swaps',
+    description: 'Ten paid apps a small business pays for every month, and the free tool I would use instead of each one.',
+    icon: '⇄',
+    badge: 'Free Tools',
+    badgeVariant: 'purple',
+  },
+  {
     slug: 'free-ai-claude-skills',
     title: 'Free AI Tools: Claude Skills',
     description: "Anthropic's free library of Claude skills: real Word, PowerPoint and Excel files, your brand on every one.",

@@ -77,6 +77,8 @@ export const DELIVERABLE_LEAD_MAGNET_SOURCES: ReadonlySet<string> = new Set([
   'whatsapp-agent',
   // Free AI Tools batch (2026-10-08): one template for all ten, see src/lib/free-ai-tool-email.ts.
   ...FREE_AI_TOOL_SLUGS,
+  // Free AI Tools hub, keyword SWAP (2026-10-16): all ten swaps in one letter, see src/lib/free-ai-tools-hub-email.ts.
+  'free-ai-tools',
   // AI quiz giveaways, IG keywords LEVEL and BEHAVIOR (2026-10-08), see src/lib/quiz-giveaway-email.ts.
   ...QUIZ_GIVEAWAY_SLUGS,
 ])
