@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next'
+import { FREE_AI_TOOL_SLUGS } from '@/lib/free-ai-tools'
 
 const BASE = 'https://workshop.mastermindshq.business'
 const NOW = new Date()
@@ -24,6 +25,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/giveaways/lead-machine`,                lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/giveaways/tokens`,                      lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/giveaways/whatsapp-agent`,              lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
+    // Free AI Tools setup notes (one page per keyword, from the shared table)
+    ...FREE_AI_TOOL_SLUGS.map((slug) => ({ url: `${BASE}/giveaways/${slug}`, lastModified: NOW, changeFrequency: 'monthly' as const, priority: 0.7 })),
     // Lead magnets
     { url: `${BASE}/lead-magnets/ultimate-claudemd`,        lastModified: NOW, changeFrequency: 'monthly', priority: 0.7 },
   ]

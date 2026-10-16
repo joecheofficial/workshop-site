@@ -12,9 +12,9 @@ import { FREE_AI_TOOLS_HUB_PACK } from '../src/app/giveaways/free-ai-tools/pack'
 
 // Free AI Tools hub, keyword SWAP (paid app vs free swap carousel, 21 Oct 2026).
 
-test('the hub lists every Free AI Tool exactly once', () => {
+test('the hub lists each of the original ten Free AI Tools exactly once (the SWAP carousel promises those 10)', () => {
   assert.equal(FREE_AI_TOOLS_HUB_SLUG, 'free-ai-tools')
-  assert.deepEqual([...FREE_AI_SWAPS.map((s) => s.slug)].sort(), [...FREE_AI_TOOL_SLUGS].sort())
+  assert.deepEqual([...FREE_AI_SWAPS.map((s) => s.slug)].sort(), [...FREE_AI_TOOL_SLUGS.slice(0, 10)].sort())
   for (const s of FREE_AI_SWAPS) {
     assert.ok(s.paid.trim() && s.line.trim(), `${s.slug} needs a paid app and a line`)
     assert.ok(!s.line.includes('$'), `${s.slug}: no prices on the hub, paid plans change`)
