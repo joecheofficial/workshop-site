@@ -44,14 +44,14 @@ export function buildFreeAiToolEmail({
         <p>Hi,</p>
         <p>Here&rsquo;s the link you asked for: <a href="${esc(tool.toolUrl)}" style="${linkStyle}">${esc(tool.name)}</a>.</p>
         <p>${esc(tool.intro)}</p>
-        <p style="color:#6a6480;">Set it up in 3 steps:</p>
+        <p style="color:#6a6480;">Set it up in ${tool.steps.length} steps:</p>
         ${tool.steps.map((s, i) => `<p style="${itemStyle}"><span style="${labelStyle}">${i + 1}.</span> ${esc(s)}</p>`).join('\n        ')}
         <p style="color:#6a6480;margin-top:18px;">How I&rsquo;d use it:</p>
         ${tool.howIUse.map((s) => `<p style="${itemStyle}">${esc(s)}</p>`).join('\n        ')}
         <p style="margin-top:18px;"><span style="${labelStyle}">Good to know.</span> ${esc(tool.goodToKnow)}</p>
         <p style="color:#6a6480;">Links:</p>
         ${tool.links.map((l) => `<p style="margin:0 0 6px;"><a href="${esc(l.url)}" style="${linkStyle}">${esc(l.label)}</a></p>`).join('\n        ')}
-        <p style="margin-top:16px;">My setup notes stay open here too: <a href="${pageUrl}" style="${linkStyle}">${esc(tool.name)} setup page</a>.</p>
+        <p style="margin-top:16px;">My setup notes stay open here too: <a href="${pageUrl}" style="${linkStyle}">${esc(tool.name)} setup page</a>.${tool.claudePrompt ? ' If you use Claude Code, the page has one prompt you can paste in, and it sets everything up for you.' : ''}</p>
         <p>If you want help putting tools like this to work in your business, that is what we do every week at <a href="${mhqUrl}" style="${linkStyle}">Masterminds HQ</a>.</p>
         <p>Enjoy it. Reply and tell me what you used it for first.</p>
         <p style="margin-top:20px;">Joe</p>
@@ -66,7 +66,7 @@ export function buildFreeAiToolEmail({
     '',
     tool.intro,
     '',
-    'Set it up in 3 steps:',
+    `Set it up in ${tool.steps.length} steps:`,
     ...tool.steps.map((s, i) => `${i + 1}. ${s}`),
     '',
     "How I'd use it:",
@@ -78,6 +78,7 @@ export function buildFreeAiToolEmail({
     ...tool.links.map((l) => `- ${l.label}: ${l.url}`),
     '',
     `My setup notes stay open here too: ${pageUrl}`,
+    ...(tool.claudePrompt ? ['If you use Claude Code, the page has one prompt you can paste in, and it sets everything up for you.'] : []),
     '',
     `If you want help putting tools like this to work in your business, that is what we do every week at Masterminds HQ (${mhqUrl}).`,
     '',
