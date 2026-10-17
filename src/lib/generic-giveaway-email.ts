@@ -178,3 +178,72 @@ export function websiteGiveawayEmail(source: string): { name: string; link: stri
   const name = WEBSITE_GENERIC_GIVEAWAYS[source]
   return name ? { name, link: `https://workshop.mastermindshq.business/giveaways/${source}` } : null
 }
+
+// ---------------------------------------------------------------------------
+// Instagram SALES keywords (Illy, 2026-10-17: "we should be collecting their details").
+// BOOK, MASTERMIND, META, ADS, TEAM and BUILD used to DM a sales link with no email
+// step. Their ManyChat flows now ask name, then email, then send the same link, and
+// post here with source `kw-<keyword>`. A "Your copy of ..." letter is wrong for a
+// sales page, and the book link is Amazon (not on the allowlist above), so these
+// sources get their own short letter. The link is fixed here, never taken from the
+// request, so no caller can choose where it points.
+// ---------------------------------------------------------------------------
+export const SALES_KEYWORD_PAGES: Readonly<Record<string, { label: string; link: string }>> = {
+  'kw-book': { label: 'my book on Amazon', link: 'https://www.amazon.com/dp/B0H4GR93WT' },
+  'kw-mastermind': { label: 'the Masterminds HQ AI Mastermind', link: 'https://mastermindshq.business' },
+  'kw-meta': { label: 'Meta Ads with Claude Code', link: 'https://mastermindshq.business/meta-ads-with-claude-code' },
+  'kw-ads': { label: 'Meta Ads with Claude Code', link: 'https://mastermindshq.business/meta-ads-with-claude-code' },
+  'kw-team': { label: 'Meta Ads with Claude Code', link: 'https://mastermindshq.business/meta-ads-with-claude-code' },
+  'kw-build': { label: 'the Website Workshop', link: 'https://mastermindshq.business/masterminds-website-workshop' },
+}
+
+/** The sales page for an IG sales-keyword source, or null for any other source. */
+export function salesKeywordPage(source: string): { label: string; link: string } | null {
+  return Object.prototype.hasOwnProperty.call(SALES_KEYWORD_PAGES, source) ? SALES_KEYWORD_PAGES[source] : null
+}
+
+export function buildSalesKeywordEmail({
+  source,
+  unsubscribeFooter,
+  unsubscribeUrl,
+}: {
+  source: string
+  unsubscribeFooter: string
+  unsubscribeUrl: string | null
+}) {
+  const page = salesKeywordPage(source)
+  if (!page) throw new Error(`not a sales keyword source: ${source}`)
+  const host = new URL(page.link).hostname.toLowerCase()
+  const url = isMastermindsHost(host) ? withUtm(page.link, { campaign: 'ig-keyword', content: source }) : page.link
+  const linkStyle = 'color:#6f5cc4;font-weight:bold;'
+
+  const subject = 'The link you asked for on Instagram'
+
+  const html = `
+      <div style="font-family:Georgia,'Times New Roman',serif;font-size:16px;line-height:1.7;color:#2a2536;max-width:560px;">
+        <p>Hi,</p>
+        <p>Here&rsquo;s the link you asked for on Instagram: <a href="${esc(url)}" style="${linkStyle}">${esc(page.label)}</a>.</p>
+        <p>Putting it here so it doesn&rsquo;t get lost in your DMs.</p>
+        <p>Any questions, just hit reply. I read every one.</p>
+        <p style="margin-top:20px;">Joe</p>
+        ${unsubscribeFooter}
+      </div>
+    `
+
+  const text = [
+    'Hi,',
+    '',
+    `Here's the link you asked for on Instagram: ${page.label}`,
+    url,
+    '',
+    "Putting it here so it doesn't get lost in your DMs.",
+    '',
+    'Any questions, just hit reply. I read every one.',
+    '',
+    'Joe',
+    '',
+    unsubscribeUrl ? `Sent by Masterminds HQ. Unsubscribe any time: ${unsubscribeUrl}` : 'Sent by Masterminds HQ.',
+  ].join('\n')
+
+  return { subject, html, text }
+}

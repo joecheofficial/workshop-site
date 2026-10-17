@@ -15,7 +15,9 @@ import { isFreeAiToolSource } from '@/lib/free-ai-tools'
 import { buildQuizGiveawayEmail, isQuizGiveawaySource } from '@/lib/quiz-giveaway-email'
 import {
   buildGenericGiveawayEmail,
+  buildSalesKeywordEmail,
   isValidManychatSecret,
+  salesKeywordPage,
   sanitizeGiveawayName,
   validateGiveawayLink, websiteGiveawayEmail } from '@/lib/generic-giveaway-email'
 
@@ -570,6 +572,13 @@ Remind me to run guardog analyze &lt;package-name&gt; &lt;npm or pypi&gt; before
     subject = quizEmail.subject
     html = quizEmail.html
     text = quizEmail.text
+  } else if (salesKeywordPage(source)) {
+    // IG sales keywords (BOOK, MASTERMIND, META, ADS, TEAM, BUILD): short
+    // "here's the link you asked for" letter, link fixed server-side.
+    const salesEmail = buildSalesKeywordEmail({ source, unsubscribeFooter, unsubscribeUrl })
+    subject = salesEmail.subject
+    html = salesEmail.html
+    text = salesEmail.text
   } else if (generic) {
     // ManyChat IG giveaway with no bespoke template: generic "here's your
     // link" letter. Only reachable when the POST handler has verified the
@@ -719,6 +728,21 @@ export async function POST(request: Request) {
     // Website callers (no secret) keep the fail-closed 422 below.
     // Website callers on the pack pages listed in WEBSITE_GENERIC_GIVEAWAYS get the same email,
     // linking back to that page (Illy, 2026-10-14). Anything else keeps the fail-closed 422 below.
+    // IG sales keywords (source kw-<keyword>, Illy 2026-10-17): the ManyChat flow
+    // asks for the email before it DMs the sales link. Lead saved above; send the
+    // short sales-link letter (never the "Your copy of" giveaway letter).
+    if (isManychat && salesKeywordPage(source)) {
+      const idempotencyKey = `lead-magnet/${source}/${email.trim().toLowerCase()}`
+      await sendViaResend(email, source, idempotencyKey)
+      await trackInsightEvent('initial_email_sent', {
+        route: '/api/lead-magnet',
+        email,
+        sessionId: typeof journeyId === 'string' ? journeyId : null,
+        properties: { source, email_type: 'sales_keyword_link' },
+      })
+      return NextResponse.json({ success: true, salesKeyword: true })
+    }
+
     const websiteGeneric = isManychat ? null : websiteGiveawayEmail(source)
     const genericLink = isManychat ? validateGiveawayLink(rawLink) : websiteGeneric?.link ?? null
     if (!isDeliverableLeadMagnetSource(source) && genericLink) {
