@@ -20,7 +20,7 @@
 import { execFileSync } from 'node:child_process'
 import { createHash, createHmac, randomBytes } from 'node:crypto'
 import { promises as dns } from 'node:dns'
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { createRequire } from 'node:module'
 import { homedir } from 'node:os'
 import path from 'node:path'
@@ -55,6 +55,14 @@ for (const line of readFileSync((value('--env-file') || `${WS}/.env`).replace(/^
   const i = line.indexOf('=')
   const k = line.slice(0, i).trim()
   if (!(k in process.env)) process.env[k] = line.slice(i + 1).trim().replace(/^"|"$/g, '')
+}
+
+// Unattended (cron) runs: gog needs its keyring password and Homebrew on PATH, same as the
+// other scheduled jobs (agents/lina/data/reminders/martin-reply-watch-1013.js).
+process.env.PATH = `/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin:${process.env.PATH || ''}`
+{
+  const kp = path.join(homedir(), 'Library/Application Support/gogcli/keyring-password')
+  if (!process.env.GOG_KEYRING_PASSWORD && existsSync(kp)) process.env.GOG_KEYRING_PASSWORD = readFileSync(kp, 'utf8').trim()
 }
 
 const SUPABASE_URL = process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL
@@ -96,6 +104,17 @@ function linaToken() {
   process.env.LINA_TELEGRAM_BOT_TOKEN ||= read('LINA_TELEGRAM_BOT_TOKEN')
   process.env.LINA_OWNER_CHAT_IDS ||= read('LINA_OWNER_CHAT_IDS')
 }
+// A failure that repeats every 15 minutes pings Illy at most once per 6 hours per kind.
+const ALERT_STATE = path.join(homedir(), '.myos/logs/giveaway-followups-alerts.json')
+function alertDue(kind) {
+  let state = {}
+  try { state = JSON.parse(readFileSync(ALERT_STATE, 'utf8')) } catch {}
+  if (state[kind] && Date.now() - state[kind] < 6 * HOUR) return false
+  state[kind] = Date.now()
+  try { mkdirSync(path.dirname(ALERT_STATE), { recursive: true }); writeFileSync(ALERT_STATE, JSON.stringify(state)) } catch {}
+  return true
+}
+
 async function lina(text) {
   linaToken()
   const token = process.env.LINA_TELEGRAM_BOT_TOKEN
@@ -552,8 +571,8 @@ async function main() {
     }
   }
   console.log(`sent ${count}, failed ${failures.length}`)
-  if (failures.length && alert) await lina(`Free-gift follow-ups: ${failures.length} send(s) failed.\n${failures.slice(0, 5).join('\n')}\nLog: ~/.myos/logs/giveaway-followups.log`)
-  if (lookupFailed.size && alert) await lina(`Free-gift follow-ups: lookups failed for ${lookupFailed.size} lead(s), they were skipped this run. Log: ~/.myos/logs/giveaway-followups.log`)
+  if (failures.length && alert && alertDue('send_failed')) await lina(`Free-gift follow-ups: ${failures.length} send(s) failed.\n${failures.slice(0, 5).join('\n')}\nLog: ~/.myos/logs/giveaway-followups.log`)
+  if (lookupFailed.size && alert && alertDue('lookup_failed')) await lina(`Free-gift follow-ups: lookups failed for ${lookupFailed.size} lead(s), they were skipped this run. Log: ~/.myos/logs/giveaway-followups.log`)
 }
 
 // Lookups exported for a live smoke check (import does not run main on Node 26).
@@ -561,7 +580,7 @@ export { checkoutStartedSince, bookedCall, crmFirstSource, slugForKeyword, strip
 
 if (import.meta.main) main().catch(async (err) => {
   console.error(err.stack || err.message)
-  if (alert) await lina(`Free-gift follow-ups crashed: ${err.message}\nLog: ~/.myos/logs/giveaway-followups.log`)
+  if (alert && alertDue('crash')) await lina(`Free-gift follow-ups crashed: ${err.message}\nLog: ~/.myos/logs/giveaway-followups.log`)
   process.exitCode = 1
 })
 
