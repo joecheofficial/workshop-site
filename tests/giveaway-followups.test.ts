@@ -76,6 +76,17 @@ test('every link in every email is a Shlink short link, and the HTML footer show
   }
 })
 
+test('each email step uses its own slugs, so clicks count per email', () => {
+  const v = { first_name: 'R', bonus_link: 'https://a.mastermindshq.business/fg-bonus-1' }
+  assert.match(renderQuickwin('starter', v).text, /fg-q-demo/)
+  assert.match(renderQuickwin('builder', v).text, /fg-q-meta/)
+  assert.match(renderLast('last_meta_final_review', v).text, /fg-l-meta/)
+  assert.match(renderSalesDay5('last_meta_final_review', v).text, /fg-s5-meta/)
+  assert.match(renderSalesDay5('sales_last_book', v).text, /fg-s5-book/)
+  assert.match(renderGift2('starter', GIFTS['lead-machine'], v).text, /fg-gift-lead-machine[\s\S]*fg-g-demo/)
+  assert.match(renderLive(LIVE_EVENTS[0], v).text, /fg-v-meta/)
+})
+
 test('DM greeting uses the first name only, or none', () => {
   assert.equal(renderDmLevel('rick visca')[0], 'Hey rick, glad you grabbed it')
   assert.equal(renderDmLevel('')[0], 'Hey, glad you grabbed it')
@@ -99,8 +110,8 @@ test('levels from gift and quiz score', () => {
 })
 
 test('day 0 P.S.: starter gifts get the demo, builder gifts the Meta course, quiz and sales keywords none', () => {
-  assert.match(dayZeroPs('lead-machine')!.text, /a\.mastermindshq\.business\/fg-demo/)
-  assert.match(dayZeroPs('guardog')!.text, /a\.mastermindshq\.business\/fg-meta/)
+  assert.match(dayZeroPs('lead-machine')!.text, /a\.mastermindshq\.business\/fg-p-demo/)
+  assert.match(dayZeroPs('guardog')!.text, /a\.mastermindshq\.business\/fg-p-meta/)
   assert.equal(dayZeroPs('ai-levels-quiz'), null)
   assert.equal(dayZeroPs('kw-book'), null)
 })
@@ -208,9 +219,9 @@ test('sales keywords: clicking through to checkout or booking a call ends it', (
 test('sales copy: no price in the Mastermind emails, one link that matches its offer', () => {
   for (const k of ['mastermind'] as const) assert.doesNotMatch(renderSalesDay2(k, {}).text, /\$\d|https?:/)
   assert.doesNotMatch(renderSalesDay5('sales_last_mastermind', {}).text, /\$\d|https?:/)
-  assert.match(renderSalesDay2('book', {}).text, /a\.mastermindshq\.business\/fg-book/)
-  assert.match(renderSalesDay2('meta', {}).text, /a\.mastermindshq\.business\/fg-meta/)
-  assert.match(renderSalesDay2('workshop', {}).text, /a\.mastermindshq\.business\/fg-workshop/)
+  assert.match(renderSalesDay2('book', {}).text, /a\.mastermindshq\.business\/fg-s2-book/)
+  assert.match(renderSalesDay2('meta', {}).text, /a\.mastermindshq\.business\/fg-s2-meta/)
+  assert.match(renderSalesDay2('workshop', {}).text, /a\.mastermindshq\.business\/fg-s2-workshop/)
   for (const o of Object.keys(SALES_DAY2) as (keyof typeof SALES_DAY2)[]) assert.doesNotMatch(renderSalesDay2(o, {}).text, /Your copy of/i)
 })
 

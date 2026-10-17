@@ -512,7 +512,21 @@ Come join me live: {event_link}
 Joe`,
 }
 
-export type RenderVars = { first_name?: string; unsubscribe_url?: string; name?: string; bonus_link?: string }
+export type RenderVars = { first_name?: string; unsubscribe_url?: string; name?: string; bonus_link?: string; step_code?: StepCode }
+
+/**
+ * Each email step gets its own Shlink slugs so the Marketing Overview can count clicks per
+ * email (Illy, 17 Oct: "we need the campaigns"): fg-demo becomes fg-q-demo in the day 2-3
+ * email, fg-p-demo in the day 0 P.S., and so on. Gift links (fg-gift-*) live in one step only.
+ */
+export type StepCode = 'p' | 'q' | 'l' | 'g' | 'v' | 's2' | 's5'
+export const STEP_CODE_LABELS: Record<StepCode, string> = {
+  p: 'Day 0 P.S.', q: 'Day 2-3 quick win', l: 'Day 5-7 last email', g: 'Day 14 new gift', v: 'Day 30 live date',
+  s2: 'Sales day 2', s5: 'Sales day 5',
+}
+export function stepLink(url: string, code?: StepCode): string {
+  return code ? url.replace('/fg-', `/fg-${code}-`) : url
+}
 
 /** How long the day 5-7 workshop bonus link works. The email text says 72 hours. */
 export const BONUS_TTL_HOURS = 72
@@ -525,10 +539,10 @@ function baseVars(v: RenderVars): Record<string, string> {
   return {
     first_name: v.first_name || '',
     unsubscribe_url: v.unsubscribe_url || '',
-    demo_link: LINKS.demo,
-    workshop_link: LINKS.workshop,
-    meta_link: LINKS.metaAds,
-    book_link: BOOK_LINK,
+    demo_link: stepLink(LINKS.demo, v.step_code),
+    workshop_link: stepLink(LINKS.workshop, v.step_code),
+    meta_link: stepLink(LINKS.metaAds, v.step_code),
+    book_link: stepLink(BOOK_LINK, v.step_code),
     ...(v.bonus_link ? { bonus_link: v.bonus_link } : {}),
   }
 }
@@ -543,20 +557,20 @@ export function renderTemplate(t: Template, v: RenderVars): { subject: string; t
 }
 
 export function renderQuickwin(level: Level, v: RenderVars) {
-  return renderTemplate(QUICKWIN[level], v)
+  return renderTemplate(QUICKWIN[level], { ...v, step_code: 'q' })
 }
 
 export function renderLast(variant: Exclude<LastVariant, 'hold_meta'>, v: RenderVars) {
-  return renderTemplate(LAST[variant], v)
+  return renderTemplate(LAST[variant], { step_code: 'l', ...v })
 }
 
 export function renderSalesDay2(offer: SalesOffer, v: RenderVars) {
-  return renderTemplate(SALES_DAY2[offer], v)
+  return renderTemplate(SALES_DAY2[offer], { ...v, step_code: 's2' })
 }
 
 export function renderSalesDay5(variant: SalesLastVariant, v: RenderVars) {
-  if (variant === 'sales_last_book' || variant === 'sales_last_mastermind') return renderTemplate(SALES_LAST[variant], v)
-  return renderLast(variant, v)
+  if (variant === 'sales_last_book' || variant === 'sales_last_mastermind') return renderTemplate(SALES_LAST[variant], { ...v, step_code: 's5' })
+  return renderLast(variant, { ...v, step_code: 's5' })
 }
 
 export function renderGift2(level: Level, gift: Gift, v: RenderVars) {
@@ -564,15 +578,15 @@ export function renderGift2(level: Level, gift: Gift, v: RenderVars) {
   return renderTemplate({
     subject: fillGift(GIFT2_TEMPLATE.subject),
     body: fillGift(GIFT2_TEMPLATE.body).replace('{next_step}', GIFT2_NEXT_STEP[level]),
-  }, v)
+  }, { ...v, step_code: 'g' })
 }
 
 export function renderLive(event: LiveEvent, v: RenderVars) {
   return renderTemplate({
     subject: event.subject,
     body: LIVE_TEMPLATE.body.replace('{event_intro}', event.intro).replace('{event_when}', event.when)
-      .replace('{event_note}', event.note ? `\n\n${event.note}` : '').replace('{event_link}', event.link),
-  }, v)
+      .replace('{event_note}', event.note ? `\n\n${event.note}` : '').replace('{event_link}', stepLink(event.link, 'v')),
+  }, { ...v, step_code: 'v' })
 }
 
 export function renderDmLevel(name?: string): string[] {
@@ -584,8 +598,8 @@ export function renderDmLevel(name?: string): string[] {
 export function dayZeroPs(source: string): { text: string; html: string } | null {
   if (!source || NO_PS_SOURCES.has(source) || isSalesKeywordSource(source)) return null
   const raw = DAY_ZERO_PS[levelFromSource(source) === 'builder' ? 'builder' : 'starter']
-  const text = fill(raw, baseVars({}))
-  const link = levelFromSource(source) === 'builder' ? LINKS.metaAds : LINKS.demo
+  const text = fill(raw, baseVars({ step_code: 'p' }))
+  const link = stepLink(levelFromSource(source) === 'builder' ? LINKS.metaAds : LINKS.demo, 'p')
   const html = `<p style="margin-top:20px;">${text
     .replace(link, `<a href="${link}" style="color:#6f5cc4;font-weight:bold;">${link.replace('https://', '')}</a>`)}</p>`
   return { text, html }

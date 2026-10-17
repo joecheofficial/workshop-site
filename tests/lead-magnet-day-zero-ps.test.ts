@@ -9,13 +9,13 @@ const text = 'Here it is.\n\nJoe\n\nSent by Masterminds HQ. Unsubscribe any time
 
 test('starter gift: demo P.S. after the sign-off, above the unsubscribe footer, in html and text', () => {
   const out = withDayZeroPs('lead-machine', { html, text, footerHtml: footer })
-  assert.ok(out.html.indexOf('fg-demo') > out.html.indexOf('<p>Joe</p>'))
-  assert.ok(out.html.indexOf('fg-demo') < out.html.indexOf('Sent by Masterminds HQ'))
+  assert.ok(out.html.indexOf('fg-p-demo') > out.html.indexOf('<p>Joe</p>'))
+  assert.ok(out.html.indexOf('fg-p-demo') < out.html.indexOf('Sent by Masterminds HQ'))
   assert.match(out.text!, /Joe\n\nP\.S\. New to building with AI\? Start with my free demo\..*\n\nSent by Masterminds HQ/s)
 })
 
 test('builder gift gets the Meta Ads P.S.; quiz and sales keywords get none', () => {
-  assert.match(withDayZeroPs('guardog', { html, text, footerHtml: footer }).text!, /fg-meta/)
+  assert.match(withDayZeroPs('guardog', { html, text, footerHtml: footer }).text!, /fg-p-meta/)
   for (const src of ['ai-levels-quiz', 'kw-book', 'kw-mastermind']) {
     assert.deepEqual(withDayZeroPs(src, { html, text, footerHtml: footer }), { html, text })
   }
