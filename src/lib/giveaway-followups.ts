@@ -125,7 +125,7 @@ const FOOTER =
 
 export const DAY_ZERO_PS: Record<'starter' | 'builder', string> = {
   starter:
-    'P.S. New to building with AI? Start with my free 10-minute demo. You watch beginners build a real website just by talking to AI, no code: {demo_link}',
+    'P.S. New to building with AI? Start with my free demo. You watch beginners build a real website just by talking to AI, no code: {demo_link}',
   builder:
     'P.S. Already building with Claude Code? I teach how to run your Meta ads through it. Claude drafts the campaign, creates it paused, and nothing spends a dollar until you say go: {meta_link}',
 }
@@ -155,7 +155,7 @@ Here's one to try today. Think of an email you've been putting off answering. Op
 
 Ten minutes, and the thing you've been avoiding is done.
 
-If you want to see how far that goes, I made a free 10-minute demo where beginners build a real website just by talking to AI. No code: {demo_link}
+If you want to see how far that goes, I made a free demo where beginners build a real website just by talking to AI. No code: {demo_link}
 
 Hit reply and tell me how it went. I read these.
 
@@ -174,7 +174,7 @@ Write it once instead:
 
 In ChatGPT, put it in Settings, Personalization, Custom instructions. In Claude, make a Project and paste it into the project instructions. Now every chat starts already knowing you.
 
-The next step after that is having AI build things for you, not just write. My free 10-minute demo shows beginners building a real website just by talking to AI: {demo_link}
+The next step after that is having AI build things for you, not just write. My free demo shows beginners building a real website just by talking to AI: {demo_link}
 
 Hit reply and tell me what you use AI for most. I read these.
 

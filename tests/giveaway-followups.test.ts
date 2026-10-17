@@ -29,6 +29,21 @@ test('free emails never quote the price of a paid product except the offer itsel
   for (const level of ['starter', 'everyday'] as const) assert.doesNotMatch(renderQuickwin(level, {}).text, /\$\d/)
 })
 
+test('copy never says how long the demo or a session is (Illy, 17 Oct)', () => {
+  const v = { first_name: 'Rick', unsubscribe_url: 'https://x/u' }
+  const all = [
+    ...(Object.keys(QUICKWIN) as (keyof typeof QUICKWIN)[]).map((l) => renderQuickwin(l, v).text),
+    ...(Object.keys(LAST) as (keyof typeof LAST)[]).map((k) => renderLast(k, v).text),
+    dayZeroPs('lead-machine')!.text, dayZeroPs('tokens')!.text, ...renderDmLevel('Rick'), ...DM_ACK_BUBBLES,
+  ]
+  const duration = /(\d+|one|two|three|five|ten|fifteen|twenty|thirty)[\s-]*(min|minute|hour|hr)/i
+  for (const text of all) {
+    for (const sentence of text.split(/(?<=[.?!:])\s+|\n/)) {
+      if (/demo|session/i.test(sentence)) assert.doesNotMatch(sentence, duration, sentence)
+    }
+  }
+})
+
 test('DM greeting uses the first name only, or none', () => {
   assert.equal(renderDmLevel('rick visca')[0], 'Hey rick, glad you grabbed it')
   assert.equal(renderDmLevel('')[0], 'Hey, glad you grabbed it')
