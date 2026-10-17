@@ -307,8 +307,9 @@ async function resendSend({ to, subject, text, step, key, replyTo = [REPLY_TO] }
 }
 
 async function sendDm(subscriberId, bubbles) {
+  // Same body shape as the live ManyChat stuck-link watcher (agents/manychat/src/stuck-link-watch.js).
   return mc().post('/fb/sending/sendContent', {
-    subscriber_id: subscriberId,
+    subscriber_id: Number(subscriberId),
     data: { version: 'v2', content: { type: 'instagram', messages: bubbles.map((text) => ({ type: 'text', text })) } },
   })
 }
