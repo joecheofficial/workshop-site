@@ -51,6 +51,7 @@ export const GIVEAWAY_OFFERS: Record<GiveawayLevel, GiveawayOffer | null> = {
       { value: '5', label: 'minute video, free to watch' },
       { value: '1', label: 'real website, built by talking to AI' },
       { value: '0', label: 'tech skills needed' },
+      { value: 'Now', label: 'plays the moment you sign up' },
     ],
     body:
       'It is a short video from my Website Workshop. You watch real beginners build a website just by telling AI what they want, in plain English. No code, no tech words.',
