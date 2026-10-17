@@ -13,6 +13,7 @@ import { buildFreeAiToolsHubEmail } from '@/lib/free-ai-tools-hub-email'
 import { buildWhatsAppAgentEmail } from '@/lib/whatsapp-agent-email'
 import { isFreeAiToolSource } from '@/lib/free-ai-tools'
 import { buildQuizGiveawayEmail, isQuizGiveawaySource } from '@/lib/quiz-giveaway-email'
+import { withDayZeroPs } from '@/lib/giveaway-followups'
 import {
   buildGenericGiveawayEmail,
   buildSalesKeywordEmail,
@@ -601,6 +602,10 @@ Remind me to run guardog analyze &lt;package-name&gt; &lt;npm or pypi&gt; before
     // DELIVERABLE_LEAD_MAGNET_SOURCES in src/lib/lead-magnets.ts.
     throw new UnknownLeadMagnetSourceError(source)
   }
+
+  // Day-0 P.S. of the free-gift follow-up sequence (Illy, 17 Oct 2026): one next
+  // offer matched to the gift's level. No P.S. for the levels quiz or sales keywords.
+  ;({ html, text } = withDayZeroPs(source, { html, text, footerHtml: unsubscribeFooter }))
 
   const res = await fetch('https://api.resend.com/emails', {
     method: 'POST',

@@ -588,6 +588,34 @@ export function dayZeroPs(source: string): { text: string; html: string } | null
   return { text, html }
 }
 
+/**
+ * Adds the day-0 P.S. to a delivery email built by /api/lead-magnet: after the sign-off,
+ * above the unsubscribe footer. Returns the email unchanged when the gift has no P.S.
+ * `text` stays undefined when the route had none (it derives one from the html).
+ */
+export function withDayZeroPs(
+  source: string,
+  email: { html: string; text?: string; footerHtml?: string },
+): { html: string; text?: string } {
+  const ps = dayZeroPs(source)
+  if (!ps) return { html: email.html, text: email.text }
+  let html = email.html
+  if (email.footerHtml && html.includes(email.footerHtml)) {
+    html = html.replace(email.footerHtml, `${ps.html}\n${email.footerHtml}`)
+  } else {
+    const end = html.lastIndexOf('</div>')
+    html = end === -1 ? `${html}\n${ps.html}` : `${html.slice(0, end)}${ps.html}\n${html.slice(end)}`
+  }
+  let text = email.text
+  if (text !== undefined) {
+    const lines = text.split('\n')
+    const footerAt = lines.findIndex((l) => /^(Sent by Masterminds HQ|--$)/.test(l.trim()))
+    if (footerAt === -1) text = `${text}\n\n${ps.text}`
+    else text = [...lines.slice(0, footerAt), ps.text, '', ...lines.slice(footerAt)].join('\n')
+  }
+  return { html, text }
+}
+
 /** Plain text to simple HTML: paragraphs, line breaks, clickable links (house pretty-light format). */
 export function toHtml(text: string): string {
   const escape = (v: string) => v.replace(/[&<>"']/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[ch]!)
