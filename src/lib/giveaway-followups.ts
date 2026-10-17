@@ -832,7 +832,10 @@ export function planFollowups(input: PlanInput): { due: DueItem[]; skipped: Reco
         if (sinceIgH < DM_AFTER_HOURS) { skip('waiting_dm'); continue }
       }
       if (dm && !mine.has('dm_ack') && lastIg && lastIg.getTime() > new Date(dm.sent_at).getTime() + 5000) {
-        const reply = (sub.last_input_text || '').trim()
+        // ManyChat may not capture a typed reply outside an input block, so last_input_text can
+        // still be their email from the flow. Then we know THAT they replied, not WHAT.
+        const raw = (sub.last_input_text || '').trim()
+        const reply = raw.toLowerCase() === email ? '(their reply was not captured, read it in the DM thread)' : raw
         const answered = parseLevelReply(reply)
         const sinceReplyH = (now.getTime() - lastIg.getTime()) / HOUR
         if (answered && sinceReplyH < DM_WINDOW_CLOSES_HOURS) {

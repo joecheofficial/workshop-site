@@ -259,6 +259,8 @@ test('a numbered answer gets the ack and sets the level; words go to a human and
   const withReply = (text: string): Map<string, Subscriber> => new Map([['a@x.com', { id: '9', ig_last_interaction: ago(1), last_input_text: text }]])
   const ack = plan({ leads: [lead('a@x.com', 26)], sent: dm, subscribers: withReply('3') }).due
   assert.deepEqual(ack.map((d) => [d.step, d.level]), [['dm_ack', 'builder']])
+  const stale = plan({ leads: [lead('a@x.com', 26)], sent: dm, subscribers: withReply('a@x.com') }).due
+  assert.deepEqual(stale.map((d) => [d.step, d.reply_text]), [['dm_human', '(their reply was not captured, read it in the DM thread)']])
   const human = plan({ leads: [lead('a@x.com', 26)], sent: dm, subscribers: withReply('I run a yoga studio') }).due
   assert.deepEqual(human.map((d) => d.step), ['dm_human'])
   const stopped = plan({ leads: [lead('a@x.com', 50)], sent: [...dm, { email: 'a@x.com', step: 'dm_human', sent_at: ago(20) }] })
