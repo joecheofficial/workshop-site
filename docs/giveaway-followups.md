@@ -2,7 +2,7 @@
 
 Illy approved the outline on 17 Oct 2026 (Hormozi, $100M Money Models: don't go quiet after a free gift).
 Copy + rules: `src/lib/giveaway-followups.ts`. Sender: `scripts/giveaway-followups.mjs`.
-Sent log: Supabase `giveaway_followup_sends` (migrations 018 + 019, applied 17 Oct).
+Sent log: Supabase `giveaway_followup_sends` (migrations 018, 019, 020, applied 17 Oct).
 
 | When | What | Channel |
 |---|---|---|
@@ -21,6 +21,13 @@ workshop demo/checkout, or has a call on Illy's or Joe's calendar = out. Opens c
 click tracking are OFF on the mastermindshq.business Resend domain, so the sign-of-life proxy stands in.
 To invite day-30 people, add a real event (with Illy-approved intro and, if paid, a price `note`) to
 `LIVE_EVENTS`.
+
+**Sales-keyword track** (Illy approved 17 Oct): `kw-book`, `kw-mastermind`, `kw-meta`/`kw-ads`/`kw-team`,
+`kw-build` get no DM. Day 2 (`sales_day2`): the main objection for THAT offer + one proof point taken from
+the offer's live page, link once. Day 5 (`sales_day5`): book and Mastermind have their own "last one";
+Meta and the workshop reuse the approved day 5-7 emails (Meta date switch, workshop 72h bonus). Then the
+same day 14 / day 30 tail. Mastermind emails have no price and no link: the ask is a reply, which goes
+to joe@ AND illy@ so Illy sets up the call (never Joe's calendar). Reply checks search both inboxes.
 
 Levels: the DM answer wins, then the AI Levels quiz score, then the gift (`BUILDER_SOURCES`). Builder =
 already in Claude Code / agents, the only level that sees the Meta Ads course.
