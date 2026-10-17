@@ -8,6 +8,7 @@
 //   node scripts/giveaway-followups.mjs --test-to delivered@resend.dev   send every email variant to Resend's sink only
 //   GIVEAWAY_FOLLOWUPS_ENABLED=1 GIVEAWAY_FOLLOWUPS_START=<iso> node scripts/giveaway-followups.mjs --live --alert
 //   --only <email>  limit to one address    --max <n>  cap sends per run (default 20)    --env-file <path>
+//   node scripts/giveaway-followups.mjs --review-to illy@mastermindshq.business   day 14 + day 30 copies to Illy, once each (only when she asks)
 //   --only <email> --force-step dm_level|dm_ack   test one DM on a test account now, ignoring the timing (guards still apply)
 //
 // Node 26 runs this directly (it strips the TypeScript types from the lib import).
@@ -25,7 +26,7 @@ import { homedir } from 'node:os'
 import path from 'node:path'
 import {
   LAST, QUICKWIN, DM_ACK_BUBBLES, dayZeroPs, planFollowups, renderDmLevel, renderLast, renderQuickwin, toHtml,
-  BUILDER_SOURCES, WW_FUNNEL_SOURCES, BONUS_TTL_HOURS,
+  BUILDER_SOURCES, WW_FUNNEL_SOURCES, BONUS_TTL_HOURS, GIFTS, GIFT_ORDER, LIVE_EVENTS, renderGift2, renderLive,
 } from '../src/lib/giveaway-followups.ts'
 import { signDeal } from '/Users/myos/.myos/workspace/projects/mastermind/mhq-homepage/src/lib/mhq-checkout-deals.mjs'
 
@@ -41,6 +42,8 @@ const only = (value('--only') || '').trim().toLowerCase() || null
 const max = Number(value('--max') || 20)
 const renderDir = value('--render-dir')
 const testTo = (value('--test-to') || '').trim().toLowerCase() || null
+// Illy's review copies of the day 14 / day 30 emails: only to her, only on her explicit ask.
+const reviewTo = (value('--review-to') || '').trim().toLowerCase() || null
 const forceStep = value('--force-step') || null
 if (forceStep && (!only || !['dm_level', 'dm_ack'].includes(forceStep))) throw new Error('--force-step needs --only <email> and dm_level or dm_ack')
 
@@ -60,6 +63,8 @@ const FROM = 'Joe Che <joe@mastermindshq.business>'
 const REPLY_TO = 'joe@mastermindshq.business'
 const PARTICIPANTS_DB = `${WS}/data/mastermind-participants.db`
 const DNC_FILE = `${WS}/agents/lead-machine/data/touch-overrides.json`
+const CRM_DB = `${WS}/data/${'crm'}.db`
+const INSTADM_CONFIG = `${WS}/agents/manychat/data/instadm-config.json`
 const HOUR = 3600 * 1000
 
 // ---------------------------------------------------------------- helpers
@@ -152,6 +157,59 @@ function repliedByEmail(email, since) {
   return list.length > 0
 }
 
+// ---- day 14 / day 30 lookups (only for people past the day 5-7 email)
+
+/** Free gifts the CRM knows they grabbed (first and latest source). */
+function crmFirstSource(email) {
+  const e = email.replace(/'/g, "''")
+  const out = execFileSync('/usr/bin/sqlite3', ['-readonly', CRM_DB, `select source_first from crm_contacts where lower(primary_email)='${e}' and source_first like 'giveaway-%' union select source_latest from crm_contacts where lower(primary_email)='${e}' and source_latest like 'giveaway-%'`], { encoding: 'utf8' })
+  return out.split('\n').map((x) => x.trim().replace(/^giveaway-/, '')).filter(Boolean)
+}
+let keywordToSlug = null
+function slugForKeyword(kw) {
+  if (!keywordToSlug) {
+    keywordToSlug = new Map()
+    try {
+      const j = JSON.parse(readFileSync(INSTADM_CONFIG, 'utf8'))
+      for (const [k, v] of Object.entries(j.active || {})) if (v?.slug) keywordToSlug.set(k.toLowerCase(), v.slug)
+    } catch {}
+  }
+  return keywordToSlug.get(String(kw || '').toLowerCase()) || null
+}
+
+/** Started any checkout (paid or not) since the gift, including the 72h bonus link. */
+let recentSessions = null
+async function checkoutStartedSince(email, since) {
+  if (!recentSessions) {
+    recentSessions = []
+    let after = null
+    const from = Math.floor((Date.now() - 45 * 24 * HOUR) / 1000)
+    for (let page = 0; page < 20; page++) {
+      const q = new URLSearchParams({ limit: '100', 'created[gte]': String(from) })
+      if (after) q.set('starting_after', after)
+      const r = await fetch(`https://api.stripe.com/v1/checkout/sessions?${q}`, { headers: { Authorization: `Bearer ${STRIPE_KEY}` } })
+      if (!r.ok) throw new Error(`Stripe sessions list ${r.status}`)
+      const body = await r.json()
+      recentSessions.push(...body.data)
+      if (!body.has_more || !body.data.length) break
+      after = body.data[body.data.length - 1].id
+    }
+  }
+  const t = Math.floor(since.getTime() / 1000)
+  return recentSessions.some((s) => s.created >= t && [s.customer_details?.email, s.customer_email, s.metadata?.giveaway_email]
+    .some((e) => String(e || '').toLowerCase() === email))
+}
+
+/** A call on Illy's or Joe's calendar with them as a guest, from the gift on. */
+function bookedCall(email, since) {
+  for (const acct of ['illy@mastermindshq.business', 'joe@mastermindshq.business']) {
+    const out = execFileSync('/opt/homebrew/bin/gog', ['-a', acct, 'calendar', 'search', email, '--from', since.toISOString(), '--to', new Date(Date.now() + 90 * 24 * HOUR).toISOString(), '--json', '--results-only'], { encoding: 'utf8', timeout: 60000 })
+    const events = JSON.parse(out || '[]')
+    if ((Array.isArray(events) ? events : []).some((e) => (e.attendees || []).some((a) => String(a.email || '').toLowerCase() === email))) return true
+  }
+  return false
+}
+
 let manychat = null
 function mc() {
   if (!manychat) manychat = require(`${WS}/agents/manychat/src/api.js`)
@@ -162,7 +220,8 @@ async function findSubscriber(email) {
   const s = r && r.status === 'success' ? r.data : null
   if (!s || !s.id) return null
   const preferred = (s.custom_fields || []).find((c) => c.name === 'preferred_name')?.value
-  return { id: String(s.id), ig_username: s.ig_username || null, name: preferred || s.first_name || null,
+  const lastKeyword = (s.custom_fields || []).find((c) => c.name === 'last_keyword')?.value || null
+  return { id: String(s.id), ig_username: s.ig_username || null, name: preferred || s.first_name || null, last_keyword: lastKeyword,
     ig_last_interaction: s.ig_last_interaction || null, last_input_text: s.last_input_text || null, live_chat_url: s.live_chat_url || null }
 }
 
@@ -200,7 +259,10 @@ function bonusLink(email) {
 
 function renderEmailFor(item) {
   const v = { first_name: item.first_name, unsubscribe_url: unsubscribeUrl(item.email), ...(item.variant === 'last_workshop' ? { bonus_link: bonusLink(item.email) } : {}) }
-  return item.step === 'email_quickwin' ? renderQuickwin(item.level, v) : renderLast(item.variant, v)
+  if (item.step === 'email_quickwin') return renderQuickwin(item.level, v)
+  if (item.step === 'email_gift2') return renderGift2(item.level, item.gift, v)
+  if (item.step === 'email_live') return renderLive(item.event, v)
+  return renderLast(item.variant, v)
 }
 
 async function resendSend({ to, subject, text, step, key }) {
@@ -253,7 +315,9 @@ async function sendOne(item, sub) {
   }
   if (!(await domainAlive(item.email))) return { status: 'dead_domain' }
   const { subject, text } = renderEmailFor(item)
-  const id = await claim(item, item.variant ? { detail: { variant: item.variant, ...(item.variant === 'last_workshop' ? { bonus_until: new Date(Date.now() + BONUS_TTL_HOURS * HOUR).toISOString() } : {}) } } : {})
+  const detail = item.variant ? { variant: item.variant, ...(item.variant === 'last_workshop' ? { bonus_until: new Date(Date.now() + BONUS_TTL_HOURS * HOUR).toISOString() } : {}) }
+    : item.gift ? { gift: item.gift.slug } : item.event ? { event: item.event.id } : null
+  const id = await claim(item, detail ? { detail } : {})
   if (!id) return { status: 'already' }
   try {
     const messageId = await resendSend({ to: item.email, subject, text, step: item.step, key: `giveaway-followup:${item.step}:${item.email}` })
@@ -272,6 +336,8 @@ function allVariants() {
   const out = []
   for (const level of Object.keys(QUICKWIN)) out.push({ key: `day2-3-quickwin-${level}`, ...renderQuickwin(level, v) })
   for (const variant of Object.keys(LAST)) out.push({ key: `day5-7-${variant}`, ...renderLast(variant, v) })
+  for (const level of Object.keys(GIFT_ORDER)) out.push({ key: `day14-gift-${level}`, ...renderGift2(level, GIFTS[GIFT_ORDER[level][0]], v) })
+  for (const e of LIVE_EVENTS) out.push({ key: `day30-live-${e.id}`, ...renderLive(e, v) })
   return out
 }
 
@@ -302,6 +368,25 @@ async function testSends(to) {
   }
 }
 
+async function reviewSends(to) {
+  if (to !== 'illy@mastermindshq.business') throw new Error('--review-to only sends to illy@mastermindshq.business')
+  const v = { first_name: 'Illy', unsubscribe_url: unsubscribeUrl(to) }
+  const items = [
+    ...Object.keys(GIFT_ORDER).map((level) => ({ key: `day14-${level}`, label: `[FINAL day 14 · ${level}]`, ...renderGift2(level, GIFTS[GIFT_ORDER[level][0]], v) })),
+    ...LIVE_EVENTS.map((e) => ({ key: `day30-${e.id}`, label: `[FINAL day 30 · ${e.id}]`, ...renderLive(e, v) })),
+  ]
+  for (const e of items) {
+    // Fixed idempotency key: a re-run within 24h cannot send her a second copy.
+    const id = await resendSend({ to, subject: `${e.label} ${e.subject}`, text: e.text, step: e.key, key: `giveaway-followup-review:${e.key}:${to}` })
+    let last = 'queued'
+    for (let i = 0; i < 10 && !['delivered', 'bounced', 'complained'].includes(last); i++) {
+      await new Promise((r) => setTimeout(r, 1500))
+      last = (await (await fetch(`https://api.resend.com/emails/${id}`, { headers: { Authorization: `Bearer ${RESEND_KEY}` } })).json()).last_event || last
+    }
+    console.log(`${e.label}: ${id} ${last}`)
+  }
+}
+
 // ---------------------------------------------------------------- main
 
 async function main() {
@@ -309,6 +394,7 @@ async function main() {
   if (missing.length) throw new Error(`missing env: ${missing.join(', ')}`)
   if (renderDir) return renderAll(renderDir)
   if (testTo) return testSends(testTo)
+  if (reviewTo) return reviewSends(reviewTo)
 
   const startRaw = process.env.GIVEAWAY_FOLLOWUPS_START
   if (live && (process.env.GIVEAWAY_FOLLOWUPS_ENABLED !== '1' || !startRaw)) {
@@ -316,14 +402,15 @@ async function main() {
     return
   }
   const now = new Date()
-  const startAt = startRaw ? new Date(startRaw) : new Date(now.getTime() - 9 * 24 * HOUR)
+  const startAt = startRaw ? new Date(startRaw) : new Date(now.getTime() - 35 * 24 * HOUR)
   if (Number.isNaN(startAt.getTime())) throw new Error(`bad GIVEAWAY_FOLLOWUPS_START: ${startRaw}`)
-  const since = new Date(Math.max(startAt.getTime(), now.getTime() - 9 * 24 * HOUR))
+  const since = new Date(Math.max(startAt.getTime(), now.getTime() - 35 * 24 * HOUR))
 
   let leads = await sbJson(`leads?select=email,lead_source,first_name,created_at,updated_at&updated_at=gte.${encodeURIComponent(since.toISOString())}&order=updated_at.desc&limit=1000`)
   if (only) leads = leads.filter((l) => String(l.email).toLowerCase() === only)
   const emails = [...new Set(leads.map((l) => String(l.email).trim().toLowerCase()))]
-  const sent = emails.length ? await sbJson(`giveaway_followup_sends?select=email,step,sent_at,level,detail&email=in.${inList(emails)}`) : []
+  const sent = emails.length ? await sbJson(`giveaway_followup_sends?select=email,step,sent_at,level,source,detail&email=in.${inList(emails)}`) : []
+  const pastLast = new Set(sent.filter((r) => r.step === 'email_last').map((r) => String(r.email).toLowerCase()))
   const suppressed = emails.length ? (await sbJson(`email_suppressions?select=email&email=in.${inList(emails)}`)).map((r) => r.email) : []
   const quiz = emails.length ? await sbJson(`ai_levels_quiz_leads?select=email,source,score,updated_at&email=in.${inList(emails)}&order=updated_at.asc`) : []
   const quizScores = new Map()
@@ -343,6 +430,9 @@ async function main() {
   const repliedByEmailList = []
   const subscribers = new Map()
   const lookupFailed = new Set()
+  const clickedOffer = []
+  const booked = []
+  const grabbedGifts = new Map()
   for (const lead of leads) {
     const email = String(lead.email).trim().toLowerCase()
     try {
@@ -351,7 +441,17 @@ async function main() {
       if (sub) subscribers.set(email, sub)
       const g = guard.guardSend({ email, ig_username: sub?.ig_username, name: sub?.name || lead.first_name }, { channel: 'email+instagram', caller: 'workshop-site/scripts/giveaway-followups.mjs' })
       if (g.blocked || dnc.has(email)) blocked.push(email)
-      if (repliedByEmail(email, new Date(lead.updated_at || lead.created_at))) repliedByEmailList.push(email)
+      const grabbedAt = new Date(lead.updated_at || lead.created_at)
+      if (repliedByEmail(email, grabbedAt)) repliedByEmailList.push(email)
+      if (pastLast.has(email)) {
+        const firstSentAt = new Date(Math.min(...sent.filter((r) => String(r.email).toLowerCase() === email).map((r) => new Date(r.sent_at).getTime())))
+        if (await checkoutStartedSince(email, firstSentAt)) clickedOffer.push(email)
+        if (bookedCall(email, firstSentAt)) booked.push(email)
+        const gifts = new Set([lead.lead_source, ...crmFirstSource(email), ...sent.filter((r) => String(r.email).toLowerCase() === email).flatMap((r) => [r.source, r.detail?.gift])].filter(Boolean))
+        const kwSlug = slugForKeyword(sub?.last_keyword)
+        if (kwSlug) gifts.add(kwSlug)
+        grabbedGifts.set(email, gifts)
+      }
     } catch (err) {
       lookupFailed.add(email)
       console.error(`lookup failed for ${email}, skipping this run: ${err.message}`)
@@ -361,6 +461,7 @@ async function main() {
   let { due, skipped } = planFollowups({
     leads: leads.filter((l) => !lookupFailed.has(String(l.email).trim().toLowerCase())),
     sent, subscribers, quizScores, inWorkshopFunnel, suppressed, customers, blocked, repliedByEmail: repliedByEmailList, startAt, now,
+    clickedOffer, booked, grabbedGifts,
   })
   if (lookupFailed.size) skipped.lookup_failed = lookupFailed.size
   if (forceStep) {
@@ -372,7 +473,7 @@ async function main() {
   }
   console.log(JSON.stringify({ mode: live ? 'live' : 'dry-run', at: now.toISOString(), startAt: startAt.toISOString(), leads: leads.length, due: due.length, skipped }, null, 2))
   for (const item of due) {
-    console.log(`${live ? 'SEND' : 'WOULD SEND'} ${item.step}${item.variant ? `/${item.variant}` : ''} [${item.level}] -> ${item.email}${item.ig_username ? ` @${item.ig_username}` : ''}`)
+    console.log(`${live ? 'SEND' : 'WOULD SEND'} ${item.step}${item.variant ? `/${item.variant}` : ''}${item.gift ? `/${item.gift.slug}` : ''}${item.event ? `/${item.event.id}` : ''} [${item.level}] -> ${item.email}${item.ig_username ? ` @${item.ig_username}` : ''}`)
     if (show) {
       if (item.step.startsWith('email')) { const { subject, text } = renderEmailFor(item); console.log(`  Subject: ${subject}\n${text.split('\n').map((l) => '  | ' + l).join('\n')}\n`) }
       if (item.step === 'dm_level') console.log(renderDmLevel(item.first_name).map((b) => '  > ' + b).join('\n'))
@@ -399,7 +500,10 @@ async function main() {
   if (lookupFailed.size && alert) await lina(`Free-gift follow-ups: lookups failed for ${lookupFailed.size} lead(s), they were skipped this run. Log: ~/.myos/logs/giveaway-followups.log`)
 }
 
-main().catch(async (err) => {
+// Lookups exported for a live smoke check (import does not run main on Node 26).
+export { checkoutStartedSince, bookedCall, crmFirstSource, slugForKeyword, stripeBuyer }
+
+if (import.meta.main) main().catch(async (err) => {
   console.error(err.stack || err.message)
   if (alert) await lina(`Free-gift follow-ups crashed: ${err.message}\nLog: ~/.myos/logs/giveaway-followups.log`)
   process.exitCode = 1

@@ -3,7 +3,8 @@ import test from 'node:test'
 
 import {
   DM_ACK_BUBBLES, LAST, QUICKWIN, dayZeroPs, lastVariant, levelFromQuizScore, levelFromSource, parseLevelReply,
-  planFollowups, renderDmLevel, renderLast, renderQuickwin, type Lead, type SentRow, type Subscriber,
+  planFollowups, renderDmLevel, renderLast, renderQuickwin, STEPS, renderGift2, renderLive, GIFTS, LIVE_EVENTS,
+  type Lead, type SentRow, type Subscriber,
 } from '../src/lib/giveaway-followups'
 
 const H = 3600 * 1000
@@ -35,6 +36,8 @@ test('copy never says how long the demo or a session is (Illy, 17 Oct)', () => {
     ...(Object.keys(QUICKWIN) as (keyof typeof QUICKWIN)[]).map((l) => renderQuickwin(l, v).text),
     ...(Object.keys(LAST) as (keyof typeof LAST)[]).map((k) => renderLast(k, v).text),
     dayZeroPs('lead-machine')!.text, dayZeroPs('tokens')!.text, ...renderDmLevel('Rick'), ...DM_ACK_BUBBLES,
+    ...Object.values(GIFTS).flatMap((g) => (['starter', 'everyday', 'builder'] as const).map((l) => renderGift2(l, g, v).text)),
+    ...LIVE_EVENTS.map((e) => renderLive(e, v).text),
   ]
   const duration = /(\d+|one|two|three|five|ten|fifteen|twenty|thirty)[\s-]*(min|minute|hour|hr)/i
   for (const text of all) {
@@ -99,7 +102,57 @@ test('quick win at 48h, last email at day 5, then nothing', () => {
   const done: SentRow[] = [...sentQw, { email: 'a@x.com', step: 'email_last', sent_at: ago(1) }]
   const after = plan({ leads: [lead('a@x.com', 160)], sent: done })
   assert.equal(after.due.length, 0)
-  assert.equal(after.skipped.finished, 1)
+  assert.equal(after.skipped.waiting_gift2, 1)
+})
+
+const EARLY = new Date('2026-09-01T00:00:00Z')
+const throughLast = (email: string): SentRow[] => [
+  { email, step: 'email_quickwin', sent_at: ago(14 * 24 - 50), source: 'lead-machine' },
+  { email, step: 'email_last', sent_at: ago(14 * 24 - 125) },
+]
+
+test('day 14 sends a gift they have not grabbed, for their level', () => {
+  const r = plan({ startAt: EARLY, leads: [lead('a@x.com', 14 * 24 + 1)], sent: throughLast('a@x.com'), grabbedGifts: new Map([['a@x.com', new Set(['giveaway-hated-task-prompts'])]]) })
+  assert.deepEqual(r.due.map((d) => [d.step, d.gift?.slug]), [['email_gift2', 'free-ai-tools']])
+  const b = plan({ startAt: EARLY, leads: [lead('b@x.com', 14 * 24 + 1, 'tokens')], sent: throughLast('b@x.com') })
+  assert.equal(b.due[0].gift?.slug, 'claude-md')
+  const none = plan({ startAt: EARLY, leads: [lead('c@x.com', 14 * 24 + 1)], sent: throughLast('c@x.com'), grabbedGifts: new Map([['c@x.com', new Set(['hated-task-prompts', 'free-ai-tools'])]]) })
+  assert.equal(none.skipped.gift2_none_left, 1)
+})
+
+test('clicking through to an offer or booking a call leaves the sequence', () => {
+  const leads = [lead('a@x.com', 14 * 24 + 1), lead('b@x.com', 14 * 24 + 1), lead('c@x.com', 14 * 24 + 1)]
+  const sent = [...throughLast('a@x.com'), ...throughLast('b@x.com'), ...throughLast('c@x.com')]
+  const r = plan({ startAt: EARLY, leads, sent, clickedOffer: ['a@x.com'], booked: ['b@x.com'], inWorkshopFunnel: ['c@x.com'] })
+  assert.equal(r.due.length, 0)
+  assert.deepEqual(r.skipped, { clicked_offer: 2, booked: 1 })
+})
+
+test('day 30 needs a sign of life AND a real live date in the window, else it is skipped', () => {
+  const event = { id: 'e', startsAt: new Date(NOW.getTime() + 7 * 24 * H).toISOString(), levels: ['starter' as const], subject: 'Live', intro: 'Come.', when: 'Monday', link: 'https://e' }
+  const base = (email: string, extra: SentRow[] = []): SentRow[] => [
+    { email, step: 'email_quickwin', sent_at: ago(30 * 24 - 50) },
+    { email, step: 'email_last', sent_at: ago(30 * 24 - 125) },
+    { email, step: 'email_gift2', sent_at: ago(30 * 24 - 14 * 24) },
+    ...extra,
+  ]
+  // grabbed at day 0 only, never answered the DM: no sign of life
+  assert.equal(plan({ startAt: EARLY, leads: [lead('a@x.com', 30 * 24 + 1)], sent: base('a@x.com'), liveEvents: [event] }).skipped.live_no_sign_of_life, 1)
+  // answered the DM: invited
+  const ack: SentRow = { email: 'b@x.com', step: 'dm_ack', sent_at: ago(30 * 24 - 25), level: 'starter' }
+  const yes = plan({ startAt: EARLY, leads: [lead('b@x.com', 30 * 24 + 1)], sent: base('b@x.com', [ack]), liveEvents: [event] }).due
+  assert.deepEqual(yes.map((d) => [d.step, d.event?.id]), [['email_live', 'e']])
+  // no real date in the window: skipped, never invented
+  assert.equal(plan({ startAt: EARLY, leads: [lead('b@x.com', 30 * 24 + 1)], sent: base('b@x.com', [ack]), liveEvents: [] }).skipped.live_no_real_date, 1)
+  // after day 30: nothing, ever
+  const all = base('b@x.com', [ack, { email: 'b@x.com', step: 'email_live', sent_at: ago(1) }])
+  assert.equal(plan({ startAt: EARLY, leads: [lead('b@x.com', 32 * 24)], sent: all, liveEvents: [event] }).skipped.finished, 1)
+})
+
+test('cap: at most 4 follow-up emails (5 with the delivery email) and one level DM per person', () => {
+  const emailSteps = STEPS.filter((s) => s.startsWith('email_'))
+  assert.equal(emailSteps.length, 4)
+  assert.deepEqual(STEPS.filter((s) => s.startsWith('dm_')), ['dm_level', 'dm_ack', 'dm_human'])
 })
 
 test('switching on never emails old leads, sales keywords or test addresses', () => {

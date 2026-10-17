@@ -15,15 +15,21 @@
 //   email_quickwin  48h after the gift: one quick win for their level + a soft link
 //   email_last      5 days after the gift: the one email with the real deadline
 //                   (or, when there is no real deadline, an honest "last one")
-//   then NOTHING. Illy: "we decide later. we are not doing weekly rn."
+//   email_gift2     day 14: a NEW free gift they have not grabbed, for their level, plus
+//                   one soft line to their next step (Illy approved 17 Oct)
+//   email_live      day 30: an invite to a REAL upcoming live date from LIVE_EVENTS; no
+//                   real date in the window = the step is skipped, never invented
+//   then NOTHING automatic. A monthly or weekly email is Joe's call.
+//   Cap per person: 5 emails (delivery + 4) and the one level DM (+ the "got it" reply).
+//   Anyone who replies, clicks through to an offer, books a call or buys leaves.
 //
 // Each (email, step) is claimed in giveaway_followup_sends before it is sent, so
 // nobody ever gets the same message twice. Pure module: no network, no clock
 // except `now`, so the tests can drive every branch.
 
 export type Level = 'starter' | 'everyday' | 'builder'
-export type Step = 'dm_level' | 'dm_ack' | 'dm_human' | 'email_quickwin' | 'email_last'
-export const STEPS: Step[] = ['dm_level', 'dm_ack', 'dm_human', 'email_quickwin', 'email_last']
+export type Step = 'dm_level' | 'dm_ack' | 'dm_human' | 'email_quickwin' | 'email_last' | 'email_gift2' | 'email_live'
+export const STEPS: Step[] = ['dm_level', 'dm_ack', 'dm_human', 'email_quickwin', 'email_last', 'email_gift2', 'email_live']
 
 const HOUR = 3600 * 1000
 const DAY = 24 * HOUR
@@ -36,6 +42,106 @@ export const QUICKWIN_TOO_LATE_HOURS = 96
 export const LAST_AFTER_DAYS = 5
 export const LAST_MIN_GAP_HOURS = 48
 export const LAST_TOO_LATE_DAYS = 8
+export const GIFT2_AFTER_DAYS = 14
+export const GIFT2_TOO_LATE_DAYS = 17
+export const LIVE_AFTER_DAYS = 30
+export const LIVE_TOO_LATE_DAYS = 33
+/** A live date must be at least this far ahead (time to plan) and at most this far (still feels close). */
+export const LIVE_MIN_LEAD_DAYS = 2
+export const LIVE_MAX_LEAD_DAYS = 21
+
+// ---------------------------------------------------------------- day 14 gifts
+// Separate free gifts only, never part of a paid product (paid stays paid). Ordered by
+// preference per level; the first one the person has not grabbed is sent.
+export type Gift = { slug: string; name: string; line: string; link: string }
+export const GIFTS: Record<string, Gift> = {
+  'hated-task-prompts': {
+    slug: 'hated-task-prompts',
+    name: 'The Hated-Task Prompt Pack',
+    line: "Nine prompts for the work you'd rather never do again. You fill in the blanks and send it straight to ChatGPT or Claude.",
+    link: 'https://workshop.mastermindshq.business/hated-task-prompts.html',
+  },
+  'lead-machine': {
+    slug: 'lead-machine',
+    name: 'The Lead Machine',
+    line: 'You paste one prompt into ChatGPT or Claude and get 25 real businesses that fit who you serve, each with a real way to reach them.',
+    link: 'https://workshop.mastermindshq.business/giveaways/lead-machine',
+  },
+  'free-ai-tools': {
+    slug: 'free-ai-tools',
+    name: '10 free swaps for the paid apps you use',
+    line: "The free tool I'd use instead of Acrobat, DocuSign, Calendly, Otter, Miro and more, with my setup notes for each.",
+    link: 'https://workshop.mastermindshq.business/giveaways/free-ai-tools',
+  },
+  'claude-md': {
+    slug: 'claude-md',
+    name: 'The Ultimate CLAUDE.md',
+    line: 'One file in your project that loads your rules and context at the start of every Claude Code session, so you stop repeating yourself.',
+    link: 'https://workshop.mastermindshq.business/giveaways/claude-md',
+  },
+  guardog: {
+    slug: 'guardog',
+    name: 'GuardDog',
+    line: 'A free Claude Code skill that scans npm and PyPI packages for malware before you install them. One command to set up.',
+    link: 'https://workshop.mastermindshq.business/giveaways/guardog',
+  },
+  tokens: {
+    slug: 'tokens',
+    name: 'The Token Diet',
+    line: 'The four changes that stopped my agents wasting 1.4 billion tokens, with the exact setup for each.',
+    link: 'https://workshop.mastermindshq.business/giveaways/tokens',
+  },
+}
+export const GIFT_ORDER: Record<Level, string[]> = {
+  starter: ['hated-task-prompts', 'lead-machine', 'free-ai-tools'],
+  everyday: ['free-ai-tools', 'hated-task-prompts', 'lead-machine'],
+  builder: ['claude-md', 'guardog', 'tokens'],
+}
+/** The first gift for this level they have not grabbed, or null (then day 14 is skipped). */
+export function pickGift(level: Level, grabbed: Iterable<string>): Gift | null {
+  const have = new Set([...grabbed].map((g) => String(g).replace(/^giveaway-/, '')))
+  const slug = GIFT_ORDER[level].find((g) => !have.has(g))
+  return slug ? GIFTS[slug] : null
+}
+
+// ---------------------------------------------------------------- day 30 live dates
+// REAL dates only. Add an event here when it is on the calendar and its intro line is
+// approved by Illy. No event in a person's window = no day 30 email for them.
+export type LiveEvent = {
+  id: string
+  startsAt: string // ISO, the real start
+  levels: Level[]
+  subject: string
+  intro: string
+  when: string // e.g. "Monday 2 November, 7pm Bali time (6am New York, 11am London)"
+  /** What it costs and what they get, for anything that is not free. Required when not free. */
+  note?: string
+  link: string
+}
+export const LIVE_EVENTS: LiveEvent[] = [
+  {
+    id: 'meta-ads-final-review-2026-11-02',
+    startsAt: '2026-11-02T11:00:00Z',
+    levels: ['builder'],
+    subject: 'Live with me on Monday 2 November',
+    intro: "My Meta Ads with Claude Code course has one live session left, the Final Review. We look at real campaign numbers together and decide what to pause and what to scale.",
+    when: 'Monday 2 November, 7pm Bali time (6am New York, 11am London)',
+    note: "It's part of the course, $397 or two payments of $199. Join before Monday and you get Sessions 1 to 3 as replays too.",
+    link: 'https://mastermindshq.business/meta-ads-with-claude-code',
+  },
+]
+/** The soonest real live date for this level inside the window, or null. */
+export function pickLiveEvent(level: Level, now: Date, events: LiveEvent[] = LIVE_EVENTS): LiveEvent | null {
+  const DAYMS = 24 * 3600 * 1000
+  const ok = events
+    .filter((e) => e.levels.includes(level))
+    .filter((e) => {
+      const t = new Date(e.startsAt).getTime()
+      return t - now.getTime() >= LIVE_MIN_LEAD_DAYS * DAYMS && t - now.getTime() <= LIVE_MAX_LEAD_DAYS * DAYMS
+    })
+    .sort((a, b) => new Date(a.startsAt).getTime() - new Date(b.startsAt).getTime())
+  return ok[0] ?? null
+}
 
 export const LINKS = {
   demo: 'https://mastermindshq.business/website-workshop/demo',
@@ -257,6 +363,39 @@ Joe`,
   },
 }
 
+export const GIFT2_NEXT_STEP: Record<Level, string> = {
+  starter: "And when you're ready to build something of your own, my free demo shows beginners building a real website just by talking to AI: {demo_link}",
+  everyday: "And when you're ready to have AI build things for you, my free demo shows beginners building a real website just by talking to AI: {demo_link}",
+  builder: "And if you have something to sell, this is how I run Meta ads through Claude Code: {meta_link}",
+}
+
+export const GIFT2_TEMPLATE = {
+  subject: 'Another free one for you: {gift_name}',
+  body: `Hi {first_name},
+
+I made something else I think you'll use.
+
+{gift_name}. {gift_line}
+
+It's free, here you go: {gift_link}
+
+{next_step}
+
+Joe`,
+}
+
+export const LIVE_TEMPLATE = {
+  body: `Hi {first_name},
+
+{event_intro}
+
+{event_when}, on Zoom.{event_note}
+
+Come join me live: {event_link}
+
+Joe`,
+}
+
 export type RenderVars = { first_name?: string; unsubscribe_url?: string; name?: string; bonus_link?: string }
 
 /** How long the day 5-7 workshop bonus link works. The email text says 72 hours. */
@@ -292,6 +431,22 @@ export function renderQuickwin(level: Level, v: RenderVars) {
 
 export function renderLast(variant: Exclude<LastVariant, 'hold_meta'>, v: RenderVars) {
   return renderTemplate(LAST[variant], v)
+}
+
+export function renderGift2(level: Level, gift: Gift, v: RenderVars) {
+  const fillGift = (x: string) => x.replace(/\{gift_name\}/g, gift.name).replace('{gift_line}', gift.line).replace('{gift_link}', gift.link)
+  return renderTemplate({
+    subject: fillGift(GIFT2_TEMPLATE.subject),
+    body: fillGift(GIFT2_TEMPLATE.body).replace('{next_step}', GIFT2_NEXT_STEP[level]),
+  }, v)
+}
+
+export function renderLive(event: LiveEvent, v: RenderVars) {
+  return renderTemplate({
+    subject: event.subject,
+    body: LIVE_TEMPLATE.body.replace('{event_intro}', event.intro).replace('{event_when}', event.when)
+      .replace('{event_note}', event.note ? `\n\n${event.note}` : '').replace('{event_link}', event.link),
+  }, v)
 }
 
 export function renderDmLevel(name?: string): string[] {
@@ -337,7 +492,7 @@ export type Subscriber = {
   ig_last_interaction?: string | null
   last_input_text?: string | null
 }
-export type SentRow = { email: string; step: Step; sent_at: string; level?: Level | null; detail?: Record<string, unknown> | null }
+export type SentRow = { email: string; step: Step; sent_at: string; level?: Level | null; source?: string | null; detail?: Record<string, unknown> | null }
 
 export type PlanInput = {
   leads: Lead[]
@@ -355,6 +510,12 @@ export type PlanInput = {
   blocked?: Iterable<string>
   /** wrote to joe@ by email since the gift: a human is talking to them */
   repliedByEmail?: Iterable<string>
+  /** started a checkout (any status), or a booked call on Illy's / Joe's calendar: they leave */
+  clickedOffer?: Iterable<string>
+  booked?: Iterable<string>
+  /** email -> every free gift slug we know they grabbed (leads, CRM, ManyChat, our own log) */
+  grabbedGifts?: Map<string, Set<string>>
+  liveEvents?: LiveEvent[]
   /** Leads who grabbed the gift before this never enter the sequence. */
   startAt: Date
   now?: Date
@@ -370,6 +531,8 @@ export type DueItem = {
   ig_username?: string | null
   variant?: Exclude<LastVariant, 'hold_meta'>
   reply_text?: string
+  gift?: Gift
+  event?: LiveEvent
 }
 
 function firstName(raw: string | null | undefined): string {
@@ -386,6 +549,8 @@ export function planFollowups(input: PlanInput): { due: DueItem[]; skipped: Reco
   const blocked = set(input.blocked)
   const replied = set(input.repliedByEmail)
   const inFunnel = set(input.inWorkshopFunnel)
+  const clicked = set(input.clickedOffer)
+  const booked = set(input.booked)
   const sentBy = new Map<string, Map<Step, SentRow>>()
   for (const s of input.sent || []) {
     const e = String(s.email).toLowerCase()
@@ -449,7 +614,7 @@ export function planFollowups(input: PlanInput): { due: DueItem[]; skipped: Reco
     }
 
     // ---- Email: quick win, then the last one.
-    if (inFunnel.has(email) && level !== 'builder') { skip('in_workshop_funnel'); continue }
+    if (inFunnel.has(email) && level !== 'builder' && !mine.has('email_last')) { skip('in_workshop_funnel'); continue }
     const qw = mine.get('email_quickwin')
     if (!qw) {
       if (ageH < QUICKWIN_AFTER_HOURS) { skip('waiting_quickwin'); continue }
@@ -457,7 +622,36 @@ export function planFollowups(input: PlanInput): { due: DueItem[]; skipped: Reco
       due.push({ ...base, step: 'email_quickwin' })
       continue
     }
-    if (mine.has('email_last')) { skip('finished'); continue }
+    if (mine.has('email_last')) {
+      // ---- Day 14 and day 30 (Illy, 17 Oct). Clicking through, booking or entering the
+      // workshop funnel takes them out; a customer or a reply already did above.
+      if (clicked.has(email) || inFunnel.has(email)) { skip('clicked_offer'); continue }
+      if (booked.has(email)) { skip('booked'); continue }
+      const g2 = mine.get('email_gift2')
+      if (!g2) {
+        if (ageH < GIFT2_AFTER_DAYS * 24) { skip('waiting_gift2'); continue }
+        if (ageH > GIFT2_TOO_LATE_DAYS * 24) { skip('gift2_too_late'); continue }
+        const history = new Set([source, ...(input.grabbedGifts?.get(email) || [])])
+        const gift = pickGift(level, history)
+        if (!gift) { skip('gift2_none_left'); continue }
+        due.push({ ...base, step: 'email_gift2', gift })
+        continue
+      }
+      if (mine.has('email_live')) { skip('finished'); continue }
+      if (ageH < LIVE_AFTER_DAYS * 24) { skip('waiting_live'); continue }
+      if (ageH > LIVE_TOO_LATE_DAYS * 24) { skip('live_too_late'); continue }
+      // No open tracking on the sending domain, so "opened none of the first three" uses
+      // the nearest honest proxy: they answered the level DM, or grabbed another gift
+      // after joining. No sign of life = no day 30 email (protects deliverability).
+      // leads.updated_at moves on every grab, so a grab after our first email = sign of life.
+      const firstSentAt = Math.min(...[...mine.values()].map((r) => new Date(r.sent_at).getTime()))
+      const grabbedAgain = grabbedAt.getTime() > firstSentAt
+      if (!mine.has('dm_ack') && !grabbedAgain) { skip('live_no_sign_of_life'); continue }
+      const event = pickLiveEvent(level, now, input.liveEvents)
+      if (!event) { skip('live_no_real_date'); continue }
+      due.push({ ...base, step: 'email_live', event })
+      continue
+    }
     const sinceQwH = (now.getTime() - new Date(qw.sent_at).getTime()) / HOUR
     if (ageH < LAST_AFTER_DAYS * 24 || sinceQwH < LAST_MIN_GAP_HOURS) { skip('waiting_last'); continue }
     if (ageH > LAST_TOO_LATE_DAYS * 24) { skip('last_too_late'); continue }
