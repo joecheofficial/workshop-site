@@ -202,19 +202,24 @@ Joe`,
 
 export const LAST: Record<Exclude<LastVariant, 'hold_meta'>, Template> = {
   last_workshop: {
+    // Hormozi rewrite approved by Illy 17 Oct: one ask, proof, value stack, "last email" at the end.
     subject: 'Your website, without paying anyone',
     body: `Hi {first_name},
 
-Last one from me on this.
-
 Most people I talk to either paid someone thousands for their website, or pay Wix or Squarespace every month. I was paying $168 a month for my Wix.
 
-In my Website Workshop you build your own site just by talking to AI, then put it live on your own domain. Two recorded sessions, start tonight, $67 once. Most people who take it have only ever used ChatGPT.
+In my Website Workshop you build your own site just by talking to AI, then put it live on your own domain. Here's one a member built: theartoftantra.com
 
-If you do both sessions and your site is not live, I refund every cent.
+Here is what you get for $67, once:
+- Both sessions recorded. Start tonight, go at your own pace.
+- Your Web Designer Agent and every prompt, ready to copy.
+- Change your site any time, without paying anyone.
 
-Watch the free demo first if you like: {demo_link}
-Or go straight in: {workshop_link}
+If you do both sessions and your site is not live, I refund every cent and you keep everything you built.
+
+Get instant access: {workshop_link}
+
+This is my last email about it.
 
 Joe`,
   },
