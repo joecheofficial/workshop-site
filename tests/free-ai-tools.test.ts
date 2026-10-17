@@ -72,7 +72,7 @@ test('Week 2 setup notes: honest level, matched offer, Claude Code prompt and li
     assert.equal(t.level, want.level, `${keyword} level`)
     const pack = freeAiToolPack(t.slug)
     assert.equal(pack.level, want.level)
-    assert.equal(offerForLevel(pack.level, t.slug)?.id, want.level === 'builder' ? 'get-found-kit' : 'website-workshop', `${keyword} end offer`)
+    assert.equal(offerForLevel(pack.level, t.slug)?.id, want.level === 'builder' ? 'get-found-kit' : 'website-workshop-demo', `${keyword} end offer`)
     // The free thing first: the one prompt sits in the first block, with the official link.
     assert.equal(pack.hero.button.target, 'get')
     assert.equal(pack.get?.command?.text, t.claudePrompt)

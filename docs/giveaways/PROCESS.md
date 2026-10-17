@@ -78,11 +78,11 @@ Block order, all built into the component:
 | 5 | Use it now | The real prompt in a card: Copy, Open ChatGPT, Open Claude |
 | 6 | Three ways to run it | Each way tagged by what you need (Any AI chat, Phone OK, Computer, Needs a terminal) |
 | 7 | Stuck? Find your line | Real problems in the reader's own words, the last one is a support email |
-| 8 | The offer | One paid next step, matched to the page's AI level, at the very end. "Not for you? Close this page. Everything above stays free." |
+| 8 | The offer | One next step (beginner: the free demo; builder: paid), matched to the page's AI level, at the very end. "Not for you? Close this page. Everything above stays free." |
 
 Rules for pack pages:
 - **Email (Illy, 2026-10-13):** never a form in front of the free thing and never a timed popup. Visitors whose link carries `?via=dm` (the ManyChat flow already has their email) are never asked. Everyone else gets ONE ask, the shared `GiveawayEmailModal`, after their first copy or download, once per tab. `src/lib/giveaway-dm.ts`.
-- **Offer (Illy, 2026-10-13, replaces element 10 below for pack pages):** no `MastermindCTA`. The page declares `level: 'beginner' | 'builder'` and gets the offer from `src/lib/giveaway-offers.ts`. Beginner = the $67 Website Workshop. Builder has no offer yet (null, so no offer block renders) until Illy picks one. Never hand-write an offer block on a page.
+- **Offer (Illy, 2026-10-13, replaces element 10 below for pack pages):** no `MastermindCTA`. The page declares `level: 'beginner' | 'builder'` and gets the offer from `src/lib/giveaway-offers.ts`. Beginner = the FREE Website Workshop demo (Illy, 2026-10-17; was the $67 page), no price on the page. Builder = Get Found on Google and ChatGPT, $47 (Illy, 2026-10-14). Never hand-write an offer block on a page.
 - **No testimonial quote or carousel** (elements 9 and 11 do not apply to pack pages). Illy's approved design has none, and the current featured homepage quotes are money and time results, which the 2026-09-23 FTC endorsement audit flagged.
 - The site chrome already draws the header, particles, aurora and footer. Do not add another logo bar or particle canvas.
 - No em dashes. Plain, short words. Facts on the page come from the giveaway's own files (README, START-HERE) or the live offer page, never from memory.
