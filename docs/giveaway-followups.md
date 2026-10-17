@@ -49,5 +49,9 @@ node scripts/giveaway-followups.mjs --only <email> --force-step dm_level [--live
 GIVEAWAY_FOLLOWUPS_ENABLED=1 GIVEAWAY_FOLLOWUPS_START=<iso> node scripts/giveaway-followups.mjs --live --alert
 ```
 
-Schedule (only after Illy's go on the final text): illy crontab, every 15 min, `lockf` guarded, log
-`~/.myos/logs/giveaway-followups.log`.
+LIVE since 17 Oct 2026 (Illy: "i want everything wrapped up ... the email sequences for all we have
+confirmed together ... everything working"): illy crontab every 15 min (tag `giveaway-followups`),
+`lockf` guarded, log `~/.myos/logs/giveaway-followups.log`; day-0 P.S. on via Vercel env
+`GIVEAWAY_DAY0_PS=1`. Off switch: remove the crontab line and/or unset `GIVEAWAY_DAY0_PS` + redeploy.
+Unattended runs read the gog keyring password from `~/Library/Application Support/gogcli/keyring-password`;
+Lina alerts are throttled to one per 6h per kind (`~/.myos/logs/giveaway-followups-alerts.json`).
