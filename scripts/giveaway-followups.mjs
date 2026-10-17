@@ -27,6 +27,7 @@ import path from 'node:path'
 import {
   LAST, QUICKWIN, DM_ACK_BUBBLES, dayZeroPs, planFollowups, renderDmLevel, renderLast, renderQuickwin, toHtml,
   BUILDER_SOURCES, WW_FUNNEL_SOURCES, BONUS_TTL_HOURS, GIFTS, GIFT_ORDER, LIVE_EVENTS, renderGift2, renderLive,
+  SALES_DAY2, renderSalesDay2, renderSalesDay5, salesOfferFor, ILLY_REPLY_TO,
 } from '../src/lib/giveaway-followups.ts'
 import { signDeal } from '/Users/myos/.myos/workspace/projects/mastermind/mhq-homepage/src/lib/mhq-checkout-deals.mjs'
 
@@ -44,6 +45,7 @@ const renderDir = value('--render-dir')
 const testTo = (value('--test-to') || '').trim().toLowerCase() || null
 // Illy's review copies of the day 14 / day 30 emails: only to her, only on her explicit ask.
 const reviewTo = (value('--review-to') || '').trim().toLowerCase() || null
+const reviewSet = value('--review-set') || 'tail' // 'tail' = day 14 + day 30, 'sales' = the sales-keyword track
 const forceStep = value('--force-step') || null
 if (forceStep && (!only || !['dm_level', 'dm_ack'].includes(forceStep))) throw new Error('--force-step needs --only <email> and dm_level or dm_ack')
 
@@ -151,10 +153,13 @@ function dncEmails() {
 /** Did they write to Joe by email since the gift? gog failure throws, so the caller skips them. */
 function repliedByEmail(email, since) {
   const after = new Date(since.getTime() - 24 * HOUR).toISOString().slice(0, 10).replace(/-/g, '/')
-  const out = execFileSync('/opt/homebrew/bin/gog', ['-a', 'joe@mastermindshq.business', 'gmail', 'search', `from:${email} after:${after}`, '--json'], { encoding: 'utf8', timeout: 60000 })
-  const j = JSON.parse(out || '[]')
-  const list = Array.isArray(j) ? j : (j.threads || j.messages || j.results || [])
-  return list.length > 0
+  for (const acct of ['joe@mastermindshq.business', ILLY_REPLY_TO]) {
+    const out = execFileSync('/opt/homebrew/bin/gog', ['-a', acct, 'gmail', 'search', `from:${email} after:${after}`, '--json'], { encoding: 'utf8', timeout: 60000 })
+    const j = JSON.parse(out || '[]')
+    const list = Array.isArray(j) ? j : (j.threads || j.messages || j.results || [])
+    if (list.length > 0) return true
+  }
+  return false
 }
 
 // ---- day 14 / day 30 lookups (only for people past the day 5-7 email)
@@ -258,20 +263,23 @@ function bonusLink(email) {
 }
 
 function renderEmailFor(item) {
-  const v = { first_name: item.first_name, unsubscribe_url: unsubscribeUrl(item.email), ...(item.variant === 'last_workshop' ? { bonus_link: bonusLink(item.email) } : {}) }
+  const needsBonus = item.variant === 'last_workshop' || item.sales_variant === 'last_workshop'
+  const v = { first_name: item.first_name, unsubscribe_url: unsubscribeUrl(item.email), ...(needsBonus ? { bonus_link: bonusLink(item.email) } : {}) }
+  if (item.step === 'sales_day2') return renderSalesDay2(item.offer, v)
+  if (item.step === 'sales_day5') return renderSalesDay5(item.sales_variant, v)
   if (item.step === 'email_quickwin') return renderQuickwin(item.level, v)
   if (item.step === 'email_gift2') return renderGift2(item.level, item.gift, v)
   if (item.step === 'email_live') return renderLive(item.event, v)
   return renderLast(item.variant, v)
 }
 
-async function resendSend({ to, subject, text, step, key }) {
+async function resendSend({ to, subject, text, step, key, replyTo = [REPLY_TO] }) {
   const unsub = unsubscribeUrl(to)
   const res = await fetch('https://api.resend.com/emails', {
     method: 'POST',
     headers: { Authorization: `Bearer ${RESEND_KEY}`, 'Content-Type': 'application/json', 'Idempotency-Key': createHash('sha1').update(key).digest('hex') },
     body: JSON.stringify({
-      from: FROM, to: [to], subject, text, html: toHtml(text), reply_to: [REPLY_TO],
+      from: FROM, to: [to], subject, text, html: toHtml(text), reply_to: replyTo,
       headers: { 'List-Unsubscribe': `<${unsub}>`, 'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click' },
       tags: [{ name: 'flow', value: 'giveaway_followup' }, { name: 'step', value: step }],
     }),
@@ -315,12 +323,15 @@ async function sendOne(item, sub) {
   }
   if (!(await domainAlive(item.email))) return { status: 'dead_domain' }
   const { subject, text } = renderEmailFor(item)
-  const detail = item.variant ? { variant: item.variant, ...(item.variant === 'last_workshop' ? { bonus_until: new Date(Date.now() + BONUS_TTL_HOURS * HOUR).toISOString() } : {}) }
-    : item.gift ? { gift: item.gift.slug } : item.event ? { event: item.event.id } : null
+  const v5 = item.variant || item.sales_variant
+  const detail = v5 ? { variant: v5, ...(item.offer ? { offer: item.offer } : {}), ...(v5 === 'last_workshop' ? { bonus_until: new Date(Date.now() + BONUS_TTL_HOURS * HOUR).toISOString() } : {}) }
+    : item.offer ? { offer: item.offer } : item.gift ? { gift: item.gift.slug } : item.event ? { event: item.event.id } : null
   const id = await claim(item, detail ? { detail } : {})
   if (!id) return { status: 'already' }
   try {
-    const messageId = await resendSend({ to: item.email, subject, text, step: item.step, key: `giveaway-followup:${item.step}:${item.email}` })
+    // Mastermind emails ask for a reply that sets up a call with Illy, so she gets the reply too.
+    const replyTo = item.offer === 'mastermind' ? [REPLY_TO, ILLY_REPLY_TO] : [REPLY_TO]
+    const messageId = await resendSend({ to: item.email, subject, text, step: item.step, key: `giveaway-followup:${item.step}:${item.email}`, replyTo })
     await markSent(id, { message_id: messageId })
     return { status: 'sent', id: messageId }
   } catch (err) {
@@ -338,6 +349,8 @@ function allVariants() {
   for (const variant of Object.keys(LAST)) out.push({ key: `day5-7-${variant}`, ...renderLast(variant, v) })
   for (const level of Object.keys(GIFT_ORDER)) out.push({ key: `day14-gift-${level}`, ...renderGift2(level, GIFTS[GIFT_ORDER[level][0]], v) })
   for (const e of LIVE_EVENTS) out.push({ key: `day30-live-${e.id}`, ...renderLive(e, v) })
+  for (const o of Object.keys(SALES_DAY2)) out.push({ key: `sales-${o}-day2`, ...renderSalesDay2(o, v) })
+  for (const k of ['sales_last_book', 'sales_last_mastermind']) out.push({ key: `sales-${k.replace('sales_last_', '')}-day5`, ...renderSalesDay5(k, v) })
   return out
 }
 
@@ -371,6 +384,30 @@ async function testSends(to) {
 async function reviewSends(to) {
   if (to !== 'illy@mastermindshq.business') throw new Error('--review-to only sends to illy@mastermindshq.business')
   const v = { first_name: 'Illy', unsubscribe_url: unsubscribeUrl(to) }
+  if (reviewSet === 'sales') {
+    // The exact sales-keyword track: day 2 per offer, then each offer's day 5 (Meta and the
+    // workshop reuse the approved day 5-7 emails; the workshop one carries a REAL 72h link).
+    const wv = { ...v, bonus_link: bonusLink(to) }
+    const sales = [
+      ...['book', 'mastermind', 'meta', 'workshop'].map((o) => ({ key: `sales-${o}-day2`, label: `[FINAL sales · ${o} · day 2]`, ...renderSalesDay2(o, v) })),
+      { key: 'sales-book-day5', label: '[FINAL sales · book · day 5]', ...renderSalesDay5('sales_last_book', v) },
+      { key: 'sales-mastermind-day5', label: '[FINAL sales · mastermind · day 5]', ...renderSalesDay5('sales_last_mastermind', v) },
+      { key: 'sales-meta-day5-final-review', label: '[FINAL sales · meta · day 5 · until 2 Nov]', ...renderSalesDay5('last_meta_final_review', v) },
+      { key: 'sales-meta-day5-recorded', label: '[FINAL sales · meta · day 5 · from 3 Nov]', ...renderSalesDay5('last_meta_recorded', v) },
+      { key: 'sales-workshop-day5', label: '[FINAL sales · workshop · day 5]', ...renderSalesDay5('last_workshop', wv) },
+    ]
+    for (const e of sales) {
+      const replyTo = e.key.includes('mastermind') ? [REPLY_TO, ILLY_REPLY_TO] : [REPLY_TO]
+      const id = await resendSend({ to, subject: `${e.label} ${e.subject}`, text: e.text, step: e.key, key: `giveaway-followup-review:${e.key}:${to}`, replyTo })
+      let last = 'queued'
+      for (let i = 0; i < 10 && !['delivered', 'bounced', 'complained'].includes(last); i++) {
+        await new Promise((r) => setTimeout(r, 1500))
+        last = (await (await fetch(`https://api.resend.com/emails/${id}`, { headers: { Authorization: `Bearer ${RESEND_KEY}` } })).json()).last_event || last
+      }
+      console.log(`${e.label}: ${id} ${last}`)
+    }
+    return
+  }
   const items = [
     ...Object.keys(GIFT_ORDER).map((level) => ({ key: `day14-${level}`, label: `[FINAL day 14 · ${level}]`, ...renderGift2(level, GIFTS[GIFT_ORDER[level][0]], v) })),
     ...LIVE_EVENTS.map((e) => ({ key: `day30-${e.id}`, label: `[FINAL day 30 · ${e.id}]`, ...renderLive(e, v) })),
@@ -443,8 +480,9 @@ async function main() {
       if (g.blocked || dnc.has(email)) blocked.push(email)
       const grabbedAt = new Date(lead.updated_at || lead.created_at)
       if (repliedByEmail(email, grabbedAt)) repliedByEmailList.push(email)
-      if (pastLast.has(email)) {
-        const firstSentAt = new Date(Math.min(...sent.filter((r) => String(r.email).toLowerCase() === email).map((r) => new Date(r.sent_at).getTime())))
+      if (pastLast.has(email) || salesOfferFor(String(lead.lead_source || ''))) {
+        const mineSent = sent.filter((r) => String(r.email).toLowerCase() === email).map((r) => new Date(r.sent_at).getTime())
+        const firstSentAt = mineSent.length ? new Date(Math.min(...mineSent)) : grabbedAt
         if (await checkoutStartedSince(email, firstSentAt)) clickedOffer.push(email)
         if (bookedCall(email, firstSentAt)) booked.push(email)
         const gifts = new Set([lead.lead_source, ...crmFirstSource(email), ...sent.filter((r) => String(r.email).toLowerCase() === email).flatMap((r) => [r.source, r.detail?.gift])].filter(Boolean))

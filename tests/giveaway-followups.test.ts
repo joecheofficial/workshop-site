@@ -4,6 +4,7 @@ import test from 'node:test'
 import {
   DM_ACK_BUBBLES, LAST, QUICKWIN, dayZeroPs, lastVariant, levelFromQuizScore, levelFromSource, parseLevelReply,
   planFollowups, renderDmLevel, renderLast, renderQuickwin, STEPS, renderGift2, renderLive, GIFTS, LIVE_EVENTS,
+  SALES_DAY2, SALES_LAST, renderSalesDay2, renderSalesDay5,
   type Lead, type SentRow, type Subscriber,
 } from '../src/lib/giveaway-followups'
 
@@ -38,6 +39,8 @@ test('copy never says how long the demo or a session is (Illy, 17 Oct)', () => {
     dayZeroPs('lead-machine')!.text, dayZeroPs('tokens')!.text, ...renderDmLevel('Rick'), ...DM_ACK_BUBBLES,
     ...Object.values(GIFTS).flatMap((g) => (['starter', 'everyday', 'builder'] as const).map((l) => renderGift2(l, g, v).text)),
     ...LIVE_EVENTS.map((e) => renderLive(e, v).text),
+    ...(Object.keys(SALES_DAY2) as (keyof typeof SALES_DAY2)[]).map((o) => renderSalesDay2(o, v).text),
+    ...(Object.keys(SALES_LAST) as (keyof typeof SALES_LAST)[]).map((k) => renderSalesDay5(k, v).text),
   ]
   const duration = /(\d+|one|two|three|five|ten|fifteen|twenty|thirty)[\s-]*(min|minute|hour|hr)/i
   for (const text of all) {
@@ -149,14 +152,51 @@ test('day 30 needs a sign of life AND a real live date in the window, else it is
   assert.equal(plan({ startAt: EARLY, leads: [lead('b@x.com', 32 * 24)], sent: all, liveEvents: [event] }).skipped.finished, 1)
 })
 
-test('cap: at most 4 follow-up emails (5 with the delivery email) and one level DM per person', () => {
-  const emailSteps = STEPS.filter((s) => s.startsWith('email_'))
-  assert.equal(emailSteps.length, 4)
+test('cap: each track has at most 4 follow-up emails (5 with the delivery email) and one level DM', () => {
+  const gift = STEPS.filter((s) => s.startsWith('email_'))
+  const sales = [...STEPS.filter((s) => s.startsWith('sales_')), 'email_gift2', 'email_live']
+  assert.equal(gift.length, 4)
+  assert.equal(sales.length, 4)
   assert.deepEqual(STEPS.filter((s) => s.startsWith('dm_')), ['dm_level', 'dm_ack', 'dm_human'])
 })
 
+test('sales keywords: day 2 objection email for the offer they asked about, no DM', () => {
+  const sub = new Map([['m@x.com', { id: '9', ig_last_interaction: ago(21) }]])
+  const r = plan({ startAt: EARLY, leads: [lead('b@x.com', 50, 'kw-book'), lead('m@x.com', 50, 'kw-mastermind'), lead('t@x.com', 50, 'kw-team'), lead('w@x.com', 50, 'kw-build')], subscribers: sub })
+  assert.deepEqual(r.due.map((d) => [d.email, d.step, d.offer]), [
+    ['b@x.com', 'sales_day2', 'book'], ['m@x.com', 'sales_day2', 'mastermind'], ['t@x.com', 'sales_day2', 'meta'], ['w@x.com', 'sales_day2', 'workshop'],
+  ])
+  const early = plan({ startAt: EARLY, leads: [lead('m@x.com', 21, 'kw-mastermind')], subscribers: sub })
+  assert.equal(early.due.length, 0)
+  assert.equal(early.skipped.waiting_sales_day2, 1)
+})
+
+test('sales keywords: day 5 is the offer\'s own last email, Meta only on a true date, then the tail', () => {
+  const d2 = (email: string): SentRow[] => [{ email, step: 'sales_day2', sent_at: ago(70) }]
+  const r = plan({ startAt: EARLY, leads: ['kw-book', 'kw-mastermind', 'kw-meta', 'kw-build'].map((src, i) => lead(`${i}@x.com`, 121, src)), sent: [0, 1, 2, 3].flatMap((i) => d2(`${i}@x.com`)) })
+  assert.deepEqual(r.due.map((d) => d.sales_variant), ['sales_last_book', 'sales_last_mastermind', 'last_meta_final_review', 'last_workshop'])
+  const tail: SentRow[] = [...d2('b@x.com'), { email: 'b@x.com', step: 'sales_day5', sent_at: ago(14 * 24 - 125) }]
+  const g = plan({ startAt: EARLY, leads: [lead('b@x.com', 14 * 24 + 1, 'kw-book')], sent: tail })
+  assert.deepEqual(g.due.map((d) => [d.step, d.level, d.gift?.slug]), [['email_gift2', 'builder', 'claude-md']])
+})
+
+test('sales keywords: clicking through to checkout or booking a call ends it', () => {
+  const r = plan({ startAt: EARLY, leads: [lead('a@x.com', 50, 'kw-meta'), lead('b@x.com', 50, 'kw-mastermind')], clickedOffer: ['a@x.com'], booked: ['b@x.com'] })
+  assert.equal(r.due.length, 0)
+  assert.deepEqual(r.skipped, { clicked_offer: 1, booked: 1 })
+})
+
+test('sales copy: no price in the Mastermind emails, one link that matches its offer', () => {
+  for (const k of ['mastermind'] as const) assert.doesNotMatch(renderSalesDay2(k, {}).text, /\$\d|https?:/)
+  assert.doesNotMatch(renderSalesDay5('sales_last_mastermind', {}).text, /\$\d|https?:/)
+  assert.match(renderSalesDay2('book', {}).text, /amazon\.com\/dp\/B0H4GR93WT/)
+  assert.match(renderSalesDay2('meta', {}).text, /meta-ads-with-claude-code/)
+  assert.match(renderSalesDay2('workshop', {}).text, /mastermindshq\.business\/website-workshop/)
+  for (const o of Object.keys(SALES_DAY2) as (keyof typeof SALES_DAY2)[]) assert.doesNotMatch(renderSalesDay2(o, {}).text, /Your copy of/i)
+})
+
 test('switching on never emails old leads, sales keywords or test addresses', () => {
-  const r = plan({ leads: [lead('old@x.com', 200), lead('kw@x.com', 50, 'kw-book'), lead('delivered@resend.dev', 50)], startAt: new Date(ago(150)) })
+  const r = plan({ leads: [lead('old@x.com', 200), lead('kw@x.com', 50, 'kw-unknown'), lead('delivered@resend.dev', 50)], startAt: new Date(ago(150)) })
   assert.equal(r.due.length, 0)
   assert.equal(r.skipped.before_start, 1)
   assert.equal(r.skipped.not_free_gift, 1)

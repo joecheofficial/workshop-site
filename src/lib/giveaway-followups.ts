@@ -28,8 +28,8 @@
 // except `now`, so the tests can drive every branch.
 
 export type Level = 'starter' | 'everyday' | 'builder'
-export type Step = 'dm_level' | 'dm_ack' | 'dm_human' | 'email_quickwin' | 'email_last' | 'email_gift2' | 'email_live'
-export const STEPS: Step[] = ['dm_level', 'dm_ack', 'dm_human', 'email_quickwin', 'email_last', 'email_gift2', 'email_live']
+export type Step = 'dm_level' | 'dm_ack' | 'dm_human' | 'email_quickwin' | 'email_last' | 'email_gift2' | 'email_live' | 'sales_day2' | 'sales_day5'
+export const STEPS: Step[] = ['dm_level', 'dm_ack', 'dm_human', 'email_quickwin', 'email_last', 'email_gift2', 'email_live', 'sales_day2', 'sales_day5']
 
 const HOUR = 3600 * 1000
 const DAY = 24 * HOUR
@@ -363,6 +363,119 @@ Joe`,
   },
 }
 
+// ---------------------------------------------------------------- sales-keyword track
+// IG sales keywords (Illy approved 17 Oct): people who asked about one paid offer get two
+// short emails about THAT offer (day 2: the main objection + one real proof point, day 5:
+// the last one), then the same day 14 / day 30 tail. No DM on this track.
+export type SalesOffer = 'book' | 'mastermind' | 'meta' | 'workshop'
+export const SALES_SOURCES: Record<string, SalesOffer> = {
+  'kw-book': 'book',
+  'kw-mastermind': 'mastermind',
+  'kw-meta': 'meta',
+  'kw-ads': 'meta',
+  'kw-team': 'meta',
+  'kw-build': 'workshop',
+}
+export function salesOfferFor(source: string): SalesOffer | null {
+  return Object.prototype.hasOwnProperty.call(SALES_SOURCES, source) ? SALES_SOURCES[source] : null
+}
+/** Level for the day 14 / day 30 tail when no quiz score says otherwise. */
+export const SALES_LEVEL: Record<SalesOffer, Level> = { book: 'builder', meta: 'builder', mastermind: 'everyday', workshop: 'starter' }
+export const BOOK_LINK = 'https://www.amazon.com/dp/B0H4GR93WT'
+/** Mastermind emails ask for a reply that reaches Illy too; never Joe's calendar, never a price. */
+export const ILLY_REPLY_TO = 'illy@mastermindshq.business'
+
+export const SALES_DAY2: Record<SalesOffer, { subject: string; body: string }> = {
+  book: {
+    subject: "You don't need to be an engineer for this",
+    body: `Hi {first_name},
+
+You asked about my book on Instagram. The worry I hear most is "I'm not an engineer, this will be too technical."
+
+It isn't written for engineers. It's the same system I run my own companies on, taught in the order you build it, with five foundation files you can copy straight into your own setup. Your business, your voice and your rules get loaded in once, so every chat stops starting from zero.
+
+It hit #1 on Amazon in more than one category. Get the book on Amazon: {book_link}
+
+Joe`,
+  },
+  mastermind: {
+    subject: "Not technical? That's who it's for",
+    body: `Hi {first_name},
+
+You asked about the Mastermind on Instagram. The worry I hear most is "I'm not technical, I'll fall behind."
+
+Most people in the room don't have a technical background. That's the point. Every week a small group sits down together and builds the thing they actually need, and you leave each session with something built.
+
+Sheree, a coach in Bali, said it like this: "Claude even wrote all the emails, and it's even in my own voice. I'm pretty impressed, because normally I get AI slop, but this was really good."
+
+If you want to see if it fits, hit reply and tell me what you sell and what you'd want AI to take off your plate. Illy from my team will set up a call with you.
+
+Joe`,
+  },
+  meta: {
+    subject: 'Scared of wasting money on ads?',
+    body: `Hi {first_name},
+
+You asked about Meta Ads with Claude Code on Instagram. The fear I hear most is "I'll burn my budget on ads that don't work."
+
+That's why it's built the way it is. You describe your offer and budget to Claude Code in plain English. It drafts the campaign and creates it paused, and nothing spends a dollar until you say go. Then you read the real numbers and pause what isn't working.
+
+It's the same agent I use to run my own ad campaigns. See how it works: {meta_link}
+
+Joe`,
+  },
+  workshop: {
+    subject: "Not technical? You don't need to be",
+    body: `Hi {first_name},
+
+You asked about building your website on Instagram. The thing I hear most is "I'm not technical, so this isn't for me."
+
+You don't write code. You describe what you want, and the AI builds it while you watch. Most people who take my Website Workshop have only ever used ChatGPT. Here's one a member built: theartoftantra.com
+
+Two recorded sessions, start tonight, $67 once. Get instant access: {workshop_link}
+
+Joe`,
+  },
+}
+
+export type SalesLastVariant = 'sales_last_book' | 'sales_last_mastermind' | 'last_workshop' | 'last_meta_final_review' | 'last_meta_recorded'
+export const SALES_LAST: Record<'sales_last_book' | 'sales_last_mastermind', { subject: string; body: string }> = {
+  sales_last_book: {
+    subject: 'Last one from me on the book',
+    body: `Hi {first_name},
+
+Last one from me on this.
+
+Most people use AI like a clever intern stuck in a chat box. Every chat starts from zero and you end up finishing the work yourself. My book shows you how to build the system underneath, so your agents remember your business, route the next step and finish the job.
+
+You get the build order I actually use and five foundation files you can copy into your own setup.
+
+Get the book on Amazon: {book_link}
+
+Joe`,
+  },
+  sales_last_mastermind: {
+    subject: 'Last one from me on the Mastermind',
+    body: `Hi {first_name},
+
+Last one from me on this.
+
+If you love your business and you're tired of carrying all of it in your own head, this is what the Mastermind is for. A small group, one live working session every week, and you build agents that take the admin, the chasing and the repetitive work off your plate, in your own voice.
+
+It's not for everyone, so the first step is a conversation. Hit reply with what you sell and what you'd want off your plate, and Illy from my team will set up a call.
+
+Joe`,
+  },
+}
+
+/** Day 5 for a sales lead: the offer's own last email; Meta and the workshop reuse the approved ones. */
+export function salesLastVariant(offer: SalesOffer, now: Date): SalesLastVariant | 'hold_meta' {
+  if (offer === 'book') return 'sales_last_book'
+  if (offer === 'mastermind') return 'sales_last_mastermind'
+  if (offer === 'workshop') return 'last_workshop'
+  return lastVariant('builder', now)
+}
+
 export const GIFT2_NEXT_STEP: Record<Level, string> = {
   starter: "And when you're ready to build something of your own, my free demo shows beginners building a real website just by talking to AI: {demo_link}",
   everyday: "And when you're ready to have AI build things for you, my free demo shows beginners building a real website just by talking to AI: {demo_link}",
@@ -412,6 +525,7 @@ function baseVars(v: RenderVars): Record<string, string> {
     demo_link: LINKS.demo,
     workshop_link: LINKS.workshop,
     meta_link: LINKS.metaAds,
+    book_link: BOOK_LINK,
     ...(v.bonus_link ? { bonus_link: v.bonus_link } : {}),
   }
 }
@@ -431,6 +545,15 @@ export function renderQuickwin(level: Level, v: RenderVars) {
 
 export function renderLast(variant: Exclude<LastVariant, 'hold_meta'>, v: RenderVars) {
   return renderTemplate(LAST[variant], v)
+}
+
+export function renderSalesDay2(offer: SalesOffer, v: RenderVars) {
+  return renderTemplate(SALES_DAY2[offer], v)
+}
+
+export function renderSalesDay5(variant: SalesLastVariant, v: RenderVars) {
+  if (variant === 'sales_last_book' || variant === 'sales_last_mastermind') return renderTemplate(SALES_LAST[variant], v)
+  return renderLast(variant, v)
 }
 
 export function renderGift2(level: Level, gift: Gift, v: RenderVars) {
@@ -533,6 +656,8 @@ export type DueItem = {
   reply_text?: string
   gift?: Gift
   event?: LiveEvent
+  offer?: SalesOffer
+  sales_variant?: SalesLastVariant
 }
 
 function firstName(raw: string | null | undefined): string {
@@ -568,7 +693,8 @@ export function planFollowups(input: PlanInput): { due: DueItem[]; skipped: Reco
     const source = String(lead.lead_source || '').trim()
     if (!email || seen.has(email)) continue
     seen.add(email)
-    if (!source || isSalesKeywordSource(source)) { skip('not_free_gift'); continue }
+    const sales = salesOfferFor(source)
+    if (!source || (isSalesKeywordSource(source) && !sales)) { skip('not_free_gift'); continue }
     if (isTestEmail(email)) { skip('test_address'); continue }
     const grabbedAt = new Date(lead.updated_at || lead.created_at || 0)
     if (grabbedAt < input.startAt) { skip('before_start'); continue }
@@ -583,8 +709,61 @@ export function planFollowups(input: PlanInput): { due: DueItem[]; skipped: Reco
     const sub = input.subscribers?.get(email)
     const ageH = (now.getTime() - grabbedAt.getTime()) / HOUR
     const fromDm = mine.get('dm_ack')?.level ?? null
-    const level: Level = (fromDm as Level | null) ?? levelFromQuizScore(input.quizScores?.get(email)) ?? levelFromSource(source)
+    const level: Level = (fromDm as Level | null) ?? levelFromQuizScore(input.quizScores?.get(email)) ?? (sales ? SALES_LEVEL[sales] : levelFromSource(source))
     const base = { email, level, source, first_name: firstName(lead.first_name || sub?.name), subscriber_id: sub?.id, ig_username: sub?.ig_username }
+
+    // ---- Day 14 and day 30 (Illy, 17 Oct), shared by both tracks. Clicking through,
+    // booking or entering the workshop funnel takes them out; customers and replies
+    // already left above. Returns after pushing one item or one skip.
+    const runTail = (): void => {
+      if (clicked.has(email) || inFunnel.has(email)) return skip('clicked_offer')
+      if (booked.has(email)) return skip('booked')
+      if (!mine.get('email_gift2')) {
+        if (ageH < GIFT2_AFTER_DAYS * 24) return skip('waiting_gift2')
+        if (ageH > GIFT2_TOO_LATE_DAYS * 24) return skip('gift2_too_late')
+        const history = new Set([source, ...(input.grabbedGifts?.get(email) || [])])
+        const gift = pickGift(level, history)
+        if (!gift) return skip('gift2_none_left')
+        due.push({ ...base, step: 'email_gift2', gift })
+        return
+      }
+      if (mine.has('email_live')) return skip('finished')
+      if (ageH < LIVE_AFTER_DAYS * 24) return skip('waiting_live')
+      if (ageH > LIVE_TOO_LATE_DAYS * 24) return skip('live_too_late')
+      // No open tracking on the sending domain, so "opened none of the first three" uses
+      // the nearest honest proxy: they answered the level DM, or grabbed another gift
+      // after joining (leads.updated_at moves on every grab). No sign of life = no day 30.
+      const firstSentAt = Math.min(...[...mine.values()].map((r) => new Date(r.sent_at).getTime()))
+      const grabbedAgain = grabbedAt.getTime() > firstSentAt
+      if (!mine.has('dm_ack') && !grabbedAgain) return skip('live_no_sign_of_life')
+      const event = pickLiveEvent(level, now, input.liveEvents)
+      if (!event) return skip('live_no_real_date')
+      due.push({ ...base, step: 'email_live', event })
+    }
+
+    // ---- Sales-keyword track: day 2 objection + proof, day 5 last one, then the tail.
+    if (sales) {
+      if (clicked.has(email) || inFunnel.has(email)) { skip('clicked_offer'); continue }
+      if (booked.has(email)) { skip('booked'); continue }
+      const d2 = mine.get('sales_day2')
+      if (!d2) {
+        if (ageH < QUICKWIN_AFTER_HOURS) { skip('waiting_sales_day2'); continue }
+        if (ageH > QUICKWIN_TOO_LATE_HOURS) { skip('sales_day2_too_late'); continue }
+        due.push({ ...base, step: 'sales_day2', offer: sales })
+        continue
+      }
+      if (!mine.has('sales_day5')) {
+        const sinceD2H = (now.getTime() - new Date(d2.sent_at).getTime()) / HOUR
+        if (ageH < LAST_AFTER_DAYS * 24 || sinceD2H < LAST_MIN_GAP_HOURS) { skip('waiting_sales_day5'); continue }
+        if (ageH > LAST_TOO_LATE_DAYS * 24) { skip('sales_day5_too_late'); continue }
+        const v = salesLastVariant(sales, now)
+        if (v === 'hold_meta') { skip('meta_date_hold'); continue }
+        due.push({ ...base, step: 'sales_day5', offer: sales, sales_variant: v })
+        continue
+      }
+      runTail()
+      continue
+    }
 
     // ---- Instagram: the level question, then the answer.
     if (sub) {
@@ -623,33 +802,7 @@ export function planFollowups(input: PlanInput): { due: DueItem[]; skipped: Reco
       continue
     }
     if (mine.has('email_last')) {
-      // ---- Day 14 and day 30 (Illy, 17 Oct). Clicking through, booking or entering the
-      // workshop funnel takes them out; a customer or a reply already did above.
-      if (clicked.has(email) || inFunnel.has(email)) { skip('clicked_offer'); continue }
-      if (booked.has(email)) { skip('booked'); continue }
-      const g2 = mine.get('email_gift2')
-      if (!g2) {
-        if (ageH < GIFT2_AFTER_DAYS * 24) { skip('waiting_gift2'); continue }
-        if (ageH > GIFT2_TOO_LATE_DAYS * 24) { skip('gift2_too_late'); continue }
-        const history = new Set([source, ...(input.grabbedGifts?.get(email) || [])])
-        const gift = pickGift(level, history)
-        if (!gift) { skip('gift2_none_left'); continue }
-        due.push({ ...base, step: 'email_gift2', gift })
-        continue
-      }
-      if (mine.has('email_live')) { skip('finished'); continue }
-      if (ageH < LIVE_AFTER_DAYS * 24) { skip('waiting_live'); continue }
-      if (ageH > LIVE_TOO_LATE_DAYS * 24) { skip('live_too_late'); continue }
-      // No open tracking on the sending domain, so "opened none of the first three" uses
-      // the nearest honest proxy: they answered the level DM, or grabbed another gift
-      // after joining. No sign of life = no day 30 email (protects deliverability).
-      // leads.updated_at moves on every grab, so a grab after our first email = sign of life.
-      const firstSentAt = Math.min(...[...mine.values()].map((r) => new Date(r.sent_at).getTime()))
-      const grabbedAgain = grabbedAt.getTime() > firstSentAt
-      if (!mine.has('dm_ack') && !grabbedAgain) { skip('live_no_sign_of_life'); continue }
-      const event = pickLiveEvent(level, now, input.liveEvents)
-      if (!event) { skip('live_no_real_date'); continue }
-      due.push({ ...base, step: 'email_live', event })
+      runTail()
       continue
     }
     const sinceQwH = (now.getTime() - new Date(qw.sent_at).getTime()) / HOUR
