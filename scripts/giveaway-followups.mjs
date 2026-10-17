@@ -25,8 +25,9 @@ import { homedir } from 'node:os'
 import path from 'node:path'
 import {
   LAST, QUICKWIN, DM_ACK_BUBBLES, dayZeroPs, planFollowups, renderDmLevel, renderLast, renderQuickwin, toHtml,
-  BUILDER_SOURCES, WW_FUNNEL_SOURCES,
+  BUILDER_SOURCES, WW_FUNNEL_SOURCES, BONUS_TTL_HOURS,
 } from '../src/lib/giveaway-followups.ts'
+import { signDeal } from '/Users/myos/.myos/workspace/projects/mastermind/mhq-homepage/src/lib/mhq-checkout-deals.mjs'
 
 const WS = '/Users/myos/.myos/workspace'
 const require = createRequire(import.meta.url)
@@ -179,8 +180,25 @@ async function claim(item, extra = {}) {
 const unclaim = (id) => sb(`giveaway_followup_sends?id=eq.${id}`, { method: 'DELETE' })
 const markSent = (id, patch) => sb(`giveaway_followup_sends?id=eq.${id}`, { method: 'PATCH', body: JSON.stringify(patch) })
 
+// Day 5-7 workshop bonus: one signed checkout link per person, the $67 workshop plus the
+// Get Found kit at $0 (coupon scoped to the kit product only). /api/mhq-checkout refuses it after 72h.
+const BONUS_DEAL = {
+  price: 'price_1UA5zHEmLFN6MnIWrcT2h1tR', upfrontPrice: 'price_1UPcYxEmLFN6MnIWhOmpE4rt', mode: 'payment',
+  discounts: [{ coupon: 'GETFOUND_72H_BONUS' }],
+  metadata: { myos_flow: 'website_workshop', courseSlug: 'website-workshop', productKey: 'website-workshop', deal: 'website_workshop_getfound_bonus', source_tag: 'giveaway_followup' },
+  successUrl: 'https://mastermindshq.business/website-workshop/thank-you?session_id={CHECKOUT_SESSION_ID}',
+  cancelUrl: 'https://mastermindshq.business/website-workshop',
+  fallback: 'https://mastermindshq.business/website-workshop',
+}
+function bonusLink(email) {
+  const secret = (process.env.MHQ_CHECKOUT_SIGNING_SECRET || '').trim()
+  if (!secret) throw new Error('MHQ_CHECKOUT_SIGNING_SECRET missing, cannot mint the 72h bonus link')
+  const deal = { ...BONUS_DEAL, metadata: { ...BONUS_DEAL.metadata, giveaway_email: email } }
+  return `https://mastermindshq.business/api/mhq-checkout?m=${encodeURIComponent(signDeal(deal, secret, { ttlMs: BONUS_TTL_HOURS * HOUR }))}`
+}
+
 function renderEmailFor(item) {
-  const v = { first_name: item.first_name, unsubscribe_url: unsubscribeUrl(item.email) }
+  const v = { first_name: item.first_name, unsubscribe_url: unsubscribeUrl(item.email), ...(item.variant === 'last_workshop' ? { bonus_link: bonusLink(item.email) } : {}) }
   return item.step === 'email_quickwin' ? renderQuickwin(item.level, v) : renderLast(item.variant, v)
 }
 
@@ -234,7 +252,7 @@ async function sendOne(item, sub) {
   }
   if (!(await domainAlive(item.email))) return { status: 'dead_domain' }
   const { subject, text } = renderEmailFor(item)
-  const id = await claim(item, item.variant ? { detail: { variant: item.variant } } : {})
+  const id = await claim(item, item.variant ? { detail: { variant: item.variant, ...(item.variant === 'last_workshop' ? { bonus_until: new Date(Date.now() + BONUS_TTL_HOURS * HOUR).toISOString() } : {}) } } : {})
   if (!id) return { status: 'already' }
   try {
     const messageId = await resendSend({ to: item.email, subject, text, step: item.step, key: `giveaway-followup:${item.step}:${item.email}` })
@@ -249,7 +267,7 @@ async function sendOne(item, sub) {
 // ---------------------------------------------------------------- review modes
 
 function allVariants() {
-  const v = { first_name: 'Rick', unsubscribe_url: 'https://workshop.mastermindshq.business/api/unsubscribe?token=EXAMPLE' }
+  const v = { first_name: 'Rick', unsubscribe_url: 'https://workshop.mastermindshq.business/api/unsubscribe?token=EXAMPLE', bonus_link: 'https://mastermindshq.business/api/mhq-checkout?m=PERSONAL-72H-LINK' }
   const out = []
   for (const level of Object.keys(QUICKWIN)) out.push({ key: `day2-3-quickwin-${level}`, ...renderQuickwin(level, v) })
   for (const variant of Object.keys(LAST)) out.push({ key: `day5-7-${variant}`, ...renderLast(variant, v) })

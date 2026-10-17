@@ -203,6 +203,8 @@ Joe`,
 export const LAST: Record<Exclude<LastVariant, 'hold_meta'>, Template> = {
   last_workshop: {
     // Hormozi rewrite approved by Illy 17 Oct: one ask, proof, value stack, "last email" at the end.
+    // 72h bonus (Illy 17 Oct "lets add it"): {bonus_link} is a per-person signed checkout link
+    // (workshop + Get Found kit at $0 via coupon GETFOUND_72H_BONUS) that the checkout refuses after 72h.
     subject: 'Your website, without paying anyone',
     body: `Hi {first_name},
 
@@ -217,9 +219,11 @@ Here is what you get for $67, once:
 
 If you do both sessions and your site is not live, I refund every cent and you keep everything you built.
 
-Get instant access: {workshop_link}
+Get it in the next 72 hours and I'll add my Get Found on Google and ChatGPT kit for free. It normally costs $47. It gets your new site listed on Google and Bing so people (and ChatGPT) can find you by your name and your service.
 
-This is my last email about it.
+Get instant access, kit included: {bonus_link}
+
+That link works for 72 hours. This is my last email about it.
 
 Joe`,
   },
@@ -253,7 +257,10 @@ Joe`,
   },
 }
 
-export type RenderVars = { first_name?: string; unsubscribe_url?: string; name?: string }
+export type RenderVars = { first_name?: string; unsubscribe_url?: string; name?: string; bonus_link?: string }
+
+/** How long the day 5-7 workshop bonus link works. The email text says 72 hours. */
+export const BONUS_TTL_HOURS = 72
 
 function fill(s: string, vars: Record<string, string>): string {
   return s.replace(/\{(\w+)\}/g, (m, k) => (k in vars ? vars[k] : m))
@@ -266,6 +273,7 @@ function baseVars(v: RenderVars): Record<string, string> {
     demo_link: LINKS.demo,
     workshop_link: LINKS.workshop,
     meta_link: LINKS.metaAds,
+    ...(v.bonus_link ? { bonus_link: v.bonus_link } : {}),
   }
 }
 

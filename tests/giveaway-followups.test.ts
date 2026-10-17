@@ -14,7 +14,7 @@ const lead = (email: string, hoursAgo: number, source = 'lead-machine'): Lead =>
 const plan = (over: Partial<Parameters<typeof planFollowups>[0]>) => planFollowups({ leads: [], startAt: START, now: NOW, ...over })
 
 test('every email renders with no placeholders, no em dashes, and an unsubscribe line', () => {
-  const v = { first_name: 'Rick', unsubscribe_url: 'https://x/u' }
+  const v = { first_name: 'Rick', unsubscribe_url: 'https://x/u', bonus_link: 'https://b/l' }
   for (const level of Object.keys(QUICKWIN) as (keyof typeof QUICKWIN)[]) {
     const { text } = renderQuickwin(level, v)
     assert.match(text, /^Hi Rick,/)
@@ -30,7 +30,7 @@ test('free emails never quote the price of a paid product except the offer itsel
 })
 
 test('copy never says how long the demo or a session is (Illy, 17 Oct)', () => {
-  const v = { first_name: 'Rick', unsubscribe_url: 'https://x/u' }
+  const v = { first_name: 'Rick', unsubscribe_url: 'https://x/u', bonus_link: 'https://b/l' }
   const all = [
     ...(Object.keys(QUICKWIN) as (keyof typeof QUICKWIN)[]).map((l) => renderQuickwin(l, v).text),
     ...(Object.keys(LAST) as (keyof typeof LAST)[]).map((k) => renderLast(k, v).text),
@@ -42,6 +42,13 @@ test('copy never says how long the demo or a session is (Illy, 17 Oct)', () => {
       if (/demo|session/i.test(sentence)) assert.doesNotMatch(sentence, duration, sentence)
     }
   }
+})
+
+test('workshop last email carries the personal 72h bonus link and refuses to render without it', () => {
+  const { text } = renderLast('last_workshop', { first_name: 'Rick', bonus_link: 'https://b/l' })
+  assert.match(text, /kit included: https:\/\/b\/l/)
+  assert.match(text, /72 hours/)
+  assert.throws(() => renderLast('last_workshop', { first_name: 'Rick' }), /Unfilled placeholder/)
 })
 
 test('DM greeting uses the first name only, or none', () => {
