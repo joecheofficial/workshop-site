@@ -181,10 +181,11 @@ const unclaim = (id) => sb(`giveaway_followup_sends?id=eq.${id}`, { method: 'DEL
 const markSent = (id, patch) => sb(`giveaway_followup_sends?id=eq.${id}`, { method: 'PATCH', body: JSON.stringify(patch) })
 
 // Day 5-7 workshop bonus: one signed checkout link per person, the $67 workshop plus the
-// Get Found kit at $0 (coupon scoped to the kit product only). /api/mhq-checkout refuses it after 72h.
+// Get Found kit as its own $0 price (the same line the demo page's 24h bonus uses, which the
+// portal webhook grants like the paid add-on; a coupon on the $47 price would fail the
+// portal's exact amount check). /api/mhq-checkout refuses the link after 72h.
 const BONUS_DEAL = {
-  price: 'price_1UA5zHEmLFN6MnIWrcT2h1tR', upfrontPrice: 'price_1UPcYxEmLFN6MnIWhOmpE4rt', mode: 'payment',
-  discounts: [{ coupon: 'GETFOUND_72H_BONUS' }],
+  price: 'price_1UA5zHEmLFN6MnIWrcT2h1tR', upfrontPrice: 'price_1UQlfnEmLFN6MnIWxyqlUeQB', mode: 'payment',
   metadata: { myos_flow: 'website_workshop', courseSlug: 'website-workshop', productKey: 'website-workshop', deal: 'website_workshop_getfound_bonus', source_tag: 'giveaway_followup' },
   successUrl: 'https://mastermindshq.business/website-workshop/thank-you?session_id={CHECKOUT_SESSION_ID}',
   cancelUrl: 'https://mastermindshq.business/website-workshop',

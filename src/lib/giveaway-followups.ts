@@ -204,7 +204,7 @@ export const LAST: Record<Exclude<LastVariant, 'hold_meta'>, Template> = {
   last_workshop: {
     // Hormozi rewrite approved by Illy 17 Oct: one ask, proof, value stack, "last email" at the end.
     // 72h bonus (Illy 17 Oct "lets add it"): {bonus_link} is a per-person signed checkout link
-    // (workshop + Get Found kit at $0 via coupon GETFOUND_72H_BONUS) that the checkout refuses after 72h.
+    // (workshop + Get Found kit as its own $0 price) that the checkout refuses after 72h.
     subject: 'Your website, without paying anyone',
     body: `Hi {first_name},
 
