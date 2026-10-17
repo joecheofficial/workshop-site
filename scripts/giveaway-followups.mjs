@@ -30,6 +30,7 @@ import {
   SALES_DAY2, renderSalesDay2, renderSalesDay5, salesOfferFor, ILLY_REPLY_TO,
 } from '../src/lib/giveaway-followups.ts'
 import { signDeal } from '/Users/myos/.myos/workspace/projects/mastermind/mhq-homepage/src/lib/mhq-checkout-deals.mjs'
+import { withEmailLogo } from '../src/lib/email-logo.ts'
 
 const WS = '/Users/myos/.myos/workspace'
 const require = createRequire(import.meta.url)
@@ -295,7 +296,7 @@ async function resendSend({ to, subject, text, step, key, replyTo = [REPLY_TO] }
     method: 'POST',
     headers: { Authorization: `Bearer ${RESEND_KEY}`, 'Content-Type': 'application/json', 'Idempotency-Key': createHash('sha1').update(key).digest('hex') },
     body: JSON.stringify({
-      from: FROM, to: [to], subject, text, html: toHtml(text), reply_to: replyTo,
+      from: FROM, to: [to], subject, text, html: withEmailLogo(toHtml(text)), reply_to: replyTo,
       headers: { 'List-Unsubscribe': `<${unsub}>`, 'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click' },
       tags: [{ name: 'flow', value: 'giveaway_followup' }, { name: 'step', value: step }],
     }),
@@ -374,7 +375,7 @@ async function renderAll(dir) {
   mkdirSync(dir, { recursive: true })
   for (const e of allVariants()) {
     writeFileSync(path.join(dir, `${e.key}.txt`), `Subject: ${e.subject}\n\n${e.text}\n`)
-    writeFileSync(path.join(dir, `${e.key}.html`), `<!doctype html><meta charset="utf-8"><title>${e.subject}</title><p style="font-family:system-ui;color:#888">Subject: ${e.subject}</p>${toHtml(e.text)}`)
+    writeFileSync(path.join(dir, `${e.key}.html`), `<!doctype html><meta charset="utf-8"><title>${e.subject}</title><p style="font-family:system-ui;color:#888">Subject: ${e.subject}</p>${withEmailLogo(toHtml(e.text))}`)
   }
   const starter = dayZeroPs('lead-machine')
   const builder = dayZeroPs('tokens')
