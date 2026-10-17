@@ -18,7 +18,7 @@
 // person for this run rather than guessing.
 
 import { execFileSync } from 'node:child_process'
-import { createHash, createHmac } from 'node:crypto'
+import { createHash, createHmac, randomBytes } from 'node:crypto'
 import { promises as dns } from 'node:dns'
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { createRequire } from 'node:module'
@@ -255,11 +255,27 @@ const BONUS_DEAL = {
   cancelUrl: 'https://mastermindshq.business/website-workshop',
   fallback: 'https://mastermindshq.business/website-workshop',
 }
+// The signed checkout link is far too long to show (Illy, 17 Oct), so each person gets their
+// own Shlink short link that stops working after 72h. The signed token lives an hour longer
+// than the short link, so nobody can reach the checkout's raw "expired" error; after 72h the
+// short link goes to Shlink's default (the MHQ homepage).
+const SHLINK_VPS = 'root@100.90.95.9'
+function shlinkCreate(longUrl, slug, title, validUntil) {
+  const { _internal } = require(`${WS}/agents/shlink/recipes/shorten-link.js`)
+  const cmd = _internal.buildRemoteCommand(['docker', 'exec', 'shlink', 'shlink', 'short-url:create', longUrl,
+    '--custom-slug', slug, '--title', title, '--valid-until', validUntil.toISOString().replace(/\.\d{3}Z$/, '+00:00'), '--no-interaction'])
+  const out = execFileSync('ssh', ['-i', `${homedir()}/.ssh/id_ed25519`, '-o', 'ConnectTimeout=8', '-o', 'StrictHostKeyChecking=no', SHLINK_VPS, cmd], { encoding: 'utf8', timeout: 30000 })
+  const m = out.match(/Generated short URL:\s*(\S+)/)
+  if (!m) throw new Error(`Shlink did not return a short URL: ${out.slice(0, 200)}`)
+  return m[1]
+}
 function bonusLink(email) {
   const secret = (process.env.MHQ_CHECKOUT_SIGNING_SECRET || '').trim()
   if (!secret) throw new Error('MHQ_CHECKOUT_SIGNING_SECRET missing, cannot mint the 72h bonus link')
   const deal = { ...BONUS_DEAL, metadata: { ...BONUS_DEAL.metadata, giveaway_email: email } }
-  return `https://mastermindshq.business/api/mhq-checkout?m=${encodeURIComponent(signDeal(deal, secret, { ttlMs: BONUS_TTL_HOURS * HOUR }))}`
+  const longUrl = `https://mastermindshq.business/api/mhq-checkout?m=${encodeURIComponent(signDeal(deal, secret, { ttlMs: (BONUS_TTL_HOURS + 1) * HOUR }))}`
+  const slug = `fg-bonus-${randomBytes(4).toString('hex')}`
+  return shlinkCreate(longUrl, slug, 'Free-gift follow-up: 72h workshop + Get Found bonus', new Date(Date.now() + BONUS_TTL_HOURS * HOUR))
 }
 
 function renderEmailFor(item) {
@@ -343,7 +359,7 @@ async function sendOne(item, sub) {
 // ---------------------------------------------------------------- review modes
 
 function allVariants() {
-  const v = { first_name: 'Rick', unsubscribe_url: 'https://workshop.mastermindshq.business/api/unsubscribe?token=EXAMPLE', bonus_link: 'https://mastermindshq.business/api/mhq-checkout?m=PERSONAL-72H-LINK' }
+  const v = { first_name: 'Rick', unsubscribe_url: 'https://workshop.mastermindshq.business/api/unsubscribe?token=EXAMPLE', bonus_link: 'https://a.mastermindshq.business/fg-bonus-1a2b3c4d' }
   const out = []
   for (const level of Object.keys(QUICKWIN)) out.push({ key: `day2-3-quickwin-${level}`, ...renderQuickwin(level, v) })
   for (const variant of Object.keys(LAST)) out.push({ key: `day5-7-${variant}`, ...renderLast(variant, v) })
@@ -539,7 +555,7 @@ async function main() {
 }
 
 // Lookups exported for a live smoke check (import does not run main on Node 26).
-export { checkoutStartedSince, bookedCall, crmFirstSource, slugForKeyword, stripeBuyer }
+export { checkoutStartedSince, bookedCall, crmFirstSource, slugForKeyword, stripeBuyer, bonusLink }
 
 if (import.meta.main) main().catch(async (err) => {
   console.error(err.stack || err.message)

@@ -59,37 +59,37 @@ export const GIFTS: Record<string, Gift> = {
     slug: 'hated-task-prompts',
     name: 'The Hated-Task Prompt Pack',
     line: "Nine prompts for the work you'd rather never do again. You fill in the blanks and send it straight to ChatGPT or Claude.",
-    link: 'https://workshop.mastermindshq.business/hated-task-prompts.html',
+    link: 'https://a.mastermindshq.business/fg-gift-hated-tasks',
   },
   'lead-machine': {
     slug: 'lead-machine',
     name: 'The Lead Machine',
     line: 'You paste one prompt into ChatGPT or Claude and get 25 real businesses that fit who you serve, each with a real way to reach them.',
-    link: 'https://workshop.mastermindshq.business/giveaways/lead-machine',
+    link: 'https://a.mastermindshq.business/fg-gift-lead-machine',
   },
   'free-ai-tools': {
     slug: 'free-ai-tools',
     name: '10 free swaps for the paid apps you use',
     line: "The free tool I'd use instead of Acrobat, DocuSign, Calendly, Otter, Miro and more, with my setup notes for each.",
-    link: 'https://workshop.mastermindshq.business/giveaways/free-ai-tools',
+    link: 'https://a.mastermindshq.business/fg-gift-free-swaps',
   },
   'claude-md': {
     slug: 'claude-md',
     name: 'The Ultimate CLAUDE.md',
     line: 'One file in your project that loads your rules and context at the start of every Claude Code session, so you stop repeating yourself.',
-    link: 'https://workshop.mastermindshq.business/giveaways/claude-md',
+    link: 'https://a.mastermindshq.business/fg-gift-claude-md',
   },
   guardog: {
     slug: 'guardog',
     name: 'GuardDog',
     line: 'A free Claude Code skill that scans npm and PyPI packages for malware before you install them. One command to set up.',
-    link: 'https://workshop.mastermindshq.business/giveaways/guardog',
+    link: 'https://a.mastermindshq.business/fg-gift-guardog',
   },
   tokens: {
     slug: 'tokens',
     name: 'The Token Diet',
     line: 'The four changes that stopped my agents wasting 1.4 billion tokens, with the exact setup for each.',
-    link: 'https://workshop.mastermindshq.business/giveaways/tokens',
+    link: 'https://a.mastermindshq.business/fg-gift-token-diet',
   },
 }
 export const GIFT_ORDER: Record<Level, string[]> = {
@@ -127,7 +127,7 @@ export const LIVE_EVENTS: LiveEvent[] = [
     intro: "My Meta Ads with Claude Code course has one live session left, the Final Review. We look at real campaign numbers together and decide what to pause and what to scale.",
     when: 'Monday 2 November, 7pm Bali time (6am New York, 11am London)',
     note: "It's part of the course, $397 or two payments of $199. Join before Monday and you get Sessions 1 to 3 as replays too.",
-    link: 'https://mastermindshq.business/meta-ads-with-claude-code',
+    link: 'https://a.mastermindshq.business/fg-meta',
   },
 ]
 /** The soonest real live date for this level inside the window, or null. */
@@ -143,10 +143,13 @@ export function pickLiveEvent(level: Level, now: Date, events: LiveEvent[] = LIV
   return ok[0] ?? null
 }
 
+// Every link in these emails is a Shlink short link (Illy, 17 Oct: "we always use shlink").
+// Slugs are registered in agents/shlink/CANONICAL-LINKS.md; destinations carry
+// utm_campaign=free-gift-followup (the Amazon link stays bare).
 export const LINKS = {
-  demo: 'https://mastermindshq.business/website-workshop/demo',
-  workshop: 'https://mastermindshq.business/website-workshop',
-  metaAds: 'https://mastermindshq.business/meta-ads-with-claude-code',
+  demo: 'https://a.mastermindshq.business/fg-demo', // mastermindshq.business/website-workshop/demo
+  workshop: 'https://a.mastermindshq.business/fg-workshop', // mastermindshq.business/website-workshop
+  metaAds: 'https://a.mastermindshq.business/fg-meta', // mastermindshq.business/meta-ads-with-claude-code
 }
 
 /**
@@ -381,7 +384,7 @@ export function salesOfferFor(source: string): SalesOffer | null {
 }
 /** Level for the day 14 / day 30 tail when no quiz score says otherwise. */
 export const SALES_LEVEL: Record<SalesOffer, Level> = { book: 'builder', meta: 'builder', mastermind: 'everyday', workshop: 'starter' }
-export const BOOK_LINK = 'https://www.amazon.com/dp/B0H4GR93WT'
+export const BOOK_LINK = 'https://a.mastermindshq.business/fg-book' // amazon.com/dp/B0H4GR93WT
 /** Mastermind emails ask for a reply that reaches Illy too; never Joe's calendar, never a price. */
 export const ILLY_REPLY_TO = 'illy@mastermindshq.business'
 
@@ -630,6 +633,15 @@ export function toHtml(text: string): string {
     }
     return `<p>${(out + escape(paragraph.slice(offset))).replace(/\n/g, '<br>')}</p>`
   })
+  // The footer shows one word, not the long signed unsubscribe URL (Illy, 17 Oct). The
+  // plain-text part keeps the full URL, since a text email has no link labels.
+  const last = paras.length - 1
+  if (last >= 0) {
+    paras[last] = paras[last].replace(
+      /Unsubscribe any time: <a href="([^"]+)"[^>]*>[^<]*<\/a>/,
+      '<a href="$1" style="color:#999;">Unsubscribe</a> any time.',
+    ).replace(/^<p>--<br>/, '<p style="font-size:12px;color:#999;">')
+  }
   return `<div style="font-family:Georgia,'Times New Roman',serif;font-size:16px;line-height:1.7;color:#2a2536;max-width:560px;">\n${paras.join('\n')}\n</div>`
 }
 

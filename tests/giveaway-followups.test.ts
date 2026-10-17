@@ -4,7 +4,7 @@ import test from 'node:test'
 import {
   DM_ACK_BUBBLES, LAST, QUICKWIN, dayZeroPs, lastVariant, levelFromQuizScore, levelFromSource, parseLevelReply,
   planFollowups, renderDmLevel, renderLast, renderQuickwin, STEPS, renderGift2, renderLive, GIFTS, LIVE_EVENTS,
-  SALES_DAY2, SALES_LAST, renderSalesDay2, renderSalesDay5,
+  SALES_DAY2, SALES_LAST, renderSalesDay2, renderSalesDay5, toHtml,
   type Lead, type SentRow, type Subscriber,
 } from '../src/lib/giveaway-followups'
 
@@ -57,6 +57,25 @@ test('workshop last email carries the personal 72h bonus link and refuses to ren
   assert.throws(() => renderLast('last_workshop', { first_name: 'Rick' }), /Unfilled placeholder/)
 })
 
+test('every link in every email is a Shlink short link, and the HTML footer shows one word', () => {
+  const v = { first_name: 'Rick', unsubscribe_url: 'https://workshop.mastermindshq.business/api/unsubscribe?token=LONG.TOKEN', bonus_link: 'https://a.mastermindshq.business/fg-bonus-ab12cd' }
+  const texts = [
+    ...(Object.keys(QUICKWIN) as (keyof typeof QUICKWIN)[]).map((l) => renderQuickwin(l, v).text),
+    ...(Object.keys(LAST) as (keyof typeof LAST)[]).map((k) => renderLast(k, v).text),
+    ...Object.values(GIFTS).map((g) => renderGift2('starter', g, v).text),
+    ...LIVE_EVENTS.map((e) => renderLive(e, v).text),
+    ...(Object.keys(SALES_DAY2) as (keyof typeof SALES_DAY2)[]).map((o) => renderSalesDay2(o, v).text),
+    ...(Object.keys(SALES_LAST) as (keyof typeof SALES_LAST)[]).map((k) => renderSalesDay5(k, v).text),
+  ]
+  for (const text of texts) {
+    const body = text.split('\n--\n')[0]
+    for (const url of body.match(/https?:\/\/\S+/g) || []) assert.match(url, /^https:\/\/a\.mastermindshq\.business\/fg-/, url)
+    const html = toHtml(text)
+    assert.doesNotMatch(html, />https:\/\/workshop\.mastermindshq\.business\/api\/unsubscribe/)
+    assert.match(html, />Unsubscribe<\/a> any time\./)
+  }
+})
+
 test('DM greeting uses the first name only, or none', () => {
   assert.equal(renderDmLevel('rick visca')[0], 'Hey rick, glad you grabbed it')
   assert.equal(renderDmLevel('')[0], 'Hey, glad you grabbed it')
@@ -80,8 +99,8 @@ test('levels from gift and quiz score', () => {
 })
 
 test('day 0 P.S.: starter gifts get the demo, builder gifts the Meta course, quiz and sales keywords none', () => {
-  assert.match(dayZeroPs('lead-machine')!.text, /website-workshop\/demo/)
-  assert.match(dayZeroPs('guardog')!.text, /meta-ads-with-claude-code/)
+  assert.match(dayZeroPs('lead-machine')!.text, /a\.mastermindshq\.business\/fg-demo/)
+  assert.match(dayZeroPs('guardog')!.text, /a\.mastermindshq\.business\/fg-meta/)
   assert.equal(dayZeroPs('ai-levels-quiz'), null)
   assert.equal(dayZeroPs('kw-book'), null)
 })
@@ -189,9 +208,9 @@ test('sales keywords: clicking through to checkout or booking a call ends it', (
 test('sales copy: no price in the Mastermind emails, one link that matches its offer', () => {
   for (const k of ['mastermind'] as const) assert.doesNotMatch(renderSalesDay2(k, {}).text, /\$\d|https?:/)
   assert.doesNotMatch(renderSalesDay5('sales_last_mastermind', {}).text, /\$\d|https?:/)
-  assert.match(renderSalesDay2('book', {}).text, /amazon\.com\/dp\/B0H4GR93WT/)
-  assert.match(renderSalesDay2('meta', {}).text, /meta-ads-with-claude-code/)
-  assert.match(renderSalesDay2('workshop', {}).text, /mastermindshq\.business\/website-workshop/)
+  assert.match(renderSalesDay2('book', {}).text, /a\.mastermindshq\.business\/fg-book/)
+  assert.match(renderSalesDay2('meta', {}).text, /a\.mastermindshq\.business\/fg-meta/)
+  assert.match(renderSalesDay2('workshop', {}).text, /a\.mastermindshq\.business\/fg-workshop/)
   for (const o of Object.keys(SALES_DAY2) as (keyof typeof SALES_DAY2)[]) assert.doesNotMatch(renderSalesDay2(o, {}).text, /Your copy of/i)
 })
 
