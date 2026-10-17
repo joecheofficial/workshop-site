@@ -43,7 +43,7 @@ export function usePackAsk() {
 // in front of the free thing, never a timed popup. The ask is the shared
 // GiveawayEmailModal -> /api/lead-magnet.
 //
-// Offer rule: the one paid offer at the end comes from offerForLevel(), so it
+// Offer rule: the one offer at the end (beginner: the free demo; builder: paid) comes from offerForLevel(), so it
 // always matches the page's AI level. Rules: docs/giveaways/PROCESS.md.
 // ---------------------------------------------------------------------------
 export default function PackPage({
@@ -506,7 +506,7 @@ export default function PackPage({
       {offer ? (
         <section id={sectionId('next')} className={`${styles.section} ${styles.offer} ${styles.glow}`}>
           <div className={styles.wrap}>
-            <p className={`${styles.eyebrow} ${styles.offerEyebrow}`}>&#10022; What next &middot; paid &middot; optional</p>
+            <p className={`${styles.eyebrow} ${styles.offerEyebrow}`}>&#10022; {offer.eyebrow ?? 'What next \u00b7 paid \u00b7 optional'}</p>
             <h2>
               Want the next step? <span className={styles.hl}>{offer.name}</span>
             </h2>
