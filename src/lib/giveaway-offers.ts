@@ -2,7 +2,11 @@
 // The one paid offer at the end of a pack-style giveaway page.
 //
 // Rule (Illy, 2026-10-12, "match offers to AI level"): every offer must sit at
-// the buyer's AI level. Beginner giveaways end with the Website Workshop. A
+// the buyer's AI level. Beginner giveaways end with the FREE Website Workshop
+// demo, never the $67 page (Illy, 2026-10-17: giveaway people are cold for the
+// workshop, and cold traffic goes to the demo with no price before the value,
+// SALES-CYCLE-SOP.md "the free demo is the FRONT DOOR"). The $67 appears inside
+// the demo at the reveal. A
 // pack page declares its level and gets the offer for that level; there is no
 // way to put a high-level product on a beginner page by accident.
 //
@@ -29,34 +33,38 @@ export type GiveawayOffer = {
   photo: { src: string; alt: string }
   /** Replaces the page's own bridge line, for offers shared by many different pages. */
   bridge?: string
+  /** Small label above the heading. Defaults to "What next · paid · optional". */
+  eyebrow?: string
 }
 
-export const WEBSITE_WORKSHOP_URL = 'https://mastermindshq.business/masterminds-website-workshop'
+/** The free demo (name, email, WhatsApp unlock a ~5 minute video; the $67 offer shows at the reveal). */
+export const WORKSHOP_DEMO_URL = 'https://mastermindshq.business/website-workshop/demo'
 export const GET_FOUND_CHECKOUT_URL = 'https://mastermindshq.business/api/mhq-checkout?deal=get-found-kit'
 
 export const GIVEAWAY_OFFERS: Record<GiveawayLevel, GiveawayOffer | null> = {
   beginner: {
-    id: 'website-workshop',
+    id: 'website-workshop-demo',
     level: 'beginner',
-    name: 'The Website Workshop.',
+    eyebrow: 'What next \u00b7 free',
+    name: 'Watch beginners build a website.',
     stats: [
-      { value: '2', label: 'recorded sessions, ready now' },
-      { value: '1', label: 'live site on your own domain' },
-      { value: '100%', label: 'refund if your site is not live' },
-      { value: '$67', label: 'one payment' },
+      { value: '5', label: 'minute video, free to watch' },
+      { value: '1', label: 'real website, built by talking to AI' },
+      { value: '0', label: 'tech skills needed' },
+      { value: 'Now', label: 'plays the moment you sign up' },
     ],
     body:
-      'In the Website Workshop I show you how to build that place yourself, by talking to AI in plain English. Two sessions, ready the moment you join. You finish with a live site on your own domain and a lead page ready to connect.',
+      'It is a short video from my Website Workshop. You watch real beginners build a website just by telling AI what they want, in plain English. No code, no tech words.',
     checks: [
-      'Made for people who are not technical. Most people who take it have only used ChatGPT.',
-      'Free hosting in your own account. No platform fee, ever.',
-      'Stuck on a step? Ask in the course WhatsApp chat.',
+      'Made for people who are not technical. Most people in the workshop had only used ChatGPT.',
+      'You also see real websites my students built and put live.',
+      'Add your name, email and WhatsApp, and the video plays right there on the page.',
     ],
     promise: {
-      value: '100%',
-      text: 'Leave with a live website, or you do not pay. Do the build, and if your site is not live on the internet, I refund you in full.',
+      value: 'Free',
+      text: 'No card needed. If you like what you see, at the end I show you how to build your own.',
     },
-    cta: { label: 'See the Website Workshop', meta: '$67 · one payment · next page', href: WEBSITE_WORKSHOP_URL },
+    cta: { label: 'Watch the free demo', meta: 'Free \u00b7 5 minute video \u00b7 next page', href: WORKSHOP_DEMO_URL },
     photo: { src: '/images/events/joe-che-bio-bw.jpg', alt: 'Joe Che' },
   },
   builder: {
@@ -88,7 +96,10 @@ export const GIVEAWAY_OFFERS: Record<GiveawayLevel, GiveawayOffer | null> = {
   },
 }
 
-/** The end-of-page offer for a giveaway level, with campaign tags so sales can be traced to the giveaway. */
+/**
+ * The end-of-page offer for a giveaway level, with campaign tags so sign-ups and sales can be
+ * traced to the giveaway (the demo page saves them on the lead, mhq-homepage lead-capture).
+ */
 export function offerForLevel(level: GiveawayLevel, slug: string): GiveawayOffer | null {
   const offer = GIVEAWAY_OFFERS[level]
   if (!offer) return null

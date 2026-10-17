@@ -4,7 +4,7 @@ import { execFileSync } from 'node:child_process'
 import { readdirSync, readFileSync, statSync } from 'node:fs'
 import { join } from 'node:path'
 import { hasDmMarker } from '../src/lib/giveaway-dm'
-import { GIVEAWAY_OFFERS, WEBSITE_WORKSHOP_URL, offerForLevel } from '../src/lib/giveaway-offers'
+import { GIVEAWAY_OFFERS, WORKSHOP_DEMO_URL, offerForLevel } from '../src/lib/giveaway-offers'
 import { LEAD_MACHINE_CONTENT } from '../src/app/giveaways/lead-machine/pack'
 import { validatePackContent } from '../src/lib/pack-page'
 import type { PackPageContent } from '../src/lib/pack-page'
@@ -68,14 +68,18 @@ test('every offer sits at its own level; builder pages end with Get Found (Illy,
   assert.ok(g.bridge, 'shared builder offer carries its own bridge line')
 })
 
-test('the beginner offer is the Website Workshop, tagged with the giveaway slug', () => {
+test('the beginner offer is the free demo, no price, tagged with the giveaway slug (Illy, 2026-10-17)', () => {
   const offer = offerForLevel('beginner', 'lead-machine')
   assert.ok(offer)
-  assert.equal(offer.id, 'website-workshop')
+  assert.equal(offer.id, 'website-workshop-demo')
   const url = new URL(offer.cta.href)
-  assert.equal(`${url.origin}${url.pathname}`, WEBSITE_WORKSHOP_URL)
+  assert.equal(`${url.origin}${url.pathname}`, WORKSHOP_DEMO_URL)
   assert.equal(url.searchParams.get('utm_campaign'), 'lead-machine')
   assert.equal(url.searchParams.get('utm_source'), 'giveaway')
+  assert.equal(url.searchParams.get('utm_medium'), 'pack-page')
+  // Cold rule: no price before the value. The $67 shows inside the demo, never on the giveaway page.
+  assert.doesNotMatch(JSON.stringify(offer), /\$\s?\d/)
+  assert.doesNotMatch(offer.eyebrow ?? '', /paid/)
 })
 
 test('Lead Machine is a beginner pack page with its own slug', () => {
