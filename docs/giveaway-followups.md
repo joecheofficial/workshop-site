@@ -2,7 +2,7 @@
 
 Illy approved the outline on 17 Oct 2026 (Hormozi, $100M Money Models: don't go quiet after a free gift).
 Copy + rules: `src/lib/giveaway-followups.ts`. Sender: `scripts/giveaway-followups.mjs`.
-Sent log: Supabase `giveaway_followup_sends` (migration 018, applied 17 Oct).
+Sent log: Supabase `giveaway_followup_sends` (migrations 018 + 019, applied 17 Oct).
 
 | When | What | Channel |
 |---|---|---|
@@ -12,7 +12,15 @@ Sent log: Supabase `giveaway_followup_sends` (migration 018, applied 17 Oct).
 | they answer in words | no bot reply; Lina pings Illy; their emails stop | Telegram |
 | 48h after the gift | one quick win for their level + soft link (demo, or Meta course for builders) | email |
 | 5 days after the gift | last email: workshop $67 (no deadline exists, so an honest "last one"), or Meta Ads Final Review 2 Nov, or the recorded course after 3 Nov | email |
-| after that | nothing (Illy: "we are not doing weekly rn") | |
+| 14 days after the gift | a NEW free gift for their level they haven't grabbed (`GIFT_ORDER`) + one soft next-step line | email |
+| 30 days after the gift | invite to a REAL live date from `LIVE_EVENTS` (2 to 21 days ahead), only if they showed a sign of life (answered the DM, or grabbed another gift); no real date = skipped | email |
+| after that | nothing automatic (monthly or weekly is Joe's call); DB check constraint enforces it | |
+
+Day 14 and day 30 stop rules: started any Stripe checkout (incl. the 72h bonus link), entered the
+workshop demo/checkout, or has a call on Illy's or Joe's calendar = out. Opens can't be used: open and
+click tracking are OFF on the mastermindshq.business Resend domain, so the sign-of-life proxy stands in.
+To invite day-30 people, add a real event (with Illy-approved intro and, if paid, a price `note`) to
+`LIVE_EVENTS`.
 
 Levels: the DM answer wins, then the AI Levels quiz score, then the gift (`BUILDER_SOURCES`). Builder =
 already in Claude Code / agents, the only level that sees the Meta Ads course.
