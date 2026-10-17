@@ -92,3 +92,33 @@ test('only authenticated ManyChat calls may supply the link; website callers get
   assert.ok(route.includes('const websiteGeneric = isManychat ? null : websiteGiveawayEmail(source)'))
   assert.ok(route.includes('generic: true'))
 })
+
+test('IG sales keywords get the short sales-link letter with a fixed link', async () => {
+  const { buildSalesKeywordEmail, salesKeywordPage, SALES_KEYWORD_PAGES } = await import('../src/lib/generic-giveaway-email')
+  assert.deepEqual(Object.keys(SALES_KEYWORD_PAGES).sort(), ['kw-ads', 'kw-book', 'kw-build', 'kw-mastermind', 'kw-meta', 'kw-team'])
+  assert.equal(salesKeywordPage('the-quiet-epidemic'), null)
+  assert.equal(salesKeywordPage('toString'), null)
+  const footer = '<p style="font-size: 12px; color: #bbb;">Sent by Masterminds HQ.</p>'
+  const book = buildSalesKeywordEmail({ source: 'kw-book', unsubscribeFooter: footer, unsubscribeUrl: 'https://workshop.mastermindshq.business/unsubscribe?token=t' })
+  assert.equal(book.subject, 'The link you asked for on Instagram')
+  assert.ok(book.text.includes('https://www.amazon.com/dp/B0H4GR93WT\n'))
+  assert.ok(!book.html.includes('amazon.com/dp/B0H4GR93WT?utm'))
+  const meta = buildSalesKeywordEmail({ source: 'kw-meta', unsubscribeFooter: footer, unsubscribeUrl: null })
+  assert.ok(meta.html.includes('meta-ads-with-claude-code?utm_source=email'))
+  assert.ok(meta.html.includes('utm_content=kw-meta'))
+  for (const src of Object.keys(SALES_KEYWORD_PAGES)) {
+    const e = buildSalesKeywordEmail({ source: src, unsubscribeFooter: footer, unsubscribeUrl: null })
+    for (const s of [e.subject, e.html, e.text]) assert.ok(!s.includes('—'))
+    assert.ok(!/<table|background/i.test(e.html))
+    assert.ok(!/Your copy of/.test(e.subject + e.html))
+  }
+  assert.throws(() => buildSalesKeywordEmail({ source: 'x', unsubscribeFooter: footer, unsubscribeUrl: null }))
+})
+
+test('sales-keyword branch runs only for authenticated ManyChat calls, before the generic letter', () => {
+  const route = readFileSync(join(process.cwd(), 'src/app/api/lead-magnet/route.ts'), 'utf8')
+  const i = route.indexOf('if (isManychat && salesKeywordPage(source))')
+  assert.ok(i > 0)
+  assert.ok(i < route.indexOf('const websiteGeneric = isManychat ? null'))
+  assert.ok(i > route.indexOf(".upsert({ email, lead_source: source }"))
+})
