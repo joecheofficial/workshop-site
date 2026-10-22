@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "gitCommitHash": "8289670ed37ca9c8cec5ee29ee647e7ec38f7a65",
-  "generatedAt": "2026-10-15T20:07:04.458Z",
+  "gitCommitHash": "436de240b699af64a42deae4536dd9df5220cdc9",
+  "generatedAt": "2026-10-22T23:20:48.560Z",
   "files": {
     ".claude/settings.json": {
       "filePath": ".claude/settings.json",
@@ -183,6 +183,16 @@
       "totalLines": 52,
       "hasStructuralAnalysis": true
     },
+    "docs/giveaway-followups.md": {
+      "filePath": "docs/giveaway-followups.md",
+      "contentHash": "5b931199766d7875dead73e4d6075741d1ff09d75e7f6cdd4e02c104cee16a12",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 58,
+      "hasStructuralAnalysis": true
+    },
     "docs/giveaways/BACKLOG.md": {
       "filePath": "docs/giveaways/BACKLOG.md",
       "contentHash": "98d29574fcea0427d5764bd8ea29bbb152963b042d3b881dd4edbee921830eea",
@@ -235,7 +245,7 @@
     },
     "docs/giveaways/PROCESS.md": {
       "filePath": "docs/giveaways/PROCESS.md",
-      "contentHash": "9ab9635a2fdbbc3fc6cde421251125780ea69a5e76a72a7251b523d342dd14ef",
+      "contentHash": "49700ee9953b672c0b0ece1f2d76f53aad296d8f343898a3df5bab1a50ab8c85",
       "functions": [],
       "classes": [],
       "imports": [],
@@ -965,6 +975,378 @@
         "runEstimateAiLevels"
       ],
       "totalLines": 141,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/giveaway-followups.mjs": {
+      "filePath": "scripts/giveaway-followups.mjs",
+      "contentHash": "3b48b0ff9fe784ed06b3bdf547452a060f744764fa5bcfb6cf7f8f16bba8bb65",
+      "functions": [
+        {
+          "name": "flag",
+          "params": [
+            "n"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "value",
+          "params": [
+            "n"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "sb",
+          "params": [
+            "p"
+          ],
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "sbJson",
+          "params": [
+            "p"
+          ],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "inList",
+          "params": [
+            "emails"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "unsubscribeUrl",
+          "params": [
+            "email"
+          ],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "linaToken",
+          "params": [],
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "alertDue",
+          "params": [
+            "kind"
+          ],
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "lina",
+          "params": [
+            "text"
+          ],
+          "exported": false,
+          "lineCount": 12
+        },
+        {
+          "name": "domainAlive",
+          "params": [
+            "email"
+          ],
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "participantEmails",
+          "params": [],
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "stripeBuyer",
+          "params": [
+            "email"
+          ],
+          "exported": true,
+          "lineCount": 17
+        },
+        {
+          "name": "dncEmails",
+          "params": [],
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "repliedByEmail",
+          "params": [
+            "email",
+            "since"
+          ],
+          "exported": false,
+          "lineCount": 10
+        },
+        {
+          "name": "crmFirstSource",
+          "params": [
+            "email"
+          ],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "slugForKeyword",
+          "params": [
+            "kw"
+          ],
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "checkoutStartedSince",
+          "params": [
+            "email",
+            "since"
+          ],
+          "exported": true,
+          "lineCount": 20
+        },
+        {
+          "name": "bookedCall",
+          "params": [
+            "email",
+            "since"
+          ],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "mc",
+          "params": [],
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "findSubscriber",
+          "params": [
+            "email"
+          ],
+          "exported": false,
+          "lineCount": 9
+        },
+        {
+          "name": "claim",
+          "params": [
+            "item"
+          ],
+          "exported": false,
+          "lineCount": 9
+        },
+        {
+          "name": "unclaim",
+          "params": [
+            "id"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "markSent",
+          "params": [
+            "id",
+            "patch"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "shlinkCreate",
+          "params": [
+            "longUrl",
+            "slug",
+            "title",
+            "validUntil"
+          ],
+          "exported": false,
+          "lineCount": 9
+        },
+        {
+          "name": "bonusLink",
+          "params": [
+            "email"
+          ],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "renderEmailFor",
+          "params": [
+            "item"
+          ],
+          "exported": false,
+          "lineCount": 10
+        },
+        {
+          "name": "resendSend",
+          "params": [],
+          "exported": false,
+          "lineCount": 15
+        },
+        {
+          "name": "sendDm",
+          "params": [
+            "subscriberId",
+            "bubbles"
+          ],
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "sendOne",
+          "params": [
+            "item",
+            "sub"
+          ],
+          "exported": false,
+          "lineCount": 43
+        },
+        {
+          "name": "allVariants",
+          "params": [],
+          "exported": false,
+          "lineCount": 11
+        },
+        {
+          "name": "renderAll",
+          "params": [
+            "dir"
+          ],
+          "exported": false,
+          "lineCount": 12
+        },
+        {
+          "name": "testSends",
+          "params": [
+            "to"
+          ],
+          "exported": false,
+          "lineCount": 13
+        },
+        {
+          "name": "reviewSends",
+          "params": [
+            "to"
+          ],
+          "exported": false,
+          "lineCount": 42
+        },
+        {
+          "name": "main",
+          "params": [],
+          "exported": false,
+          "lineCount": 111
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:child_process",
+          "specifiers": [
+            "execFileSync"
+          ]
+        },
+        {
+          "source": "node:crypto",
+          "specifiers": [
+            "createHash",
+            "createHmac",
+            "randomBytes"
+          ]
+        },
+        {
+          "source": "node:dns",
+          "specifiers": [
+            "dns"
+          ]
+        },
+        {
+          "source": "node:fs",
+          "specifiers": [
+            "existsSync",
+            "mkdirSync",
+            "readFileSync",
+            "writeFileSync"
+          ]
+        },
+        {
+          "source": "node:module",
+          "specifiers": [
+            "createRequire"
+          ]
+        },
+        {
+          "source": "node:os",
+          "specifiers": [
+            "homedir"
+          ]
+        },
+        {
+          "source": "node:path",
+          "specifiers": [
+            "path"
+          ]
+        },
+        {
+          "source": "../src/lib/giveaway-followups.ts",
+          "specifiers": [
+            "LAST",
+            "QUICKWIN",
+            "DM_ACK_BUBBLES",
+            "dayZeroPs",
+            "planFollowups",
+            "renderDmLevel",
+            "renderLast",
+            "renderQuickwin",
+            "toHtml",
+            "BUILDER_SOURCES",
+            "WW_FUNNEL_SOURCES",
+            "BONUS_TTL_HOURS",
+            "GIFTS",
+            "GIFT_ORDER",
+            "LIVE_EVENTS",
+            "renderGift2",
+            "renderLive",
+            "SALES_DAY2",
+            "renderSalesDay2",
+            "renderSalesDay5",
+            "salesOfferFor",
+            "ILLY_REPLY_TO"
+          ]
+        },
+        {
+          "source": "/Users/myos/.myos/workspace/projects/mastermind/mhq-homepage/src/lib/mhq-checkout-deals.mjs",
+          "specifiers": [
+            "signDeal"
+          ]
+        },
+        {
+          "source": "../src/lib/email-logo.ts",
+          "specifiers": [
+            "withEmailLogo"
+          ]
+        }
+      ],
+      "exports": [
+        "checkoutStartedSince",
+        "bookedCall",
+        "crmFirstSource",
+        "slugForKeyword",
+        "stripeBuyer",
+        "bonusLink"
+      ],
+      "totalLines": 587,
       "hasStructuralAnalysis": true
     },
     "scripts/lib/estimate-ai-level.mjs": {
@@ -2920,7 +3302,7 @@
     },
     "src/app/api/lead-magnet/route.ts": {
       "filePath": "src/app/api/lead-magnet/route.ts",
-      "contentHash": "f34d3f7b48e249d2c6e314afb56889521eb993d99c4140870e6a3bd8c72d0db7",
+      "contentHash": "e779ab1e6fb034f31c71bdfa0b43796135d6291c55289aad8f9e2ee9748a7b29",
       "functions": [
         {
           "name": "sendViaResend",
@@ -2931,7 +3313,7 @@
             "generic"
           ],
           "exported": false,
-          "lineCount": 585
+          "lineCount": 608
         },
         {
           "name": "ingestIntoCrm",
@@ -2948,7 +3330,7 @@
             "request"
           ],
           "exported": true,
-          "lineCount": 161
+          "lineCount": 176
         }
       ],
       "classes": [],
@@ -3025,6 +3407,12 @@
           ]
         },
         {
+          "source": "@/lib/free-ai-tools-hub-email",
+          "specifiers": [
+            "buildFreeAiToolsHubEmail"
+          ]
+        },
+        {
           "source": "@/lib/whatsapp-agent-email",
           "specifiers": [
             "buildWhatsAppAgentEmail"
@@ -3044,10 +3432,24 @@
           ]
         },
         {
+          "source": "@/lib/giveaway-followups",
+          "specifiers": [
+            "withDayZeroPs"
+          ]
+        },
+        {
+          "source": "@/lib/email-logo",
+          "specifiers": [
+            "withEmailLogo"
+          ]
+        },
+        {
           "source": "@/lib/generic-giveaway-email",
           "specifiers": [
             "buildGenericGiveawayEmail",
+            "buildSalesKeywordEmail",
             "isValidManychatSecret",
+            "salesKeywordPage",
             "sanitizeGiveawayName",
             "validateGiveawayLink",
             "websiteGiveawayEmail"
@@ -3057,7 +3459,7 @@
       "exports": [
         "POST"
       ],
-      "totalLines": 810,
+      "totalLines": 853,
       "hasStructuralAnalysis": true
     },
     "src/app/api/lead-magnets/claudemd/route 2.ts": {
@@ -5127,6 +5529,74 @@
       "totalLines": 16,
       "hasStructuralAnalysis": true
     },
+    "src/app/giveaways/free-ai-browser-use/layout.tsx": {
+      "filePath": "src/app/giveaways/free-ai-browser-use/layout.tsx",
+      "contentHash": "44f6970d15212a3f5359c9cfd1777b85113bc0f5fcafc8a02f7b7c43009d84e1",
+      "functions": [
+        {
+          "name": "Layout",
+          "params": [
+            "{ children }"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "ReactNode"
+          ]
+        },
+        {
+          "source": "next",
+          "specifiers": [
+            "Metadata"
+          ]
+        }
+      ],
+      "exports": [
+        "metadata",
+        "Layout"
+      ],
+      "totalLines": 32,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/free-ai-browser-use/page.tsx": {
+      "filePath": "src/app/giveaways/free-ai-browser-use/page.tsx",
+      "contentHash": "31c741f493b7ece075c7b1ae42672b2b35b20d9b908b5ca17b2e612a37a664bf",
+      "functions": [
+        {
+          "name": "FreeAiBrowserUsePage",
+          "params": [],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/components/giveaways/PackPage",
+          "specifiers": [
+            "PackPage"
+          ]
+        },
+        {
+          "source": "@/lib/free-ai-tool-pack",
+          "specifiers": [
+            "freeAiToolJsonLd",
+            "freeAiToolPack"
+          ]
+        }
+      ],
+      "exports": [
+        "FreeAiBrowserUsePage"
+      ],
+      "totalLines": 16,
+      "hasStructuralAnalysis": true
+    },
     "src/app/giveaways/free-ai-buzz/layout.tsx": {
       "filePath": "src/app/giveaways/free-ai-buzz/layout.tsx",
       "contentHash": "1e4f50d730893ff4ce32b1cf36a14399a4e2fe2ff736a85733a00bb6464d09a4",
@@ -5467,6 +5937,74 @@
       "totalLines": 16,
       "hasStructuralAnalysis": true
     },
+    "src/app/giveaways/free-ai-firecrawl/layout.tsx": {
+      "filePath": "src/app/giveaways/free-ai-firecrawl/layout.tsx",
+      "contentHash": "c4a08560b1553aa7e6fa894107e858f186c11569b1ce60abf9f5c8ec977e6234",
+      "functions": [
+        {
+          "name": "Layout",
+          "params": [
+            "{ children }"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "ReactNode"
+          ]
+        },
+        {
+          "source": "next",
+          "specifiers": [
+            "Metadata"
+          ]
+        }
+      ],
+      "exports": [
+        "metadata",
+        "Layout"
+      ],
+      "totalLines": 32,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/free-ai-firecrawl/page.tsx": {
+      "filePath": "src/app/giveaways/free-ai-firecrawl/page.tsx",
+      "contentHash": "fb1bd092b7884d0e2d1eca20602d1fdb71f3e753f4e5ad8aabe70f3f1ce95d81",
+      "functions": [
+        {
+          "name": "FreeAiFirecrawlPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/components/giveaways/PackPage",
+          "specifiers": [
+            "PackPage"
+          ]
+        },
+        {
+          "source": "@/lib/free-ai-tool-pack",
+          "specifiers": [
+            "freeAiToolJsonLd",
+            "freeAiToolPack"
+          ]
+        }
+      ],
+      "exports": [
+        "FreeAiFirecrawlPage"
+      ],
+      "totalLines": 16,
+      "hasStructuralAnalysis": true
+    },
     "src/app/giveaways/free-ai-handy/layout.tsx": {
       "filePath": "src/app/giveaways/free-ai-handy/layout.tsx",
       "contentHash": "f18c8829388aaeb1cd393fb44a0114e927e2e27c4ab20c5d7a0bf2e74dd1202e",
@@ -5603,6 +6141,142 @@
       "totalLines": 16,
       "hasStructuralAnalysis": true
     },
+    "src/app/giveaways/free-ai-meetily/layout.tsx": {
+      "filePath": "src/app/giveaways/free-ai-meetily/layout.tsx",
+      "contentHash": "a170867fb292600e8cfa79d0f9d13e4f03e520d7b9e2e238b42233dff2085a18",
+      "functions": [
+        {
+          "name": "Layout",
+          "params": [
+            "{ children }"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "ReactNode"
+          ]
+        },
+        {
+          "source": "next",
+          "specifiers": [
+            "Metadata"
+          ]
+        }
+      ],
+      "exports": [
+        "metadata",
+        "Layout"
+      ],
+      "totalLines": 32,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/free-ai-meetily/page.tsx": {
+      "filePath": "src/app/giveaways/free-ai-meetily/page.tsx",
+      "contentHash": "477f2a4c6017f75c9cf1fff211dead734d6420e2af67f1ecc4dd72efd944f3b0",
+      "functions": [
+        {
+          "name": "FreeAiMeetilyPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/components/giveaways/PackPage",
+          "specifiers": [
+            "PackPage"
+          ]
+        },
+        {
+          "source": "@/lib/free-ai-tool-pack",
+          "specifiers": [
+            "freeAiToolJsonLd",
+            "freeAiToolPack"
+          ]
+        }
+      ],
+      "exports": [
+        "FreeAiMeetilyPage"
+      ],
+      "totalLines": 16,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/free-ai-mempalace/layout.tsx": {
+      "filePath": "src/app/giveaways/free-ai-mempalace/layout.tsx",
+      "contentHash": "c0004a41db9fa43a246932af971e65f0a035c4f564429fd38296c501a13d06c0",
+      "functions": [
+        {
+          "name": "Layout",
+          "params": [
+            "{ children }"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "ReactNode"
+          ]
+        },
+        {
+          "source": "next",
+          "specifiers": [
+            "Metadata"
+          ]
+        }
+      ],
+      "exports": [
+        "metadata",
+        "Layout"
+      ],
+      "totalLines": 32,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/free-ai-mempalace/page.tsx": {
+      "filePath": "src/app/giveaways/free-ai-mempalace/page.tsx",
+      "contentHash": "4027fbf26e149b2961bb66aebc369e687f264e5ce719a00326664cfdb5386883",
+      "functions": [
+        {
+          "name": "FreeAiMempalacePage",
+          "params": [],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/components/giveaways/PackPage",
+          "specifiers": [
+            "PackPage"
+          ]
+        },
+        {
+          "source": "@/lib/free-ai-tool-pack",
+          "specifiers": [
+            "freeAiToolJsonLd",
+            "freeAiToolPack"
+          ]
+        }
+      ],
+      "exports": [
+        "FreeAiMempalacePage"
+      ],
+      "totalLines": 16,
+      "hasStructuralAnalysis": true
+    },
     "src/app/giveaways/free-ai-stirling-pdf/layout.tsx": {
       "filePath": "src/app/giveaways/free-ai-stirling-pdf/layout.tsx",
       "contentHash": "f5c154af2fd977b71dfcab57c056c3d57c34f5874709fc87976b63a4e60b4800",
@@ -5671,6 +6345,174 @@
       "totalLines": 16,
       "hasStructuralAnalysis": true
     },
+    "src/app/giveaways/free-ai-tools/layout.tsx": {
+      "filePath": "src/app/giveaways/free-ai-tools/layout.tsx",
+      "contentHash": "9903107355de986f68065a9d0917ba303feab5b156b5bdf9c306ccf35d1ad386",
+      "functions": [
+        {
+          "name": "Layout",
+          "params": [
+            "{ children }"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "ReactNode"
+          ]
+        },
+        {
+          "source": "next",
+          "specifiers": [
+            "Metadata"
+          ]
+        }
+      ],
+      "exports": [
+        "metadata",
+        "Layout"
+      ],
+      "totalLines": 23,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/free-ai-tools/pack.ts": {
+      "filePath": "src/app/giveaways/free-ai-tools/pack.ts",
+      "contentHash": "4dcb7cd52980ff84c635c99090207e331c95b2b8e705f7ac5e50ab421069bf12",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/lib/pack-page",
+          "specifiers": [
+            "PackPageContent"
+          ]
+        },
+        {
+          "source": "@/lib/free-ai-tools-hub",
+          "specifiers": [
+            "FREE_AI_TOOLS_HUB_SLUG",
+            "freeAiSwapRows"
+          ]
+        }
+      ],
+      "exports": [
+        "FREE_AI_TOOLS_HUB_PACK"
+      ],
+      "totalLines": 73,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/free-ai-tools/page.tsx": {
+      "filePath": "src/app/giveaways/free-ai-tools/page.tsx",
+      "contentHash": "1c3c740d823841a90f16ae396e36faffcad8ebf8d8c9737ac2c761c6a442b77f",
+      "functions": [
+        {
+          "name": "FreeAiToolsHubPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/components/giveaways/PackPage",
+          "specifiers": [
+            "PackPage"
+          ]
+        },
+        {
+          "source": "@/lib/free-ai-tools-hub",
+          "specifiers": [
+            "FREE_AI_TOOLS_HUB_URL",
+            "freeAiSwapRows"
+          ]
+        },
+        {
+          "source": "./pack",
+          "specifiers": [
+            "FREE_AI_TOOLS_HUB_PACK"
+          ]
+        }
+      ],
+      "exports": [
+        "FreeAiToolsHubPage"
+      ],
+      "totalLines": 31,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/free-ai-ui-ux-pro-max/layout.tsx": {
+      "filePath": "src/app/giveaways/free-ai-ui-ux-pro-max/layout.tsx",
+      "contentHash": "43d1e7e953de6a8e3584b62f6d67062352570a8c70f58831ef3af18d306fc443",
+      "functions": [
+        {
+          "name": "Layout",
+          "params": [
+            "{ children }"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "ReactNode"
+          ]
+        },
+        {
+          "source": "next",
+          "specifiers": [
+            "Metadata"
+          ]
+        }
+      ],
+      "exports": [
+        "metadata",
+        "Layout"
+      ],
+      "totalLines": 32,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/free-ai-ui-ux-pro-max/page.tsx": {
+      "filePath": "src/app/giveaways/free-ai-ui-ux-pro-max/page.tsx",
+      "contentHash": "87906b626a2ee56ac809191210c2857d9427da063ca41510d70631dea91eed42",
+      "functions": [
+        {
+          "name": "FreeAiUiUxProMaxPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/components/giveaways/PackPage",
+          "specifiers": [
+            "PackPage"
+          ]
+        },
+        {
+          "source": "@/lib/free-ai-tool-pack",
+          "specifiers": [
+            "freeAiToolJsonLd",
+            "freeAiToolPack"
+          ]
+        }
+      ],
+      "exports": [
+        "FreeAiUiUxProMaxPage"
+      ],
+      "totalLines": 16,
+      "hasStructuralAnalysis": true
+    },
     "src/app/giveaways/free-ai-upscayl/layout.tsx": {
       "filePath": "src/app/giveaways/free-ai-upscayl/layout.tsx",
       "contentHash": "619f33154137b93369a0935582ac5be61c6ca45816285d9434dc81c913c81c2b",
@@ -5735,6 +6577,74 @@
       ],
       "exports": [
         "FreeAiUpscaylPage"
+      ],
+      "totalLines": 16,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/free-ai-voicestudio/layout.tsx": {
+      "filePath": "src/app/giveaways/free-ai-voicestudio/layout.tsx",
+      "contentHash": "c049830ce2696a3c33f1addf1dfd68757201d24219e993619df1aa5d9d860c6a",
+      "functions": [
+        {
+          "name": "Layout",
+          "params": [
+            "{ children }"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "ReactNode"
+          ]
+        },
+        {
+          "source": "next",
+          "specifiers": [
+            "Metadata"
+          ]
+        }
+      ],
+      "exports": [
+        "metadata",
+        "Layout"
+      ],
+      "totalLines": 32,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/free-ai-voicestudio/page.tsx": {
+      "filePath": "src/app/giveaways/free-ai-voicestudio/page.tsx",
+      "contentHash": "e9dfa69086db0f449929b817f8946e14ca1b4d29ba43ab6b42c83bbf724aba13",
+      "functions": [
+        {
+          "name": "FreeAiVoicestudioPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/components/giveaways/PackPage",
+          "specifiers": [
+            "PackPage"
+          ]
+        },
+        {
+          "source": "@/lib/free-ai-tool-pack",
+          "specifiers": [
+            "freeAiToolJsonLd",
+            "freeAiToolPack"
+          ]
+        }
+      ],
+      "exports": [
+        "FreeAiVoicestudioPage"
       ],
       "totalLines": 16,
       "hasStructuralAnalysis": true
@@ -9977,14 +10887,14 @@
     },
     "src/app/sitemap.ts": {
       "filePath": "src/app/sitemap.ts",
-      "contentHash": "5162ec6230b1084154ee76b20180f42192a4e01e01f9e3db5701ce2a13ecfaa7",
+      "contentHash": "24aedd58fecd9ccfb8d9263c2b4f3fd204a9f55e9f230e3c64611f8490864496",
       "functions": [
         {
           "name": "sitemap",
           "params": [],
           "returnType": "MetadataRoute.Sitemap",
           "exported": true,
-          "lineCount": 25
+          "lineCount": 27
         }
       ],
       "classes": [],
@@ -9994,12 +10904,18 @@
           "specifiers": [
             "MetadataRoute"
           ]
+        },
+        {
+          "source": "@/lib/free-ai-tools",
+          "specifiers": [
+            "FREE_AI_TOOL_SLUGS"
+          ]
         }
       ],
       "exports": [
         "sitemap"
       ],
-      "totalLines": 31,
+      "totalLines": 34,
       "hasStructuralAnalysis": true
     },
     "src/components/CodeBlock.tsx": {
@@ -10801,7 +11717,7 @@
     },
     "src/components/giveaways/PackPage.tsx": {
       "filePath": "src/components/giveaways/PackPage.tsx",
-      "contentHash": "cb4a0335c48a455d02074d84b8544f0427fde634e7121068dbd76e78656d48b4",
+      "contentHash": "976facf278a3ae6397a9340c6c6dc028da59cd20c7d199754e922a454e868583",
       "functions": [
         {
           "name": "usePackAsk",
@@ -13603,6 +14519,30 @@
       "totalLines": 40,
       "hasStructuralAnalysis": true
     },
+    "src/lib/email-logo.ts": {
+      "filePath": "src/lib/email-logo.ts",
+      "contentHash": "02725d466d197f5f9e0d72ab16e7201057adce06c822a6aa7b898c8daa776c18",
+      "functions": [
+        {
+          "name": "withEmailLogo",
+          "params": [
+            "html"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 6
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "EMAIL_LOGO_URL",
+        "EMAIL_LOGO_HTML",
+        "withEmailLogo"
+      ],
+      "totalLines": 24,
+      "hasStructuralAnalysis": true
+    },
     "src/lib/email-suppressions.ts": {
       "filePath": "src/lib/email-suppressions.ts",
       "contentHash": "1f52ffd147f3e6dc7a0534bb4fec2e62d591e63a61e93494f8b6202358e5483c",
@@ -14839,7 +15779,7 @@
     },
     "src/lib/free-ai-tool-email.ts": {
       "filePath": "src/lib/free-ai-tool-email.ts",
-      "contentHash": "584571bca0b50f77fbd08bd81ba5f85abd6a20ca9a3c2d61b66be90a8f91e8d9",
+      "contentHash": "ebb879689819a1dbb44195d9bc955da2cda32b8d9592f93330a1623caacea756",
       "functions": [
         {
           "name": "esc",
@@ -14856,7 +15796,7 @@
             "{\n  source,\n  unsubscribeFooter,\n  unsubscribeUrl,\n}"
           ],
           "exported": true,
-          "lineCount": 69
+          "lineCount": 70
         }
       ],
       "classes": [],
@@ -14877,12 +15817,12 @@
       "exports": [
         "buildFreeAiToolEmail"
       ],
-      "totalLines": 93,
+      "totalLines": 94,
       "hasStructuralAnalysis": true
     },
     "src/lib/free-ai-tool-pack.ts": {
       "filePath": "src/lib/free-ai-tool-pack.ts",
-      "contentHash": "589af2498de82bfaf7920523587215025ae076ec72417b47c420fa13c8a3ee31",
+      "contentHash": "24cf3d58b69093e4eefd27de52f0ef682a9f0c6b7fca876b5b7f45e906dd9a31",
       "functions": [
         {
           "name": "freeAiToolPack",
@@ -14891,7 +15831,16 @@
           ],
           "returnType": "PackPageContent",
           "exported": true,
-          "lineCount": 52
+          "lineCount": 55
+        },
+        {
+          "name": "setupNotesPack",
+          "params": [
+            "t"
+          ],
+          "returnType": "PackPageContent",
+          "exported": false,
+          "lineCount": 57
         },
         {
           "name": "freeAiToolJsonLd",
@@ -14920,6 +15869,7 @@
         {
           "source": "./pack-page",
           "specifiers": [
+            "PackGuideSection",
             "PackPageContent"
           ]
         }
@@ -14928,12 +15878,92 @@
         "freeAiToolPack",
         "freeAiToolJsonLd"
       ],
-      "totalLines": 80,
+      "totalLines": 142,
+      "hasStructuralAnalysis": true
+    },
+    "src/lib/free-ai-tools-hub-email.ts": {
+      "filePath": "src/lib/free-ai-tools-hub-email.ts",
+      "contentHash": "f511fa808997fee35ce451c1dd92a6d3bbacb894d44023a7357fd6b459ac2feb",
+      "functions": [
+        {
+          "name": "esc",
+          "params": [
+            "value"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "buildFreeAiToolsHubEmail",
+          "params": [
+            "{\n  unsubscribeFooter,\n  unsubscribeUrl,\n}"
+          ],
+          "exported": true,
+          "lineCount": 55
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "./free-ai-tools-hub",
+          "specifiers": [
+            "FREE_AI_TOOLS_HUB_SLUG",
+            "freeAiSwapRows"
+          ]
+        },
+        {
+          "source": "./utm",
+          "specifiers": [
+            "withUtm"
+          ]
+        }
+      ],
+      "exports": [
+        "buildFreeAiToolsHubEmail"
+      ],
+      "totalLines": 76,
+      "hasStructuralAnalysis": true
+    },
+    "src/lib/free-ai-tools-hub.ts": {
+      "filePath": "src/lib/free-ai-tools-hub.ts",
+      "contentHash": "f5c7b31dadf7680e3194e9d844b36879c8840068e3f7a4d77f742dc2775d5d70",
+      "functions": [
+        {
+          "name": "freeAiSwapRows",
+          "params": [],
+          "returnType": "FreeAiSwapRow[]",
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "./free-ai-tools",
+          "specifiers": [
+            "getFreeAiTool"
+          ]
+        },
+        {
+          "source": "./free-ai-tools",
+          "specifiers": [
+            "FreeAiTool"
+          ]
+        }
+      ],
+      "exports": [
+        "FREE_AI_TOOLS_HUB_SLUG",
+        "FREE_AI_TOOLS_HUB_URL",
+        "FREE_AI_SWAPS",
+        "freeAiSwapRows"
+      ],
+      "totalLines": 48,
       "hasStructuralAnalysis": true
     },
     "src/lib/free-ai-tools.ts": {
       "filePath": "src/lib/free-ai-tools.ts",
-      "contentHash": "9d5ab1edbe868a9f07a6822dc044406207050accf6cd7ff91d18cfd936ba60e0",
+      "contentHash": "d9a590dab0264f4b2cdd7f301832d074e1bf8a11eaef5d78cddb8675d1db4e6a",
       "functions": [
         {
           "name": "getFreeAiTool",
@@ -14964,7 +15994,14 @@
         }
       ],
       "classes": [],
-      "imports": [],
+      "imports": [
+        {
+          "source": "./giveaway-offers",
+          "specifiers": [
+            "GiveawayLevel"
+          ]
+        }
+      ],
       "exports": [
         "FREE_AI_TOOLS",
         "FREE_AI_TOOL_SLUGS",
@@ -14972,12 +16009,12 @@
         "isFreeAiToolSource",
         "formatStars"
       ],
-      "totalLines": 388,
+      "totalLines": 974,
       "hasStructuralAnalysis": true
     },
     "src/lib/generic-giveaway-email.ts": {
       "filePath": "src/lib/generic-giveaway-email.ts",
-      "contentHash": "e8145fe1b9c308bae7013efc852e3a3618061b3fc348df4a0dcc2f59061db6c4",
+      "contentHash": "aacdaa8068223ed8723b9b31998f25d60eb38010a5ad57d8b39bfbc8c5ed22dc",
       "functions": [
         {
           "name": "esc",
@@ -15051,6 +16088,23 @@
           "returnType": "{ name: string; link: string } | null",
           "exported": true,
           "lineCount": 4
+        },
+        {
+          "name": "salesKeywordPage",
+          "params": [
+            "source"
+          ],
+          "returnType": "{ label: string; link: string } | null",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "buildSalesKeywordEmail",
+          "params": [
+            "{\n  source,\n  unsubscribeFooter,\n  unsubscribeUrl,\n}"
+          ],
+          "exported": true,
+          "lineCount": 45
         }
       ],
       "classes": [],
@@ -15074,9 +16128,12 @@
         "isValidManychatSecret",
         "buildGenericGiveawayEmail",
         "WEBSITE_GENERIC_GIVEAWAYS",
-        "websiteGiveawayEmail"
+        "websiteGiveawayEmail",
+        "SALES_KEYWORD_PAGES",
+        "salesKeywordPage",
+        "buildSalesKeywordEmail"
       ],
-      "totalLines": 181,
+      "totalLines": 250,
       "hasStructuralAnalysis": true
     },
     "src/lib/giveaway-dm.ts": {
@@ -15112,9 +16169,329 @@
       "totalLines": 36,
       "hasStructuralAnalysis": true
     },
+    "src/lib/giveaway-followups.ts": {
+      "filePath": "src/lib/giveaway-followups.ts",
+      "contentHash": "1c74edddf2586b04a2e01871d68fe4f411f21131de656bc636c1ba7f4cca1fe8",
+      "functions": [
+        {
+          "name": "pickGift",
+          "params": [
+            "level",
+            "grabbed"
+          ],
+          "returnType": "Gift | null",
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "pickLiveEvent",
+          "params": [
+            "level",
+            "now",
+            "events"
+          ],
+          "returnType": "LiveEvent | null",
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "isSalesKeywordSource",
+          "params": [
+            "source"
+          ],
+          "returnType": "boolean",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "isTestEmail",
+          "params": [
+            "email"
+          ],
+          "returnType": "boolean",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "levelFromSource",
+          "params": [
+            "source"
+          ],
+          "returnType": "Level",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "levelFromQuizScore",
+          "params": [
+            "score"
+          ],
+          "returnType": "Level | null",
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "parseLevelReply",
+          "params": [
+            "text"
+          ],
+          "returnType": "Level | null",
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "lastVariant",
+          "params": [
+            "level",
+            "now"
+          ],
+          "returnType": "LastVariant",
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "salesOfferFor",
+          "params": [
+            "source"
+          ],
+          "returnType": "SalesOffer | null",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "salesLastVariant",
+          "params": [
+            "offer",
+            "now"
+          ],
+          "returnType": "SalesLastVariant | 'hold_meta'",
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "stepLink",
+          "params": [
+            "url",
+            "code"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "fill",
+          "params": [
+            "s",
+            "vars"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "baseVars",
+          "params": [
+            "v"
+          ],
+          "returnType": "Record<string, string>",
+          "exported": false,
+          "lineCount": 11
+        },
+        {
+          "name": "renderTemplate",
+          "params": [
+            "t",
+            "v"
+          ],
+          "returnType": "{ subject: string; text: string }",
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "renderQuickwin",
+          "params": [
+            "level",
+            "v"
+          ],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "renderLast",
+          "params": [
+            "variant",
+            "v"
+          ],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "renderSalesDay2",
+          "params": [
+            "offer",
+            "v"
+          ],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "renderSalesDay5",
+          "params": [
+            "variant",
+            "v"
+          ],
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "renderGift2",
+          "params": [
+            "level",
+            "gift",
+            "v"
+          ],
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "renderLive",
+          "params": [
+            "event",
+            "v"
+          ],
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "renderDmLevel",
+          "params": [
+            "name"
+          ],
+          "returnType": "string[]",
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "dayZeroPs",
+          "params": [
+            "source"
+          ],
+          "returnType": "{ text: string; html: string } | null",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "withDayZeroPs",
+          "params": [
+            "source",
+            "email"
+          ],
+          "returnType": "{ html: string; text?: string }",
+          "exported": true,
+          "lineCount": 22
+        },
+        {
+          "name": "toHtml",
+          "params": [
+            "text"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 24
+        },
+        {
+          "name": "firstName",
+          "params": [
+            "raw"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "planFollowups",
+          "params": [
+            "input"
+          ],
+          "returnType": "{ due: DueItem[]; skipped: Record<string, number> }",
+          "exported": true,
+          "lineCount": 151
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "STEPS",
+        "DM_AFTER_HOURS",
+        "DM_WINDOW_CLOSES_HOURS",
+        "QUICKWIN_AFTER_HOURS",
+        "QUICKWIN_TOO_LATE_HOURS",
+        "LAST_AFTER_DAYS",
+        "LAST_MIN_GAP_HOURS",
+        "LAST_TOO_LATE_DAYS",
+        "GIFT2_AFTER_DAYS",
+        "GIFT2_TOO_LATE_DAYS",
+        "LIVE_AFTER_DAYS",
+        "LIVE_TOO_LATE_DAYS",
+        "LIVE_MIN_LEAD_DAYS",
+        "LIVE_MAX_LEAD_DAYS",
+        "GIFTS",
+        "GIFT_ORDER",
+        "pickGift",
+        "LIVE_EVENTS",
+        "pickLiveEvent",
+        "LINKS",
+        "BUILDER_SOURCES",
+        "NO_PS_SOURCES",
+        "isSalesKeywordSource",
+        "isTestEmail",
+        "WW_FUNNEL_SOURCES",
+        "levelFromSource",
+        "levelFromQuizScore",
+        "parseLevelReply",
+        "META_FINAL_REVIEW_START",
+        "META_RECORDED_FROM",
+        "META_DEADLINE_EMAIL_UNTIL",
+        "META_DEADLINE_EMAIL_FROM",
+        "lastVariant",
+        "DAY_ZERO_PS",
+        "DM_LEVEL_BUBBLES",
+        "DM_ACK_BUBBLES",
+        "QUICKWIN",
+        "LAST",
+        "SALES_SOURCES",
+        "salesOfferFor",
+        "SALES_LEVEL",
+        "BOOK_LINK",
+        "ILLY_REPLY_TO",
+        "SALES_DAY2",
+        "SALES_LAST",
+        "salesLastVariant",
+        "GIFT2_NEXT_STEP",
+        "GIFT2_TEMPLATE",
+        "LIVE_TEMPLATE",
+        "STEP_CODE_LABELS",
+        "stepLink",
+        "BONUS_TTL_HOURS",
+        "renderTemplate",
+        "renderQuickwin",
+        "renderLast",
+        "renderSalesDay2",
+        "renderSalesDay5",
+        "renderGift2",
+        "renderLive",
+        "renderDmLevel",
+        "dayZeroPs",
+        "withDayZeroPs",
+        "toHtml",
+        "planFollowups"
+      ],
+      "totalLines": 874,
+      "hasStructuralAnalysis": true
+    },
     "src/lib/giveaway-offers.ts": {
       "filePath": "src/lib/giveaway-offers.ts",
-      "contentHash": "9963f5b1dd59dd450e1c076e00a15def6d4212c9cd6542fc48f61e63966d2d26",
+      "contentHash": "804d063b8a1da5fd3549317e1c8b48ae451a2f43b3f03fd75b507f51397b4965",
       "functions": [
         {
           "name": "offerForLevel",
@@ -15130,17 +16507,17 @@
       "classes": [],
       "imports": [],
       "exports": [
-        "WEBSITE_WORKSHOP_URL",
+        "WORKSHOP_DEMO_URL",
         "GET_FOUND_CHECKOUT_URL",
         "GIVEAWAY_OFFERS",
         "offerForLevel"
       ],
-      "totalLines": 101,
+      "totalLines": 112,
       "hasStructuralAnalysis": true
     },
     "src/lib/giveaways.ts": {
       "filePath": "src/lib/giveaways.ts",
-      "contentHash": "bb2740cf901a025c84685b5160c1a5d861ba6a0b7164a7b553738b8cecaff9f0",
+      "contentHash": "62b8cae9ecc7eda22e16add57fe93ede8c300aecde504945f97c1c386e303071",
       "functions": [
         {
           "name": "getGiveaway",
@@ -15158,7 +16535,7 @@
         "giveaways",
         "getGiveaway"
       ],
-      "totalLines": 325,
+      "totalLines": 381,
       "hasStructuralAnalysis": true
     },
     "src/lib/google-calendar-invite.ts": {
@@ -15323,7 +16700,7 @@
     },
     "src/lib/lead-magnets.ts": {
       "filePath": "src/lib/lead-magnets.ts",
-      "contentHash": "66a292dca471459ccedf952dd3f196a772ebbc9cbc9203b4a4ebaaa6ecee472c",
+      "contentHash": "821ac26649c91e0189e3b8a15660d48d2cc3eb7b616aeaf0373ad40b2f5ff953",
       "functions": [
         {
           "name": "getLeadMagnet",
@@ -15421,7 +16798,7 @@
         "downloadUrlFor",
         "buildWelcomeEmail"
       ],
-      "totalLines": 147,
+      "totalLines": 149,
       "hasStructuralAnalysis": true
     },
     "src/lib/legacy-event-schedule.ts": {
@@ -17038,6 +18415,36 @@
       "totalLines": 12,
       "hasStructuralAnalysis": true
     },
+    "supabase/migrations/018_giveaway_followup_sends.sql": {
+      "filePath": "supabase/migrations/018_giveaway_followup_sends.sql",
+      "contentHash": "18a75e364a9b397e02a1f96e88affb81c2317e5dcf62570b5471e89735ded94f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 34,
+      "hasStructuralAnalysis": true
+    },
+    "supabase/migrations/019_giveaway_followup_day14_day30.sql": {
+      "filePath": "supabase/migrations/019_giveaway_followup_day14_day30.sql",
+      "contentHash": "d688ffb2a1755faef23636946d2fbb91fa698e535b54db06741a3bb1088d4e29",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": true
+    },
+    "supabase/migrations/020_giveaway_followup_sales_track.sql": {
+      "filePath": "supabase/migrations/020_giveaway_followup_sales_track.sql",
+      "contentHash": "c5e91104b2a30657576e5d3a01cc11495e6315c79ea7bf82363a412492a0c873",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 14,
+      "hasStructuralAnalysis": true
+    },
     "tailwind.config.ts": {
       "filePath": "tailwind.config.ts",
       "contentHash": "d0e7f5430c09256c9b9429fcb4cc15b67b88af912ce3fabb1cbd858eacecc361",
@@ -17386,6 +18793,49 @@
       ],
       "exports": [],
       "totalLines": 194,
+      "hasStructuralAnalysis": true
+    },
+    "tests/email-logo.test.ts": {
+      "filePath": "tests/email-logo.test.ts",
+      "contentHash": "6fd12126eadad35060eccdcc36dbb53b6db6e52d9e357153a92b23aea81a8536",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:assert/strict",
+          "specifiers": [
+            "assert"
+          ]
+        },
+        {
+          "source": "node:test",
+          "specifiers": [
+            "test"
+          ]
+        },
+        {
+          "source": "node:fs",
+          "specifiers": [
+            "existsSync",
+            "statSync"
+          ]
+        },
+        {
+          "source": "node:path",
+          "specifiers": [
+            "join"
+          ]
+        },
+        {
+          "source": "../src/lib/email-logo",
+          "specifiers": [
+            "EMAIL_LOGO_URL",
+            "withEmailLogo"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 29,
       "hasStructuralAnalysis": true
     },
     "tests/estimate-ai-level.test.ts": {
@@ -18067,9 +19517,88 @@
       "totalLines": 59,
       "hasStructuralAnalysis": true
     },
+    "tests/free-ai-tools-hub.test.ts": {
+      "filePath": "tests/free-ai-tools-hub.test.ts",
+      "contentHash": "69076e35258e8ce105f2deafdf27028bfc3987b81b8ea490a2a1253e78d15bb9",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:assert/strict",
+          "specifiers": [
+            "assert"
+          ]
+        },
+        {
+          "source": "node:test",
+          "specifiers": [
+            "test"
+          ]
+        },
+        {
+          "source": "node:fs",
+          "specifiers": [
+            "readFileSync"
+          ]
+        },
+        {
+          "source": "node:path",
+          "specifiers": [
+            "join"
+          ]
+        },
+        {
+          "source": "../src/lib/free-ai-tools",
+          "specifiers": [
+            "FREE_AI_TOOL_SLUGS"
+          ]
+        },
+        {
+          "source": "../src/lib/free-ai-tools-hub",
+          "specifiers": [
+            "FREE_AI_SWAPS",
+            "FREE_AI_TOOLS_HUB_SLUG",
+            "freeAiSwapRows"
+          ]
+        },
+        {
+          "source": "../src/lib/free-ai-tools-hub-email",
+          "specifiers": [
+            "buildFreeAiToolsHubEmail"
+          ]
+        },
+        {
+          "source": "../src/lib/lead-magnets",
+          "specifiers": [
+            "isDeliverableLeadMagnetSource"
+          ]
+        },
+        {
+          "source": "../src/lib/giveaways",
+          "specifiers": [
+            "giveaways"
+          ]
+        },
+        {
+          "source": "../src/lib/pack-page",
+          "specifiers": [
+            "validatePackContent"
+          ]
+        },
+        {
+          "source": "../src/app/giveaways/free-ai-tools/pack",
+          "specifiers": [
+            "FREE_AI_TOOLS_HUB_PACK"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 52,
+      "hasStructuralAnalysis": true
+    },
     "tests/free-ai-tools.test.ts": {
       "filePath": "tests/free-ai-tools.test.ts",
-      "contentHash": "d67ee5ce733b5385c21051a98df6a12123e7a43e92074e549c337d94e50b88f2",
+      "contentHash": "5b846ccd98e2526dc26d73a7f99a671d6c3f09fdb3a2c911d6725753f9cad2ea",
       "functions": [],
       "classes": [],
       "imports": [
@@ -18111,9 +19640,21 @@
           ]
         },
         {
+          "source": "../src/lib/free-ai-tool-pack",
+          "specifiers": [
+            "freeAiToolPack"
+          ]
+        },
+        {
           "source": "../src/lib/lead-magnets",
           "specifiers": [
             "isDeliverableLeadMagnetSource"
+          ]
+        },
+        {
+          "source": "../src/lib/giveaway-offers",
+          "specifiers": [
+            "offerForLevel"
           ]
         },
         {
@@ -18124,12 +19665,12 @@
         }
       ],
       "exports": [],
-      "totalLines": 52,
+      "totalLines": 114,
       "hasStructuralAnalysis": true
     },
     "tests/generic-giveaway-email.test.ts": {
       "filePath": "tests/generic-giveaway-email.test.ts",
-      "contentHash": "6fd166a712e0d5b548268aa3ca7b6ab8693e962a4b82e0709a15012d2aa20e0b",
+      "contentHash": "134f4ad306ace07bc197a2df622f51e4d9f89abcfe2232fd7c874953f6bef1f2",
       "functions": [
         {
           "name": "build",
@@ -18178,7 +19719,7 @@
         }
       ],
       "exports": [],
-      "totalLines": 95,
+      "totalLines": 125,
       "hasStructuralAnalysis": true
     },
     "tests/giveaway-email-collection.test.ts": {
@@ -18242,6 +19783,96 @@
       ],
       "exports": [],
       "totalLines": 192,
+      "hasStructuralAnalysis": true
+    },
+    "tests/giveaway-followups.test.ts": {
+      "filePath": "tests/giveaway-followups.test.ts",
+      "contentHash": "d708c9881f19c33f2b0f18e7415bd22a90e0d8569572b1745d4ebc4980f9eb61",
+      "functions": [
+        {
+          "name": "ago",
+          "params": [
+            "h"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "lead",
+          "params": [
+            "email",
+            "hoursAgo",
+            "source"
+          ],
+          "returnType": "Lead",
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "plan",
+          "params": [
+            "over"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "throughLast",
+          "params": [
+            "email"
+          ],
+          "returnType": "SentRow[]",
+          "exported": false,
+          "lineCount": 4
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:assert/strict",
+          "specifiers": [
+            "assert"
+          ]
+        },
+        {
+          "source": "node:test",
+          "specifiers": [
+            "test"
+          ]
+        },
+        {
+          "source": "../src/lib/giveaway-followups",
+          "specifiers": [
+            "DM_ACK_BUBBLES",
+            "LAST",
+            "QUICKWIN",
+            "dayZeroPs",
+            "lastVariant",
+            "levelFromQuizScore",
+            "levelFromSource",
+            "parseLevelReply",
+            "planFollowups",
+            "renderDmLevel",
+            "renderLast",
+            "renderQuickwin",
+            "STEPS",
+            "renderGift2",
+            "renderLive",
+            "GIFTS",
+            "LIVE_EVENTS",
+            "SALES_DAY2",
+            "SALES_LAST",
+            "renderSalesDay2",
+            "renderSalesDay5",
+            "toHtml",
+            "Lead",
+            "SentRow",
+            "Subscriber"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 277,
       "hasStructuralAnalysis": true
     },
     "tests/giveaway-template-structure.test.ts": {
@@ -18413,6 +20044,35 @@
       "totalLines": 259,
       "hasStructuralAnalysis": true
     },
+    "tests/lead-magnet-day-zero-ps.test.ts": {
+      "filePath": "tests/lead-magnet-day-zero-ps.test.ts",
+      "contentHash": "ddc99fe21eff3db9bb09498d21be01d696513a70ed5b959d4063129aa9fab71b",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:assert/strict",
+          "specifiers": [
+            "assert"
+          ]
+        },
+        {
+          "source": "node:test",
+          "specifiers": [
+            "test"
+          ]
+        },
+        {
+          "source": "../src/lib/giveaway-followups",
+          "specifiers": [
+            "withDayZeroPs"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 30,
+      "hasStructuralAnalysis": true
+    },
     "tests/lead-magnet-speak-human-email.test.ts": {
       "filePath": "tests/lead-magnet-speak-human-email.test.ts",
       "contentHash": "48fde380a11d6acb684a91369b523f95fc9486addeade98f20c0a1c6d321c0a1",
@@ -18555,7 +20215,7 @@
     },
     "tests/pack-page.test.ts": {
       "filePath": "tests/pack-page.test.ts",
-      "contentHash": "44ce0e7ad78108d46cf6c5d4763160375a159b0023b7753cd4cb0fca68af1f97",
+      "contentHash": "e294f61cf4b62f650ede0f346a710e194267b113a94474121a98602627461715",
       "functions": [
         {
           "name": "isPackContent",
@@ -18610,7 +20270,7 @@
           "source": "../src/lib/giveaway-offers",
           "specifiers": [
             "GIVEAWAY_OFFERS",
-            "WEBSITE_WORKSHOP_URL",
+            "WORKSHOP_DEMO_URL",
             "offerForLevel"
           ]
         },
@@ -18652,7 +20312,7 @@
         }
       ],
       "exports": [],
-      "totalLines": 230,
+      "totalLines": 234,
       "hasStructuralAnalysis": true
     },
     "tests/quiz-giveaway-email.test.ts": {

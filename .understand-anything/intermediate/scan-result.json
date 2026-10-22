@@ -109,6 +109,12 @@
       "fileCategory": "docs"
     },
     {
+      "path": "docs/giveaway-followups.md",
+      "language": "markdown",
+      "sizeLines": 57,
+      "fileCategory": "docs"
+    },
+    {
       "path": "docs/giveaways/BACKLOG.md",
       "language": "markdown",
       "sizeLines": 71,
@@ -457,6 +463,12 @@
       "fileCategory": "code"
     },
     {
+      "path": "scripts/giveaway-followups.mjs",
+      "language": "javascript",
+      "sizeLines": 586,
+      "fileCategory": "code"
+    },
+    {
       "path": "scripts/lib/estimate-ai-level.mjs",
       "language": "javascript",
       "sizeLines": 15,
@@ -651,7 +663,7 @@
     {
       "path": "src/app/api/lead-magnet/route.ts",
       "language": "typescript",
-      "sizeLines": 809,
+      "sizeLines": 852,
       "fileCategory": "code"
     },
     {
@@ -1003,6 +1015,18 @@
       "fileCategory": "code"
     },
     {
+      "path": "src/app/giveaways/free-ai-browser-use/layout.tsx",
+      "language": "typescript",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/giveaways/free-ai-browser-use/page.tsx",
+      "language": "typescript",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
       "path": "src/app/giveaways/free-ai-buzz/layout.tsx",
       "language": "typescript",
       "sizeLines": 31,
@@ -1063,6 +1087,18 @@
       "fileCategory": "code"
     },
     {
+      "path": "src/app/giveaways/free-ai-firecrawl/layout.tsx",
+      "language": "typescript",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/giveaways/free-ai-firecrawl/page.tsx",
+      "language": "typescript",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
       "path": "src/app/giveaways/free-ai-handy/layout.tsx",
       "language": "typescript",
       "sizeLines": 31,
@@ -1087,6 +1123,30 @@
       "fileCategory": "code"
     },
     {
+      "path": "src/app/giveaways/free-ai-meetily/layout.tsx",
+      "language": "typescript",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/giveaways/free-ai-meetily/page.tsx",
+      "language": "typescript",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/giveaways/free-ai-mempalace/layout.tsx",
+      "language": "typescript",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/giveaways/free-ai-mempalace/page.tsx",
+      "language": "typescript",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
       "path": "src/app/giveaways/free-ai-stirling-pdf/layout.tsx",
       "language": "typescript",
       "sizeLines": 31,
@@ -1099,6 +1159,36 @@
       "fileCategory": "code"
     },
     {
+      "path": "src/app/giveaways/free-ai-tools/layout.tsx",
+      "language": "typescript",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/giveaways/free-ai-tools/pack.ts",
+      "language": "typescript",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/giveaways/free-ai-tools/page.tsx",
+      "language": "typescript",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/giveaways/free-ai-ui-ux-pro-max/layout.tsx",
+      "language": "typescript",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/giveaways/free-ai-ui-ux-pro-max/page.tsx",
+      "language": "typescript",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
       "path": "src/app/giveaways/free-ai-upscayl/layout.tsx",
       "language": "typescript",
       "sizeLines": 31,
@@ -1106,6 +1196,18 @@
     },
     {
       "path": "src/app/giveaways/free-ai-upscayl/page.tsx",
+      "language": "typescript",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/giveaways/free-ai-voicestudio/layout.tsx",
+      "language": "typescript",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/giveaways/free-ai-voicestudio/page.tsx",
       "language": "typescript",
       "sizeLines": 15,
       "fileCategory": "code"
@@ -1821,7 +1923,7 @@
     {
       "path": "src/app/sitemap.ts",
       "language": "typescript",
-      "sizeLines": 30,
+      "sizeLines": 33,
       "fileCategory": "code"
     },
     {
@@ -2209,6 +2311,12 @@
       "fileCategory": "code"
     },
     {
+      "path": "src/lib/email-logo.ts",
+      "language": "typescript",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
       "path": "src/lib/email-suppressions.ts",
       "language": "typescript",
       "sizeLines": 72,
@@ -2295,25 +2403,37 @@
     {
       "path": "src/lib/free-ai-tool-email.ts",
       "language": "typescript",
-      "sizeLines": 92,
+      "sizeLines": 93,
       "fileCategory": "code"
     },
     {
       "path": "src/lib/free-ai-tool-pack.ts",
       "language": "typescript",
-      "sizeLines": 79,
+      "sizeLines": 141,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/lib/free-ai-tools-hub-email.ts",
+      "language": "typescript",
+      "sizeLines": 75,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/lib/free-ai-tools-hub.ts",
+      "language": "typescript",
+      "sizeLines": 47,
       "fileCategory": "code"
     },
     {
       "path": "src/lib/free-ai-tools.ts",
       "language": "typescript",
-      "sizeLines": 387,
+      "sizeLines": 973,
       "fileCategory": "code"
     },
     {
       "path": "src/lib/generic-giveaway-email.ts",
       "language": "typescript",
-      "sizeLines": 180,
+      "sizeLines": 249,
       "fileCategory": "code"
     },
     {
@@ -2323,15 +2443,21 @@
       "fileCategory": "code"
     },
     {
+      "path": "src/lib/giveaway-followups.ts",
+      "language": "typescript",
+      "sizeLines": 873,
+      "fileCategory": "code"
+    },
+    {
       "path": "src/lib/giveaway-offers.ts",
       "language": "typescript",
-      "sizeLines": 100,
+      "sizeLines": 111,
       "fileCategory": "code"
     },
     {
       "path": "src/lib/giveaways.ts",
       "language": "typescript",
-      "sizeLines": 324,
+      "sizeLines": 380,
       "fileCategory": "code"
     },
     {
@@ -2361,7 +2487,7 @@
     {
       "path": "src/lib/lead-magnets.ts",
       "language": "typescript",
-      "sizeLines": 146,
+      "sizeLines": 148,
       "fileCategory": "code"
     },
     {
@@ -2629,6 +2755,24 @@
       "fileCategory": "data"
     },
     {
+      "path": "supabase/migrations/018_giveaway_followup_sends.sql",
+      "language": "sql",
+      "sizeLines": 33,
+      "fileCategory": "data"
+    },
+    {
+      "path": "supabase/migrations/019_giveaway_followup_day14_day30.sql",
+      "language": "sql",
+      "sizeLines": 16,
+      "fileCategory": "data"
+    },
+    {
+      "path": "supabase/migrations/020_giveaway_followup_sales_track.sql",
+      "language": "sql",
+      "sizeLines": 13,
+      "fileCategory": "data"
+    },
+    {
       "path": "tailwind.config.ts",
       "language": "typescript",
       "sizeLines": 55,
@@ -2674,6 +2818,12 @@
       "path": "tests/email-idempotency.test.ts",
       "language": "typescript",
       "sizeLines": 193,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/email-logo.test.ts",
+      "language": "typescript",
+      "sizeLines": 28,
       "fileCategory": "code"
     },
     {
@@ -2773,21 +2923,33 @@
       "fileCategory": "code"
     },
     {
-      "path": "tests/free-ai-tools.test.ts",
+      "path": "tests/free-ai-tools-hub.test.ts",
       "language": "typescript",
       "sizeLines": 51,
       "fileCategory": "code"
     },
     {
+      "path": "tests/free-ai-tools.test.ts",
+      "language": "typescript",
+      "sizeLines": 113,
+      "fileCategory": "code"
+    },
+    {
       "path": "tests/generic-giveaway-email.test.ts",
       "language": "typescript",
-      "sizeLines": 94,
+      "sizeLines": 124,
       "fileCategory": "code"
     },
     {
       "path": "tests/giveaway-email-collection.test.ts",
       "language": "typescript",
       "sizeLines": 191,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/giveaway-followups.test.ts",
+      "language": "typescript",
+      "sizeLines": 276,
       "fileCategory": "code"
     },
     {
@@ -2806,6 +2968,12 @@
       "path": "tests/hardening.test.ts",
       "language": "typescript",
       "sizeLines": 258,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/lead-magnet-day-zero-ps.test.ts",
+      "language": "typescript",
+      "sizeLines": 29,
       "fileCategory": "code"
     },
     {
@@ -2829,7 +2997,7 @@
     {
       "path": "tests/pack-page.test.ts",
       "language": "typescript",
-      "sizeLines": 229,
+      "sizeLines": 233,
       "fileCategory": "code"
     },
     {
@@ -2905,9 +3073,9 @@
       "fileCategory": "config"
     }
   ],
-  "totalFiles": 484,
-  "filteredByIgnore": 19,
-  "estimatedComplexity": "large",
+  "totalFiles": 512,
+  "filteredByIgnore": 25,
+  "estimatedComplexity": "very-large",
   "name": "masterminds-workshop",
   "description": "Next.js event registration and giveaway platform for Mastermind workshops",
   "languages": [
@@ -3156,10 +3324,13 @@
     "src/app/api/illy-auth/route.ts": [],
     "src/app/api/jill-auth/route.ts": [],
     "src/app/api/lead-magnet/route.ts": [
+      "src/lib/email-logo.ts",
       "src/lib/email-suppressions.ts",
       "src/lib/free-ai-tool-email.ts",
+      "src/lib/free-ai-tools-hub-email.ts",
       "src/lib/free-ai-tools.ts",
       "src/lib/generic-giveaway-email.ts",
+      "src/lib/giveaway-followups.ts",
       "src/lib/html-to-text.ts",
       "src/lib/insight-to-fix.ts",
       "src/lib/lead-magnets.ts",
@@ -3773,7 +3944,9 @@
     "src/app/session/9/guide/page.tsx": [
       "src/content/session-9-guide.tsx"
     ],
-    "src/app/sitemap.ts": [],
+    "src/app/sitemap.ts": [
+      "src/lib/free-ai-tools.ts"
+    ],
     "src/components/CodeBlock.tsx": [
       "src/lib/copyWithConfetti.ts"
     ],
@@ -3827,7 +4000,6 @@
     "src/components/giveaways/PackPage.module.css": [],
     "src/components/giveaways/PackPage.tsx": [
       "src/components/giveaways/GiveawayEmailModal.tsx",
-      "src/components/giveaways/PackPage.module.css",
       "src/lib/giveaway-dm.ts",
       "src/lib/giveaway-offers.ts",
       "src/lib/pack-page.ts"
@@ -4050,7 +4222,9 @@
       "src/lib/free-ai-tools.ts",
       "src/lib/pack-page.ts"
     ],
-    "src/lib/free-ai-tools.ts": [],
+    "src/lib/free-ai-tools.ts": [
+      "src/lib/giveaway-offers.ts"
+    ],
     "src/lib/generic-giveaway-email.ts": [
       "src/lib/utm.ts"
     ],
@@ -4246,7 +4420,9 @@
     ],
     "tests/free-ai-tools.test.ts": [
       "src/lib/free-ai-tool-email.ts",
+      "src/lib/free-ai-tool-pack.ts",
       "src/lib/free-ai-tools.ts",
+      "src/lib/giveaway-offers.ts",
       "src/lib/giveaways.ts",
       "src/lib/lead-magnets.ts"
     ],
@@ -4330,6 +4506,81 @@
       "src/lib/with-timeout.ts"
     ],
     "tsconfig.json": [],
-    "vercel.json": []
+    "vercel.json": [],
+    "docs/giveaway-followups.md": [],
+    "scripts/giveaway-followups.mjs": [
+      "src/lib/email-logo.ts",
+      "src/lib/giveaway-followups.ts"
+    ],
+    "src/app/giveaways/free-ai-browser-use/layout.tsx": [],
+    "src/app/giveaways/free-ai-browser-use/page.tsx": [
+      "src/components/giveaways/PackPage.tsx",
+      "src/lib/free-ai-tool-pack.ts"
+    ],
+    "src/app/giveaways/free-ai-firecrawl/layout.tsx": [],
+    "src/app/giveaways/free-ai-firecrawl/page.tsx": [
+      "src/components/giveaways/PackPage.tsx",
+      "src/lib/free-ai-tool-pack.ts"
+    ],
+    "src/app/giveaways/free-ai-meetily/layout.tsx": [],
+    "src/app/giveaways/free-ai-meetily/page.tsx": [
+      "src/components/giveaways/PackPage.tsx",
+      "src/lib/free-ai-tool-pack.ts"
+    ],
+    "src/app/giveaways/free-ai-mempalace/layout.tsx": [],
+    "src/app/giveaways/free-ai-mempalace/page.tsx": [
+      "src/components/giveaways/PackPage.tsx",
+      "src/lib/free-ai-tool-pack.ts"
+    ],
+    "src/app/giveaways/free-ai-tools/layout.tsx": [],
+    "src/app/giveaways/free-ai-tools/pack.ts": [
+      "src/lib/free-ai-tools-hub.ts",
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/free-ai-tools/page.tsx": [
+      "src/app/giveaways/free-ai-tools/pack.ts",
+      "src/components/giveaways/PackPage.tsx",
+      "src/lib/free-ai-tools-hub.ts"
+    ],
+    "src/app/giveaways/free-ai-ui-ux-pro-max/layout.tsx": [],
+    "src/app/giveaways/free-ai-ui-ux-pro-max/page.tsx": [
+      "src/components/giveaways/PackPage.tsx",
+      "src/lib/free-ai-tool-pack.ts"
+    ],
+    "src/app/giveaways/free-ai-voicestudio/layout.tsx": [],
+    "src/app/giveaways/free-ai-voicestudio/page.tsx": [
+      "src/components/giveaways/PackPage.tsx",
+      "src/lib/free-ai-tool-pack.ts"
+    ],
+    "src/lib/email-logo.ts": [],
+    "src/lib/free-ai-tools-hub-email.ts": [
+      "src/lib/free-ai-tools-hub.ts",
+      "src/lib/utm.ts"
+    ],
+    "src/lib/free-ai-tools-hub.ts": [
+      "src/lib/free-ai-tools.ts"
+    ],
+    "src/lib/giveaway-followups.ts": [],
+    "supabase/migrations/018_giveaway_followup_sends.sql": [],
+    "supabase/migrations/019_giveaway_followup_day14_day30.sql": [],
+    "supabase/migrations/020_giveaway_followup_sales_track.sql": [],
+    "tests/email-logo.test.ts": [
+      "src/lib/email-logo.ts"
+    ],
+    "tests/free-ai-tools-hub.test.ts": [
+      "src/app/giveaways/free-ai-tools/pack.ts",
+      "src/lib/free-ai-tools-hub-email.ts",
+      "src/lib/free-ai-tools-hub.ts",
+      "src/lib/free-ai-tools.ts",
+      "src/lib/giveaways.ts",
+      "src/lib/lead-magnets.ts",
+      "src/lib/pack-page.ts"
+    ],
+    "tests/giveaway-followups.test.ts": [
+      "src/lib/giveaway-followups.ts"
+    ],
+    "tests/lead-magnet-day-zero-ps.test.ts": [
+      "src/lib/giveaway-followups.ts"
+    ]
   }
 }
