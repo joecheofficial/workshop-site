@@ -7,7 +7,7 @@ import { offerForLevel } from '../src/lib/giveaway-offers'
 import { validatePackContent } from '../src/lib/pack-page'
 import { websiteGiveawayEmail } from '../src/lib/generic-giveaway-email'
 import { POSTURE_COACH_CONTENT, ZIP_PATH, PROMPT_PATH, EXAMPLE_PATH, ONE_LINE_COMMAND } from '../src/app/giveaways/posture-coach/pack'
-import { POSTURE_COACH_PROMPT, POSTURE_COACH_EASY_PROMPT } from '../src/app/giveaways/posture-coach/prompt'
+import { POSTURE_COACH_PROMPT } from '../src/app/giveaways/posture-coach/prompt'
 
 // Posture Coach giveaway (IG keyword POSTURE, Illy 2026-10-23).
 // The prompt on the page, the one-line command's text file and the prompt inside the zip are one prompt.
@@ -34,12 +34,11 @@ test('the copy card, the one-line command file and the zip carry the same prompt
   const block = blocks.find((m) => m[2].startsWith('Build me my own Posture Coach'))
   assert.ok(block, 'START-HERE-PROMPT.md has no prompt block')
   assert.equal(block[2], POSTURE_COACH_PROMPT, 'prompt.ts drifted from START-HERE-PROMPT.md in the zip')
-  const easy = blocks.find((m) => m[1] === 'text')
-  assert.ok(easy, 'START-HERE-PROMPT.md has no Way 1 message block')
-  assert.equal(easy[2], POSTURE_COACH_EASY_PROMPT, 'Way 1 message drifted from START-HERE-PROMPT.md in the zip')
-  assert.match(POSTURE_COACH_EASY_PROMPT, /START-HERE-PROMPT\.md/)
+  assert.match(md, /Type \*\*set it up\*\*/, 'Way 1 in the zip is drag the folder + "set it up"')
+  const claudeMd = execFileSync('unzip', ['-p', join(ROOT, 'public', ZIP_PATH), 'PostureCoach/CLAUDE.md'], { encoding: 'utf8' })
+  assert.match(claudeMd, /START-HERE-PROMPT\.md/, 'CLAUDE.md in the zip points Claude at the setup prompt')
   const prompts = POSTURE_COACH_CONTENT.use?.cards.map((c) => c.prompt) || []
-  assert.deepEqual(prompts, [POSTURE_COACH_EASY_PROMPT, POSTURE_COACH_PROMPT], 'the page shows Way 1 then Way 2')
+  assert.deepEqual(prompts, [POSTURE_COACH_PROMPT], 'only the Terminal prompt is a copy card; Way 1 is drag + "set it up"')
   assert.match(POSTURE_COACH_PROMPT, /https:\/\/workshop\.mastermindshq\.business\/posture-coach\.zip/)
   assert.ok(ONE_LINE_COMMAND.includes(`https://workshop.mastermindshq.business${PROMPT_PATH}`))
 })
@@ -57,10 +56,12 @@ test('a website email ask on the page gets the generic Posture Coach letter', ()
 
 test('the page says it only works in Claude Code and offers both ways', () => {
   const words = JSON.stringify(POSTURE_COACH_CONTENT)
-  assert.match(words, /only in Claude Code/i)
+  assert.match(words, /only works in Claude Code/i)
   assert.match(words, /Way 1/)
   assert.match(words, /Way 2/)
   assert.match(words, /claude\.ai\/install\.sh/)
+  assert.match(words, /set it up/)
+  assert.doesNotMatch(words, /Copy the Way 1 message/)
 })
 
 test('Posture Coach words contain no em dashes', () => {
