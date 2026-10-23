@@ -1,5 +1,5 @@
 import type { PackPageContent } from '@/lib/pack-page'
-import { POSTURE_COACH_PROMPT } from './prompt'
+import { POSTURE_COACH_PROMPT, POSTURE_COACH_EASY_PROMPT } from './prompt'
 
 // Words for the Posture Coach pack page (IG keyword POSTURE, 23 Oct 2026).
 // Layout, the email ask and the end offer live in src/components/giveaways/PackPage.tsx.
@@ -17,24 +17,24 @@ export const POSTURE_COACH_CONTENT: PackPageContent = {
   hero: {
     title: 'A cartoon of you that gets you stretching.',
     free: 'It is free.',
-    lede: 'Every 20 minutes a little cartoon of you pops up on your Mac with a quick desk stretch. Claude Code draws the cartoon from your photo and builds the app for you. About 10 minutes.',
+    lede: 'Every 20 minutes a little cartoon of you pops up on your Mac with a quick desk stretch. Claude Code draws the cartoon from your photo and builds the app for you. About 10 minutes. Works only in Claude Code, on a Mac.',
     button: {
       label: 'Take me to it',
       meta: 'free · on this page',
       target: 'get',
     },
-    ticks: ['No sign-up', 'Made by your own Claude Code', 'Nothing leaves your Mac'],
+    ticks: ['No sign-up', 'Needs Claude Code on a Mac', 'Nothing leaves your Mac'],
   },
   jumps: [
     {
       target: 'get',
       label: 'Get it',
-      text: 'One line to paste into Terminal, or the folder.',
+      text: 'Two ways: the Claude app (easy) or Terminal.',
     },
     {
       target: 'use',
-      label: 'The prompt',
-      text: 'The whole setup in one message to Claude Code.',
+      label: 'The prompts',
+      text: 'The message for each way, ready to copy.',
     },
     {
       target: 'stuck',
@@ -45,23 +45,23 @@ export const POSTURE_COACH_CONTENT: PackPageContent = {
   get: {
     heading: 'Your Posture Coach',
     intro:
-      "Free, from Joe Che's AI class. Open Terminal on your Mac and paste the line below. Claude Code downloads the app, asks for a photo of you (or 5 quick questions), shows you your cartoon, then builds it on your Mac.",
+      "Free, from Joe Che's AI class. Pick the way that suits you. Way 1 is for everyone: download the folder, drop it into Claude Code in the Claude desktop app, and send one message. Way 2 is for people who already use Claude Code in Terminal: paste one line. Either way, Claude asks for a photo of you (or 5 quick questions), shows you your cartoon, then builds the app on your Mac.",
     note: {
-      lead: 'Needs a Mac with Claude Code.',
-      link: { label: 'See how it works.', target: 'guide' },
-      rest: 'macOS 13 or newer. Windows is not supported yet.',
-    },
-    command: {
-      label: 'Paste this into Terminal',
-      text: ONE_LINE_COMMAND,
+      lead: 'Works only in Claude Code, on a Mac.',
+      link: { label: 'See both ways, step by step.', target: 'guide' },
+      rest: 'Claude Code is part of the Claude desktop app and needs a paid Claude plan (Pro or higher). It does not work in the normal Claude chat, in ChatGPT or on Windows yet. macOS 13 or newer.',
     },
     primary: {
-      label: 'Download the folder',
-      meta: 'posture-coach.zip · 1 MB',
+      label: 'Way 1: download the folder',
+      meta: 'then drop it into Claude Code',
       href: ZIP_PATH,
       download: 'posture-coach.zip',
     },
     secondary: [{ label: 'See an example cartoon', href: EXAMPLE_PATH }],
+    command: {
+      label: 'Way 2: paste this into Terminal (Claude Code installed)',
+      text: ONE_LINE_COMMAND,
+    },
   },
   promise: {
     heading: 'It nudges. It never nags.',
@@ -90,21 +90,32 @@ export const POSTURE_COACH_CONTENT: PackPageContent = {
         title: 'What you need',
         bullets: [
           'A Mac on macOS 13 or newer.',
-          'Claude Code. The Claude Pro plan is enough.',
-          "Apple's free command line tools. If you don't have them, Claude Code installs them for you (one click).",
+          'Claude Code, with a paid Claude plan (Pro or higher). It comes with the Claude desktop app. The normal Claude chat and ChatGPT cannot build it.',
+          "Apple's free command line tools. If you don't have them, Claude installs them for you (one click).",
           'A photo of yourself, or 2 minutes to answer 5 questions.',
         ],
       },
       {
-        title: 'The steps',
-        text: 'Claude Code does the work. You answer a few questions.',
+        title: 'Way 1: the easy way (no Terminal)',
+        text: 'For everyone. About 10 minutes.',
+        steps: [
+          'Install the Claude desktop app for Mac from claude.com/download and sign in with your paid plan.',
+          'Click "Way 1: download the folder" at the top of this page. You get posture-coach.zip.',
+          'In the Claude app, open the Code tab and pick any folder to work in, like your Desktop.',
+          'Drag posture-coach.zip into the chat, paste the Way 1 message from "The prompts" below and send it.',
+          'When Claude asks, drag in a photo of yourself, or type "describe" and answer 5 quick questions.',
+          'Claude shows you a preview of your cartoon in every pose. Say what to change, or say it looks good.',
+          'Say yes when Claude asks to run things. Your cartoon appears in the menu bar. Click it, then "Stretch now".',
+        ],
+      },
+      {
+        title: 'Way 2: Terminal (for Claude Code users)',
+        text: 'If you already run Claude Code in Terminal.',
         steps: [
           'Open Terminal (Cmd + Space, type Terminal, press Enter).',
-          'Paste the line from the top of this page and press Enter. It starts Claude Code with the prompt.',
-          'When Claude asks, drag a photo of yourself into the Terminal window and press Enter. Or type "describe" and answer 5 quick questions.',
-          'Claude opens a preview of your cartoon in every stretch pose. Say what to change, or say it looks good.',
-          'Claude reads the build files, tells you what they do, and builds the app. Say yes when it asks to run things.',
-          'Your cartoon appears in the menu bar. Click it, then "Stretch now" to try one straight away.',
+          'Click Copy on the "Way 2" line at the top of this page, paste it into Terminal in one piece and press Enter. It starts Claude Code with the prompt.',
+          'Not installed yet? Terminal says "command not found: claude". Install it with curl -fsSL https://claude.ai/install.sh | bash, open a new Terminal window, and paste the line again. Or use Way 1.',
+          'From here it is the same as Way 1: photo or 5 questions, preview, then Claude builds the app.',
         ],
       },
       {
@@ -132,12 +143,18 @@ export const POSTURE_COACH_CONTENT: PackPageContent = {
     },
   },
   use: {
-    heading: 'The whole setup in one prompt',
+    heading: 'The prompts',
     intro:
-      'This is what the one line above sends to Claude Code. If you prefer, type claude in Terminal and paste this as one message instead.',
+      'Way 1: send the first message in the Claude app\'s Code tab, with posture-coach.zip attached. Way 2: the one line at the top sends the second prompt for you. You can also type claude in Terminal and paste it yourself.',
     cards: [
       {
-        label: 'one message to Claude Code',
+        label: 'Way 1 · Claude app, Code tab, zip attached',
+        title: 'Set up Posture Coach from the folder',
+        text: 'Claude unzips the folder and follows the setup inside it: your cartoon, the preview, then the app.',
+        prompt: POSTURE_COACH_EASY_PROMPT,
+      },
+      {
+        label: 'Way 2 · Terminal',
         title: 'Build my Posture Coach',
         text: 'Claude Code downloads the app, makes your cartoon from a photo or 5 questions, shows you a preview, then builds it on your Mac.',
         prompt: POSTURE_COACH_PROMPT,
@@ -152,7 +169,15 @@ export const POSTURE_COACH_CONTENT: PackPageContent = {
     },
     {
       q: 'It says "command not found: claude"',
-      a: 'Claude Code is not installed yet. Install it (the guide is at code.claude.com), sign in, then paste the line again.',
+      a: 'Claude Code is not installed in your Terminal. Easiest fix: use Way 1 in the Claude desktop app instead. Or install it with curl -fsSL https://claude.ai/install.sh | bash, open a new Terminal window and paste the line again.',
+    },
+    {
+      q: 'The Terminal line gives an error',
+      a: 'Use the Copy button and paste the line in one piece. If it gets split over two lines, or a space goes missing (like curl-fsSL), it fails. Or use Way 1.',
+    },
+    {
+      q: 'Can I use the normal Claude chat or ChatGPT?',
+      a: 'No. It has to build an app on your Mac, so it only works in Claude Code: the Code tab of the Claude desktop app, or Claude Code in Terminal. Claude Code needs a paid Claude plan (Pro or higher).',
     },
     {
       q: 'A window pops up about command line tools',
