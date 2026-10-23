@@ -366,6 +366,14 @@ export const giveaways: Giveaway[] = [
     badgeVariant: 'purple',
   },
   {
+    slug: 'posture-coach',
+    title: 'Posture Coach: a cartoon of you that gets you stretching',
+    description: 'A free Mac app where a cartoon of you pops up every 20 minutes with a quick desk stretch. Claude Code makes the cartoon from your photo and builds it for you.',
+    icon: '◈',
+    badge: 'Build',
+    badgeVariant: 'pink',
+  },
+  {
     slug: 'whatsapp-agent',
     title: 'Give Claude its own WhatsApp number',
     description: "A WhatsApp receptionist that answers your clients and books appointments, even at midnight. Built with Claude Code on WhatsApp's official API, no third-party WhatsApp tool.",

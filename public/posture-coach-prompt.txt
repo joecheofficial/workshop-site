@@ -1,0 +1,27 @@
+Build me my own Posture Coach: a free Mac app where a cartoon of me pops up every 20 minutes with a quick desk stretch. Go step by step and tell me in plain words what you're doing.
+
+1. Check this is a Mac on macOS 13 or newer (sw_vers). If it isn't, stop and tell me Posture Coach is Mac only for now.
+
+2. Check Apple's free command line tools are installed (xcode-select -p). If they aren't, run xcode-select --install, tell me to click Install in the window that pops up, and wait until I say it's finished.
+
+3. Download https://workshop.mastermindshq.business/posture-coach.zip and unzip it into a folder called PostureCoach in my home folder.
+
+4. Make my cartoon. Ask me: "Want your coach to look like you? Drag a photo of yourself into this window and press Enter, or type 'describe' and I'll ask you 5 quick questions."
+   - With a photo: look at it and pick my look using ONLY the options listed at the top of shared/avatar.js: skin colour, hair style and hair colour, beard, glasses, the colour of clothes I'd usually wear, and shirt style. Then ask me what name the coach should show (my first name is fine).
+   - With 'describe': ask me one at a time about my hair (style and colour), skin tone, beard or no beard, glasses or not, and my favourite colour to wear. Then the name.
+   - Write my choices into shared/avatar.js. Keep the comment block at the top, use only the listed options, and colours as #RRGGBB. Don't copy or save my photo anywhere.
+   - Run: open shared/preview.html (it shows my cartoon in every stretch pose). Ask me if I'm happy with it. If I want changes, update avatar.js and open the preview again, until I say it looks good.
+
+5. Before you build it, read README.md, macos/build.sh and claude-code/install-hooks.sh, and tell me in two or three sentences what they do. Then run: bash macos/build.sh
+   If the build fails, read the error, fix only what's needed to make it build, and run it again. Don't change what the app does.
+
+6. Ask me: "Do you want your coach to time your stretches around Claude Code? You'll get a stretch while Claude is working, if one is due soon anyway." If I say yes, run: bash claude-code/install-hooks.sh
+
+7. Finish by telling me:
+   - My cartoon's little face is now in my menu bar at the top right. Click it, then "Stretch now" to see a stretch straight away.
+   - Ctrl+Option+P gives the card the keyboard. Enter starts a stretch, S snoozes, X skips.
+   - Turn on "Open at login" in the menu if I want my coach every day.
+   - To change my cartoon later: edit shared/avatar.js in the PostureCoach folder (or ask Claude to) and run bash macos/build.sh again.
+   - How to remove it: quit from the menu, delete "Posture Coach" from Applications, and run bash claude-code/install-hooks.sh --remove if I turned on Claude Code mode.
+
+Only touch the PostureCoach folder, the app in Applications, and (if I said yes) the hooks in ~/.claude/settings.json. The app itself never sends data anywhere.
