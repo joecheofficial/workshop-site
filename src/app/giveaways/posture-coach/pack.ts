@@ -53,7 +53,7 @@ export const POSTURE_COACH_CONTENT: PackPageContent = {
     },
     primary: {
       label: 'Way 1: download the folder',
-      meta: 'posture-coach.zip · then drop it into Claude Code',
+      meta: 'then drop it into Claude Code',
       href: ZIP_PATH,
       download: 'posture-coach.zip',
     },
