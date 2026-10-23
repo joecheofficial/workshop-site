@@ -57,7 +57,7 @@ test('a website email ask on the page gets the generic Posture Coach letter', ()
 
 test('the page says it only works in Claude Code and offers both ways', () => {
   const words = JSON.stringify(POSTURE_COACH_CONTENT)
-  assert.match(words, /only in Claude Code/i)
+  assert.match(words, /only works in Claude Code/i)
   assert.match(words, /Way 1/)
   assert.match(words, /Way 2/)
   assert.match(words, /claude\.ai\/install\.sh/)
