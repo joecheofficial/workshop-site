@@ -1,5 +1,5 @@
 import type { PackPageContent } from '@/lib/pack-page'
-import { POSTURE_COACH_PROMPT, POSTURE_COACH_EASY_PROMPT } from './prompt'
+import { POSTURE_COACH_PROMPT } from './prompt'
 
 // Words for the Posture Coach pack page (IG keyword POSTURE, 23 Oct 2026).
 // Layout, the email ask and the end offer live in src/components/giveaways/PackPage.tsx.
@@ -34,8 +34,8 @@ export const POSTURE_COACH_CONTENT: PackPageContent = {
     },
     {
       target: 'use',
-      label: 'The messages',
-      text: 'Copy one, paste it, done.',
+      label: 'The Terminal prompt',
+      text: 'For Way 2. Copy it, paste it, done.',
     },
     {
       target: 'stuck',
@@ -46,7 +46,7 @@ export const POSTURE_COACH_CONTENT: PackPageContent = {
   get: {
     heading: 'Get your Posture Coach',
     intro:
-      "Free, from Joe Che's AI class. There are two ways. Way 1 is the easy way. Download the folder, drop it into Claude Code, and send one message. Way 2 is for people who already use Claude Code in Terminal. Paste one line. Either way, Claude asks for a photo of you, shows you your cartoon, then makes the app.",
+      "Free, from Joe Che's AI class. There are two ways. Way 1 is the easy way. Download the folder, drag it into Claude Code, and type 'set it up'. Way 2 is for people who already use Claude Code in Terminal. Paste one line. Either way, Claude asks for a photo of you, shows you your cartoon, then makes the app.",
     note: {
       lead: 'It only works in Claude Code, on a Mac.',
       link: { label: 'See both ways, step by step.', target: 'guide' },
@@ -54,7 +54,7 @@ export const POSTURE_COACH_CONTENT: PackPageContent = {
     },
     primary: {
       label: 'Way 1: download the folder',
-      meta: 'then drop it into Claude Code',
+      meta: 'then drag it into Claude Code',
       href: ZIP_PATH,
       download: 'posture-coach.zip',
     },
@@ -101,13 +101,10 @@ export const POSTURE_COACH_CONTENT: PackPageContent = {
         text: 'For everyone. No Terminal.',
         steps: [
           'Get the Claude app for Mac at claude.com/download. Log in.',
-          'On this page, click "Way 1: download the folder". You get a file called posture-coach.zip.',
-          'In the Claude app, click Code at the top. Pick a folder. Your Desktop is fine.',
-          'Drag posture-coach.zip into the chat.',
-          'Copy the Way 1 message from "The messages" below. Paste it in. Press Enter.',
-          'Claude asks for your photo. Drag it in. Or type "describe" and answer 5 questions.',
-          'Claude shows you your cartoon. Say what to change, or say "looks good".',
-          'Say yes when Claude asks to do things. Then look at the top right of your screen. Your cartoon is there. Click it, then "Stretch now".',
+          'On this page, click "Way 1: download the folder".',
+          'In the Claude app, click Code at the top.',
+          'Drag the PostureCoach folder into the chat. (The zip works too.)',
+          'Type "set it up" and press Enter. Claude does the rest.',
         ],
       },
       {
@@ -135,7 +132,8 @@ export const POSTURE_COACH_CONTENT: PackPageContent = {
     files: {
       heading: 'The files',
       items: [
-        { name: 'START-HERE-PROMPT.md', text: 'The steps and the messages. The same ones are on this page.' },
+        { name: 'CLAUDE.md', text: 'Tells Claude what to do when you drag the folder in.' },
+        { name: 'START-HERE-PROMPT.md', text: 'The steps for both ways. The same ones are on this page.' },
         { name: 'shared/avatar.js', text: 'How your cartoon looks. Claude fills it in for you.' },
         { name: 'shared/preview.html', text: 'Shows your cartoon in every pose, before Claude makes the app.' },
         { name: 'shared/moves.json', text: 'The 12 stretches and what your coach says.' },
@@ -145,16 +143,10 @@ export const POSTURE_COACH_CONTENT: PackPageContent = {
     },
   },
   use: {
-    heading: 'The messages',
+    heading: 'The Terminal prompt',
     intro:
-      'Way 1: send the first message in the Claude app, in Code, with posture-coach.zip dragged in. Way 2: the line at the top sends the second message for you.',
+      'Only for Way 2. The line at the top sends this for you. Or type claude in Terminal and paste it yourself. Way 1 does not need it.',
     cards: [
-      {
-        label: 'Way 1 · Claude app, Code, zip dragged in',
-        title: 'Set up Posture Coach from the folder',
-        text: 'Claude opens the folder and does all the steps for you.',
-        prompt: POSTURE_COACH_EASY_PROMPT,
-      },
       {
         label: 'Way 2 · Terminal',
         title: 'Build my Posture Coach',
