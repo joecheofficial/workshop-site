@@ -950,6 +950,102 @@ When you are done, search MemPalace for something from an old session to prove i
         a: 'Do not install from it. The official sources are github.com/MemPalace/mempalace, pypi.org/project/mempalace and mempalaceofficial.com.',
       },
     ],
+  },
+  {
+    slug: 'free-ai-concat',
+    keyword: 'CUT',
+    name: 'Concat',
+    tagline: 'A free video editor with no watermark and no account.',
+    subline:
+      'Concat is a free, open source video editor. It adds captions, cuts clips and exports up to 4K with no watermark, no account and no subscription. It is a beta, and this page walks you through the Mac setup.',
+    toolUrl: 'https://github.com/jub0t/Concat/releases/latest',
+    primaryLabel: 'Download Concat (official GitHub releases)',
+    intro:
+      'Concat is a free, open source video editor made by one developer, jub0t. It covers what most people open CapCut for: cutting clips on several tracks, automatic captions, text to speech, background removal, effects and titles, and export up to 4K. No watermark, no account, no subscription. The AI parts (captions, voices, cutout) download once from Settings and then work without the internet. Your footage stays on your computer.',
+    steps: [
+      'Open the official download page (the button above). On a Mac with an Apple chip (any Mac from late 2020 on), download the file ending in macos-arm64.dmg. On an older Intel Mac, download the one ending in macos-x86_64.dmg. Not sure? Click the Apple menu, then About This Mac. It says Chip (Apple) or Processor (Intel).',
+      'Open the downloaded file and drag Concat into your Applications folder.',
+      'Open Concat from Applications. If your Mac says it cannot verify the app, click Done, open System Settings, then Privacy and Security, scroll down to the message about Concat and click Open Anyway, then confirm with your password or Touch ID. You only do this once.',
+      'Drop in a video, cut it, and press Export. To add captions, open Settings, download the captions model once, then use the captions tool.',
+    ],
+    howIUse: [
+      'Cut a talking video: drop it in, trim the start and end, and let it write the captions for you.',
+      'Read the captions once before you export. Automatic captions get names and unusual words wrong.',
+      'Export a short test clip first, so you know it looks right before you export the whole thing.',
+    ],
+    goodToKnow:
+      'Free and open source (AGPL-3.0), made by jub0t. It is in beta, so expect a few rough edges, and the Mac build is not signed by Apple, which is why the first open needs Open Anyway. The people who make it say it does not send anything about you, your projects or your media over the internet. It only goes online when you ask it to, for example to check for updates or to download a model. I have not stress-tested it on long projects.',
+    links: [
+      { label: 'Download Concat (official GitHub releases)', url: 'https://github.com/jub0t/Concat/releases/latest' },
+      { label: 'The Concat website', url: 'https://concat.standalones.org' },
+      { label: 'Report a problem to the maker', url: 'https://github.com/jub0t/Concat/issues' },
+      { label: 'The code on GitHub', url: 'https://github.com/jub0t/Concat' },
+    ],
+    githubUrl: 'https://github.com/jub0t/Concat',
+    stars: 11372,
+    license: 'AGPL-3.0',
+    why: 'A free video editor with no watermark, no account and no subscription, so you can cut and caption your own videos without paying for CapCut.',
+    level: 'beginner',
+    who: 'Anyone who edits their own short videos and does not want a watermark, a subscription or an account.',
+    needs:
+      'A Mac (Apple chip or Intel), Windows PC, Linux computer or Android phone. These notes cover the Mac. The first open needs one extra click in Privacy and Security. It is a beta.',
+    ticks: ['No sign-up here', 'No watermark, no account', '11k stars on GitHub'],
+    claudePrompt: `Install Concat, the free open source video editor, on this Mac.
+
+1. Check what chip this Mac has. Apple chip means the macos-arm64.dmg file. Intel means the macos-x86_64.dmg file.
+2. Download the latest release only from https://github.com/jub0t/Concat/releases/latest . Also download the SHA256SUMS file from the same release and check the dmg against it. If the numbers do not match, stop and tell me.
+3. Open the dmg and copy Concat into Applications. Do not run anything else from it.
+4. The app is not signed by Apple, so macOS will probably block the first open. Tell me to open System Settings, Privacy and Security, and click Open Anyway next to the Concat message. Do not change my security settings yourself and do not run any command that removes the quarantine flag unless I ask you to.
+5. Tell me where to download the captions model in Concat's Settings.
+
+Do not sign me up for anything.`,
+    requirements: [
+      'A Mac. Apple chip Macs (2020 and newer) use the arm64 download. Older Intel Macs use the x86_64 one.',
+      'Free disk space. The app is about 65 MB to download, and the optional AI models for captions, voices and cutout are extra.',
+      'Your own videos. Concat does not come with footage.',
+    ],
+    does: [
+      'Cut clips on several tracks',
+      'Write captions from the sound of your video',
+      'Turn text into speech and remove backgrounds, once you download those models',
+      'Add effects, titles and keyframe animation',
+      'Export up to 4K with no watermark',
+      'Work without an account and keep your footage on your computer',
+    ],
+    doesNot: [
+      'Come signed by Apple, so the first open needs a click in Privacy and Security',
+      'Replace a finished, polished editor yet. It is a beta',
+      'Get every caption right. Always read them before you post',
+    ],
+    limits: [
+      'It is in beta. The maker says it works and still has edges. Report problems on its GitHub issues page.',
+      'The Mac build is not signed by Apple, so you click Open Anyway once.',
+      'The AI models for captions, voices and cutout are a separate download from Settings. They work offline after that.',
+      'It is made mostly by one person, so updates and fixes depend on that one developer.',
+      'Free and open source under AGPL-3.0. Using it to edit your videos costs nothing and your videos stay yours. If you ever change the code and share it, the licence asks you to share your changes too.',
+    ],
+    stuck: [
+      {
+        q: 'My Mac says Concat cannot be opened because it is from an unidentified developer',
+        a: 'Click Done. Open System Settings, then Privacy and Security, scroll to the message about Concat and click Open Anyway. Confirm with your password or Touch ID, then open Concat again.',
+      },
+      {
+        q: 'I do not see Open Anyway',
+        a: 'Try to open Concat once first, so the message appears, and then look again in Privacy and Security. It stays there for about an hour after the attempt.',
+      },
+      {
+        q: 'I am not sure which download to pick',
+        a: 'Click the Apple menu and choose About This Mac. If it says Chip with Apple, pick the file ending in macos-arm64.dmg. If it says Processor with Intel, pick macos-x86_64.dmg.',
+      },
+      {
+        q: 'There are no automatic captions',
+        a: 'The captions model is a separate download. Open Concat Settings and download it once, then try the captions tool again.',
+      },
+      {
+        q: 'Something looks broken or crashes',
+        a: 'It is a beta. Update to the newest release on the download page first. If it still happens, tell the maker on the GitHub issues page, with what you clicked just before.',
+      },
+    ],
   }
 ]
 
