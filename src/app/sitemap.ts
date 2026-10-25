@@ -26,7 +26,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/giveaways/tokens`,                      lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/giveaways/whatsapp-agent`,              lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/giveaways/posture-coach`,               lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
+<<<<<<< ours
     { url: `${BASE}/giveaways/linkedin-kit`,               lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
+=======
+    { url: `${BASE}/giveaways/film`,                        lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
+>>>>>>> theirs
     // Free AI Tools setup notes (one page per keyword, from the shared table)
     ...FREE_AI_TOOL_SLUGS.map((slug) => ({ url: `${BASE}/giveaways/${slug}`, lastModified: NOW, changeFrequency: 'monthly' as const, priority: 0.7 })),
     // Lead magnets
