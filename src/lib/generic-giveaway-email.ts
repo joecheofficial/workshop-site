@@ -170,6 +170,7 @@ export const WEBSITE_GENERIC_GIVEAWAYS: Readonly<Record<string, string>> = {
   'linkedin-kit': "Joe's LinkedIn Kit",
   'logo-maker-guide': 'The Logo Maker Guide',
   film: 'Make a Film with Claude',
+  'chat-to-flowchart': 'Chat to Flowchart',
   'posture-coach': 'Posture Coach',
   'ray-dalio-council': 'The Ray Dalio Council',
   'squarespace-escape': 'The Squarespace Escape Kit',
