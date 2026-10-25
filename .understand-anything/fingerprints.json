@@ -1,8 +1,266 @@
 {
   "version": "1.0.0",
-  "gitCommitHash": "46a66ad597ba7573ccbfe799406b8e3fbfe881a4",
-  "generatedAt": "2026-10-24T20:13:38.303Z",
+  "gitCommitHash": "99a0a7ad128c4d8c665e8b3a68e08a71d4f1ef1b",
+  "generatedAt": "2026-10-25T20:09:14.223Z",
   "files": {
+    ".gitignore": {
+      "filePath": ".gitignore",
+      "contentHash": "95acd53752307c7b2bc5815f3f305f1c02f1a9159284c34811210d6843bbc0d7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 41,
+      "hasStructuralAnalysis": false
+    },
+    ".impeccable.md": {
+      "filePath": ".impeccable.md",
+      "contentHash": "be5e60b5e278456f296631fe0b6c87a24c1d333dc61c5979550347d247099e42",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 79,
+      "hasStructuralAnalysis": true
+    },
+    "AGENTS.md": {
+      "filePath": "AGENTS.md",
+      "contentHash": "d8006e3990408089a7f69eccc8dd25dd3bdb89dbc79cd314988ad8eab8271d8a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 52,
+      "hasStructuralAnalysis": true
+    },
+    "atelier.audience-policy.json": {
+      "filePath": "atelier.audience-policy.json",
+      "contentHash": "7bdcffc0ae2d5ac47563c10d2f335e8e256c246716af293ab4471c81143ee634",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 7,
+      "hasStructuralAnalysis": true
+    },
+    "atelier.lock.json": {
+      "filePath": "atelier.lock.json",
+      "contentHash": "38f5ca293e52b17cf3daca003258c67a961a8a0760a7957db2098f2cefa8acf3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 93,
+      "hasStructuralAnalysis": true
+    },
+    "atelier.project.json": {
+      "filePath": "atelier.project.json",
+      "contentHash": "b72b730d439a6716059abe5367fd7324089c9e0ec6640a8d1858b7a605133269",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 35,
+      "hasStructuralAnalysis": true
+    },
+    "boundary-policy.v1.json": {
+      "filePath": "boundary-policy.v1.json",
+      "contentHash": "201e415a429cf86e1eaaf686f0249b5725dba0375c1233549f91b19c2e00b1af",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 47,
+      "hasStructuralAnalysis": true
+    },
+    "CLAUDE.md": {
+      "filePath": "CLAUDE.md",
+      "contentHash": "beca147941d596de436b6ad9880e07baef569f35a513f5dc195c761cac261bf7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 52,
+      "hasStructuralAnalysis": true
+    },
+    "docs/giveaway-followups.md": {
+      "filePath": "docs/giveaway-followups.md",
+      "contentHash": "5b931199766d7875dead73e4d6075741d1ff09d75e7f6cdd4e02c104cee16a12",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 58,
+      "hasStructuralAnalysis": true
+    },
+    "docs/giveaways/BACKLOG.md": {
+      "filePath": "docs/giveaways/BACKLOG.md",
+      "contentHash": "98d29574fcea0427d5764bd8ea29bbb152963b042d3b881dd4edbee921830eea",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 72,
+      "hasStructuralAnalysis": true
+    },
+    "docs/giveaways/grades/tokens-2026-10-02-r1.md": {
+      "filePath": "docs/giveaways/grades/tokens-2026-10-02-r1.md",
+      "contentHash": "8524629ed781174644b3cddd257ca70aba75e0a2dea7489c6153eeac9213e7dd",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 78,
+      "hasStructuralAnalysis": true
+    },
+    "docs/giveaways/grades/tokens-2026-10-02-r2.md": {
+      "filePath": "docs/giveaways/grades/tokens-2026-10-02-r2.md",
+      "contentHash": "6f3bf89d6f6fdcf5d4db0f0760b94886c9fb79b038812bcc20bbf0c7aa03edf7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 68,
+      "hasStructuralAnalysis": true
+    },
+    "docs/giveaways/grades/tokens-2026-10-02-r3.md": {
+      "filePath": "docs/giveaways/grades/tokens-2026-10-02-r3.md",
+      "contentHash": "32fb88c52d0637206238eb89e4b655d24d7aa4a9d3421ef088124825974f1c96",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 61,
+      "hasStructuralAnalysis": true
+    },
+    "docs/giveaways/LESSONS.md": {
+      "filePath": "docs/giveaways/LESSONS.md",
+      "contentHash": "efad06b7321ac258436617dc759fbe00c38a6a219bdf25924e1d768d424accc7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 121,
+      "hasStructuralAnalysis": true
+    },
+    "docs/giveaways/PROCESS.md": {
+      "filePath": "docs/giveaways/PROCESS.md",
+      "contentHash": "49700ee9953b672c0b0ece1f2d76f53aad296d8f343898a3df5bab1a50ab8c85",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 568,
+      "hasStructuralAnalysis": true
+    },
+    "docs/giveaways/USEFULNESS-RUBRIC.md": {
+      "filePath": "docs/giveaways/USEFULNESS-RUBRIC.md",
+      "contentHash": "a5727c7f144b4841997aad6abba7cb7c55c9a4aae063a3bae61909f3180673f0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 49,
+      "hasStructuralAnalysis": true
+    },
+    "docs/STRIPE-TRIAL-MECHANICS.md": {
+      "filePath": "docs/STRIPE-TRIAL-MECHANICS.md",
+      "contentHash": "c00a5d9777b1c81c67ea8c36f36eef8bbe5eda5138a3f082754c0e33fd4f3f3b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 55,
+      "hasStructuralAnalysis": true
+    },
+    "LESSONS.md": {
+      "filePath": "LESSONS.md",
+      "contentHash": "25807778ab4de7f0331708590432409cec5ca15c4900a8f931eabdc34c69d921",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 12,
+      "hasStructuralAnalysis": true
+    },
+    "next-env.d.ts": {
+      "filePath": "next-env.d.ts",
+      "contentHash": "7b550dda9686c16f36a17bf9051d5dbf31e98555b30d114ac49fc49a1e712651",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "./.next/types/routes.d.ts",
+          "specifiers": []
+        }
+      ],
+      "exports": [],
+      "totalLines": 7,
+      "hasStructuralAnalysis": true
+    },
+    "next.config.ts": {
+      "filePath": "next.config.ts",
+      "contentHash": "2fdd01a5548a3f6f57704c9f1ba86732828a7c4014af1e6420960e0272e87082",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next",
+          "specifiers": [
+            "NextConfig"
+          ]
+        },
+        {
+          "source": "path",
+          "specifiers": [
+            "path"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 78,
+      "hasStructuralAnalysis": true
+    },
+    "package-lock.json": {
+      "filePath": "package-lock.json",
+      "contentHash": "da38959eff5a4a65db1de28fee9d38d41d831b03330a18cb328203d7a3690dd1",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 7577,
+      "hasStructuralAnalysis": true
+    },
+    "package.json": {
+      "filePath": "package.json",
+      "contentHash": "7ff7d84f2ef9ec1c57c17a797fe915c96e5e82a9210d1833008c552bcbd54589",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 51,
+      "hasStructuralAnalysis": true
+    },
+    "pdf/client-launch-checklist.html.kg.json": {
+      "filePath": "pdf/client-launch-checklist.html.kg.json",
+      "contentHash": "a6b22dfd14857f96634fda76f9fac95cf31ebead800d438b3b0f000d25bcf023",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": true
+    },
+    "pdf/cross-cli-compatibility-routing-guide.html.kg.json": {
+      "filePath": "pdf/cross-cli-compatibility-routing-guide.html.kg.json",
+      "contentHash": "9d9f1c886ec72e94cf322b2e1adcaf1dfe5fb76145a6929c73ddf2493e173a13",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": true
+    },
     "pdf/render-client-launch-checklist.js": {
       "filePath": "pdf/render-client-launch-checklist.js",
       "contentHash": "6d106faf4888e657122b336a3c87a58244241c9a74a885412d1d3330a5f078d3",
@@ -49,6 +307,26 @@
       "totalLines": 54,
       "hasStructuralAnalysis": true
     },
+    "postcss.config.mjs": {
+      "filePath": "postcss.config.mjs",
+      "contentHash": "311c318dbb665205803cbfba7e69101972204feadc763b58bcdf7f74b374b5a0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 9,
+      "hasStructuralAnalysis": true
+    },
+    "repo-access.v1.json": {
+      "filePath": "repo-access.v1.json",
+      "contentHash": "033c62f7eb01f80c11971d6ce73ff20a49f49ac6537153ded2edc5cfdbc3f7e8",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 10,
+      "hasStructuralAnalysis": true
+    },
     "scripts/abandoned-checkout-control.mjs": {
       "filePath": "scripts/abandoned-checkout-control.mjs",
       "contentHash": "1d74e96ebb1fa1b1680d900b8160b374e67d451fea30dc48f06c57da3d83bf46",
@@ -88,6 +366,47 @@
       ],
       "exports": [],
       "totalLines": 113,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/abandoned-checkout-run.ts": {
+      "filePath": "scripts/abandoned-checkout-run.ts",
+      "contentHash": "466aecd2e98acd0f93b1c18e7f3df658adcea9516b38a75ff43d8f88ac8e86c3",
+      "functions": [
+        {
+          "name": "usage",
+          "params": [],
+          "exported": false,
+          "lineCount": 10
+        },
+        {
+          "name": "parseArgs",
+          "params": [
+            "argv"
+          ],
+          "exported": false,
+          "lineCount": 42
+        },
+        {
+          "name": "main",
+          "params": [],
+          "exported": false,
+          "lineCount": 21
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "../src/lib/abandoned-checkout-followups",
+          "specifiers": [
+            "ABANDONED_CHECKOUT_DAY1_AUTOMATION_KEY",
+            "ABANDONED_CHECKOUT_T12H_AUTOMATION_KEY",
+            "runAbandonedCheckoutFollowups",
+            "CheckoutFollowupAutomationKey"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 90,
       "hasStructuralAnalysis": true
     },
     "scripts/backfill-event-registrations.mjs": {
@@ -672,6 +991,4237 @@
       ],
       "exports": [],
       "totalLines": 83,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/100-ai/page.tsx": {
+      "filePath": "src/app/100-ai/page.tsx",
+      "contentHash": "05581180fd7574f075f53e488b14ae36c26bf3e9a3433e0203e4756709ed04cd",
+      "functions": [
+        {
+          "name": "getCountdown",
+          "params": [],
+          "returnType": "Countdown",
+          "exported": false,
+          "lineCount": 12
+        },
+        {
+          "name": "PassiveIncome100Page",
+          "params": [],
+          "exported": true,
+          "lineCount": 272
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/lib/meta-pixel",
+          "specifiers": [
+            "trackMeta"
+          ]
+        },
+        {
+          "source": "react",
+          "specifiers": [
+            "useEffect",
+            "useState"
+          ]
+        },
+        {
+          "source": "framer-motion",
+          "specifiers": [
+            "motion"
+          ]
+        }
+      ],
+      "exports": [
+        "PassiveIncome100Page"
+      ],
+      "totalLines": 320,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/ai-agent-income/AiAgentIncomeCheckoutForm.tsx": {
+      "filePath": "src/app/ai-agent-income/AiAgentIncomeCheckoutForm.tsx",
+      "contentHash": "ab904a1a36656bc0e125d52fd3776bb286fcd80db8ace64120efc6b4b4ad5251",
+      "functions": [
+        {
+          "name": "AiAgentIncomeCheckoutForm",
+          "params": [
+            "{ compact = false }"
+          ],
+          "exported": true,
+          "lineCount": 68
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/lib/meta-pixel",
+          "specifiers": [
+            "trackMeta"
+          ]
+        },
+        {
+          "source": "react",
+          "specifiers": [
+            "FormEvent"
+          ]
+        },
+        {
+          "source": "react",
+          "specifiers": [
+            "useId",
+            "useState"
+          ]
+        }
+      ],
+      "exports": [
+        "AiAgentIncomeCheckoutForm"
+      ],
+      "totalLines": 80,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/ai-agent-income/page.tsx": {
+      "filePath": "src/app/ai-agent-income/page.tsx",
+      "contentHash": "d81411df046fb1ea6f198dc739b559c4ae6f7d372b765ef3dd4e1909b9905c6d",
+      "functions": [
+        {
+          "name": "AiAgentIncomePage",
+          "params": [],
+          "exported": true,
+          "lineCount": 140
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next",
+          "specifiers": [
+            "Metadata"
+          ]
+        },
+        {
+          "source": "./AiAgentIncomeCheckoutForm",
+          "specifiers": [
+            "AiAgentIncomeCheckoutForm"
+          ]
+        },
+        {
+          "source": "./PromptPackRequestForm",
+          "specifiers": [
+            "PromptPackRequestForm"
+          ]
+        },
+        {
+          "source": "./PurchaseTracker",
+          "specifiers": [
+            "PurchaseTracker"
+          ]
+        }
+      ],
+      "exports": [
+        "metadata",
+        "AiAgentIncomePage"
+      ],
+      "totalLines": 179,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/ai-agent-income/PromptPackRequestForm.tsx": {
+      "filePath": "src/app/ai-agent-income/PromptPackRequestForm.tsx",
+      "contentHash": "e9cba7d4fc7c8a52346d383420389809b3313c5676011d3139e666aa06ab4952",
+      "functions": [
+        {
+          "name": "PromptPackRequestForm",
+          "params": [],
+          "exported": true,
+          "lineCount": 46
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "useId",
+            "useState",
+            "FormEvent"
+          ]
+        }
+      ],
+      "exports": [
+        "PromptPackRequestForm"
+      ],
+      "totalLines": 51,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/ai-agent-income/PurchaseTracker.tsx": {
+      "filePath": "src/app/ai-agent-income/PurchaseTracker.tsx",
+      "contentHash": "7e903867f768d5a9b9aa78242aa54bc49b7e8c93af8eb488963d20f4eed2ed5b",
+      "functions": [
+        {
+          "name": "PurchaseTracker",
+          "params": [],
+          "exported": true,
+          "lineCount": 7
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "useEffect"
+          ]
+        },
+        {
+          "source": "@/lib/meta-pixel",
+          "specifiers": [
+            "fetchAndTrackPurchase"
+          ]
+        }
+      ],
+      "exports": [
+        "PurchaseTracker"
+      ],
+      "totalLines": 13,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/ai-os-architecture/page.tsx": {
+      "filePath": "src/app/ai-os-architecture/page.tsx",
+      "contentHash": "4a5607d151fe502ed000969fbe6f4bf74c4171f228243442e011a88d1bb29b2f",
+      "functions": [
+        {
+          "name": "AIArchitecturePage",
+          "params": [],
+          "exported": true,
+          "lineCount": 9
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "metadata",
+        "AIArchitecturePage"
+      ],
+      "totalLines": 15,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/api/ai-agent-income/checkout/route.ts": {
+      "filePath": "src/app/api/ai-agent-income/checkout/route.ts",
+      "contentHash": "8cdc5a7540405fc5639a533172db1989d212796f55cbc773fa730a8c7ddece36",
+      "functions": [
+        {
+          "name": "requireEnv",
+          "params": [
+            "name"
+          ],
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "findOrCreateCustomer",
+          "params": [
+            "email"
+          ],
+          "exported": false,
+          "lineCount": 14
+        },
+        {
+          "name": "POST",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 65
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/lib/meta-consent",
+          "specifiers": [
+            "buildMetaCheckoutMetadata"
+          ]
+        },
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextResponse"
+          ]
+        },
+        {
+          "source": "@/lib/email-validation",
+          "specifiers": [
+            "isValidEmail",
+            "normaliseEmail"
+          ]
+        },
+        {
+          "source": "@/lib/rate-limit",
+          "specifiers": [
+            "checkRateLimit",
+            "getClientIp"
+          ]
+        },
+        {
+          "source": "../stripe",
+          "specifiers": [
+            "createAiAgentIncomeStripeClient"
+          ]
+        }
+      ],
+      "exports": [
+        "runtime",
+        "POST"
+      ],
+      "totalLines": 100,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/api/ai-agent-income/prompt-pack/request/route.ts": {
+      "filePath": "src/app/api/ai-agent-income/prompt-pack/request/route.ts",
+      "contentHash": "df2de6a56c179a3d974d3b520e5aac6973931aa0e046f411a309e47e99441424",
+      "functions": [
+        {
+          "name": "POST",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 30
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextResponse"
+          ]
+        },
+        {
+          "source": "@/lib/ai-agent-income-prompt-pack",
+          "specifiers": [
+            "emailLookupPattern",
+            "sendPackEmail"
+          ]
+        },
+        {
+          "source": "@/lib/email-validation",
+          "specifiers": [
+            "isValidEmail",
+            "normaliseEmail"
+          ]
+        },
+        {
+          "source": "@/lib/supabase",
+          "specifiers": [
+            "supabase"
+          ]
+        }
+      ],
+      "exports": [
+        "runtime",
+        "POST"
+      ],
+      "totalLines": 42,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/api/ai-agent-income/prompt-pack/route.ts": {
+      "filePath": "src/app/api/ai-agent-income/prompt-pack/route.ts",
+      "contentHash": "ae387a3e58ca30ef6b64fb511eb0113eac53b523a216722566132bf3ee1ab289",
+      "functions": [
+        {
+          "name": "GET",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 23
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:fs/promises",
+          "specifiers": [
+            "readFile"
+          ]
+        },
+        {
+          "source": "node:path",
+          "specifiers": [
+            "path"
+          ]
+        },
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextResponse"
+          ]
+        },
+        {
+          "source": "@/lib/ai-agent-income-prompt-pack",
+          "specifiers": [
+            "emailLookupPattern",
+            "verifyPackToken"
+          ]
+        },
+        {
+          "source": "@/lib/supabase",
+          "specifiers": [
+            "supabase"
+          ]
+        }
+      ],
+      "exports": [
+        "runtime",
+        "GET"
+      ],
+      "totalLines": 35,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/api/ai-agent-income/stripe.ts": {
+      "filePath": "src/app/api/ai-agent-income/stripe.ts",
+      "contentHash": "4d11ad63202d64b2920f67beabfd770dc8235ae30b8368c2a3c2a821af686d12",
+      "functions": [
+        {
+          "name": "createAiAgentIncomeStripeClient",
+          "params": [],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "stripe",
+          "specifiers": [
+            "Stripe"
+          ]
+        }
+      ],
+      "exports": [
+        "AI_AGENT_INCOME_STRIPE_API_VERSION",
+        "createAiAgentIncomeStripeClient"
+      ],
+      "totalLines": 13,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/api/ai-agent-income/webhook/route.ts": {
+      "filePath": "src/app/api/ai-agent-income/webhook/route.ts",
+      "contentHash": "c169aab63beb22992b0ee42824eb10c24fa2a59bb170e01dc424c13135ef0125",
+      "functions": [
+        {
+          "name": "getWebhookSecret",
+          "params": [],
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "customerIdFrom",
+          "params": [
+            "value"
+          ],
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "subscriptionPeriodEnd",
+          "params": [
+            "sub"
+          ],
+          "returnType": "string | null",
+          "exported": false,
+          "lineCount": 13
+        },
+        {
+          "name": "isPlaybook",
+          "params": [
+            "metadata"
+          ],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "emailForCustomer",
+          "params": [
+            "customerId",
+            "fallback"
+          ],
+          "exported": false,
+          "lineCount": 13
+        },
+        {
+          "name": "upsertSubscription",
+          "params": [
+            "sub",
+            "fallbackEmail"
+          ],
+          "exported": false,
+          "lineCount": 23
+        },
+        {
+          "name": "ensureTelegramLink",
+          "params": [
+            "email",
+            "stripeCustomerId"
+          ],
+          "exported": false,
+          "lineCount": 13
+        },
+        {
+          "name": "claimWebhookEvent",
+          "params": [
+            "event"
+          ],
+          "exported": false,
+          "lineCount": 12
+        },
+        {
+          "name": "markWebhookEventProcessed",
+          "params": [
+            "event"
+          ],
+          "exported": false,
+          "lineCount": 13
+        },
+        {
+          "name": "markWebhookEventFailed",
+          "params": [
+            "event",
+            "message"
+          ],
+          "exported": false,
+          "lineCount": 10
+        },
+        {
+          "name": "POST",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 87
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextResponse"
+          ]
+        },
+        {
+          "source": "stripe",
+          "specifiers": [
+            "Stripe"
+          ]
+        },
+        {
+          "source": "@/lib/supabase",
+          "specifiers": [
+            "supabase"
+          ]
+        },
+        {
+          "source": "@/lib/ai-agent-income-prompt-pack",
+          "specifiers": [
+            "sendPackEmail"
+          ]
+        },
+        {
+          "source": "../stripe",
+          "specifiers": [
+            "createAiAgentIncomeStripeClient"
+          ]
+        }
+      ],
+      "exports": [
+        "runtime",
+        "maxDuration",
+        "POST"
+      ],
+      "totalLines": 223,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/api/consent/region/route.ts": {
+      "filePath": "src/app/api/consent/region/route.ts",
+      "contentHash": "0085149f61fea6b1744c2c1769cd7617bc5522d469ad4c9174115da600c92347",
+      "functions": [
+        {
+          "name": "GET",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextResponse"
+          ]
+        },
+        {
+          "source": "@/lib/meta-consent",
+          "specifiers": [
+            "CONSENT_REQUIRED_COOKIE",
+            "isConsentRequiredCountry",
+            "isLocalHost",
+            "serializeCookie"
+          ]
+        }
+      ],
+      "exports": [
+        "runtime",
+        "dynamic",
+        "GET"
+      ],
+      "totalLines": 18,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/api/events/[slug]/calendar/route.ts": {
+      "filePath": "src/app/api/events/[slug]/calendar/route.ts",
+      "contentHash": "7e1182f3265b450dd1cf2744c69167ca8257496000e66f4d982b613e15d5de52",
+      "functions": [
+        {
+          "name": "GET",
+          "params": [
+            "_request",
+            "{ params }"
+          ],
+          "exported": true,
+          "lineCount": 34
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextRequest"
+          ]
+        },
+        {
+          "source": "@/lib/events",
+          "specifiers": [
+            "getEventBySlug"
+          ]
+        },
+        {
+          "source": "@/lib/calendar",
+          "specifiers": [
+            "buildIcalString"
+          ]
+        }
+      ],
+      "exports": [
+        "runtime",
+        "GET"
+      ],
+      "totalLines": 41,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/api/events/abandoned-checkout-followups-t12h/route.ts": {
+      "filePath": "src/app/api/events/abandoned-checkout-followups-t12h/route.ts",
+      "contentHash": "ef2e4ef16cb4d28ee55247ad718087750bd32295e4e01d3a420dee5ec43a3885",
+      "functions": [
+        {
+          "name": "isAuthorized",
+          "params": [
+            "request"
+          ],
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "acquireEventLock",
+          "params": [
+            "eventSlug",
+            "mode",
+            "now"
+          ],
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "GET",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 45
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextResponse",
+            "NextRequest"
+          ]
+        },
+        {
+          "source": "crypto",
+          "specifiers": [
+            "timingSafeEqual"
+          ]
+        },
+        {
+          "source": "@/lib/supabase",
+          "specifiers": [
+            "supabase"
+          ]
+        },
+        {
+          "source": "@/lib/abandoned-checkout-followups",
+          "specifiers": [
+            "ABANDONED_CHECKOUT_T12H_AUTOMATION_KEY",
+            "getAbandonedCheckoutEligibleEvents",
+            "getAbandonedCheckoutAutomationControl",
+            "getCheckoutFollowupDefinition",
+            "runAbandonedCheckoutFollowups"
+          ]
+        }
+      ],
+      "exports": [
+        "runtime",
+        "GET"
+      ],
+      "totalLines": 75,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/api/events/abandoned-checkout-followups/route.ts": {
+      "filePath": "src/app/api/events/abandoned-checkout-followups/route.ts",
+      "contentHash": "c5d065c82f420ce786bf7b5602d412ff580669f4666d6b2c92f5f19c25a3144b",
+      "functions": [
+        {
+          "name": "isAuthorized",
+          "params": [
+            "request"
+          ],
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "acquireEventLock",
+          "params": [
+            "automationKey",
+            "eventSlug",
+            "mode",
+            "now"
+          ],
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "GET",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 45
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextResponse",
+            "NextRequest"
+          ]
+        },
+        {
+          "source": "crypto",
+          "specifiers": [
+            "timingSafeEqual"
+          ]
+        },
+        {
+          "source": "@/lib/supabase",
+          "specifiers": [
+            "supabase"
+          ]
+        },
+        {
+          "source": "@/lib/abandoned-checkout-followups",
+          "specifiers": [
+            "ABANDONED_CHECKOUT_DAY1_AUTOMATION_KEY",
+            "getAbandonedCheckoutEligibleEvents",
+            "runAbandonedCheckoutFollowups",
+            "getAbandonedCheckoutAutomationControl",
+            "getCheckoutFollowupDefinition"
+          ]
+        }
+      ],
+      "exports": [
+        "runtime",
+        "GET"
+      ],
+      "totalLines": 75,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/api/events/cancel/route.ts": {
+      "filePath": "src/app/api/events/cancel/route.ts",
+      "contentHash": "2d13ded303161eef2d4e83d2e4122b631ed778bdf8f5b3f3107a68a0474840d3",
+      "functions": [
+        {
+          "name": "escapeHtml",
+          "params": [
+            "value"
+          ],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "htmlPage",
+          "params": [
+            "title",
+            "message",
+            "status",
+            "extraHtml"
+          ],
+          "exported": false,
+          "lineCount": 28
+        },
+        {
+          "name": "notifyWaitlist",
+          "params": [
+            "eventSlug",
+            "cancelToken"
+          ],
+          "exported": false,
+          "lineCount": 25
+        },
+        {
+          "name": "GET",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "POST",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 32
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextRequest"
+          ]
+        },
+        {
+          "source": "@/lib/event-registration-db",
+          "specifiers": [
+            "cancelRegistration",
+            "getActiveWaitlist",
+            "hasOpenSpots"
+          ]
+        },
+        {
+          "source": "@/lib/events",
+          "specifiers": [
+            "getEventBySlug"
+          ]
+        },
+        {
+          "source": "@/lib/event-confirmation-email",
+          "specifiers": [
+            "sendWaitlistSpotNotificationEmail"
+          ]
+        }
+      ],
+      "exports": [
+        "runtime",
+        "GET",
+        "POST"
+      ],
+      "totalLines": 119,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/api/events/checkout-session/route.ts": {
+      "filePath": "src/app/api/events/checkout-session/route.ts",
+      "contentHash": "be2e2320e4193680c95414e20753238b023c23c4f0bed980ff7fe961470d9faf",
+      "functions": [
+        {
+          "name": "getBaseUrl",
+          "params": [
+            "request"
+          ],
+          "exported": false,
+          "lineCount": 9
+        },
+        {
+          "name": "POST",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 443
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/lib/meta-consent",
+          "specifiers": [
+            "buildMetaCheckoutMetadata"
+          ]
+        },
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextResponse"
+          ]
+        },
+        {
+          "source": "@/lib/registration-profile-token",
+          "specifiers": [
+            "createRegistrationProfileToken"
+          ]
+        },
+        {
+          "source": "@/lib/events",
+          "specifiers": [
+            "getEventBySlug"
+          ]
+        },
+        {
+          "source": "@/lib/event-confirmation-email",
+          "specifiers": [
+            "sendAiContentCreationSetupEmail",
+            "sendAskAnAiExpertWelcomeEmail",
+            "sendEventConfirmationEmail",
+            "sendRegistrationBackupAlert"
+          ]
+        },
+        {
+          "source": "@/lib/with-timeout",
+          "specifiers": [
+            "withTimeout"
+          ]
+        },
+        {
+          "source": "@/lib/legacy-event-schedule",
+          "specifiers": [
+            "inviteAttendeeBestEffort",
+            "syncLegacyRegistration"
+          ]
+        },
+        {
+          "source": "@/lib/stripe",
+          "specifiers": [
+            "createStripeClient",
+            "getStripePublishableKey"
+          ]
+        },
+        {
+          "source": "@/lib/event-registration-db",
+          "specifiers": [
+            "saveRegistration",
+            "saveRegistrationIntake"
+          ]
+        },
+        {
+          "source": "@/lib/event-capacity",
+          "specifiers": [
+            "attachCheckoutToEventSeat",
+            "claimEventSeat",
+            "confirmEventSeat",
+            "releaseEventSeat",
+            "settleAttachedCheckout"
+          ]
+        },
+        {
+          "source": "@/lib/event-registration-flow",
+          "specifiers": [
+            "UNTAGGED_ACQUISITION_REF"
+          ]
+        },
+        {
+          "source": "@/lib/event-intake",
+          "specifiers": [
+            "normalizeWhatsappNumber",
+            "validateIntakeFields"
+          ]
+        },
+        {
+          "source": "@/lib/url-utils",
+          "specifiers": [
+            "toOrigin"
+          ]
+        },
+        {
+          "source": "@/lib/rate-limit",
+          "specifiers": [
+            "checkRateLimit",
+            "getClientIp"
+          ]
+        },
+        {
+          "source": "@/lib/insight-to-fix",
+          "specifiers": [
+            "trackInsightEvent"
+          ]
+        },
+        {
+          "source": "@/lib/event-checkout",
+          "specifiers": [
+            "buildEventCheckoutSessionParams",
+            "resolveCheckoutMode",
+            "resolveEventCheckoutAmount"
+          ]
+        },
+        {
+          "source": "@/lib/stripe-amount",
+          "specifiers": [
+            "toStripeUnitAmount"
+          ]
+        },
+        {
+          "source": "@/lib/email-validation",
+          "specifiers": [
+            "isValidEmail"
+          ]
+        },
+        {
+          "source": "@/lib/event-status",
+          "specifiers": [
+            "isEventEnded",
+            "isEventRegistrationClosed"
+          ]
+        }
+      ],
+      "exports": [
+        "runtime",
+        "POST"
+      ],
+      "totalLines": 491,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/api/events/finalize-registration/route.ts": {
+      "filePath": "src/app/api/events/finalize-registration/route.ts",
+      "contentHash": "db1865f12db23771a8be5777891a2ffb6fd52f1e1fb27bfe1e8993ef5f77be3f",
+      "functions": [
+        {
+          "name": "POST",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 82
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextResponse"
+          ]
+        },
+        {
+          "source": "@/lib/events",
+          "specifiers": [
+            "getEventBySlug"
+          ]
+        },
+        {
+          "source": "@/lib/legacy-event-schedule",
+          "specifiers": [
+            "finalizeLegacyCheckoutSession"
+          ]
+        },
+        {
+          "source": "@/lib/insight-to-fix",
+          "specifiers": [
+            "trackInsightEvent"
+          ]
+        }
+      ],
+      "exports": [
+        "runtime",
+        "POST"
+      ],
+      "totalLines": 90,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/api/events/followups/route.ts": {
+      "filePath": "src/app/api/events/followups/route.ts",
+      "contentHash": "ffed94587bdb6434ebc77ce588e600f94ba85a16249c247961e5b31c185bcea3",
+      "functions": [
+        {
+          "name": "isAuthorized",
+          "params": [
+            "request"
+          ],
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "acquireEventWindowLock",
+          "params": [
+            "lockKey"
+          ],
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "GET",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 52
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextResponse",
+            "NextRequest"
+          ]
+        },
+        {
+          "source": "crypto",
+          "specifiers": [
+            "timingSafeEqual"
+          ]
+        },
+        {
+          "source": "@/lib/events",
+          "specifiers": [
+            "getEventBySlug",
+            "getLiveEvents"
+          ]
+        },
+        {
+          "source": "@/lib/event-registration-db",
+          "specifiers": [
+            "getConfirmedRegistrationsForEvent"
+          ]
+        },
+        {
+          "source": "@/lib/email-suppressions",
+          "specifiers": [
+            "isSuppressed"
+          ]
+        },
+        {
+          "source": "@/lib/event-followup",
+          "specifiers": [
+            "DEFAULT_FOLLOWUP_LEAD_HOURS",
+            "runEventFollowups",
+            "sendEventFollowupEmail"
+          ]
+        },
+        {
+          "source": "@/lib/supabase",
+          "specifiers": [
+            "supabase"
+          ]
+        }
+      ],
+      "exports": [
+        "runtime",
+        "GET"
+      ],
+      "totalLines": 81,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/api/events/location-reminders/route.ts": {
+      "filePath": "src/app/api/events/location-reminders/route.ts",
+      "contentHash": "242b47319aad2f4abe01ee91c958dfc3e5c405780825e0b25daac948628e9ed8",
+      "functions": [
+        {
+          "name": "isAuthorized",
+          "params": [
+            "request"
+          ],
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "acquireEventWindowLock",
+          "params": [
+            "lockKey"
+          ],
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "GET",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 53
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextResponse",
+            "NextRequest"
+          ]
+        },
+        {
+          "source": "crypto",
+          "specifiers": [
+            "timingSafeEqual"
+          ]
+        },
+        {
+          "source": "@/lib/events",
+          "specifiers": [
+            "getEventBySlug",
+            "getLiveEvents"
+          ]
+        },
+        {
+          "source": "@/lib/event-confirmation-email",
+          "specifiers": [
+            "sendEventLocationReminderEmail"
+          ]
+        },
+        {
+          "source": "@/lib/legacy-event-schedule",
+          "specifiers": [
+            "listLegacyPaidAttendeesForEvent"
+          ]
+        },
+        {
+          "source": "@/lib/event-registration-db",
+          "specifiers": [
+            "getConfirmedRegistrationsForEvent"
+          ]
+        },
+        {
+          "source": "@/lib/location-reminder",
+          "specifiers": [
+            "runLocationReminders"
+          ]
+        },
+        {
+          "source": "@/lib/event-email-ledger",
+          "specifiers": [
+            "createSupabaseEventEmailLedger"
+          ]
+        },
+        {
+          "source": "@/lib/supabase",
+          "specifiers": [
+            "supabase"
+          ]
+        }
+      ],
+      "exports": [
+        "runtime",
+        "GET"
+      ],
+      "totalLines": 80,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/api/events/reconcile-registrations/route.ts": {
+      "filePath": "src/app/api/events/reconcile-registrations/route.ts",
+      "contentHash": "94512f88cb0ec410541858f83116297c9dd35203043e5f4b7cda918ea2fa9990",
+      "functions": [
+        {
+          "name": "isAuthorized",
+          "params": [
+            "request"
+          ],
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "isLikelyTest",
+          "params": [
+            "name",
+            "email"
+          ],
+          "exported": false,
+          "lineCount": 13
+        },
+        {
+          "name": "GET",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 101
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextResponse",
+            "NextRequest"
+          ]
+        },
+        {
+          "source": "crypto",
+          "specifiers": [
+            "randomUUID",
+            "timingSafeEqual"
+          ]
+        },
+        {
+          "source": "stripe",
+          "specifiers": [
+            "Stripe"
+          ]
+        },
+        {
+          "source": "@/lib/supabase",
+          "specifiers": [
+            "supabase"
+          ]
+        },
+        {
+          "source": "@/lib/event-tokens",
+          "specifiers": [
+            "generateToken"
+          ]
+        },
+        {
+          "source": "@/lib/stripe",
+          "specifiers": [
+            "getStripeSecretKey"
+          ]
+        }
+      ],
+      "exports": [
+        "runtime",
+        "maxDuration",
+        "GET"
+      ],
+      "totalLines": 135,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/api/events/registration-profile/route.ts": {
+      "filePath": "src/app/api/events/registration-profile/route.ts",
+      "contentHash": "1229802c8d62cfe636ffc13fa3d51cc1e287b809fa6b9e52582ce2c8e7db39eb",
+      "functions": [
+        {
+          "name": "POST",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 45
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextResponse"
+          ]
+        },
+        {
+          "source": "@/lib/events",
+          "specifiers": [
+            "getEventBySlug"
+          ]
+        },
+        {
+          "source": "@/lib/email-validation",
+          "specifiers": [
+            "isValidEmail"
+          ]
+        },
+        {
+          "source": "@/lib/event-intake",
+          "specifiers": [
+            "isValidAiLevel",
+            "validateBusinessContext"
+          ]
+        },
+        {
+          "source": "@/lib/registration-profile-token",
+          "specifiers": [
+            "verifyRegistrationProfileToken"
+          ]
+        },
+        {
+          "source": "@/lib/event-registration-db",
+          "specifiers": [
+            "saveRegistrationProfile"
+          ]
+        }
+      ],
+      "exports": [
+        "runtime",
+        "POST"
+      ],
+      "totalLines": 55,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/api/events/session-reminders/route.ts": {
+      "filePath": "src/app/api/events/session-reminders/route.ts",
+      "contentHash": "cb1e179345cdf0753ae588fd0b3e656d2e18c48a4c9e6afa026b523c645b5402",
+      "functions": [
+        {
+          "name": "isAuthorized",
+          "params": [
+            "request"
+          ],
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "acquireEventWindowLock",
+          "params": [
+            "lockKey"
+          ],
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "GET",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 43
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextResponse",
+            "NextRequest"
+          ]
+        },
+        {
+          "source": "crypto",
+          "specifiers": [
+            "timingSafeEqual"
+          ]
+        },
+        {
+          "source": "@/lib/events",
+          "specifiers": [
+            "getEventBySlug",
+            "getLiveEvents"
+          ]
+        },
+        {
+          "source": "@/lib/event-registration-db",
+          "specifiers": [
+            "getConfirmedRegistrationsForEvent"
+          ]
+        },
+        {
+          "source": "@/lib/event-confirmation-email",
+          "specifiers": [
+            "sendSessionReminderEmail"
+          ]
+        },
+        {
+          "source": "@/lib/session-reminder",
+          "specifiers": [
+            "buildSessionReminderLockKey",
+            "runSessionReminders"
+          ]
+        },
+        {
+          "source": "@/lib/supabase",
+          "specifiers": [
+            "supabase"
+          ]
+        }
+      ],
+      "exports": [
+        "runtime",
+        "GET"
+      ],
+      "totalLines": 71,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/api/events/validate-promo/route.ts": {
+      "filePath": "src/app/api/events/validate-promo/route.ts",
+      "contentHash": "f00a9b340d750be7d0a2630e3a07605805aa45aa079296ed5e4cc2d150a8f3f8",
+      "functions": [
+        {
+          "name": "POST",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 46
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextResponse"
+          ]
+        },
+        {
+          "source": "@/lib/events",
+          "specifiers": [
+            "getEventBySlug",
+            "resolvePromoCode"
+          ]
+        },
+        {
+          "source": "@/lib/rate-limit",
+          "specifiers": [
+            "checkRateLimit",
+            "getClientIp"
+          ]
+        }
+      ],
+      "exports": [
+        "POST"
+      ],
+      "totalLines": 51,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/api/events/waitlist/join/route.ts": {
+      "filePath": "src/app/api/events/waitlist/join/route.ts",
+      "contentHash": "93b5da45ef1961d6db7d055d2002da6185afba894ef1d8a2fd282663bb6a148b",
+      "functions": [
+        {
+          "name": "POST",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 62
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextResponse",
+            "NextRequest"
+          ]
+        },
+        {
+          "source": "@/lib/event-registration-db",
+          "specifiers": [
+            "addToWaitlist",
+            "isAlreadyOnWaitlist",
+            "isAlreadyRegistered"
+          ]
+        },
+        {
+          "source": "@/lib/events",
+          "specifiers": [
+            "getEventBySlug"
+          ]
+        },
+        {
+          "source": "@/lib/event-confirmation-email",
+          "specifiers": [
+            "sendWaitlistConfirmationEmail"
+          ]
+        },
+        {
+          "source": "@/lib/rate-limit",
+          "specifiers": [
+            "checkRateLimit",
+            "getClientIp"
+          ]
+        },
+        {
+          "source": "@/lib/email-validation",
+          "specifiers": [
+            "isValidEmail"
+          ]
+        },
+        {
+          "source": "@/lib/event-status",
+          "specifiers": [
+            "isEventEnded"
+          ]
+        }
+      ],
+      "exports": [
+        "runtime",
+        "POST"
+      ],
+      "totalLines": 73,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/api/events/waitlist/notify/route.ts": {
+      "filePath": "src/app/api/events/waitlist/notify/route.ts",
+      "contentHash": "951d91295ec172111dddf781d377e96c45ce56910cd788b991d219c778af8c92",
+      "functions": [
+        {
+          "name": "isAuthorized",
+          "params": [
+            "request"
+          ],
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "buildIdempotencyKey",
+          "params": [
+            "slug",
+            "email",
+            "windowLabel"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "GET",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 94
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextResponse",
+            "NextRequest"
+          ]
+        },
+        {
+          "source": "crypto",
+          "specifiers": [
+            "timingSafeEqual"
+          ]
+        },
+        {
+          "source": "@/lib/events",
+          "specifiers": [
+            "getLiveEvents"
+          ]
+        },
+        {
+          "source": "@/lib/event-registration-db",
+          "specifiers": [
+            "getActiveWaitlist",
+            "hasOpenSpots"
+          ]
+        },
+        {
+          "source": "@/lib/event-confirmation-email",
+          "specifiers": [
+            "sendWaitlistSpotNotificationEmail"
+          ]
+        },
+        {
+          "source": "@/lib/waitlist-notify-windows",
+          "specifiers": [
+            "resolveNotifyWindow"
+          ]
+        },
+        {
+          "source": "@/lib/supabase",
+          "specifiers": [
+            "supabase"
+          ]
+        }
+      ],
+      "exports": [
+        "runtime",
+        "GET"
+      ],
+      "totalLines": 120,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/api/events/waitlist/remove/route.ts": {
+      "filePath": "src/app/api/events/waitlist/remove/route.ts",
+      "contentHash": "9fb6feb25e73e8c5bbb9b240d6a813db3911e1e8c7fed661bd1e9ae07486af4c",
+      "functions": [
+        {
+          "name": "htmlPage",
+          "params": [
+            "title",
+            "message",
+            "status"
+          ],
+          "exported": false,
+          "lineCount": 26
+        },
+        {
+          "name": "GET",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 18
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextRequest"
+          ]
+        },
+        {
+          "source": "@/lib/event-registration-db",
+          "specifiers": [
+            "removeFromWaitlist"
+          ]
+        }
+      ],
+      "exports": [
+        "runtime",
+        "GET"
+      ],
+      "totalLines": 51,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/api/illy-auth/route.ts": {
+      "filePath": "src/app/api/illy-auth/route.ts",
+      "contentHash": "8d67a6a28ac11f409129588d36ce02f89d2fd3549e739cd9cd4fa5fddf183b3d",
+      "functions": [
+        {
+          "name": "sha256",
+          "params": [
+            "value"
+          ],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "matchesPassword",
+          "params": [
+            "password",
+            "expected"
+          ],
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "grantAccess",
+          "params": [
+            "request",
+            "password"
+          ],
+          "exported": false,
+          "lineCount": 11
+        },
+        {
+          "name": "POST",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "GET",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 10
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:crypto",
+          "specifiers": [
+            "createHash",
+            "timingSafeEqual"
+          ]
+        },
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextResponse"
+          ]
+        }
+      ],
+      "exports": [
+        "POST",
+        "GET"
+      ],
+      "totalLines": 51,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/api/jill-auth/route.ts": {
+      "filePath": "src/app/api/jill-auth/route.ts",
+      "contentHash": "7833f6d7582e557c65ca668587f43bd53d6259dcddc2572421fcf423d7f6d94c",
+      "functions": [
+        {
+          "name": "sha256",
+          "params": [
+            "value"
+          ],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "matchesPassword",
+          "params": [
+            "password",
+            "expected"
+          ],
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "grantAccess",
+          "params": [
+            "request",
+            "password"
+          ],
+          "exported": false,
+          "lineCount": 11
+        },
+        {
+          "name": "POST",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "GET",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 10
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:crypto",
+          "specifiers": [
+            "createHash",
+            "timingSafeEqual"
+          ]
+        },
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextResponse"
+          ]
+        }
+      ],
+      "exports": [
+        "POST",
+        "GET"
+      ],
+      "totalLines": 51,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/api/lead-magnet/route.ts": {
+      "filePath": "src/app/api/lead-magnet/route.ts",
+      "contentHash": "e779ab1e6fb034f31c71bdfa0b43796135d6291c55289aad8f9e2ee9748a7b29",
+      "functions": [
+        {
+          "name": "sendViaResend",
+          "params": [
+            "email",
+            "source",
+            "idempotencyKey",
+            "generic"
+          ],
+          "exported": false,
+          "lineCount": 608
+        },
+        {
+          "name": "ingestIntoCrm",
+          "params": [
+            "email",
+            "source"
+          ],
+          "exported": false,
+          "lineCount": 16
+        },
+        {
+          "name": "POST",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 176
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextResponse"
+          ]
+        },
+        {
+          "source": "@supabase/supabase-js",
+          "specifiers": [
+            "createClient"
+          ]
+        },
+        {
+          "source": "@/lib/rate-limit",
+          "specifiers": [
+            "checkRateLimit",
+            "getClientIp"
+          ]
+        },
+        {
+          "source": "@/lib/insight-to-fix",
+          "specifiers": [
+            "trackInsightEvent"
+          ]
+        },
+        {
+          "source": "@/lib/list-unsubscribe",
+          "specifiers": [
+            "buildUnsubscribeHeaders",
+            "buildUnsubscribeUrl"
+          ]
+        },
+        {
+          "source": "@/lib/email-suppressions",
+          "specifiers": [
+            "isSuppressed"
+          ]
+        },
+        {
+          "source": "@/lib/lead-magnets",
+          "specifiers": [
+            "buildWelcomeEmail",
+            "getLeadMagnet",
+            "isDeliverableLeadMagnetSource",
+            "UnknownLeadMagnetSourceError"
+          ]
+        },
+        {
+          "source": "@/lib/utm",
+          "specifiers": [
+            "withUtm"
+          ]
+        },
+        {
+          "source": "@/lib/html-to-text",
+          "specifiers": [
+            "htmlToText"
+          ]
+        },
+        {
+          "source": "@/lib/speak-human-email",
+          "specifiers": [
+            "buildSpeakHumanEmail"
+          ]
+        },
+        {
+          "source": "@/lib/free-ai-tool-email",
+          "specifiers": [
+            "buildFreeAiToolEmail"
+          ]
+        },
+        {
+          "source": "@/lib/free-ai-tools-hub-email",
+          "specifiers": [
+            "buildFreeAiToolsHubEmail"
+          ]
+        },
+        {
+          "source": "@/lib/whatsapp-agent-email",
+          "specifiers": [
+            "buildWhatsAppAgentEmail"
+          ]
+        },
+        {
+          "source": "@/lib/free-ai-tools",
+          "specifiers": [
+            "isFreeAiToolSource"
+          ]
+        },
+        {
+          "source": "@/lib/quiz-giveaway-email",
+          "specifiers": [
+            "buildQuizGiveawayEmail",
+            "isQuizGiveawaySource"
+          ]
+        },
+        {
+          "source": "@/lib/giveaway-followups",
+          "specifiers": [
+            "withDayZeroPs"
+          ]
+        },
+        {
+          "source": "@/lib/email-logo",
+          "specifiers": [
+            "withEmailLogo"
+          ]
+        },
+        {
+          "source": "@/lib/generic-giveaway-email",
+          "specifiers": [
+            "buildGenericGiveawayEmail",
+            "buildSalesKeywordEmail",
+            "isValidManychatSecret",
+            "salesKeywordPage",
+            "sanitizeGiveawayName",
+            "validateGiveawayLink",
+            "websiteGiveawayEmail"
+          ]
+        }
+      ],
+      "exports": [
+        "POST"
+      ],
+      "totalLines": 853,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/api/lead-magnets/claudemd/route 2.ts": {
+      "filePath": "src/app/api/lead-magnets/claudemd/route 2.ts",
+      "contentHash": "b7d497f7e0a3edda1f84d05c3bd2f6d9f3d9bbef0e516a13ef860f10f7239a68",
+      "functions": [
+        {
+          "name": "sendViaResend",
+          "params": [
+            "firstName",
+            "email"
+          ],
+          "exported": false,
+          "lineCount": 60
+        },
+        {
+          "name": "POST",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 44
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextResponse"
+          ]
+        },
+        {
+          "source": "@supabase/supabase-js",
+          "specifiers": [
+            "createClient"
+          ]
+        }
+      ],
+      "exports": [
+        "POST"
+      ],
+      "totalLines": 231,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/api/lead-magnets/claudemd/route.ts": {
+      "filePath": "src/app/api/lead-magnets/claudemd/route.ts",
+      "contentHash": "6db63e4becd5636830e984b5e82739caf1172e97d968104f62d9966864c18ffd",
+      "functions": [
+        {
+          "name": "sendViaResend",
+          "params": [
+            "firstName",
+            "email",
+            "idempotencyKey"
+          ],
+          "exported": false,
+          "lineCount": 69
+        },
+        {
+          "name": "POST",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 60
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextResponse"
+          ]
+        },
+        {
+          "source": "@supabase/supabase-js",
+          "specifiers": [
+            "createClient"
+          ]
+        },
+        {
+          "source": "@/lib/rate-limit",
+          "specifiers": [
+            "checkRateLimit",
+            "getClientIp"
+          ]
+        },
+        {
+          "source": "@/lib/list-unsubscribe",
+          "specifiers": [
+            "buildUnsubscribeHeaders",
+            "buildUnsubscribeUrl"
+          ]
+        },
+        {
+          "source": "@/lib/email-suppressions",
+          "specifiers": [
+            "isSuppressed"
+          ]
+        },
+        {
+          "source": "@/lib/utm",
+          "specifiers": [
+            "withUtm"
+          ]
+        }
+      ],
+      "exports": [
+        "POST"
+      ],
+      "totalLines": 262,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/api/lead-magnets/passive-income-100/route.ts": {
+      "filePath": "src/app/api/lead-magnets/passive-income-100/route.ts",
+      "contentHash": "46f699e83a37e6add3867d3630301b07e25d7941d8ee57adcb364ae4c77d2907",
+      "functions": [
+        {
+          "name": "sendViaResend",
+          "params": [
+            "firstName",
+            "email",
+            "idempotencyKey"
+          ],
+          "exported": false,
+          "lineCount": 67
+        },
+        {
+          "name": "POST",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 65
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextResponse"
+          ]
+        },
+        {
+          "source": "@supabase/supabase-js",
+          "specifiers": [
+            "createClient"
+          ]
+        },
+        {
+          "source": "@/lib/rate-limit",
+          "specifiers": [
+            "checkRateLimit",
+            "getClientIp"
+          ]
+        },
+        {
+          "source": "@/lib/list-unsubscribe",
+          "specifiers": [
+            "buildUnsubscribeHeaders",
+            "buildUnsubscribeUrl"
+          ]
+        },
+        {
+          "source": "@/lib/email-suppressions",
+          "specifiers": [
+            "isSuppressed"
+          ]
+        }
+      ],
+      "exports": [
+        "POST"
+      ],
+      "totalLines": 161,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/api/meta/purchase/route.ts": {
+      "filePath": "src/app/api/meta/purchase/route.ts",
+      "contentHash": "f9389454dd9f4bdf810e4862d74c6040b10af235648a4a5f075d30fdc9464587",
+      "functions": [
+        {
+          "name": "GET",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 20
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextResponse"
+          ]
+        },
+        {
+          "source": "@/lib/rate-limit",
+          "specifiers": [
+            "checkRateLimit",
+            "getClientIp"
+          ]
+        },
+        {
+          "source": "@/lib/stripe",
+          "specifiers": [
+            "createStripeClient"
+          ]
+        },
+        {
+          "source": "@/app/api/ai-agent-income/stripe",
+          "specifiers": [
+            "createAiAgentIncomeStripeClient"
+          ]
+        },
+        {
+          "source": "@/lib/meta-consent",
+          "specifiers": [
+            "stripeAmountToMajor"
+          ]
+        }
+      ],
+      "exports": [
+        "runtime",
+        "dynamic",
+        "GET"
+      ],
+      "totalLines": 30,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/api/stripe/webhook/route.ts": {
+      "filePath": "src/app/api/stripe/webhook/route.ts",
+      "contentHash": "d6bc4dde108d1db8d6ef8571ef63fb6a9104063b769dbf52137ffff993037cf0",
+      "functions": [
+        {
+          "name": "POST",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 69
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextResponse"
+          ]
+        },
+        {
+          "source": "stripe",
+          "specifiers": [
+            "Stripe"
+          ]
+        },
+        {
+          "source": "@/lib/events",
+          "specifiers": [
+            "getEventBySlug"
+          ]
+        },
+        {
+          "source": "@/lib/legacy-event-schedule",
+          "specifiers": [
+            "finalizeLegacyCheckoutSession"
+          ]
+        },
+        {
+          "source": "@/lib/stripe",
+          "specifiers": [
+            "createStripeClient"
+          ]
+        },
+        {
+          "source": "@/lib/insight-to-fix",
+          "specifiers": [
+            "trackInsightEvent"
+          ]
+        },
+        {
+          "source": "@/lib/event-capacity",
+          "specifiers": [
+            "releaseEventSeatByCheckout"
+          ]
+        }
+      ],
+      "exports": [
+        "runtime",
+        "maxDuration",
+        "POST"
+      ],
+      "totalLines": 96,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/api/subscribe/route.ts": {
+      "filePath": "src/app/api/subscribe/route.ts",
+      "contentHash": "30dce8a2bc55bff8cd125c259c842574dfdbe3e0868d05c7962de86a4badf945",
+      "functions": [
+        {
+          "name": "supabase",
+          "params": [],
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "POST",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 23
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextResponse"
+          ]
+        },
+        {
+          "source": "@supabase/supabase-js",
+          "specifiers": [
+            "createClient"
+          ]
+        },
+        {
+          "source": "@/lib/subscribe",
+          "specifiers": [
+            "handleSubscribe",
+            "SubscribeError",
+            "SubscribeDeps"
+          ]
+        },
+        {
+          "source": "@/lib/resend-sender",
+          "specifiers": [
+            "sendViaResend"
+          ]
+        },
+        {
+          "source": "@/lib/email-suppressions",
+          "specifiers": [
+            "isSuppressed"
+          ]
+        }
+      ],
+      "exports": [
+        "POST"
+      ],
+      "totalLines": 76,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/api/unsubscribe/route.ts": {
+      "filePath": "src/app/api/unsubscribe/route.ts",
+      "contentHash": "7a89da72958dfb888e0661b9b7ab799b0f552fe81a8b51aac7840e99e046ca7b",
+      "functions": [
+        {
+          "name": "htmlPage",
+          "params": [
+            "title",
+            "message",
+            "status"
+          ],
+          "exported": false,
+          "lineCount": 26
+        },
+        {
+          "name": "recordUnsubscribeFromToken",
+          "params": [
+            "token"
+          ],
+          "returnType": "Promise<{ ok: true; email: string } | { ok: false }>",
+          "exported": false,
+          "lineCount": 14
+        },
+        {
+          "name": "POST",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "GET",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 13
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextRequest"
+          ]
+        },
+        {
+          "source": "@/lib/list-unsubscribe",
+          "specifiers": [
+            "verifyUnsubscribeToken"
+          ]
+        },
+        {
+          "source": "@/lib/email-suppressions",
+          "specifiers": [
+            "recordSuppression"
+          ]
+        }
+      ],
+      "exports": [
+        "runtime",
+        "POST",
+        "GET"
+      ],
+      "totalLines": 82,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/bonus-workshops/page.tsx": {
+      "filePath": "src/app/bonus-workshops/page.tsx",
+      "contentHash": "c229f94d2366061ecfa4de9fe53f3e52ae9f03f8bb898b9413026f705ca67adf",
+      "functions": [
+        {
+          "name": "BonusWorkshopsPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 44
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/components/TabNav",
+          "specifiers": [
+            "TabNav"
+          ]
+        }
+      ],
+      "exports": [
+        "metadata",
+        "BonusWorkshopsPage"
+      ],
+      "totalLines": 52,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/bonus/auto-lead-magnet/page.tsx": {
+      "filePath": "src/app/bonus/auto-lead-magnet/page.tsx",
+      "contentHash": "1c9f5872a5f801de0ecc60d84f5c6bbed9ec09ba00130986dbfa9ecdd7513dbf",
+      "functions": [
+        {
+          "name": "AutoLeadMagnetPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 228
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/link",
+          "specifiers": [
+            "Link"
+          ]
+        },
+        {
+          "source": "@/components/CodeBlock",
+          "specifiers": [
+            "CodeBlock"
+          ]
+        }
+      ],
+      "exports": [
+        "AutoLeadMagnetPage"
+      ],
+      "totalLines": 450,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/events/[slug]/page.tsx": {
+      "filePath": "src/app/events/[slug]/page.tsx",
+      "contentHash": "173fb759ea3ee22a50e4323d9f36dca2c57d02072264f0b3feb99e42eaa82f20",
+      "functions": [
+        {
+          "name": "getPromoParam",
+          "params": [
+            "searchParams"
+          ],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "generateMetadata",
+          "params": [
+            "{ params }"
+          ],
+          "returnType": "Promise<Metadata>",
+          "exported": true,
+          "lineCount": 33
+        },
+        {
+          "name": "EventDetailPage",
+          "params": [
+            "{ params, searchParams }"
+          ],
+          "exported": true,
+          "lineCount": 28
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next",
+          "specifiers": [
+            "Metadata"
+          ]
+        },
+        {
+          "source": "next/navigation",
+          "specifiers": [
+            "notFound"
+          ]
+        },
+        {
+          "source": "@/components/events/EventPageView",
+          "specifiers": [
+            "EventPageView"
+          ]
+        },
+        {
+          "source": "@/lib/image-size",
+          "specifiers": [
+            "getPublicImageSize"
+          ]
+        },
+        {
+          "source": "@/lib/events",
+          "specifiers": [
+            "getEventBySlug",
+            "resolvePromoCode"
+          ]
+        },
+        {
+          "source": "@/lib/stripe",
+          "specifiers": [
+            "getStripePublishableKey"
+          ]
+        }
+      ],
+      "exports": [
+        "dynamic",
+        "generateMetadata",
+        "EventDetailPage"
+      ],
+      "totalLines": 90,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/events/[slug]/setup/page.tsx": {
+      "filePath": "src/app/events/[slug]/setup/page.tsx",
+      "contentHash": "9779677f39343c90fc441b10481dfca1b95d95c963cc630c653003107f2f11a4",
+      "functions": [
+        {
+          "name": "generateMetadata",
+          "params": [
+            "{ params }"
+          ],
+          "returnType": "Promise<Metadata>",
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "EventSetupPage",
+          "params": [
+            "{ params }"
+          ],
+          "exported": true,
+          "lineCount": 114
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next",
+          "specifiers": [
+            "Metadata"
+          ]
+        },
+        {
+          "source": "next/link",
+          "specifiers": [
+            "Link"
+          ]
+        },
+        {
+          "source": "next/navigation",
+          "specifiers": [
+            "notFound"
+          ]
+        },
+        {
+          "source": "@/lib/events",
+          "specifiers": [
+            "getEventBySlug"
+          ]
+        }
+      ],
+      "exports": [
+        "generateMetadata",
+        "EventSetupPage"
+      ],
+      "totalLines": 140,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/events/page.tsx": {
+      "filePath": "src/app/events/page.tsx",
+      "contentHash": "9e05e2c1ba27d238043c2d2ee05ccf25b4b4e46dccedb4b1b2decb81e634b469",
+      "functions": [
+        {
+          "name": "EventsIndexPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 94
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/image",
+          "specifiers": [
+            "Image"
+          ]
+        },
+        {
+          "source": "next/link",
+          "specifiers": [
+            "Link"
+          ]
+        },
+        {
+          "source": "@/components/Reveal",
+          "specifiers": [
+            "Reveal"
+          ]
+        },
+        {
+          "source": "@/lib/events",
+          "specifiers": [
+            "formatEventPrice",
+            "getUpcomingLiveEvents"
+          ]
+        }
+      ],
+      "exports": [
+        "metadata",
+        "EventsIndexPage"
+      ],
+      "totalLines": 107,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/agent-infrastructure/layout.tsx": {
+      "filePath": "src/app/giveaways/agent-infrastructure/layout.tsx",
+      "contentHash": "f04528a5ad3147f746b158ab942dd2c73f4c93881a23fe67966f7604b2e8ac0b",
+      "functions": [
+        {
+          "name": "AgentInfrastructureLayout",
+          "params": [
+            "{ children }"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "ReactNode"
+          ]
+        },
+        {
+          "source": "next",
+          "specifiers": [
+            "Metadata"
+          ]
+        }
+      ],
+      "exports": [
+        "metadata",
+        "AgentInfrastructureLayout"
+      ],
+      "totalLines": 37,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/agent-infrastructure/pack.ts": {
+      "filePath": "src/app/giveaways/agent-infrastructure/pack.ts",
+      "contentHash": "44f819f440d97d9c71b1f8462822d6b341b416d703c54242a9f109f2a5df1b77",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/lib/pack-page",
+          "specifiers": [
+            "PackPageContent"
+          ]
+        }
+      ],
+      "exports": [
+        "AGENT_INFRASTRUCTURE_PACK"
+      ],
+      "totalLines": 136,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/agent-infrastructure/page.tsx": {
+      "filePath": "src/app/giveaways/agent-infrastructure/page.tsx",
+      "contentHash": "a3036c60c707b1433e9fe2344be955e2dba9af73028a5c9fcbef83ea13e59454",
+      "functions": [
+        {
+          "name": "AgentInfrastructurePage",
+          "params": [],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/components/giveaways/PackPage",
+          "specifiers": [
+            "PackPage"
+          ]
+        },
+        {
+          "source": "./pack",
+          "specifiers": [
+            "AGENT_INFRASTRUCTURE_PACK"
+          ]
+        }
+      ],
+      "exports": [
+        "AgentInfrastructurePage"
+      ],
+      "totalLines": 11,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/ai-behavior-quiz/pack.ts": {
+      "filePath": "src/app/giveaways/ai-behavior-quiz/pack.ts",
+      "contentHash": "cdc129d6973b6136015e1cf71eb613956098c64f071b57368002335a36e9963b",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/lib/pack-page",
+          "specifiers": [
+            "PackPageContent"
+          ]
+        }
+      ],
+      "exports": [
+        "QUIZ_URL",
+        "AI_BEHAVIOR_QUIZ_PACK"
+      ],
+      "totalLines": 65,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/ai-behavior-quiz/page.tsx": {
+      "filePath": "src/app/giveaways/ai-behavior-quiz/page.tsx",
+      "contentHash": "dcbc76fb6261cd45d03f2c69af656d06adb9c644b26f530cd161170260ca7897",
+      "functions": [
+        {
+          "name": "AiBehaviorQuizPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/components/giveaways/PackPage",
+          "specifiers": [
+            "PackPage"
+          ]
+        },
+        {
+          "source": "./pack",
+          "specifiers": [
+            "AI_BEHAVIOR_QUIZ_PACK"
+          ]
+        }
+      ],
+      "exports": [
+        "AiBehaviorQuizPage"
+      ],
+      "totalLines": 9,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/ai-levels-quiz/pack.ts": {
+      "filePath": "src/app/giveaways/ai-levels-quiz/pack.ts",
+      "contentHash": "510b86d607c342525083f62df700fa475ca9ffe001763089a407909c80c4ece2",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/lib/pack-page",
+          "specifiers": [
+            "PackPageContent"
+          ]
+        }
+      ],
+      "exports": [
+        "QUIZ_URL",
+        "AI_LEVELS_QUIZ_PACK"
+      ],
+      "totalLines": 61,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/ai-levels-quiz/page.tsx": {
+      "filePath": "src/app/giveaways/ai-levels-quiz/page.tsx",
+      "contentHash": "3f62980edd30470a3ef1d66a874725fc098bbb87fce0645d1b4fbbd50c8f1521",
+      "functions": [
+        {
+          "name": "AiLevelsQuizPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/components/giveaways/PackPage",
+          "specifiers": [
+            "PackPage"
+          ]
+        },
+        {
+          "source": "./pack",
+          "specifiers": [
+            "AI_LEVELS_QUIZ_PACK"
+          ]
+        }
+      ],
+      "exports": [
+        "AiLevelsQuizPage"
+      ],
+      "totalLines": 9,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/all-sorted-overview/layout.tsx": {
+      "filePath": "src/app/giveaways/all-sorted-overview/layout.tsx",
+      "contentHash": "688dba628f908e1ac22e57f605e189e7f633e596127f2c09eb688419d80e1cb4",
+      "functions": [
+        {
+          "name": "AllSortedOverviewLayout",
+          "params": [
+            "{ children }"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "ReactNode"
+          ]
+        },
+        {
+          "source": "next",
+          "specifiers": [
+            "Metadata"
+          ]
+        }
+      ],
+      "exports": [
+        "metadata",
+        "AllSortedOverviewLayout"
+      ],
+      "totalLines": 37,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/all-sorted-overview/page.tsx": {
+      "filePath": "src/app/giveaways/all-sorted-overview/page.tsx",
+      "contentHash": "05ca5d7034d8ff4c555313aadb8471b53a5bdaa8e8d65ac7e0b384f70d734e38",
+      "functions": [
+        {
+          "name": "useMagnet",
+          "params": [
+            "strength"
+          ],
+          "exported": false,
+          "lineCount": 19
+        },
+        {
+          "name": "AllSortedOverviewPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 333
+        },
+        {
+          "name": "MastermindCTA",
+          "params": [],
+          "exported": false,
+          "lineCount": 35
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "useState",
+            "useEffect",
+            "useRef",
+            "useCallback"
+          ]
+        },
+        {
+          "source": "framer-motion",
+          "specifiers": [
+            "motion"
+          ]
+        },
+        {
+          "source": "@/components/sections/MastermindReactionsSection",
+          "specifiers": [
+            "MastermindReactionsSection"
+          ]
+        },
+        {
+          "source": "@/components/giveaways/GiveawayEmailModal",
+          "specifiers": [
+            "GiveawayEmailModal"
+          ]
+        },
+        {
+          "source": "@/components/giveaways/GiveawayAutoModal",
+          "specifiers": [
+            "GiveawayAutoModal"
+          ]
+        }
+      ],
+      "exports": [
+        "AllSortedOverviewPage"
+      ],
+      "totalLines": 481,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/anthropic-safety-checklist/layout.tsx": {
+      "filePath": "src/app/giveaways/anthropic-safety-checklist/layout.tsx",
+      "contentHash": "d48eb256859d4dac4d40aa31bf8cb79b61fe3a53aec8a932146fa6d8805783b9",
+      "functions": [
+        {
+          "name": "AnthropicSafetyLayout",
+          "params": [
+            "{ children }"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "ReactNode"
+          ]
+        }
+      ],
+      "exports": [
+        "metadata",
+        "AnthropicSafetyLayout"
+      ],
+      "totalLines": 11,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/anthropic-safety-checklist/pack.ts": {
+      "filePath": "src/app/giveaways/anthropic-safety-checklist/pack.ts",
+      "contentHash": "8181f0a4e0cb51e646393474d91abe3cff6a09c4f1ec1cfcdc96719d776f18e7",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/lib/pack-page",
+          "specifiers": [
+            "PackPageContent"
+          ]
+        },
+        {
+          "source": "./prompts",
+          "specifiers": [
+            "SAFETY_AUDIT_PROMPT"
+          ]
+        }
+      ],
+      "exports": [
+        "SAFETY_PACK"
+      ],
+      "totalLines": 172,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/anthropic-safety-checklist/page.tsx": {
+      "filePath": "src/app/giveaways/anthropic-safety-checklist/page.tsx",
+      "contentHash": "879d349ee863c697dd1ad4a45fe50e06471ddec268afa6fe005491895915089d",
+      "functions": [
+        {
+          "name": "AnthropicSafetyChecklistPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/components/giveaways/PackPage",
+          "specifiers": [
+            "PackPage"
+          ]
+        },
+        {
+          "source": "./pack",
+          "specifiers": [
+            "SAFETY_PACK"
+          ]
+        }
+      ],
+      "exports": [
+        "AnthropicSafetyChecklistPage"
+      ],
+      "totalLines": 35,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/anthropic-safety-checklist/prompts.ts": {
+      "filePath": "src/app/giveaways/anthropic-safety-checklist/prompts.ts",
+      "contentHash": "b7d99d50bc0a567b82f7128faf1c7782383b3b7dcc734a660852438a19f4cb9c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "SAFETY_AUDIT_PROMPT"
+      ],
+      "totalLines": 104,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/benchmark/layout.tsx": {
+      "filePath": "src/app/giveaways/benchmark/layout.tsx",
+      "contentHash": "d347d2455a5c1e06dc8591f4db1bd23c4db1322d151f276dd54a4873994f3b66",
+      "functions": [
+        {
+          "name": "BenchmarkLayout",
+          "params": [
+            "{ children }"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "ReactNode"
+          ]
+        }
+      ],
+      "exports": [
+        "metadata",
+        "BenchmarkLayout"
+      ],
+      "totalLines": 11,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/benchmark/pack.ts": {
+      "filePath": "src/app/giveaways/benchmark/pack.ts",
+      "contentHash": "14b05ca476385588f8007e7b438096b0655f46a4b0e6e51af4c265c14936107a",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/lib/pack-page",
+          "specifiers": [
+            "PackPageContent"
+          ]
+        }
+      ],
+      "exports": [
+        "BENCHMARK_PACK"
+      ],
+      "totalLines": 155,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/benchmark/page.tsx": {
+      "filePath": "src/app/giveaways/benchmark/page.tsx",
+      "contentHash": "e5fbc699eeb0b043f573d7eab37340957d38b50dd537099f6921acc32b7ecbda",
+      "functions": [
+        {
+          "name": "BenchmarkPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/components/giveaways/PackPage",
+          "specifiers": [
+            "PackPage"
+          ]
+        },
+        {
+          "source": "./pack",
+          "specifiers": [
+            "BENCHMARK_PACK"
+          ]
+        }
+      ],
+      "exports": [
+        "BenchmarkPage"
+      ],
+      "totalLines": 10,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/business-builder-quiz/BusinessBuilderQuiz.tsx": {
+      "filePath": "src/app/giveaways/business-builder-quiz/BusinessBuilderQuiz.tsx",
+      "contentHash": "a069273f052eaacd8ba10f8682e6867610de4928c37a8895d1c349567b5340b3",
+      "functions": [
+        {
+          "name": "getLevel",
+          "params": [
+            "score"
+          ],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "useMagnet",
+          "params": [
+            "strength"
+          ],
+          "exported": false,
+          "lineCount": 22
+        },
+        {
+          "name": "BusinessBuilderQuiz",
+          "params": [],
+          "exported": true,
+          "lineCount": 279
+        },
+        {
+          "name": "StartButton",
+          "params": [
+            "{ onClick }"
+          ],
+          "exported": false,
+          "lineCount": 14
+        },
+        {
+          "name": "NextButton",
+          "params": [
+            "{\n  onClick,\n  disabled,\n  isLast,\n}"
+          ],
+          "exported": false,
+          "lineCount": 29
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "useState",
+            "useEffect",
+            "useRef",
+            "useCallback"
+          ]
+        },
+        {
+          "source": "framer-motion",
+          "specifiers": [
+            "motion"
+          ]
+        },
+        {
+          "source": "@/components/giveaways/PackPage",
+          "specifiers": [
+            "usePackAsk"
+          ]
+        }
+      ],
+      "exports": [
+        "BusinessBuilderQuiz"
+      ],
+      "totalLines": 492,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/business-builder-quiz/layout.tsx": {
+      "filePath": "src/app/giveaways/business-builder-quiz/layout.tsx",
+      "contentHash": "65818e8f3dff58a63e9ce2ccd0b9306918ee8481c94afc22557b3f735af42420",
+      "functions": [
+        {
+          "name": "BusinessBuilderQuizLayout",
+          "params": [
+            "{ children }"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "ReactNode"
+          ]
+        },
+        {
+          "source": "next",
+          "specifiers": [
+            "Metadata"
+          ]
+        }
+      ],
+      "exports": [
+        "metadata",
+        "BusinessBuilderQuizLayout"
+      ],
+      "totalLines": 46,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/business-builder-quiz/pack.ts": {
+      "filePath": "src/app/giveaways/business-builder-quiz/pack.ts",
+      "contentHash": "79a46e0c8b0f8fcfe7ad866e0c67f2ea5f927196bf4d36ced9dd0142781d26d6",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/lib/pack-page",
+          "specifiers": [
+            "PackPageContent"
+          ]
+        }
+      ],
+      "exports": [
+        "BUSINESS_BUILDER_QUIZ_PACK"
+      ],
+      "totalLines": 36,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/business-builder-quiz/page.tsx": {
+      "filePath": "src/app/giveaways/business-builder-quiz/page.tsx",
+      "contentHash": "a390116cc7429356473776955156700b04f45c3b2d4cfbeec7abd829c4cfeca4",
+      "functions": [
+        {
+          "name": "BusinessBuilderQuizPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 7
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/components/giveaways/PackPage",
+          "specifiers": [
+            "PackPage"
+          ]
+        },
+        {
+          "source": "./BusinessBuilderQuiz",
+          "specifiers": [
+            "BusinessBuilderQuiz"
+          ]
+        },
+        {
+          "source": "./pack",
+          "specifiers": [
+            "BUSINESS_BUILDER_QUIZ_PACK"
+          ]
+        }
+      ],
+      "exports": [
+        "BusinessBuilderQuizPage"
+      ],
+      "totalLines": 15,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/claude-md/layout.tsx": {
+      "filePath": "src/app/giveaways/claude-md/layout.tsx",
+      "contentHash": "60a68e031e00cdcc7d06226d1f63cf237f927b80d52514a984924ee57c44da61",
+      "functions": [
+        {
+          "name": "ClaudeMdLayout",
+          "params": [
+            "{ children }"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "ReactNode"
+          ]
+        },
+        {
+          "source": "next",
+          "specifiers": [
+            "Metadata"
+          ]
+        }
+      ],
+      "exports": [
+        "metadata",
+        "ClaudeMdLayout"
+      ],
+      "totalLines": 37,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/claude-md/pack.ts": {
+      "filePath": "src/app/giveaways/claude-md/pack.ts",
+      "contentHash": "1200d4a1e77a4bddd7e95c11842ccc3eb32a6f85842bb4dfdc3bd3c4018e4c8b",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/lib/pack-page",
+          "specifiers": [
+            "PackPageContent"
+          ]
+        },
+        {
+          "source": "./prompts",
+          "specifiers": [
+            "CLAUDE_MD_FILE"
+          ]
+        }
+      ],
+      "exports": [
+        "FILE_URL",
+        "CLAUDE_MD_PACK"
+      ],
+      "totalLines": 164,
+      "hasStructuralAnalysis": true
+    },
+    "public/downloads/joes-linkedin-kit-v1.0.zip": {
+      "filePath": "public/downloads/joes-linkedin-kit-v1.0.zip",
+      "contentHash": "b849c0ad620d63b9ed132223b46f8ab820a9bcad967de12eb11f75aef73aa34d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 180,
+      "hasStructuralAnalysis": false
+    },
+    "public/downloads/joes-linkedin-kit-v1.0.zip.sha256": {
+      "filePath": "public/downloads/joes-linkedin-kit-v1.0.zip.sha256",
+      "contentHash": "b88ba20c8f7653fe4134f19b77f2900b1e6a64d570f13adf1578b01fd6c6b1e6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "public/downloads/joes-salesman-v1.0.zip": {
+      "filePath": "public/downloads/joes-salesman-v1.0.zip",
+      "contentHash": "680386a00d4727f02e60f29c2a5983dca7b8d043e84131d4e47c832702430dd4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 163,
+      "hasStructuralAnalysis": false
+    },
+    "public/downloads/joes-salesman-v1.0.zip.sha256": {
+      "filePath": "public/downloads/joes-salesman-v1.0.zip.sha256",
+      "contentHash": "4bd991aba6288f91429cf57cbba8ebd1d2d963a1889bf9e89c61dcab13d4d8ac",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "src/app/giveaways/chat-to-flowchart/layout.tsx": {
+      "filePath": "src/app/giveaways/chat-to-flowchart/layout.tsx",
+      "contentHash": "6be414fbc8443394d2402310e18f16e202a5599cb3d430afc845dac25eeac670",
+      "functions": [
+        {
+          "name": "ChatToFlowchartLayout",
+          "params": [
+            "{ children }"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "ReactNode"
+          ]
+        },
+        {
+          "source": "next",
+          "specifiers": [
+            "Metadata"
+          ]
+        }
+      ],
+      "exports": [
+        "metadata",
+        "ChatToFlowchartLayout"
+      ],
+      "totalLines": 37,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/chat-to-flowchart/pack.ts": {
+      "filePath": "src/app/giveaways/chat-to-flowchart/pack.ts",
+      "contentHash": "8747ae04e73d85f2c4b316488166ce0e7c039044b3160d7efda1ad016451b6e8",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/lib/pack-page",
+          "specifiers": [
+            "PackPageContent"
+          ]
+        }
+      ],
+      "exports": [
+        "DEMO_URL",
+        "GITHUB_URL",
+        "CHAT_TO_FLOWCHART_CONTENT"
+      ],
+      "totalLines": 131,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/chat-to-flowchart/page.tsx": {
+      "filePath": "src/app/giveaways/chat-to-flowchart/page.tsx",
+      "contentHash": "cb0f394b0b5b2509b93913f14c09a6d3fe65179ddcd8e937f1db89c510d31c9b",
+      "functions": [
+        {
+          "name": "ChatToFlowchartPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/components/giveaways/PackPage",
+          "specifiers": [
+            "PackPage"
+          ]
+        },
+        {
+          "source": "./pack",
+          "specifiers": [
+            "CHAT_TO_FLOWCHART_CONTENT"
+          ]
+        }
+      ],
+      "exports": [
+        "ChatToFlowchartPage"
+      ],
+      "totalLines": 32,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/film/layout.tsx": {
+      "filePath": "src/app/giveaways/film/layout.tsx",
+      "contentHash": "d4245d25f78739823cffef62c8928588faab5b684e79aa7f520a079ce5d9403d",
+      "functions": [
+        {
+          "name": "FilmLayout",
+          "params": [
+            "{ children }"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "ReactNode"
+          ]
+        },
+        {
+          "source": "next",
+          "specifiers": [
+            "Metadata"
+          ]
+        }
+      ],
+      "exports": [
+        "metadata",
+        "FilmLayout"
+      ],
+      "totalLines": 37,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/film/pack.ts": {
+      "filePath": "src/app/giveaways/film/pack.ts",
+      "contentHash": "f4e006b24c7a3576a23e9825bdd9852e0f476a678c201a65a6542088f0ea42a4",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/lib/pack-page",
+          "specifiers": [
+            "PackPageContent"
+          ]
+        },
+        {
+          "source": "./prompt",
+          "specifiers": [
+            "FILM_PROMPT"
+          ]
+        }
+      ],
+      "exports": [
+        "GALLERY",
+        "REPO",
+        "FILM_CONTENT"
+      ],
+      "totalLines": 176,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/film/page.tsx": {
+      "filePath": "src/app/giveaways/film/page.tsx",
+      "contentHash": "0ca3610c914f48d564ecce1a2b1dedf6083fca162e08d2941f74bbc77396a316",
+      "functions": [
+        {
+          "name": "FilmPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/components/giveaways/PackPage",
+          "specifiers": [
+            "PackPage"
+          ]
+        },
+        {
+          "source": "./pack",
+          "specifiers": [
+            "FILM_CONTENT"
+          ]
+        }
+      ],
+      "exports": [
+        "FilmPage"
+      ],
+      "totalLines": 33,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/film/prompt.ts": {
+      "filePath": "src/app/giveaways/film/prompt.ts",
+      "contentHash": "691357a4569d0bb4b56eec7e2e205efaebe78c959048b13072b8c0a18de8b013",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "FILM_PROMPT"
+      ],
+      "totalLines": 5,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/free-ai-concat/layout.tsx": {
+      "filePath": "src/app/giveaways/free-ai-concat/layout.tsx",
+      "contentHash": "afb54aa663c09eaaa04c5a8fb5c795ec97b122aa6e3096d1307aeb229ea806a8",
+      "functions": [
+        {
+          "name": "Layout",
+          "params": [
+            "{ children }"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "ReactNode"
+          ]
+        },
+        {
+          "source": "next",
+          "specifiers": [
+            "Metadata"
+          ]
+        }
+      ],
+      "exports": [
+        "metadata",
+        "Layout"
+      ],
+      "totalLines": 32,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/free-ai-concat/page.tsx": {
+      "filePath": "src/app/giveaways/free-ai-concat/page.tsx",
+      "contentHash": "ad60a8d57250e0c51c36825ab280f72b278e0b3b925dc60cdd318686e5662980",
+      "functions": [
+        {
+          "name": "FreeAiConcatPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/components/giveaways/PackPage",
+          "specifiers": [
+            "PackPage"
+          ]
+        },
+        {
+          "source": "@/lib/free-ai-tool-pack",
+          "specifiers": [
+            "freeAiToolJsonLd",
+            "freeAiToolPack"
+          ]
+        }
+      ],
+      "exports": [
+        "FreeAiConcatPage"
+      ],
+      "totalLines": 16,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/free-ai-salesman/layout.tsx": {
+      "filePath": "src/app/giveaways/free-ai-salesman/layout.tsx",
+      "contentHash": "e3b3186a7db5559c66a5bb723cbaf5e2d8f38379619b08c9f29173f86dafc641",
+      "functions": [
+        {
+          "name": "Layout",
+          "params": [
+            "{ children }"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "ReactNode"
+          ]
+        },
+        {
+          "source": "next",
+          "specifiers": [
+            "Metadata"
+          ]
+        }
+      ],
+      "exports": [
+        "metadata",
+        "Layout"
+      ],
+      "totalLines": 32,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/free-ai-salesman/page.tsx": {
+      "filePath": "src/app/giveaways/free-ai-salesman/page.tsx",
+      "contentHash": "415547607b47a92a19ec53cbd9521daa2c5a4c1e72fbfc87a4d7dc63f701c8a1",
+      "functions": [
+        {
+          "name": "FreeAiSalesmanPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/components/giveaways/PackPage",
+          "specifiers": [
+            "PackPage"
+          ]
+        },
+        {
+          "source": "@/lib/free-ai-tool-pack",
+          "specifiers": [
+            "freeAiToolJsonLd",
+            "freeAiToolPack"
+          ]
+        }
+      ],
+      "exports": [
+        "FreeAiSalesmanPage"
+      ],
+      "totalLines": 18,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/linkedin-kit/layout.tsx": {
+      "filePath": "src/app/giveaways/linkedin-kit/layout.tsx",
+      "contentHash": "0c61f74b29aa3f85b4fa5d0c598940d77f6ffd7a29e428ba530f1d11f51b64a2",
+      "functions": [
+        {
+          "name": "LinkedinKitLayout",
+          "params": [
+            "{ children }"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "ReactNode"
+          ]
+        },
+        {
+          "source": "next",
+          "specifiers": [
+            "Metadata"
+          ]
+        }
+      ],
+      "exports": [
+        "metadata",
+        "LinkedinKitLayout"
+      ],
+      "totalLines": 36,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/linkedin-kit/pack.ts": {
+      "filePath": "src/app/giveaways/linkedin-kit/pack.ts",
+      "contentHash": "165aeb6df35618b91d874854dc0f55dbf81d9317a892f94a29a4611ca0974b63",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/lib/pack-page",
+          "specifiers": [
+            "PackPageContent"
+          ]
+        },
+        {
+          "source": "./prompt",
+          "specifiers": [
+            "LINKEDIN_KIT_PROMPT"
+          ]
+        }
+      ],
+      "exports": [
+        "ZIP_PATH",
+        "LINKEDIN_KIT_CONTENT"
+      ],
+      "totalLines": 177,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/linkedin-kit/page.tsx": {
+      "filePath": "src/app/giveaways/linkedin-kit/page.tsx",
+      "contentHash": "33af23d38bae228e01a89475f61bd4577ac6a9493ccb259a0dc23d456e7b538a",
+      "functions": [
+        {
+          "name": "LinkedinKitPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/components/giveaways/PackPage",
+          "specifiers": [
+            "PackPage"
+          ]
+        },
+        {
+          "source": "./pack",
+          "specifiers": [
+            "LINKEDIN_KIT_CONTENT"
+          ]
+        }
+      ],
+      "exports": [
+        "LinkedinKitPage"
+      ],
+      "totalLines": 10,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/linkedin-kit/prompt.ts": {
+      "filePath": "src/app/giveaways/linkedin-kit/prompt.ts",
+      "contentHash": "d831c2bef0de43576d35e9a6bf0c96af8fd9b9c3f1da9ecca29540da9fb70913",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "LINKEDIN_KIT_PROMPT"
+      ],
+      "totalLines": 6,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/sitemap.ts": {
+      "filePath": "src/app/sitemap.ts",
+      "contentHash": "43e030c44230996784765301303cd061c6fbf0c3d60dd0a6e6a30ec1be8e1b13",
+      "functions": [
+        {
+          "name": "sitemap",
+          "params": [],
+          "returnType": "MetadataRoute.Sitemap",
+          "exported": true,
+          "lineCount": 31
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next",
+          "specifiers": [
+            "MetadataRoute"
+          ]
+        },
+        {
+          "source": "@/lib/free-ai-tools",
+          "specifiers": [
+            "FREE_AI_TOOL_SLUGS"
+          ]
+        }
+      ],
+      "exports": [
+        "sitemap"
+      ],
+      "totalLines": 38,
+      "hasStructuralAnalysis": true
+    },
+    "src/lib/free-ai-tools.ts": {
+      "filePath": "src/lib/free-ai-tools.ts",
+      "contentHash": "fef0285de479a67d8000743ad80e3ba932cfb6d6eb7e0eec13637979d0b862e0",
+      "functions": [
+        {
+          "name": "getFreeAiTool",
+          "params": [
+            "slug"
+          ],
+          "returnType": "FreeAiTool",
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "isFreeAiToolSource",
+          "params": [
+            "source"
+          ],
+          "returnType": "boolean",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "formatStars",
+          "params": [
+            "stars"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "./giveaway-offers",
+          "specifiers": [
+            "GiveawayLevel"
+          ]
+        }
+      ],
+      "exports": [
+        "FREE_AI_TOOLS",
+        "FREE_AI_TOOL_SLUGS",
+        "getFreeAiTool",
+        "isFreeAiToolSource",
+        "formatStars"
+      ],
+      "totalLines": 1182,
+      "hasStructuralAnalysis": true
+    },
+    "src/lib/generic-giveaway-email.ts": {
+      "filePath": "src/lib/generic-giveaway-email.ts",
+      "contentHash": "88c02bee617205c9b81cba138b5df34fb5d5f3843b65ebe5b2c6ab8c84118577",
+      "functions": [
+        {
+          "name": "esc",
+          "params": [
+            "value"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "isMastermindsHost",
+          "params": [
+            "host"
+          ],
+          "returnType": "boolean",
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "validateGiveawayLink",
+          "params": [
+            "raw"
+          ],
+          "returnType": "string | null",
+          "exported": true,
+          "lineCount": 21
+        },
+        {
+          "name": "titleCaseSlug",
+          "params": [
+            "slug"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "sanitizeGiveawayName",
+          "params": [
+            "raw",
+            "source"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "isValidManychatSecret",
+          "params": [
+            "provided",
+            "expected"
+          ],
+          "returnType": "boolean",
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "buildGenericGiveawayEmail",
+          "params": [
+            "{\n  source,\n  name,\n  link,\n  unsubscribeFooter,\n  unsubscribeUrl,\n}"
+          ],
+          "exported": true,
+          "lineCount": 51
+        },
+        {
+          "name": "websiteGiveawayEmail",
+          "params": [
+            "source"
+          ],
+          "returnType": "{ name: string; link: string } | null",
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "salesKeywordPage",
+          "params": [
+            "source"
+          ],
+          "returnType": "{ label: string; link: string } | null",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "buildSalesKeywordEmail",
+          "params": [
+            "{\n  source,\n  unsubscribeFooter,\n  unsubscribeUrl,\n}"
+          ],
+          "exported": true,
+          "lineCount": 45
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:crypto",
+          "specifiers": [
+            "timingSafeEqual"
+          ]
+        },
+        {
+          "source": "./utm",
+          "specifiers": [
+            "withUtm"
+          ]
+        }
+      ],
+      "exports": [
+        "validateGiveawayLink",
+        "sanitizeGiveawayName",
+        "isValidManychatSecret",
+        "buildGenericGiveawayEmail",
+        "WEBSITE_GENERIC_GIVEAWAYS",
+        "websiteGiveawayEmail",
+        "SALES_KEYWORD_PAGES",
+        "salesKeywordPage",
+        "buildSalesKeywordEmail"
+      ],
+      "totalLines": 254,
+      "hasStructuralAnalysis": true
+    },
+    "src/lib/giveaways.ts": {
+      "filePath": "src/lib/giveaways.ts",
+      "contentHash": "cbd59b88157dd415d25d6cc6778350af6dc2536b2eeb784d87218e300d16c743",
+      "functions": [
+        {
+          "name": "getGiveaway",
+          "params": [
+            "slug"
+          ],
+          "returnType": "Giveaway | undefined",
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "giveaways",
+        "getGiveaway"
+      ],
+      "totalLines": 429,
+      "hasStructuralAnalysis": true
+    },
+    "tests/free-ai-tools.test.ts": {
+      "filePath": "tests/free-ai-tools.test.ts",
+      "contentHash": "1320bb0c4e9ab89ef637ed885cd1612e8a7ce2a292ec065e130670f83b5c052e",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:assert/strict",
+          "specifiers": [
+            "assert"
+          ]
+        },
+        {
+          "source": "node:test",
+          "specifiers": [
+            "test"
+          ]
+        },
+        {
+          "source": "node:fs",
+          "specifiers": [
+            "existsSync",
+            "readFileSync"
+          ]
+        },
+        {
+          "source": "node:path",
+          "specifiers": [
+            "join"
+          ]
+        },
+        {
+          "source": "../src/lib/free-ai-tools",
+          "specifiers": [
+            "FREE_AI_TOOLS"
+          ]
+        },
+        {
+          "source": "../src/lib/free-ai-tool-email",
+          "specifiers": [
+            "buildFreeAiToolEmail"
+          ]
+        },
+        {
+          "source": "../src/lib/free-ai-tool-pack",
+          "specifiers": [
+            "freeAiToolPack"
+          ]
+        },
+        {
+          "source": "../src/lib/lead-magnets",
+          "specifiers": [
+            "isDeliverableLeadMagnetSource"
+          ]
+        },
+        {
+          "source": "../src/lib/giveaway-offers",
+          "specifiers": [
+            "offerForLevel"
+          ]
+        },
+        {
+          "source": "../src/lib/giveaways",
+          "specifiers": [
+            "giveaways"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 118,
+      "hasStructuralAnalysis": true
+    },
+    "tests/linkedin-kit.test.ts": {
+      "filePath": "tests/linkedin-kit.test.ts",
+      "contentHash": "65ffdf0503eb9b6543e7f114f5c9899371ea730657ba63aa2dd8acb665323c14",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:assert/strict",
+          "specifiers": [
+            "assert"
+          ]
+        },
+        {
+          "source": "node:test",
+          "specifiers": [
+            "test"
+          ]
+        },
+        {
+          "source": "node:child_process",
+          "specifiers": [
+            "execFileSync"
+          ]
+        },
+        {
+          "source": "node:fs",
+          "specifiers": [
+            "readFileSync",
+            "statSync"
+          ]
+        },
+        {
+          "source": "node:path",
+          "specifiers": [
+            "join"
+          ]
+        },
+        {
+          "source": "../src/lib/giveaway-offers",
+          "specifiers": [
+            "offerForLevel"
+          ]
+        },
+        {
+          "source": "../src/lib/pack-page",
+          "specifiers": [
+            "validatePackContent"
+          ]
+        },
+        {
+          "source": "../src/lib/generic-giveaway-email",
+          "specifiers": [
+            "websiteGiveawayEmail"
+          ]
+        },
+        {
+          "source": "../src/lib/giveaways",
+          "specifiers": [
+            "getGiveaway"
+          ]
+        },
+        {
+          "source": "../src/app/giveaways/linkedin-kit/pack",
+          "specifiers": [
+            "LINKEDIN_KIT_CONTENT",
+            "ZIP_PATH"
+          ]
+        },
+        {
+          "source": "../src/app/giveaways/linkedin-kit/prompt",
+          "specifiers": [
+            "LINKEDIN_KIT_PROMPT"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 56,
       "hasStructuralAnalysis": true
     }
   }

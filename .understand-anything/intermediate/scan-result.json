@@ -1055,6 +1055,181 @@
         "@/lib/pack-page",
         "./prompts"
       ]
+    },
+    {
+      "path": "public/downloads/joes-linkedin-kit-v1.0.zip",
+      "language": "binary",
+      "sizeLines": 0,
+      "fileCategory": "data",
+      "imports": []
+    },
+    {
+      "path": "public/downloads/joes-linkedin-kit-v1.0.zip.sha256",
+      "language": "text",
+      "sizeLines": 2,
+      "fileCategory": "code",
+      "imports": []
+    },
+    {
+      "path": "public/downloads/joes-salesman-v1.0.zip",
+      "language": "binary",
+      "sizeLines": 0,
+      "fileCategory": "data",
+      "imports": []
+    },
+    {
+      "path": "public/downloads/joes-salesman-v1.0.zip.sha256",
+      "language": "text",
+      "sizeLines": 2,
+      "fileCategory": "code",
+      "imports": []
+    },
+    {
+      "path": "src/app/giveaways/chat-to-flowchart/layout.tsx",
+      "language": "typescript",
+      "sizeLines": 37,
+      "fileCategory": "code",
+      "imports": []
+    },
+    {
+      "path": "src/app/giveaways/chat-to-flowchart/pack.ts",
+      "language": "typescript",
+      "sizeLines": 131,
+      "fileCategory": "code",
+      "imports": []
+    },
+    {
+      "path": "src/app/giveaways/chat-to-flowchart/page.tsx",
+      "language": "typescript",
+      "sizeLines": 32,
+      "fileCategory": "code",
+      "imports": []
+    },
+    {
+      "path": "src/app/giveaways/film/layout.tsx",
+      "language": "typescript",
+      "sizeLines": 37,
+      "fileCategory": "code",
+      "imports": []
+    },
+    {
+      "path": "src/app/giveaways/film/pack.ts",
+      "language": "typescript",
+      "sizeLines": 176,
+      "fileCategory": "code",
+      "imports": []
+    },
+    {
+      "path": "src/app/giveaways/film/page.tsx",
+      "language": "typescript",
+      "sizeLines": 33,
+      "fileCategory": "code",
+      "imports": []
+    },
+    {
+      "path": "src/app/giveaways/film/prompt.ts",
+      "language": "typescript",
+      "sizeLines": 5,
+      "fileCategory": "code",
+      "imports": []
+    },
+    {
+      "path": "src/app/giveaways/free-ai-concat/layout.tsx",
+      "language": "typescript",
+      "sizeLines": 32,
+      "fileCategory": "code",
+      "imports": []
+    },
+    {
+      "path": "src/app/giveaways/free-ai-concat/page.tsx",
+      "language": "typescript",
+      "sizeLines": 16,
+      "fileCategory": "code",
+      "imports": []
+    },
+    {
+      "path": "src/app/giveaways/free-ai-salesman/layout.tsx",
+      "language": "typescript",
+      "sizeLines": 32,
+      "fileCategory": "code",
+      "imports": []
+    },
+    {
+      "path": "src/app/giveaways/free-ai-salesman/page.tsx",
+      "language": "typescript",
+      "sizeLines": 18,
+      "fileCategory": "code",
+      "imports": []
+    },
+    {
+      "path": "src/app/giveaways/linkedin-kit/layout.tsx",
+      "language": "typescript",
+      "sizeLines": 36,
+      "fileCategory": "code",
+      "imports": []
+    },
+    {
+      "path": "src/app/giveaways/linkedin-kit/pack.ts",
+      "language": "typescript",
+      "sizeLines": 177,
+      "fileCategory": "code",
+      "imports": []
+    },
+    {
+      "path": "src/app/giveaways/linkedin-kit/page.tsx",
+      "language": "typescript",
+      "sizeLines": 10,
+      "fileCategory": "code",
+      "imports": []
+    },
+    {
+      "path": "src/app/giveaways/linkedin-kit/prompt.ts",
+      "language": "typescript",
+      "sizeLines": 6,
+      "fileCategory": "code",
+      "imports": []
+    },
+    {
+      "path": "src/app/sitemap.ts",
+      "language": "typescript",
+      "sizeLines": 38,
+      "fileCategory": "code",
+      "imports": []
+    },
+    {
+      "path": "src/lib/free-ai-tools.ts",
+      "language": "typescript",
+      "sizeLines": 1182,
+      "fileCategory": "code",
+      "imports": []
+    },
+    {
+      "path": "src/lib/generic-giveaway-email.ts",
+      "language": "typescript",
+      "sizeLines": 254,
+      "fileCategory": "code",
+      "imports": []
+    },
+    {
+      "path": "src/lib/giveaways.ts",
+      "language": "typescript",
+      "sizeLines": 429,
+      "fileCategory": "code",
+      "imports": []
+    },
+    {
+      "path": "tests/free-ai-tools.test.ts",
+      "language": "typescript",
+      "sizeLines": 118,
+      "fileCategory": "code",
+      "imports": []
+    },
+    {
+      "path": "tests/linkedin-kit.test.ts",
+      "language": "typescript",
+      "sizeLines": 56,
+      "fileCategory": "code",
+      "imports": []
     }
   ],
   "fileCount": 453,
@@ -1387,6 +1562,45 @@
     "src/app/giveaways/agent-infrastructure/layout.tsx": [
       "react",
       "next"
+    ],
+    "src/app/giveaways/chat-to-flowchart/layout.tsx": [],
+    "src/app/giveaways/chat-to-flowchart/pack.ts": [],
+    "src/app/giveaways/chat-to-flowchart/page.tsx": [
+      "src/app/giveaways/chat-to-flowchart/pack.ts"
+    ],
+    "src/app/giveaways/film/layout.tsx": [],
+    "src/app/giveaways/film/pack.ts": [
+      "src/app/giveaways/film/prompt.ts"
+    ],
+    "src/app/giveaways/film/page.tsx": [
+      "src/app/giveaways/film/pack.ts"
+    ],
+    "src/app/giveaways/film/prompt.ts": [],
+    "src/app/giveaways/free-ai-concat/layout.tsx": [],
+    "src/app/giveaways/free-ai-concat/page.tsx": [],
+    "src/app/giveaways/free-ai-salesman/layout.tsx": [],
+    "src/app/giveaways/free-ai-salesman/page.tsx": [],
+    "src/app/giveaways/linkedin-kit/layout.tsx": [],
+    "src/app/giveaways/linkedin-kit/pack.ts": [
+      "src/app/giveaways/linkedin-kit/prompt.ts"
+    ],
+    "src/app/giveaways/linkedin-kit/page.tsx": [
+      "src/app/giveaways/linkedin-kit/pack.ts"
+    ],
+    "src/app/giveaways/linkedin-kit/prompt.ts": [],
+    "src/app/sitemap.ts": [],
+    "src/lib/free-ai-tools.ts": [],
+    "src/lib/generic-giveaway-email.ts": [],
+    "src/lib/giveaways.ts": [],
+    "tests/free-ai-tools.test.ts": [
+      "src/lib/free-ai-tools.ts",
+      "src/lib/giveaways.ts"
+    ],
+    "tests/linkedin-kit.test.ts": [
+      "src/app/giveaways/linkedin-kit/pack.ts",
+      "src/app/giveaways/linkedin-kit/prompt.ts",
+      "src/lib/generic-giveaway-email.ts",
+      "src/lib/giveaways.ts"
     ]
   },
   "summary": {
