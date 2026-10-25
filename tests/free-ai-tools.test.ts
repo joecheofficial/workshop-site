@@ -20,6 +20,10 @@ const WEEK2: Record<string, { slug: string; level: 'beginner' | 'builder' }> = {
   BROWSER: { slug: 'free-ai-browser-use', level: 'builder' },
   STYLE: { slug: 'free-ai-ui-ux-pro-max', level: 'builder' },
   MEMORY: { slug: 'free-ai-mempalace', level: 'builder' },
+  // Week 3 Day 5 (Illy approved 2026-10-25), an app download.
+  CUT: { slug: 'free-ai-concat', level: 'beginner' },
+  // Week 3 Day 2 (Illy approved 2026-10-25), a Claude skills kit.
+  SALESMAN: { slug: 'free-ai-salesman', level: 'beginner' },
 }
 
 test('every Free AI Tool is present, one per keyword', () => {

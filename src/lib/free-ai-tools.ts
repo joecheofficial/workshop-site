@@ -950,7 +950,215 @@ When you are done, search MemPalace for something from an old session to prove i
         a: 'Do not install from it. The official sources are github.com/MemPalace/mempalace, pypi.org/project/mempalace and mempalaceofficial.com.',
       },
     ],
+  },
+  {
+    slug: 'free-ai-concat',
+    keyword: 'CUT',
+    name: 'Concat',
+    tagline: 'A free video editor with no watermark and no account.',
+    subline:
+      'Concat is a free, open source video editor. It adds captions, cuts clips and exports up to 4K with no watermark, no account and no subscription. It is a beta, and this page walks you through the Mac setup.',
+    toolUrl: 'https://github.com/jub0t/Concat/releases/latest',
+    primaryLabel: 'Download Concat (official GitHub releases)',
+    intro:
+      'Concat is a free, open source video editor made by one developer, jub0t. It covers what most people open CapCut for: cutting clips on several tracks, automatic captions, text to speech, background removal, effects and titles, and export up to 4K. No watermark, no account, no subscription. The AI parts (captions, voices, cutout) download once from Settings and then work without the internet. Your footage stays on your computer.',
+    steps: [
+      'Open the official download page (the button above). On a Mac with an Apple chip (any Mac from late 2020 on), download the file ending in macos-arm64.dmg. On an older Intel Mac, download the one ending in macos-x86_64.dmg. Not sure? Click the Apple menu, then About This Mac. It says Chip (Apple) or Processor (Intel).',
+      'Open the downloaded file and drag Concat into your Applications folder.',
+      'Open Concat from Applications. If your Mac says it cannot verify the app, click Done, open System Settings, then Privacy and Security, scroll down to the message about Concat and click Open Anyway, then confirm with your password or Touch ID. You only do this once.',
+      'Drop in a video, cut it, and press Export. To add captions, open Settings, download the captions model once, then use the captions tool.',
+    ],
+    howIUse: [
+      'Cut a talking video: drop it in, trim the start and end, and let it write the captions for you.',
+      'Read the captions once before you export. Automatic captions get names and unusual words wrong.',
+      'Export a short test clip first, so you know it looks right before you export the whole thing.',
+    ],
+    goodToKnow:
+      'Free and open source (AGPL-3.0), made by jub0t. It is in beta, so expect a few rough edges, and the Mac build is not signed by Apple, which is why the first open needs Open Anyway. The people who make it say it does not send anything about you, your projects or your media over the internet. It only goes online when you ask it to, for example to check for updates or to download a model. I have not stress-tested it on long projects.',
+    links: [
+      { label: 'Download Concat (official GitHub releases)', url: 'https://github.com/jub0t/Concat/releases/latest' },
+      { label: 'The Concat website', url: 'https://concat.standalones.org' },
+      { label: 'Report a problem to the maker', url: 'https://github.com/jub0t/Concat/issues' },
+      { label: 'The code on GitHub', url: 'https://github.com/jub0t/Concat' },
+    ],
+    githubUrl: 'https://github.com/jub0t/Concat',
+    stars: 11372,
+    license: 'AGPL-3.0',
+    why: 'A free video editor with no watermark, no account and no subscription, so you can cut and caption your own videos without paying for CapCut.',
+    level: 'beginner',
+    who: 'Anyone who edits their own short videos and does not want a watermark, a subscription or an account.',
+    needs:
+      'A Mac (Apple chip or Intel), Windows PC, Linux computer or Android phone. These notes cover the Mac. The first open needs one extra click in Privacy and Security. It is a beta.',
+    ticks: ['No sign-up here', 'No watermark, no account', '11k stars on GitHub'],
+    claudePrompt: `Install Concat, the free open source video editor, on this Mac.
+
+1. Check what chip this Mac has. Apple chip means the macos-arm64.dmg file. Intel means the macos-x86_64.dmg file.
+2. Download the latest release only from https://github.com/jub0t/Concat/releases/latest . Also download the SHA256SUMS file from the same release and check the dmg against it. If the numbers do not match, stop and tell me.
+3. Open the dmg and copy Concat into Applications. Do not run anything else from it.
+4. The app is not signed by Apple, so macOS will probably block the first open. Tell me to open System Settings, Privacy and Security, and click Open Anyway next to the Concat message. Do not change my security settings yourself and do not run any command that removes the quarantine flag unless I ask you to.
+5. Tell me where to download the captions model in Concat's Settings.
+
+Do not sign me up for anything.`,
+    requirements: [
+      'A Mac. Apple chip Macs (2020 and newer) use the arm64 download. Older Intel Macs use the x86_64 one.',
+      'Free disk space. The app is about 65 MB to download, and the optional AI models for captions, voices and cutout are extra.',
+      'Your own videos. Concat does not come with footage.',
+    ],
+    does: [
+      'Cut clips on several tracks',
+      'Write captions from the sound of your video',
+      'Turn text into speech and remove backgrounds, once you download those models',
+      'Add effects, titles and keyframe animation',
+      'Export up to 4K with no watermark',
+      'Work without an account and keep your footage on your computer',
+    ],
+    doesNot: [
+      'Come signed by Apple, so the first open needs a click in Privacy and Security',
+      'Replace a finished, polished editor yet. It is a beta',
+      'Get every caption right. Always read them before you post',
+    ],
+    limits: [
+      'It is in beta. The maker says it works and still has edges. Report problems on its GitHub issues page.',
+      'The Mac build is not signed by Apple, so you click Open Anyway once.',
+      'The AI models for captions, voices and cutout are a separate download from Settings. They work offline after that.',
+      'It is made mostly by one person, so updates and fixes depend on that one developer.',
+      'Free and open source under AGPL-3.0. Using it to edit your videos costs nothing and your videos stay yours. If you ever change the code and share it, the licence asks you to share your changes too.',
+    ],
+    stuck: [
+      {
+        q: 'My Mac says Concat cannot be opened because it is from an unidentified developer',
+        a: 'Click Done. Open System Settings, then Privacy and Security, scroll to the message about Concat and click Open Anyway. Confirm with your password or Touch ID, then open Concat again.',
+      },
+      {
+        q: 'I do not see Open Anyway',
+        a: 'Try to open Concat once first, so the message appears, and then look again in Privacy and Security. It stays there for about an hour after the attempt.',
+      },
+      {
+        q: 'I am not sure which download to pick',
+        a: 'Click the Apple menu and choose About This Mac. If it says Chip with Apple, pick the file ending in macos-arm64.dmg. If it says Processor with Intel, pick macos-x86_64.dmg.',
+      },
+      {
+        q: 'There are no automatic captions',
+        a: 'The captions model is a separate download. Open Concat Settings and download it once, then try the captions tool again.',
+      },
+      {
+        q: 'Something looks broken or crashes',
+        a: 'It is a beta. Update to the newest release on the download page first. If it still happens, tell the maker on the GitHub issues page, with what you clicked just before.',
+      },
+    ],
+  },
+  {
+    slug: 'free-ai-salesman',
+    keyword: 'SALESMAN',
+    name: 'Salesman Kit', // email subject becomes "Your Salesman Kit setup notes"
+    tagline: 'Find the right businesses. Write the first email.',
+    subline:
+      'Four Claude skills. Claude finds businesses that fit your dream customer, reads their websites and drafts a short email about something real. You read it and send it yourself.',
+    toolUrl: 'https://workshop.mastermindshq.business/downloads/joes-salesman-v1.0.zip',
+    primaryLabel: 'Download the kit',
+    intro:
+      'Four Claude skills that help you find customers and write the first email. Claude finds businesses that fit your dream customer, reads their websites, tells you why each one fits, and drafts a short email about something specific it found. It also helps you answer replies. You read every email and send it yourself, from your own inbox.',
+    steps: [
+      'Download the kit and unzip it.',
+      'Pick how you want to use it. Claude Code: open a terminal in the unzipped folder and run "bash install.sh", then restart Claude Code. Claude app: go to Settings, then Capabilities, turn on Skills, upload the four zips from the claude-app folder, and turn on web search. No install: open START-HERE-PROMPT.md and paste the prompt into any new Claude chat.',
+      'Start a chat and say "Set up Salesman". Claude asks what you sell, who your dream customer is and where they are, then saves it. Next say "Find me customers", and after that "Write emails for 1, 2 and 3".',
+    ],
+    howIUse: [
+      'Be specific about your dream customer, and paste one or two emails you wrote yourself. The more real your answers, the more your drafts sound like you.',
+      'Look at the first ten businesses before you write anything. Pick the three that fit best, read the email Claude drafts, change anything that does not sound like you, then send it by hand.',
+      'When someone replies, paste the reply into the chat and say "They replied". Claude tells you what they meant and drafts the next message. A "no" or an "unsubscribe" is final.',
+    ],
+    goodToKnow:
+      'Salesman drafts. It never sends an email for you, and it never makes up a client, a number or an email address. If it cannot find something, it tells you. Every email needs your real business postal address in the footer, and an easy way to say no. Send 10 to 20 a day by hand from your normal inbox. Skills in the Claude app need a paid Claude plan. No plan? The paste-in prompt works in any chat. It is not legal advice, so check the email rules where you and your customers live.',
+    links: [
+      { label: 'Download the kit', url: 'https://workshop.mastermindshq.business/downloads/joes-salesman-v1.0.zip' },
+      {
+        label: 'How to turn skills on (Anthropic help page)',
+        url: 'https://support.claude.com/en/articles/12512180-using-skills-in-claude',
+      },
+      { label: 'Harvey, the open source project that inspired it', url: 'https://github.com/ethanplusai/harvey' },
+    ],
+    githubUrl: '',
+    stars: 0,
+    license: 'MIT (inspired by the open source Harvey project by Ethan Rogers, credited in the kit)',
+    why: 'Four Claude skills that find businesses that fit, read their websites, draft a short specific email and help with replies. Drafts only, the follower sends every email.',
+    level: 'beginner',
+    who: 'Anyone who sells to businesses and wants a short list of good fits and a first email that does not sound like a template.',
+    needs:
+      'Claude Code, or the Claude app with Skills turned on (paid plan) and web search on. Or any Claude chat, using the paste-in prompt. Your real business postal address for the email footer.',
+    ticks: ['No sign-up here', 'You send every email', 'Works in the Claude app'],
+    claudePrompt: `Install Joe's Salesman kit on this computer and check that it works.
+  
+  My rules:
+  1. Only download from https://workshop.mastermindshq.business/downloads/joes-salesman-v1.0.zip and its checksum at https://workshop.mastermindshq.business/downloads/joes-salesman-v1.0.zip.sha256
+  2. Download both into a new empty folder. Check that the zip matches the checksum. If it does not, stop and tell me.
+  3. Unzip it, read install.sh first and tell me in one line what it does, then run "bash install.sh" from the unzipped folder.
+  4. Do not touch anything outside ~/.claude/.
+  5. When it is done, tell me to restart Claude Code, then to say "Set up Salesman".`,
+    requirements: [
+      'Claude Code, or the Claude app with Skills turned on (this needs a paid Claude plan).',
+      'Web search turned on in Claude, so it can look for businesses. Without it, you paste in a list of businesses yourself.',
+      'A clear idea of who your dream customer is.',
+      'Your real business postal address, for the footer of every email.',
+    ],
+    usePrompt: {
+      title: 'Your first three messages',
+      text: `Set up Salesman
+  
+  (then, when it has saved your notes)
+  Find me customers
+  
+  (then, once you like the list)
+  Write emails for 1, 2 and 3`,
+    },
+    does: [
+      'Ask you a few questions and save your offer and dream customer',
+      'Find 10 businesses that fit and read each website',
+      'Score each one out of 100 and tell you why it fits',
+      'Draft a short first email plus two follow-ups, in your voice',
+      'Check each draft for spammy words, made-up details and the legal footer',
+      'Read a reply and draft your next message',
+    ],
+    doesNot: [
+      'Send any email for you',
+      'Make up a client, a number or an email address',
+      'Guess an address when a site does not show one',
+      'Promise you customers or replies',
+      'Log in to LinkedIn or anything behind a password',
+    ],
+    limits: [
+      'The kit is free and open source (MIT). It is a small rework inspired by Harvey, an open source sales agent by Ethan Rogers. No code was copied, and Harvey is credited in the kit.',
+      'It drafts and you send. Reading each email and pressing send is your job, and that is on purpose.',
+      'Your emails need your real business postal address and an easy way to say no. Many countries require both, including the US under CAN-SPAM. The footer in each draft handles it. This is not legal advice, so check the rules where you and your customers are.',
+      'Send 10 to 20 a day by hand from your normal inbox. To send many more, use a separate domain with SPF, DKIM and DMARC set up, and warm it up for a few weeks first.',
+      'If someone asks whether AI helped, tell them the truth.',
+      'It reads public websites only. Some sites will not load, and then Claude says so instead of guessing.',
+      'Skills in the Claude app need a paid Claude plan. The paste-in prompt works without one.',
+    ],
+    stuck: [
+      {
+        q: 'Claude cannot find any businesses',
+        a: 'Turn on web search in Claude. If you do not have it, paste a list of business names or websites into the chat and say "Find me customers from this list".',
+      },
+      {
+        q: 'The Claude app does not show Skills',
+        a: 'Skills need a paid Claude plan. Go to Settings, then Capabilities, and turn on Skills. No plan? Open START-HERE-PROMPT.md in the kit and paste the prompt into any new chat.',
+      },
+      {
+        q: 'The email does not sound like me',
+        a: 'Say "Set up Salesman" again and paste one or two emails you really wrote. Claude matches your sentences, not a template.',
+      },
+      {
+        q: 'There is no email address for a business',
+        a: 'Then Claude says "contact form" or "none found". It never guesses one. Use their contact form, or skip that business.',
+      },
+      {
+        q: 'The install does not run in Claude Code',
+        a: 'Open a terminal in the unzipped folder, not the zip. Run "bash install.sh", then restart Claude Code and say "Set up Salesman".',
+      },
+    ],
   }
+
 ]
 
 const BY_SLUG: Record<string, FreeAiTool> = Object.fromEntries(FREE_AI_TOOLS.map((t) => [t.slug, t]))
