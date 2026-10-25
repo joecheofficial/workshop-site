@@ -1046,7 +1046,119 @@ Do not sign me up for anything.`,
         a: 'It is a beta. Update to the newest release on the download page first. If it still happens, tell the maker on the GitHub issues page, with what you clicked just before.',
       },
     ],
+  },
+  {
+    slug: 'free-ai-salesman',
+    keyword: 'SALESMAN',
+    name: 'Salesman Kit', // email subject becomes "Your Salesman Kit setup notes"
+    tagline: 'Find the right businesses. Write the first email.',
+    subline:
+      'Four Claude skills. Claude finds businesses that fit your dream customer, reads their websites and drafts a short email about something real. You read it and send it yourself.',
+    toolUrl: 'https://workshop.mastermindshq.business/downloads/joes-salesman-v1.0.zip',
+    primaryLabel: 'Download the kit',
+    intro:
+      'Four Claude skills that help you find customers and write the first email. Claude finds businesses that fit your dream customer, reads their websites, tells you why each one fits, and drafts a short email about something specific it found. It also helps you answer replies. You read every email and send it yourself, from your own inbox.',
+    steps: [
+      'Download the kit and unzip it.',
+      'Pick how you want to use it. Claude Code: open a terminal in the unzipped folder and run "bash install.sh", then restart Claude Code. Claude app: go to Settings, then Capabilities, turn on Skills, upload the four zips from the claude-app folder, and turn on web search. No install: open START-HERE-PROMPT.md and paste the prompt into any new Claude chat.',
+      'Start a chat and say "Set up Salesman". Claude asks what you sell, who your dream customer is and where they are, then saves it. Next say "Find me customers", and after that "Write emails for 1, 2 and 3".',
+    ],
+    howIUse: [
+      'Be specific about your dream customer, and paste one or two emails you wrote yourself. The more real your answers, the more your drafts sound like you.',
+      'Look at the first ten businesses before you write anything. Pick the three that fit best, read the email Claude drafts, change anything that does not sound like you, then send it by hand.',
+      'When someone replies, paste the reply into the chat and say "They replied". Claude tells you what they meant and drafts the next message. A "no" or an "unsubscribe" is final.',
+    ],
+    goodToKnow:
+      'Salesman drafts. It never sends an email for you, and it never makes up a client, a number or an email address. If it cannot find something, it tells you. Every email needs your real business postal address in the footer, and an easy way to say no. Send 10 to 20 a day by hand from your normal inbox. Skills in the Claude app need a paid Claude plan. No plan? The paste-in prompt works in any chat. It is not legal advice, so check the email rules where you and your customers live.',
+    links: [
+      { label: 'Download the kit', url: 'https://workshop.mastermindshq.business/downloads/joes-salesman-v1.0.zip' },
+      {
+        label: 'How to turn skills on (Anthropic help page)',
+        url: 'https://support.claude.com/en/articles/12512180-using-skills-in-claude',
+      },
+      { label: 'Harvey, the open source project that inspired it', url: 'https://github.com/ethanplusai/harvey' },
+    ],
+    githubUrl: '',
+    stars: 0,
+    license: 'MIT (inspired by the open source Harvey project by Ethan Rogers, credited in the kit)',
+    why: 'Four Claude skills that find businesses that fit, read their websites, draft a short specific email and help with replies. Drafts only, the follower sends every email.',
+    level: 'beginner',
+    who: 'Anyone who sells to businesses and wants a short list of good fits and a first email that does not sound like a template.',
+    needs:
+      'Claude Code, or the Claude app with Skills turned on (paid plan) and web search on. Or any Claude chat, using the paste-in prompt. Your real business postal address for the email footer.',
+    ticks: ['No sign-up here', 'You send every email', 'Works in the Claude app'],
+    claudePrompt: `Install Joe's Salesman kit on this computer and check that it works.
+  
+  My rules:
+  1. Only download from https://workshop.mastermindshq.business/downloads/joes-salesman-v1.0.zip and its checksum at https://workshop.mastermindshq.business/downloads/joes-salesman-v1.0.zip.sha256
+  2. Download both into a new empty folder. Check that the zip matches the checksum. If it does not, stop and tell me.
+  3. Unzip it, read install.sh first and tell me in one line what it does, then run "bash install.sh" from the unzipped folder.
+  4. Do not touch anything outside ~/.claude/.
+  5. When it is done, tell me to restart Claude Code, then to say "Set up Salesman".`,
+    requirements: [
+      'Claude Code, or the Claude app with Skills turned on (this needs a paid Claude plan).',
+      'Web search turned on in Claude, so it can look for businesses. Without it, you paste in a list of businesses yourself.',
+      'A clear idea of who your dream customer is.',
+      'Your real business postal address, for the footer of every email.',
+    ],
+    usePrompt: {
+      title: 'Your first three messages',
+      text: `Set up Salesman
+  
+  (then, when it has saved your notes)
+  Find me customers
+  
+  (then, once you like the list)
+  Write emails for 1, 2 and 3`,
+    },
+    does: [
+      'Ask you a few questions and save your offer and dream customer',
+      'Find 10 businesses that fit and read each website',
+      'Score each one out of 100 and tell you why it fits',
+      'Draft a short first email plus two follow-ups, in your voice',
+      'Check each draft for spammy words, made-up details and the legal footer',
+      'Read a reply and draft your next message',
+    ],
+    doesNot: [
+      'Send any email for you',
+      'Make up a client, a number or an email address',
+      'Guess an address when a site does not show one',
+      'Promise you customers or replies',
+      'Log in to LinkedIn or anything behind a password',
+    ],
+    limits: [
+      'The kit is free and open source (MIT). It is a small rework inspired by Harvey, an open source sales agent by Ethan Rogers. No code was copied, and Harvey is credited in the kit.',
+      'It drafts and you send. Reading each email and pressing send is your job, and that is on purpose.',
+      'Your emails need your real business postal address and an easy way to say no. Many countries require both, including the US under CAN-SPAM. The footer in each draft handles it. This is not legal advice, so check the rules where you and your customers are.',
+      'Send 10 to 20 a day by hand from your normal inbox. To send many more, use a separate domain with SPF, DKIM and DMARC set up, and warm it up for a few weeks first.',
+      'If someone asks whether AI helped, tell them the truth.',
+      'It reads public websites only. Some sites will not load, and then Claude says so instead of guessing.',
+      'Skills in the Claude app need a paid Claude plan. The paste-in prompt works without one.',
+    ],
+    stuck: [
+      {
+        q: 'Claude cannot find any businesses',
+        a: 'Turn on web search in Claude. If you do not have it, paste a list of business names or websites into the chat and say "Find me customers from this list".',
+      },
+      {
+        q: 'The Claude app does not show Skills',
+        a: 'Skills need a paid Claude plan. Go to Settings, then Capabilities, and turn on Skills. No plan? Open START-HERE-PROMPT.md in the kit and paste the prompt into any new chat.',
+      },
+      {
+        q: 'The email does not sound like me',
+        a: 'Say "Set up Salesman" again and paste one or two emails you really wrote. Claude matches your sentences, not a template.',
+      },
+      {
+        q: 'There is no email address for a business',
+        a: 'Then Claude says "contact form" or "none found". It never guesses one. Use their contact form, or skip that business.',
+      },
+      {
+        q: 'The install does not run in Claude Code',
+        a: 'Open a terminal in the unzipped folder, not the zip. Run "bash install.sh", then restart Claude Code and say "Set up Salesman".',
+      },
+    ],
   }
+
 ]
 
 const BY_SLUG: Record<string, FreeAiTool> = Object.fromEntries(FREE_AI_TOOLS.map((t) => [t.slug, t]))
