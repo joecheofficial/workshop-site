@@ -168,7 +168,6 @@ export const WEBSITE_GENERIC_GIVEAWAYS: Readonly<Record<string, string>> = {
   hooklab: 'HookLab',
   'ig-settings': 'The Instagram Settings Checklist',
   'logo-maker-guide': 'The Logo Maker Guide',
-  film: 'Make a Film with Claude',
   'posture-coach': 'Posture Coach',
   'ray-dalio-council': 'The Ray Dalio Council',
   'squarespace-escape': 'The Squarespace Escape Kit',
