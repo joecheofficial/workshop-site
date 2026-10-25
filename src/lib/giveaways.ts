@@ -374,12 +374,21 @@ export const giveaways: Giveaway[] = [
     badgeVariant: 'pink',
   },
   {
+<<<<<<< ours
     slug: 'linkedin-kit',
     title: "Joe's LinkedIn Kit: posts that sound like you, not like AI",
     description: 'Five free Claude skills that write down how you sound, then draft LinkedIn posts, score your profile out of 100, help with comments and plan your week. You post it yourself.',
     icon: '◈',
     badge: 'Skills',
     badgeVariant: 'purple',
+=======
+    slug: 'film',
+    title: 'Make a film with Claude: a short animated film from your story idea',
+    description: 'A free film-style library for Claude Code. Tell Claude your story idea and it draws, scores and renders a short animated film on your Mac.',
+    icon: '◈',
+    badge: 'Build',
+    badgeVariant: 'pink',
+>>>>>>> theirs
   },
   {
     slug: 'whatsapp-agent',
