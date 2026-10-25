@@ -167,6 +167,7 @@ export const WEBSITE_GENERIC_GIVEAWAYS: Readonly<Record<string, string>> = {
   'hated-task-prompts': 'The Hated-Task Prompt Pack',
   hooklab: 'HookLab',
   'ig-settings': 'The Instagram Settings Checklist',
+  'linkedin-kit': "Joe's LinkedIn Kit",
   'logo-maker-guide': 'The Logo Maker Guide',
   'posture-coach': 'Posture Coach',
   'ray-dalio-council': 'The Ray Dalio Council',
