@@ -102,6 +102,14 @@ export const giveaways: Giveaway[] = [
     badgeVariant: 'pink',
   },
   {
+    slug: 'free-ai-concat',
+    title: 'Free AI Tools: Concat setup notes',
+    description: "A free video editor with auto captions and 4K export. No watermark, no account, no subscription. Mac setup steps and honest limits (it is a beta).",
+    icon: '◆',
+    badge: 'Free Tool',
+    badgeVariant: 'purple',
+  },
+  {
     slug: 'free-ai-voicestudio',
     title: 'Free AI Tools: VoiceStudio setup notes',
     description: "Clone your own voice, design new voices and dub your videos in 646 languages, on your own computer.",
