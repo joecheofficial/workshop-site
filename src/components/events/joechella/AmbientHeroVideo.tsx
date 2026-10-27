@@ -2,8 +2,15 @@
 
 import { useEffect, useRef, useState, type ReactNode } from 'react'
 
+// Matches Tailwind's md breakpoint: below 768px counts as a phone.
+const PHONE_QUERY = '(max-width: 767px)'
+
 type Props = {
   src?: string
+  /** Smaller file for phones. When set, viewports up to 767px wide load it instead of src. */
+  mobileSrc?: string
+  /** First-frame poster for the phone file, set on the video element only. */
+  mobilePoster?: string
   /** Server-rendered poster image, shown underneath the video. */
   poster: ReactNode
   /** Server-rendered gradient overlays, drawn above the video. */
@@ -16,10 +23,16 @@ type Props = {
  * actually playing. The pause control sits outside the background layer so it
  * stays clickable above the hero content. It never loads for reduced-motion or Save-Data visitors,
  * and a visible control lets anyone pause it.
+ *
+ * The file is chosen in the browser before the video element is created, so a
+ * phone only ever requests mobileSrc and a larger screen only requests src. The
+ * choice is made once per page load; rotating a phone keeps the file it started
+ * with rather than downloading a second video.
  */
-export default function AmbientHeroVideo({ src, poster, overlays }: Props) {
+export default function AmbientHeroVideo({ src, mobileSrc, mobilePoster, poster, overlays }: Props) {
   const videoRef = useRef<HTMLVideoElement | null>(null)
-  const [enabled, setEnabled] = useState(false)
+  const [source, setSource] = useState<{ src: string; poster?: string } | null>(null)
+  const enabled = source !== null
   const [playing, setPlaying] = useState(false)
   const [paused, setPaused] = useState(false)
 
@@ -27,7 +40,8 @@ export default function AmbientHeroVideo({ src, poster, overlays }: Props) {
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)')
     const connection = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection
     if (!src || reduce.matches || connection?.saveData) return
-    setEnabled(true)
+    const phone = Boolean(mobileSrc) && window.matchMedia(PHONE_QUERY).matches
+    setSource(phone && mobileSrc ? { src: mobileSrc, poster: mobilePoster } : { src })
 
     function handleChange(event: MediaQueryListEvent) {
       if (event.matches) {
@@ -37,7 +51,7 @@ export default function AmbientHeroVideo({ src, poster, overlays }: Props) {
     }
     reduce.addEventListener('change', handleChange)
     return () => reduce.removeEventListener('change', handleChange)
-  }, [src])
+  }, [src, mobileSrc, mobilePoster])
 
   useEffect(() => {
     const video = videoRef.current
@@ -65,11 +79,12 @@ export default function AmbientHeroVideo({ src, poster, overlays }: Props) {
     <>
       <div className="jc-hero-media absolute inset-0 -z-10">
         {poster}
-        {enabled ? (
+        {source ? (
           <video
             ref={videoRef}
             className={`absolute inset-0 h-full w-full object-cover ${playing ? 'jc-playing' : ''}`}
-            src={src}
+            src={source.src}
+            poster={source.poster}
             muted
             loop
             playsInline

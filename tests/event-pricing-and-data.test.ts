@@ -369,3 +369,31 @@ test('Joechella event has expected configuration and no dinner-specific copy or 
   assert.doesNotMatch(combined, /VIP status/i, 'must not mention VIP status')
   assert.doesNotMatch(combined, /doors close at 6:30/i, 'must not mention 6:30 doors')
 })
+
+test('mobile hero video fields point at small local files and stay opt-in', async () => {
+  const { statSync } = await import('node:fs')
+  const { join } = await import('node:path')
+
+  const event = getEventBySlug('joechella-big-one-december-11-2026')
+  assert.ok(event?.heroVideoMobileSrc, 'Joechella must set a phone hero video')
+  assert.ok(event.heroVideoMobilePoster, 'Joechella must set a phone hero poster')
+  assert.notEqual(event.heroVideoMobileSrc, event.heroVideoSrc)
+
+  const video = statSync(join(process.cwd(), 'public', event.heroVideoMobileSrc))
+  const poster = statSync(join(process.cwd(), 'public', event.heroVideoMobilePoster))
+  assert.ok(video.size < 1.5 * 1024 * 1024, `phone hero video must stay under 1.5 MB, got ${video.size}`)
+  assert.ok(poster.size < 100 * 1024, `phone hero poster must stay under 100 KB, got ${poster.size}`)
+
+  // A <video poster> skips next/image and loads at page load on every viewport,
+  // so the bloom gallery poster has to be a pre-sized file.
+  const bloom = event.sections?.find((section) => section.type === 'gallery' && section.id === 'bloom')
+  assert.ok(bloom && bloom.type === 'gallery' && bloom.video, 'Joechella bloom gallery video must exist')
+  const galleryPoster = statSync(join(process.cwd(), 'public', bloom.video.poster))
+  assert.ok(galleryPoster.size < 200 * 1024, `bloom gallery poster must stay under 200 KB, got ${galleryPoster.size}`)
+
+  for (const other of events) {
+    if (other.slug === event.slug) continue
+    assert.equal(other.heroVideoMobileSrc, undefined, `${other.slug} must not gain a phone hero video`)
+    assert.equal(other.heroVideoMobilePoster, undefined, `${other.slug} must not gain a phone hero poster`)
+  }
+})

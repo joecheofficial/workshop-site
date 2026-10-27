@@ -169,6 +169,11 @@ export type EventDefinition = {
   heroObjectFit?: 'cover' | 'contain'
   heroVideoSrc?: string
   heroVideoPoster?: string
+  // Optional phone variant of the festival hero video. Viewports up to 767px
+  // wide load this file instead of heroVideoSrc, so phones never download the
+  // full-size video. Only the festival layout (FestivalHero) reads these.
+  heroVideoMobileSrc?: string
+  heroVideoMobilePoster?: string
   // Opt-in festival layout: full-bleed ambient video hero, highlight ticker and
   // scroll reveals. Events without this field render exactly as before.
   festivalLayout?: {
@@ -581,6 +586,8 @@ export const events: EventDefinition[] = [
     heroAlt: 'Bali Beach Glamping from above, the Joechella venue',
     heroVideoSrc: 'https://pub-c8d5d807eda94fd7a89d74f95de97030.r2.dev/videos/bali-bloom-recap.mp4',
     heroVideoPoster: '/events/joechella-big-one/bbg-drone-shots.jpeg',
+    heroVideoMobileSrc: '/events/joechella-big-one/bloom-hero-mobile.mp4',
+    heroVideoMobilePoster: '/events/joechella-big-one/bloom-hero-mobile-poster.jpg',
     festivalLayout: {
       ticker: [
         'Lightning talks',
@@ -671,7 +678,7 @@ export const events: EventDefinition[] = [
         eyebrow: 'This Is The Energy',
         video: {
           src: 'https://pub-c8d5d807eda94fd7a89d74f95de97030.r2.dev/videos/bali-bloom-recap.mp4',
-          poster: '/events/joechella-big-one/sunset.jpg',
+          poster: '/events/joechella-big-one/sunset-poster.jpg',
           label: 'Bali Bloom recap video. Sunset at Bali Beach Glamping.',
           caption: 'Bali Bloom, the festival we held on this land.',
         },

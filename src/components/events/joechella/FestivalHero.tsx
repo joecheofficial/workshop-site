@@ -50,6 +50,8 @@ export default function FestivalHero({ event, eventEnded }: { event: EventDefini
       <section className="relative isolate overflow-hidden">
         <AmbientHeroVideo
           src={event.heroVideoSrc}
+          mobileSrc={event.heroVideoMobileSrc}
+          mobilePoster={event.heroVideoMobilePoster}
           poster={
             <Image
               src={poster}
