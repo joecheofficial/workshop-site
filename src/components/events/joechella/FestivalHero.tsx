@@ -50,6 +50,8 @@ export default function FestivalHero({ event, eventEnded }: { event: EventDefini
       <section className="relative isolate overflow-hidden">
         <AmbientHeroVideo
           src={event.heroVideoSrc}
+          mobileSrc={event.heroVideoMobileSrc}
+          mobilePoster={event.heroVideoMobilePoster}
           poster={
             <Image
               src={poster}
@@ -70,7 +72,7 @@ export default function FestivalHero({ event, eventEnded }: { event: EventDefini
         />
 
         <div className="relative mx-auto flex min-h-[calc(100svh-4rem)] max-w-6xl flex-col justify-end px-6 pb-10 pt-10 md:pb-16 md:pt-28">
-          <div className="jc-rise flex flex-wrap items-center gap-3" style={{ ['--jc-i' as string]: 0 }}>
+          <div className="jc-rise flex flex-wrap items-center gap-3 pr-14 md:pr-0" style={{ ['--jc-i' as string]: 0 }}>
             {event.badge ? (
               <span className="inline-flex items-center gap-2 rounded-full border border-[#F5C3C6]/35 bg-black/35 px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#F5C3C6] backdrop-blur-md">
                 <span className="jc-badge-dot h-2 w-2 rounded-full bg-[#F5C3C6]" aria-hidden="true" />
