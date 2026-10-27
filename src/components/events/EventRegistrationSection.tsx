@@ -45,6 +45,7 @@ import { celebrate } from '@/lib/celebrate'
 import { AI_LEVELS_SIGNUP } from '@/data/ai-levels-signup'
 import { isValidEmail } from '@/lib/email-validation'
 import WaitlistJoinForm from '@/components/events/WaitlistJoinForm'
+import { formatDonationLabelNote, toggleDonationPreset } from '@/lib/events'
 import { buildEventCheckoutRequestBody } from '@/lib/event-registration-flow'
 import {
   BUSINESS_CONTEXT_MIN_LENGTH,
@@ -65,6 +66,8 @@ export type EventRegistrationData = {
     checkoutNote: string
     donationMode?: boolean
     minDonation?: number
+    donationPresets?: Array<{ amount: number; label: string; description?: string }>
+    donationLabelNote?: string
   }
   calendarEvent?: {
     googleUrl: string
@@ -189,6 +192,7 @@ export default function EventRegistrationSection({
   const [savingProfile, setSavingProfile] = useState(false)
   const [fieldErrors, setFieldErrors] = useState<IntakeFieldErrors>({})
   const [donationAmount, setDonationAmount] = useState(event.pricing.fullPrice)
+  const [selectedPresetIndices, setSelectedPresetIndices] = useState<number[]>([])
   const [promoOpen, setPromoOpen] = useState(Boolean(initialPromoCode))
   const [promoCode, setPromoCode] = useState(initialPromoCode ?? '')
   const [appliedPromoCode, setAppliedPromoCode] = useState<string | null>(initialPromoCode ?? null)
@@ -882,26 +886,73 @@ export default function EventRegistrationSection({
             ) : null}
 
             {event.pricing.donationMode ? (
-              <label className="grid gap-2">
-                <span className="text-sm font-semibold text-[#FCF4EB]">
-                  Donation amount <span className="font-normal text-[#FCF4EB]/55">(suggested: $10 — minimum: $0)</span>
-                </span>
-                <div className="flex items-center gap-0 rounded-xl border border-black/10 bg-white overflow-hidden focus-within:border-[#8B79D4]/55 transition w-48">
-                  <span className="pl-4 pr-1 text-black/55 font-semibold select-none">$</span>
-                  <input
-                    type="number"
-                    min={event.pricing.minDonation ?? 0}
-                    step={1}
-                    value={donationAmount}
-                    onChange={(e) => {
-                      const v = parseFloat(e.target.value)
-                      setDonationAmount(isNaN(v) ? 0 : Math.max(event.pricing.minDonation ?? 0, v))
-                    }}
-                    className="flex-1 py-3 pr-4 text-black outline-none bg-transparent"
-                  />
-                </div>
+              <div className="grid gap-3">
+                <label className="grid gap-2">
+                  <span className="text-sm font-semibold text-[#FCF4EB]">
+                    Donation amount{' '}
+                    <span className="font-normal text-[#FCF4EB]/55">
+                      {formatDonationLabelNote(event.pricing)}
+                    </span>
+                  </span>
+                  <div className="flex items-center gap-0 rounded-xl border border-black/10 bg-white overflow-hidden focus-within:border-[#8B79D4]/55 transition w-48">
+                    <span className="pl-4 pr-1 text-black/55 font-semibold select-none">{event.pricing.currencySymbol}</span>
+                    <input
+                      type="number"
+                      min={event.pricing.minDonation ?? 0}
+                      step={1}
+                      value={donationAmount}
+                      onChange={(e) => {
+                        const v = parseFloat(e.target.value)
+                        setDonationAmount(isNaN(v) ? (event.pricing.minDonation ?? 0) : Math.max(event.pricing.minDonation ?? 0, v))
+                      }}
+                      className="flex-1 py-3 pr-4 text-black outline-none bg-transparent"
+                    />
+                  </div>
+                </label>
+                {event.pricing.donationPresets?.length ? (
+                  <div className="grid gap-2">
+                    {event.pricing.donationPresets.map((preset, index) => {
+                      const isSelected = selectedPresetIndices.includes(index)
+                      return (
+                        <button
+                          key={`${preset.label}-${preset.amount}`}
+                          type="button"
+                          aria-pressed={isSelected}
+                          onClick={() => {
+                            const { nextDonation, nextSelected } = toggleDonationPreset({
+                              currentDonation: donationAmount,
+                              minDonation: event.pricing.minDonation,
+                              presetAmount: preset.amount,
+                              isSelected,
+                            })
+                            setDonationAmount(nextDonation)
+                            setSelectedPresetIndices((prev) =>
+                              nextSelected ? [...prev, index] : prev.filter((i) => i !== index),
+                            )
+                          }}
+                          className={`flex flex-col items-start rounded-xl border px-4 py-3 text-left transition ${
+                            isSelected
+                              ? 'border-[#BDB3E8] bg-[#8B79D4]/25 text-[#FCF4EB] ring-1 ring-[#BDB3E8]/50'
+                              : 'border-white/15 bg-white/5 text-[#FCF4EB]/85 hover:border-[#BDB3E8]/60 hover:bg-white/10'
+                          }`}
+                        >
+                          <span className="text-sm font-semibold">
+                            {isSelected ? '✓ ' : '+ '}
+                            {preset.label}
+                          </span>
+                          {preset.description ? (
+                            <span className="mt-1 text-xs leading-5 text-[#FCF4EB]/68">{preset.description}</span>
+                          ) : null}
+                        </button>
+                      )
+                    })}
+                    <p className="text-sm font-semibold text-[#FCF4EB]">
+                      Total: {displayedPrice}
+                    </p>
+                  </div>
+                ) : null}
                 <p className="text-sm text-[#FCF4EB]/55">{event.pricing.checkoutNote}</p>
-              </label>
+              </div>
             ) : null}
 
             <div className="flex flex-col items-start gap-2">

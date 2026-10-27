@@ -1,0 +1,168 @@
+/*
+ * Festival layout styles. Every selector is prefixed with .jc- so nothing here
+ * can reach a page that does not render the opt-in festival components.
+ */
+
+/* ─── Hero ───────────────────────────────────────────── */
+.jc-hero-media video {
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+.jc-hero-media video.jc-playing {
+  opacity: 1;
+}
+.jc-hero-poster {
+  animation: jc-slow-zoom 22s ease-out both;
+}
+.jc-rise {
+  animation: jc-rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: calc(var(--jc-i, 0) * 90ms + 80ms);
+}
+.jc-title-glow {
+  text-shadow: 0 2px 40px rgba(10, 7, 20, 0.55);
+}
+.jc-badge-dot {
+  animation: jc-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes jc-rise {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes jc-slow-zoom {
+  from { transform: scale(1.08); }
+  to { transform: scale(1); }
+}
+@keyframes jc-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(245, 195, 198, 0.55); }
+  50% { box-shadow: 0 0 0 7px rgba(245, 195, 198, 0); }
+}
+
+/* ─── Ticker ─────────────────────────────────────────── */
+.jc-ticker-track {
+  animation: jc-ticker 38s linear infinite;
+}
+.jc-ticker:hover .jc-ticker-track {
+  animation-play-state: paused;
+}
+@keyframes jc-ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ─── Scroll reveal ──────────────────────────────────── */
+/* Content is visible by default. JS only hides blocks that start below the
+   fold, so nothing is lost if scripts fail. */
+[data-jc-reveal].jc-pending {
+  opacity: 0;
+  transform: translateY(28px);
+}
+[data-jc-reveal].jc-in {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--jc-delay, 0ms);
+}
+
+/* ─── Timeline ───────────────────────────────────────── */
+.jc-rail-line {
+  transform-origin: top;
+}
+.jc-group.jc-pending .jc-rail-line {
+  transform: scaleY(0);
+}
+.jc-group.jc-in .jc-rail-line {
+  transform: scaleY(1);
+  transition: transform 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.15s;
+}
+.jc-dot {
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+}
+.jc-row.jc-in .jc-dot,
+.jc-row:not(.jc-pending) .jc-dot {
+  box-shadow: 0 0 0 5px rgba(139, 121, 212, 0.14), 0 0 18px rgba(139, 121, 212, 0.45);
+}
+.jc-row:hover .jc-dot {
+  transform: scale(1.25);
+}
+
+.jc-card {
+  transition: transform 0.25s ease, border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+}
+.jc-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(189, 179, 232, 0.32);
+  background-color: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 18px 50px rgba(139, 121, 212, 0.16), 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.jc-card-highlight {
+  position: relative;
+  isolation: isolate;
+}
+.jc-card-highlight::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(245, 195, 198, 0.75), rgba(139, 121, 212, 0.75) 55%, rgba(245, 195, 198, 0.2));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.jc-night-glow {
+  background:
+    radial-gradient(120% 60% at 50% 105%, rgba(245, 160, 110, 0.12), transparent 60%),
+    radial-gradient(80% 50% at 15% 0%, rgba(139, 121, 212, 0.14), transparent 70%);
+}
+
+/* ─── Gallery ────────────────────────────────────────── */
+.jc-tile img {
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1), filter 0.6s ease;
+}
+.jc-tile:hover img {
+  transform: scale(1.05);
+  filter: saturate(1.1);
+}
+
+/* ─── Reduced motion ─────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .jc-rise,
+  .jc-hero-poster,
+  .jc-badge-dot,
+  .jc-ticker-track {
+    animation: none !important;
+  }
+  .jc-ticker-track {
+    transform: none !important;
+  }
+  [data-jc-reveal].jc-pending,
+  [data-jc-reveal].jc-in {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .jc-group .jc-rail-line {
+    transform: none !important;
+    transition: none !important;
+  }
+  .jc-card,
+  .jc-card:hover,
+  .jc-tile img,
+  .jc-tile:hover img,
+  .jc-row:hover .jc-dot {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+/* Ticker duplicate exists only for the seamless loop. */
+@media (prefers-reduced-motion: reduce) {
+  .jc-ticker-dup { display: none !important; }
+  .jc-ticker-track { flex-wrap: wrap; justify-content: center; width: 100% !important; }
+}
