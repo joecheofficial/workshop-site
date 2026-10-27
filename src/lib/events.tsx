@@ -729,14 +729,14 @@ export const events: EventDefinition[] = [
       {
         type: 'split',
         id: 'pkp',
-        eyebrow: 'Everything Above The Minimum Goes To PKP',
+        eyebrow: '100% of Donations Go To PKP',
         title: 'Supporting PKP Community Centre',
         body: [
-          'IDR 200K (about $12) covers your place at the event. Anything you give above that goes directly to PKP Community Centre. Add IDR 600K, or add IDR 1.5M, which takes one woman out of an abusive relationship for one month.',
+          'Every dollar donated above the IDR 200K (about $12) minimum goes directly to PKP. Add IDR 600K, or add IDR 1.5M, which takes one woman out of an abusive relationship for one month.',
           'PKP is a community centre in Bali founded by Ibu Sari. It trains women in sewing, cooking and English so they can earn for their families, and it is a safe place for women and children facing domestic violence, divorce or social exclusion.',
         ],
-        imageSrc: '/events/connection-dinner-canggu/pkp-women.jpg',
-        imageAlt: 'Women at PKP Community Centre, Bali',
+        imageSrc: '/events/connection-dinner-canggu/pkp-catering.jpg',
+        imageAlt: 'PKP Community Centre women, Bali',
         caption: 'PKP Community Centre, Bali, pkpcommunitycentre.org',
       },
       {
