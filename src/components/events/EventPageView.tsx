@@ -554,6 +554,8 @@ export default function EventPageView({
       checkoutNote: event.pricing.checkoutNote,
       donationMode: event.pricing.donationMode,
       minDonation: event.pricing.minDonation,
+      donationPresets: event.pricing.donationPresets,
+      donationLabelNote: event.pricing.donationLabelNote,
     },
     calendarEvent,
     successLabel: hasSetupItems ? 'Start Account Setup' : 'View Event Details',

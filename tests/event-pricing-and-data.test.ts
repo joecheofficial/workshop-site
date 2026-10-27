@@ -1,7 +1,17 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
 
-import { events, getLiveEvents, getEventBySlug, resolvePromoCode, formatEventPrice } from '../src/lib/events'
+import {
+  events,
+  getLiveEvents,
+  getEventBySlug,
+  resolvePromoCode,
+  formatEventPrice,
+  formatDonationLabelNote,
+  toggleDonationPreset,
+} from '../src/lib/events'
+import { POST } from '../src/app/api/events/checkout-session/route'
+import { buildConfirmationEmailHtml } from '../src/lib/event-confirmation-email'
 import { isEventEnded } from '../src/lib/event-status'
 import { resolveNotifyWindow, hoursUntilEvent } from '../src/lib/waitlist-notify-windows'
 import { toOrigin } from '../src/lib/url-utils'
@@ -247,4 +257,115 @@ test('toOrigin returns null for null/empty input', () => {
 
 test('toOrigin returns null for garbage input', () => {
   assert.equal(toOrigin('not a url at all !!'), null)
+})
+
+// ─── Donation presets, label formatting, and server min enforcement ────────────
+
+test('formatDonationLabelNote renders Connection Dinner label with a comma and no em dash', () => {
+  const dinner = getEventBySlug('connection-dinner-canggu')
+  assert.ok(dinner)
+  const note = formatDonationLabelNote(dinner.pricing)
+  assert.equal(note, '(suggested: $10, minimum: $0)')
+  assert.ok(!note.includes('—'), 'must not contain an em dash')
+
+  const octDinner = getEventBySlug('joe-ches-connection-dinner-sunday-october-04-2026')
+  assert.ok(octDinner)
+  assert.equal(formatDonationLabelNote(octDinner.pricing), '(suggested: $10, minimum: $0)')
+})
+
+test('formatDonationLabelNote uses custom donationLabelNote when set', () => {
+  const joechella = getEventBySlug('joechella-big-one-december-11-2026')
+  assert.ok(joechella)
+  assert.equal(formatDonationLabelNote(joechella.pricing), '(minimum IDR 200K, about $12)')
+  assert.ok(!formatDonationLabelNote(joechella.pricing).includes('—'))
+})
+
+test('toggleDonationPreset adds and removes preset amounts and clamps to minDonation', () => {
+  // Base $12, click +$33 -> $45
+  const step1 = toggleDonationPreset({
+    currentDonation: 12,
+    minDonation: 12,
+    presetAmount: 33,
+    isSelected: false,
+  })
+  assert.deepEqual(step1, { nextDonation: 45, nextSelected: true })
+
+  // Click +$83 on top -> $128
+  const step2 = toggleDonationPreset({
+    currentDonation: step1.nextDonation,
+    minDonation: 12,
+    presetAmount: 83,
+    isSelected: false,
+  })
+  assert.deepEqual(step2, { nextDonation: 128, nextSelected: true })
+
+  // Toggle off $33 -> $95
+  const step3 = toggleDonationPreset({
+    currentDonation: step2.nextDonation,
+    minDonation: 12,
+    presetAmount: 33,
+    isSelected: true,
+  })
+  assert.deepEqual(step3, { nextDonation: 95, nextSelected: false })
+
+  // Toggle off $83 when user manually lowered input to $20 -> clamps to minDonation ($12)
+  const step4 = toggleDonationPreset({
+    currentDonation: 20,
+    minDonation: 12,
+    presetAmount: 83,
+    isSelected: true,
+  })
+  assert.deepEqual(step4, { nextDonation: 12, nextSelected: false })
+})
+
+test('server checkout-session route rejects a donation below minDonation with 400', async () => {
+  const response = await POST(
+    new Request('https://workshop.mastermindshq.business/api/events/checkout-session', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        'x-forwarded-for': '203.0.113.42',
+      },
+      body: JSON.stringify({
+        slug: 'joechella-big-one-december-11-2026',
+        attendeeName: 'Test Guest',
+        attendeeEmail: 'guest@example.com',
+        donationAmount: 5,
+      }),
+    }),
+  )
+
+  assert.equal(response.status, 400)
+  const payload = await response.json()
+  assert.match(String(payload.error), /at least \$12/i)
+})
+
+test('Joechella event has expected configuration and no dinner-specific copy or em dashes', () => {
+  const event = getEventBySlug('joechella-big-one-december-11-2026')
+  assert.ok(event, 'Joechella event must exist')
+  assert.equal(event.status, 'live')
+  assert.equal(event.pricing.donationMode, true)
+  assert.equal(event.pricing.fullPrice, 12)
+  assert.equal(event.pricing.minDonation, 12)
+  assert.equal(event.pricing.donationPresets?.length, 2)
+  assert.equal(event.capacity, undefined)
+  assert.equal(event.capacityReservation, undefined)
+  assert.equal(event.manuallyClosed, false)
+  assert.equal(event.privateLocationReminder, undefined)
+  assert.equal(event.calendarEvent?.googleCalendarEventId, undefined)
+  assert.equal(
+    event.emailConfig?.mapsUrl,
+    'https://www.google.com/maps/search/?api=1&query=Bali+Beach+Glamping+Tabanan',
+  )
+  assert.equal(event.emailConfig?.signatureName, 'Joe Che')
+
+  const serialized = JSON.stringify(event)
+  const emailHtml = buildConfirmationEmailHtml(event, 'Test Guest', 'tok_123')
+  const combined = `${serialized}\n${emailHtml}`
+
+  assert.ok(!combined.includes('—'), 'Joechella copy must not contain any em dashes')
+  assert.doesNotMatch(combined, /Mostly/i, 'must not mention Mostly Restaurant')
+  assert.doesNotMatch(combined, /dress code|flip-flops/i, 'must not include dinner dress code')
+  assert.doesNotMatch(combined, /VIP status/i, 'must not mention VIP status')
+  assert.doesNotMatch(combined, /doors close at 6:30/i, 'must not mention 6:30 doors')
 })
