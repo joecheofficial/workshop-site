@@ -139,6 +139,28 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Registration is now closed for this event.' }, { status: 410 })
     }
 
+    if (
+      event.pricing.donationMode &&
+      typeof event.pricing.minDonation === 'number' &&
+      rawDonationAmount !== null &&
+      rawDonationAmount < event.pricing.minDonation
+    ) {
+      await trackInsightEvent('checkout_failed', {
+        route: '/events/checkout',
+        email: attendeeEmail,
+        properties: {
+          reason: 'donation_below_minimum',
+          slug,
+          donationAmount: rawDonationAmount,
+          minDonation: event.pricing.minDonation,
+        },
+      })
+      return NextResponse.json(
+        { error: `Donation must be at least ${event.pricing.currencySymbol}${event.pricing.minDonation}.` },
+        { status: 400 },
+      )
+    }
+
     // Server-side mirror of the form validation. The client checks these too,
     // but the client can be bypassed.
     let intakeSaveError: unknown = null
