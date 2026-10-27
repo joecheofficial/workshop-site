@@ -11,6 +11,20 @@ export type EventHost = {
   hideBestsellerBadge?: boolean
 }
 
+export type EventTimelineItem = {
+  time: string
+  title: string
+  body?: string
+  highlight?: 'talk' | 'music'
+}
+
+export type EventTimelineGroup = {
+  label: string
+  note?: string
+  tone: 'morning' | 'afternoon' | 'sunset' | 'night'
+  items: EventTimelineItem[]
+}
+
 export type EventPromoCode = {
   code: string
   label: string
@@ -82,6 +96,30 @@ export type EventSection =
       render: ReactNode
     }
   | {
+      // Festival-style program: grouped vertical timeline. Only used by
+      // events that opt in, so no existing page renders it.
+      type: 'timeline'
+      id: string
+      eyebrow?: string
+      title: string
+      intro?: string
+      groups: EventTimelineGroup[]
+    }
+  | {
+      // Bento photo/video gallery. Opt-in, same as 'timeline'.
+      type: 'gallery'
+      id: string
+      eyebrow?: string
+      title?: string
+      video?: {
+        src: string
+        poster: string
+        label: string
+        caption?: string
+      }
+      images: Array<{ src: string; alt: string }>
+    }
+  | {
       type: 'quoteCard'
       id: string
       quote: string
@@ -131,6 +169,11 @@ export type EventDefinition = {
   heroObjectFit?: 'cover' | 'contain'
   heroVideoSrc?: string
   heroVideoPoster?: string
+  // Opt-in festival layout: full-bleed ambient video hero, highlight ticker and
+  // scroll reveals. Events without this field render exactly as before.
+  festivalLayout?: {
+    ticker?: string[]
+  }
   zoomLink?: string
   badge?: string
   audience: string[]
@@ -538,6 +581,17 @@ export const events: EventDefinition[] = [
     heroAlt: 'Bali Beach Glamping from above, the Joechella venue',
     heroVideoSrc: 'https://pub-c8d5d807eda94fd7a89d74f95de97030.r2.dev/videos/bali-bloom-recap.mp4',
     heroVideoPoster: '/events/joechella-big-one/bbg-drone-shots.jpeg',
+    festivalLayout: {
+      ticker: [
+        'Lightning talks',
+        'Workshops',
+        'Welcome ceremony',
+        'Pool party',
+        'Sunset together',
+        'Bonfires',
+        'Live music until late',
+      ],
+    },
     audience: [
       'Friends of Joe',
       'The Bali community',
@@ -612,106 +666,143 @@ export const events: EventDefinition[] = [
         `,
       },
       {
-        type: 'image',
+        type: 'gallery',
         id: 'bloom',
         eyebrow: 'This Is The Energy',
-        imageSrc: '/events/joechella-big-one/sunset.jpg',
-        imageAlt: 'Sunset at Bali Beach Glamping',
-        videoSrc: 'https://pub-c8d5d807eda94fd7a89d74f95de97030.r2.dev/videos/bali-bloom-recap.mp4',
-        caption: 'Bali Bloom, the festival we held on this land.',
+        video: {
+          src: 'https://pub-c8d5d807eda94fd7a89d74f95de97030.r2.dev/videos/bali-bloom-recap.mp4',
+          poster: '/events/joechella-big-one/sunset.jpg',
+          label: 'Bali Bloom recap video. Sunset at Bali Beach Glamping.',
+          caption: 'Bali Bloom, the festival we held on this land.',
+        },
+        images: [
+          { src: '/events/joechella-big-one/bbg-drone-shots.jpeg', alt: 'Bali Beach Glamping from above, the Joechella venue' },
+          { src: '/events/joechella-big-one/pool-sunny.jpg', alt: 'The pool at Bali Beach Glamping' },
+          { src: '/events/joechella-big-one/swing.jpg', alt: 'The swing at Bali Beach Glamping' },
+        ],
       },
       {
-        type: 'cards',
+        type: 'timeline',
         id: 'schedule',
         eyebrow: 'Friday, December 11',
         title: 'The Program',
         intro: 'Draft program. Some sessions are still being confirmed and times may move.',
-        columns: 2,
-        items: [
+        groups: [
           {
-            kicker: '8:00 AM to 1:00 PM',
-            title: 'Long, slow breakfast',
-            body: 'Restaurant, lawn and pool. For guests staying on site while the team sets up for the evening.',
+            label: 'Morning',
+            note: 'For guests staying on site.',
+            tone: 'morning',
+            items: [
+              {
+                time: '8:00 AM to 1:00 PM',
+                title: 'Long, slow breakfast',
+                body: 'Restaurant, lawn and pool. For guests staying on site while the team sets up for the evening.',
+              },
+              {
+                time: '11:00 AM to 12:30 PM',
+                title: 'Free morning, get ready',
+                body: 'Rest, costumes, the pool, and getting ready for Friday guests.',
+              },
+            ],
           },
           {
-            kicker: '11:00 AM to 12:30 PM',
-            title: 'Free morning, get ready',
-            body: 'Rest, costumes, the pool, and getting ready for Friday guests.',
+            label: 'Afternoon',
+            note: 'Talks, workshops and the welcome ceremony.',
+            tone: 'afternoon',
+            items: [
+              {
+                time: '12:30 PM to 2:00 PM',
+                title: 'AI lightning talks',
+                body: 'Yoga Shala, with Eric D, Tomcat, Joe and Justin.',
+              },
+              {
+                time: '12:30 PM to 2:00 PM',
+                title: 'Sensual Tantra workshop with Arja',
+                body: 'Tea Lounge.',
+              },
+              {
+                time: '2:00 PM to 3:00 PM',
+                title: 'More AI lightning talks',
+                body: 'Yoga Shala.',
+              },
+              {
+                time: '2:00 PM to 3:00 PM',
+                title: 'Somatic therapy for female leaders with Ali',
+                body: 'Tea Lounge.',
+              },
+              {
+                time: '2:00 PM to 3:00 PM',
+                title: 'Kizomba with Anna (to be confirmed)',
+                body: 'Restaurant.',
+              },
+              {
+                time: '3:00 PM to 4:00 PM',
+                title: 'Opening connection activation and welcome ceremony with Edrick',
+                body: 'Yoga Shala.',
+              },
+            ],
           },
           {
-            kicker: '12:30 PM to 2:00 PM',
-            title: 'AI lightning talks',
-            body: 'Yoga Shala, with Eric D, Tomcat, Joe and Justin.',
+            label: 'Sunset',
+            note: 'Pool party, then sunset on the lawn and the beach.',
+            tone: 'sunset',
+            items: [
+              {
+                time: '4:00 PM to 5:30 PM',
+                title: 'Couples intimacy workshop with Tomcat and Samita',
+                body: 'Dance and movement.',
+              },
+              {
+                time: '4:00 PM to 6:30 PM',
+                title: 'Pool party',
+                body: 'DJs, floaties, bubbles and dancing, with acro (Brent or Fabio) and a flow arts workshop with Eric. The kitchen is open for orders.',
+              },
+              {
+                time: '6:30 PM',
+                title: 'Sunset together',
+                body: 'On the lawn and the beach, then food and getting ready for the night.',
+              },
+            ],
           },
           {
-            kicker: '12:30 PM to 2:00 PM',
-            title: 'Sensual Tantra workshop with Arja',
-            body: 'Tea Lounge.',
-          },
-          {
-            kicker: '2:00 PM to 3:00 PM',
-            title: 'More AI lightning talks',
-            body: 'Yoga Shala.',
-          },
-          {
-            kicker: '2:00 PM to 3:00 PM',
-            title: 'Somatic therapy for female leaders with Ali',
-            body: 'Tea Lounge.',
-          },
-          {
-            kicker: '2:00 PM to 3:00 PM',
-            title: 'Kizomba with Anna (to be confirmed)',
-            body: 'Restaurant.',
-          },
-          {
-            kicker: '3:00 PM to 4:00 PM',
-            title: 'Opening connection activation and welcome ceremony with Edrick',
-            body: 'Yoga Shala.',
-          },
-          {
-            kicker: '4:00 PM to 5:30 PM',
-            title: 'Couples intimacy workshop with Tomcat and Samita',
-            body: 'Dance and movement.',
-          },
-          {
-            kicker: '4:00 PM to 6:30 PM',
-            title: 'Pool party',
-            body: 'DJs, floaties, bubbles and dancing, with acro (Brent or Fabio) and a flow arts workshop with Eric. The kitchen is open for orders.',
-          },
-          {
-            kicker: '6:30 PM',
-            title: 'Sunset together',
-            body: 'On the lawn and the beach, then food and getting ready for the night.',
-          },
-          {
-            kicker: '8:00 PM to 8:30 PM',
-            title: 'Joe speaks',
-            body: 'On contribution, trust and community, then into the salon. Bonfires are lit by the Shala with carpets and cushions.',
-          },
-          {
-            kicker: '8:30 PM to 10:00 PM',
-            title: 'Live music: Salman',
-            body: 'Yoga Shala.',
-          },
-          {
-            kicker: '10:10 PM to 11:40 PM',
-            title: 'Live music: Jagwolf',
-            body: 'Yoga Shala.',
-          },
-          {
-            kicker: '11:40 PM to midnight',
-            title: 'Move to the Tea Lounge',
-            body: 'Bonfires still burning.',
-          },
-          {
-            kicker: 'Midnight to 1:00 AM',
-            title: 'Late-night tantra workshop (to be confirmed)',
-            body: 'Tea Lounge, closed container.',
-          },
-          {
-            kicker: '1:00 AM until late',
-            title: 'Squish spaceship',
-            body: 'Quiet decompression, then sleep.',
+            label: 'Night',
+            note: 'Joe speaks, then bonfires and live music until late.',
+            tone: 'night',
+            items: [
+              {
+                time: '8:00 PM to 8:30 PM',
+                title: 'Joe speaks',
+                body: 'On contribution, trust and community, then into the salon. Bonfires are lit by the Shala with carpets and cushions.',
+                highlight: 'talk',
+              },
+              {
+                time: '8:30 PM to 10:00 PM',
+                title: 'Live music: Salman',
+                body: 'Yoga Shala.',
+                highlight: 'music',
+              },
+              {
+                time: '10:10 PM to 11:40 PM',
+                title: 'Live music: Jagwolf',
+                body: 'Yoga Shala.',
+                highlight: 'music',
+              },
+              {
+                time: '11:40 PM to midnight',
+                title: 'Move to the Tea Lounge',
+                body: 'Bonfires still burning.',
+              },
+              {
+                time: 'Midnight to 1:00 AM',
+                title: 'Late-night tantra workshop (to be confirmed)',
+                body: 'Tea Lounge, closed container.',
+              },
+              {
+                time: '1:00 AM until late',
+                title: 'Squish spaceship',
+                body: 'Quiet decompression, then sleep.',
+              },
+            ],
           },
         ],
       },
@@ -738,16 +829,6 @@ export const events: EventDefinition[] = [
         imageSrc: '/events/connection-dinner-canggu/pkp-catering.jpg',
         imageAlt: 'PKP Community Centre women, Bali',
         caption: 'PKP Community Centre, Bali, pkpcommunitycentre.org',
-      },
-      {
-        type: 'html',
-        id: 'venue-photos',
-        html: `
-          <div class="not-prose grid grid-cols-2 gap-3">
-            <img src="/events/joechella-big-one/pool-sunny.jpg" alt="The pool at Bali Beach Glamping" style="width:100%;border-radius:1rem;display:block;" />
-            <img src="/events/joechella-big-one/swing.jpg" alt="The swing at Bali Beach Glamping" style="width:100%;border-radius:1rem;display:block;" />
-          </div>
-        `,
       },
       {
         type: 'hosts',
