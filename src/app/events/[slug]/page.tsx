@@ -42,6 +42,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title,
     description,
+    alternates: { canonical: `https://workshop.mastermindshq.business/events/${event.slug}` },
     openGraph: {
       title,
       description,
