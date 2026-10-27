@@ -11,6 +11,10 @@ import HeroVideo from '@/components/events/HeroVideo'
 import ScrollToRegisterButton from '@/components/events/ScrollToRegisterButton'
 import EventMediaVideo from '@/components/events/EventMediaVideo'
 import AskAnAiExpertQuoteStrip from '@/components/events/AskAnAiExpertQuoteStrip'
+import FestivalHero from '@/components/events/joechella/FestivalHero'
+import FestivalMotion from '@/components/events/joechella/FestivalMotion'
+import ProgramTimeline from '@/components/events/joechella/ProgramTimeline'
+import VenueGallery from '@/components/events/joechella/VenueGallery'
 
 function sectionTitleClass(sectionId?: string) {
   if (sectionId === 'creative-lab' || sectionId === 'outcomes') {
@@ -480,6 +484,10 @@ function renderSection(section: EventSection, event: EventDefinition, promo: Eve
       return <CtaSection key={section.id} section={section} event={event} promo={promo} eventEnded={eventEnded} />
     case 'custom':
       return <section key={section.id}>{section.render}</section>
+    case 'timeline':
+      return <ProgramTimeline key={section.id} section={section} />
+    case 'gallery':
+      return <VenueGallery key={section.id} section={section} />
     default:
       return null
   }
@@ -571,6 +579,34 @@ export default function EventPageView({
     successRedirect: hasSetupItems ? undefined : `/events/${event.slug}`,
   }
   const initialPromoAmount = promo ? getEventDiscountedPrice(event, promo) : null
+
+  // Opt-in festival layout (Joechella). Every other event takes the default
+  // branch below and renders exactly as before.
+  if (event.festivalLayout) {
+    return (
+      <main className="pb-24">
+        <FestivalMotion />
+        <FestivalHero event={event} eventEnded={eventEnded} />
+        {event.sections.map((section) =>
+          section.type === 'timeline' || section.type === 'gallery' ? (
+            renderSection(section, event, promo, eventEnded)
+          ) : (
+            <div key={section.id} data-jc-reveal="">
+              {renderSection(section, event, promo, eventEnded)}
+            </div>
+          ),
+        )}
+        {event.video ? <EventVideoSection video={event.video} /> : null}
+        <EventRegistrationSection
+          event={registrationEvent}
+          publishableKey={publishableKey}
+          initialPromoCode={initialPromoCode}
+          initialPromoAmount={initialPromoAmount}
+          initialPromoMessage={promo ? promo.description || 'Promo code applied.' : null}
+        />
+      </main>
+    )
+  }
 
   return (
     <main className="pb-24">
