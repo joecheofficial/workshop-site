@@ -584,10 +584,10 @@ export const events: EventDefinition[] = [
     durationLabel: 'Your Day Pass',
     heroImage: '/events/joechella-big-one/bbg-drone-shots.jpeg',
     heroAlt: 'Bali Beach Glamping from above, the Joechella venue',
-    heroVideoSrc: 'https://pub-c8d5d807eda94fd7a89d74f95de97030.r2.dev/videos/bali-bloom-recap.mp4',
-    heroVideoPoster: '/events/joechella-big-one/bbg-drone-shots.jpeg',
-    heroVideoMobileSrc: '/events/joechella-big-one/bloom-hero-mobile.mp4',
-    heroVideoMobilePoster: '/events/joechella-big-one/bloom-hero-mobile-poster.jpg',
+    heroVideoSrc: '/events/joechella-big-one/joechella-party-20261029.mp4',
+    heroVideoPoster: '/events/joechella-big-one/joechella-party-20261029-poster.jpg',
+    heroVideoMobileSrc: '/events/joechella-big-one/joechella-party-20261029-mobile.mp4',
+    heroVideoMobilePoster: '/events/joechella-big-one/joechella-party-20261029-poster.jpg',
     festivalLayout: {
       ticker: [
         'Lightning talks',
@@ -707,8 +707,8 @@ export const events: EventDefinition[] = [
               },
               {
                 time: '11:00 AM to 12:30 PM',
-                title: 'Free morning, get ready',
-                body: 'Rest, costumes, the pool, and getting ready for Friday guests.',
+                title: 'Free morning',
+                body: 'Rest by the pool, enjoy the sunshine, get ready for celebrations.',
               },
             ],
           },
@@ -720,7 +720,7 @@ export const events: EventDefinition[] = [
               {
                 time: '12:30 PM to 2:00 PM',
                 title: 'AI lightning talks',
-                body: 'Yoga Shala, with Eric D, Tomcat, Joe and Justin.',
+                body: 'In the Yoga Shala with five brilliant minds in the field.',
               },
               {
                 time: '12:30 PM to 2:00 PM',
@@ -730,7 +730,7 @@ export const events: EventDefinition[] = [
               {
                 time: '2:00 PM to 3:00 PM',
                 title: 'More AI lightning talks',
-                body: 'Yoga Shala.',
+                body: 'In the Yoga Shala with five brilliant minds in the field.',
               },
               {
                 time: '2:00 PM to 3:00 PM',
@@ -739,7 +739,7 @@ export const events: EventDefinition[] = [
               },
               {
                 time: '2:00 PM to 3:00 PM',
-                title: 'Kizomba with Anna (to be confirmed)',
+                title: 'Kizomba with Anna',
                 body: 'Restaurant.',
               },
               {
