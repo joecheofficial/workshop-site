@@ -6,6 +6,13 @@ const nextConfig: NextConfig = {
     '/api/ai-agent-income/prompt-pack': ['./private-assets/ai-agent-income/**'],
     '/api/ai-agent-income/prompt-pack/request': ['./private-assets/ai-agent-income/**'],
   },
+  // getPublicImageSize reads JPEG/PNG headers from /public, so the tracer pulls all of
+  // /public into the event page function. Only images are read; leave the rest to the CDN
+  // (a 15 MB hero video pushed the function past Vercel's 250 MB limit, 2026-10-29).
+  outputFileTracingExcludes: {
+    // Keys are globs, so '[slug]' would match one character; '/events/**' covers the route.
+    '/events/**': ['./public/**/*.{mp4,mov,webm,m4v,mp3,wav,zip,pdf,html,json}'],
+  },
   turbopack: {
     root: path.resolve(__dirname),
   },
