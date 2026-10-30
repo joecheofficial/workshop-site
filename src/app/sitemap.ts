@@ -25,6 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/giveaways/tokens`,                      lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/giveaways/whatsapp-agent`,              lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/giveaways/posture-coach`,               lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE}/giveaways/desk-pet`,                    lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/giveaways/linkedin-kit`,               lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/giveaways/film`,                        lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/giveaways/chat-to-flowchart`,            lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
