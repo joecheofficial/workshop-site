@@ -1,27 +1,4 @@
 {
-  "version": "1.0.0",
-  "project": {
-    "name": "masterminds-workshop",
-    "languages": [
-      "TypeScript",
-      "JavaScript",
-      "CSS",
-      "HTML",
-      "JSON"
-    ],
-    "frameworks": [
-      "Next.js",
-      "React",
-      "TailwindCSS",
-      "Stripe",
-      "Supabase",
-      "Framer Motion",
-      "GSAP"
-    ],
-    "description": "Masterminds Workshop Site \u2014 a Next.js application for displaying workshop information, courses, and giveaways with advanced animations and interactive components.",
-    "analyzedAt": "2026-10-28T20:15:19.953233Z",
-    "gitCommitHash": "046104b2392ee95553147704d376447b3c4ac118"
-  },
   "nodes": [
     {
       "id": "file:public/downloads/joes-linkedin-kit-v1.0.zip",
@@ -97,21 +74,29 @@
     },
     {
       "id": "file:src/app/giveaways/chat-to-flowchart/layout.tsx",
-      "name": "layout.tsx",
-      "type": "file",
-      "filePath": "src/app/giveaways/chat-to-flowchart/layout.tsx",
-      "path": "src/app/giveaways/chat-to-flowchart/layout.tsx",
+      "name": "Chat to Flowchart layout",
+      "category": "Layout",
+      "subCategory": "Layout Component",
+      "relPath": "src/app/giveaways/chat-to-flowchart/layout.tsx",
+      "sizeLines": 37,
       "language": "typescript",
-      "category": "code",
-      "lineCount": 36,
-      "symbolCount": 1,
-      "complexity": "simple",
-      "summary": "Defines search metadata and the shared giveaway layout for the Chat to Flowchart resource.",
+      "description": "Layout wrapper for Chat to Flowchart giveaway page with SEO metadata. Defines title, description, keywords for flowchart generator tool.",
+      "exports": [
+        "default",
+        "metadata"
+      ],
       "tags": [
-        "metadata",
         "layout",
-        "giveaway"
-      ]
+        "giveaway",
+        "metadata",
+        "seo",
+        "flowchart"
+      ],
+      "languageNotes": "Metadata includes keywords for diagram generation, AI flowchart tools, and integration with draw.io ecosystem.",
+      "complexity": "moderate",
+      "summary": "Layout wrapper for Chat to Flowchart giveaway page with SEO metadata. Defines title, description, keywords for flowchart generator tool.",
+      "type": "file",
+      "filePath": "src/app/giveaways/chat-to-flowchart/layout.tsx"
     },
     {
       "id": "function:src/app/giveaways/chat-to-flowchart/layout.tsx:ChatToFlowchartLayout",
@@ -134,39 +119,55 @@
     },
     {
       "id": "file:src/app/giveaways/chat-to-flowchart/pack.ts",
-      "name": "pack.ts",
-      "type": "file",
-      "filePath": "src/app/giveaways/chat-to-flowchart/pack.ts",
-      "path": "src/app/giveaways/chat-to-flowchart/pack.ts",
+      "name": "Chat to Flowchart pack configuration",
+      "category": "Configuration",
+      "subCategory": "Giveaway Pack",
+      "relPath": "src/app/giveaways/chat-to-flowchart/pack.ts",
+      "sizeLines": 131,
       "language": "typescript",
-      "category": "code",
-      "lineCount": 130,
-      "symbolCount": 0,
-      "complexity": "moderate",
-      "summary": "Stores the Chat to Flowchart resource content, demo and repository links for the giveaway page.",
+      "description": "Configuration object for Chat to Flowchart giveaway. Defines tool metadata, usage instructions, capability promises, limitations, troubleshooting FAQs, and setup guide for next-ai-draw-io tool.",
+      "exports": [
+        "DEMO_URL",
+        "GITHUB_URL",
+        "CHAT_TO_FLOWCHART_CONTENT"
+      ],
       "tags": [
-        "content",
-        "resource",
-        "giveaway"
-      ]
+        "config",
+        "giveaway",
+        "tool",
+        "pack-page",
+        "flowchart"
+      ],
+      "languageNotes": "Comprehensive content structure with 5-step setup guide, promise/limitation sections, and troubleshooting. References Apache 2.0 licensed open-source tool.",
+      "complexity": "moderate",
+      "summary": "Configuration object for Chat to Flowchart giveaway. Defines tool metadata, usage instructions, capability promises, limitations, troubleshooting FAQs, and setup guide for next-ai-draw-io tool.",
+      "type": "file",
+      "filePath": "src/app/giveaways/chat-to-flowchart/pack.ts"
     },
     {
       "id": "file:src/app/giveaways/chat-to-flowchart/page.tsx",
-      "name": "page.tsx",
-      "type": "file",
-      "filePath": "src/app/giveaways/chat-to-flowchart/page.tsx",
-      "path": "src/app/giveaways/chat-to-flowchart/page.tsx",
+      "name": "Chat to Flowchart page",
+      "category": "Page",
+      "subCategory": "Giveaway Page",
+      "relPath": "src/app/giveaways/chat-to-flowchart/page.tsx",
+      "sizeLines": 32,
       "language": "typescript",
-      "category": "code",
-      "lineCount": 31,
-      "symbolCount": 1,
-      "complexity": "simple",
-      "summary": "Renders the Chat to Flowchart giveaway page with structured metadata and resource content.",
+      "description": "Chat to Flowchart giveaway page with JSON-LD structured data for SEO. Renders PackPage component with tool configuration and includes HowTo schema for search engines.",
+      "exports": [
+        "default"
+      ],
       "tags": [
         "page",
-        "route",
-        "giveaway"
-      ]
+        "giveaway",
+        "tool",
+        "structured-data",
+        "flowchart"
+      ],
+      "languageNotes": "Includes JSON-LD HowTo schema with 4 steps, author/publisher metadata, and 5-minute duration estimate.",
+      "complexity": "moderate",
+      "summary": "Chat to Flowchart giveaway page with JSON-LD structured data for SEO. Renders PackPage component with tool configuration and includes HowTo schema for search engines.",
+      "type": "file",
+      "filePath": "src/app/giveaways/chat-to-flowchart/page.tsx"
     },
     {
       "id": "function:src/app/giveaways/chat-to-flowchart/page.tsx:ChatToFlowchartPage",
@@ -187,21 +188,29 @@
     },
     {
       "id": "file:src/app/giveaways/film/layout.tsx",
-      "name": "layout.tsx",
-      "type": "file",
-      "filePath": "src/app/giveaways/film/layout.tsx",
-      "path": "src/app/giveaways/film/layout.tsx",
+      "name": "Film giveaway layout",
+      "category": "Layout",
+      "subCategory": "Layout Component",
+      "relPath": "src/app/giveaways/film/layout.tsx",
+      "sizeLines": 37,
       "language": "typescript",
-      "category": "code",
-      "lineCount": 36,
-      "symbolCount": 1,
-      "complexity": "simple",
-      "summary": "Defines search metadata and the shared giveaway layout for the Make a Film resource.",
+      "description": "Layout wrapper for film-style animated video generation giveaway with SEO metadata. Targets keywords for animated film creation, AI storytelling, and Claude Code integration.",
+      "exports": [
+        "default",
+        "metadata"
+      ],
       "tags": [
-        "metadata",
         "layout",
-        "giveaway"
-      ]
+        "giveaway",
+        "metadata",
+        "seo",
+        "video-generation"
+      ],
+      "languageNotes": "Metadata emphasizes free animated film library for Claude Code with story-to-video workflow.",
+      "complexity": "moderate",
+      "summary": "Layout wrapper for film-style animated video generation giveaway with SEO metadata. Targets keywords for animated film creation, AI storytelling, and Claude Code integration.",
+      "type": "file",
+      "filePath": "src/app/giveaways/film/layout.tsx"
     },
     {
       "id": "function:src/app/giveaways/film/layout.tsx:FilmLayout",
@@ -295,21 +304,29 @@
     },
     {
       "id": "file:src/app/giveaways/free-ai-concat/layout.tsx",
-      "name": "layout.tsx",
-      "type": "file",
-      "filePath": "src/app/giveaways/free-ai-concat/layout.tsx",
-      "path": "src/app/giveaways/free-ai-concat/layout.tsx",
+      "name": "Free AI Concat layout",
+      "category": "Layout",
+      "subCategory": "Layout Component",
+      "relPath": "src/app/giveaways/free-ai-concat/layout.tsx",
+      "sizeLines": 32,
       "language": "typescript",
-      "category": "code",
-      "lineCount": 31,
-      "symbolCount": 1,
-      "complexity": "simple",
-      "summary": "Defines metadata and the shared layout for the free AI Concat giveaway route.",
+      "description": "Layout wrapper for Concat video editor giveaway page. Defines SEO metadata for free open-source video editor with auto-captions and 4K export.",
+      "exports": [
+        "default",
+        "metadata"
+      ],
       "tags": [
-        "metadata",
         "layout",
-        "giveaway"
-      ]
+        "giveaway",
+        "metadata",
+        "seo",
+        "video-editing"
+      ],
+      "languageNotes": "Metadata targets Concat, CapCut alternatives, free video editing tools, and open-source software.",
+      "complexity": "moderate",
+      "summary": "Layout wrapper for Concat video editor giveaway page. Defines SEO metadata for free open-source video editor with auto-captions and 4K export.",
+      "type": "file",
+      "filePath": "src/app/giveaways/free-ai-concat/layout.tsx"
     },
     {
       "id": "function:src/app/giveaways/free-ai-concat/layout.tsx:Layout",
@@ -332,21 +349,28 @@
     },
     {
       "id": "file:src/app/giveaways/free-ai-concat/page.tsx",
-      "name": "page.tsx",
-      "type": "file",
-      "filePath": "src/app/giveaways/free-ai-concat/page.tsx",
-      "path": "src/app/giveaways/free-ai-concat/page.tsx",
+      "name": "Free AI Concat page",
+      "category": "Page",
+      "subCategory": "Giveaway Page",
+      "relPath": "src/app/giveaways/free-ai-concat/page.tsx",
+      "sizeLines": 16,
       "language": "typescript",
-      "category": "code",
-      "lineCount": 15,
-      "symbolCount": 1,
-      "complexity": "simple",
-      "summary": "Renders the free AI Concat page using the shared free tool pack and JSON-LD helpers.",
+      "description": "Free AI Concat giveaway page with JSON-LD structured data. Renders PackPage component using shared free-ai-tool-pack utilities for Concat video editor setup.",
+      "exports": [
+        "default"
+      ],
       "tags": [
         "page",
-        "route",
-        "giveaway"
-      ]
+        "giveaway",
+        "tool",
+        "video-editing",
+        "free-tool"
+      ],
+      "languageNotes": "Uses shared freeAiToolPack and freeAiToolJsonLd utilities from lib/free-ai-tool-pack for consistent giveaway presentation.",
+      "complexity": "moderate",
+      "summary": "Free AI Concat giveaway page with JSON-LD structured data. Renders PackPage component using shared free-ai-tool-pack utilities for Concat video editor setup.",
+      "type": "file",
+      "filePath": "src/app/giveaways/free-ai-concat/page.tsx"
     },
     {
       "id": "function:src/app/giveaways/free-ai-concat/page.tsx:FreeAiConcatPage",
@@ -367,21 +391,29 @@
     },
     {
       "id": "file:src/app/giveaways/free-ai-salesman/layout.tsx",
-      "name": "layout.tsx",
-      "type": "file",
-      "filePath": "src/app/giveaways/free-ai-salesman/layout.tsx",
-      "path": "src/app/giveaways/free-ai-salesman/layout.tsx",
+      "name": "Free AI Salesman layout",
+      "category": "Layout",
+      "subCategory": "Layout Component",
+      "relPath": "src/app/giveaways/free-ai-salesman/layout.tsx",
+      "sizeLines": 32,
       "language": "typescript",
-      "category": "code",
-      "lineCount": 31,
-      "symbolCount": 1,
-      "complexity": "simple",
-      "summary": "Defines metadata and the shared layout for the free AI Salesman giveaway route.",
+      "description": "Layout wrapper for Free AI Salesman giveaway page with SEO metadata. Defines title, description for cold email and customer discovery Claude skills.",
+      "exports": [
+        "default",
+        "metadata"
+      ],
       "tags": [
-        "metadata",
         "layout",
-        "giveaway"
-      ]
+        "giveaway",
+        "metadata",
+        "seo",
+        "sales"
+      ],
+      "languageNotes": "Metadata targets keywords around cold email, customer discovery, Claude skills, and sales automation.",
+      "complexity": "moderate",
+      "summary": "Layout wrapper for Free AI Salesman giveaway page with SEO metadata. Defines title, description for cold email and customer discovery Claude skills.",
+      "type": "file",
+      "filePath": "src/app/giveaways/free-ai-salesman/layout.tsx"
     },
     {
       "id": "function:src/app/giveaways/free-ai-salesman/layout.tsx:Layout",
@@ -404,21 +436,28 @@
     },
     {
       "id": "file:src/app/giveaways/free-ai-salesman/page.tsx",
-      "name": "page.tsx",
-      "type": "file",
-      "filePath": "src/app/giveaways/free-ai-salesman/page.tsx",
-      "path": "src/app/giveaways/free-ai-salesman/page.tsx",
+      "name": "Free AI Salesman page",
+      "category": "Page",
+      "subCategory": "Giveaway Page",
+      "relPath": "src/app/giveaways/free-ai-salesman/page.tsx",
+      "sizeLines": 18,
       "language": "typescript",
-      "category": "code",
-      "lineCount": 17,
-      "symbolCount": 1,
-      "complexity": "simple",
-      "summary": "Renders the free AI Salesman page using the shared free tool pack and JSON-LD helpers.",
+      "description": "Free AI Salesman giveaway page with JSON-LD structured data. Draft page that renders PackPage component for four Claude skills focused on customer discovery and first-email drafting.",
+      "exports": [
+        "default"
+      ],
       "tags": [
         "page",
-        "route",
-        "giveaway"
-      ]
+        "giveaway",
+        "tool",
+        "sales",
+        "draft"
+      ],
+      "languageNotes": "Marked as DRAFT, NOT DEPLOYED. Uses same shared utilities as other free AI tool pages for consistent structure.",
+      "complexity": "moderate",
+      "summary": "Free AI Salesman giveaway page with JSON-LD structured data. Draft page that renders PackPage component for four Claude skills focused on customer discovery and first-email drafting.",
+      "type": "file",
+      "filePath": "src/app/giveaways/free-ai-salesman/page.tsx"
     },
     {
       "id": "function:src/app/giveaways/free-ai-salesman/page.tsx:FreeAiSalesmanPage",
@@ -439,21 +478,29 @@
     },
     {
       "id": "file:src/app/giveaways/linkedin-kit/layout.tsx",
-      "name": "layout.tsx",
-      "type": "file",
-      "filePath": "src/app/giveaways/linkedin-kit/layout.tsx",
-      "path": "src/app/giveaways/linkedin-kit/layout.tsx",
+      "name": "LinkedIn Kit layout",
+      "category": "Layout",
+      "subCategory": "Layout Component",
+      "relPath": "src/app/giveaways/linkedin-kit/layout.tsx",
+      "sizeLines": 36,
       "language": "typescript",
-      "category": "code",
-      "lineCount": 35,
-      "symbolCount": 1,
-      "complexity": "simple",
-      "summary": "Defines metadata and the shared layout for Joe\u2019s LinkedIn Kit giveaway route.",
+      "description": "Layout wrapper for Joe's LinkedIn Kit giveaway page with SEO metadata. Targets keywords for LinkedIn post generation, voice matching, and Claude skills.",
+      "exports": [
+        "default",
+        "metadata"
+      ],
       "tags": [
-        "metadata",
         "layout",
-        "giveaway"
-      ]
+        "giveaway",
+        "metadata",
+        "seo",
+        "linkedin"
+      ],
+      "languageNotes": "Metadata emphasizes 5 Claude skills for writing authentic LinkedIn posts that match user voice.",
+      "complexity": "moderate",
+      "summary": "Layout wrapper for Joe's LinkedIn Kit giveaway page with SEO metadata. Targets keywords for LinkedIn post generation, voice matching, and Claude skills.",
+      "type": "file",
+      "filePath": "src/app/giveaways/linkedin-kit/layout.tsx"
     },
     {
       "id": "function:src/app/giveaways/linkedin-kit/layout.tsx:LinkedinKitLayout",
@@ -546,41 +593,6 @@
         "resource",
         "giveaway"
       ]
-    },
-    {
-      "id": "file:src/app/sitemap.ts",
-      "name": "sitemap.ts",
-      "type": "file",
-      "filePath": "src/app/sitemap.ts",
-      "path": "src/app/sitemap.ts",
-      "language": "typescript",
-      "category": "code",
-      "lineCount": 37,
-      "symbolCount": 1,
-      "complexity": "simple",
-      "summary": "Builds the site sitemap and includes the registered free AI tool routes.",
-      "tags": [
-        "sitemap",
-        "seo",
-        "route"
-      ]
-    },
-    {
-      "id": "function:src/app/sitemap.ts:sitemap",
-      "name": "sitemap",
-      "type": "function",
-      "filePath": "src/app/sitemap.ts",
-      "complexity": "simple",
-      "summary": "Implements sitemap in sitemap.ts.",
-      "tags": [
-        "function",
-        "giveaway"
-      ],
-      "metadata": {
-        "startLine": 7,
-        "endLine": 37,
-        "params": []
-      }
     },
     {
       "id": "file:src/lib/free-ai-tools.ts",
@@ -942,7 +954,7 @@
       ]
     },
     {
-      "id": "function:__nofilepath__:GET",
+      "id": "function:src/app/api/meta/purchase/route.ts:GET",
       "name": "GET",
       "type": "function",
       "path": "src/app/api/meta/purchase/route.ts",
@@ -954,10 +966,11 @@
         "stripe"
       ],
       "complexity": "moderate",
-      "summary": "[function] GET"
+      "summary": "Validates Stripe checkout session payment status for Meta ads conversion tracking",
+      "filePath": "src/app/api/meta/purchase/route.ts"
     },
     {
-      "id": "function:__nofilepath__:isAuthorized",
+      "id": "function:src/app/api/events/waitlist/notify/route.ts:isAuthorized",
       "name": "isAuthorized",
       "type": "function",
       "path": "src/app/api/events/waitlist/notify/route.ts",
@@ -968,10 +981,11 @@
         "security"
       ],
       "complexity": "moderate",
-      "summary": "[function] isAuthorized"
+      "summary": "Validates cron authorization via Bearer token timing-safe comparison",
+      "filePath": "src/app/api/events/waitlist/notify/route.ts"
     },
     {
-      "id": "function:__nofilepath__:acquireEventLock",
+      "id": "function:src/app/api/events/abandoned-checkout-followups/route.ts:acquireEventLock",
       "name": "acquireEventLock",
       "type": "function",
       "path": "src/app/api/events/abandoned-checkout-followups/route.ts",
@@ -982,10 +996,11 @@
         "concurrency"
       ],
       "complexity": "moderate",
-      "summary": "[function] acquireEventLock"
+      "summary": "Acquires per-event distributed lock with automation key and date-based scoping",
+      "filePath": "src/app/api/events/abandoned-checkout-followups/route.ts"
     },
     {
-      "id": "function:__nofilepath__:escapeHtml",
+      "id": "function:src/app/api/events/cancel/route.ts:escapeHtml",
       "name": "escapeHtml",
       "type": "function",
       "path": "src/app/api/events/cancel/route.ts",
@@ -996,10 +1011,11 @@
         "html-escape"
       ],
       "complexity": "moderate",
-      "summary": "[function] escapeHtml"
+      "summary": "Sanitizes HTML special characters to prevent XSS in cancellation form",
+      "filePath": "src/app/api/events/cancel/route.ts"
     },
     {
-      "id": "function:__nofilepath__:htmlPage",
+      "id": "function:src/app/api/events/waitlist/remove/route.ts:htmlPage",
       "name": "htmlPage",
       "type": "function",
       "path": "src/app/api/events/waitlist/remove/route.ts",
@@ -1010,10 +1026,11 @@
         "html"
       ],
       "complexity": "moderate",
-      "summary": "[function] htmlPage"
+      "summary": "Generates dark-themed HTML response page for waitlist removal",
+      "filePath": "src/app/api/events/waitlist/remove/route.ts"
     },
     {
-      "id": "function:__nofilepath__:notifyWaitlist",
+      "id": "function:src/app/api/events/cancel/route.ts:notifyWaitlist",
       "name": "notifyWaitlist",
       "type": "function",
       "path": "src/app/api/events/cancel/route.ts",
@@ -1024,10 +1041,11 @@
         "email"
       ],
       "complexity": "moderate",
-      "summary": "[function] notifyWaitlist"
+      "summary": "Notifies waitlisted users when a seat opens after cancellation with idempotency key",
+      "filePath": "src/app/api/events/cancel/route.ts"
     },
     {
-      "id": "function:__nofilepath__:POST",
+      "id": "function:src/app/api/subscribe/route.ts:POST",
       "name": "POST",
       "type": "function",
       "path": "src/app/api/subscribe/route.ts",
@@ -1038,10 +1056,11 @@
         "subscribe"
       ],
       "complexity": "moderate",
-      "summary": "[function] POST"
+      "summary": "General lead subscription endpoint: validates input, saves lead, claims signup, sends email via Resend",
+      "filePath": "src/app/api/subscribe/route.ts"
     },
     {
-      "id": "function:__nofilepath__:getBaseUrl",
+      "id": "function:src/app/api/events/checkout-session/route.ts:getBaseUrl",
       "name": "getBaseUrl",
       "type": "function",
       "path": "src/app/api/events/checkout-session/route.ts",
@@ -1052,10 +1071,11 @@
         "url-utils"
       ],
       "complexity": "moderate",
-      "summary": "[function] getBaseUrl"
+      "summary": "Resolves the base URL for checkout from environment or request origin",
+      "filePath": "src/app/api/events/checkout-session/route.ts"
     },
     {
-      "id": "function:__nofilepath__:acquireEventWindowLock",
+      "id": "function:src/app/api/events/session-reminders/route.ts:acquireEventWindowLock",
       "name": "acquireEventWindowLock",
       "type": "function",
       "path": "src/app/api/events/session-reminders/route.ts",
@@ -1066,10 +1086,11 @@
         "concurrency"
       ],
       "complexity": "moderate",
-      "summary": "[function] acquireEventWindowLock"
+      "summary": "Acquires distributed lock for session reminder window",
+      "filePath": "src/app/api/events/session-reminders/route.ts"
     },
     {
-      "id": "function:__nofilepath__:isLikelyTest",
+      "id": "function:src/app/api/events/reconcile-registrations/route.ts:isLikelyTest",
       "name": "isLikelyTest",
       "type": "function",
       "path": "src/app/api/events/reconcile-registrations/route.ts",
@@ -1080,10 +1101,11 @@
         "test-detection"
       ],
       "complexity": "moderate",
-      "summary": "[function] isLikelyTest"
+      "summary": "Detects test records by email/name patterns to exclude from production sync",
+      "filePath": "src/app/api/events/reconcile-registrations/route.ts"
     },
     {
-      "id": "function:__nofilepath__:buildIdempotencyKey",
+      "id": "function:src/app/api/events/waitlist/notify/route.ts:buildIdempotencyKey",
       "name": "buildIdempotencyKey",
       "type": "function",
       "path": "src/app/api/events/waitlist/notify/route.ts",
@@ -1093,10 +1115,11 @@
         "idempotency"
       ],
       "complexity": "moderate",
-      "summary": "[function] buildIdempotencyKey"
+      "summary": "Constructs idempotency key for deduplicating waitlist spot notifications across cron windows",
+      "filePath": "src/app/api/events/waitlist/notify/route.ts"
     },
     {
-      "id": "function:__nofilepath__:sha256",
+      "id": "function:src/app/api/jill-auth/route.ts:sha256",
       "name": "sha256",
       "type": "function",
       "path": "src/app/api/jill-auth/route.ts",
@@ -1107,10 +1130,11 @@
         "crypto"
       ],
       "complexity": "moderate",
-      "summary": "[function] sha256"
+      "summary": "Computes SHA256 hash of password string",
+      "filePath": "src/app/api/jill-auth/route.ts"
     },
     {
-      "id": "function:__nofilepath__:matchesPassword",
+      "id": "function:src/app/api/jill-auth/route.ts:matchesPassword",
       "name": "matchesPassword",
       "type": "function",
       "path": "src/app/api/jill-auth/route.ts",
@@ -1121,10 +1145,11 @@
         "password-validation"
       ],
       "complexity": "moderate",
-      "summary": "[function] matchesPassword"
+      "summary": "Timing-safe password comparison using SHA256 hashes",
+      "filePath": "src/app/api/jill-auth/route.ts"
     },
     {
-      "id": "function:__nofilepath__:grantAccess",
+      "id": "function:src/app/api/jill-auth/route.ts:grantAccess",
       "name": "grantAccess",
       "type": "function",
       "path": "src/app/api/jill-auth/route.ts",
@@ -1135,10 +1160,11 @@
         "cookie"
       ],
       "complexity": "moderate",
-      "summary": "[function] grantAccess"
+      "summary": "Sets 30-day httpOnly cookie and redirects to /jill guide page",
+      "filePath": "src/app/api/jill-auth/route.ts"
     },
     {
-      "id": "function:__nofilepath__:sendViaResend",
+      "id": "function:src/app/api/lead-magnets/passive-income-100/route.ts:sendViaResend",
       "name": "sendViaResend",
       "type": "function",
       "path": "src/app/api/lead-magnets/passive-income-100/route.ts",
@@ -1150,10 +1176,11 @@
         "launch-list"
       ],
       "complexity": "moderate",
-      "summary": "[function] sendViaResend"
+      "summary": "Sends passive income launch list confirmation email via Resend with test/live mode control",
+      "filePath": "src/app/api/lead-magnets/passive-income-100/route.ts"
     },
     {
-      "id": "function:__nofilepath__:supabase",
+      "id": "function:src/app/api/subscribe/route.ts:supabase",
       "name": "supabase",
       "type": "function",
       "path": "src/app/api/subscribe/route.ts",
@@ -1164,10 +1191,11 @@
         "supabase"
       ],
       "complexity": "moderate",
-      "summary": "[function] supabase"
+      "summary": "Factory function for creating Supabase client with server-side secret key",
+      "filePath": "src/app/api/subscribe/route.ts"
     },
     {
-      "id": "file:unsubscribe-route",
+      "id": "file:src/app/api/unsubscribe/route.ts",
       "name": "unsubscribe API route",
       "category": "Page",
       "subCategory": "API Route",
@@ -1188,11 +1216,12 @@
       ],
       "languageNotes": "Uses next/server types and custom library functions for token verification and suppression recording.",
       "complexity": "moderate",
-      "summary": "[unknown] unsubscribe API route",
-      "type": "file"
+      "summary": "Next.js API route implementing RFC 8058 one-click unsubscribe for email list management. Exports POST and GET handlers that verify unsubscribe tokens and record email suppressions.",
+      "type": "file",
+      "filePath": "src/app/api/unsubscribe/route.ts"
     },
     {
-      "id": "file:bonus-workshops-page",
+      "id": "file:src/app/bonus-workshops/page.tsx",
       "name": "Bonus Workshops page",
       "category": "Page",
       "subCategory": "Page Component",
@@ -1212,11 +1241,12 @@
       ],
       "languageNotes": "React component with Next.js metadata configuration. Uses Tailwind CSS for styling.",
       "complexity": "moderate",
-      "summary": "[unknown] Bonus Workshops page",
-      "type": "file"
+      "summary": "Landing page for bonus workshop content. Displays coming-soon message with hero section, metadata, and TabNav component integration.",
+      "type": "file",
+      "filePath": "src/app/bonus-workshops/page.tsx"
     },
     {
-      "id": "file:auto-lead-magnet-page",
+      "id": "file:src/app/bonus/auto-lead-magnet/page.tsx",
       "name": "Auto Lead Magnet PDF page",
       "category": "Page",
       "subCategory": "Page Component",
@@ -1237,11 +1267,12 @@
       ],
       "languageNotes": "Large component with embedded prompt template and interactive UI elements. Uses CodeBlock component for code display.",
       "complexity": "moderate",
-      "summary": "[unknown] Auto Lead Magnet PDF page",
-      "type": "file"
+      "summary": "Comprehensive guide page for generating custom lead magnet PDFs using Claude. Includes a 217-line prompt for automating lead magnet creation, feature explanations, step-by-step instructions, and a sample PDF link.",
+      "type": "file",
+      "filePath": "src/app/bonus/auto-lead-magnet/page.tsx"
     },
     {
-      "id": "file:event-detail-page",
+      "id": "file:src/app/events/[slug]/page.tsx",
       "name": "Event detail page",
       "category": "Page",
       "subCategory": "Dynamic Page Component",
@@ -1262,11 +1293,12 @@
       ],
       "languageNotes": "Uses async metadata generation and server-side data fetching. Handles multiple search parameter variations for promo codes.",
       "complexity": "moderate",
-      "summary": "[unknown] Event detail page",
-      "type": "file"
+      "summary": "Dynamic event detail page with slug-based routing. Generates metadata, resolves promo codes, fetches event data, and renders EventPageView component with Stripe integration.",
+      "type": "file",
+      "filePath": "src/app/events/[slug]/page.tsx"
     },
     {
-      "id": "file:event-setup-page",
+      "id": "file:src/app/events/[slug]/setup/page.tsx",
       "name": "Event setup page",
       "category": "Page",
       "subCategory": "Dynamic Page Component",
@@ -1287,11 +1319,12 @@
       ],
       "languageNotes": "Server component with conditional rendering based on setup items availability. Uses gradient and shadow effects for visual hierarchy.",
       "complexity": "moderate",
-      "summary": "[unknown] Event setup page",
-      "type": "file"
+      "summary": "Post-purchase setup instructions page for event attendees. Displays setup items, workflow instructions, and next steps with gradient styling and interactive elements.",
+      "type": "file",
+      "filePath": "src/app/events/[slug]/setup/page.tsx"
     },
     {
-      "id": "file:events-index-page",
+      "id": "file:src/app/events/page.tsx",
       "name": "Events listing page",
       "category": "Page",
       "subCategory": "Page Component",
@@ -1312,11 +1345,12 @@
       ],
       "languageNotes": "Uses Next.js Image component for optimization and Reveal animation component for scroll effects.",
       "complexity": "moderate",
-      "summary": "[unknown] Events listing page",
-      "type": "file"
+      "summary": "Main events listing page showing upcoming live workshops. Displays event cards with images, pricing, dates, and links to event detail pages. Includes mastermind cohort promotional section.",
+      "type": "file",
+      "filePath": "src/app/events/page.tsx"
     },
     {
-      "id": "file:ai-behavior-quiz-pack",
+      "id": "file:src/app/giveaways/ai-behavior-quiz/pack.ts",
       "name": "AI Behavior Quiz pack configuration",
       "category": "Configuration",
       "subCategory": "Giveaway Pack",
@@ -1337,11 +1371,12 @@
       ],
       "languageNotes": "Defines PackPageContent interface implementation with structured Q&A sections and behavioral scale definitions.",
       "complexity": "moderate",
-      "summary": "[unknown] AI Behavior Quiz pack configuration",
-      "type": "file"
+      "summary": "Configuration object for the AI Behavioral Use Quiz giveaway page. Defines quiz URL, content structure, FAQs, and scale explanation with intensity-based scoring from B0 to B10.",
+      "type": "file",
+      "filePath": "src/app/giveaways/ai-behavior-quiz/pack.ts"
     },
     {
-      "id": "file:ai-behavior-quiz-page",
+      "id": "file:src/app/giveaways/ai-behavior-quiz/page.tsx",
       "name": "AI Behavior Quiz page",
       "category": "Page",
       "subCategory": "Giveaway Page",
@@ -1360,11 +1395,12 @@
       ],
       "languageNotes": "Small component that delegates rendering to shared PackPage component with configuration from pack.ts.",
       "complexity": "moderate",
-      "summary": "[unknown] AI Behavior Quiz page",
-      "type": "file"
+      "summary": "Minimal wrapper page that renders the PackPage component with AI Behavior Quiz configuration. Quiz itself runs externally on mastermindshq.business.",
+      "type": "file",
+      "filePath": "src/app/giveaways/ai-behavior-quiz/page.tsx"
     },
     {
-      "id": "file:ai-levels-quiz-pack",
+      "id": "file:src/app/giveaways/ai-levels-quiz/pack.ts",
       "name": "AI Levels Quiz pack configuration",
       "category": "Configuration",
       "subCategory": "Giveaway Pack",
@@ -1385,11 +1421,12 @@
       ],
       "languageNotes": "Structured content with four capability bands: Exploring (0-10), Applying (11-20), Integrating (21-30), Compounding (31-40).",
       "complexity": "moderate",
-      "summary": "[unknown] AI Levels Quiz pack configuration",
-      "type": "file"
+      "summary": "Configuration object for the AI Capability Levels Quiz giveaway. Defines quiz URL, content structure, capability level framework (0-40 scale), and FAQs.",
+      "type": "file",
+      "filePath": "src/app/giveaways/ai-levels-quiz/pack.ts"
     },
     {
-      "id": "file:ai-levels-quiz-page",
+      "id": "file:src/app/giveaways/ai-levels-quiz/page.tsx",
       "name": "AI Levels Quiz page",
       "category": "Page",
       "subCategory": "Giveaway Page",
@@ -1408,11 +1445,12 @@
       ],
       "languageNotes": "Small component following same pattern as other quiz pages, delegating to shared PackPage component.",
       "complexity": "moderate",
-      "summary": "[unknown] AI Levels Quiz page",
-      "type": "file"
+      "summary": "Minimal wrapper page that renders the PackPage component with AI Levels Quiz configuration. Quiz itself runs externally on mastermindshq.business.",
+      "type": "file",
+      "filePath": "src/app/giveaways/ai-levels-quiz/page.tsx"
     },
     {
-      "id": "file:all-sorted-overview-layout",
+      "id": "file:src/app/giveaways/all-sorted-overview/layout.tsx",
       "name": "All Sorted Overview layout",
       "category": "Layout",
       "subCategory": "Layout Component",
@@ -1433,11 +1471,12 @@
       ],
       "languageNotes": "Metadata object includes keywords for All Sorted, business automation, AI agents, and CRM features.",
       "complexity": "moderate",
-      "summary": "[unknown] All Sorted Overview layout",
-      "type": "file"
+      "summary": "Layout wrapper for All Sorted Overview giveaway page with comprehensive SEO metadata. Defines title, description, keywords, and OpenGraph/Twitter card metadata.",
+      "type": "file",
+      "filePath": "src/app/giveaways/all-sorted-overview/layout.tsx"
     },
     {
-      "id": "file:all-sorted-overview-page",
+      "id": "file:src/app/giveaways/all-sorted-overview/page.tsx",
       "name": "All Sorted Overview page",
       "category": "Page",
       "subCategory": "Page Component",
@@ -1457,86 +1496,12 @@
       ],
       "languageNotes": "Client component with React hooks (useState, useRef, useCallback). Uses Framer Motion for animations and custom magnetic hover effect.",
       "complexity": "moderate",
-      "summary": "[unknown] All Sorted Overview page",
-      "type": "file"
+      "summary": "Detailed product overview page for All Sorted business operating system. Showcases 30+ capabilities organized into 7 groups (Growth, Clients, Money, Content, Voice, Strategy, System). Includes email modal, reactions section, and magnetic hover effects.",
+      "type": "file",
+      "filePath": "src/app/giveaways/all-sorted-overview/page.tsx"
     },
     {
-      "id": "file:chat-to-flowchart-layout",
-      "name": "Chat to Flowchart layout",
-      "category": "Layout",
-      "subCategory": "Layout Component",
-      "relPath": "src/app/giveaways/chat-to-flowchart/layout.tsx",
-      "sizeLines": 37,
-      "language": "typescript",
-      "description": "Layout wrapper for Chat to Flowchart giveaway page with SEO metadata. Defines title, description, keywords for flowchart generator tool.",
-      "exports": [
-        "default",
-        "metadata"
-      ],
-      "tags": [
-        "layout",
-        "giveaway",
-        "metadata",
-        "seo",
-        "flowchart"
-      ],
-      "languageNotes": "Metadata includes keywords for diagram generation, AI flowchart tools, and integration with draw.io ecosystem.",
-      "complexity": "moderate",
-      "summary": "[unknown] Chat to Flowchart layout",
-      "type": "file"
-    },
-    {
-      "id": "file:chat-to-flowchart-pack",
-      "name": "Chat to Flowchart pack configuration",
-      "category": "Configuration",
-      "subCategory": "Giveaway Pack",
-      "relPath": "src/app/giveaways/chat-to-flowchart/pack.ts",
-      "sizeLines": 131,
-      "language": "typescript",
-      "description": "Configuration object for Chat to Flowchart giveaway. Defines tool metadata, usage instructions, capability promises, limitations, troubleshooting FAQs, and setup guide for next-ai-draw-io tool.",
-      "exports": [
-        "DEMO_URL",
-        "GITHUB_URL",
-        "CHAT_TO_FLOWCHART_CONTENT"
-      ],
-      "tags": [
-        "config",
-        "giveaway",
-        "tool",
-        "pack-page",
-        "flowchart"
-      ],
-      "languageNotes": "Comprehensive content structure with 5-step setup guide, promise/limitation sections, and troubleshooting. References Apache 2.0 licensed open-source tool.",
-      "complexity": "moderate",
-      "summary": "[unknown] Chat to Flowchart pack configuration",
-      "type": "file"
-    },
-    {
-      "id": "file:chat-to-flowchart-page",
-      "name": "Chat to Flowchart page",
-      "category": "Page",
-      "subCategory": "Giveaway Page",
-      "relPath": "src/app/giveaways/chat-to-flowchart/page.tsx",
-      "sizeLines": 32,
-      "language": "typescript",
-      "description": "Chat to Flowchart giveaway page with JSON-LD structured data for SEO. Renders PackPage component with tool configuration and includes HowTo schema for search engines.",
-      "exports": [
-        "default"
-      ],
-      "tags": [
-        "page",
-        "giveaway",
-        "tool",
-        "structured-data",
-        "flowchart"
-      ],
-      "languageNotes": "Includes JSON-LD HowTo schema with 4 steps, author/publisher metadata, and 5-minute duration estimate.",
-      "complexity": "moderate",
-      "summary": "[unknown] Chat to Flowchart page",
-      "type": "file"
-    },
-    {
-      "id": "file:claude-md-layout",
+      "id": "file:src/app/giveaways/claude-md/layout.tsx",
       "name": "Ultimate CLAUDE.md layout",
       "category": "Layout",
       "subCategory": "Layout Component",
@@ -1557,11 +1522,12 @@
       ],
       "languageNotes": "Metadata emphasizes CLAUDE.md as configuration file for Claude Code automation and developer workflow.",
       "complexity": "moderate",
-      "summary": "[unknown] Ultimate CLAUDE.md layout",
-      "type": "file"
+      "summary": "Layout wrapper for Ultimate CLAUDE.md giveaway page with comprehensive SEO metadata. Targets keywords around CLAUDE.md configuration, Claude Code setup, and AI development tools.",
+      "type": "file",
+      "filePath": "src/app/giveaways/claude-md/layout.tsx"
     },
     {
-      "id": "file:claude-md-pack",
+      "id": "file:src/app/giveaways/claude-md/pack.ts",
       "name": "Ultimate CLAUDE.md pack configuration",
       "category": "Configuration",
       "subCategory": "Giveaway Pack",
@@ -1582,179 +1548,205 @@
       ],
       "languageNotes": "Detailed content covering agent routing, model selection, autonomy levels, and project-specific configuration patterns.",
       "complexity": "moderate",
-      "summary": "[unknown] Ultimate CLAUDE.md pack configuration",
-      "type": "file"
+      "summary": "Configuration object for Ultimate CLAUDE.md giveaway. Provides comprehensive setup guide with sections on agent routing, autonomy rules, content rules, iron laws, and file structure. References actual CLAUDE.md template file.",
+      "type": "file",
+      "filePath": "src/app/giveaways/claude-md/pack.ts"
     },
     {
-      "id": "file:film-layout",
-      "name": "Film giveaway layout",
-      "category": "Layout",
-      "subCategory": "Layout Component",
-      "relPath": "src/app/giveaways/film/layout.tsx",
-      "sizeLines": 37,
-      "language": "typescript",
-      "description": "Layout wrapper for film-style animated video generation giveaway with SEO metadata. Targets keywords for animated film creation, AI storytelling, and Claude Code integration.",
-      "exports": [
-        "default",
-        "metadata"
-      ],
+      "id": "config:next.config.ts",
+      "type": "config",
+      "name": "next.config.ts",
+      "filePath": "next.config.ts",
+      "summary": "Configures Next.js tracing to include private AI Agent Income prompt-pack assets in both API handlers and exclude non-image event media from server bundles, with the Turbopack root fixed to the project directory. Defines legacy giveaway and dinner redirects, permanent portal redirects for sessions and the resource vault, and host-specific root rewrites for the decks playbook and passive-income landing page.",
       "tags": [
-        "layout",
-        "giveaway",
-        "metadata",
-        "seo",
-        "video-generation"
+        "nextjs",
+        "build-configuration",
+        "output-tracing",
+        "redirects",
+        "host-rewrites"
       ],
-      "languageNotes": "Metadata emphasizes free animated film library for Claude Code with story-to-video workflow.",
-      "complexity": "moderate",
-      "summary": "[unknown] Film giveaway layout",
-      "type": "file"
+      "complexity": "moderate"
     },
     {
-      "id": "file:free-ai-concat-layout",
-      "name": "Free AI Concat layout",
-      "category": "Layout",
-      "subCategory": "Layout Component",
-      "relPath": "src/app/giveaways/free-ai-concat/layout.tsx",
-      "sizeLines": 32,
-      "language": "typescript",
-      "description": "Layout wrapper for Concat video editor giveaway page. Defines SEO metadata for free open-source video editor with auto-captions and 4K export.",
-      "exports": [
-        "default",
-        "metadata"
-      ],
-      "tags": [
-        "layout",
-        "giveaway",
-        "metadata",
-        "seo",
-        "video-editing"
-      ],
-      "languageNotes": "Metadata targets Concat, CapCut alternatives, free video editing tools, and open-source software.",
-      "complexity": "moderate",
-      "summary": "[unknown] Free AI Concat layout",
-      "type": "file"
-    },
-    {
-      "id": "file:free-ai-concat-page",
-      "name": "Free AI Concat page",
-      "category": "Page",
-      "subCategory": "Giveaway Page",
-      "relPath": "src/app/giveaways/free-ai-concat/page.tsx",
-      "sizeLines": 16,
-      "language": "typescript",
-      "description": "Free AI Concat giveaway page with JSON-LD structured data. Renders PackPage component using shared free-ai-tool-pack utilities for Concat video editor setup.",
-      "exports": [
-        "default"
-      ],
-      "tags": [
-        "page",
-        "giveaway",
-        "tool",
-        "video-editing",
-        "free-tool"
-      ],
-      "languageNotes": "Uses shared freeAiToolPack and freeAiToolJsonLd utilities from lib/free-ai-tool-pack for consistent giveaway presentation.",
-      "complexity": "moderate",
-      "summary": "[unknown] Free AI Concat page",
-      "type": "file"
-    },
-    {
-      "id": "file:free-ai-salesman-layout",
-      "name": "Free AI Salesman layout",
-      "category": "Layout",
-      "subCategory": "Layout Component",
-      "relPath": "src/app/giveaways/free-ai-salesman/layout.tsx",
-      "sizeLines": 32,
-      "language": "typescript",
-      "description": "Layout wrapper for Free AI Salesman giveaway page with SEO metadata. Defines title, description for cold email and customer discovery Claude skills.",
-      "exports": [
-        "default",
-        "metadata"
-      ],
-      "tags": [
-        "layout",
-        "giveaway",
-        "metadata",
-        "seo",
-        "sales"
-      ],
-      "languageNotes": "Metadata targets keywords around cold email, customer discovery, Claude skills, and sales automation.",
-      "complexity": "moderate",
-      "summary": "[unknown] Free AI Salesman layout",
-      "type": "file"
-    },
-    {
-      "id": "file:free-ai-salesman-page",
-      "name": "Free AI Salesman page",
-      "category": "Page",
-      "subCategory": "Giveaway Page",
-      "relPath": "src/app/giveaways/free-ai-salesman/page.tsx",
-      "sizeLines": 18,
-      "language": "typescript",
-      "description": "Free AI Salesman giveaway page with JSON-LD structured data. Draft page that renders PackPage component for four Claude skills focused on customer discovery and first-email drafting.",
-      "exports": [
-        "default"
-      ],
-      "tags": [
-        "page",
-        "giveaway",
-        "tool",
-        "sales",
-        "draft"
-      ],
-      "languageNotes": "Marked as DRAFT, NOT DEPLOYED. Uses same shared utilities as other free AI tool pages for consistent structure.",
-      "complexity": "moderate",
-      "summary": "[unknown] Free AI Salesman page",
-      "type": "file"
-    },
-    {
-      "id": "file:linkedin-kit-layout",
-      "name": "LinkedIn Kit layout",
-      "category": "Layout",
-      "subCategory": "Layout Component",
-      "relPath": "src/app/giveaways/linkedin-kit/layout.tsx",
-      "sizeLines": 36,
-      "language": "typescript",
-      "description": "Layout wrapper for Joe's LinkedIn Kit giveaway page with SEO metadata. Targets keywords for LinkedIn post generation, voice matching, and Claude skills.",
-      "exports": [
-        "default",
-        "metadata"
-      ],
-      "tags": [
-        "layout",
-        "giveaway",
-        "metadata",
-        "seo",
-        "linkedin"
-      ],
-      "languageNotes": "Metadata emphasizes 5 Claude skills for writing authentic LinkedIn posts that match user voice.",
-      "complexity": "moderate",
-      "summary": "[unknown] LinkedIn Kit layout",
-      "type": "file"
-    },
-    {
-      "id": "file:sitemap",
-      "name": "XML Sitemap generator",
-      "category": "Utility",
-      "subCategory": "SEO Metadata",
-      "relPath": "src/app/sitemap.ts",
-      "sizeLines": 38,
-      "language": "typescript",
-      "description": "Next.js metadata route that generates XML sitemap for SEO. Includes static URLs for main sections (events, giveaways, lead-magnets) and dynamic URLs for all free AI tool giveaways.",
-      "exports": [
-        "default"
-      ],
+      "id": "file:src/app/sitemap.ts",
+      "type": "file",
+      "name": "sitemap.ts",
+      "filePath": "src/app/sitemap.ts",
+      "summary": "Defines the Next.js metadata sitemap for the workshop domain, combining home, giveaway and lead-magnet URLs with free AI tool pages from the shared slug catalog. Each entry supplies modification time, update frequency and search priority.",
       "tags": [
         "seo",
         "sitemap",
-        "metadata-route",
-        "static-generation"
+        "metadata"
       ],
-      "languageNotes": "Uses Next.js MetadataRoute.Sitemap type. References FREE_AI_TOOL_SLUGS from lib/free-ai-tools for dynamic URL generation.",
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/lib/events.tsx",
+      "type": "file",
+      "name": "events.tsx",
+      "filePath": "src/lib/events.tsx",
+      "summary": "Defines the typed event catalog for connection dinners, Ubud brunch, Joechella and AI workshops, including section content, hosts, SEO metadata, registration limits, calendar dates, checkout pricing, promos, donations and post-purchase email/setup configuration; host sections are populated from each event at module initialization. Optional heroVideoSrc/heroVideoPoster and mobile variants support festival media, while exported helpers resolve events, select and sort upcoming live events, compute discounts and manage donation selection.",
+      "tags": [
+        "event-catalog",
+        "data-model",
+        "pricing",
+        "date-filtering",
+        "hero-video"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/app/sitemap.ts:sitemap",
+      "type": "function",
+      "name": "sitemap",
+      "filePath": "src/app/sitemap.ts",
+      "summary": "Generates sitemap entries for the workshop home, giveaway pages and lead magnets, expanding FREE_AI_TOOL_SLUGS into individual giveaway URLs with modification times and SEO priorities.",
+      "tags": [
+        "seo",
+        "sitemap",
+        "metadata"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        7,
+        36
+      ]
+    },
+    {
+      "id": "function:src/lib/events.tsx:getEventDiscountedPrice",
+      "type": "function",
+      "name": "getEventDiscountedPrice",
+      "filePath": "src/lib/events.tsx",
+      "summary": "Calculates an event ticket price using its optional promo, prioritizing fixed amount discounts over percentages and clamping discounted prices to zero.",
+      "tags": [
+        "pricing",
+        "promotion",
+        "utility"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        277,
+        279
+      ]
+    },
+    {
+      "id": "function:src/lib/events.tsx:resolvePromoCode",
+      "type": "function",
+      "name": "resolvePromoCode",
+      "filePath": "src/lib/events.tsx",
+      "summary": "Trims and uppercases an entered code, returning the matching event promotion regardless of case or null when absent or unrecognized.",
+      "tags": [
+        "promotion",
+        "lookup",
+        "normalization"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        281,
+        285
+      ]
+    },
+    {
+      "id": "function:src/lib/events.tsx:formatEventPrice",
+      "type": "function",
+      "name": "formatEventPrice",
+      "filePath": "src/lib/events.tsx",
+      "summary": "Formats an optionally discounted event price with its configured currency symbol, preserving whole numbers and using two decimal places for fractional prices.",
+      "tags": [
+        "pricing",
+        "formatting",
+        "utility"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        287,
+        291
+      ]
+    },
+    {
+      "id": "function:src/lib/events.tsx:formatDonationLabelNote",
+      "type": "function",
+      "name": "formatDonationLabelNote",
+      "filePath": "src/lib/events.tsx",
+      "summary": "Wraps an explicit donation note in parentheses or generates a suggested and minimum donation label using the event currency and a zero minimum fallback.",
+      "tags": [
+        "donation",
+        "formatting",
+        "pricing"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        293,
+        303
+      ]
+    },
+    {
+      "id": "function:src/lib/events.tsx:toggleDonationPreset",
+      "type": "function",
+      "name": "toggleDonationPreset",
+      "filePath": "src/lib/events.tsx",
+      "summary": "Adds or subtracts a donation preset according to its current selected state, clamps the result to the configured minimum and returns the updated amount and selection flag.",
+      "tags": [
+        "donation",
+        "state-transition",
+        "pricing"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        305,
+        322
+      ]
+    },
+    {
+      "id": "function:src/lib/events.tsx:getEventBySlug",
+      "type": "function",
+      "name": "getEventBySlug",
+      "filePath": "src/lib/events.tsx",
+      "summary": "Finds the first event with an exact matching slug in the shared catalog, returning undefined when no match exists.",
+      "tags": [
+        "event-catalog",
+        "lookup",
+        "utility"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        1909,
+        1911
+      ]
+    },
+    {
+      "id": "function:src/lib/events.tsx:getLiveEvents",
+      "type": "function",
+      "name": "getLiveEvents",
+      "filePath": "src/lib/events.tsx",
+      "summary": "Returns all catalog events marked live without applying date, manual-closure or registration-capacity filters.",
+      "tags": [
+        "event-catalog",
+        "filtering",
+        "event-status"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        1913,
+        1915
+      ]
+    },
+    {
+      "id": "function:src/lib/events.tsx:getUpcomingLiveEvents",
+      "type": "function",
+      "name": "getUpcomingLiveEvents",
+      "filePath": "src/lib/events.tsx",
+      "summary": "Filters live events whose end date, or fallback start date, has not passed the supplied time, retaining events without calendar dates. Sorts results by ascending start time with undated events last.",
+      "tags": [
+        "event-catalog",
+        "date-filtering",
+        "sorting"
+      ],
       "complexity": "moderate",
-      "summary": "[unknown] XML Sitemap generator",
-      "type": "file"
+      "lineRange": [
+        1917,
+        1932
+      ]
     }
   ],
   "edges": [
@@ -1763,175 +1755,168 @@
       "target": "function:src/app/giveaways/chat-to-flowchart/layout.tsx:ChatToFlowchartLayout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/chat-to-flowchart/page.tsx",
       "target": "function:src/app/giveaways/chat-to-flowchart/page.tsx:ChatToFlowchartPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/film/layout.tsx",
       "target": "function:src/app/giveaways/film/layout.tsx:FilmLayout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/film/page.tsx",
       "target": "function:src/app/giveaways/film/page.tsx:FilmPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/free-ai-concat/layout.tsx",
       "target": "function:src/app/giveaways/free-ai-concat/layout.tsx:Layout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/free-ai-concat/page.tsx",
       "target": "function:src/app/giveaways/free-ai-concat/page.tsx:FreeAiConcatPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/free-ai-salesman/layout.tsx",
       "target": "function:src/app/giveaways/free-ai-salesman/layout.tsx:Layout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/free-ai-salesman/page.tsx",
       "target": "function:src/app/giveaways/free-ai-salesman/page.tsx:FreeAiSalesmanPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/linkedin-kit/layout.tsx",
       "target": "function:src/app/giveaways/linkedin-kit/layout.tsx:LinkedinKitLayout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/linkedin-kit/page.tsx",
       "target": "function:src/app/giveaways/linkedin-kit/page.tsx:LinkedinKitPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/app/sitemap.ts",
-      "target": "function:src/app/sitemap.ts:sitemap",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/free-ai-tools.ts",
       "target": "function:src/lib/free-ai-tools.ts:getFreeAiTool",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/free-ai-tools.ts",
       "target": "function:src/lib/free-ai-tools.ts:isFreeAiToolSource",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/free-ai-tools.ts",
       "target": "function:src/lib/free-ai-tools.ts:formatStars",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/generic-giveaway-email.ts",
       "target": "function:src/lib/generic-giveaway-email.ts:esc",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/generic-giveaway-email.ts",
       "target": "function:src/lib/generic-giveaway-email.ts:isMastermindsHost",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/generic-giveaway-email.ts",
       "target": "function:src/lib/generic-giveaway-email.ts:validateGiveawayLink",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/generic-giveaway-email.ts",
       "target": "function:src/lib/generic-giveaway-email.ts:titleCaseSlug",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/generic-giveaway-email.ts",
       "target": "function:src/lib/generic-giveaway-email.ts:sanitizeGiveawayName",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/generic-giveaway-email.ts",
       "target": "function:src/lib/generic-giveaway-email.ts:isValidManychatSecret",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/generic-giveaway-email.ts",
       "target": "function:src/lib/generic-giveaway-email.ts:buildGenericGiveawayEmail",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/generic-giveaway-email.ts",
       "target": "function:src/lib/generic-giveaway-email.ts:websiteGiveawayEmail",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/generic-giveaway-email.ts",
       "target": "function:src/lib/generic-giveaway-email.ts:salesKeywordPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/generic-giveaway-email.ts",
       "target": "function:src/lib/generic-giveaway-email.ts:buildSalesKeywordEmail",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/giveaways.ts",
       "target": "function:src/lib/giveaways.ts:getGiveaway",
       "type": "contains",
       "direction": "forward",
-      "weight": 1
+      "weight": 1.0
     },
     {
       "source": "file:src/app/giveaways/chat-to-flowchart/page.tsx",
@@ -2032,441 +2017,623 @@
       "weight": 0.5
     },
     {
-      "source": "function:__nofilepath__:GET",
-      "target": "function:__nofilepath__:isAuthorized",
-      "relationship": "calls",
+      "source": "function:src/app/api/meta/purchase/route.ts:GET",
+      "target": "function:src/app/api/events/waitlist/notify/route.ts:isAuthorized",
       "confidence": 0.95,
-      "direction": "forward"
+      "direction": "forward",
+      "type": "calls",
+      "weight": 0.8
     },
     {
-      "source": "function:__nofilepath__:GET",
-      "target": "function:__nofilepath__:htmlPage",
-      "relationship": "calls",
+      "source": "function:src/app/api/meta/purchase/route.ts:GET",
+      "target": "function:src/app/api/events/waitlist/remove/route.ts:htmlPage",
       "confidence": 0.95,
-      "direction": "forward"
+      "direction": "forward",
+      "type": "calls",
+      "weight": 0.8
     },
     {
-      "source": "function:__nofilepath__:POST",
-      "target": "function:__nofilepath__:notifyWaitlist",
-      "relationship": "calls",
+      "source": "function:src/app/api/subscribe/route.ts:POST",
+      "target": "function:src/app/api/events/cancel/route.ts:notifyWaitlist",
       "confidence": 0.95,
-      "direction": "forward"
+      "direction": "forward",
+      "type": "calls",
+      "weight": 0.8
     },
     {
-      "source": "function:__nofilepath__:POST",
-      "target": "function:__nofilepath__:htmlPage",
-      "relationship": "calls",
+      "source": "function:src/app/api/subscribe/route.ts:POST",
+      "target": "function:src/app/api/events/waitlist/remove/route.ts:htmlPage",
       "confidence": 0.95,
-      "direction": "forward"
+      "direction": "forward",
+      "type": "calls",
+      "weight": 0.8
     },
     {
-      "source": "function:__nofilepath__:POST",
-      "target": "function:__nofilepath__:getBaseUrl",
-      "relationship": "calls",
+      "source": "function:src/app/api/subscribe/route.ts:POST",
+      "target": "function:src/app/api/events/checkout-session/route.ts:getBaseUrl",
       "confidence": 0.95,
-      "direction": "forward"
+      "direction": "forward",
+      "type": "calls",
+      "weight": 0.8
     },
     {
-      "source": "function:__nofilepath__:GET",
-      "target": "function:__nofilepath__:isLikelyTest",
-      "relationship": "calls",
+      "source": "function:src/app/api/meta/purchase/route.ts:GET",
+      "target": "function:src/app/api/events/reconcile-registrations/route.ts:isLikelyTest",
       "confidence": 0.95,
-      "direction": "forward"
+      "direction": "forward",
+      "type": "calls",
+      "weight": 0.8
     },
     {
-      "source": "function:__nofilepath__:GET",
-      "target": "function:__nofilepath__:buildIdempotencyKey",
-      "relationship": "calls",
+      "source": "function:src/app/api/meta/purchase/route.ts:GET",
+      "target": "function:src/app/api/events/waitlist/notify/route.ts:buildIdempotencyKey",
       "confidence": 0.95,
-      "direction": "forward"
+      "direction": "forward",
+      "type": "calls",
+      "weight": 0.8
     },
     {
-      "source": "function:__nofilepath__:matchesPassword",
-      "target": "function:__nofilepath__:sha256",
-      "relationship": "calls",
+      "source": "function:src/app/api/jill-auth/route.ts:matchesPassword",
+      "target": "function:src/app/api/jill-auth/route.ts:sha256",
       "confidence": 0.95,
-      "direction": "forward"
+      "direction": "forward",
+      "type": "calls",
+      "weight": 0.8
     },
     {
-      "source": "function:__nofilepath__:grantAccess",
-      "target": "function:__nofilepath__:sha256",
-      "relationship": "calls",
+      "source": "function:src/app/api/jill-auth/route.ts:grantAccess",
+      "target": "function:src/app/api/jill-auth/route.ts:sha256",
       "confidence": 0.95,
-      "direction": "forward"
+      "direction": "forward",
+      "type": "calls",
+      "weight": 0.8
     },
     {
-      "source": "function:__nofilepath__:POST",
-      "target": "function:__nofilepath__:matchesPassword",
-      "relationship": "calls",
+      "source": "function:src/app/api/subscribe/route.ts:POST",
+      "target": "function:src/app/api/jill-auth/route.ts:matchesPassword",
       "confidence": 0.95,
-      "direction": "forward"
+      "direction": "forward",
+      "type": "calls",
+      "weight": 0.8
     },
     {
-      "source": "function:__nofilepath__:POST",
-      "target": "function:__nofilepath__:grantAccess",
-      "relationship": "calls",
+      "source": "function:src/app/api/subscribe/route.ts:POST",
+      "target": "function:src/app/api/jill-auth/route.ts:grantAccess",
       "confidence": 0.95,
-      "direction": "forward"
+      "direction": "forward",
+      "type": "calls",
+      "weight": 0.8
     },
     {
-      "source": "function:__nofilepath__:GET",
-      "target": "function:__nofilepath__:matchesPassword",
-      "relationship": "calls",
+      "source": "function:src/app/api/meta/purchase/route.ts:GET",
+      "target": "function:src/app/api/jill-auth/route.ts:matchesPassword",
       "confidence": 0.95,
-      "direction": "forward"
+      "direction": "forward",
+      "type": "calls",
+      "weight": 0.8
     },
     {
-      "source": "function:__nofilepath__:GET",
-      "target": "function:__nofilepath__:grantAccess",
-      "relationship": "calls",
+      "source": "function:src/app/api/meta/purchase/route.ts:GET",
+      "target": "function:src/app/api/jill-auth/route.ts:grantAccess",
       "confidence": 0.95,
-      "direction": "forward"
+      "direction": "forward",
+      "type": "calls",
+      "weight": 0.8
     },
     {
-      "source": "function:__nofilepath__:POST",
-      "target": "function:__nofilepath__:sendViaResend",
-      "relationship": "calls",
+      "source": "function:src/app/api/subscribe/route.ts:POST",
+      "target": "function:src/app/api/lead-magnets/passive-income-100/route.ts:sendViaResend",
       "confidence": 0.95,
-      "direction": "forward"
+      "direction": "forward",
+      "type": "calls",
+      "weight": 0.8
     },
     {
-      "source": "function:__nofilepath__:POST",
-      "target": "function:__nofilepath__:supabase",
-      "relationship": "calls",
+      "source": "function:src/app/api/subscribe/route.ts:POST",
+      "target": "function:src/app/api/subscribe/route.ts:supabase",
       "confidence": 0.95,
-      "direction": "forward"
+      "direction": "forward",
+      "type": "calls",
+      "weight": 0.8
     },
     {
-      "source": "file:ai-behavior-quiz-page",
-      "target": "file:ai-behavior-quiz-pack",
+      "source": "file:src/app/giveaways/ai-behavior-quiz/page.tsx",
+      "target": "file:src/app/giveaways/ai-behavior-quiz/pack.ts",
       "type": "imports",
       "kind": "configuration",
       "description": "Page component imports quiz configuration and renders it via PackPage",
-      "direction": "forward"
+      "direction": "forward",
+      "weight": 0.7
     },
     {
-      "source": "file:ai-levels-quiz-page",
-      "target": "file:ai-levels-quiz-pack",
+      "source": "file:src/app/giveaways/ai-levels-quiz/page.tsx",
+      "target": "file:src/app/giveaways/ai-levels-quiz/pack.ts",
       "type": "imports",
       "kind": "configuration",
       "description": "Page component imports quiz configuration and renders it via PackPage",
-      "direction": "forward"
+      "direction": "forward",
+      "weight": 0.7
     },
     {
-      "source": "file:chat-to-flowchart-page",
-      "target": "file:chat-to-flowchart-pack",
-      "type": "imports",
-      "kind": "configuration",
-      "description": "Page component imports tool configuration and renders it via PackPage with JSON-LD schema",
-      "direction": "forward"
-    },
-    {
-      "source": "file:claude-md-pack",
-      "target": "file:claude-md-pack",
-      "type": "references",
-      "kind": "self-reference",
-      "description": "Pack configuration references CLAUDE_MD_FILE from prompts module",
-      "direction": "forward"
-    },
-    {
-      "source": "file:event-detail-page",
-      "target": "file:event-setup-page",
+      "source": "file:src/app/events/[slug]/page.tsx",
+      "target": "file:src/app/events/[slug]/setup/page.tsx",
       "type": "related",
       "kind": "route-hierarchy",
       "description": "Event detail page and setup page are sibling routes under events/[slug]/",
-      "direction": "forward"
+      "direction": "forward",
+      "weight": 0.5
     },
     {
-      "source": "file:events-index-page",
-      "target": "file:event-detail-page",
-      "type": "links",
+      "source": "file:src/app/events/page.tsx",
+      "target": "file:src/app/events/[slug]/page.tsx",
+      "type": "routes",
       "kind": "navigation",
       "description": "Events listing links to individual event detail pages",
-      "direction": "forward"
+      "direction": "forward",
+      "weight": 0.5
     },
     {
-      "source": "file:all-sorted-overview-layout",
-      "target": "file:all-sorted-overview-page",
-      "type": "wraps",
+      "source": "file:src/app/giveaways/all-sorted-overview/layout.tsx",
+      "target": "file:src/app/giveaways/all-sorted-overview/page.tsx",
+      "type": "contains",
       "kind": "layout-hierarchy",
       "description": "Layout component wraps All Sorted overview page",
-      "direction": "forward"
+      "direction": "forward",
+      "weight": 0.5
     },
     {
-      "source": "file:chat-to-flowchart-layout",
-      "target": "file:chat-to-flowchart-page",
-      "type": "wraps",
+      "source": "file:src/app/giveaways/chat-to-flowchart/layout.tsx",
+      "target": "file:src/app/giveaways/chat-to-flowchart/page.tsx",
+      "type": "contains",
       "kind": "layout-hierarchy",
       "description": "Layout component wraps Chat to Flowchart page",
-      "direction": "forward"
+      "direction": "forward",
+      "weight": 0.5
     },
     {
-      "source": "file:claude-md-layout",
-      "target": "file:claude-md-pack",
+      "source": "file:src/app/giveaways/claude-md/layout.tsx",
+      "target": "file:src/app/giveaways/claude-md/pack.ts",
       "type": "related",
       "kind": "configuration",
       "description": "Layout is sibling to configuration in same module structure",
-      "direction": "forward"
+      "direction": "forward",
+      "weight": 0.5
     },
     {
-      "source": "file:film-layout",
-      "target": "file:film-layout",
-      "type": "self",
-      "kind": "structure",
-      "description": "Film layout is a giveaway layout component (no paired page in this batch)",
-      "direction": "forward"
-    },
-    {
-      "source": "file:free-ai-concat-layout",
-      "target": "file:free-ai-concat-page",
-      "type": "wraps",
+      "source": "file:src/app/giveaways/free-ai-concat/layout.tsx",
+      "target": "file:src/app/giveaways/free-ai-concat/page.tsx",
+      "type": "contains",
       "kind": "layout-hierarchy",
       "description": "Layout component wraps Free AI Concat page",
-      "direction": "forward"
+      "direction": "forward",
+      "weight": 0.5
     },
     {
-      "source": "file:free-ai-salesman-layout",
-      "target": "file:free-ai-salesman-page",
-      "type": "wraps",
+      "source": "file:src/app/giveaways/free-ai-salesman/layout.tsx",
+      "target": "file:src/app/giveaways/free-ai-salesman/page.tsx",
+      "type": "contains",
       "kind": "layout-hierarchy",
       "description": "Layout component wraps Free AI Salesman page (draft)",
-      "direction": "forward"
+      "direction": "forward",
+      "weight": 0.5
     },
     {
-      "source": "file:linkedin-kit-layout",
-      "target": "file:linkedin-kit-layout",
-      "type": "self",
-      "kind": "structure",
-      "description": "LinkedIn Kit layout is a giveaway layout component (no paired page in this batch)",
-      "direction": "forward"
-    },
-    {
-      "source": "file:sitemap",
-      "target": "file:sitemap",
-      "type": "self",
-      "kind": "dynamic-generation",
-      "description": "Sitemap dynamically generates URLs from FREE_AI_TOOL_SLUGS",
-      "direction": "forward"
-    },
-    {
-      "source": "file:bonus-workshops-page",
-      "target": "file:events-index-page",
+      "source": "file:src/app/bonus-workshops/page.tsx",
+      "target": "file:src/app/events/page.tsx",
       "type": "related",
       "kind": "content-relationship",
       "description": "Bonus workshops is supplementary content to regular events",
-      "direction": "forward"
+      "direction": "forward",
+      "weight": 0.5
     },
     {
-      "source": "file:auto-lead-magnet-page",
-      "target": "file:auto-lead-magnet-page",
-      "type": "self",
-      "kind": "embedded-resource",
-      "description": "Page contains embedded comprehensive PROMPT constant for lead magnet generation",
-      "direction": "forward"
+      "source": "config:next.config.ts",
+      "target": "file:src/app/events/[slug]/page.tsx",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:src/app/sitemap.ts",
+      "target": "function:src/app/sitemap.ts:sitemap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/app/sitemap.ts",
+      "target": "function:src/app/sitemap.ts:sitemap",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:getEventDiscountedPrice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:getEventDiscountedPrice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:resolvePromoCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:resolvePromoCode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:formatEventPrice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:formatEventPrice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:formatDonationLabelNote",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:formatDonationLabelNote",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:toggleDonationPreset",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:toggleDonationPreset",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:getEventBySlug",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:getEventBySlug",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:getLiveEvents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:getLiveEvents",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:getUpcomingLiveEvents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:getUpcomingLiveEvents",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/sitemap.ts",
+      "target": "file:src/lib/free-ai-tools.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:src/lib/events.tsx:formatEventPrice",
+      "target": "function:src/lib/events.tsx:getEventDiscountedPrice",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/lib/events.tsx:getUpcomingLiveEvents",
+      "target": "function:src/lib/events.tsx:getLiveEvents",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/events/[slug]/page.tsx",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/events/[slug]/setup/page.tsx",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/events/page.tsx",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
     }
   ],
+  "version": "1.0.0",
+  "project": {
+    "name": "masterminds-workshop",
+    "languages": [
+      "TypeScript",
+      "JavaScript",
+      "CSS",
+      "HTML",
+      "JSON"
+    ],
+    "frameworks": [
+      "Next.js",
+      "React",
+      "TailwindCSS",
+      "Stripe",
+      "Supabase",
+      "Framer Motion",
+      "GSAP"
+    ],
+    "description": "Masterminds Workshop Site is a Next.js application for event discovery and registration, workshop learning, and giveaway resource distribution, with shared content catalogs, payment integration, and email delivery.",
+    "analyzedAt": "2026-10-31T20:12:10.143313+00:00",
+    "gitCommitHash": "fefc614a4f6ac670cd433fb0ae77c4313cfdb205"
+  },
   "layers": [
     {
-      "id": "api-routes",
+      "id": "layer:api-routes",
       "name": "API Routes",
-      "description": "Next.js API handlers for events, registrations, checkouts, webhooks, and lead magnet capture. Handles business logic for Stripe integration, email notifications, event automation, and data persistence.",
+      "description": "Next.js endpoint handling email-list unsubscribe token verification and suppression recording in the represented graph.",
       "nodeIds": [
-        "file:src/app/api/events/cancel/route.ts",
-        "file:src/app/api/events/validate-promo/route.ts",
-        "file:src/app/api/events/checkout-session/route.ts",
-        "file:src/app/api/lead-magnets/passive-income-100/route.ts",
-        "file:src/app/api/events/finalize-registration/route.ts",
-        "file:src/app/api/illy-auth/route.ts",
-        "file:src/app/api/events/session-reminders/route.ts",
-        "file:src/app/api/subscribe/route.ts",
-        "file:src/app/api/events/waitlist/remove/route.ts",
-        "file:src/app/api/stripe/webhook/route.ts",
-        "file:src/app/api/events/abandoned-checkout-followups-t12h/route.ts",
-        "file:src/app/api/lead-magnets/claudemd/route 2.ts",
-        "file:src/app/api/events/[slug]/calendar/route.ts",
-        "file:src/app/api/events/followups/route.ts",
-        "file:src/app/api/meta/purchase/route.ts",
-        "file:src/app/api/unsubscribe/route.ts",
-        "file:src/app/api/lead-magnet/route.ts",
-        "file:src/app/api/lead-magnets/claudemd/route.ts",
-        "file:src/app/api/consent/region/route.ts",
-        "file:src/app/api/events/abandoned-checkout-followups/route.ts",
-        "file:src/app/api/events/location-reminders/route.ts",
-        "file:src/app/api/jill-auth/route.ts",
-        "file:src/app/api/events/waitlist/notify/route.ts",
-        "file:src/app/api/events/registration-profile/route.ts",
-        "file:src/app/api/events/waitlist/join/route.ts",
-        "file:src/app/api/events/reconcile-registrations/route.ts"
+        "file:src/app/api/unsubscribe/route.ts"
       ]
     },
     {
-      "id": "pages",
+      "id": "layer:pages",
       "name": "Pages",
-      "description": "React page components for user-facing surfaces including event details, event listings, bonus workshops, and post-purchase setup flows. Forms the primary navigation and content delivery tier.",
+      "description": "Event listings, workshop details, attendee setup and bonus guides provide the main workshop content and navigation.",
       "nodeIds": [
         "file:src/app/bonus-workshops/page.tsx",
-        "file:src/app/events/[slug]/setup/page.tsx",
         "file:src/app/bonus/auto-lead-magnet/page.tsx",
         "file:src/app/events/[slug]/page.tsx",
+        "file:src/app/events/[slug]/setup/page.tsx",
         "file:src/app/events/page.tsx"
       ]
     },
     {
-      "id": "giveaway-tools",
+      "id": "layer:giveaway-tools",
       "name": "Giveaway Tools",
-      "description": "Interactive giveaway and lead magnet tools including quizzes (AI behavior, AI levels), content packs, and layout wrappers for tools like Chat-to-Flowchart, Claude.md, AI Salesman, and All Sorted overview. Drives lead capture and user engagement.",
+      "description": "Giveaway pages, SEO layouts, resource packs and reusable prompts present AI tools, quizzes and product guides.",
       "nodeIds": [
-        "file:src/app/giveaways/linkedin-kit/layout.tsx",
-        "file:src/app/giveaways/free-ai-concat/layout.tsx",
-        "file:src/app/giveaways/film/page.tsx",
-        "file:src/app/giveaways/film/layout.tsx",
-        "file:src/app/giveaways/free-ai-salesman/layout.tsx",
-        "file:src/app/giveaways/linkedin-kit/pack.ts",
-        "file:src/app/giveaways/chat-to-flowchart/layout.tsx",
-        "file:src/app/giveaways/free-ai-concat/page.tsx",
-        "file:src/app/giveaways/all-sorted-overview/page.tsx",
+        "file:src/app/giveaways/ai-behavior-quiz/pack.ts",
+        "file:src/app/giveaways/ai-behavior-quiz/page.tsx",
+        "file:src/app/giveaways/ai-levels-quiz/pack.ts",
         "file:src/app/giveaways/ai-levels-quiz/page.tsx",
         "file:src/app/giveaways/all-sorted-overview/layout.tsx",
-        "file:src/app/giveaways/claude-md/pack.ts",
-        "file:src/app/giveaways/film/prompt.ts",
-        "file:src/app/giveaways/claude-md/layout.tsx",
-        "file:src/app/giveaways/ai-levels-quiz/pack.ts",
+        "file:src/app/giveaways/all-sorted-overview/page.tsx",
+        "file:src/app/giveaways/chat-to-flowchart/layout.tsx",
         "file:src/app/giveaways/chat-to-flowchart/pack.ts",
-        "file:src/app/giveaways/ai-behavior-quiz/pack.ts",
-        "file:src/app/giveaways/linkedin-kit/prompt.ts",
-        "file:src/app/giveaways/linkedin-kit/page.tsx",
         "file:src/app/giveaways/chat-to-flowchart/page.tsx",
-        "file:src/app/giveaways/free-ai-salesman/page.tsx",
+        "file:src/app/giveaways/claude-md/layout.tsx",
+        "file:src/app/giveaways/claude-md/pack.ts",
+        "file:src/app/giveaways/film/layout.tsx",
         "file:src/app/giveaways/film/pack.ts",
-        "file:src/app/giveaways/ai-behavior-quiz/page.tsx"
-      ]
-    },
-    {
-      "id": "shared-infra",
-      "name": "Shared Components & Libraries",
-      "description": "Shared infrastructure for SEO, site discovery, and content management including XML sitemap generation. Utilities for events, Stripe integration, email handling, and authentication are provided via imported external libraries (not shown in explicit file list).",
-      "nodeIds": [
-        "file:src/app/sitemap.ts"
+        "file:src/app/giveaways/film/page.tsx",
+        "file:src/app/giveaways/film/prompt.ts",
+        "file:src/app/giveaways/free-ai-concat/layout.tsx",
+        "file:src/app/giveaways/free-ai-concat/page.tsx",
+        "file:src/app/giveaways/free-ai-salesman/layout.tsx",
+        "file:src/app/giveaways/free-ai-salesman/page.tsx",
+        "file:src/app/giveaways/linkedin-kit/layout.tsx",
+        "file:src/app/giveaways/linkedin-kit/pack.ts",
+        "file:src/app/giveaways/linkedin-kit/page.tsx",
+        "file:src/app/giveaways/linkedin-kit/prompt.ts"
       ]
     },
     {
       "id": "layer:shared-libraries",
       "name": "Shared Libraries",
-      "description": "Shared Libraries layer",
+      "description": "Shared event and giveaway catalogs, pricing helpers, email builders and sitemap generation support workshop and resource discovery.",
       "nodeIds": [
+        "file:src/app/sitemap.ts",
+        "file:src/lib/events.tsx",
         "file:src/lib/free-ai-tools.ts",
         "file:src/lib/generic-giveaway-email.ts",
-        "file:src/lib/giveaways.ts",
-        "file:src/app/sitemap.ts"
+        "file:src/lib/giveaways.ts"
       ]
     },
     {
       "id": "layer:assets",
       "name": "Assets",
-      "description": "Assets layer",
+      "description": "Downloadable LinkedIn Kit and Salesman ZIP archives and their checksums provide distributable giveaway resources.",
       "nodeIds": [
         "file:public/downloads/joes-linkedin-kit-v1.0.zip",
         "file:public/downloads/joes-linkedin-kit-v1.0.zip.sha256",
         "file:public/downloads/joes-salesman-v1.0.zip",
         "file:public/downloads/joes-salesman-v1.0.zip.sha256"
       ]
+    },
+    {
+      "id": "layer:test",
+      "name": "Tests",
+      "description": "Catalog and LinkedIn Kit tests verify giveaway metadata, resource content, source handling and email helpers.",
+      "nodeIds": [
+        "file:tests/free-ai-tools.test.ts",
+        "file:tests/linkedin-kit.test.ts"
+      ]
+    },
+    {
+      "id": "layer:config",
+      "name": "Configuration",
+      "description": "Next.js build tracing, bundle exclusions, legacy redirects and host-specific rewrites configure delivery of workshop and giveaway routes.",
+      "nodeIds": [
+        "config:next.config.ts"
+      ]
     }
   ],
   "tour": [
     {
       "order": 1,
-      "title": "Project Overview",
-      "description": "Masterminds Workshop Site is a Next.js 16 application that serves as a platform for event marketing, registration, and content distribution. It enables Joe Che to run live workshops (both online and in-person), distribute giveaways and lead magnets, collect attendee information, and manage payment processing through Stripe. The site integrates with Supabase for data persistence, Resend for email delivery, and multiple third-party services for automation and tracking. Key audience: workshop attendees, giveaway consumers, lead magnet prospects. Core flows: discover event \u2192 register \u2192 pay \u2192 receive follow-ups.",
+      "title": "Workshop Site Overview",
+      "description": "Start at the events index to see how the Masterminds site presents live workshops through cards, dates, prices and links to individual events. This is the overview entry for a partial graph centered on event content, giveaways and their supporting files. Follow its catalog dependency next to learn where that presentation gets its shared event definitions.",
       "nodeIds": [
-        "file:package.json",
-        "file:src/app/layout.tsx",
-        "file:src/app/page.tsx",
-        "file:src/lib/events.ts"
+        "file:src/app/events/page.tsx"
       ]
     },
     {
       "order": 2,
-      "title": "Event System Architecture",
-      "description": "The event system is the centerpiece of the platform. Events are configured in a central registry (src/lib/events.ts) and exposed through two main pages: the events index page lists upcoming events with pricing and modality info, while individual event detail pages provide full event info, registration forms, and checkout. Events support flexible pricing (free, fixed, donations), multiple formats (online via Zoom, in-person, hybrid), and optional promo codes. Each event can have capacity limits (seat tracking), post-purchase setup instructions, and automated email sequences. The system tracks attendee acquisition source (utm params, referrers, specific campaigns).",
+      "title": "The Shared Event Catalog",
+      "description": "The event catalog supplies the listing from Step 1 with typed definitions for workshops, dinners and other gatherings. It brings together hosts, sections, SEO, registration limits, pricing, promotions, donations and attendee setup information; helpers look up events, sort upcoming live events and calculate displayed prices. Optional hero video sources, posters and mobile variants let an event choose richer media without changing the catalog structure.",
       "nodeIds": [
-        "file:src/app/events/page.tsx",
-        "file:src/app/events/[slug]/page.tsx",
-        "file:src/components/events/EventPageView.tsx",
-        "file:src/lib/events.ts",
-        "file:src/lib/event-status.ts",
-        "file:src/lib/event-templates.ts"
-      ]
+        "file:src/lib/events.tsx"
+      ],
+      "languageLesson": "Optional TypeScript properties let event records share one model while supplying media or setup details only when those fields apply."
     },
     {
       "order": 3,
-      "title": "Payment & Registration Flow",
-      "description": "When an attendee submits the registration form, the client-side form handler calls the POST /api/events/checkout-session route. This route validates the attendee's input (name, email, WhatsApp number, business context), checks rate limits, resolves any promo code, calculates the final charge amount, claims an event capacity seat, and creates a Stripe Checkout Session with proper metadata. The response includes the sessionId for the client to redirect to Stripe. The checkout session is attached to the seat reservation, so if the checkout expires, the seat is automatically released. After payment, the flow continues with post-purchase setup (if configured) or follow-up emails.",
+      "title": "From Slugs to Setup",
+      "description": "Building on the shared catalog, the dynamic event page resolves a slug, prepares metadata and promotion information, and passes event data to its presentation component with Stripe integration. The nested setup route presents the instructions and next steps for attendees after purchase. Read these routes as the represented navigation and content boundary; the checkout and database implementation files are outside this tour.",
       "nodeIds": [
-        "file:src/app/api/events/checkout-session/route.ts",
-        "file:src/lib/event-checkout.ts",
-        "file:src/lib/event-capacity.ts",
-        "file:src/lib/event-intake.ts",
-        "file:src/lib/stripe.ts",
-        "file:src/lib/rate-limit.ts"
-      ]
+        "file:src/app/events/[slug]/page.tsx",
+        "file:src/app/events/[slug]/setup/page.tsx"
+      ],
+      "languageLesson": "In the Next.js App Router, a [slug] directory captures a route segment, while a nested setup/page.tsx creates a related URL beneath that event."
     },
     {
       "order": 4,
-      "title": "Payment Verification & Webhooks",
-      "description": "Stripe webhooks provide server-side certainty that payment succeeded, even if the client browser crashes after checkout. The /api/stripe/webhook route listens for three event types: checkout.session.completed (payment succeeded), checkout.session.async_payment_succeeded (deferred payment cleared), and checkout.session.expired (checkout timed out without payment). On success, the webhook finalizes the registration (records it in Supabase, marks the seat as confirmed, triggers follow-up emails). On expiration, the reserved seat is released so others can book. This webhook-first architecture prevents double-bookings and ensures no attendee falls through the cracks due to network failures.",
+      "title": "Catalogs for Free Resources",
+      "description": "Alongside paid and live events, the site maintains a free AI tool catalog and a registry of giveaway pages. The former defines tool slugs, lookups and source validation, while the latter provides shared giveaway metadata. These modules establish the common vocabulary for the resource pages and checks in the following steps.",
       "nodeIds": [
-        "file:src/app/api/stripe/webhook/route.ts",
-        "file:src/lib/event-registration-db.ts",
-        "file:src/lib/event-capacity.ts",
-        "file:src/app/api/events/finalize-registration/route.ts"
+        "file:src/lib/free-ai-tools.ts",
+        "file:src/lib/giveaways.ts"
       ]
     },
     {
       "order": 5,
-      "title": "Lead Magnets & Giveaways System",
-      "description": "Lead magnets are free content assets (downloads, quizzes, guides) distributed in exchange for email addresses. The giveaways system has two layers: (1) pack-based giveaways under /giveaways/<slug> which use a template page component with structured content (sections, guides, troubleshooting), and (2) lead magnet routes at /api/lead-magnets/<source> that handle email capture and delivery. A user finds a giveaway, views the content, and optionally subscribes to email. The /api/lead-magnet route is the unified ingestion point that accepts source, email, and giveaway slug, then routes to the appropriate builder (generic giveaway email, free AI tool email, quiz giveaway email, etc.) and delivers via Resend with proper list-unsubscribe headers and suppression checks.",
+      "title": "Content Driven Giveaway Guides",
+      "description": "With the resource catalogs in mind, inspect Chat to Flowchart as a page, content pack and metadata layout working together. The pack holds instructions, promises, limitations and troubleshooting, while the page adds structured search data and renders the guide. The CLAUDE.md pack and layout show the same separation applied to a different setup resource.",
       "nodeIds": [
-        "file:src/app/giveaways/[slug]/page.tsx",
-        "file:src/app/giveaways/ai-levels-quiz/pack.ts",
+        "file:src/app/giveaways/chat-to-flowchart/page.tsx",
         "file:src/app/giveaways/chat-to-flowchart/pack.ts",
-        "file:src/app/giveaways/all-sorted-overview/page.tsx",
-        "file:src/app/api/lead-magnet/route.ts",
-        "file:src/lib/lead-magnets.ts",
-        "file:src/lib/pack-page.ts"
+        "file:src/app/giveaways/chat-to-flowchart/layout.tsx",
+        "file:src/app/giveaways/claude-md/pack.ts",
+        "file:src/app/giveaways/claude-md/layout.tsx"
       ]
     },
     {
       "order": 6,
-      "title": "Post-Purchase Experience & Attendee Setup",
-      "description": "After an attendee pays for an event, they are redirected to the setup page (/events/<slug>/setup) which guides them through pre-event preparation. The setup page is configured per-event and may include primary and secondary action items (e.g., 'Install this tool' or 'Review this guide'). The page is entirely configured in the event definition and can be omitted if no setup is needed. Additionally, the system sends a series of confirmation and reminder emails: immediate confirmation after payment, abandoned checkout recovery (for carts left unpaid), and pre-event reminders with timing information converted to the attendee's local timezone (Singapore, Europe, New York, Los Angeles). The event-confirmation-email module handles all these templates with consistent branding.",
+      "title": "Prompts and Downloadable Kits",
+      "description": "The LinkedIn Kit extends the guide pattern from Step 5 with reusable prompt text and a downloadable archive. Its page and pack describe the resource and expose the ZIP path, while the checksum file supplies a value that can be used to verify the archive. This stop connects the content model to the concrete files a visitor can download.",
       "nodeIds": [
-        "file:src/app/events/[slug]/setup/page.tsx",
-        "file:src/lib/event-confirmation-email.ts",
-        "file:src/lib/event-followup.ts",
-        "file:src/app/api/events/abandoned-checkout-followups/route.ts",
-        "file:src/lib/abandoned-checkout-followups.ts"
+        "file:src/app/giveaways/linkedin-kit/page.tsx",
+        "file:src/app/giveaways/linkedin-kit/pack.ts",
+        "file:src/app/giveaways/linkedin-kit/prompt.ts",
+        "file:public/downloads/joes-linkedin-kit-v1.0.zip",
+        "file:public/downloads/joes-linkedin-kit-v1.0.zip.sha256"
       ]
     },
     {
       "order": 7,
-      "title": "Data Persistence & Tracking",
-      "description": "The system uses Supabase (PostgreSQL) as the primary data store for: event registrations (who attended which event and paid how much), event registration intake forms (detailed attendee info like WhatsApp, business context), event email ledger (which emails were sent to whom), and giveaway subscriptions (email signups via lead magnets). Registrations and intakes are saved during the checkout flow; the email ledger is updated as confirmation and follow-up emails are sent. For analytics, the system tracks user interactions via the 'insight-to-fix' tracking system (checkout_failed, stripe_webhook events, etc.). Event seat capacity is managed in-memory per server instance during checkout but also reflected in the database for durability. This layered approach ensures no concurrent bookings exceed event capacity.",
+      "title": "Creative Tool Resource Pages",
+      "description": "The film resource applies the same page, pack and prompt organization to an animated video guide with gallery and repository links. Its layout supplies search metadata separately from the guide content. Compare the Concat page to see another resource page using shared free AI tool presentation utilities, whose implementations are outside the represented files.",
       "nodeIds": [
-        "file:src/lib/event-registration-db.ts",
-        "file:src/lib/event-email-ledger.ts",
-        "file:src/lib/insight-to-fix.ts",
-        "file:src/lib/rate-limit.ts"
+        "file:src/app/giveaways/film/page.tsx",
+        "file:src/app/giveaways/film/pack.ts",
+        "file:src/app/giveaways/film/prompt.ts",
+        "file:src/app/giveaways/film/layout.tsx",
+        "file:src/app/giveaways/free-ai-concat/page.tsx"
       ]
     },
     {
       "order": 8,
-      "title": "Discovery, SEO & Content Distribution",
-      "description": "The sitemap.ts file defines all discoverable URLs and their priority/change frequency for search engines. All event pages, giveaway pages, lead magnet pages, and bonus content are enumerated with proper metadata. Individual event pages include OpenGraph and Twitter card metadata so they preview correctly on social media. The giveaway system is a content hub driving organic traffic and lead capture; each giveaway page is optimized for a specific keyword or use case and linked from the sitemap. The free-ai-tools subsystem generates a giveaway page per tool (AI-agent-income, Claude MD, chat-to-flowchart, etc.), each with consistent templates. Canonical URLs are set to prevent duplication. This architecture makes the site highly discoverable and shareable.",
+      "title": "Quizzes and Bonus Learning",
+      "description": "The quiz pages reuse the guide pattern to explain two distinct assessments: behavioral intensity from B0 to B10 and capability levels on a 0\u201340 scale. Their packs hold explanatory content and links, while the quizzes themselves run on an external site. The automatic lead magnet guide demonstrates a longer learning resource with an embedded prompt, instructions and a sample PDF link.",
       "nodeIds": [
-        "file:src/app/sitemap.ts",
-        "file:src/lib/free-ai-tools.ts",
-        "file:src/app/giveaways/page.tsx",
-        "file:src/lib/generic-giveaway-email.ts"
+        "file:src/app/giveaways/ai-behavior-quiz/page.tsx",
+        "file:src/app/giveaways/ai-behavior-quiz/pack.ts",
+        "file:src/app/giveaways/ai-levels-quiz/page.tsx",
+        "file:src/app/giveaways/ai-levels-quiz/pack.ts",
+        "file:src/app/bonus/auto-lead-magnet/page.tsx"
+      ]
+    },
+    {
+      "order": 9,
+      "title": "Email Content and Preferences",
+      "description": "After seeing the resources visitors receive, inspect the shared helpers that validate giveaway links and names and construct generic or keyword-specific email content. The unsubscribe route represents the corresponding preference boundary: its GET and POST handlers verify tokens and record suppressions for email list management. These files explain content preparation and unsubscribe behavior without establishing a complete delivery pipeline.",
+      "nodeIds": [
+        "file:src/lib/generic-giveaway-email.ts",
+        "file:src/app/api/unsubscribe/route.ts"
+      ]
+    },
+    {
+      "order": 10,
+      "title": "Catalog Based Search Discovery",
+      "description": "The sitemap connects the resource catalog from Step 4 to search discovery by importing the shared free AI tool slug catalog. It combines tool page URLs with home, giveaway and lead magnet entries, assigning modification times, update frequencies and priorities. This makes the catalog an input to both resource lookup and the generated list of discoverable URLs.",
+      "nodeIds": [
+        "file:src/app/sitemap.ts"
+      ]
+    },
+    {
+      "order": 11,
+      "title": "Build Assets and Routing",
+      "description": "Next.js configuration determines how the pages and resources from earlier steps are packaged and reached. Its tracing rules include private prompt pack assets for the relevant API handlers and exclude non-image event media, including video, from server bundles, while fixing the Turbopack root to this project. Legacy and portal redirects plus host-specific root rewrites direct requests to the intended destinations.",
+      "nodeIds": [
+        "config:next.config.ts"
+      ]
+    },
+    {
+      "order": 12,
+      "title": "Checks Across Resource Boundaries",
+      "description": "Finish by reading the tests that protect the shared resource contracts introduced throughout the tour. The free AI tool tests check catalog lookup, source handling and formatting, while the LinkedIn Kit tests connect registered giveaway content with its pack, prompt and email helpers. These represented tests show which resource assumptions are checked; they do not establish coverage of the unrepresented checkout or database flows.",
+      "nodeIds": [
+        "file:tests/free-ai-tools.test.ts",
+        "file:tests/linkedin-kit.test.ts"
       ]
     }
   ]
