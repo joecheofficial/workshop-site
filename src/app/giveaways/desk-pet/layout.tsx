@@ -5,11 +5,11 @@ const BASE = 'https://workshop.mastermindshq.business'
 const URL = `${BASE}/giveaways/desk-pet`
 
 export const metadata: Metadata = {
-  title: 'Desk Pet: a cartoon of you that watches Claude work',
+  title: 'Desk Pet: a cute puppy that watches Claude work',
   description:
-    'A free Mac app where a cartoon of you sits on your screen and reacts to Claude Code. It types while Claude works, cheers when it is done and waves when Claude needs you. Free, from Joe Che.',
+    'A free Mac app where a cute puppy sits on your screen and reacts to Claude Code. It types while Claude works, cheers when it is done and waves when Claude needs you. Free, from Joe Che.',
   keywords: [
-    'desk pet', 'Claude Code', 'Claude Code hooks', 'Mac app', 'cartoon avatar',
+    'desk pet', 'Claude Code', 'Claude Code hooks', 'Mac app', 'puppy',
     'tamagotchi', 'AI Business Mastermind', 'Joe Che',
   ],
   authors: [{ name: 'Joe Che', url: 'https://www.mastermindshq.business' }],
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   alternates: { canonical: URL },
   openGraph: {
     title: 'Desk Pet: Free from Joe Che',
-    description: 'A cartoon of you sits on your screen and reacts to Claude Code. Claude Code builds it on your Mac. Free.',
+    description: 'A cute puppy sits on your screen and reacts to Claude Code. Pick from 10 dogs. Claude Code builds it on your Mac. Free.',
     url: URL,
     siteName: 'Masterminds Workshop',
     type: 'website',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Desk Pet: Free from Joe Che',
-    description: 'A cartoon of you that types while Claude works and cheers when it is done. Free.',
+    description: 'A cute puppy that types while Claude works and cheers when it is done. Free.',
     creator: '@joecheuk',
   },
 }

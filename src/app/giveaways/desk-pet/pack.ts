@@ -15,9 +15,9 @@ export const DESK_PET_CONTENT: PackPageContent = {
   slug: 'desk-pet',
   level: 'builder',
   hero: {
-    title: 'A cartoon of you that watches Claude work.',
+    title: 'A cute puppy that watches Claude work.',
     free: 'It is free.',
-    lede: 'A little cartoon of you sits on your Mac screen. It types while Claude works. It cheers when Claude is done. It waves when Claude needs you. Claude Code makes the cartoon from your photo. It takes about 10 minutes. It only works in Claude Code, on a Mac.',
+    lede: 'A little puppy sits on your Mac screen. It types while Claude works. It cheers when Claude is done. It waves when Claude needs you. Pick from 10 dogs and give yours a name. It takes about 10 minutes. It only works in Claude Code, on a Mac.',
     button: {
       label: 'Take me to it',
       meta: 'free · on this page',
@@ -45,7 +45,7 @@ export const DESK_PET_CONTENT: PackPageContent = {
   get: {
     heading: 'Get your Desk Pet',
     intro:
-      "Free, from Joe Che's AI class. There are two ways. Way 1 is the easy way. Download the folder, drag it into Claude Code, and type 'set it up'. Way 2 is for people who already use Claude Code in Terminal. Paste one line. Either way, Claude asks for a photo of you, shows you your pet, then makes the app.",
+      "Free, from Joe Che's AI class. There are two ways. Way 1 is the easy way. Download the folder, drag it into Claude Code, and type 'set it up'. Way 2 is for people who already use Claude Code in Terminal. Paste one line. Either way, you pick your dog and name it, Claude shows it to you, then makes the app.",
     note: {
       lead: 'It only works in Claude Code, on a Mac.',
       link: { label: 'See both ways, step by step.', target: 'guide' },
@@ -57,7 +57,7 @@ export const DESK_PET_CONTENT: PackPageContent = {
       href: ZIP_PATH,
       download: 'desk-pet.zip',
     },
-    secondary: [{ label: 'See your pet in every mood', href: EXAMPLE_PATH }],
+    secondary: [{ label: 'See all 10 dogs', href: EXAMPLE_PATH }],
     command: {
       label: 'Way 2: paste this into Terminal',
       text: ONE_LINE_COMMAND,
@@ -67,7 +67,6 @@ export const DESK_PET_CONTENT: PackPageContent = {
     heading: 'It keeps you company. It does not spy.',
     doesNot: [
       'Send anything off your Mac',
-      'Keep your photo. Claude only looks at it to make your cartoon',
       'See what you write to Claude. It only knows busy, done or waiting',
       'Make noise',
       'Get stuck in one place. Drag it anywhere',
@@ -76,22 +75,21 @@ export const DESK_PET_CONTENT: PackPageContent = {
       'Type on a little laptop while Claude works',
       'Cheer when Claude is done, so you know to look',
       'Wave at you when Claude is waiting for you',
-      'Nap when you walk away, and sleep at night',
+      'Curl up for a nap when you walk away, and sleep at night',
       'Tell you how many jobs Claude finished today when you click it',
     ],
   },
   guide: {
     eyebrow: 'How it works',
-    heading: 'From your photo to your pet in 10 minutes',
+    heading: 'From picking your dog to a puppy on your screen in 10 minutes',
     intro:
-      'A little cartoon of you sits at the bottom of your screen. Claude makes the cartoon from your photo, shows it to you, then puts the app on your Mac.',
+      'A little puppy sits at the bottom of your screen. You pick the breed: Golden Retriever, Chocolate Lab, Dalmatian, Beagle, Corgi, Husky, Shiba Inu, Pug, French Bulldog or Poodle. Claude shows it to you, then puts the app on your Mac.',
     sections: [
       {
         title: 'What you need',
         bullets: [
           'A Mac.',
           'Claude Code. It comes with the Claude app. You need a paid Claude plan (Pro or more).',
-          'A photo of you. Or answer 5 quick questions instead.',
           'Normal Claude chat and ChatGPT can not do this. Only Claude Code can.',
         ],
       },
@@ -113,7 +111,7 @@ export const DESK_PET_CONTENT: PackPageContent = {
           'Open Terminal. (Press Cmd and Space. Type Terminal. Press Enter.)',
           'On this page, click Copy next to "Way 2". Paste it into Terminal. Press Enter.',
           'Terminal says "command not found: claude"? Claude Code is not set up yet. Use Way 1. Or paste curl -fsSL https://claude.ai/install.sh | bash into Terminal, press Enter, open a new Terminal window, and try again.',
-          'Then it is just like Way 1: your photo, your pet, done.',
+          'Then it is just like Way 1: pick your dog, name it, done.',
         ],
       },
       {
@@ -133,7 +131,8 @@ export const DESK_PET_CONTENT: PackPageContent = {
       items: [
         { name: 'CLAUDE.md', text: 'Tells Claude what to do when you drag the folder in.' },
         { name: 'START-HERE-PROMPT.md', text: 'The steps for both ways. The same ones are on this page.' },
-        { name: 'shared/avatar.js', text: 'How your cartoon looks. Claude fills it in for you.' },
+        { name: 'shared/avatar.js', text: 'Your dog: which breed, its name and its collar. Claude fills it in for you.' },
+        { name: 'shared/looks.html', text: 'All 10 dogs, so you can pick one.' },
         { name: 'shared/preview.html', text: 'Shows your pet in every mood, before Claude makes the app.' },
         { name: 'shared/mood.js', text: 'The rules for when your pet types, cheers, waves or naps.' },
         { name: 'macos/', text: 'The Mac app. Claude builds it on your Mac.' },
@@ -149,7 +148,7 @@ export const DESK_PET_CONTENT: PackPageContent = {
       {
         label: 'Way 2 · Terminal',
         title: 'Build my Desk Pet',
-        text: 'Claude gets the app, makes your cartoon, shows it to you, then puts it on your Mac.',
+        text: 'Claude gets the app, helps you pick your dog, shows it to you, then puts it on your Mac.',
         prompt: DESK_PET_PROMPT,
       },
     ],
@@ -177,8 +176,8 @@ export const DESK_PET_CONTENT: PackPageContent = {
       a: 'Click Install. Wait a few minutes. Then tell Claude it is done.',
     },
     {
-      q: 'My cartoon does not look like me',
-      a: 'Tell Claude what to change. Like "my hair is longer" or "make my skin darker". Claude fixes it and shows you again.',
+      q: 'I want a different dog',
+      a: 'Tell Claude. Like "make it the Pug" or "a blue collar". Claude changes it and builds the app again.',
     },
     {
       q: 'My pet does not react to Claude',

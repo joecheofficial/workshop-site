@@ -1,4 +1,4 @@
-Build me my own Desk Pet: a free Mac app where a cartoon of me sits on my screen and reacts to Claude Code. It types while Claude works, cheers when Claude is done, waves when Claude needs me, and naps when I walk away. Go step by step. Talk to me in very simple words, like I am 5 years old. No tech words. Tell me what you are doing and why.
+Build me my own Desk Pet: a free Mac app where a cute puppy sits on my screen and reacts to Claude Code. It types while Claude works, cheers when Claude is done, waves when Claude needs me, and naps when I walk away. Go step by step. Talk to me in very simple words, like I am 5 years old. No tech words. Tell me what you are doing and why.
 
 1. Check this is a Mac on macOS 13 or newer (sw_vers). If it isn't, stop and tell me Desk Pet only works on a Mac for now.
 
@@ -6,23 +6,23 @@ Build me my own Desk Pet: a free Mac app where a cartoon of me sits on my screen
 
 3. Download https://workshop.mastermindshq.business/desk-pet.zip and unzip it into a folder called DeskPet in my home folder.
 
-4. Make my cartoon. Ask me: "Do you want your pet to look like you? Drag a photo of yourself into this window and press Enter. Or type 'describe' and I will ask you 5 quick questions."
-   - With a photo: look at it and pick my look using ONLY the options listed at the top of shared/avatar.js: skin colour, hair style and hair colour, beard, glasses, the colour of clothes I'd usually wear, and shirt style. Then ask me my first name, so my pet can say hi.
-   - With 'describe': ask me one at a time about my hair (style and colour), skin tone, beard or no beard, glasses or not, and my favourite colour to wear. Then my first name.
-   - Write my choices into shared/avatar.js. Keep the comment block at the top, use only the listed options, and colours as #RRGGBB. Don't copy or save my photo anywhere.
-   - Run: open shared/preview.html (it shows my pet in every mood). Ask me if I like it. If I want changes, update avatar.js and open the preview again, until I say it looks good.
+4. Let me pick my dog.
+   - Run: open shared/looks.html (it shows all 10 dogs with a number). Ask me: "Which dog do you want? Tell me the number or the name."
+   - Then ask me, one at a time: "What's your dog's name?" and "What's your first name, so your dog can say hi?" and "What colour collar?" (suggest red, blue, pink, green or purple).
+   - Write my answers into shared/avatar.js: look (use the key from the list at the top of the file, like golden or pug), petName, yourName, collar as #RRGGBB. Keep the comment block at the top.
+   - Run: open shared/preview.html (it shows my dog in every mood). Ask me if I like it. If I want another dog or colour, update avatar.js and open the preview again, until I say it looks good.
 
 5. Before you build it, read README.md, macos/build.sh and claude-code/install-hooks.sh, and tell me in one or two simple sentences what they do. Then run: bash macos/build.sh
    If the build fails, read the error, fix only what's needed to make it build, and run it again. Don't change what the app does.
 
 6. Connect my pet to Claude Code, so it can see when you are working: run bash claude-code/install-hooks.sh
-   Tell me: "From your next message, your pet reacts. Your pet only sees whether Claude is busy, done, or waiting. It never sees what you write."
+   Tell me: "From your next message, your dog reacts. Your dog only sees whether Claude is busy, done, or waiting. It never sees what you write."
 
 7. At the end, tell me in simple words:
-   - Your pet is at the bottom right of your screen. Drag it anywhere you like. Click it to say hi.
-   - Give Claude any job and watch your pet type. When Claude is done, it cheers.
-   - The little paw at the top of your screen has the menu: hide your pet, put it back, open at login, quit.
-   - Want to change your cartoon? Ask Claude to change shared/avatar.js in the DeskPet folder, then run bash macos/build.sh again.
+   - Your dog is at the bottom right of your screen. Drag it anywhere you like. Click it to say hi.
+   - Give Claude any job and watch your dog type. When Claude is done, it cheers.
+   - The little paw at the top of your screen has the menu: hide your dog, put it back, open at login, quit.
+   - Want a different dog? Ask Claude to change shared/avatar.js in the DeskPet folder, then run bash macos/build.sh again.
    - Want to remove it? Quit it from the paw menu. Delete "Desk Pet" from Applications. Then run bash claude-code/install-hooks.sh --remove
 
 Only touch the DeskPet folder, the app in Applications, and the hooks in ~/.claude/settings.json. The app never sends anything off my Mac.

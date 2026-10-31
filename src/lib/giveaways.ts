@@ -391,8 +391,8 @@ export const giveaways: Giveaway[] = [
   },
   {
     slug: 'desk-pet',
-    title: 'Desk Pet: a cartoon of you that watches Claude work',
-    description: 'A free Mac app where a cartoon of you sits on your screen. It types while Claude works, cheers when Claude is done and waves when Claude needs you.',
+    title: 'Desk Pet: a cute puppy that watches Claude work',
+    description: 'A free Mac app where a cute puppy you pick sits on your screen. It types while Claude works, cheers when Claude is done and waves when Claude needs you.',
     icon: '◈',
     badge: 'Build',
     badgeVariant: 'pink',
