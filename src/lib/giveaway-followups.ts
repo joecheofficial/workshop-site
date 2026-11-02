@@ -670,6 +670,8 @@ export type Subscriber = {
   last_input_text?: string | null
   /** ManyChat gift_q: hot_a/hot_b(_done) = tapped a business answer on the after-gift question, Illy picks them up */
   gift_q?: string | null
+  /** what they typed back to the after-gift question (ManyChat gift_q_text) */
+  gift_q_text?: string | null
 }
 export type SentRow = { email: string; step: Step; sent_at: string; level?: Level | null; source?: string | null; detail?: Record<string, unknown> | null }
 
@@ -839,8 +841,10 @@ export function planFollowups(input: PlanInput): { due: DueItem[]; skipped: Reco
       if (dm && !mine.has('dm_ack') && lastIg && lastIg.getTime() > new Date(dm.sent_at).getTime() + 5000) {
         // ManyChat may not capture a typed reply outside an input block, so last_input_text can
         // still be their email from the flow. Then we know THAT they replied, not WHAT.
+        // Same for their answer to the after-gift question ("3" would read as a level).
         const raw = (sub.last_input_text || '').trim()
-        const reply = raw.toLowerCase() === email ? '(their reply was not captured, read it in the DM thread)' : raw
+        const stale = raw.toLowerCase() === email || (!!sub.gift_q_text && raw === sub.gift_q_text.trim())
+        const reply = stale ? '(their reply was not captured, read it in the DM thread)' : raw
         const answered = parseLevelReply(reply)
         const sinceReplyH = (now.getTime() - lastIg.getTime()) / HOUR
         if (answered && sinceReplyH < DM_WINDOW_CLOSES_HOURS) {
