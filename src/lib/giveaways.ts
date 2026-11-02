@@ -390,6 +390,14 @@ export const giveaways: Giveaway[] = [
     badgeVariant: 'pink',
   },
   {
+    slug: 'desk-pet',
+    title: 'Desk Pet: a cute puppy that watches Claude work',
+    description: 'A free Mac app where a cute puppy you pick sits on your screen. It types while Claude works, cheers when Claude is done and waves when Claude needs you.',
+    icon: '◈',
+    badge: 'Build',
+    badgeVariant: 'pink',
+  },
+  {
     slug: 'linkedin-kit',
     title: "Joe's LinkedIn Kit: posts that sound like you, not like AI",
     description: 'Five free Claude skills that write down how you sound, then draft LinkedIn posts, score your profile out of 100, help with comments and plan your week. You post it yourself.',
