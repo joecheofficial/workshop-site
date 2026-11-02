@@ -172,6 +172,7 @@ export const WEBSITE_GENERIC_GIVEAWAYS: Readonly<Record<string, string>> = {
   film: 'Make a Film with Claude',
   'chat-to-flowchart': 'Chat to Flowchart',
   'posture-coach': 'Posture Coach',
+  'desk-pet': 'Desk Pet',
   'ray-dalio-council': 'The Ray Dalio Council',
   'squarespace-escape': 'The Squarespace Escape Kit',
   'viral-hooks': 'The Visual Hooks guide',
