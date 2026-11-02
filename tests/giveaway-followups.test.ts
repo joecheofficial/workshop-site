@@ -274,3 +274,10 @@ test('quiz score sets the level when there is no DM answer', () => {
   const r = plan({ leads: [lead('q@x.com', 50, 'ai-levels-quiz')], quizScores: new Map([['q@x.com', 28]]) })
   assert.equal(r.due[0].level, 'builder')
 })
+
+test('a HOT tap on the after-gift question takes them out (Illy picks them up by hand)', () => {
+  const subs = new Map<string, Subscriber>([['hot@x.com', { id: '1', gift_q: 'hot_a' }], ['done@x.com', { id: '2', gift_q: 'hot_b_done' }], ['cur@x.com', { id: '3', gift_q: 'curious', ig_last_interaction: ago(21) }]])
+  const r = plan({ leads: [lead('hot@x.com', 21), lead('done@x.com', 50), lead('cur@x.com', 21)], subscribers: subs })
+  assert.equal(r.skipped.hot_human_pickup, 2)
+  assert.ok(!r.due.some((d) => d.email === 'hot@x.com' || d.email === 'done@x.com'))
+})
