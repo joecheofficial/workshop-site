@@ -274,3 +274,18 @@ test('quiz score sets the level when there is no DM answer', () => {
   const r = plan({ leads: [lead('q@x.com', 50, 'ai-levels-quiz')], quizScores: new Map([['q@x.com', 28]]) })
   assert.equal(r.due[0].level, 'builder')
 })
+
+test('a HOT tap on the after-gift question takes them out (Illy picks them up by hand)', () => {
+  const subs = new Map<string, Subscriber>([['hot@x.com', { id: '1', gift_q: 'hot_a' }], ['done@x.com', { id: '2', gift_q: 'hot_b_done' }], ['cur@x.com', { id: '3', gift_q: 'curious', ig_last_interaction: ago(21) }]])
+  const r = plan({ leads: [lead('hot@x.com', 21), lead('done@x.com', 50), lead('cur@x.com', 21)], subscribers: subs })
+  assert.equal(r.skipped.hot_human_pickup, 2)
+  assert.ok(!r.due.some((d) => d.email === 'hot@x.com' || d.email === 'done@x.com'))
+})
+
+test('their old answer to the gift question is never read as a level reply', () => {
+  const sent: SentRow[] = [{ email: 'c@x.com', step: 'dm_level', sent_at: ago(10) }]
+  const subs = new Map<string, Subscriber>([['c@x.com', { id: '9', gift_q: 'curious', gift_q_text: '3', last_input_text: '3', ig_last_interaction: ago(2) }]])
+  const r = plan({ leads: [lead('c@x.com', 40)], sent, subscribers: subs })
+  assert.ok(!r.due.some((d) => d.step === 'dm_ack'))
+  assert.equal(r.due.find((d) => d.email === 'c@x.com')?.step, 'dm_human')
+})

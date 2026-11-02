@@ -668,6 +668,10 @@ export type Subscriber = {
   name?: string | null
   ig_last_interaction?: string | null
   last_input_text?: string | null
+  /** ManyChat gift_q: hot_a/hot_b(_done) = tapped a business answer on the after-gift question, Illy picks them up */
+  gift_q?: string | null
+  /** what they typed back to the after-gift question (ManyChat gift_q_text) */
+  gift_q_text?: string | null
 }
 export type SentRow = { email: string; step: Step; sent_at: string; level?: Level | null; source?: string | null; detail?: Record<string, unknown> | null }
 
@@ -761,6 +765,9 @@ export function planFollowups(input: PlanInput): { due: DueItem[]; skipped: Reco
     if (replied.has(email)) { skip('replied_by_email'); continue }
 
     const sub = input.subscribers?.get(email)
+    // Illy 2026-11-02: a HOT tap on the after-gift question means a human (Illy) messages them by hand,
+    // so the bot DM and the automatic emails step back, the same as dm_human.
+    if (/^hot_/.test(sub?.gift_q || '')) { skip('hot_human_pickup'); continue }
     const ageH = (now.getTime() - grabbedAt.getTime()) / HOUR
     const fromDm = mine.get('dm_ack')?.level ?? null
     const level: Level = (fromDm as Level | null) ?? levelFromQuizScore(input.quizScores?.get(email)) ?? (sales ? SALES_LEVEL[sales] : levelFromSource(source))
@@ -834,8 +841,10 @@ export function planFollowups(input: PlanInput): { due: DueItem[]; skipped: Reco
       if (dm && !mine.has('dm_ack') && lastIg && lastIg.getTime() > new Date(dm.sent_at).getTime() + 5000) {
         // ManyChat may not capture a typed reply outside an input block, so last_input_text can
         // still be their email from the flow. Then we know THAT they replied, not WHAT.
+        // Same for their answer to the after-gift question ("3" would read as a level).
         const raw = (sub.last_input_text || '').trim()
-        const reply = raw.toLowerCase() === email ? '(their reply was not captured, read it in the DM thread)' : raw
+        const stale = raw.toLowerCase() === email || (!!sub.gift_q_text && raw === sub.gift_q_text.trim())
+        const reply = stale ? '(their reply was not captured, read it in the DM thread)' : raw
         const answered = parseLevelReply(reply)
         const sinceReplyH = (now.getTime() - lastIg.getTime()) / HOUR
         if (answered && sinceReplyH < DM_WINDOW_CLOSES_HOURS) {
