@@ -668,6 +668,8 @@ export type Subscriber = {
   name?: string | null
   ig_last_interaction?: string | null
   last_input_text?: string | null
+  /** ManyChat gift_q: hot_a/hot_b(_done) = tapped a business answer on the after-gift question, Illy picks them up */
+  gift_q?: string | null
 }
 export type SentRow = { email: string; step: Step; sent_at: string; level?: Level | null; source?: string | null; detail?: Record<string, unknown> | null }
 
@@ -761,6 +763,9 @@ export function planFollowups(input: PlanInput): { due: DueItem[]; skipped: Reco
     if (replied.has(email)) { skip('replied_by_email'); continue }
 
     const sub = input.subscribers?.get(email)
+    // Illy 2026-11-02: a HOT tap on the after-gift question means a human (Illy) messages them by hand,
+    // so the bot DM and the automatic emails step back, the same as dm_human.
+    if (/^hot_/.test(sub?.gift_q || '')) { skip('hot_human_pickup'); continue }
     const ageH = (now.getTime() - grabbedAt.getTime()) / HOUR
     const fromDm = mine.get('dm_ack')?.level ?? null
     const level: Level = (fromDm as Level | null) ?? levelFromQuizScore(input.quizScores?.get(email)) ?? (sales ? SALES_LEVEL[sales] : levelFromSource(source))
