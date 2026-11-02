@@ -116,7 +116,7 @@ export const DESK_PET_CONTENT: PackPageContent = {
       },
       {
         title: 'How your pet knows what Claude is doing',
-        text: 'Claude adds 4 tiny helpers to Claude Code. Each one writes one word on your Mac: busy, done or waiting. Your pet reads that word. It never sees what you write. You can take the helpers out any time.',
+        text: 'It works in the Claude app and in Terminal, right away. Claude adds 4 tiny helpers that write one word on your Mac: busy, done or waiting. Your pet also notices when Claude is busy in any chat. It never sees what you write. You can take the helpers out any time.',
       },
       {
         title: 'The moods',
@@ -174,6 +174,10 @@ export const DESK_PET_CONTENT: PackPageContent = {
     {
       q: 'A box pops up about "command line tools"',
       a: 'Click Install. Wait a few minutes. Then tell Claude it is done.',
+    },
+    {
+      q: 'Does it work in the Claude app?',
+      a: 'Yes. It works in the Code tab of the Claude app and in Terminal, at the same time. Your pet reacts the moment Claude starts working.',
     },
     {
       q: 'I want a different dog',
