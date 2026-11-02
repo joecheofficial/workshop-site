@@ -247,7 +247,8 @@ async function findSubscriber(email) {
   const preferred = (s.custom_fields || []).find((c) => c.name === 'preferred_name')?.value
   const lastKeyword = (s.custom_fields || []).find((c) => c.name === 'last_keyword')?.value || null
   const giftQ = (s.custom_fields || []).find((c) => c.name === 'gift_q')?.value || null
-  return { id: String(s.id), ig_username: s.ig_username || null, name: preferred || s.first_name || null, last_keyword: lastKeyword, gift_q: giftQ,
+  const giftQText = (s.custom_fields || []).find((c) => c.name === 'gift_q_text')?.value || null
+  return { id: String(s.id), ig_username: s.ig_username || null, name: preferred || s.first_name || null, last_keyword: lastKeyword, gift_q: giftQ, gift_q_text: giftQText,
     ig_last_interaction: s.ig_last_interaction || null, last_input_text: s.last_input_text || null, live_chat_url: s.live_chat_url || null }
 }
 

@@ -281,3 +281,11 @@ test('a HOT tap on the after-gift question takes them out (Illy picks them up by
   assert.equal(r.skipped.hot_human_pickup, 2)
   assert.ok(!r.due.some((d) => d.email === 'hot@x.com' || d.email === 'done@x.com'))
 })
+
+test('their old answer to the gift question is never read as a level reply', () => {
+  const sent: SentRow[] = [{ email: 'c@x.com', step: 'dm_level', sent_at: ago(10) }]
+  const subs = new Map<string, Subscriber>([['c@x.com', { id: '9', gift_q: 'curious', gift_q_text: '3', last_input_text: '3', ig_last_interaction: ago(2) }]])
+  const r = plan({ leads: [lead('c@x.com', 40)], sent, subscribers: subs })
+  assert.ok(!r.due.some((d) => d.step === 'dm_ack'))
+  assert.equal(r.due.find((d) => d.email === 'c@x.com')?.step, 'dm_human')
+})
