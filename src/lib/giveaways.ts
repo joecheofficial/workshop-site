@@ -390,6 +390,14 @@ export const giveaways: Giveaway[] = [
     badgeVariant: 'pink',
   },
   {
+    slug: 'video-editor',
+    title: 'Video Editor: film it messy, Claude edits it for you',
+    description: 'A free Claude Code folder for Mac. It keeps your best take, cuts the umms, restarts and long pauses, and adds captions, with your voice in sync.',
+    icon: '◈',
+    badge: 'Build',
+    badgeVariant: 'pink',
+  },
+  {
     slug: 'desk-pet',
     title: 'Desk Pet: a cute puppy that watches Claude work',
     description: 'A free Mac app where a cute puppy you pick sits on your screen. It types while Claude works, cheers when Claude is done and waves when Claude needs you.',
