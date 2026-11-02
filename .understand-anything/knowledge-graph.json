@@ -671,253 +671,6 @@
       }
     },
     {
-      "id": "file:src/lib/generic-giveaway-email.ts",
-      "name": "generic-giveaway-email.ts",
-      "type": "file",
-      "filePath": "src/lib/generic-giveaway-email.ts",
-      "path": "src/lib/generic-giveaway-email.ts",
-      "language": "typescript",
-      "category": "code",
-      "lineCount": 253,
-      "symbolCount": 10,
-      "complexity": "complex",
-      "summary": "Validates giveaway links and names, then builds generic and keyword-specific giveaway emails.",
-      "tags": [
-        "utility",
-        "giveaway",
-        "content"
-      ]
-    },
-    {
-      "id": "function:src/lib/generic-giveaway-email.ts:esc",
-      "name": "esc",
-      "type": "function",
-      "filePath": "src/lib/generic-giveaway-email.ts",
-      "complexity": "simple",
-      "summary": "Implements esc in generic-giveaway-email.ts.",
-      "tags": [
-        "function",
-        "giveaway"
-      ],
-      "metadata": {
-        "startLine": 19,
-        "endLine": 26,
-        "params": [
-          "value"
-        ]
-      }
-    },
-    {
-      "id": "function:src/lib/generic-giveaway-email.ts:isMastermindsHost",
-      "name": "isMastermindsHost",
-      "type": "function",
-      "filePath": "src/lib/generic-giveaway-email.ts",
-      "complexity": "simple",
-      "summary": "Implements isMastermindsHost in generic-giveaway-email.ts.",
-      "tags": [
-        "function",
-        "giveaway"
-      ],
-      "metadata": {
-        "startLine": 28,
-        "endLine": 30,
-        "params": [
-          "host"
-        ]
-      }
-    },
-    {
-      "id": "function:src/lib/generic-giveaway-email.ts:validateGiveawayLink",
-      "name": "validateGiveawayLink",
-      "type": "function",
-      "filePath": "src/lib/generic-giveaway-email.ts",
-      "complexity": "simple",
-      "summary": "Implements validateGiveawayLink in generic-giveaway-email.ts.",
-      "tags": [
-        "function",
-        "giveaway"
-      ],
-      "metadata": {
-        "startLine": 36,
-        "endLine": 56,
-        "params": [
-          "raw"
-        ]
-      }
-    },
-    {
-      "id": "function:src/lib/generic-giveaway-email.ts:titleCaseSlug",
-      "name": "titleCaseSlug",
-      "type": "function",
-      "filePath": "src/lib/generic-giveaway-email.ts",
-      "complexity": "simple",
-      "summary": "Implements titleCaseSlug in generic-giveaway-email.ts.",
-      "tags": [
-        "function",
-        "giveaway"
-      ],
-      "metadata": {
-        "startLine": 58,
-        "endLine": 64,
-        "params": [
-          "slug"
-        ]
-      }
-    },
-    {
-      "id": "function:src/lib/generic-giveaway-email.ts:sanitizeGiveawayName",
-      "name": "sanitizeGiveawayName",
-      "type": "function",
-      "filePath": "src/lib/generic-giveaway-email.ts",
-      "complexity": "simple",
-      "summary": "Implements sanitizeGiveawayName in generic-giveaway-email.ts.",
-      "tags": [
-        "function",
-        "giveaway"
-      ],
-      "metadata": {
-        "startLine": 71,
-        "endLine": 84,
-        "params": [
-          "raw",
-          "source"
-        ]
-      }
-    },
-    {
-      "id": "function:src/lib/generic-giveaway-email.ts:isValidManychatSecret",
-      "name": "isValidManychatSecret",
-      "type": "function",
-      "filePath": "src/lib/generic-giveaway-email.ts",
-      "complexity": "simple",
-      "summary": "Implements isValidManychatSecret in generic-giveaway-email.ts.",
-      "tags": [
-        "function",
-        "giveaway"
-      ],
-      "metadata": {
-        "startLine": 87,
-        "endLine": 97,
-        "params": [
-          "provided",
-          "expected"
-        ]
-      }
-    },
-    {
-      "id": "function:src/lib/generic-giveaway-email.ts:buildGenericGiveawayEmail",
-      "name": "buildGenericGiveawayEmail",
-      "type": "function",
-      "filePath": "src/lib/generic-giveaway-email.ts",
-      "complexity": "moderate",
-      "summary": "Implements buildGenericGiveawayEmail in generic-giveaway-email.ts.",
-      "tags": [
-        "function",
-        "giveaway"
-      ],
-      "metadata": {
-        "startLine": 99,
-        "endLine": 149,
-        "params": [
-          "{\n  source,\n  name,\n  link,\n  unsubscribeFooter,\n  unsubscribeUrl,\n}"
-        ]
-      }
-    },
-    {
-      "id": "function:src/lib/generic-giveaway-email.ts:websiteGiveawayEmail",
-      "name": "websiteGiveawayEmail",
-      "type": "function",
-      "filePath": "src/lib/generic-giveaway-email.ts",
-      "complexity": "simple",
-      "summary": "Implements websiteGiveawayEmail in generic-giveaway-email.ts.",
-      "tags": [
-        "function",
-        "giveaway"
-      ],
-      "metadata": {
-        "startLine": 181,
-        "endLine": 184,
-        "params": [
-          "source"
-        ]
-      }
-    },
-    {
-      "id": "function:src/lib/generic-giveaway-email.ts:salesKeywordPage",
-      "name": "salesKeywordPage",
-      "type": "function",
-      "filePath": "src/lib/generic-giveaway-email.ts",
-      "complexity": "simple",
-      "summary": "Implements salesKeywordPage in generic-giveaway-email.ts.",
-      "tags": [
-        "function",
-        "giveaway"
-      ],
-      "metadata": {
-        "startLine": 205,
-        "endLine": 207,
-        "params": [
-          "source"
-        ]
-      }
-    },
-    {
-      "id": "function:src/lib/generic-giveaway-email.ts:buildSalesKeywordEmail",
-      "name": "buildSalesKeywordEmail",
-      "type": "function",
-      "filePath": "src/lib/generic-giveaway-email.ts",
-      "complexity": "moderate",
-      "summary": "Implements buildSalesKeywordEmail in generic-giveaway-email.ts.",
-      "tags": [
-        "function",
-        "giveaway"
-      ],
-      "metadata": {
-        "startLine": 209,
-        "endLine": 253,
-        "params": [
-          "{\n  source,\n  unsubscribeFooter,\n  unsubscribeUrl,\n}"
-        ]
-      }
-    },
-    {
-      "id": "file:src/lib/giveaways.ts",
-      "name": "giveaways.ts",
-      "type": "file",
-      "filePath": "src/lib/giveaways.ts",
-      "path": "src/lib/giveaways.ts",
-      "language": "typescript",
-      "category": "code",
-      "lineCount": 428,
-      "symbolCount": 1,
-      "complexity": "complex",
-      "summary": "Registers giveaway pages and their metadata for shared giveaway workflows.",
-      "tags": [
-        "utility",
-        "giveaway",
-        "content"
-      ]
-    },
-    {
-      "id": "function:src/lib/giveaways.ts:getGiveaway",
-      "name": "getGiveaway",
-      "type": "function",
-      "filePath": "src/lib/giveaways.ts",
-      "complexity": "simple",
-      "summary": "Implements getGiveaway in giveaways.ts.",
-      "tags": [
-        "function",
-        "giveaway"
-      ],
-      "metadata": {
-        "startLine": 426,
-        "endLine": 428,
-        "params": [
-          "slug"
-        ]
-      }
-    },
-    {
       "id": "file:tests/free-ai-tools.test.ts",
       "name": "free-ai-tools.test.ts",
       "type": "file",
@@ -1568,19 +1321,6 @@
       "complexity": "moderate"
     },
     {
-      "id": "file:src/app/sitemap.ts",
-      "type": "file",
-      "name": "sitemap.ts",
-      "filePath": "src/app/sitemap.ts",
-      "summary": "Defines the Next.js metadata sitemap for the workshop domain, combining home, giveaway and lead-magnet URLs with free AI tool pages from the shared slug catalog. Each entry supplies modification time, update frequency and search priority.",
-      "tags": [
-        "seo",
-        "sitemap",
-        "metadata"
-      ],
-      "complexity": "simple"
-    },
-    {
       "id": "file:src/lib/events.tsx",
       "type": "file",
       "name": "events.tsx",
@@ -1594,23 +1334,6 @@
         "hero-video"
       ],
       "complexity": "complex"
-    },
-    {
-      "id": "function:src/app/sitemap.ts:sitemap",
-      "type": "function",
-      "name": "sitemap",
-      "filePath": "src/app/sitemap.ts",
-      "summary": "Generates sitemap entries for the workshop home, giveaway pages and lead magnets, expanding FREE_AI_TOOL_SLUGS into individual giveaway URLs with modification times and SEO priorities.",
-      "tags": [
-        "seo",
-        "sitemap",
-        "metadata"
-      ],
-      "complexity": "simple",
-      "lineRange": [
-        7,
-        36
-      ]
     },
     {
       "id": "function:src/lib/events.tsx:getEventDiscountedPrice",
@@ -1747,6 +1470,1063 @@
         1917,
         1932
       ]
+    },
+    {
+      "id": "file:src/app/giveaways/desk-pet/pack.ts",
+      "type": "file",
+      "name": "pack.ts",
+      "filePath": "src/app/giveaways/desk-pet/pack.ts",
+      "summary": "Defines the Desk Pet builder giveaway content, download assets, Terminal setup command, and Mac setup and troubleshooting guidance consumed by the pack page template.",
+      "tags": [
+        "giveaway",
+        "content",
+        "desk-pet",
+        "configuration",
+        "tested"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/app/giveaways/desk-pet/page.tsx",
+      "type": "file",
+      "name": "page.tsx",
+      "filePath": "src/app/giveaways/desk-pet/page.tsx",
+      "summary": "Renders the Desk Pet giveaway through the shared pack page template and publishes HowTo structured data describing the setup workflow.",
+      "tags": [
+        "entry-point",
+        "component",
+        "giveaway",
+        "structured-data",
+        "tested"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/app/giveaways/desk-pet/page.tsx:DeskPetPage",
+      "type": "function",
+      "name": "DeskPetPage",
+      "filePath": "src/app/giveaways/desk-pet/page.tsx",
+      "lineRange": [
+        26,
+        33
+      ],
+      "summary": "Renders the Desk Pet pack content alongside JSON-LD HowTo instructions for search engines.",
+      "tags": [
+        "component",
+        "entry-point",
+        "structured-data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/app/giveaways/desk-pet/prompt.ts",
+      "type": "file",
+      "name": "prompt.ts",
+      "filePath": "src/app/giveaways/desk-pet/prompt.ts",
+      "summary": "Exports the canonical Claude Code setup prompt for downloading, personalizing, building, and connecting the Mac Desk Pet app; tests enforce parity with distributed copies.",
+      "tags": [
+        "giveaway",
+        "prompt",
+        "desk-pet",
+        "setup",
+        "tested"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/lib/generic-giveaway-email.ts",
+      "type": "file",
+      "name": "generic-giveaway-email.ts",
+      "filePath": "src/lib/generic-giveaway-email.ts",
+      "summary": "Builds HTML and plain-text giveaway and Instagram sales keyword delivery emails, validates trusted giveaway links and ManyChat secrets, and maps website giveaway slugs to fixed delivery destinations.",
+      "tags": [
+        "email",
+        "giveaway",
+        "validation",
+        "manychat",
+        "security",
+        "tested"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/lib/generic-giveaway-email.ts:validateGiveawayLink",
+      "type": "function",
+      "name": "validateGiveawayLink",
+      "filePath": "src/lib/generic-giveaway-email.ts",
+      "lineRange": [
+        36,
+        56
+      ],
+      "summary": "Normalizes an HTTPS giveaway URL after rejecting invalid input, credentials, ports, and hosts or GitHub paths outside the trusted allowlist.",
+      "tags": [
+        "validation",
+        "security",
+        "url"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/generic-giveaway-email.ts:sanitizeGiveawayName",
+      "type": "function",
+      "name": "sanitizeGiveawayName",
+      "filePath": "src/lib/generic-giveaway-email.ts",
+      "lineRange": [
+        71,
+        84
+      ],
+      "summary": "Strips markup and control characters, normalizes spacing and punctuation, limits the giveaway name length, and falls back to a readable source slug.",
+      "tags": [
+        "validation",
+        "sanitization",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/generic-giveaway-email.ts:isValidManychatSecret",
+      "type": "function",
+      "name": "isValidManychatSecret",
+      "filePath": "src/lib/generic-giveaway-email.ts",
+      "lineRange": [
+        87,
+        97
+      ],
+      "summary": "Rejects missing shared secrets and uses constant-time byte comparisons to authenticate ManyChat requests, including mismatched-length handling.",
+      "tags": [
+        "authentication",
+        "manychat",
+        "security"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/generic-giveaway-email.ts:buildGenericGiveawayEmail",
+      "type": "function",
+      "name": "buildGenericGiveawayEmail",
+      "filePath": "src/lib/generic-giveaway-email.ts",
+      "lineRange": [
+        99,
+        149
+      ],
+      "summary": "Produces subject, HTML, and plain-text giveaway delivery content with escaped links, first-party campaign tracking, a membership link, and unsubscribe information.",
+      "tags": [
+        "email",
+        "giveaway",
+        "serialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/generic-giveaway-email.ts:websiteGiveawayEmail",
+      "type": "function",
+      "name": "websiteGiveawayEmail",
+      "filePath": "src/lib/generic-giveaway-email.ts",
+      "lineRange": [
+        182,
+        185
+      ],
+      "summary": "Looks up an allowlisted website giveaway slug and returns its display name and fixed workshop giveaway URL, or null.",
+      "tags": [
+        "giveaway",
+        "lookup",
+        "email"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/generic-giveaway-email.ts:salesKeywordPage",
+      "type": "function",
+      "name": "salesKeywordPage",
+      "filePath": "src/lib/generic-giveaway-email.ts",
+      "lineRange": [
+        206,
+        208
+      ],
+      "summary": "Returns the fixed label and destination for an own-property Instagram sales keyword entry, or null for unknown sources.",
+      "tags": [
+        "lookup",
+        "instagram",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/generic-giveaway-email.ts:buildSalesKeywordEmail",
+      "type": "function",
+      "name": "buildSalesKeywordEmail",
+      "filePath": "src/lib/generic-giveaway-email.ts",
+      "lineRange": [
+        210,
+        254
+      ],
+      "summary": "Builds a short HTML and plain-text sales keyword email from a fixed destination, adds first-party campaign tracking, and rejects unsupported sources.",
+      "tags": [
+        "email",
+        "instagram",
+        "validation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/desk-pet.test.ts",
+      "type": "file",
+      "name": "desk-pet.test.ts",
+      "filePath": "tests/desk-pet.test.ts",
+      "summary": "Checks Desk Pet pack validity, shipped download assets, prompt parity across source and archive, generic email mapping, and the supported setup wording and privacy of packaged presets.",
+      "tags": [
+        "test",
+        "giveaway",
+        "desk-pet",
+        "asset-validation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:scripts/giveaway-followups.mjs",
+      "type": "file",
+      "name": "giveaway-followups.mjs",
+      "filePath": "scripts/giveaway-followups.mjs",
+      "summary": "Runs guarded giveaway and sales follow-ups using Supabase, Stripe, Gmail, calendar and ManyChat checks. Supports dry runs, copy rendering, review delivery and claimed live sends through Resend or Instagram.",
+      "tags": [
+        "entry-point",
+        "event-handler",
+        "email",
+        "giveaway"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:scripts/giveaway-followups.mjs:lina",
+      "type": "function",
+      "name": "lina",
+      "filePath": "scripts/giveaway-followups.mjs",
+      "lineRange": [
+        118,
+        129
+      ],
+      "summary": "Sends owner alerts through the Lina Telegram bot when credentials and owner chat identifiers are available.",
+      "tags": [
+        "monitoring",
+        "telegram",
+        "notification"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/giveaway-followups.mjs:stripeBuyer",
+      "type": "function",
+      "name": "stripeBuyer",
+      "filePath": "scripts/giveaway-followups.mjs",
+      "lineRange": [
+        148,
+        164
+      ],
+      "summary": "Checks Stripe checkout sessions and customer charges to determine whether an email belongs to a buyer.",
+      "tags": [
+        "stripe",
+        "customer",
+        "suppression"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/giveaway-followups.mjs:repliedByEmail",
+      "type": "function",
+      "name": "repliedByEmail",
+      "filePath": "scripts/giveaway-followups.mjs",
+      "lineRange": [
+        174,
+        183
+      ],
+      "summary": "Searches Joe and Illy mailboxes for replies since the gift, allowing lookup failures to stop processing that recipient.",
+      "tags": [
+        "email",
+        "suppression",
+        "gmail"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/giveaway-followups.mjs:crmFirstSource",
+      "type": "function",
+      "name": "crmFirstSource",
+      "filePath": "scripts/giveaway-followups.mjs",
+      "lineRange": [
+        188,
+        192
+      ],
+      "summary": "Reads original and latest giveaway sources for an email from the local CRM database.",
+      "tags": [
+        "database",
+        "crm",
+        "giveaway"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/giveaway-followups.mjs:slugForKeyword",
+      "type": "function",
+      "name": "slugForKeyword",
+      "filePath": "scripts/giveaway-followups.mjs",
+      "lineRange": [
+        194,
+        203
+      ],
+      "summary": "Lazily loads the Instagram keyword configuration and maps a keyword to its giveaway slug.",
+      "tags": [
+        "configuration",
+        "giveaway",
+        "instagram"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/giveaway-followups.mjs:checkoutStartedSince",
+      "type": "function",
+      "name": "checkoutStartedSince",
+      "filePath": "scripts/giveaway-followups.mjs",
+      "lineRange": [
+        207,
+        226
+      ],
+      "summary": "Caches recent Stripe checkout sessions and checks whether the recipient began a checkout after the supplied time.",
+      "tags": [
+        "stripe",
+        "checkout",
+        "suppression"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/giveaway-followups.mjs:bookedCall",
+      "type": "function",
+      "name": "bookedCall",
+      "filePath": "scripts/giveaway-followups.mjs",
+      "lineRange": [
+        229,
+        236
+      ],
+      "summary": "Searches Joe and Illy calendars for a call containing the recipient as an attendee since the gift.",
+      "tags": [
+        "calendar",
+        "suppression",
+        "booking"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/giveaway-followups.mjs:findSubscriber",
+      "type": "function",
+      "name": "findSubscriber",
+      "filePath": "scripts/giveaway-followups.mjs",
+      "lineRange": [
+        243,
+        253
+      ],
+      "summary": "Looks up a ManyChat subscriber by email and normalizes identity, interaction and after-gift answer fields for planning.",
+      "tags": [
+        "manychat",
+        "instagram",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/giveaway-followups.mjs:bonusLink",
+      "type": "function",
+      "name": "bonusLink",
+      "filePath": "scripts/giveaway-followups.mjs",
+      "lineRange": [
+        294,
+        301
+      ],
+      "summary": "Signs a recipient-specific workshop checkout deal and creates a Shlink URL with the advertised 72-hour expiry.",
+      "tags": [
+        "checkout",
+        "short-link",
+        "giveaway"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/giveaway-followups.mjs:renderEmailFor",
+      "type": "function",
+      "name": "renderEmailFor",
+      "filePath": "scripts/giveaway-followups.mjs",
+      "lineRange": [
+        303,
+        312
+      ],
+      "summary": "Selects the renderer for a due email step and supplies personalization, unsubscribe information and a bonus link when needed.",
+      "tags": [
+        "email",
+        "rendering",
+        "factory"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/giveaway-followups.mjs:resendSend",
+      "type": "function",
+      "name": "resendSend",
+      "filePath": "scripts/giveaway-followups.mjs",
+      "lineRange": [
+        314,
+        328
+      ],
+      "summary": "Sends a formatted follow-up through Resend with idempotency, unsubscribe headers and flow tracking tags.",
+      "tags": [
+        "email",
+        "resend",
+        "event-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/giveaway-followups.mjs:sendOne",
+      "type": "function",
+      "name": "sendOne",
+      "filePath": "scripts/giveaway-followups.mjs",
+      "lineRange": [
+        338,
+        380
+      ],
+      "summary": "Claims a due step before sending an Instagram message or email, or notifying a human about an unstructured reply. Records delivery identifiers and releases failed claims for retry.",
+      "tags": [
+        "event-handler",
+        "email",
+        "instagram",
+        "idempotency"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/giveaway-followups.mjs:allVariants",
+      "type": "function",
+      "name": "allVariants",
+      "filePath": "scripts/giveaway-followups.mjs",
+      "lineRange": [
+        384,
+        394
+      ],
+      "summary": "Renders representative variants for every quick-win, final, gift, live-event and sales email used in review modes.",
+      "tags": [
+        "email",
+        "rendering",
+        "review"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/giveaway-followups.mjs:renderAll",
+      "type": "function",
+      "name": "renderAll",
+      "filePath": "scripts/giveaway-followups.mjs",
+      "lineRange": [
+        396,
+        407
+      ],
+      "summary": "Writes text and HTML previews for email variants together with day-zero postscript and Instagram-message examples.",
+      "tags": [
+        "email",
+        "rendering",
+        "review"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/giveaway-followups.mjs:testSends",
+      "type": "function",
+      "name": "testSends",
+      "filePath": "scripts/giveaway-followups.mjs",
+      "lineRange": [
+        409,
+        421
+      ],
+      "summary": "Restricts test delivery to Resend sink addresses, sends every email variant and polls provider delivery events.",
+      "tags": [
+        "email",
+        "test",
+        "resend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/giveaway-followups.mjs:reviewSends",
+      "type": "function",
+      "name": "reviewSends",
+      "filePath": "scripts/giveaway-followups.mjs",
+      "lineRange": [
+        423,
+        464
+      ],
+      "summary": "Sends idempotent final-copy review sets to the designated reviewer and polls Resend delivery status.",
+      "tags": [
+        "email",
+        "review",
+        "resend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/giveaway-followups.mjs:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "scripts/giveaway-followups.mjs",
+      "lineRange": [
+        468,
+        578
+      ],
+      "summary": "Collects audience and suppression evidence, computes due follow-ups and reports dry-run results or performs bounded live sends. Enforces enablement settings and skips recipients whose external lookups fail.",
+      "tags": [
+        "entry-point",
+        "event-handler",
+        "validation",
+        "giveaway"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/lib/giveaway-followups.ts",
+      "type": "file",
+      "name": "giveaway-followups.ts",
+      "filePath": "src/lib/giveaway-followups.ts",
+      "summary": "Defines giveaway and sales follow-up copy, schedules, audience levels and rendering helpers. Plans eligible email and Instagram steps while enforcing suppression, human handoff, timing and real-event constraints.",
+      "tags": [
+        "service",
+        "email",
+        "giveaway",
+        "validation",
+        "tested"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/lib/giveaway-followups.ts:pickGift",
+      "type": "function",
+      "name": "pickGift",
+      "filePath": "src/lib/giveaway-followups.ts",
+      "lineRange": [
+        101,
+        105
+      ],
+      "summary": "Selects the first preferred gift for an AI level that the recipient has not already grabbed.",
+      "tags": [
+        "giveaway",
+        "selection",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/giveaway-followups.ts:pickLiveEvent",
+      "type": "function",
+      "name": "pickLiveEvent",
+      "filePath": "src/lib/giveaway-followups.ts",
+      "lineRange": [
+        134,
+        144
+      ],
+      "summary": "Selects the soonest matching real live event within the configured advance-notice window.",
+      "tags": [
+        "event",
+        "selection",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/giveaway-followups.ts:isSalesKeywordSource",
+      "type": "function",
+      "name": "isSalesKeywordSource",
+      "filePath": "src/lib/giveaway-followups.ts",
+      "lineRange": [
+        175,
+        177
+      ],
+      "summary": "Identifies Instagram sales-keyword sources by their keyword prefix.",
+      "tags": [
+        "validation",
+        "sales",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/giveaway-followups.ts:isTestEmail",
+      "type": "function",
+      "name": "isTestEmail",
+      "filePath": "src/lib/giveaway-followups.ts",
+      "lineRange": [
+        180,
+        182
+      ],
+      "summary": "Identifies test addresses and provider sink domains for audience exclusion.",
+      "tags": [
+        "validation",
+        "email",
+        "suppression"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/giveaway-followups.ts:levelFromSource",
+      "type": "function",
+      "name": "levelFromSource",
+      "filePath": "src/lib/giveaway-followups.ts",
+      "lineRange": [
+        187,
+        189
+      ],
+      "summary": "Classifies builder-specific giveaway sources as builder level and other sources as starter level.",
+      "tags": [
+        "classification",
+        "giveaway",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/giveaway-followups.ts:levelFromQuizScore",
+      "type": "function",
+      "name": "levelFromQuizScore",
+      "filePath": "src/lib/giveaway-followups.ts",
+      "lineRange": [
+        192,
+        198
+      ],
+      "summary": "Maps valid AI capability quiz scores to starter, everyday or builder level.",
+      "tags": [
+        "classification",
+        "quiz",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/giveaway-followups.ts:parseLevelReply",
+      "type": "function",
+      "name": "parseLevelReply",
+      "filePath": "src/lib/giveaway-followups.ts",
+      "lineRange": [
+        201,
+        206
+      ],
+      "summary": "Accepts narrowly formatted numeric replies as AI levels and returns null for responses requiring human attention.",
+      "tags": [
+        "validation",
+        "instagram",
+        "classification"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/giveaway-followups.ts:lastVariant",
+      "type": "function",
+      "name": "lastVariant",
+      "filePath": "src/lib/giveaway-followups.ts",
+      "lineRange": [
+        220,
+        226
+      ],
+      "summary": "Chooses workshop or Meta final email copy from the recipient level and actual course dates, holding sends during misleading deadline periods.",
+      "tags": [
+        "email",
+        "selection",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/giveaway-followups.ts:salesOfferFor",
+      "type": "function",
+      "name": "salesOfferFor",
+      "filePath": "src/lib/giveaway-followups.ts",
+      "lineRange": [
+        382,
+        384
+      ],
+      "summary": "Maps a sales-keyword source to its configured offer or returns null for unsupported sources.",
+      "tags": [
+        "sales",
+        "selection",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/giveaway-followups.ts:salesLastVariant",
+      "type": "function",
+      "name": "salesLastVariant",
+      "filePath": "src/lib/giveaway-followups.ts",
+      "lineRange": [
+        475,
+        480
+      ],
+      "summary": "Chooses the final sales email for an offer, reusing date-aware Meta and workshop variants where appropriate.",
+      "tags": [
+        "sales",
+        "email",
+        "selection"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/giveaway-followups.ts:stepLink",
+      "type": "function",
+      "name": "stepLink",
+      "filePath": "src/lib/giveaway-followups.ts",
+      "lineRange": [
+        527,
+        529
+      ],
+      "summary": "Adds an email-step code to a Shlink slug so clicks can be attributed to individual sequence steps.",
+      "tags": [
+        "short-link",
+        "tracking",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/giveaway-followups.ts:baseVars",
+      "type": "function",
+      "name": "baseVars",
+      "filePath": "src/lib/giveaway-followups.ts",
+      "lineRange": [
+        538,
+        548
+      ],
+      "summary": "Builds template variables for recipient names, unsubscribe links and step-specific offer links.",
+      "tags": [
+        "email",
+        "rendering",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/giveaway-followups.ts:renderTemplate",
+      "type": "function",
+      "name": "renderTemplate",
+      "filePath": "src/lib/giveaway-followups.ts",
+      "lineRange": [
+        550,
+        557
+      ],
+      "summary": "Fills email body variables, adds an optional unsubscribe footer and rejects unresolved placeholders or disallowed em dashes.",
+      "tags": [
+        "email",
+        "rendering",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/giveaway-followups.ts:renderQuickwin",
+      "type": "function",
+      "name": "renderQuickwin",
+      "filePath": "src/lib/giveaway-followups.ts",
+      "lineRange": [
+        559,
+        561
+      ],
+      "summary": "Renders level-specific quick-win email copy with day-two tracking links.",
+      "tags": [
+        "email",
+        "rendering",
+        "giveaway"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/giveaway-followups.ts:renderLast",
+      "type": "function",
+      "name": "renderLast",
+      "filePath": "src/lib/giveaway-followups.ts",
+      "lineRange": [
+        563,
+        565
+      ],
+      "summary": "Renders the selected final follow-up email with final-step tracking links.",
+      "tags": [
+        "email",
+        "rendering",
+        "giveaway"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/giveaway-followups.ts:renderSalesDay2",
+      "type": "function",
+      "name": "renderSalesDay2",
+      "filePath": "src/lib/giveaway-followups.ts",
+      "lineRange": [
+        567,
+        569
+      ],
+      "summary": "Renders the offer-specific sales day-two email with its own tracking code.",
+      "tags": [
+        "email",
+        "rendering",
+        "sales"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/giveaway-followups.ts:renderSalesDay5",
+      "type": "function",
+      "name": "renderSalesDay5",
+      "filePath": "src/lib/giveaway-followups.ts",
+      "lineRange": [
+        571,
+        574
+      ],
+      "summary": "Renders a final sales email using dedicated book or mastermind copy or the shared date-aware final variants.",
+      "tags": [
+        "email",
+        "rendering",
+        "sales"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/giveaway-followups.ts:renderGift2",
+      "type": "function",
+      "name": "renderGift2",
+      "filePath": "src/lib/giveaway-followups.ts",
+      "lineRange": [
+        576,
+        582
+      ],
+      "summary": "Renders the second-gift email with gift details and a level-appropriate next step.",
+      "tags": [
+        "email",
+        "rendering",
+        "giveaway"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/giveaway-followups.ts:renderLive",
+      "type": "function",
+      "name": "renderLive",
+      "filePath": "src/lib/giveaway-followups.ts",
+      "lineRange": [
+        584,
+        590
+      ],
+      "summary": "Renders a real live-event invitation including timing, optional price details and tracked event links.",
+      "tags": [
+        "email",
+        "rendering",
+        "event"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/giveaway-followups.ts:renderDmLevel",
+      "type": "function",
+      "name": "renderDmLevel",
+      "filePath": "src/lib/giveaway-followups.ts",
+      "lineRange": [
+        592,
+        595
+      ],
+      "summary": "Personalizes Instagram level-question bubbles using only the recipient first name.",
+      "tags": [
+        "instagram",
+        "rendering",
+        "personalization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/giveaway-followups.ts:dayZeroPs",
+      "type": "function",
+      "name": "dayZeroPs",
+      "filePath": "src/lib/giveaway-followups.ts",
+      "lineRange": [
+        598,
+        606
+      ],
+      "summary": "Builds a level-specific text and HTML postscript for gift delivery, excluding quiz and sales-keyword sources.",
+      "tags": [
+        "email",
+        "rendering",
+        "giveaway"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/giveaway-followups.ts:withDayZeroPs",
+      "type": "function",
+      "name": "withDayZeroPs",
+      "filePath": "src/lib/giveaway-followups.ts",
+      "lineRange": [
+        613,
+        634
+      ],
+      "summary": "Inserts a giveaway postscript before the delivery email footer while preserving optional plain-text content.",
+      "tags": [
+        "email",
+        "rendering",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/giveaway-followups.ts:toHtml",
+      "type": "function",
+      "name": "toHtml",
+      "filePath": "src/lib/giveaway-followups.ts",
+      "lineRange": [
+        637,
+        660
+      ],
+      "summary": "Converts plain-text email copy into escaped, linked HTML paragraphs and gives the unsubscribe footer its compact presentation.",
+      "tags": [
+        "email",
+        "rendering",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/giveaway-followups.ts:planFollowups",
+      "type": "function",
+      "name": "planFollowups",
+      "filePath": "src/lib/giveaway-followups.ts",
+      "lineRange": [
+        727,
+        882
+      ],
+      "summary": "Computes the next eligible follow-up per lead using audience exclusions, send history, engagement and elapsed time. Handles sales and giveaway tracks, Instagram replies, human handoff, repeat gifts and real live-event invitations.",
+      "tags": [
+        "giveaway",
+        "sales",
+        "validation",
+        "scheduling"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:tests/giveaway-followups.test.ts",
+      "type": "file",
+      "name": "giveaway-followups.test.ts",
+      "filePath": "tests/giveaway-followups.test.ts",
+      "summary": "Tests follow-up scheduling, copy rendering, tracked links and suppression rules across giveaway and sales tracks. Covers Instagram reply windows, human handoff, gift selection and real live-date eligibility.",
+      "tags": [
+        "test",
+        "email",
+        "giveaway",
+        "validation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/lib/giveaways.ts",
+      "type": "file",
+      "name": "giveaways.ts",
+      "filePath": "src/lib/giveaways.ts",
+      "summary": "Maintains the typed giveaway catalog used to populate the giveaway index, with slugs, descriptions, icons and badges plus a lookup helper.",
+      "tags": [
+        "data-model",
+        "giveaway-catalog",
+        "content-registry"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/lib/giveaways.ts:getGiveaway",
+      "type": "function",
+      "name": "getGiveaway",
+      "filePath": "src/lib/giveaways.ts",
+      "lineRange": [
+        434,
+        436
+      ],
+      "summary": "Finds a giveaway entry by its exact slug, returning undefined when no entry matches.",
+      "tags": [
+        "utility",
+        "lookup",
+        "giveaway-catalog"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:public/desk-pet-prompt.txt",
+      "type": "document",
+      "name": "desk-pet-prompt.txt",
+      "filePath": "public/desk-pet-prompt.txt",
+      "summary": "Downloadable Claude Code setup prompt guiding users through building, personalizing, installing and removing the macOS Desk Pet app and its activity hooks.",
+      "tags": [
+        "documentation",
+        "installation",
+        "desk-pet"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/app/giveaways/desk-pet/layout.tsx",
+      "type": "file",
+      "name": "layout.tsx",
+      "filePath": "src/app/giveaways/desk-pet/layout.tsx",
+      "summary": "Sets canonical, search and social sharing metadata for the Desk Pet giveaway route and passes its page content through unchanged.",
+      "tags": [
+        "entry-point",
+        "metadata",
+        "seo"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/app/giveaways/desk-pet/layout.tsx:DeskPetLayout",
+      "type": "function",
+      "name": "DeskPetLayout",
+      "filePath": "src/app/giveaways/desk-pet/layout.tsx",
+      "lineRange": [
+        34,
+        36
+      ],
+      "summary": "Passes the Desk Pet route children through while Next.js applies the layout metadata.",
+      "tags": [
+        "component",
+        "layout",
+        "desk-pet"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/app/sitemap.ts",
+      "type": "file",
+      "name": "sitemap.ts",
+      "filePath": "src/app/sitemap.ts",
+      "summary": "Generates the Next.js sitemap for the home page, giveaway resources and lead magnet, including generated free AI tool pages with crawl priorities and update frequencies.",
+      "tags": [
+        "entry-point",
+        "seo",
+        "sitemap"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/app/sitemap.ts:sitemap",
+      "type": "function",
+      "name": "sitemap",
+      "filePath": "src/app/sitemap.ts",
+      "lineRange": [
+        7,
+        37
+      ],
+      "summary": "Builds sitemap entries for fixed public pages and every free AI tool slug, attaching last-modified timestamps and crawl hints.",
+      "tags": [
+        "seo",
+        "routing",
+        "metadata"
+      ],
+      "complexity": "simple"
     }
   ],
   "edges": [
@@ -1842,83 +2622,6 @@
       "weight": 1.0
     },
     {
-      "source": "file:src/lib/generic-giveaway-email.ts",
-      "target": "function:src/lib/generic-giveaway-email.ts:esc",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/generic-giveaway-email.ts",
-      "target": "function:src/lib/generic-giveaway-email.ts:isMastermindsHost",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/generic-giveaway-email.ts",
-      "target": "function:src/lib/generic-giveaway-email.ts:validateGiveawayLink",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/generic-giveaway-email.ts",
-      "target": "function:src/lib/generic-giveaway-email.ts:titleCaseSlug",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/generic-giveaway-email.ts",
-      "target": "function:src/lib/generic-giveaway-email.ts:sanitizeGiveawayName",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/generic-giveaway-email.ts",
-      "target": "function:src/lib/generic-giveaway-email.ts:isValidManychatSecret",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/generic-giveaway-email.ts",
-      "target": "function:src/lib/generic-giveaway-email.ts:buildGenericGiveawayEmail",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/generic-giveaway-email.ts",
-      "target": "function:src/lib/generic-giveaway-email.ts:websiteGiveawayEmail",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/generic-giveaway-email.ts",
-      "target": "function:src/lib/generic-giveaway-email.ts:salesKeywordPage",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/generic-giveaway-email.ts",
-      "target": "function:src/lib/generic-giveaway-email.ts:buildSalesKeywordEmail",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/giveaways.ts",
-      "target": "function:src/lib/giveaways.ts:getGiveaway",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
       "source": "file:src/app/giveaways/chat-to-flowchart/page.tsx",
       "target": "file:src/app/giveaways/chat-to-flowchart/pack.ts",
       "type": "imports",
@@ -1961,13 +2664,6 @@
       "weight": 0.7
     },
     {
-      "source": "file:tests/free-ai-tools.test.ts",
-      "target": "file:src/lib/giveaways.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
       "source": "file:tests/linkedin-kit.test.ts",
       "target": "file:src/app/giveaways/linkedin-kit/pack.ts",
       "type": "imports",
@@ -1977,20 +2673,6 @@
     {
       "source": "file:tests/linkedin-kit.test.ts",
       "target": "file:src/app/giveaways/linkedin-kit/prompt.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:tests/linkedin-kit.test.ts",
-      "target": "file:src/lib/generic-giveaway-email.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:tests/linkedin-kit.test.ts",
-      "target": "file:src/lib/giveaways.ts",
       "type": "imports",
       "direction": "forward",
       "weight": 0.7
@@ -2234,20 +2916,6 @@
       "weight": 0.6
     },
     {
-      "source": "file:src/app/sitemap.ts",
-      "target": "function:src/app/sitemap.ts:sitemap",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/app/sitemap.ts",
-      "target": "function:src/app/sitemap.ts:sitemap",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
       "source": "file:src/lib/events.tsx",
       "target": "function:src/lib/events.tsx:getEventDiscountedPrice",
       "type": "contains",
@@ -2358,13 +3026,6 @@
       "type": "exports",
       "direction": "forward",
       "weight": 0.8
-    },
-    {
-      "source": "file:src/app/sitemap.ts",
-      "target": "file:src/lib/free-ai-tools.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
     },
     {
       "source": "function:src/lib/events.tsx:formatEventPrice",
@@ -2400,6 +3061,965 @@
       "type": "imports",
       "direction": "forward",
       "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/desk-pet/pack.ts",
+      "target": "file:src/app/giveaways/desk-pet/prompt.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/desk-pet/page.tsx",
+      "target": "function:src/app/giveaways/desk-pet/page.tsx:DeskPetPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/app/giveaways/desk-pet/page.tsx",
+      "target": "function:src/app/giveaways/desk-pet/page.tsx:DeskPetPage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/giveaways/desk-pet/page.tsx",
+      "target": "file:src/app/giveaways/desk-pet/pack.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:validateGiveawayLink",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:validateGiveawayLink",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:sanitizeGiveawayName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:sanitizeGiveawayName",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:isValidManychatSecret",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:isValidManychatSecret",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:buildGenericGiveawayEmail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:buildGenericGiveawayEmail",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:websiteGiveawayEmail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:websiteGiveawayEmail",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:salesKeywordPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:salesKeywordPage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:buildSalesKeywordEmail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:buildSalesKeywordEmail",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tests/desk-pet.test.ts",
+      "target": "file:src/app/giveaways/desk-pet/pack.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:tests/desk-pet.test.ts",
+      "target": "file:src/app/giveaways/desk-pet/prompt.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:tests/desk-pet.test.ts",
+      "target": "file:src/lib/generic-giveaway-email.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:src/lib/generic-giveaway-email.ts:buildSalesKeywordEmail",
+      "target": "function:src/lib/generic-giveaway-email.ts:salesKeywordPage",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/giveaways/desk-pet/pack.ts",
+      "target": "file:tests/desk-pet.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/app/giveaways/desk-pet/page.tsx",
+      "target": "file:tests/desk-pet.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/app/giveaways/desk-pet/prompt.ts",
+      "target": "file:tests/desk-pet.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "file:tests/desk-pet.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:scripts/giveaway-followups.mjs",
+      "target": "function:scripts/giveaway-followups.mjs:lina",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/giveaway-followups.mjs",
+      "target": "function:scripts/giveaway-followups.mjs:stripeBuyer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/giveaway-followups.mjs",
+      "target": "function:scripts/giveaway-followups.mjs:stripeBuyer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/giveaway-followups.mjs",
+      "target": "function:scripts/giveaway-followups.mjs:repliedByEmail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/giveaway-followups.mjs",
+      "target": "function:scripts/giveaway-followups.mjs:crmFirstSource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/giveaway-followups.mjs",
+      "target": "function:scripts/giveaway-followups.mjs:crmFirstSource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/giveaway-followups.mjs",
+      "target": "function:scripts/giveaway-followups.mjs:slugForKeyword",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/giveaway-followups.mjs",
+      "target": "function:scripts/giveaway-followups.mjs:slugForKeyword",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/giveaway-followups.mjs",
+      "target": "function:scripts/giveaway-followups.mjs:checkoutStartedSince",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/giveaway-followups.mjs",
+      "target": "function:scripts/giveaway-followups.mjs:checkoutStartedSince",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/giveaway-followups.mjs",
+      "target": "function:scripts/giveaway-followups.mjs:bookedCall",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/giveaway-followups.mjs",
+      "target": "function:scripts/giveaway-followups.mjs:bookedCall",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/giveaway-followups.mjs",
+      "target": "function:scripts/giveaway-followups.mjs:findSubscriber",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/giveaway-followups.mjs",
+      "target": "function:scripts/giveaway-followups.mjs:bonusLink",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/giveaway-followups.mjs",
+      "target": "function:scripts/giveaway-followups.mjs:bonusLink",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/giveaway-followups.mjs",
+      "target": "function:scripts/giveaway-followups.mjs:renderEmailFor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/giveaway-followups.mjs",
+      "target": "function:scripts/giveaway-followups.mjs:resendSend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/giveaway-followups.mjs",
+      "target": "function:scripts/giveaway-followups.mjs:sendOne",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/giveaway-followups.mjs",
+      "target": "function:scripts/giveaway-followups.mjs:allVariants",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/giveaway-followups.mjs",
+      "target": "function:scripts/giveaway-followups.mjs:renderAll",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/giveaway-followups.mjs",
+      "target": "function:scripts/giveaway-followups.mjs:testSends",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/giveaway-followups.mjs",
+      "target": "function:scripts/giveaway-followups.mjs:reviewSends",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/giveaway-followups.mjs",
+      "target": "function:scripts/giveaway-followups.mjs:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/giveaway-followups.mjs",
+      "target": "file:src/lib/giveaway-followups.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:pickGift",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:pickGift",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:pickLiveEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:pickLiveEvent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:isSalesKeywordSource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:isSalesKeywordSource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:isTestEmail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:isTestEmail",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:levelFromSource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:levelFromSource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:levelFromQuizScore",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:levelFromQuizScore",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:parseLevelReply",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:parseLevelReply",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:lastVariant",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:lastVariant",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:salesOfferFor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:salesOfferFor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:salesLastVariant",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:salesLastVariant",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:stepLink",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:stepLink",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:baseVars",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:renderTemplate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:renderTemplate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:renderQuickwin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:renderQuickwin",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:renderLast",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:renderLast",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:renderSalesDay2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:renderSalesDay2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:renderSalesDay5",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:renderSalesDay5",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:renderGift2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:renderGift2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:renderLive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:renderLive",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:renderDmLevel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:renderDmLevel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:dayZeroPs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:dayZeroPs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:withDayZeroPs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:withDayZeroPs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:toHtml",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:toHtml",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:planFollowups",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "function:src/lib/giveaway-followups.ts:planFollowups",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tests/giveaway-followups.test.ts",
+      "target": "file:src/lib/giveaway-followups.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:renderEmailFor",
+      "target": "function:src/lib/giveaway-followups.ts:renderSalesDay2",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:renderEmailFor",
+      "target": "function:src/lib/giveaway-followups.ts:renderSalesDay5",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:renderEmailFor",
+      "target": "function:src/lib/giveaway-followups.ts:renderQuickwin",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:renderEmailFor",
+      "target": "function:src/lib/giveaway-followups.ts:renderGift2",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:renderEmailFor",
+      "target": "function:src/lib/giveaway-followups.ts:renderLive",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:renderEmailFor",
+      "target": "function:src/lib/giveaway-followups.ts:renderLast",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:resendSend",
+      "target": "function:src/lib/giveaway-followups.ts:toHtml",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:sendOne",
+      "target": "function:src/lib/giveaway-followups.ts:renderDmLevel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:allVariants",
+      "target": "function:src/lib/giveaway-followups.ts:renderQuickwin",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:allVariants",
+      "target": "function:src/lib/giveaway-followups.ts:renderLast",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:allVariants",
+      "target": "function:src/lib/giveaway-followups.ts:renderGift2",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:allVariants",
+      "target": "function:src/lib/giveaway-followups.ts:renderLive",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:allVariants",
+      "target": "function:src/lib/giveaway-followups.ts:renderSalesDay2",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:allVariants",
+      "target": "function:src/lib/giveaway-followups.ts:renderSalesDay5",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:renderAll",
+      "target": "function:src/lib/giveaway-followups.ts:toHtml",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:renderAll",
+      "target": "function:src/lib/giveaway-followups.ts:dayZeroPs",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:renderAll",
+      "target": "function:src/lib/giveaway-followups.ts:renderDmLevel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:reviewSends",
+      "target": "function:src/lib/giveaway-followups.ts:renderSalesDay2",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:reviewSends",
+      "target": "function:src/lib/giveaway-followups.ts:renderSalesDay5",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:reviewSends",
+      "target": "function:src/lib/giveaway-followups.ts:renderGift2",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:reviewSends",
+      "target": "function:src/lib/giveaway-followups.ts:renderLive",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:main",
+      "target": "function:src/lib/giveaway-followups.ts:salesOfferFor",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:main",
+      "target": "function:src/lib/giveaway-followups.ts:planFollowups",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:main",
+      "target": "function:src/lib/giveaway-followups.ts:renderDmLevel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/giveaway-followups.ts",
+      "target": "file:tests/giveaway-followups.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/lib/giveaways.ts",
+      "target": "function:src/lib/giveaways.ts:getGiveaway",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/giveaways.ts",
+      "target": "function:src/lib/giveaways.ts:getGiveaway",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/giveaways/desk-pet/layout.tsx",
+      "target": "function:src/app/giveaways/desk-pet/layout.tsx:DeskPetLayout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/app/giveaways/desk-pet/layout.tsx",
+      "target": "function:src/app/giveaways/desk-pet/layout.tsx:DeskPetLayout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/sitemap.ts",
+      "target": "function:src/app/sitemap.ts:sitemap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/app/sitemap.ts",
+      "target": "function:src/app/sitemap.ts:sitemap",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tests/free-ai-tools.test.ts",
+      "target": "file:src/lib/giveaways.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:tests/linkedin-kit.test.ts",
+      "target": "file:src/lib/generic-giveaway-email.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:tests/linkedin-kit.test.ts",
+      "target": "file:src/lib/giveaways.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/app/sitemap.ts",
+      "target": "file:src/lib/free-ai-tools.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "description": "Imports FREE_AI_TOOL_SLUGS through the @/lib alias (source-confirmed; extractor importMap omitted this alias)."
+    },
+    {
+      "source": "document:public/desk-pet-prompt.txt",
+      "target": "file:src/app/giveaways/desk-pet/prompt.ts",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.95,
+      "description": "Distributed text copy of DESK_PET_PROMPT; tests/desk-pet.test.ts asserts exact text equality with a trailing newline."
+    },
+    {
+      "source": "file:src/app/giveaways/desk-pet/pack.ts",
+      "target": "document:public/desk-pet-prompt.txt",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.9,
+      "description": "PROMPT_PATH points to /desk-pet-prompt.txt; ONE_LINE_COMMAND fetches this public setup prompt."
+    },
+    {
+      "source": "document:public/desk-pet-prompt.txt",
+      "target": "file:tests/desk-pet.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.9,
+      "description": "Checks the distributed prompt exists and exactly matches DESK_PET_PROMPT plus a newline."
     }
   ],
   "version": "1.0.0",
@@ -2422,14 +4042,14 @@
       "GSAP"
     ],
     "description": "Masterminds Workshop Site is a Next.js application for event discovery and registration, workshop learning, and giveaway resource distribution, with shared content catalogs, payment integration, and email delivery.",
-    "analyzedAt": "2026-10-31T20:12:10.143313+00:00",
-    "gitCommitHash": "fefc614a4f6ac670cd433fb0ae77c4313cfdb205"
+    "analyzedAt": "2026-11-02T20:23:21.354049+00:00",
+    "gitCommitHash": "e8b185b28be6323b7f32afc53f4f0ef504502071"
   },
   "layers": [
     {
       "id": "layer:api-routes",
       "name": "API Routes",
-      "description": "Next.js endpoint handling email-list unsubscribe token verification and suppression recording in the represented graph.",
+      "description": "The represented unsubscribe endpoint verifies list-management tokens and records email suppressions.",
       "nodeIds": [
         "file:src/app/api/unsubscribe/route.ts"
       ]
@@ -2462,6 +4082,10 @@
         "file:src/app/giveaways/chat-to-flowchart/page.tsx",
         "file:src/app/giveaways/claude-md/layout.tsx",
         "file:src/app/giveaways/claude-md/pack.ts",
+        "file:src/app/giveaways/desk-pet/layout.tsx",
+        "file:src/app/giveaways/desk-pet/pack.ts",
+        "file:src/app/giveaways/desk-pet/page.tsx",
+        "file:src/app/giveaways/desk-pet/prompt.ts",
         "file:src/app/giveaways/film/layout.tsx",
         "file:src/app/giveaways/film/pack.ts",
         "file:src/app/giveaways/film/page.tsx",
@@ -2479,20 +4103,22 @@
     {
       "id": "layer:shared-libraries",
       "name": "Shared Libraries",
-      "description": "Shared event and giveaway catalogs, pricing helpers, email builders and sitemap generation support workshop and resource discovery.",
+      "description": "Shared event and giveaway catalogs, pricing helpers, email builders, follow-up planning and sitemap generation support workshop and resource delivery.",
       "nodeIds": [
         "file:src/app/sitemap.ts",
         "file:src/lib/events.tsx",
         "file:src/lib/free-ai-tools.ts",
         "file:src/lib/generic-giveaway-email.ts",
+        "file:src/lib/giveaway-followups.ts",
         "file:src/lib/giveaways.ts"
       ]
     },
     {
       "id": "layer:assets",
       "name": "Assets",
-      "description": "Downloadable LinkedIn Kit and Salesman ZIP archives and their checksums provide distributable giveaway resources.",
+      "description": "Downloadable resource ZIP archives, integrity checksums and the distributed Desk Pet setup guide supply giveaway delivery assets.",
       "nodeIds": [
+        "document:public/desk-pet-prompt.txt",
         "file:public/downloads/joes-linkedin-kit-v1.0.zip",
         "file:public/downloads/joes-linkedin-kit-v1.0.zip.sha256",
         "file:public/downloads/joes-salesman-v1.0.zip",
@@ -2500,11 +4126,21 @@
       ]
     },
     {
+      "id": "layer:operations",
+      "name": "Operations",
+      "description": "The guarded giveaway follow-up runner coordinates external eligibility checks, previews and claimed deliveries using the shared follow-up planner.",
+      "nodeIds": [
+        "file:scripts/giveaway-followups.mjs"
+      ]
+    },
+    {
       "id": "layer:test",
       "name": "Tests",
-      "description": "Catalog and LinkedIn Kit tests verify giveaway metadata, resource content, source handling and email helpers.",
+      "description": "Catalog, LinkedIn Kit, Desk Pet and follow-up tests protect resource metadata, prompt parity, email delivery rules and suppression behavior.",
       "nodeIds": [
+        "file:tests/desk-pet.test.ts",
         "file:tests/free-ai-tools.test.ts",
+        "file:tests/giveaway-followups.test.ts",
         "file:tests/linkedin-kit.test.ts"
       ]
     },
@@ -2520,120 +4156,124 @@
   "tour": [
     {
       "order": 1,
-      "title": "Workshop Site Overview",
-      "description": "Start at the events index to see how the Masterminds site presents live workshops through cards, dates, prices and links to individual events. This is the overview entry for a partial graph centered on event content, giveaways and their supporting files. Follow its catalog dependency next to learn where that presentation gets its shared event definitions.",
+      "title": "Project and Event Discovery",
+      "description": "Start with the main events listing to see the workshop site through a visitor\u2019s eyes: upcoming live events, prices, dates and links to details. This is the represented overview entry in the partial graph; the home page is outside its coverage.",
       "nodeIds": [
         "file:src/app/events/page.tsx"
       ]
     },
     {
       "order": 2,
-      "title": "The Shared Event Catalog",
-      "description": "The event catalog supplies the listing from Step 1 with typed definitions for workshops, dinners and other gatherings. It brings together hosts, sections, SEO, registration limits, pricing, promotions, donations and attendee setup information; helpers look up events, sort upcoming live events and calculate displayed prices. Optional hero video sources, posters and mobile variants let an event choose richer media without changing the catalog structure.",
+      "title": "Event Data and Registration",
+      "description": "Follow the listing\u2019s dependency into the shared event catalog, which defines dates, capacities, pricing, promotions and setup content. The dynamic detail and attendee setup pages consume that same catalog, connecting discovery to registration and preparation.",
       "nodeIds": [
-        "file:src/lib/events.tsx"
-      ],
-      "languageLesson": "Optional TypeScript properties let event records share one model while supplying media or setup details only when those fields apply."
-    },
-    {
-      "order": 3,
-      "title": "From Slugs to Setup",
-      "description": "Building on the shared catalog, the dynamic event page resolves a slug, prepares metadata and promotion information, and passes event data to its presentation component with Stripe integration. The nested setup route presents the instructions and next steps for attendees after purchase. Read these routes as the represented navigation and content boundary; the checkout and database implementation files are outside this tour.",
-      "nodeIds": [
+        "file:src/lib/events.tsx",
         "file:src/app/events/[slug]/page.tsx",
         "file:src/app/events/[slug]/setup/page.tsx"
       ],
-      "languageLesson": "In the Next.js App Router, a [slug] directory captures a route segment, while a nested setup/page.tsx creates a related URL beneath that event."
+      "languageLesson": "Next.js App Router uses folders such as [slug] for dynamic route parameters, with page.tsx defining the rendered page."
     },
     {
-      "order": 4,
-      "title": "Catalogs for Free Resources",
-      "description": "Alongside paid and live events, the site maintains a free AI tool catalog and a registry of giveaway pages. The former defines tool slugs, lookups and source validation, while the latter provides shared giveaway metadata. These modules establish the common vocabulary for the resource pages and checks in the following steps.",
+      "order": 3,
+      "title": "Giveaway Catalogs and Discovery",
+      "description": "Alongside paid events, the site organizes free resources in typed giveaway and free AI tool catalogs. Their lookup helpers centralize resource identity, while the sitemap uses free AI tool slugs to expose those pages to search engines.",
       "nodeIds": [
+        "file:src/lib/giveaways.ts",
         "file:src/lib/free-ai-tools.ts",
-        "file:src/lib/giveaways.ts"
+        "file:src/app/sitemap.ts"
       ]
     },
     {
-      "order": 5,
-      "title": "Content Driven Giveaway Guides",
-      "description": "With the resource catalogs in mind, inspect Chat to Flowchart as a page, content pack and metadata layout working together. The pack holds instructions, promises, limitations and troubleshooting, while the page adds structured search data and renders the guide. The CLAUDE.md pack and layout show the same separation applied to a different setup resource.",
+      "order": 4,
+      "title": "Resource Packs and Prompts",
+      "description": "With resource discovery established, examine the LinkedIn Kit\u2019s page, content pack and reusable prompt. The page imports its pack and the pack imports the prompt, illustrating how presentation and instructional content are separated across giveaway resources.",
       "nodeIds": [
-        "file:src/app/giveaways/chat-to-flowchart/page.tsx",
-        "file:src/app/giveaways/chat-to-flowchart/pack.ts",
-        "file:src/app/giveaways/chat-to-flowchart/layout.tsx",
-        "file:src/app/giveaways/claude-md/pack.ts",
-        "file:src/app/giveaways/claude-md/layout.tsx"
+        "file:src/app/giveaways/linkedin-kit/page.tsx",
+        "file:src/app/giveaways/linkedin-kit/pack.ts",
+        "file:src/app/giveaways/linkedin-kit/prompt.ts"
+      ],
+      "languageLesson": "TypeScript content objects let multiple React pages share a rendering contract while keeping each resource\u2019s copy separate."
+    },
+    {
+      "order": 5,
+      "title": "Desk Pet Setup Workflow",
+      "description": "Desk Pet applies the pack pattern to a Mac app builder guide with setup commands, troubleshooting and downloadable instructions. Its page adds HowTo structured data, while the canonical prompt supplies the instructions that distributed copies must match.",
+      "nodeIds": [
+        "file:src/app/giveaways/desk-pet/page.tsx",
+        "file:src/app/giveaways/desk-pet/pack.ts",
+        "file:src/app/giveaways/desk-pet/prompt.ts"
       ]
     },
     {
       "order": 6,
-      "title": "Prompts and Downloadable Kits",
-      "description": "The LinkedIn Kit extends the guide pattern from Step 5 with reusable prompt text and a downloadable archive. Its page and pack describe the resource and expose the ZIP path, while the checksum file supplies a value that can be used to verify the archive. This stop connects the content model to the concrete files a visitor can download.",
+      "title": "Distributed Guides and Downloads",
+      "description": "The public Desk Pet document turns the preceding source prompt into a user-facing setup guide covering personalization, installation and removal. Public ZIP archives deliver other resource kits, and their checksum files provide a separate integrity artifact alongside each download.",
       "nodeIds": [
-        "file:src/app/giveaways/linkedin-kit/page.tsx",
-        "file:src/app/giveaways/linkedin-kit/pack.ts",
-        "file:src/app/giveaways/linkedin-kit/prompt.ts",
+        "document:public/desk-pet-prompt.txt",
         "file:public/downloads/joes-linkedin-kit-v1.0.zip",
-        "file:public/downloads/joes-linkedin-kit-v1.0.zip.sha256"
+        "file:public/downloads/joes-linkedin-kit-v1.0.zip.sha256",
+        "file:public/downloads/joes-salesman-v1.0.zip",
+        "file:public/downloads/joes-salesman-v1.0.zip.sha256"
       ]
     },
     {
       "order": 7,
-      "title": "Creative Tool Resource Pages",
-      "description": "The film resource applies the same page, pack and prompt organization to an animated video guide with gallery and repository links. Its layout supplies search metadata separately from the guide content. Compare the Concat page to see another resource page using shared free AI tool presentation utilities, whose implementations are outside the represented files.",
+      "title": "Quiz Content Variants",
+      "description": "The same content-driven approach supports quizzes as well as downloadable kits. These thin page wrappers consume packs explaining distinct capability and behavioral scales, then direct visitors to quizzes hosted outside this application.",
       "nodeIds": [
-        "file:src/app/giveaways/film/page.tsx",
-        "file:src/app/giveaways/film/pack.ts",
-        "file:src/app/giveaways/film/prompt.ts",
-        "file:src/app/giveaways/film/layout.tsx",
-        "file:src/app/giveaways/free-ai-concat/page.tsx"
+        "file:src/app/giveaways/ai-levels-quiz/page.tsx",
+        "file:src/app/giveaways/ai-levels-quiz/pack.ts",
+        "file:src/app/giveaways/ai-behavior-quiz/page.tsx",
+        "file:src/app/giveaways/ai-behavior-quiz/pack.ts"
       ]
     },
     {
       "order": 8,
-      "title": "Quizzes and Bonus Learning",
-      "description": "The quiz pages reuse the guide pattern to explain two distinct assessments: behavioral intensity from B0 to B10 and capability levels on a 0\u201340 scale. Their packs hold explanatory content and links, while the quizzes themselves run on an external site. The automatic lead magnet guide demonstrates a longer learning resource with an embedded prompt, instructions and a sample PDF link.",
-      "nodeIds": [
-        "file:src/app/giveaways/ai-behavior-quiz/page.tsx",
-        "file:src/app/giveaways/ai-behavior-quiz/pack.ts",
-        "file:src/app/giveaways/ai-levels-quiz/page.tsx",
-        "file:src/app/giveaways/ai-levels-quiz/pack.ts",
-        "file:src/app/bonus/auto-lead-magnet/page.tsx"
-      ]
-    },
-    {
-      "order": 9,
-      "title": "Email Content and Preferences",
-      "description": "After seeing the resources visitors receive, inspect the shared helpers that validate giveaway links and names and construct generic or keyword-specific email content. The unsubscribe route represents the corresponding preference boundary: its GET and POST handlers verify tokens and record suppressions for email list management. These files explain content preparation and unsubscribe behavior without establishing a complete delivery pipeline.",
+      "title": "Email Delivery and Unsubscribe",
+      "description": "After visitors choose a resource, shared email helpers build HTML and plain-text delivery messages and restrict destinations to trusted giveaway links. The represented unsubscribe route verifies list-management tokens and records suppressions, showing the corresponding opt-out boundary.",
       "nodeIds": [
         "file:src/lib/generic-giveaway-email.ts",
         "file:src/app/api/unsubscribe/route.ts"
       ]
     },
     {
-      "order": 10,
-      "title": "Catalog Based Search Discovery",
-      "description": "The sitemap connects the resource catalog from Step 4 to search discovery by importing the shared free AI tool slug catalog. It combines tool page URLs with home, giveaway and lead magnet entries, assigning modification times, update frequencies and priorities. This makes the catalog an input to both resource lookup and the generated list of discoverable URLs.",
+      "order": 9,
+      "title": "Guarded Follow-up Operations",
+      "description": "Beyond initial delivery, the follow-up service plans copy and schedules while applying suppression, timing, human handoff and real-event eligibility rules. Its operational runner combines those plans with external checks and supports previews, dry runs, review delivery and claimed sends.",
       "nodeIds": [
-        "file:src/app/sitemap.ts"
+        "file:src/lib/giveaway-followups.ts",
+        "file:scripts/giveaway-followups.mjs"
       ]
     },
     {
-      "order": 11,
-      "title": "Build Assets and Routing",
-      "description": "Next.js configuration determines how the pages and resources from earlier steps are packaged and reached. Its tracing rules include private prompt pack assets for the relevant API handlers and exclude non-image event media, including video, from server bundles, while fixing the Turbopack root to this project. Legacy and portal redirects plus host-specific root rewrites direct requests to the intended destinations.",
+      "order": 10,
+      "title": "Route Metadata and Configuration",
+      "description": "The resource journeys also depend on search metadata and routing behavior. Giveaway layouts supply page-specific metadata, while Next.js configuration controls redirects, host rewrites and build tracing for the site\u2019s delivery paths.",
       "nodeIds": [
+        "file:src/app/giveaways/desk-pet/layout.tsx",
+        "file:src/app/giveaways/linkedin-kit/layout.tsx",
         "config:next.config.ts"
       ]
     },
     {
+      "order": 11,
+      "title": "Workshop Learning Resources",
+      "description": "Return to the learning side of the site after tracing discovery and delivery. Bonus workshop pages and the automated lead magnet guide provide instructional material, while the CLAUDE.md pack illustrates a longer configuration-focused resource using the same content organization.",
+      "nodeIds": [
+        "file:src/app/bonus-workshops/page.tsx",
+        "file:src/app/bonus/auto-lead-magnet/page.tsx",
+        "file:src/app/giveaways/claude-md/pack.ts"
+      ]
+    },
+    {
       "order": 12,
-      "title": "Checks Across Resource Boundaries",
-      "description": "Finish by reading the tests that protect the shared resource contracts introduced throughout the tour. The free AI tool tests check catalog lookup, source handling and formatting, while the LinkedIn Kit tests connect registered giveaway content with its pack, prompt and email helpers. These represented tests show which resource assumptions are checked; they do not establish coverage of the unrepresented checkout or database flows.",
+      "title": "Regression and Content Guarantees",
+      "description": "Finish with tests that connect the catalog, kit and delivery pieces introduced earlier. They check metadata and source handling, LinkedIn content, Desk Pet prompt parity and assets, plus follow-up suppression and scheduling rules, making the intended boundaries concrete.",
       "nodeIds": [
         "file:tests/free-ai-tools.test.ts",
-        "file:tests/linkedin-kit.test.ts"
+        "file:tests/linkedin-kit.test.ts",
+        "file:tests/desk-pet.test.ts",
+        "file:tests/giveaway-followups.test.ts"
       ]
     }
   ]

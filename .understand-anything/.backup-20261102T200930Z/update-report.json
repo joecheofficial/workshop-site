@@ -1,0 +1,104 @@
+{
+  "mode": "incremental",
+  "backupPath": "/Users/myos/.myos/workspace/projects/mastermind/workshop-site/.understand-anything/.backup-20261031T200625Z",
+  "previousGitCommitHash": "046104b2392ee95553147704d376447b3c4ac118",
+  "gitCommitHash": "fefc614a4f6ac670cd433fb0ae77c4313cfdb205",
+  "changedPaths": [
+    "next.config.ts",
+    "public/events/joechella-big-one/joechella-party-20261029-mobile.mp4",
+    "public/events/joechella-big-one/joechella-party-20261029-poster.jpg",
+    "public/events/joechella-big-one/joechella-party-20261029.mp4",
+    "src/app/sitemap.ts",
+    "src/lib/events.tsx"
+  ],
+  "analyzedPaths": [
+    "next.config.ts",
+    "src/app/sitemap.ts",
+    "src/lib/events.tsx"
+  ],
+  "excludedAssets": [
+    "public/events/joechella-big-one/joechella-party-20261029-mobile.mp4",
+    "public/events/joechella-big-one/joechella-party-20261029-poster.jpg",
+    "public/events/joechella-big-one/joechella-party-20261029.mp4"
+  ],
+  "deletedPaths": [],
+  "initialNodes": 90,
+  "initialEdges": 70,
+  "warnings": [
+    "The inherited graph is partial: normalizing legacy path/relPath fields recovers 50 represented files versus 125 cached inventory entries before this update. Unchanged coverage is preserved; no full rebuild was performed.",
+    "Bundled import extraction missed the sitemap alias import; its source-confirmed import to src/lib/free-ai-tools.ts was supplied explicitly.",
+    "Initial file-analyzer dispatch failed before startup (invalid thread-store request); one retry with isolated context started successfully.",
+    "Legacy node field/ID normalization recovered paths and collapsed nine duplicate aliases without reanalyzing unchanged files.",
+    "Phase 6 initial schema validation rejected nine legacy edge types; five navigation/layout edges canonicalized and four placeholder self-loops removed before re-merge.",
+    "Node 'file:public/downloads/joes-linkedin-kit-v1.0.zip' has no edges (orphan)",
+    "Node 'file:public/downloads/joes-linkedin-kit-v1.0.zip.sha256' has no edges (orphan)",
+    "Node 'file:public/downloads/joes-salesman-v1.0.zip' has no edges (orphan)",
+    "Node 'file:public/downloads/joes-salesman-v1.0.zip.sha256' has no edges (orphan)",
+    "Node 'function:src/app/api/events/abandoned-checkout-followups/route.ts:acquireEventLock' has no edges (orphan)",
+    "Node 'function:src/app/api/events/cancel/route.ts:escapeHtml' has no edges (orphan)",
+    "Node 'function:src/app/api/events/session-reminders/route.ts:acquireEventWindowLock' has no edges (orphan)",
+    "Node 'file:src/app/api/unsubscribe/route.ts' has no edges (orphan)",
+    "Node 'file:src/app/bonus/auto-lead-magnet/page.tsx' has no edges (orphan)"
+  ],
+  "initialRepresentedFiles": 25,
+  "pipelineNotes": [
+    "Bundled compute-batches was run with node; batches were then trimmed to the three changed files because its incremental mode retains whole communities.",
+    "All batches, including retained nodes in batch-0.json, were normalized before merge. batch-0.json used because batch-existing.json is not accepted by the merge filename matcher.",
+    "Merge scripts executed with /opt/homebrew/bin/python3.11; no prebuilt core rebuild performed.",
+    "Native collaboration agents used in place of the unavailable Claude Agent tool; separate config and source analysis batches completed.",
+    "Dashboard launch skipped for this non-interactive artifact-only refresh."
+  ],
+  "phaseStatus": {
+    "0": "existing graph detected; incremental chosen",
+    "0.5": "root ignore excludes .understand-anything/",
+    "1": "cached inventory reused; three changed text files refreshed; three media files excluded",
+    "1.5": "node compute-batches completed; selected batches trimmed to changed files",
+    "2": "two file-analyzer agents completed; every batch normalized before Python 3.11 merge",
+    "3": "assemble-reviewer completed; 90 nodes and 92 edges",
+    "4": "architecture-analyzer completed; seven layers, 41 file-level nodes covered once",
+    "5": "tour-builder completed; 12 steps",
+    "6": "strict schema and integrity PASS after legacy edge-type repairs",
+    "7": "graph saved; 126 fingerprints generated successfully before metadata advanced"
+  },
+  "completedAt": "2026-10-31T20:12:56.031045+00:00",
+  "filesAnalyzed": 3,
+  "totalInventoryFiles": 126,
+  "analyzedFileCategories": {
+    "config": 1,
+    "code": 2
+  },
+  "stats": {
+    "totalNodes": 90,
+    "totalEdges": 88,
+    "totalLayers": 7,
+    "tourSteps": 12,
+    "nodeTypes": {
+      "file": 40,
+      "function": 49,
+      "config": 1
+    },
+    "edgeTypes": {
+      "contains": 37,
+      "imports": 17,
+      "tested_by": 3,
+      "calls": 17,
+      "related": 3,
+      "routes": 1,
+      "configures": 1,
+      "exports": 9
+    }
+  },
+  "schemaValidation": "PASS",
+  "integrityIssues": [],
+  "nodes": 90,
+  "edges": 88,
+  "representedFiles": 52,
+  "fileLevelNodes": 41,
+  "layers": 7,
+  "tourSteps": 12,
+  "edgeNodeRatio": 0.9777777777777777,
+  "graphPath": "/Users/myos/.myos/workspace/projects/mastermind/workshop-site/.understand-anything/knowledge-graph.json",
+  "graphSha256": "96615f89ff470a98122840c7285da2bd08c56dc24d1540cc7209f9b1bfa98064",
+  "fingerprintFiles": 126,
+  "evidencePath": "/Users/myos/.myos/workspace/projects/mastermind/workshop-site/.understand-anything/.trash-20261031T201256Z"
+}
