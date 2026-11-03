@@ -750,7 +750,7 @@ export const events: EventDefinition[] = [
                 body: 'Dance workshop.',
               },
               {
-                time: '5:30 PM to 6:30 PM',
+                time: '5:00 PM to 6:00 PM',
                 title: 'Couples workshop by Tomcat and Samita',
                 body: 'Intimacy building through dance and movement.',
               },
@@ -767,7 +767,7 @@ export const events: EventDefinition[] = [
             tone: 'night',
             items: [
               {
-                time: '7:45 PM to 8:00 PM',
+                time: '7:30 PM to 8:00 PM',
                 title: 'Surprise performance',
                 body: 'A surprise to take us into the evening.',
               },
@@ -796,8 +796,7 @@ export const events: EventDefinition[] = [
               },
               {
                 time: 'Midnight until late',
-                title: 'Late-night session with Edric',
-                body: 'Session details to be announced.',
+                title: 'Skin Bliss Temple with Edric',
               },
             ],
           },
