@@ -192,7 +192,11 @@ function Group({ group }: { group: EventTimelineGroup }) {
           </h3>
         </div>
         {group.note ? (
-          <p className="max-w-sm text-sm leading-6 text-[#FCF4EB]/62 md:text-right md:text-base">{group.note}</p>
+          <p className={`max-w-sm text-sm leading-6 md:text-right md:text-base ${
+            group.tone === 'morning'
+              ? 'rounded-xl border border-[#F5C3C6]/30 bg-[#F5C3C6]/10 px-4 py-2 font-semibold text-[#F5C3C6]'
+              : 'text-[#FCF4EB]/62'
+          }`}>{group.note}</p>
         ) : null}
       </header>
 
