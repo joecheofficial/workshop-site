@@ -142,6 +142,14 @@ export default function FestivalHero({ event, eventEnded }: { event: EventDefini
                   <path d="M10 14.5 4.5 9l1.4-1.4L10 11.7l4.1-4.1L15.5 9z" />
                 </svg>
               </a>
+              {event.slug === 'joechella-big-one-december-11-2026' ? (
+                <a
+                  href="https://50th.joe-che.com/"
+                  className="inline-flex min-h-[52px] items-center justify-center rounded-xl border border-[#F5C3C6]/40 bg-black/30 px-6 py-4 text-base font-semibold text-[#F5C3C6] backdrop-blur-md transition hover:border-[#F5C3C6]/70 hover:bg-black/45 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#BDB3E8]"
+                >
+                  Join us for the whole week!
+                </a>
+              ) : null}
             </div>
             {!eventEnded ? (
               <p className="pl-1 text-xs leading-5 text-[#FCF4EB]/60">
