@@ -51,12 +51,6 @@ export const askAnAiExpertQuotes: AskAnAiExpertQuote[] = [
   },
   {
     quote:
-      'This week really broke things open for me. Being able to use it on my phone made everything click. I\'m finally getting my website and lead magnet to come together, and the systems are so effective I\'m getting out of MailChimp and was even able to cancel my Manus subscription.',
-    name: 'Vonetta',
-    photoSrc: '/images/participants/vonetta-taylor.webp',
-  },
-  {
-    quote:
       'After just the first two sessions of the mastermind, I was building my own website from scratch.',
     name: 'Ronnie',
     photoSrc: '/images/participants/ronnie-ansara.jpg',
@@ -207,12 +201,6 @@ export const askAnAiExpertQuotes: AskAnAiExpertQuote[] = [
   },
   {
     quote:
-      'I built two things: a goal-planning system and a young people pathfinder that guides them through questions into real pathways.',
-    name: 'Vonetta',
-    photoSrc: '/images/participants/vonetta-taylor.webp',
-  },
-  {
-    quote:
       'I can\'t tell you the joy of having my AI note-taker, because I see many clients, and to have things crystallized so well is brilliant.',
     name: 'David',
     photoSrc: '/images/participants/david-cook.webp',
@@ -276,12 +264,6 @@ export const askAnAiExpertQuotes: AskAnAiExpertQuote[] = [
       'A venue here in Ubud reached out to me, their COO, to see if I want to host classes there every two, twice a week, starting August.',
     name: 'Naomi',
     photoSrc: '/images/participants/naomi-galinski.jpeg',
-  },
-  {
-    quote:
-      'I\'m using my Terminal and Claude to create, like, killer social media posts, I\'m, like, gaining, like, 15 followers a day, so things are, like, it\'s definitely supporting me in a lot of ways.',
-    name: 'Vonetta',
-    photoSrc: '/images/participants/vonetta-taylor.jpeg',
   },
   {
     quote:
