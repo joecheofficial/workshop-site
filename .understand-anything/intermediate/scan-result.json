@@ -205,7 +205,7 @@
     {
       "path": "next.config.ts",
       "language": "typescript",
-      "sizeLines": 84,
+      "sizeLines": 88,
       "fileCategory": "code"
     },
     {
@@ -1727,6 +1727,24 @@
       "fileCategory": "code"
     },
     {
+      "path": "src/app/giveaways/video-editor/layout.tsx",
+      "language": "typescript",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/giveaways/video-editor/pack.ts",
+      "language": "typescript",
+      "sizeLines": 174,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/giveaways/video-editor/page.tsx",
+      "language": "typescript",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
       "path": "src/app/giveaways/viral-hooks/layout.tsx",
       "language": "typescript",
       "sizeLines": 35,
@@ -2179,7 +2197,7 @@
     {
       "path": "src/components/events/joechella/FestivalHero.tsx",
       "language": "typescript",
-      "sizeLines": 164,
+      "sizeLines": 172,
       "fileCategory": "code"
     },
     {
@@ -2191,7 +2209,7 @@
     {
       "path": "src/components/events/joechella/ProgramTimeline.tsx",
       "language": "typescript",
-      "sizeLines": 267,
+      "sizeLines": 271,
       "fileCategory": "code"
     },
     {
@@ -2623,7 +2641,7 @@
     {
       "path": "src/lib/events.tsx",
       "language": "typescript",
-      "sizeLines": 1932,
+      "sizeLines": 1921,
       "fileCategory": "code"
     },
     {
@@ -2659,7 +2677,7 @@
     {
       "path": "src/lib/generic-giveaway-email.ts",
       "language": "typescript",
-      "sizeLines": 254,
+      "sizeLines": 255,
       "fileCategory": "code"
     },
     {
@@ -2683,7 +2701,7 @@
     {
       "path": "src/lib/giveaways.ts",
       "language": "typescript",
-      "sizeLines": 436,
+      "sizeLines": 444,
       "fileCategory": "code"
     },
     {
@@ -2827,7 +2845,7 @@
     {
       "path": "src/lib/supabase.ts",
       "language": "typescript",
-      "sizeLines": 8,
+      "sizeLines": 21,
       "fileCategory": "code"
     },
     {
@@ -3287,6 +3305,12 @@
       "fileCategory": "code"
     },
     {
+      "path": "tests/video-editor.test.ts",
+      "language": "typescript",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
       "path": "tests/waitlist-join-validation.test.ts",
       "language": "typescript",
       "sizeLines": 92,
@@ -3317,383 +3341,1619 @@
       "fileCategory": "config"
     }
   ],
-  "fileCount": 549,
-  "totalLines": 23067,
+  "fileCount": 553,
+  "totalLines": 84355,
   "complexity": "complex",
-  "filteredByIgnore": 37,
+  "filteredByIgnore": 43,
   "importMap": {
+    ".claude/settings.json": [],
+    ".claude/skills/gitnexus/gitnexus-cli/SKILL.md": [],
+    ".claude/skills/gitnexus/gitnexus-debugging/SKILL.md": [],
+    ".claude/skills/gitnexus/gitnexus-exploring/SKILL.md": [],
+    ".claude/skills/gitnexus/gitnexus-guide/SKILL.md": [],
+    ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md": [],
+    ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md": [],
+    ".env.example": [],
+    ".impeccable.md": [],
+    ".myos-writer-patches/writer-1787555349515-03409f.patch": [],
+    ".myos-writer-patches/writer-1787555351568-5c26e3.patch": [],
+    ".pagespeed/history.jsonl": [],
+    ".understandignore": [],
+    "AGENTS.md": [],
+    "atelier.audience-policy.json": [],
+    "atelier.lock.json": [],
+    "atelier.project.json": [],
+    "boundary-policy.v1.json": [],
+    "CLAUDE.md": [],
+    "docs/giveaway-followups.md": [],
+    "docs/giveaways/BACKLOG.md": [],
+    "docs/giveaways/grades/tokens-2026-10-02-r1.md": [],
+    "docs/giveaways/grades/tokens-2026-10-02-r2.md": [],
+    "docs/giveaways/grades/tokens-2026-10-02-r3.md": [],
+    "docs/giveaways/LESSONS.md": [],
+    "docs/giveaways/PROCESS.md": [],
+    "docs/giveaways/USEFULNESS-RUBRIC.md": [],
+    "docs/STRIPE-TRIAL-MECHANICS.md": [],
+    "LESSONS.md": [],
+    "next-env.d.ts": [],
     "next.config.ts": [],
-    "scripts/abandoned-checkout-control.mjs": [
-      "@supabase/supabase-js"
-    ],
+    "package.json": [],
+    "pdf/client-launch-checklist.html": [],
+    "pdf/client-launch-checklist.html.kg.json": [],
+    "pdf/cross-cli-compatibility-routing-guide.html": [],
+    "pdf/cross-cli-compatibility-routing-guide.html.kg.json": [],
+    "pdf/render-client-launch-checklist.js": [],
+    "pdf/render-cross-cli-compatibility-routing-guide.js": [],
+    "pdf/whatsapp-receptionist-guide.html": [],
+    "postcss.config.mjs": [],
+    "public/2x-with-ai-playbook.html": [],
+    "public/2x-with-ai-playbook.html.kg.json": [],
+    "public/ai-os-architecture.html": [],
+    "public/ai-os-architecture.html.kg.json": [],
+    "public/automation-audit-sample.html": [],
+    "public/automation-audit-sample.html.kg.json": [],
+    "public/client-launch-checklist.pdf.kg.json": [],
+    "public/coach-kit-onboarding-matrix.html": [],
+    "public/coach-kit-onboarding-matrix.html.kg.json": [],
+    "public/cross-cli-compatibility-routing-guide.pdf.kg.json": [],
+    "public/desk-pet-prompt.txt": [],
+    "public/docs/jill-linkedin-cleanup-sop.md": [],
+    "public/downloads/allsorted-crm-module-v1.5.zip.sha256": [],
+    "public/downloads/joes-linkedin-kit-v1.0.zip.sha256": [],
+    "public/downloads/joes-salesman-v1.0.zip.sha256": [],
+    "public/downloads/maccleaner-installer.sh": [],
+    "public/giveaways/cross-cli-compatibility-routing-prompt.md": [],
+    "public/hated-task-prompts.html": [],
+    "public/hated-task-prompts.html.kg.json": [],
+    "public/images/participants/beata-fuller.webp": [],
+    "public/images/participants/david-cook.webp": [],
+    "public/images/participants/gianluca-balducci.webp": [],
+    "public/images/participants/jessica-saunders.webp": [],
+    "public/images/participants/jonathan-marshall.webp": [],
+    "public/images/participants/naomi-galinski.webp": [],
+    "public/images/participants/racheli-avruch.webp": [],
+    "public/images/participants/sofia-konstantinidou.webp": [],
+    "public/images/participants/vonetta-taylor.webp": [],
+    "public/images/participants/wesley-jones.webp": [],
+    "public/joe-che-claude.md": [],
+    "public/Lead-Machine-Quick-Start.pdf.kg.json": [],
+    "public/lead-magnet.html": [],
+    "public/lead-magnet.html.kg.json": [],
+    "public/llms.txt": [],
+    "public/mhq-consent.js": [],
+    "public/posture-coach-prompt.txt": [],
+    "public/unlearning-success.pdf.kg.json": [],
+    "repo-access.v1.json": [],
+    "scripts/abandoned-checkout-control.mjs": [],
     "scripts/abandoned-checkout-run.ts": [
-      "../src/lib/abandoned-checkout-followups"
+      "src/lib/abandoned-checkout-followups.ts"
     ],
-    "scripts/backfill-event-registrations.mjs": [
-      "node:crypto",
-      "@supabase/supabase-js",
-      "stripe"
-    ],
+    "scripts/backfill-event-registrations.mjs": [],
     "scripts/estimate-ai-levels.mjs": [
-      "node:fs/promises",
-      "node:os",
-      "node:path",
-      "node:url",
-      "./lib/estimate-ai-level.mjs"
+      "scripts/lib/estimate-ai-level.mjs"
     ],
     "scripts/giveaway-followups.mjs": [
+      "src/lib/email-logo.ts",
       "src/lib/giveaway-followups.ts"
     ],
-    "scripts/send-dinner-tonight-reminder.mjs": [
-      "@supabase/supabase-js"
-    ],
-    "scripts/sync-abandoned-checkout-suppressions.mjs": [
-      "fs",
-      "path",
-      "@supabase/supabase-js"
-    ],
+    "scripts/lib/estimate-ai-level.mjs": [],
+    "scripts/send-dinner-tonight-reminder.mjs": [],
+    "scripts/sync-abandoned-checkout-suppressions.mjs": [],
     "src/app/100-ai/page.tsx": [
-      "@/lib/meta-pixel",
-      "react",
-      "framer-motion"
+      "src/lib/meta-pixel.ts"
     ],
     "src/app/ai-agent-income/AiAgentIncomeCheckoutForm.tsx": [
-      "@/lib/meta-pixel",
-      "react"
+      "src/lib/meta-pixel.ts"
     ],
     "src/app/ai-agent-income/page.tsx": [
-      "next",
-      "./AiAgentIncomeCheckoutForm",
-      "./PromptPackRequestForm",
-      "./PurchaseTracker"
+      "src/app/ai-agent-income/AiAgentIncomeCheckoutForm.tsx",
+      "src/app/ai-agent-income/PromptPackRequestForm.tsx",
+      "src/app/ai-agent-income/PurchaseTracker.tsx"
     ],
-    "src/app/ai-agent-income/PromptPackRequestForm.tsx": [
-      "react"
-    ],
+    "src/app/ai-agent-income/PromptPackRequestForm.tsx": [],
     "src/app/ai-agent-income/PurchaseTracker.tsx": [
-      "react",
-      "@/lib/meta-pixel"
+      "src/lib/meta-pixel.ts"
     ],
+    "src/app/ai-os-architecture/page.tsx": [],
     "src/app/api/ai-agent-income/checkout/route.ts": [
-      "@/lib/meta-consent",
-      "next/server",
-      "@/lib/email-validation",
-      "@/lib/rate-limit",
-      "../stripe"
+      "src/app/api/ai-agent-income/stripe.ts",
+      "src/lib/email-validation.ts",
+      "src/lib/meta-consent.ts",
+      "src/lib/rate-limit.ts"
     ],
     "src/app/api/ai-agent-income/prompt-pack/request/route.ts": [
-      "next/server",
-      "@/lib/ai-agent-income-prompt-pack",
-      "@/lib/email-validation",
-      "@/lib/supabase"
+      "src/lib/ai-agent-income-prompt-pack.ts",
+      "src/lib/email-validation.ts",
+      "src/lib/supabase.ts"
     ],
     "src/app/api/ai-agent-income/prompt-pack/route.ts": [
-      "node:fs/promises",
-      "node:path",
-      "next/server",
-      "@/lib/ai-agent-income-prompt-pack",
-      "@/lib/supabase"
+      "src/lib/ai-agent-income-prompt-pack.ts",
+      "src/lib/supabase.ts"
     ],
-    "src/app/api/ai-agent-income/stripe.ts": [
-      "stripe"
-    ],
+    "src/app/api/ai-agent-income/stripe.ts": [],
     "src/app/api/ai-agent-income/webhook/route.ts": [
-      "next/server",
-      "stripe",
-      "@/lib/supabase",
-      "@/lib/ai-agent-income-prompt-pack",
-      "../stripe"
+      "src/app/api/ai-agent-income/stripe.ts",
+      "src/lib/ai-agent-income-prompt-pack.ts",
+      "src/lib/supabase.ts"
     ],
     "src/app/api/consent/region/route.ts": [
-      "next/server",
-      "@/lib/meta-consent"
+      "src/lib/meta-consent.ts"
     ],
     "src/app/api/events/[slug]/calendar/route.ts": [
-      "next/server",
-      "@/lib/events",
-      "@/lib/calendar"
+      "src/lib/calendar.ts",
+      "src/lib/events.tsx"
     ],
     "src/app/api/events/abandoned-checkout-followups-t12h/route.ts": [
-      "next/server",
-      "crypto",
-      "@/lib/supabase",
-      "@/lib/abandoned-checkout-followups"
+      "src/lib/abandoned-checkout-followups.ts",
+      "src/lib/supabase.ts"
     ],
     "src/app/api/events/abandoned-checkout-followups/route.ts": [
-      "next/server",
-      "crypto",
-      "@/lib/supabase",
-      "@/lib/abandoned-checkout-followups"
+      "src/lib/abandoned-checkout-followups.ts",
+      "src/lib/supabase.ts"
     ],
     "src/app/api/events/cancel/route.ts": [
-      "next/server",
-      "@/lib/event-registration-db",
-      "@/lib/events",
-      "@/lib/event-confirmation-email"
+      "src/lib/event-confirmation-email.ts",
+      "src/lib/event-registration-db.ts",
+      "src/lib/events.tsx"
     ],
     "src/app/api/events/checkout-session/route.ts": [
-      "@/lib/meta-consent",
-      "next/server",
-      "@/lib/registration-profile-token",
-      "@/lib/events",
-      "@/lib/event-confirmation-email",
-      "@/lib/with-timeout",
-      "@/lib/legacy-event-schedule",
-      "@/lib/stripe",
-      "@/lib/event-registration-db",
-      "@/lib/event-capacity",
-      "@/lib/event-registration-flow",
-      "@/lib/event-intake",
-      "@/lib/url-utils",
-      "@/lib/rate-limit",
-      "@/lib/insight-to-fix",
-      "@/lib/event-checkout",
-      "@/lib/stripe-amount",
-      "@/lib/email-validation",
-      "@/lib/event-status"
+      "src/lib/email-validation.ts",
+      "src/lib/event-capacity.ts",
+      "src/lib/event-checkout.ts",
+      "src/lib/event-confirmation-email.ts",
+      "src/lib/event-intake.ts",
+      "src/lib/event-registration-db.ts",
+      "src/lib/event-registration-flow.ts",
+      "src/lib/event-status.ts",
+      "src/lib/events.tsx",
+      "src/lib/insight-to-fix.ts",
+      "src/lib/legacy-event-schedule.ts",
+      "src/lib/meta-consent.ts",
+      "src/lib/rate-limit.ts",
+      "src/lib/registration-profile-token.ts",
+      "src/lib/stripe-amount.ts",
+      "src/lib/stripe.ts",
+      "src/lib/url-utils.ts",
+      "src/lib/with-timeout.ts"
     ],
     "src/app/api/events/finalize-registration/route.ts": [
-      "next/server",
-      "@/lib/events",
-      "@/lib/legacy-event-schedule",
-      "@/lib/insight-to-fix"
+      "src/lib/events.tsx",
+      "src/lib/insight-to-fix.ts",
+      "src/lib/legacy-event-schedule.ts"
     ],
     "src/app/api/events/followups/route.ts": [
-      "next/server",
-      "crypto",
-      "@/lib/events",
-      "@/lib/event-registration-db",
-      "@/lib/email-suppressions",
-      "@/lib/event-followup",
-      "@/lib/supabase"
+      "src/lib/email-suppressions.ts",
+      "src/lib/event-followup.ts",
+      "src/lib/event-registration-db.ts",
+      "src/lib/events.tsx",
+      "src/lib/supabase.ts"
     ],
     "src/app/api/events/location-reminders/route.ts": [
-      "next/server",
-      "crypto",
-      "@/lib/events",
-      "@/lib/event-confirmation-email",
-      "@/lib/legacy-event-schedule",
-      "@/lib/event-registration-db",
-      "@/lib/location-reminder",
-      "@/lib/event-email-ledger",
-      "@/lib/supabase"
+      "src/lib/event-confirmation-email.ts",
+      "src/lib/event-email-ledger.ts",
+      "src/lib/event-registration-db.ts",
+      "src/lib/events.tsx",
+      "src/lib/legacy-event-schedule.ts",
+      "src/lib/location-reminder.ts",
+      "src/lib/supabase.ts"
     ],
     "src/app/api/events/reconcile-registrations/route.ts": [
-      "next/server",
-      "crypto",
-      "stripe",
-      "@/lib/supabase",
-      "@/lib/event-tokens",
-      "@/lib/stripe"
+      "src/lib/event-tokens.ts",
+      "src/lib/stripe.ts",
+      "src/lib/supabase.ts"
     ],
     "src/app/api/events/registration-profile/route.ts": [
-      "next/server",
-      "@/lib/events",
-      "@/lib/email-validation",
-      "@/lib/event-intake",
-      "@/lib/registration-profile-token",
-      "@/lib/event-registration-db"
+      "src/lib/email-validation.ts",
+      "src/lib/event-intake.ts",
+      "src/lib/event-registration-db.ts",
+      "src/lib/events.tsx",
+      "src/lib/registration-profile-token.ts"
     ],
     "src/app/api/events/session-reminders/route.ts": [
-      "next/server",
-      "crypto",
-      "@/lib/events",
-      "@/lib/event-registration-db",
-      "@/lib/event-confirmation-email",
-      "@/lib/session-reminder",
-      "@/lib/supabase"
+      "src/lib/event-confirmation-email.ts",
+      "src/lib/event-registration-db.ts",
+      "src/lib/events.tsx",
+      "src/lib/session-reminder.ts",
+      "src/lib/supabase.ts"
     ],
     "src/app/api/events/validate-promo/route.ts": [
-      "next/server",
-      "@/lib/events",
-      "@/lib/rate-limit"
+      "src/lib/events.tsx",
+      "src/lib/rate-limit.ts"
     ],
     "src/app/api/events/waitlist/join/route.ts": [
-      "next/server",
-      "@/lib/event-registration-db",
-      "@/lib/events",
-      "@/lib/event-confirmation-email",
-      "@/lib/rate-limit",
-      "@/lib/email-validation",
-      "@/lib/event-status"
+      "src/lib/email-validation.ts",
+      "src/lib/event-confirmation-email.ts",
+      "src/lib/event-registration-db.ts",
+      "src/lib/event-status.ts",
+      "src/lib/events.tsx",
+      "src/lib/rate-limit.ts"
     ],
     "src/app/api/events/waitlist/notify/route.ts": [
-      "next/server",
-      "crypto",
-      "@/lib/events",
-      "@/lib/event-registration-db",
-      "@/lib/event-confirmation-email",
-      "@/lib/waitlist-notify-windows",
-      "@/lib/supabase"
+      "src/lib/event-confirmation-email.ts",
+      "src/lib/event-registration-db.ts",
+      "src/lib/events.tsx",
+      "src/lib/supabase.ts",
+      "src/lib/waitlist-notify-windows.ts"
     ],
     "src/app/api/events/waitlist/remove/route.ts": [
-      "next/server",
-      "@/lib/event-registration-db"
+      "src/lib/event-registration-db.ts"
     ],
-    "src/app/api/illy-auth/route.ts": [
-      "node:crypto",
-      "next/server"
-    ],
-    "src/app/api/jill-auth/route.ts": [
-      "node:crypto",
-      "next/server"
-    ],
+    "src/app/api/illy-auth/route.ts": [],
+    "src/app/api/jill-auth/route.ts": [],
     "src/app/api/lead-magnet/route.ts": [
-      "next/server",
-      "@supabase/supabase-js",
-      "@/lib/rate-limit",
-      "@/lib/insight-to-fix",
-      "@/lib/list-unsubscribe",
-      "@/lib/email-suppressions",
-      "@/lib/lead-magnets",
-      "@/lib/utm",
-      "@/lib/html-to-text",
-      "@/lib/speak-human-email",
-      "@/lib/free-ai-tool-email",
-      "@/lib/free-ai-tools-hub-email",
-      "@/lib/whatsapp-agent-email",
-      "@/lib/free-ai-tools",
-      "@/lib/quiz-giveaway-email",
-      "@/lib/giveaway-followups",
-      "@/lib/email-logo",
-      "@/lib/generic-giveaway-email"
+      "src/lib/email-logo.ts",
+      "src/lib/email-suppressions.ts",
+      "src/lib/free-ai-tool-email.ts",
+      "src/lib/free-ai-tools-hub-email.ts",
+      "src/lib/free-ai-tools.ts",
+      "src/lib/generic-giveaway-email.ts",
+      "src/lib/giveaway-followups.ts",
+      "src/lib/html-to-text.ts",
+      "src/lib/insight-to-fix.ts",
+      "src/lib/lead-magnets.ts",
+      "src/lib/list-unsubscribe.ts",
+      "src/lib/quiz-giveaway-email.ts",
+      "src/lib/rate-limit.ts",
+      "src/lib/speak-human-email.ts",
+      "src/lib/utm.ts",
+      "src/lib/whatsapp-agent-email.ts"
     ],
-    "src/app/api/lead-magnets/claudemd/route 2.ts": [
-      "next/server",
-      "@supabase/supabase-js"
-    ],
+    "src/app/api/lead-magnets/claudemd/route 2.ts": [],
     "src/app/api/lead-magnets/claudemd/route.ts": [
-      "next/server",
-      "@supabase/supabase-js",
-      "@/lib/rate-limit",
-      "@/lib/list-unsubscribe",
-      "@/lib/email-suppressions",
-      "@/lib/utm"
+      "src/lib/email-suppressions.ts",
+      "src/lib/list-unsubscribe.ts",
+      "src/lib/rate-limit.ts",
+      "src/lib/utm.ts"
     ],
     "src/app/api/lead-magnets/passive-income-100/route.ts": [
-      "next/server",
-      "@supabase/supabase-js",
-      "@/lib/rate-limit",
-      "@/lib/list-unsubscribe",
-      "@/lib/email-suppressions"
+      "src/lib/email-suppressions.ts",
+      "src/lib/list-unsubscribe.ts",
+      "src/lib/rate-limit.ts"
     ],
     "src/app/api/meta/purchase/route.ts": [
-      "next/server",
-      "@/lib/rate-limit",
-      "@/lib/stripe",
-      "@/app/api/ai-agent-income/stripe",
-      "@/lib/meta-consent"
+      "src/app/api/ai-agent-income/stripe.ts",
+      "src/lib/meta-consent.ts",
+      "src/lib/rate-limit.ts",
+      "src/lib/stripe.ts"
     ],
     "src/app/api/stripe/webhook/route.ts": [
-      "next/server",
-      "stripe",
-      "@/lib/events",
-      "@/lib/legacy-event-schedule",
-      "@/lib/stripe",
-      "@/lib/insight-to-fix",
-      "@/lib/event-capacity"
+      "src/lib/event-capacity.ts",
+      "src/lib/events.tsx",
+      "src/lib/insight-to-fix.ts",
+      "src/lib/legacy-event-schedule.ts",
+      "src/lib/stripe.ts"
     ],
     "src/app/api/subscribe/route.ts": [
-      "next/server",
-      "@supabase/supabase-js",
-      "@/lib/subscribe",
-      "@/lib/resend-sender",
-      "@/lib/email-suppressions"
+      "src/lib/email-suppressions.ts",
+      "src/lib/resend-sender.ts",
+      "src/lib/subscribe.ts"
     ],
     "src/app/api/unsubscribe/route.ts": [
-      "next/server",
-      "@/lib/list-unsubscribe",
-      "@/lib/email-suppressions"
+      "src/lib/email-suppressions.ts",
+      "src/lib/list-unsubscribe.ts"
     ],
     "src/app/bonus-workshops/page.tsx": [
-      "@/components/TabNav"
+      "src/components/TabNav.tsx"
     ],
     "src/app/bonus/auto-lead-magnet/page.tsx": [
-      "next/link",
-      "@/components/CodeBlock"
+      "src/components/CodeBlock.tsx"
     ],
     "src/app/events/[slug]/page.tsx": [
-      "next",
-      "next/navigation",
-      "@/components/events/EventPageView",
-      "@/lib/image-size",
-      "@/lib/events",
-      "@/lib/stripe"
+      "src/components/events/EventPageView.tsx",
+      "src/lib/events.tsx",
+      "src/lib/image-size.ts",
+      "src/lib/stripe.ts"
     ],
     "src/app/events/[slug]/setup/page.tsx": [
-      "next",
-      "next/link",
-      "next/navigation",
-      "@/lib/events"
+      "src/lib/events.tsx"
     ],
     "src/app/events/page.tsx": [
-      "next/image",
-      "next/link",
-      "@/components/Reveal",
-      "@/lib/events"
+      "src/components/Reveal.tsx",
+      "src/lib/events.tsx"
     ],
-    "src/app/giveaways/agent-infrastructure/layout.tsx": [
-      "react",
-      "next"
+    "src/app/giveaways/agent-infrastructure/layout.tsx": [],
+    "src/app/giveaways/agent-infrastructure/pack.ts": [
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/agent-infrastructure/page.tsx": [
+      "src/app/giveaways/agent-infrastructure/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/ai-behavior-quiz/pack.ts": [
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/ai-behavior-quiz/page.tsx": [
+      "src/app/giveaways/ai-behavior-quiz/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/ai-levels-quiz/pack.ts": [
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/ai-levels-quiz/page.tsx": [
+      "src/app/giveaways/ai-levels-quiz/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/all-sorted-overview/layout.tsx": [],
+    "src/app/giveaways/all-sorted-overview/page.tsx": [
+      "src/components/giveaways/GiveawayAutoModal.tsx",
+      "src/components/giveaways/GiveawayEmailModal.tsx",
+      "src/components/sections/MastermindReactionsSection.tsx"
+    ],
+    "src/app/giveaways/anthropic-safety-checklist/layout.tsx": [],
+    "src/app/giveaways/anthropic-safety-checklist/pack.ts": [
+      "src/app/giveaways/anthropic-safety-checklist/prompts.ts",
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/anthropic-safety-checklist/page.tsx": [
+      "src/app/giveaways/anthropic-safety-checklist/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/anthropic-safety-checklist/prompts.ts": [],
+    "src/app/giveaways/benchmark/layout.tsx": [],
+    "src/app/giveaways/benchmark/pack.ts": [
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/benchmark/page.tsx": [
+      "src/app/giveaways/benchmark/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/business-builder-quiz/BusinessBuilderQuiz.tsx": [
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/business-builder-quiz/layout.tsx": [],
+    "src/app/giveaways/business-builder-quiz/pack.ts": [
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/business-builder-quiz/page.tsx": [
+      "src/app/giveaways/business-builder-quiz/BusinessBuilderQuiz.tsx",
+      "src/app/giveaways/business-builder-quiz/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
     ],
     "src/app/giveaways/chat-to-flowchart/layout.tsx": [],
-    "src/app/giveaways/chat-to-flowchart/pack.ts": [],
-    "src/app/giveaways/chat-to-flowchart/page.tsx": [
-      "src/app/giveaways/chat-to-flowchart/pack.ts"
+    "src/app/giveaways/chat-to-flowchart/pack.ts": [
+      "src/lib/pack-page.ts"
     ],
+    "src/app/giveaways/chat-to-flowchart/page.tsx": [
+      "src/app/giveaways/chat-to-flowchart/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/claude-md/layout.tsx": [],
+    "src/app/giveaways/claude-md/pack.ts": [
+      "src/app/giveaways/claude-md/prompts.ts",
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/claude-md/page.tsx": [
+      "src/app/giveaways/claude-md/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/claude-md/prompts.ts": [],
+    "src/app/giveaways/client-launch-checklist/layout.tsx": [],
+    "src/app/giveaways/client-launch-checklist/pack.ts": [
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/client-launch-checklist/page.tsx": [
+      "src/app/giveaways/client-launch-checklist/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/compare/layout.tsx": [],
+    "src/app/giveaways/compare/pack.ts": [
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/compare/page.tsx": [
+      "src/app/giveaways/compare/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/cost-stack/CostStackCalculator.tsx": [
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/cost-stack/layout.tsx": [],
+    "src/app/giveaways/cost-stack/pack.ts": [
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/cost-stack/page.tsx": [
+      "src/app/giveaways/cost-stack/CostStackCalculator.tsx",
+      "src/app/giveaways/cost-stack/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/cross-cli-compatibility-routing/content.ts": [],
+    "src/app/giveaways/cross-cli-compatibility-routing/layout.tsx": [],
+    "src/app/giveaways/cross-cli-compatibility-routing/pack.ts": [
+      "src/app/giveaways/cross-cli-compatibility-routing/content.ts",
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/cross-cli-compatibility-routing/page.tsx": [
+      "src/app/giveaways/cross-cli-compatibility-routing/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/cult-brand-playbook/pack.ts": [
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/cult-brand-playbook/page.tsx": [
+      "src/app/giveaways/cult-brand-playbook/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/desk-pet/layout.tsx": [],
+    "src/app/giveaways/desk-pet/pack.ts": [
+      "src/app/giveaways/desk-pet/prompt.ts",
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/desk-pet/page.tsx": [
+      "src/app/giveaways/desk-pet/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/desk-pet/prompt.ts": [],
+    "src/app/giveaways/fable-worth-it-audit/layout.tsx": [],
+    "src/app/giveaways/fable-worth-it-audit/pack.ts": [
+      "src/app/giveaways/fable-worth-it-audit/prompts.ts",
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/fable-worth-it-audit/page.tsx": [
+      "src/app/giveaways/fable-worth-it-audit/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/fable-worth-it-audit/prompts.ts": [],
     "src/app/giveaways/film/layout.tsx": [],
     "src/app/giveaways/film/pack.ts": [
-      "src/app/giveaways/film/prompt.ts"
+      "src/app/giveaways/film/prompt.ts",
+      "src/lib/pack-page.ts"
     ],
     "src/app/giveaways/film/page.tsx": [
-      "src/app/giveaways/film/pack.ts"
+      "src/app/giveaways/film/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
     ],
     "src/app/giveaways/film/prompt.ts": [],
+    "src/app/giveaways/free-ai-anythingllm/layout.tsx": [],
+    "src/app/giveaways/free-ai-anythingllm/page.tsx": [
+      "src/components/giveaways/PackPage.tsx",
+      "src/lib/free-ai-tool-pack.ts"
+    ],
+    "src/app/giveaways/free-ai-browser-use/layout.tsx": [],
+    "src/app/giveaways/free-ai-browser-use/page.tsx": [
+      "src/components/giveaways/PackPage.tsx",
+      "src/lib/free-ai-tool-pack.ts"
+    ],
+    "src/app/giveaways/free-ai-buzz/layout.tsx": [],
+    "src/app/giveaways/free-ai-buzz/page.tsx": [
+      "src/components/giveaways/PackPage.tsx",
+      "src/lib/free-ai-tool-pack.ts"
+    ],
+    "src/app/giveaways/free-ai-cal-com/layout.tsx": [],
+    "src/app/giveaways/free-ai-cal-com/page.tsx": [
+      "src/components/giveaways/PackPage.tsx",
+      "src/lib/free-ai-tool-pack.ts"
+    ],
+    "src/app/giveaways/free-ai-claude-skills/layout.tsx": [],
+    "src/app/giveaways/free-ai-claude-skills/page.tsx": [
+      "src/components/giveaways/PackPage.tsx",
+      "src/lib/free-ai-tool-pack.ts"
+    ],
     "src/app/giveaways/free-ai-concat/layout.tsx": [],
-    "src/app/giveaways/free-ai-concat/page.tsx": [],
+    "src/app/giveaways/free-ai-concat/page.tsx": [
+      "src/components/giveaways/PackPage.tsx",
+      "src/lib/free-ai-tool-pack.ts"
+    ],
+    "src/app/giveaways/free-ai-documenso/layout.tsx": [],
+    "src/app/giveaways/free-ai-documenso/page.tsx": [
+      "src/components/giveaways/PackPage.tsx",
+      "src/lib/free-ai-tool-pack.ts"
+    ],
+    "src/app/giveaways/free-ai-excalidraw/layout.tsx": [],
+    "src/app/giveaways/free-ai-excalidraw/page.tsx": [
+      "src/components/giveaways/PackPage.tsx",
+      "src/lib/free-ai-tool-pack.ts"
+    ],
+    "src/app/giveaways/free-ai-firecrawl/layout.tsx": [],
+    "src/app/giveaways/free-ai-firecrawl/page.tsx": [
+      "src/components/giveaways/PackPage.tsx",
+      "src/lib/free-ai-tool-pack.ts"
+    ],
+    "src/app/giveaways/free-ai-handy/layout.tsx": [],
+    "src/app/giveaways/free-ai-handy/page.tsx": [
+      "src/components/giveaways/PackPage.tsx",
+      "src/lib/free-ai-tool-pack.ts"
+    ],
+    "src/app/giveaways/free-ai-jan/layout.tsx": [],
+    "src/app/giveaways/free-ai-jan/page.tsx": [
+      "src/components/giveaways/PackPage.tsx",
+      "src/lib/free-ai-tool-pack.ts"
+    ],
+    "src/app/giveaways/free-ai-meetily/layout.tsx": [],
+    "src/app/giveaways/free-ai-meetily/page.tsx": [
+      "src/components/giveaways/PackPage.tsx",
+      "src/lib/free-ai-tool-pack.ts"
+    ],
+    "src/app/giveaways/free-ai-mempalace/layout.tsx": [],
+    "src/app/giveaways/free-ai-mempalace/page.tsx": [
+      "src/components/giveaways/PackPage.tsx",
+      "src/lib/free-ai-tool-pack.ts"
+    ],
     "src/app/giveaways/free-ai-salesman/layout.tsx": [],
-    "src/app/giveaways/free-ai-salesman/page.tsx": [],
+    "src/app/giveaways/free-ai-salesman/page.tsx": [
+      "src/components/giveaways/PackPage.tsx",
+      "src/lib/free-ai-tool-pack.ts"
+    ],
+    "src/app/giveaways/free-ai-stirling-pdf/layout.tsx": [],
+    "src/app/giveaways/free-ai-stirling-pdf/page.tsx": [
+      "src/components/giveaways/PackPage.tsx",
+      "src/lib/free-ai-tool-pack.ts"
+    ],
+    "src/app/giveaways/free-ai-tools/layout.tsx": [],
+    "src/app/giveaways/free-ai-tools/pack.ts": [
+      "src/lib/free-ai-tools-hub.ts",
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/free-ai-tools/page.tsx": [
+      "src/app/giveaways/free-ai-tools/pack.ts",
+      "src/components/giveaways/PackPage.tsx",
+      "src/lib/free-ai-tools-hub.ts"
+    ],
+    "src/app/giveaways/free-ai-ui-ux-pro-max/layout.tsx": [],
+    "src/app/giveaways/free-ai-ui-ux-pro-max/page.tsx": [
+      "src/components/giveaways/PackPage.tsx",
+      "src/lib/free-ai-tool-pack.ts"
+    ],
+    "src/app/giveaways/free-ai-upscayl/layout.tsx": [],
+    "src/app/giveaways/free-ai-upscayl/page.tsx": [
+      "src/components/giveaways/PackPage.tsx",
+      "src/lib/free-ai-tool-pack.ts"
+    ],
+    "src/app/giveaways/free-ai-voicestudio/layout.tsx": [],
+    "src/app/giveaways/free-ai-voicestudio/page.tsx": [
+      "src/components/giveaways/PackPage.tsx",
+      "src/lib/free-ai-tool-pack.ts"
+    ],
+    "src/app/giveaways/geometry-dash-fun-build/game.ts": [],
+    "src/app/giveaways/geometry-dash-fun-build/layout.tsx": [],
+    "src/app/giveaways/geometry-dash-fun-build/pack.ts": [
+      "src/app/giveaways/geometry-dash-fun-build/game.ts",
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/geometry-dash-fun-build/page.tsx": [
+      "src/app/giveaways/geometry-dash-fun-build/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/guardog/layout.tsx": [],
+    "src/app/giveaways/guardog/pack.ts": [
+      "src/app/giveaways/guardog/prompts.ts",
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/guardog/page.tsx": [
+      "src/app/giveaways/guardog/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/guardog/prompts.ts": [],
+    "src/app/giveaways/hated-task-prompts/layout.tsx": [],
+    "src/app/giveaways/hated-task-prompts/pack.ts": [
+      "src/app/giveaways/hated-task-prompts/prompts.ts",
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/hated-task-prompts/page.tsx": [
+      "src/app/giveaways/hated-task-prompts/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/hated-task-prompts/prompts.ts": [
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/hooklab/content.ts": [],
+    "src/app/giveaways/hooklab/layout.tsx": [],
+    "src/app/giveaways/hooklab/pack.ts": [
+      "src/app/giveaways/hooklab/content.ts",
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/hooklab/page.tsx": [
+      "src/app/giveaways/hooklab/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/human/layout.tsx": [],
+    "src/app/giveaways/human/page.tsx": [],
+    "src/app/giveaways/ig-settings/layout.tsx": [],
+    "src/app/giveaways/ig-settings/pack.ts": [
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/ig-settings/page.tsx": [
+      "src/app/giveaways/ig-settings/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/layout.tsx": [
+      "src/components/giveaways/GiveawayCopyEmailGate.tsx"
+    ],
+    "src/app/giveaways/lead-machine/layout.tsx": [],
+    "src/app/giveaways/lead-machine/pack.ts": [
+      "src/app/giveaways/lead-machine/prompt.ts",
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/lead-machine/page.tsx": [
+      "src/app/giveaways/lead-machine/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/lead-machine/prompt.ts": [],
+    "src/app/giveaways/lead-magnet/layout.tsx": [],
+    "src/app/giveaways/lead-magnet/pack.ts": [
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/lead-magnet/page.tsx": [
+      "src/app/giveaways/lead-magnet/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
     "src/app/giveaways/linkedin-kit/layout.tsx": [],
     "src/app/giveaways/linkedin-kit/pack.ts": [
-      "src/app/giveaways/linkedin-kit/prompt.ts"
+      "src/app/giveaways/linkedin-kit/prompt.ts",
+      "src/lib/pack-page.ts"
     ],
     "src/app/giveaways/linkedin-kit/page.tsx": [
-      "src/app/giveaways/linkedin-kit/pack.ts"
+      "src/app/giveaways/linkedin-kit/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
     ],
     "src/app/giveaways/linkedin-kit/prompt.ts": [],
-    "src/app/sitemap.ts": [],
-    "src/lib/free-ai-tools.ts": [],
-    "src/lib/generic-giveaway-email.ts": [],
-    "src/lib/giveaways.ts": [],
-    "tests/free-ai-tools.test.ts": [
-      "src/lib/free-ai-tools.ts",
+    "src/app/giveaways/logo-maker-guide/layout.tsx": [],
+    "src/app/giveaways/logo-maker-guide/pack.ts": [
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/logo-maker-guide/page.tsx": [
+      "src/app/giveaways/logo-maker-guide/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/maccleaner/layout.tsx": [],
+    "src/app/giveaways/maccleaner/pack.ts": [
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/maccleaner/page.tsx": [
+      "src/app/giveaways/maccleaner/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/page.tsx": [
+      "src/components/Reveal.tsx",
+      "src/components/StaggerList.tsx",
+      "src/components/TabNav.tsx",
       "src/lib/giveaways.ts"
+    ],
+    "src/app/giveaways/posture-coach/layout.tsx": [],
+    "src/app/giveaways/posture-coach/pack.ts": [
+      "src/app/giveaways/posture-coach/prompt.ts",
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/posture-coach/page.tsx": [
+      "src/app/giveaways/posture-coach/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/posture-coach/prompt.ts": [],
+    "src/app/giveaways/ray-dalio-council/layout.tsx": [],
+    "src/app/giveaways/ray-dalio-council/pack.ts": [
+      "src/app/giveaways/ray-dalio-council/prompts.ts",
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/ray-dalio-council/page.tsx": [
+      "src/app/giveaways/ray-dalio-council/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/ray-dalio-council/prompts.ts": [],
+    "src/app/giveaways/speak-human/layout.tsx": [],
+    "src/app/giveaways/speak-human/pack.ts": [
+      "src/app/giveaways/speak-human/prompts.ts",
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/speak-human/page.tsx": [
+      "src/app/giveaways/speak-human/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/speak-human/prompts.ts": [],
+    "src/app/giveaways/squarespace-escape/pack.ts": [
+      "src/app/giveaways/squarespace-escape/prompts.ts",
+      "src/lib/claude-links.ts",
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/squarespace-escape/page.tsx": [
+      "src/app/giveaways/squarespace-escape/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/squarespace-escape/prompts.ts": [],
+    "src/app/giveaways/terminal-to-claude-desktop/layout.tsx": [],
+    "src/app/giveaways/terminal-to-claude-desktop/pack.ts": [
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/terminal-to-claude-desktop/page.tsx": [
+      "src/app/giveaways/terminal-to-claude-desktop/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/tokens/layout.tsx": [],
+    "src/app/giveaways/tokens/pack.ts": [
+      "src/app/giveaways/tokens/prompts.ts",
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/tokens/page.tsx": [
+      "src/app/giveaways/tokens/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/tokens/prompts.ts": [],
+    "src/app/giveaways/video-editor/layout.tsx": [],
+    "src/app/giveaways/video-editor/pack.ts": [
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/video-editor/page.tsx": [
+      "src/app/giveaways/video-editor/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/viral-hooks/layout.tsx": [],
+    "src/app/giveaways/viral-hooks/pack.ts": [
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/viral-hooks/page.tsx": [
+      "src/app/giveaways/viral-hooks/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/web-design-arsenal/layout.tsx": [],
+    "src/app/giveaways/web-design-arsenal/pack.ts": [
+      "src/app/giveaways/web-design-arsenal/prompts.ts",
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/web-design-arsenal/page.tsx": [
+      "src/app/giveaways/web-design-arsenal/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/web-design-arsenal/prompts.ts": [],
+    "src/app/giveaways/whatsapp-agent/layout.tsx": [],
+    "src/app/giveaways/whatsapp-agent/pack.ts": [
+      "src/app/giveaways/whatsapp-agent/prompt.ts",
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/whatsapp-agent/page.tsx": [
+      "src/app/giveaways/whatsapp-agent/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
+    "src/app/giveaways/whatsapp-agent/prompt.ts": [],
+    "src/app/globals.css": [],
+    "src/app/illy/content.ts": [],
+    "src/app/illy/page.tsx": [
+      "src/app/illy/content.ts"
+    ],
+    "src/app/jill/content.ts": [],
+    "src/app/jill/page.tsx": [
+      "src/app/jill/content.ts"
+    ],
+    "src/app/layout.tsx": [
+      "src/app/globals.css",
+      "src/components/consent/MetaPixelConsent.tsx",
+      "src/components/SiteChrome.tsx"
+    ],
+    "src/app/lead-magnets/layout.tsx": [],
+    "src/app/lead-magnets/ultimate-claudemd/layout.tsx": [],
+    "src/app/lead-magnets/ultimate-claudemd/page.tsx": [
+      "src/lib/meta-pixel.ts"
+    ],
+    "src/app/page.tsx": [
+      "src/components/Reveal.tsx",
+      "src/components/SessionCard.tsx",
+      "src/components/StaggerList.tsx",
+      "src/components/TabNav.tsx",
+      "src/lib/sessions.ts"
+    ],
+    "src/app/resource-vault/automated-ghost-computer-use/page.tsx": [
+      "src/components/CodeBlock.tsx",
+      "src/components/ProTip.tsx",
+      "src/components/StepCard.tsx"
+    ],
+    "src/app/resource-vault/connecting-to-google-sheets/page.tsx": [
+      "src/components/CodeBlock.tsx",
+      "src/components/ProTip.tsx",
+      "src/components/StepCard.tsx"
+    ],
+    "src/app/resource-vault/connecting-to-xero/page.tsx": [
+      "src/components/CodeBlock.tsx",
+      "src/components/ProTip.tsx",
+      "src/components/ScreenshotCard.tsx",
+      "src/components/StepCard.tsx"
+    ],
+    "src/app/resource-vault/eric-investor-pipeline/page.tsx": [
+      "src/components/CodeBlock.tsx",
+      "src/components/ProTip.tsx",
+      "src/components/StepCard.tsx"
+    ],
+    "src/app/resource-vault/how-to-stand-out-in-the-age-of-ai/page.tsx": [
+      "src/components/TianaSessionFooter.tsx",
+      "src/content/tiana-ai-positioning-workshop.tsx"
+    ],
+    "src/app/resource-vault/page.tsx": [
+      "src/components/TabNav.tsx"
+    ],
+    "src/app/resource-vault/reza-website-control/page.tsx": [
+      "src/components/CodeBlock.tsx",
+      "src/components/ProTip.tsx",
+      "src/components/StepCard.tsx"
+    ],
+    "src/app/resource-vault/wordpress-api/page.tsx": [
+      "src/components/CodeBlock.tsx",
+      "src/components/ProTip.tsx",
+      "src/components/StepCard.tsx",
+      "src/components/StickyVideoPlayer.tsx"
+    ],
+    "src/app/robots.ts": [],
+    "src/app/session/[slug]/bonus/page 2.tsx": [
+      "src/content/session-1-bonus.tsx",
+      "src/lib/sessions.ts"
+    ],
+    "src/app/session/[slug]/bonus/page.tsx": [
+      "src/content/session-1-bonus.tsx",
+      "src/lib/sessions.ts"
+    ],
+    "src/app/session/[slug]/guide-brain/page.tsx": [
+      "src/content/session-4-guide.tsx",
+      "src/lib/sessions.ts"
+    ],
+    "src/app/session/[slug]/guide/page.tsx": [
+      "src/content/session-1-guide.tsx",
+      "src/content/session-2-guide.tsx",
+      "src/content/session-3-guide.tsx",
+      "src/content/session-6-guide.tsx",
+      "src/content/session-7-guide.tsx",
+      "src/lib/locks.ts",
+      "src/lib/sessions.ts"
+    ],
+    "src/app/session/[slug]/page.tsx": [
+      "src/components/Reveal.tsx",
+      "src/lib/locks.ts",
+      "src/lib/sessions.ts"
+    ],
+    "src/app/session/[slug]/prep/page.tsx": [
+      "src/content/session-1-prep.tsx",
+      "src/content/session-2-prep.tsx",
+      "src/content/session-3-prep.tsx",
+      "src/content/session-5-prep.tsx",
+      "src/content/session-6-prep.tsx",
+      "src/content/session-7-prep.tsx",
+      "src/lib/sessions.ts"
+    ],
+    "src/app/session/1/prep-codex/page 2.tsx": [
+      "src/content/session-1-prep-codex.tsx"
+    ],
+    "src/app/session/1/prep-codex/page.tsx": [
+      "src/content/session-1-prep-codex.tsx"
+    ],
+    "src/app/session/10/instagram/page.tsx": [
+      "src/content/session-10-instagram-agent.tsx"
+    ],
+    "src/app/session/2/auto-lead-magnet/page 2.tsx": [
+      "src/components/CodeBlock.tsx"
+    ],
+    "src/app/session/2/auto-lead-magnet/page.tsx": [
+      "src/components/CodeBlock.tsx"
+    ],
+    "src/app/session/2/guide-codex/page.tsx": [
+      "src/content/session-2-guide-codex.tsx"
+    ],
+    "src/app/session/3/custom-domain/page.tsx": [
+      "src/components/CodeBlock.tsx",
+      "src/components/ProTip.tsx",
+      "src/components/StepCard.tsx"
+    ],
+    "src/app/session/3/homework/page.tsx": [
+      "src/components/CodeBlock.tsx",
+      "src/components/ProTip.tsx",
+      "src/components/StepCard.tsx",
+      "src/components/StickyVideoPlayer.tsx"
+    ],
+    "src/app/session/4/custom-domain/page.tsx": [
+      "src/components/CodeBlock.tsx",
+      "src/components/ProTip.tsx",
+      "src/components/StepCard.tsx"
+    ],
+    "src/app/session/4/guide/page.tsx": [
+      "src/content/session-4-guide.tsx"
+    ],
+    "src/app/session/4/homework/page.tsx": [
+      "src/components/CodeBlock.tsx",
+      "src/components/ProTip.tsx",
+      "src/components/StepCard.tsx",
+      "src/components/StickyVideoPlayer.tsx"
+    ],
+    "src/app/session/4/wrapup/page 2.tsx": [
+      "src/components/ParticipantCarousel.tsx",
+      "src/components/Reveal.tsx",
+      "src/components/StaggerList.tsx",
+      "src/components/StickyVideoPlayer.tsx"
+    ],
+    "src/app/session/4/wrapup/page.tsx": [
+      "src/components/ParticipantCarousel.tsx",
+      "src/components/Reveal.tsx",
+      "src/components/StaggerList.tsx",
+      "src/components/StickyVideoPlayer.tsx"
+    ],
+    "src/app/session/5/hook-writer/page 2.tsx": [
+      "src/components/CodeBlock.tsx",
+      "src/lib/copyWithConfetti.ts"
+    ],
+    "src/app/session/5/hook-writer/page.tsx": [
+      "src/components/CodeBlock.tsx"
+    ],
+    "src/app/session/5/prep-hooks/page 2.tsx": [
+      "src/content/session-4-prep.tsx"
+    ],
+    "src/app/session/5/prep-hooks/page.tsx": [
+      "src/content/session-4-prep.tsx"
+    ],
+    "src/app/session/5/wrapup/page.tsx": [
+      "src/components/ParticipantCarousel.tsx",
+      "src/components/Reveal.tsx",
+      "src/components/StaggerList.tsx",
+      "src/components/StickyVideoPlayer.tsx"
+    ],
+    "src/app/session/6/hook-writer/page.tsx": [
+      "src/components/CodeBlock.tsx",
+      "src/lib/copyWithConfetti.ts"
+    ],
+    "src/app/session/6/prep-hooks/page.tsx": [
+      "src/content/session-4-prep.tsx"
+    ],
+    "src/app/session/7/descript/page 2.tsx": [
+      "src/content/session-7-descript-guide.tsx"
+    ],
+    "src/app/session/7/descript/page.tsx": [
+      "src/content/session-7-descript-guide.tsx"
+    ],
+    "src/app/session/7/guide/page.tsx": [
+      "src/content/session-7-guide.tsx"
+    ],
+    "src/app/session/7/prep/page 2.tsx": [
+      "src/content/session-7-prep.tsx"
+    ],
+    "src/app/session/7/prep/page.tsx": [
+      "src/content/session-7-prep.tsx"
+    ],
+    "src/app/session/8/guide/page.tsx": [
+      "src/content/session-8-guide.tsx"
+    ],
+    "src/app/session/8/prep/page.tsx": [
+      "src/content/session-8-prep.tsx"
+    ],
+    "src/app/session/9/guide/page.tsx": [
+      "src/content/session-9-guide.tsx"
+    ],
+    "src/app/sitemap.ts": [
+      "src/lib/free-ai-tools.ts"
+    ],
+    "src/components/CodeBlock.tsx": [
+      "src/lib/copyWithConfetti.ts"
+    ],
+    "src/components/consent/MetaPixelConsent.tsx": [
+      "src/lib/meta-consent.ts",
+      "src/lib/meta-pixel.ts"
+    ],
+    "src/components/events/ask-an-ai-expert-quotes.ts": [],
+    "src/components/events/AskAnAiExpertQuoteStrip.tsx": [
+      "src/components/events/ask-an-ai-expert-quotes.ts"
+    ],
+    "src/components/events/EventMediaVideo.tsx": [],
+    "src/components/events/EventPageView.tsx": [
+      "src/components/events/AskAnAiExpertQuoteStrip.tsx",
+      "src/components/events/EventMediaVideo.tsx",
+      "src/components/events/EventRegistrationSection.tsx",
+      "src/components/events/HeroVideo.tsx",
+      "src/components/events/joechella/FestivalHero.tsx",
+      "src/components/events/joechella/FestivalMotion.tsx",
+      "src/components/events/joechella/ProgramTimeline.tsx",
+      "src/components/events/joechella/VenueGallery.tsx",
+      "src/components/events/ScrollToRegisterButton.tsx",
+      "src/components/Reveal.tsx",
+      "src/lib/calendar.ts",
+      "src/lib/event-status.ts",
+      "src/lib/events.tsx"
+    ],
+    "src/components/events/EventRegistrationSection.tsx": [
+      "src/components/events/WaitlistJoinForm.tsx",
+      "src/data/ai-levels-signup.ts",
+      "src/lib/celebrate.ts",
+      "src/lib/email-validation.ts",
+      "src/lib/event-intake.ts",
+      "src/lib/event-registration-flow.ts",
+      "src/lib/events.tsx",
+      "src/lib/meta-pixel.ts"
+    ],
+    "src/components/events/HeroVideo.tsx": [
+      "src/components/events/EventMediaVideo.tsx"
+    ],
+    "src/components/events/joechella/AmbientHeroVideo.tsx": [],
+    "src/components/events/joechella/festival.css": [],
+    "src/components/events/joechella/FestivalHero.tsx": [
+      "src/components/events/joechella/AmbientHeroVideo.tsx",
+      "src/components/events/joechella/festival.css",
+      "src/components/events/ScrollToRegisterButton.tsx",
+      "src/lib/events.tsx"
+    ],
+    "src/components/events/joechella/FestivalMotion.tsx": [],
+    "src/components/events/joechella/ProgramTimeline.tsx": [
+      "src/components/events/joechella/festival.css",
+      "src/lib/events.tsx"
+    ],
+    "src/components/events/joechella/VenueGallery.tsx": [
+      "src/components/events/EventMediaVideo.tsx",
+      "src/components/events/joechella/festival.css",
+      "src/lib/events.tsx"
+    ],
+    "src/components/events/ScrollToRegisterButton.tsx": [],
+    "src/components/events/WaitlistJoinForm.tsx": [
+      "src/lib/email-validation.ts",
+      "src/lib/meta-pixel.ts"
+    ],
+    "src/components/giveaways/GiveawayAutoModal.tsx": [
+      "src/components/giveaways/GiveawayEmailModal.tsx"
+    ],
+    "src/components/giveaways/GiveawayCopyEmailGate.tsx": [
+      "src/components/giveaways/GiveawayEmailModal.tsx",
+      "src/lib/copyWithConfetti.ts"
+    ],
+    "src/components/giveaways/GiveawayEmailModal.tsx": [
+      "src/lib/meta-pixel.ts"
+    ],
+    "src/components/giveaways/PackPage.module.css": [],
+    "src/components/giveaways/PackPage.tsx": [
+      "src/components/giveaways/GiveawayEmailModal.tsx",
+      "src/components/giveaways/PackPage.module.css",
+      "src/lib/giveaway-dm.ts",
+      "src/lib/giveaway-offers.ts",
+      "src/lib/pack-page.ts"
+    ],
+    "src/components/PageParticles.tsx": [],
+    "src/components/ParticipantCarousel.tsx": [],
+    "src/components/PrepChecklistItem.tsx": [],
+    "src/components/ProTip.tsx": [],
+    "src/components/Reveal.tsx": [],
+    "src/components/ScreenshotCard.tsx": [],
+    "src/components/sections/MastermindReactionsSection.tsx": [
+      "src/components/Reveal.tsx"
+    ],
+    "src/components/SessionCard.tsx": [],
+    "src/components/SiteChrome.tsx": [
+      "src/components/PageParticles.tsx",
+      "src/components/SiteFooter.tsx",
+      "src/components/SiteHeader.tsx"
+    ],
+    "src/components/SiteFooter.tsx": [
+      "src/components/consent/MetaPixelConsent.tsx"
+    ],
+    "src/components/SiteHeader.tsx": [],
+    "src/components/StaggerList.tsx": [],
+    "src/components/StepCard.tsx": [],
+    "src/components/StickyVideoPlayer.tsx": [],
+    "src/components/TabNav.tsx": [],
+    "src/components/TianaSessionFooter.tsx": [],
+    "src/components/VantaHero.tsx": [],
+    "src/content/session-1-bonus.tsx": [
+      "src/components/ProTip.tsx",
+      "src/components/StepCard.tsx"
+    ],
+    "src/content/session-1-guide.tsx": [
+      "src/components/StickyVideoPlayer.tsx"
+    ],
+    "src/content/session-1-prep-codex.tsx": [
+      "src/components/ProTip.tsx",
+      "src/components/StickyVideoPlayer.tsx",
+      "src/lib/celebrate.ts"
+    ],
+    "src/content/session-1-prep.tsx": [
+      "src/components/ProTip.tsx",
+      "src/components/StickyVideoPlayer.tsx",
+      "src/lib/celebrate.ts",
+      "src/lib/claude-links.ts"
+    ],
+    "src/content/session-10-guide-part1.tsx": [
+      "src/components/ProTip.tsx",
+      "src/components/StepCard.tsx"
+    ],
+    "src/content/session-10-instagram-agent.tsx": [
+      "src/components/CodeBlock.tsx",
+      "src/components/ProTip.tsx",
+      "src/components/StepCard.tsx"
+    ],
+    "src/content/session-10-positioning-builder.tsx": [],
+    "src/content/session-10-prep.tsx": [
+      "src/components/ProTip.tsx",
+      "src/lib/celebrate.ts",
+      "src/lib/claude-links.ts"
+    ],
+    "src/content/session-2-guide-codex.tsx": [
+      "src/components/CodeBlock.tsx",
+      "src/components/ProTip.tsx",
+      "src/components/StepCard.tsx",
+      "src/components/StickyVideoPlayer.tsx"
+    ],
+    "src/content/session-2-guide.tsx": [
+      "src/components/CodeBlock.tsx",
+      "src/components/ProTip.tsx",
+      "src/components/StepCard.tsx",
+      "src/components/StickyVideoPlayer.tsx"
+    ],
+    "src/content/session-2-prep.tsx": [
+      "src/components/ProTip.tsx",
+      "src/lib/celebrate.ts"
+    ],
+    "src/content/session-3-guide.tsx": [
+      "src/components/CodeBlock.tsx",
+      "src/components/ProTip.tsx",
+      "src/components/StepCard.tsx",
+      "src/components/StickyVideoPlayer.tsx"
+    ],
+    "src/content/session-3-prep.tsx": [
+      "src/components/ProTip.tsx",
+      "src/lib/celebrate.ts"
+    ],
+    "src/content/session-4-guide.tsx": [
+      "src/components/CodeBlock.tsx",
+      "src/components/ProTip.tsx",
+      "src/components/StepCard.tsx",
+      "src/components/StickyVideoPlayer.tsx",
+      "src/lib/celebrate.ts",
+      "src/lib/claude-links.ts"
+    ],
+    "src/content/session-4-prep.tsx": [
+      "src/lib/celebrate.ts"
+    ],
+    "src/content/session-5-prep.tsx": [
+      "src/components/ProTip.tsx",
+      "src/components/ScreenshotCard.tsx",
+      "src/lib/celebrate.ts"
+    ],
+    "src/content/session-6-guide.tsx": [
+      "src/components/CodeBlock.tsx",
+      "src/components/ProTip.tsx",
+      "src/components/StepCard.tsx",
+      "src/components/StickyVideoPlayer.tsx"
+    ],
+    "src/content/session-6-prep.tsx": [
+      "src/components/ProTip.tsx",
+      "src/lib/celebrate.ts"
+    ],
+    "src/content/session-7-descript-guide.tsx": [
+      "src/components/CodeBlock.tsx",
+      "src/components/ProTip.tsx",
+      "src/components/StepCard.tsx"
+    ],
+    "src/content/session-7-guide.tsx": [
+      "src/components/CodeBlock.tsx",
+      "src/components/ProTip.tsx",
+      "src/components/StepCard.tsx",
+      "src/components/StickyVideoPlayer.tsx",
+      "src/lib/celebrate.ts"
+    ],
+    "src/content/session-7-prep.tsx": [
+      "src/components/ProTip.tsx",
+      "src/lib/celebrate.ts"
+    ],
+    "src/content/session-8-guide.tsx": [
+      "src/components/CodeBlock.tsx",
+      "src/components/ProTip.tsx",
+      "src/components/StepCard.tsx",
+      "src/components/StickyVideoPlayer.tsx"
+    ],
+    "src/content/session-8-prep.tsx": [
+      "src/components/ProTip.tsx",
+      "src/lib/celebrate.ts"
+    ],
+    "src/content/session-9-guide.tsx": [
+      "src/components/CodeBlock.tsx",
+      "src/components/ProTip.tsx",
+      "src/components/StepCard.tsx"
+    ],
+    "src/content/tiana-ai-positioning-workshop.tsx": [
+      "src/components/CodeBlock.tsx",
+      "src/components/ProTip.tsx",
+      "src/components/StepCard.tsx"
+    ],
+    "src/data/ai-levels-signup.ts": [],
+    "src/lib/abandoned-checkout-followups.ts": [
+      "src/lib/email-suppressions.ts",
+      "src/lib/events.tsx",
+      "src/lib/list-unsubscribe.ts",
+      "src/lib/stripe.ts",
+      "src/lib/url-utils.ts",
+      "src/lib/utm.ts"
+    ],
+    "src/lib/ai-agent-income-prompt-pack.ts": [
+      "src/lib/email-validation.ts",
+      "src/lib/resend-sender.ts",
+      "src/lib/subscribe.ts"
+    ],
+    "src/lib/calendar.ts": [],
+    "src/lib/celebrate.ts": [],
+    "src/lib/claude-links.ts": [],
+    "src/lib/copyWithConfetti.ts": [],
+    "src/lib/email-logo.ts": [],
+    "src/lib/email-suppressions.ts": [
+      "src/lib/supabase.ts"
+    ],
+    "src/lib/email-validation.ts": [],
+    "src/lib/event-capacity.ts": [
+      "src/lib/events.tsx",
+      "src/lib/supabase.ts"
+    ],
+    "src/lib/event-checkout.ts": [
+      "src/lib/events.tsx",
+      "src/lib/masterminds-checkout-branding.ts",
+      "src/lib/stripe-amount.ts"
+    ],
+    "src/lib/event-confirmation-email.ts": [
+      "src/lib/calendar.ts",
+      "src/lib/email-suppressions.ts",
+      "src/lib/events.tsx",
+      "src/lib/list-unsubscribe.ts",
+      "src/lib/location-reminder.ts",
+      "src/lib/session-reminder.ts",
+      "src/lib/utm.ts"
+    ],
+    "src/lib/event-email-ledger.ts": [],
+    "src/lib/event-followup.ts": [
+      "src/lib/email-suppressions.ts",
+      "src/lib/events.tsx",
+      "src/lib/list-unsubscribe.ts",
+      "src/lib/location-reminder.ts"
+    ],
+    "src/lib/event-intake.ts": [],
+    "src/lib/event-registration-db.ts": [
+      "src/lib/event-capacity.ts",
+      "src/lib/event-registration-flow.ts",
+      "src/lib/event-tokens.ts",
+      "src/lib/events.tsx",
+      "src/lib/supabase.ts"
+    ],
+    "src/lib/event-registration-flow.ts": [],
+    "src/lib/event-status.ts": [
+      "src/lib/events.tsx"
+    ],
+    "src/lib/event-templates.ts": [
+      "src/lib/events.tsx"
+    ],
+    "src/lib/event-tokens.ts": [],
+    "src/lib/events.tsx": [],
+    "src/lib/free-ai-tool-email.ts": [
+      "src/lib/free-ai-tools.ts",
+      "src/lib/utm.ts"
+    ],
+    "src/lib/free-ai-tool-pack.ts": [
+      "src/lib/free-ai-tools.ts",
+      "src/lib/pack-page.ts"
+    ],
+    "src/lib/free-ai-tools-hub-email.ts": [
+      "src/lib/free-ai-tools-hub.ts",
+      "src/lib/utm.ts"
+    ],
+    "src/lib/free-ai-tools-hub.ts": [
+      "src/lib/free-ai-tools.ts"
+    ],
+    "src/lib/free-ai-tools.ts": [
+      "src/lib/giveaway-offers.ts"
+    ],
+    "src/lib/generic-giveaway-email.ts": [
+      "src/lib/utm.ts"
+    ],
+    "src/lib/giveaway-dm.ts": [],
+    "src/lib/giveaway-followups.ts": [],
+    "src/lib/giveaway-offers.ts": [],
+    "src/lib/giveaways.ts": [],
+    "src/lib/google-calendar-invite.ts": [
+      "src/lib/calendar.ts",
+      "src/lib/events.tsx"
+    ],
+    "src/lib/html-to-text.ts": [],
+    "src/lib/image-size.ts": [],
+    "src/lib/insight-to-fix.ts": [],
+    "src/lib/lead-magnets.ts": [
+      "src/lib/free-ai-tools.ts",
+      "src/lib/list-unsubscribe.ts",
+      "src/lib/quiz-giveaway-email.ts",
+      "src/lib/utm.ts"
+    ],
+    "src/lib/legacy-event-schedule.ts": [
+      "src/lib/event-capacity.ts",
+      "src/lib/event-confirmation-email.ts",
+      "src/lib/event-registration-db.ts",
+      "src/lib/events.tsx",
+      "src/lib/google-calendar-invite.ts",
+      "src/lib/insight-to-fix.ts",
+      "src/lib/location-reminder.ts",
+      "src/lib/stripe.ts"
+    ],
+    "src/lib/list-unsubscribe.ts": [],
+    "src/lib/location-reminder.ts": [
+      "src/lib/event-email-ledger.ts",
+      "src/lib/events.tsx"
+    ],
+    "src/lib/locks.ts": [],
+    "src/lib/masterminds-checkout-branding.ts": [],
+    "src/lib/meta-consent.ts": [],
+    "src/lib/meta-pixel.ts": [
+      "src/lib/meta-consent.ts"
+    ],
+    "src/lib/pack-page.ts": [
+      "src/lib/giveaway-offers.ts"
+    ],
+    "src/lib/quiz-giveaway-email.ts": [
+      "src/lib/utm.ts"
+    ],
+    "src/lib/rate-limit.ts": [
+      "src/lib/supabase.ts",
+      "src/lib/with-timeout.ts"
+    ],
+    "src/lib/registration-profile-token.ts": [],
+    "src/lib/resend-sender.ts": [
+      "src/lib/subscribe.ts"
+    ],
+    "src/lib/session-reminder.ts": [
+      "src/lib/events.tsx",
+      "src/lib/location-reminder.ts"
+    ],
+    "src/lib/sessions.ts": [],
+    "src/lib/speak-human-email.ts": [],
+    "src/lib/stripe-amount.ts": [],
+    "src/lib/stripe.ts": [],
+    "src/lib/subscribe.ts": [
+      "src/lib/lead-magnets.ts",
+      "src/lib/list-unsubscribe.ts"
+    ],
+    "src/lib/supabase.ts": [],
+    "src/lib/url-utils.ts": [],
+    "src/lib/utm.ts": [],
+    "src/lib/waitlist-notify-windows.ts": [],
+    "src/lib/whatsapp-agent-email.ts": [
+      "src/lib/utm.ts"
+    ],
+    "src/lib/with-timeout.ts": [],
+    "src/proxy.ts": [
+      "src/lib/meta-consent.ts"
+    ],
+    "src/templates/session-guide-template.tsx": [
+      "src/components/CodeBlock.tsx",
+      "src/components/ProTip.tsx",
+      "src/components/StepCard.tsx"
+    ],
+    "src/templates/tool-page-template.tsx": [],
+    "supabase/migrations/001_event_registrations.sql": [],
+    "supabase/migrations/002_unique_email_constraints.sql": [],
+    "supabase/migrations/003_rate_limit_and_cron_locks.sql": [],
+    "supabase/migrations/004_abandoned_checkout_followups.sql": [],
+    "supabase/migrations/005_abandoned_checkout_live_claims.sql": [],
+    "supabase/migrations/006_abandoned_checkout_t12h_seed.sql": [],
+    "supabase/migrations/007_ai_agent_income_subscriptions.sql": [],
+    "supabase/migrations/008_leads_and_lead_magnet_signups.sql": [],
+    "supabase/migrations/009_event_registration_acquisition_ref.sql": [],
+    "supabase/migrations/010_email_suppressions.sql": [],
+    "supabase/migrations/011_event_registration_intake.sql": [],
+    "supabase/migrations/012_fix_intake_upsert_conflict_target.sql": [],
+    "supabase/migrations/013_event_email_send_log.sql": [],
+    "supabase/migrations/014_event_capacity_reservations.sql": [],
+    "supabase/migrations/015_event_registration_ai_level.sql": [],
+    "supabase/migrations/016_event_registration_ai_grades_and_attendance.sql": [],
+    "supabase/migrations/017_event_registration_intake_rls.sql": [],
+    "supabase/migrations/018_giveaway_followup_sends.sql": [],
+    "supabase/migrations/019_giveaway_followup_day14_day30.sql": [],
+    "supabase/migrations/020_giveaway_followup_sales_track.sql": [],
+    "tailwind.config.ts": [],
+    "tests/abandoned-checkout-followups.test.ts": [
+      "src/lib/abandoned-checkout-followups.ts"
+    ],
+    "tests/ai-agent-income-prompt-pack.test.ts": [
+      "src/lib/ai-agent-income-prompt-pack.ts"
+    ],
+    "tests/calendar.test.ts": [
+      "src/lib/calendar.ts"
+    ],
+    "tests/checkout-branding.test.ts": [
+      "src/lib/event-checkout.ts",
+      "src/lib/events.tsx",
+      "src/lib/masterminds-checkout-branding.ts"
+    ],
+    "tests/claude-referral-link.test.ts": [
+      "src/lib/claude-links.ts"
+    ],
+    "tests/desk-pet.test.ts": [
+      "src/app/giveaways/desk-pet/pack.ts",
+      "src/app/giveaways/desk-pet/prompt.ts",
+      "src/lib/generic-giveaway-email.ts",
+      "src/lib/giveaway-offers.ts",
+      "src/lib/pack-page.ts"
+    ],
+    "tests/email-content.test.ts": [
+      "src/lib/event-confirmation-email.ts",
+      "src/lib/events.tsx"
+    ],
+    "tests/email-idempotency.test.ts": [
+      "src/lib/event-confirmation-email.ts",
+      "src/lib/events.tsx"
+    ],
+    "tests/email-logo.test.ts": [
+      "src/lib/email-logo.ts"
+    ],
+    "tests/estimate-ai-level.test.ts": [
+      "scripts/estimate-ai-levels.mjs",
+      "scripts/lib/estimate-ai-level.mjs"
+    ],
+    "tests/estimate-ai-levels-run.test.ts": [
+      "scripts/estimate-ai-levels.mjs"
+    ],
+    "tests/event-cancellation.test.ts": [
+      "src/lib/event-registration-db.ts",
+      "src/lib/supabase.ts"
+    ],
+    "tests/event-capacity-checkout-route.test.ts": [
+      "src/app/api/events/checkout-session/route.ts",
+      "src/lib/supabase.ts"
+    ],
+    "tests/event-capacity.test.ts": [
+      "src/lib/event-capacity.ts",
+      "src/lib/events.tsx",
+      "src/lib/supabase.ts"
+    ],
+    "tests/event-checkout.test.ts": [
+      "src/lib/event-checkout.ts",
+      "src/lib/events.tsx"
+    ],
+    "tests/event-confirmation-location-privacy.test.ts": [
+      "src/lib/event-confirmation-email.ts",
+      "src/lib/events.tsx"
+    ],
+    "tests/event-followup.test.ts": [
+      "src/lib/event-followup.ts",
+      "src/lib/events.tsx"
+    ],
+    "tests/event-intake.test.ts": [
+      "src/lib/event-checkout.ts",
+      "src/lib/event-intake.ts",
+      "src/lib/events.tsx",
+      "src/lib/stripe-amount.ts"
+    ],
+    "tests/event-location-reminder-dedupe.test.ts": [
+      "src/lib/event-email-ledger.ts",
+      "src/lib/events.tsx",
+      "src/lib/location-reminder.ts"
+    ],
+    "tests/event-location-reminder.test.ts": [
+      "src/lib/event-confirmation-email.ts",
+      "src/lib/events.tsx",
+      "src/lib/location-reminder.ts"
+    ],
+    "tests/event-pricing-and-data.test.ts": [
+      "src/app/api/events/checkout-session/route.ts",
+      "src/lib/event-confirmation-email.ts",
+      "src/lib/event-status.ts",
+      "src/lib/events.tsx",
+      "src/lib/url-utils.ts",
+      "src/lib/waitlist-notify-windows.ts"
+    ],
+    "tests/event-registration-flow.test.ts": [
+      "src/lib/event-registration-db.ts",
+      "src/lib/event-registration-flow.ts",
+      "src/lib/supabase.ts"
+    ],
+    "tests/event-registration-intake-rls.test.ts": [],
+    "tests/event-status.test.ts": [
+      "src/lib/event-status.ts",
+      "src/lib/events.tsx"
+    ],
+    "tests/event-tokens.test.ts": [
+      "src/lib/event-tokens.ts"
+    ],
+    "tests/free-ai-tools-hub.test.ts": [
+      "src/app/giveaways/free-ai-tools/pack.ts",
+      "src/lib/free-ai-tools-hub-email.ts",
+      "src/lib/free-ai-tools-hub.ts",
+      "src/lib/free-ai-tools.ts",
+      "src/lib/giveaways.ts",
+      "src/lib/lead-magnets.ts",
+      "src/lib/pack-page.ts"
+    ],
+    "tests/free-ai-tools.test.ts": [
+      "src/lib/free-ai-tool-email.ts",
+      "src/lib/free-ai-tool-pack.ts",
+      "src/lib/free-ai-tools.ts",
+      "src/lib/giveaway-offers.ts",
+      "src/lib/giveaways.ts",
+      "src/lib/lead-magnets.ts"
+    ],
+    "tests/generic-giveaway-email.test.ts": [
+      "src/lib/generic-giveaway-email.ts"
+    ],
+    "tests/giveaway-email-collection.test.ts": [],
+    "tests/giveaway-followups.test.ts": [
+      "src/lib/giveaway-followups.ts"
+    ],
+    "tests/giveaway-template-structure.test.ts": [],
+    "tests/google-calendar-invite.test.ts": [
+      "src/lib/events.tsx",
+      "src/lib/google-calendar-invite.ts"
+    ],
+    "tests/hardening.test.ts": [
+      "src/lib/events.tsx",
+      "src/lib/stripe-amount.ts",
+      "src/lib/waitlist-notify-windows.ts"
+    ],
+    "tests/lead-magnet-day-zero-ps.test.ts": [
+      "src/lib/giveaway-followups.ts"
+    ],
+    "tests/lead-magnet-speak-human-email.test.ts": [
+      "src/lib/speak-human-email.ts"
     ],
     "tests/linkedin-kit.test.ts": [
       "src/app/giveaways/linkedin-kit/pack.ts",
       "src/app/giveaways/linkedin-kit/prompt.ts",
       "src/lib/generic-giveaway-email.ts",
-      "src/lib/giveaways.ts"
+      "src/lib/giveaway-offers.ts",
+      "src/lib/giveaways.ts",
+      "src/lib/pack-page.ts"
     ],
-    "src/lib/events.tsx": [],
-    "public/desk-pet-prompt.txt": [],
-    "src/app/giveaways/desk-pet/layout.tsx": [],
-    "src/app/giveaways/desk-pet/pack.ts": [
-      "src/app/giveaways/desk-pet/prompt.ts"
+    "tests/list-unsubscribe.test.ts": [
+      "src/lib/list-unsubscribe.ts"
     ],
-    "src/app/giveaways/desk-pet/page.tsx": [
-      "src/app/giveaways/desk-pet/pack.ts"
+    "tests/meta-consent.test.ts": [
+      "src/lib/event-checkout.ts",
+      "src/lib/events.tsx",
+      "src/lib/meta-consent.ts",
+      "src/lib/meta-pixel.ts",
+      "src/proxy.ts"
     ],
-    "src/app/giveaways/desk-pet/prompt.ts": [],
-    "src/lib/giveaway-followups.ts": [],
-    "tests/desk-pet.test.ts": [
-      "src/app/giveaways/desk-pet/pack.ts",
-      "src/app/giveaways/desk-pet/prompt.ts",
-      "src/lib/generic-giveaway-email.ts"
+    "tests/pack-page.test.ts": [
+      "src/app/giveaways/lead-machine/pack.ts",
+      "src/app/giveaways/lead-machine/prompt.ts",
+      "src/app/giveaways/whatsapp-agent/pack.ts",
+      "src/app/giveaways/whatsapp-agent/prompt.ts",
+      "src/lib/giveaway-dm.ts",
+      "src/lib/giveaway-offers.ts",
+      "src/lib/pack-page.ts"
     ],
-    "tests/giveaway-followups.test.ts": [
-      "src/lib/giveaway-followups.ts"
-    ]
+    "tests/posture-coach.test.ts": [
+      "src/app/giveaways/posture-coach/pack.ts",
+      "src/app/giveaways/posture-coach/prompt.ts",
+      "src/lib/generic-giveaway-email.ts",
+      "src/lib/giveaway-offers.ts",
+      "src/lib/pack-page.ts"
+    ],
+    "tests/quiz-giveaway-email.test.ts": [
+      "src/lib/giveaways.ts",
+      "src/lib/lead-magnets.ts",
+      "src/lib/quiz-giveaway-email.ts"
+    ],
+    "tests/registration-invite-and-lead-magnet-fail-closed.test.ts": [
+      "src/lib/free-ai-tools.ts",
+      "src/lib/lead-magnets.ts",
+      "src/lib/quiz-giveaway-email.ts"
+    ],
+    "tests/registration-profile.test.ts": [
+      "src/data/ai-levels-signup.ts",
+      "src/lib/event-intake.ts",
+      "src/lib/registration-profile-token.ts"
+    ],
+    "tests/session-reminder.test.ts": [
+      "src/lib/event-confirmation-email.ts",
+      "src/lib/events.tsx",
+      "src/lib/session-reminder.ts"
+    ],
+    "tests/settle-attached-checkout.test.ts": [
+      "src/lib/event-capacity.ts",
+      "src/lib/events.tsx",
+      "src/lib/supabase.ts"
+    ],
+    "tests/subscribe-lead-magnet.test.ts": [
+      "src/lib/lead-magnets.ts",
+      "src/lib/resend-sender.ts",
+      "src/lib/subscribe.ts"
+    ],
+    "tests/utm.test.ts": [
+      "src/lib/utm.ts"
+    ],
+    "tests/video-editor.test.ts": [
+      "src/app/giveaways/video-editor/pack.ts",
+      "src/lib/generic-giveaway-email.ts",
+      "src/lib/giveaway-offers.ts",
+      "src/lib/pack-page.ts"
+    ],
+    "tests/waitlist-join-validation.test.ts": [
+      "src/lib/email-validation.ts"
+    ],
+    "tests/whatsapp-agent-email.test.ts": [
+      "src/lib/lead-magnets.ts",
+      "src/lib/whatsapp-agent-email.ts"
+    ],
+    "tests/with-timeout.test.ts": [
+      "src/lib/with-timeout.ts"
+    ],
+    "tsconfig.json": [],
+    "vercel.json": []
   },
   "summary": {
     "srcFiles": 365,
@@ -3707,6 +4967,6 @@
       "total": 29
     }
   },
-  "totalFiles": 549,
+  "totalFiles": 553,
   "estimatedComplexity": "very-large"
 }

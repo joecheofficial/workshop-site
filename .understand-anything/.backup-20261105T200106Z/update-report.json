@@ -1,0 +1,190 @@
+{
+  "backupPath": "/Users/myos/.myos/workspace/projects/mastermind/workshop-site/.understand-anything/.backup-20261102T200930Z",
+  "previousGitCommitHash": "fefc614a4f6ac670cd433fb0ae77c4313cfdb205",
+  "gitCommitHash": "e8b185b28be6323b7f32afc53f4f0ef504502071",
+  "changedPaths": [
+    "public/desk-pet-example.png",
+    "public/desk-pet-prompt.txt",
+    "public/desk-pet.zip",
+    "scripts/giveaway-followups.mjs",
+    "src/app/giveaways/desk-pet/layout.tsx",
+    "src/app/giveaways/desk-pet/pack.ts",
+    "src/app/giveaways/desk-pet/page.tsx",
+    "src/app/giveaways/desk-pet/prompt.ts",
+    "src/app/sitemap.ts",
+    "src/lib/generic-giveaway-email.ts",
+    "src/lib/giveaway-followups.ts",
+    "src/lib/giveaways.ts",
+    "tests/desk-pet.test.ts",
+    "tests/giveaway-followups.test.ts"
+  ],
+  "analyzedPaths": [
+    "public/desk-pet-prompt.txt",
+    "scripts/giveaway-followups.mjs",
+    "src/app/giveaways/desk-pet/layout.tsx",
+    "src/app/giveaways/desk-pet/pack.ts",
+    "src/app/giveaways/desk-pet/page.tsx",
+    "src/app/giveaways/desk-pet/prompt.ts",
+    "src/app/sitemap.ts",
+    "src/lib/generic-giveaway-email.ts",
+    "src/lib/giveaway-followups.ts",
+    "src/lib/giveaways.ts",
+    "tests/desk-pet.test.ts",
+    "tests/giveaway-followups.test.ts"
+  ],
+  "excludedPaths": [
+    "public/desk-pet-example.png",
+    "public/desk-pet.zip"
+  ],
+  "mode": "incremental",
+  "initialNodes": 90,
+  "initialEdges": 88,
+  "initialRepresentedFiles": 52,
+  "currentInventoryFiles": 549,
+  "warnings": [
+    "Inherited graph has partial coverage; unchanged files were retained rather than fully rebuilt.",
+    "Initial file-analyzer dispatch failed before startup with invalid thread-store request; its one isolated-context retry succeeded.",
+    "Bundled import extraction omitted the source-confirmed sitemap alias import; assembly review recovered it.",
+    "Node 'file:public/downloads/joes-linkedin-kit-v1.0.zip' has no edges (orphan)",
+    "Node 'file:public/downloads/joes-linkedin-kit-v1.0.zip.sha256' has no edges (orphan)",
+    "Node 'file:public/downloads/joes-salesman-v1.0.zip' has no edges (orphan)",
+    "Node 'file:public/downloads/joes-salesman-v1.0.zip.sha256' has no edges (orphan)",
+    "Node 'function:src/app/api/events/abandoned-checkout-followups/route.ts:acquireEventLock' has no edges (orphan)",
+    "Node 'function:src/app/api/events/cancel/route.ts:escapeHtml' has no edges (orphan)",
+    "Node 'function:src/app/api/events/session-reminders/route.ts:acquireEventWindowLock' has no edges (orphan)",
+    "Node 'file:src/app/api/unsubscribe/route.ts' has no edges (orphan)",
+    "Node 'file:src/app/bonus/auto-lead-magnet/page.tsx' has no edges (orphan)"
+  ],
+  "pipelineNotes": [
+    "Used prebuilt core without rebuild.",
+    "Root .understandignore already excludes .understand-anything/.",
+    "Ran compute-batches.mjs with node and trimmed selected communities to changed files only.",
+    "Native collaboration file-analyzer agents replace unavailable Agent tool.",
+    "Retained fragment uses batch-0.json because batch-existing.json is ignored by the bundled merge filename matcher.",
+    "Python merge will use /opt/homebrew/bin/python3.11.",
+    "Dashboard launch omitted for requested non-interactive artifact-only refresh."
+  ],
+  "phaseStatus": {
+    "0": "Existing graph detected; incremental selected",
+    "0.5": "Verified root .understandignore exclusion",
+    "1": "Deterministic inventory refreshed; semantic analysis restricted to 12 changed text/source files",
+    "1.5": "Six trimmed semantic batches produced",
+    "2": "All 12 changed files analyzed in six batches; normalized all seven fragments before Python 3.11 merge; edge-density check passed",
+    "3": "Assembly reviewed;139 nodes,207 edges;all 12 paths and 52 significant fresh functions covered",
+    "4": "Eight layers; exact50/50 file-level coverage verified",
+    "5": "Twelve sequential tour steps validated",
+    "6": "Core KnowledgeGraphSchema and bundled inline validator passed; zero issues",
+    "7": "Graph saved;549 fingerprint baseline files verified before metadata advancement;final source hashes and HEAD stable"
+  },
+  "assemblyReview": {
+    "fixedSectionOk": true,
+    "nodesRecovered": 0,
+    "edgesRestored": 0,
+    "crossBatchEdgesAdded": 1,
+    "semanticEdgesAdded": 3,
+    "typesRemapped": 0,
+    "complexityRemapped": 0,
+    "notes": [
+      "Merge report has no normalization warnings or dropped nodes/edges.",
+      "All 12 analyzed changed paths have nodes; binary exclusions remain excluded.",
+      "All 52 extracted exported or 10+ line functions are represented; private shorter helpers need no recovery.",
+      "All 3 preserved unchanged-source inbound imports were already restored by merge importMap recovery and remain present.",
+      "All importMap relationships with exact existing file-node endpoints are represented. Source-confirmed sitemap alias import added without changing the resolver.",
+      "Three Desk Pet prompt relationships are grounded in pack.ts PROMPT_PATH/ONE_LINE_COMMAND and the exact parity assertion in tests/desk-pet.test.ts.",
+      "Canonical node/edge types, complexity, endpoint existence, unique IDs and unique edge triples validated. Inherited partial graph preserved without adding inventory nodes."
+    ],
+    "finalNodeCount": 139,
+    "finalEdgeCount": 207
+  },
+  "normalization": {
+    "batches": 7,
+    "edgeCorrections": []
+  },
+  "finalNodeCount": 139,
+  "finalEdgeCount": 207,
+  "filesAnalyzed": 12,
+  "fingerprintFiles": 549,
+  "finalRepresentedFiles": 61,
+  "finalFileLevelNodes": 50,
+  "validation": {
+    "schemaPassed": true,
+    "schemaIssues": [],
+    "inlineIssues": [],
+    "warnings": [
+      "Node 'file:public/downloads/joes-linkedin-kit-v1.0.zip' has no edges (orphan)",
+      "Node 'file:public/downloads/joes-linkedin-kit-v1.0.zip.sha256' has no edges (orphan)",
+      "Node 'file:public/downloads/joes-salesman-v1.0.zip' has no edges (orphan)",
+      "Node 'file:public/downloads/joes-salesman-v1.0.zip.sha256' has no edges (orphan)",
+      "Node 'function:src/app/api/events/abandoned-checkout-followups/route.ts:acquireEventLock' has no edges (orphan)",
+      "Node 'function:src/app/api/events/cancel/route.ts:escapeHtml' has no edges (orphan)",
+      "Node 'function:src/app/api/events/session-reminders/route.ts:acquireEventWindowLock' has no edges (orphan)",
+      "Node 'file:src/app/api/unsubscribe/route.ts' has no edges (orphan)",
+      "Node 'file:src/app/bonus/auto-lead-magnet/page.tsx' has no edges (orphan)"
+    ],
+    "stats": {
+      "totalNodes": 139,
+      "totalEdges": 207,
+      "totalLayers": 8,
+      "tourSteps": 12,
+      "nodeTypes": {
+        "file": 48,
+        "function": 89,
+        "config": 1,
+        "document": 1
+      },
+      "edgeTypes": {
+        "contains": 77,
+        "imports": 24,
+        "tested_by": 9,
+        "calls": 42,
+        "related": 5,
+        "routes": 1,
+        "configures": 1,
+        "exports": 48
+      }
+    }
+  },
+  "analyzedFileCategories": {
+    "docs": 1,
+    "code": 11
+  },
+  "layers": [
+    {
+      "name": "API Routes",
+      "files": 1
+    },
+    {
+      "name": "Pages",
+      "files": 5
+    },
+    {
+      "name": "Giveaway Tools",
+      "files": 27
+    },
+    {
+      "name": "Shared Libraries",
+      "files": 6
+    },
+    {
+      "name": "Assets",
+      "files": 5
+    },
+    {
+      "name": "Operations",
+      "files": 1
+    },
+    {
+      "name": "Tests",
+      "files": 4
+    },
+    {
+      "name": "Configuration",
+      "files": 1
+    }
+  ],
+  "tourSteps": 12,
+  "graphPath": "/Users/myos/.myos/workspace/projects/mastermind/workshop-site/.understand-anything/knowledge-graph.json",
+  "graphSha256": "ca81070c4dc0f0c1e7c05d3e28cd47dff73ba0598f1f77349c42e817c7dacd0a",
+  "completedAt": "2026-11-02T20:24:25.214560+00:00",
+  "scratchArchivePath": "/Users/myos/.myos/workspace/projects/mastermind/workshop-site/.understand-anything/.trash-20261102T202425Z"
+}
