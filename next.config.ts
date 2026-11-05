@@ -18,6 +18,10 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Video Editor is private again (Joe 2026-11-05): it's the paid Video Agent on MHQ now.
+      // Keeps every old EDIT link working, and closes the free zip.
+      { source: '/giveaways/video-editor', destination: 'https://mastermindshq.business/video-agent#guide', permanent: false },
+      { source: '/video-editor.zip', destination: 'https://mastermindshq.business/video-agent', permanent: false },
       // The TASK prompt pack moved from a static file to the pack page template (2026-10-14).
       // Query strings pass through, so ?via=dm from the Instagram DM still reaches the page.
       {
