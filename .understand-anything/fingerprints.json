@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "gitCommitHash": "e8b185b28be6323b7f32afc53f4f0ef504502071",
-  "generatedAt": "2026-11-02T20:23:41.344Z",
+  "gitCommitHash": "31af93d9a652a0612690998381cff32a27d8da63",
+  "generatedAt": "2026-11-05T20:07:07.878Z",
   "files": {
     ".claude/settings.json": {
       "filePath": ".claude/settings.json",
@@ -310,7 +310,7 @@
     },
     "next.config.ts": {
       "filePath": "next.config.ts",
-      "contentHash": "420f29581f6bea2ee61d229e9a1b7bce898b9c2698252895b5e734db2e10c7c1",
+      "contentHash": "fe9293aebf6549e4cbc5ce7cb0c81c7cdc2dcbc1f4be2ce02ac8f95373bd84a9",
       "functions": [],
       "classes": [],
       "imports": [
@@ -328,7 +328,7 @@
         }
       ],
       "exports": [],
-      "totalLines": 85,
+      "totalLines": 89,
       "hasStructuralAnalysis": true
     },
     "package.json": {
@@ -8832,6 +8832,95 @@
       "totalLines": 18,
       "hasStructuralAnalysis": true
     },
+    "src/app/giveaways/video-editor/layout.tsx": {
+      "filePath": "src/app/giveaways/video-editor/layout.tsx",
+      "contentHash": "21c9bcda655ffdf90b688eaa3d6ba79e7fca0a8b7ba595cb3e6f198773ad373b",
+      "functions": [
+        {
+          "name": "VideoEditorLayout",
+          "params": [
+            "{ children }"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "ReactNode"
+          ]
+        },
+        {
+          "source": "next",
+          "specifiers": [
+            "Metadata"
+          ]
+        }
+      ],
+      "exports": [
+        "metadata",
+        "VideoEditorLayout"
+      ],
+      "totalLines": 37,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/video-editor/pack.ts": {
+      "filePath": "src/app/giveaways/video-editor/pack.ts",
+      "contentHash": "a460989d7476ec7f8ef4d82d3405ddabb317a58e3c0f15b48c5a245ed3347180",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/lib/pack-page",
+          "specifiers": [
+            "PackPageContent"
+          ]
+        }
+      ],
+      "exports": [
+        "ZIP_PATH",
+        "EXAMPLE_PATH",
+        "TERMINAL_LINE",
+        "VIDEO_EDITOR_CONTENT"
+      ],
+      "totalLines": 175,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/video-editor/page.tsx": {
+      "filePath": "src/app/giveaways/video-editor/page.tsx",
+      "contentHash": "cbb2e6f2f64d745b29456237c5de18268f2f5321747c014781e27fb07475299b",
+      "functions": [
+        {
+          "name": "VideoEditorPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/components/giveaways/PackPage",
+          "specifiers": [
+            "PackPage"
+          ]
+        },
+        {
+          "source": "./pack",
+          "specifiers": [
+            "VIDEO_EDITOR_CONTENT"
+          ]
+        }
+      ],
+      "exports": [
+        "VideoEditorPage"
+      ],
+      "totalLines": 33,
+      "hasStructuralAnalysis": true
+    },
     "src/app/giveaways/viral-hooks/layout.tsx": {
       "filePath": "src/app/giveaways/viral-hooks/layout.tsx",
       "contentHash": "9c3f60fb8c72b0021fc161a33d6d5b4038b86dfabf4d0911de3a9aaaa06bf927",
@@ -12270,7 +12359,7 @@
     },
     "src/components/events/joechella/FestivalHero.tsx": {
       "filePath": "src/components/events/joechella/FestivalHero.tsx",
-      "contentHash": "c556b5767400ad269d392ee95e311d23f5aa0f25a2743d236763b81980347ad4",
+      "contentHash": "cbb8a0581c13d2fa55f2b537a7596604d36805e42b768027039f1cfd344f1c88",
       "functions": [
         {
           "name": "splitTitle",
@@ -12294,7 +12383,7 @@
             "{ event, eventEnded }"
           ],
           "exported": true,
-          "lineCount": 122
+          "lineCount": 130
         }
       ],
       "classes": [],
@@ -12331,7 +12420,7 @@
       "exports": [
         "FestivalHero"
       ],
-      "totalLines": 165,
+      "totalLines": 173,
       "hasStructuralAnalysis": true
     },
     "src/components/events/joechella/FestivalMotion.tsx": {
@@ -12362,7 +12451,7 @@
     },
     "src/components/events/joechella/ProgramTimeline.tsx": {
       "filePath": "src/components/events/joechella/ProgramTimeline.tsx",
-      "contentHash": "683909b0a821d1c3f502c2057b9461428b628735e28330116ca9c31c025d891f",
+      "contentHash": "5a0e1ab7287e08a6f63e9f4a31cd90853b9b12462168a4c01350f6ef8dfba9b4",
       "functions": [
         {
           "name": "ToneIcon",
@@ -12418,7 +12507,7 @@
             "{ group }"
           ],
           "exported": false,
-          "lineCount": 83
+          "lineCount": 87
         },
         {
           "name": "ProgramTimeline",
@@ -12453,7 +12542,7 @@
       "exports": [
         "ProgramTimeline"
       ],
-      "totalLines": 268,
+      "totalLines": 272,
       "hasStructuralAnalysis": true
     },
     "src/components/events/joechella/VenueGallery.tsx": {
@@ -16694,7 +16783,7 @@
     },
     "src/lib/events.tsx": {
       "filePath": "src/lib/events.tsx",
-      "contentHash": "bbfa902879010a09ed5566b78f1554f5ecab999c073f3916c5e87fca3b51c654",
+      "contentHash": "33bf695aaeefa442caa9527115e55ca89a2bd9696675a53a58d8a32705f17f35",
       "functions": [
         {
           "name": "getDiscountedPrice",
@@ -16799,7 +16888,7 @@
         "getLiveEvents",
         "getUpcomingLiveEvents"
       ],
-      "totalLines": 1933,
+      "totalLines": 1922,
       "hasStructuralAnalysis": true
     },
     "src/lib/free-ai-tool-email.ts": {
@@ -17039,7 +17128,7 @@
     },
     "src/lib/generic-giveaway-email.ts": {
       "filePath": "src/lib/generic-giveaway-email.ts",
-      "contentHash": "c03adc0f6d65f1a2b462be63623ddf15e245c117f6c9d33f35b5bdcec3b18f62",
+      "contentHash": "d1eca6dab2488396c66d8ed2af78731904218e54fdbe8ba8e8dc6cc1e49aa1b5",
       "functions": [
         {
           "name": "esc",
@@ -17158,7 +17247,7 @@
         "salesKeywordPage",
         "buildSalesKeywordEmail"
       ],
-      "totalLines": 255,
+      "totalLines": 256,
       "hasStructuralAnalysis": true
     },
     "src/lib/giveaway-dm.ts": {
@@ -17542,7 +17631,7 @@
     },
     "src/lib/giveaways.ts": {
       "filePath": "src/lib/giveaways.ts",
-      "contentHash": "740c2c2d2dd05492144a7841515772bcbdf2dd87801e9fbbbb3a57ffa1307c5a",
+      "contentHash": "fdfc8ce7e0af8972f6346f076d09b57a716d9e4f671fbc02c9ffd7b16d6d206a",
       "functions": [
         {
           "name": "getGiveaway",
@@ -17560,7 +17649,7 @@
         "giveaways",
         "getGiveaway"
       ],
-      "totalLines": 437,
+      "totalLines": 445,
       "hasStructuralAnalysis": true
     },
     "src/lib/google-calendar-invite.ts": {
@@ -18999,21 +19088,30 @@
     },
     "src/lib/supabase.ts": {
       "filePath": "src/lib/supabase.ts",
-      "contentHash": "43c6b8355ff590e8cf36e054ae780b4ac916074a39878a1a1f6b157fdde8b581",
-      "functions": [],
+      "contentHash": "71fa0a65de0543de46a51560353025210722f61a80c4ec245938ad2a48f4a733",
+      "functions": [
+        {
+          "name": "getClient",
+          "params": [],
+          "returnType": "SupabaseClient",
+          "exported": false,
+          "lineCount": 7
+        }
+      ],
       "classes": [],
       "imports": [
         {
           "source": "@supabase/supabase-js",
           "specifiers": [
-            "createClient"
+            "createClient",
+            "SupabaseClient"
           ]
         }
       ],
       "exports": [
         "supabase"
       ],
-      "totalLines": 9,
+      "totalLines": 22,
       "hasStructuralAnalysis": true
     },
     "src/lib/url-utils.ts": {
@@ -21910,6 +22008,75 @@
       ],
       "exports": [],
       "totalLines": 115,
+      "hasStructuralAnalysis": true
+    },
+    "tests/video-editor.test.ts": {
+      "filePath": "tests/video-editor.test.ts",
+      "contentHash": "e00e46ad2cbf95cfed4f902d6e1d74fc6e6c9dc0da16871b6341ae8e27f8cb48",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:assert/strict",
+          "specifiers": [
+            "assert"
+          ]
+        },
+        {
+          "source": "node:test",
+          "specifiers": [
+            "test"
+          ]
+        },
+        {
+          "source": "node:child_process",
+          "specifiers": [
+            "execFileSync"
+          ]
+        },
+        {
+          "source": "node:fs",
+          "specifiers": [
+            "readFileSync",
+            "statSync"
+          ]
+        },
+        {
+          "source": "node:path",
+          "specifiers": [
+            "join"
+          ]
+        },
+        {
+          "source": "../src/lib/giveaway-offers",
+          "specifiers": [
+            "offerForLevel"
+          ]
+        },
+        {
+          "source": "../src/lib/pack-page",
+          "specifiers": [
+            "validatePackContent"
+          ]
+        },
+        {
+          "source": "../src/lib/generic-giveaway-email",
+          "specifiers": [
+            "websiteGiveawayEmail"
+          ]
+        },
+        {
+          "source": "../src/app/giveaways/video-editor/pack",
+          "specifiers": [
+            "VIDEO_EDITOR_CONTENT",
+            "ZIP_PATH",
+            "EXAMPLE_PATH",
+            "TERMINAL_LINE"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 48,
       "hasStructuralAnalysis": true
     },
     "tests/waitlist-join-validation.test.ts": {

@@ -1306,172 +1306,6 @@
       "filePath": "src/app/giveaways/claude-md/pack.ts"
     },
     {
-      "id": "config:next.config.ts",
-      "type": "config",
-      "name": "next.config.ts",
-      "filePath": "next.config.ts",
-      "summary": "Configures Next.js tracing to include private AI Agent Income prompt-pack assets in both API handlers and exclude non-image event media from server bundles, with the Turbopack root fixed to the project directory. Defines legacy giveaway and dinner redirects, permanent portal redirects for sessions and the resource vault, and host-specific root rewrites for the decks playbook and passive-income landing page.",
-      "tags": [
-        "nextjs",
-        "build-configuration",
-        "output-tracing",
-        "redirects",
-        "host-rewrites"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "file:src/lib/events.tsx",
-      "type": "file",
-      "name": "events.tsx",
-      "filePath": "src/lib/events.tsx",
-      "summary": "Defines the typed event catalog for connection dinners, Ubud brunch, Joechella and AI workshops, including section content, hosts, SEO metadata, registration limits, calendar dates, checkout pricing, promos, donations and post-purchase email/setup configuration; host sections are populated from each event at module initialization. Optional heroVideoSrc/heroVideoPoster and mobile variants support festival media, while exported helpers resolve events, select and sort upcoming live events, compute discounts and manage donation selection.",
-      "tags": [
-        "event-catalog",
-        "data-model",
-        "pricing",
-        "date-filtering",
-        "hero-video"
-      ],
-      "complexity": "complex"
-    },
-    {
-      "id": "function:src/lib/events.tsx:getEventDiscountedPrice",
-      "type": "function",
-      "name": "getEventDiscountedPrice",
-      "filePath": "src/lib/events.tsx",
-      "summary": "Calculates an event ticket price using its optional promo, prioritizing fixed amount discounts over percentages and clamping discounted prices to zero.",
-      "tags": [
-        "pricing",
-        "promotion",
-        "utility"
-      ],
-      "complexity": "simple",
-      "lineRange": [
-        277,
-        279
-      ]
-    },
-    {
-      "id": "function:src/lib/events.tsx:resolvePromoCode",
-      "type": "function",
-      "name": "resolvePromoCode",
-      "filePath": "src/lib/events.tsx",
-      "summary": "Trims and uppercases an entered code, returning the matching event promotion regardless of case or null when absent or unrecognized.",
-      "tags": [
-        "promotion",
-        "lookup",
-        "normalization"
-      ],
-      "complexity": "simple",
-      "lineRange": [
-        281,
-        285
-      ]
-    },
-    {
-      "id": "function:src/lib/events.tsx:formatEventPrice",
-      "type": "function",
-      "name": "formatEventPrice",
-      "filePath": "src/lib/events.tsx",
-      "summary": "Formats an optionally discounted event price with its configured currency symbol, preserving whole numbers and using two decimal places for fractional prices.",
-      "tags": [
-        "pricing",
-        "formatting",
-        "utility"
-      ],
-      "complexity": "simple",
-      "lineRange": [
-        287,
-        291
-      ]
-    },
-    {
-      "id": "function:src/lib/events.tsx:formatDonationLabelNote",
-      "type": "function",
-      "name": "formatDonationLabelNote",
-      "filePath": "src/lib/events.tsx",
-      "summary": "Wraps an explicit donation note in parentheses or generates a suggested and minimum donation label using the event currency and a zero minimum fallback.",
-      "tags": [
-        "donation",
-        "formatting",
-        "pricing"
-      ],
-      "complexity": "simple",
-      "lineRange": [
-        293,
-        303
-      ]
-    },
-    {
-      "id": "function:src/lib/events.tsx:toggleDonationPreset",
-      "type": "function",
-      "name": "toggleDonationPreset",
-      "filePath": "src/lib/events.tsx",
-      "summary": "Adds or subtracts a donation preset according to its current selected state, clamps the result to the configured minimum and returns the updated amount and selection flag.",
-      "tags": [
-        "donation",
-        "state-transition",
-        "pricing"
-      ],
-      "complexity": "simple",
-      "lineRange": [
-        305,
-        322
-      ]
-    },
-    {
-      "id": "function:src/lib/events.tsx:getEventBySlug",
-      "type": "function",
-      "name": "getEventBySlug",
-      "filePath": "src/lib/events.tsx",
-      "summary": "Finds the first event with an exact matching slug in the shared catalog, returning undefined when no match exists.",
-      "tags": [
-        "event-catalog",
-        "lookup",
-        "utility"
-      ],
-      "complexity": "simple",
-      "lineRange": [
-        1909,
-        1911
-      ]
-    },
-    {
-      "id": "function:src/lib/events.tsx:getLiveEvents",
-      "type": "function",
-      "name": "getLiveEvents",
-      "filePath": "src/lib/events.tsx",
-      "summary": "Returns all catalog events marked live without applying date, manual-closure or registration-capacity filters.",
-      "tags": [
-        "event-catalog",
-        "filtering",
-        "event-status"
-      ],
-      "complexity": "simple",
-      "lineRange": [
-        1913,
-        1915
-      ]
-    },
-    {
-      "id": "function:src/lib/events.tsx:getUpcomingLiveEvents",
-      "type": "function",
-      "name": "getUpcomingLiveEvents",
-      "filePath": "src/lib/events.tsx",
-      "summary": "Filters live events whose end date, or fallback start date, has not passed the supplied time, retaining events without calendar dates. Sorts results by ascending start time with undated events last.",
-      "tags": [
-        "event-catalog",
-        "date-filtering",
-        "sorting"
-      ],
-      "complexity": "moderate",
-      "lineRange": [
-        1917,
-        1932
-      ]
-    },
-    {
       "id": "file:src/app/giveaways/desk-pet/pack.ts",
       "type": "file",
       "name": "pack.ts",
@@ -1532,141 +1366,6 @@
         "tested"
       ],
       "complexity": "simple"
-    },
-    {
-      "id": "file:src/lib/generic-giveaway-email.ts",
-      "type": "file",
-      "name": "generic-giveaway-email.ts",
-      "filePath": "src/lib/generic-giveaway-email.ts",
-      "summary": "Builds HTML and plain-text giveaway and Instagram sales keyword delivery emails, validates trusted giveaway links and ManyChat secrets, and maps website giveaway slugs to fixed delivery destinations.",
-      "tags": [
-        "email",
-        "giveaway",
-        "validation",
-        "manychat",
-        "security",
-        "tested"
-      ],
-      "complexity": "complex"
-    },
-    {
-      "id": "function:src/lib/generic-giveaway-email.ts:validateGiveawayLink",
-      "type": "function",
-      "name": "validateGiveawayLink",
-      "filePath": "src/lib/generic-giveaway-email.ts",
-      "lineRange": [
-        36,
-        56
-      ],
-      "summary": "Normalizes an HTTPS giveaway URL after rejecting invalid input, credentials, ports, and hosts or GitHub paths outside the trusted allowlist.",
-      "tags": [
-        "validation",
-        "security",
-        "url"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:src/lib/generic-giveaway-email.ts:sanitizeGiveawayName",
-      "type": "function",
-      "name": "sanitizeGiveawayName",
-      "filePath": "src/lib/generic-giveaway-email.ts",
-      "lineRange": [
-        71,
-        84
-      ],
-      "summary": "Strips markup and control characters, normalizes spacing and punctuation, limits the giveaway name length, and falls back to a readable source slug.",
-      "tags": [
-        "validation",
-        "sanitization",
-        "utility"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/generic-giveaway-email.ts:isValidManychatSecret",
-      "type": "function",
-      "name": "isValidManychatSecret",
-      "filePath": "src/lib/generic-giveaway-email.ts",
-      "lineRange": [
-        87,
-        97
-      ],
-      "summary": "Rejects missing shared secrets and uses constant-time byte comparisons to authenticate ManyChat requests, including mismatched-length handling.",
-      "tags": [
-        "authentication",
-        "manychat",
-        "security"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/generic-giveaway-email.ts:buildGenericGiveawayEmail",
-      "type": "function",
-      "name": "buildGenericGiveawayEmail",
-      "filePath": "src/lib/generic-giveaway-email.ts",
-      "lineRange": [
-        99,
-        149
-      ],
-      "summary": "Produces subject, HTML, and plain-text giveaway delivery content with escaped links, first-party campaign tracking, a membership link, and unsubscribe information.",
-      "tags": [
-        "email",
-        "giveaway",
-        "serialization"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:src/lib/generic-giveaway-email.ts:websiteGiveawayEmail",
-      "type": "function",
-      "name": "websiteGiveawayEmail",
-      "filePath": "src/lib/generic-giveaway-email.ts",
-      "lineRange": [
-        182,
-        185
-      ],
-      "summary": "Looks up an allowlisted website giveaway slug and returns its display name and fixed workshop giveaway URL, or null.",
-      "tags": [
-        "giveaway",
-        "lookup",
-        "email"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/generic-giveaway-email.ts:salesKeywordPage",
-      "type": "function",
-      "name": "salesKeywordPage",
-      "filePath": "src/lib/generic-giveaway-email.ts",
-      "lineRange": [
-        206,
-        208
-      ],
-      "summary": "Returns the fixed label and destination for an own-property Instagram sales keyword entry, or null for unknown sources.",
-      "tags": [
-        "lookup",
-        "instagram",
-        "validation"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/generic-giveaway-email.ts:buildSalesKeywordEmail",
-      "type": "function",
-      "name": "buildSalesKeywordEmail",
-      "filePath": "src/lib/generic-giveaway-email.ts",
-      "lineRange": [
-        210,
-        254
-      ],
-      "summary": "Builds a short HTML and plain-text sales keyword email from a fixed destination, adds first-party campaign tracking, and rejects unsupported sources.",
-      "tags": [
-        "email",
-        "instagram",
-        "validation"
-      ],
-      "complexity": "moderate"
     },
     {
       "id": "file:tests/desk-pet.test.ts",
@@ -2426,36 +2125,6 @@
       "complexity": "complex"
     },
     {
-      "id": "file:src/lib/giveaways.ts",
-      "type": "file",
-      "name": "giveaways.ts",
-      "filePath": "src/lib/giveaways.ts",
-      "summary": "Maintains the typed giveaway catalog used to populate the giveaway index, with slugs, descriptions, icons and badges plus a lookup helper.",
-      "tags": [
-        "data-model",
-        "giveaway-catalog",
-        "content-registry"
-      ],
-      "complexity": "complex"
-    },
-    {
-      "id": "function:src/lib/giveaways.ts:getGiveaway",
-      "type": "function",
-      "name": "getGiveaway",
-      "filePath": "src/lib/giveaways.ts",
-      "lineRange": [
-        434,
-        436
-      ],
-      "summary": "Finds a giveaway entry by its exact slug, returning undefined when no entry matches.",
-      "tags": [
-        "utility",
-        "lookup",
-        "giveaway-catalog"
-      ],
-      "complexity": "simple"
-    },
-    {
       "id": "document:public/desk-pet-prompt.txt",
       "type": "document",
       "name": "desk-pet-prompt.txt",
@@ -2527,6 +2196,691 @@
         "metadata"
       ],
       "complexity": "simple"
+    },
+    {
+      "id": "file:src/app/giveaways/video-editor/pack.ts",
+      "type": "file",
+      "name": "pack.ts",
+      "filePath": "src/app/giveaways/video-editor/pack.ts",
+      "summary": "Defines the legacy builder-level Video Editor content pack, setup command, archive path and example clip for a local Claude Code editing workflow. The free page and archive URL are redirected by Next.js configuration.",
+      "tags": [
+        "content-pack",
+        "video-editor",
+        "giveaway",
+        "tested"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/app/giveaways/video-editor/page.tsx",
+      "type": "file",
+      "name": "page.tsx",
+      "filePath": "src/app/giveaways/video-editor/page.tsx",
+      "summary": "Defines the legacy Video Editor giveaway page using shared PackPage rendering and HowTo structured data. Its route now redirects to the paid Video Agent through Next.js configuration.",
+      "tags": [
+        "page",
+        "giveaway",
+        "structured-data",
+        "tested"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/app/giveaways/video-editor/page.tsx:VideoEditorPage",
+      "type": "function",
+      "name": "VideoEditorPage",
+      "filePath": "src/app/giveaways/video-editor/page.tsx",
+      "lineRange": [
+        25,
+        32
+      ],
+      "summary": "Renders the legacy Video Editor pack and its HowTo JSON-LD; route redirects are applied by Next.js configuration before page delivery.",
+      "tags": [
+        "page",
+        "giveaway",
+        "structured-data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/events/joechella/FestivalHero.tsx",
+      "type": "file",
+      "name": "FestivalHero.tsx",
+      "filePath": "src/components/events/joechella/FestivalHero.tsx",
+      "summary": "Renders the Joechella festival hero with ambient video, title, scrolling ticker, event details and registration calls to action. The December celebration includes a link to the full-week event website.",
+      "tags": [
+        "component",
+        "festival",
+        "event-registration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/events/joechella/FestivalHero.tsx:Ticker",
+      "type": "function",
+      "name": "Ticker",
+      "filePath": "src/components/events/joechella/FestivalHero.tsx",
+      "lineRange": [
+        16,
+        41
+      ],
+      "summary": "Renders two copies of a repeating festival information ticker for continuous marquee presentation.",
+      "tags": [
+        "component",
+        "festival",
+        "event-registration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/events/joechella/FestivalHero.tsx:FestivalHero",
+      "type": "function",
+      "name": "FestivalHero",
+      "filePath": "src/components/events/joechella/FestivalHero.tsx",
+      "lineRange": [
+        43,
+        172
+      ],
+      "summary": "Presents festival media, event details and registration controls, with a full-week celebration link for the December event.",
+      "tags": [
+        "component",
+        "festival",
+        "event-registration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/components/events/joechella/ProgramTimeline.tsx",
+      "type": "file",
+      "name": "ProgramTimeline.tsx",
+      "filePath": "src/components/events/joechella/ProgramTimeline.tsx",
+      "summary": "Renders grouped festival programming with activity icons, simultaneous sessions and tone-specific styling. Morning notes highlight that access is restricted to guests staying on site.",
+      "tags": [
+        "component",
+        "festival",
+        "timeline"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/components/events/joechella/ProgramTimeline.tsx:ToneIcon",
+      "type": "function",
+      "name": "ToneIcon",
+      "filePath": "src/components/events/joechella/ProgramTimeline.tsx",
+      "lineRange": [
+        31,
+        70
+      ],
+      "summary": "Selects an illustrated icon for the morning, afternoon, sunset or night programming tone.",
+      "tags": [
+        "component",
+        "festival",
+        "timeline"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/events/joechella/ProgramTimeline.tsx:HighlightIcon",
+      "type": "function",
+      "name": "HighlightIcon",
+      "filePath": "src/components/events/joechella/ProgramTimeline.tsx",
+      "lineRange": [
+        72,
+        95
+      ],
+      "summary": "Renders the small visual indicator corresponding to a program highlight kind.",
+      "tags": [
+        "component",
+        "festival",
+        "timeline"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/events/joechella/ProgramTimeline.tsx:ItemTitle",
+      "type": "function",
+      "name": "ItemTitle",
+      "filePath": "src/components/events/joechella/ProgramTimeline.tsx",
+      "lineRange": [
+        98,
+        107
+      ],
+      "summary": "Renders an activity title and treats the announcement suffix as secondary text.",
+      "tags": [
+        "component",
+        "festival",
+        "timeline"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/events/joechella/ProgramTimeline.tsx:ItemCard",
+      "type": "function",
+      "name": "ItemCard",
+      "filePath": "src/components/events/joechella/ProgramTimeline.tsx",
+      "lineRange": [
+        109,
+        143
+      ],
+      "summary": "Renders an individual program activity with its title, body and highlight styling.",
+      "tags": [
+        "component",
+        "festival",
+        "timeline"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/events/joechella/ProgramTimeline.tsx:Group",
+      "type": "function",
+      "name": "Group",
+      "filePath": "src/components/events/joechella/ProgramTimeline.tsx",
+      "lineRange": [
+        160,
+        246
+      ],
+      "summary": "Renders a timeline group, combines simultaneous activities into rows and emphasizes restricted morning attendance notes.",
+      "tags": [
+        "component",
+        "festival",
+        "timeline"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/events/joechella/ProgramTimeline.tsx:ProgramTimeline",
+      "type": "function",
+      "name": "ProgramTimeline",
+      "filePath": "src/components/events/joechella/ProgramTimeline.tsx",
+      "lineRange": [
+        248,
+        271
+      ],
+      "summary": "Renders the festival program section by composing its titled timeline groups.",
+      "tags": [
+        "component",
+        "festival",
+        "timeline"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/lib/events.tsx",
+      "type": "file",
+      "name": "events.tsx",
+      "filePath": "src/lib/events.tsx",
+      "summary": "Defines the typed event catalog for connection dinners, Ubud brunch, Joechella and AI workshops, including section content, hosts, SEO metadata, registration limits, calendar dates, checkout pricing, promos, donations and post-purchase email/setup configuration; host sections are populated from each event at module initialization. Optional heroVideoSrc/heroVideoPoster and mobile variants support festival media, while exported helpers resolve events, select and sort upcoming live events, compute discounts and manage donation selection. The festival schedule distinguishes on-site morning access from day-pass entry and groups the afternoon, pool party and sunset programming.",
+      "tags": [
+        "event-catalog",
+        "data-model",
+        "pricing",
+        "date-filtering",
+        "hero-video"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/lib/events.tsx:getEventDiscountedPrice",
+      "type": "function",
+      "name": "getEventDiscountedPrice",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        277,
+        279
+      ],
+      "summary": "Calculates an event ticket price using its optional promo, prioritizing fixed amount discounts over percentages and clamping discounted prices to zero.",
+      "tags": [
+        "pricing",
+        "promotion",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/events.tsx:resolvePromoCode",
+      "type": "function",
+      "name": "resolvePromoCode",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        281,
+        285
+      ],
+      "summary": "Trims and uppercases an entered code, returning the matching event promotion regardless of case or null when absent or unrecognized.",
+      "tags": [
+        "promotion",
+        "lookup",
+        "normalization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/events.tsx:formatEventPrice",
+      "type": "function",
+      "name": "formatEventPrice",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        287,
+        291
+      ],
+      "summary": "Formats an optionally discounted event price with its configured currency symbol, preserving whole numbers and using two decimal places for fractional prices.",
+      "tags": [
+        "pricing",
+        "formatting",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/events.tsx:formatDonationLabelNote",
+      "type": "function",
+      "name": "formatDonationLabelNote",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        293,
+        303
+      ],
+      "summary": "Wraps an explicit donation note in parentheses or generates a suggested and minimum donation label using the event currency and a zero minimum fallback.",
+      "tags": [
+        "donation",
+        "formatting",
+        "pricing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/events.tsx:toggleDonationPreset",
+      "type": "function",
+      "name": "toggleDonationPreset",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        305,
+        322
+      ],
+      "summary": "Adds or subtracts a donation preset according to its current selected state, clamps the result to the configured minimum and returns the updated amount and selection flag.",
+      "tags": [
+        "donation",
+        "state-transition",
+        "pricing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/events.tsx:getEventBySlug",
+      "type": "function",
+      "name": "getEventBySlug",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        1898,
+        1900
+      ],
+      "summary": "Finds the first event with an exact matching slug in the shared catalog, returning undefined when no match exists.",
+      "tags": [
+        "event-catalog",
+        "lookup",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/events.tsx:getLiveEvents",
+      "type": "function",
+      "name": "getLiveEvents",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        1902,
+        1904
+      ],
+      "summary": "Returns all catalog events marked live without applying date, manual-closure or registration-capacity filters.",
+      "tags": [
+        "event-catalog",
+        "filtering",
+        "event-status"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/events.tsx:getUpcomingLiveEvents",
+      "type": "function",
+      "name": "getUpcomingLiveEvents",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        1906,
+        1921
+      ],
+      "summary": "Filters live events whose end date, or fallback start date, has not passed the supplied time, retaining events without calendar dates. Sorts results by ascending start time with undated events last.",
+      "tags": [
+        "event-catalog",
+        "date-filtering",
+        "sorting"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/lib/supabase.ts",
+      "type": "file",
+      "name": "supabase.ts",
+      "filePath": "src/lib/supabase.ts",
+      "summary": "Exports a lazy Supabase client proxy that creates and caches the authenticated client on first property access, allowing imports during preview builds without production environment values. Methods are bound to the real client.",
+      "tags": [
+        "database",
+        "lazy-initialization",
+        "supabase"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/lib/generic-giveaway-email.ts",
+      "type": "file",
+      "name": "generic-giveaway-email.ts",
+      "filePath": "src/lib/generic-giveaway-email.ts",
+      "summary": "Builds HTML and plain-text giveaway and Instagram sales keyword delivery emails, validates trusted giveaway links and ManyChat secrets, and maps website giveaway slugs to fixed delivery destinations. Includes the legacy Video Editor website giveaway slug in the fixed-link registry.",
+      "tags": [
+        "email",
+        "giveaway",
+        "validation",
+        "manychat",
+        "security",
+        "tested"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/lib/generic-giveaway-email.ts:validateGiveawayLink",
+      "type": "function",
+      "name": "validateGiveawayLink",
+      "filePath": "src/lib/generic-giveaway-email.ts",
+      "lineRange": [
+        36,
+        56
+      ],
+      "summary": "Normalizes an HTTPS giveaway URL after rejecting invalid input, credentials, ports, and hosts or GitHub paths outside the trusted allowlist.",
+      "tags": [
+        "validation",
+        "security",
+        "url"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/generic-giveaway-email.ts:sanitizeGiveawayName",
+      "type": "function",
+      "name": "sanitizeGiveawayName",
+      "filePath": "src/lib/generic-giveaway-email.ts",
+      "lineRange": [
+        71,
+        84
+      ],
+      "summary": "Strips markup and control characters, normalizes spacing and punctuation, limits the giveaway name length, and falls back to a readable source slug.",
+      "tags": [
+        "validation",
+        "sanitization",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/generic-giveaway-email.ts:isValidManychatSecret",
+      "type": "function",
+      "name": "isValidManychatSecret",
+      "filePath": "src/lib/generic-giveaway-email.ts",
+      "lineRange": [
+        87,
+        97
+      ],
+      "summary": "Rejects missing shared secrets and uses constant-time byte comparisons to authenticate ManyChat requests, including mismatched-length handling.",
+      "tags": [
+        "authentication",
+        "manychat",
+        "security"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/generic-giveaway-email.ts:buildGenericGiveawayEmail",
+      "type": "function",
+      "name": "buildGenericGiveawayEmail",
+      "filePath": "src/lib/generic-giveaway-email.ts",
+      "lineRange": [
+        99,
+        149
+      ],
+      "summary": "Produces subject, HTML, and plain-text giveaway delivery content with escaped links, first-party campaign tracking, a membership link, and unsubscribe information.",
+      "tags": [
+        "email",
+        "giveaway",
+        "serialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/generic-giveaway-email.ts:websiteGiveawayEmail",
+      "type": "function",
+      "name": "websiteGiveawayEmail",
+      "filePath": "src/lib/generic-giveaway-email.ts",
+      "lineRange": [
+        183,
+        186
+      ],
+      "summary": "Looks up an allowlisted website giveaway slug and returns its display name and fixed workshop giveaway URL, or null.",
+      "tags": [
+        "giveaway",
+        "lookup",
+        "email"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/generic-giveaway-email.ts:salesKeywordPage",
+      "type": "function",
+      "name": "salesKeywordPage",
+      "filePath": "src/lib/generic-giveaway-email.ts",
+      "lineRange": [
+        207,
+        209
+      ],
+      "summary": "Returns the fixed label and destination for an own-property Instagram sales keyword entry, or null for unknown sources.",
+      "tags": [
+        "lookup",
+        "instagram",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/generic-giveaway-email.ts:buildSalesKeywordEmail",
+      "type": "function",
+      "name": "buildSalesKeywordEmail",
+      "filePath": "src/lib/generic-giveaway-email.ts",
+      "lineRange": [
+        211,
+        255
+      ],
+      "summary": "Builds a short HTML and plain-text sales keyword email from a fixed destination, adds first-party campaign tracking, and rejects unsupported sources.",
+      "tags": [
+        "email",
+        "instagram",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/lib/giveaways.ts",
+      "type": "file",
+      "name": "giveaways.ts",
+      "filePath": "src/lib/giveaways.ts",
+      "summary": "Maintains the typed giveaway catalog used to populate the giveaway index, with slugs, descriptions, icons and badges plus a lookup helper. Includes the Video Editor catalog entry, whose route is redirected to the paid Video Agent.",
+      "tags": [
+        "data-model",
+        "giveaway-catalog",
+        "content-registry"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/lib/giveaways.ts:getGiveaway",
+      "type": "function",
+      "name": "getGiveaway",
+      "filePath": "src/lib/giveaways.ts",
+      "lineRange": [
+        442,
+        444
+      ],
+      "summary": "Finds a giveaway entry by its exact slug, returning undefined when no entry matches.",
+      "tags": [
+        "utility",
+        "lookup",
+        "giveaway-catalog"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:tests/video-editor.test.ts",
+      "type": "file",
+      "name": "video-editor.test.ts",
+      "filePath": "tests/video-editor.test.ts",
+      "summary": "Checks legacy Video Editor pack validity, builder offer mapping, page wiring, asset presence, archive contents, audio synchronization fixes and website email registration. These source assertions do not establish that the redirected route offers a free download.",
+      "tags": [
+        "test",
+        "video-editor",
+        "content-integrity"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:next.config.ts",
+      "type": "config",
+      "name": "next.config.ts",
+      "filePath": "next.config.ts",
+      "summary": "Configures Next.js build tracing, media exclusions, legacy redirects and host rewrites. Redirects the former free Video Editor page and ZIP to the paid Video Agent destination.",
+      "tags": [
+        "configuration",
+        "routing",
+        "build-system"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/app/giveaways/video-editor/layout.tsx",
+      "type": "file",
+      "name": "layout.tsx",
+      "filePath": "src/app/giveaways/video-editor/layout.tsx",
+      "summary": "Provides canonical, Open Graph and Twitter metadata for the legacy Video Editor giveaway route and passes through its children; Next.js redirects this route to the paid Video Agent.",
+      "tags": [
+        "metadata",
+        "giveaway",
+        "legacy-route"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/app/giveaways/video-editor/layout.tsx:VideoEditorLayout",
+      "type": "function",
+      "name": "VideoEditorLayout",
+      "filePath": "src/app/giveaways/video-editor/layout.tsx",
+      "lineRange": [
+        34,
+        36
+      ],
+      "summary": "Passes through nested Video Editor page content alongside the exported route metadata.",
+      "tags": [
+        "metadata",
+        "giveaway",
+        "legacy-route"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/events/ScrollToRegisterButton.tsx",
+      "type": "file",
+      "name": "ScrollToRegisterButton.tsx",
+      "filePath": "src/components/events/ScrollToRegisterButton.tsx",
+      "summary": "Referenced project dependency recovered from the file inventory. Its source was not semantically re-analyzed in this incremental update.",
+      "tags": [
+        "reference-only",
+        "inventory-recovery",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/events/joechella/AmbientHeroVideo.tsx",
+      "type": "file",
+      "name": "AmbientHeroVideo.tsx",
+      "filePath": "src/components/events/joechella/AmbientHeroVideo.tsx",
+      "summary": "Referenced project dependency recovered from the file inventory. Its source was not semantically re-analyzed in this incremental update.",
+      "tags": [
+        "reference-only",
+        "inventory-recovery",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/components/events/joechella/festival.css",
+      "type": "file",
+      "name": "festival.css",
+      "filePath": "src/components/events/joechella/festival.css",
+      "summary": "Referenced project dependency recovered from the file inventory. Its source was not semantically re-analyzed in this incremental update.",
+      "tags": [
+        "reference-only",
+        "inventory-recovery",
+        "markup"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/components/giveaways/PackPage.tsx",
+      "type": "file",
+      "name": "PackPage.tsx",
+      "filePath": "src/components/giveaways/PackPage.tsx",
+      "summary": "Referenced project dependency recovered from the file inventory. Its source was not semantically re-analyzed in this incremental update.",
+      "tags": [
+        "reference-only",
+        "inventory-recovery",
+        "code"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/lib/giveaway-offers.ts",
+      "type": "file",
+      "name": "giveaway-offers.ts",
+      "filePath": "src/lib/giveaway-offers.ts",
+      "summary": "Referenced project dependency recovered from the file inventory. Its source was not semantically re-analyzed in this incremental update.",
+      "tags": [
+        "reference-only",
+        "inventory-recovery",
+        "code",
+        "tested"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/lib/pack-page.ts",
+      "type": "file",
+      "name": "pack-page.ts",
+      "filePath": "src/lib/pack-page.ts",
+      "summary": "Referenced project dependency recovered from the file inventory. Its source was not semantically re-analyzed in this incremental update.",
+      "tags": [
+        "reference-only",
+        "inventory-recovery",
+        "code",
+        "tested"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/lib/utm.ts",
+      "type": "file",
+      "name": "utm.ts",
+      "filePath": "src/lib/utm.ts",
+      "summary": "Referenced project dependency recovered from the file inventory. Its source was not semantically re-analyzed in this incremental update.",
+      "tags": [
+        "reference-only",
+        "inventory-recovery",
+        "code"
+      ],
+      "complexity": "moderate"
     }
   ],
   "edges": [
@@ -2909,160 +3263,6 @@
       "weight": 0.5
     },
     {
-      "source": "config:next.config.ts",
-      "target": "file:src/app/events/[slug]/page.tsx",
-      "type": "configures",
-      "direction": "forward",
-      "weight": 0.6
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:getEventDiscountedPrice",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:getEventDiscountedPrice",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:resolvePromoCode",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:resolvePromoCode",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:formatEventPrice",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:formatEventPrice",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:formatDonationLabelNote",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:formatDonationLabelNote",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:toggleDonationPreset",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:toggleDonationPreset",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:getEventBySlug",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:getEventBySlug",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:getLiveEvents",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:getLiveEvents",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:getUpcomingLiveEvents",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:getUpcomingLiveEvents",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/lib/events.tsx:formatEventPrice",
-      "target": "function:src/lib/events.tsx:getEventDiscountedPrice",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/lib/events.tsx:getUpcomingLiveEvents",
-      "target": "function:src/lib/events.tsx:getLiveEvents",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/app/events/[slug]/page.tsx",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/app/events/[slug]/setup/page.tsx",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/app/events/page.tsx",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
       "source": "file:src/app/giveaways/desk-pet/pack.ts",
       "target": "file:src/app/giveaways/desk-pet/prompt.ts",
       "type": "imports",
@@ -3091,104 +3291,6 @@
       "weight": 0.7
     },
     {
-      "source": "file:src/lib/generic-giveaway-email.ts",
-      "target": "function:src/lib/generic-giveaway-email.ts:validateGiveawayLink",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/generic-giveaway-email.ts",
-      "target": "function:src/lib/generic-giveaway-email.ts:validateGiveawayLink",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/generic-giveaway-email.ts",
-      "target": "function:src/lib/generic-giveaway-email.ts:sanitizeGiveawayName",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/generic-giveaway-email.ts",
-      "target": "function:src/lib/generic-giveaway-email.ts:sanitizeGiveawayName",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/generic-giveaway-email.ts",
-      "target": "function:src/lib/generic-giveaway-email.ts:isValidManychatSecret",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/generic-giveaway-email.ts",
-      "target": "function:src/lib/generic-giveaway-email.ts:isValidManychatSecret",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/generic-giveaway-email.ts",
-      "target": "function:src/lib/generic-giveaway-email.ts:buildGenericGiveawayEmail",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/generic-giveaway-email.ts",
-      "target": "function:src/lib/generic-giveaway-email.ts:buildGenericGiveawayEmail",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/generic-giveaway-email.ts",
-      "target": "function:src/lib/generic-giveaway-email.ts:websiteGiveawayEmail",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/generic-giveaway-email.ts",
-      "target": "function:src/lib/generic-giveaway-email.ts:websiteGiveawayEmail",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/generic-giveaway-email.ts",
-      "target": "function:src/lib/generic-giveaway-email.ts:salesKeywordPage",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/generic-giveaway-email.ts",
-      "target": "function:src/lib/generic-giveaway-email.ts:salesKeywordPage",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/generic-giveaway-email.ts",
-      "target": "function:src/lib/generic-giveaway-email.ts:buildSalesKeywordEmail",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/generic-giveaway-email.ts",
-      "target": "function:src/lib/generic-giveaway-email.ts:buildSalesKeywordEmail",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
       "source": "file:tests/desk-pet.test.ts",
       "target": "file:src/app/giveaways/desk-pet/pack.ts",
       "type": "imports",
@@ -3201,20 +3303,6 @@
       "type": "imports",
       "direction": "forward",
       "weight": 0.7
-    },
-    {
-      "source": "file:tests/desk-pet.test.ts",
-      "target": "file:src/lib/generic-giveaway-email.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "function:src/lib/generic-giveaway-email.ts:buildSalesKeywordEmail",
-      "target": "function:src/lib/generic-giveaway-email.ts:salesKeywordPage",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
     },
     {
       "source": "file:src/app/giveaways/desk-pet/pack.ts",
@@ -3232,13 +3320,6 @@
     },
     {
       "source": "file:src/app/giveaways/desk-pet/prompt.ts",
-      "target": "file:tests/desk-pet.test.ts",
-      "type": "tested_by",
-      "direction": "forward",
-      "weight": 0.5
-    },
-    {
-      "source": "file:src/lib/generic-giveaway-email.ts",
       "target": "file:tests/desk-pet.test.ts",
       "type": "tested_by",
       "direction": "forward",
@@ -3924,20 +4005,6 @@
       "weight": 0.5
     },
     {
-      "source": "file:src/lib/giveaways.ts",
-      "target": "function:src/lib/giveaways.ts:getGiveaway",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/giveaways.ts",
-      "target": "function:src/lib/giveaways.ts:getGiveaway",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
       "source": "file:src/app/giveaways/desk-pet/layout.tsx",
       "target": "function:src/app/giveaways/desk-pet/layout.tsx:DeskPetLayout",
       "type": "contains",
@@ -3964,30 +4031,6 @@
       "type": "exports",
       "direction": "forward",
       "weight": 0.8
-    },
-    {
-      "source": "file:tests/free-ai-tools.test.ts",
-      "target": "file:src/lib/giveaways.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
-      "source": "file:tests/linkedin-kit.test.ts",
-      "target": "file:src/lib/generic-giveaway-email.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
-      "source": "file:tests/linkedin-kit.test.ts",
-      "target": "file:src/lib/giveaways.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
     },
     {
       "source": "file:src/app/sitemap.ts",
@@ -4014,12 +4057,738 @@
       "description": "PROMPT_PATH points to /desk-pet-prompt.txt; ONE_LINE_COMMAND fetches this public setup prompt."
     },
     {
-      "source": "document:public/desk-pet-prompt.txt",
-      "target": "file:tests/desk-pet.test.ts",
+      "source": "file:src/app/events/[slug]/page.tsx",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/events/[slug]/setup/page.tsx",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/events/page.tsx",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:tests/desk-pet.test.ts",
+      "target": "file:src/lib/generic-giveaway-email.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:tests/free-ai-tools.test.ts",
+      "target": "file:src/lib/giveaways.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:tests/linkedin-kit.test.ts",
+      "target": "file:src/lib/generic-giveaway-email.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:tests/linkedin-kit.test.ts",
+      "target": "file:src/lib/giveaways.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/app/giveaways/video-editor/pack.ts",
+      "target": "file:src/lib/pack-page.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/video-editor/page.tsx",
+      "target": "function:src/app/giveaways/video-editor/page.tsx:VideoEditorPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/app/giveaways/video-editor/page.tsx",
+      "target": "function:src/app/giveaways/video-editor/page.tsx:VideoEditorPage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/giveaways/video-editor/page.tsx",
+      "target": "file:src/app/giveaways/video-editor/pack.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/video-editor/page.tsx",
+      "target": "file:src/components/giveaways/PackPage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/joechella/FestivalHero.tsx",
+      "target": "function:src/components/events/joechella/FestivalHero.tsx:Ticker",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/events/joechella/FestivalHero.tsx",
+      "target": "function:src/components/events/joechella/FestivalHero.tsx:FestivalHero",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/events/joechella/FestivalHero.tsx",
+      "target": "function:src/components/events/joechella/FestivalHero.tsx:FestivalHero",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/events/joechella/FestivalHero.tsx",
+      "target": "file:src/components/events/joechella/AmbientHeroVideo.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/joechella/FestivalHero.tsx",
+      "target": "file:src/components/events/joechella/festival.css",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/joechella/FestivalHero.tsx",
+      "target": "file:src/components/events/ScrollToRegisterButton.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/joechella/FestivalHero.tsx",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/joechella/ProgramTimeline.tsx",
+      "target": "function:src/components/events/joechella/ProgramTimeline.tsx:ToneIcon",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/events/joechella/ProgramTimeline.tsx",
+      "target": "function:src/components/events/joechella/ProgramTimeline.tsx:HighlightIcon",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/events/joechella/ProgramTimeline.tsx",
+      "target": "function:src/components/events/joechella/ProgramTimeline.tsx:ItemTitle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/events/joechella/ProgramTimeline.tsx",
+      "target": "function:src/components/events/joechella/ProgramTimeline.tsx:ItemCard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/events/joechella/ProgramTimeline.tsx",
+      "target": "function:src/components/events/joechella/ProgramTimeline.tsx:Group",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/events/joechella/ProgramTimeline.tsx",
+      "target": "function:src/components/events/joechella/ProgramTimeline.tsx:ProgramTimeline",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/events/joechella/ProgramTimeline.tsx",
+      "target": "function:src/components/events/joechella/ProgramTimeline.tsx:ProgramTimeline",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/events/joechella/ProgramTimeline.tsx",
+      "target": "file:src/components/events/joechella/festival.css",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/joechella/ProgramTimeline.tsx",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:getEventDiscountedPrice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:getEventDiscountedPrice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:resolvePromoCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:resolvePromoCode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:formatEventPrice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:formatEventPrice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:formatDonationLabelNote",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:formatDonationLabelNote",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:toggleDonationPreset",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:toggleDonationPreset",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:getEventBySlug",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:getEventBySlug",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:getLiveEvents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:getLiveEvents",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:getUpcomingLiveEvents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:getUpcomingLiveEvents",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/lib/events.tsx:formatEventPrice",
+      "target": "function:src/lib/events.tsx:getEventDiscountedPrice",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/lib/events.tsx:getUpcomingLiveEvents",
+      "target": "function:src/lib/events.tsx:getLiveEvents",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:validateGiveawayLink",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:validateGiveawayLink",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:sanitizeGiveawayName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:sanitizeGiveawayName",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:isValidManychatSecret",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:isValidManychatSecret",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:buildGenericGiveawayEmail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:buildGenericGiveawayEmail",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:websiteGiveawayEmail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:websiteGiveawayEmail",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:salesKeywordPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:salesKeywordPage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:buildSalesKeywordEmail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "function:src/lib/generic-giveaway-email.ts:buildSalesKeywordEmail",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/lib/generic-giveaway-email.ts:buildSalesKeywordEmail",
+      "target": "function:src/lib/generic-giveaway-email.ts:salesKeywordPage",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "file:src/lib/utm.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/giveaways.ts",
+      "target": "function:src/lib/giveaways.ts:getGiveaway",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/giveaways.ts",
+      "target": "function:src/lib/giveaways.ts:getGiveaway",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tests/video-editor.test.ts",
+      "target": "file:src/app/giveaways/video-editor/pack.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:tests/video-editor.test.ts",
+      "target": "file:src/lib/generic-giveaway-email.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:tests/video-editor.test.ts",
+      "target": "file:src/lib/giveaway-offers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:tests/video-editor.test.ts",
+      "target": "file:src/lib/pack-page.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/video-editor/pack.ts",
+      "target": "file:tests/video-editor.test.ts",
       "type": "tested_by",
       "direction": "forward",
-      "weight": 0.9,
-      "description": "Checks the distributed prompt exists and exactly matches DESK_PET_PROMPT plus a newline."
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/lib/generic-giveaway-email.ts",
+      "target": "file:tests/video-editor.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/lib/giveaway-offers.ts",
+      "target": "file:tests/video-editor.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/lib/pack-page.ts",
+      "target": "file:tests/video-editor.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/app/giveaways/video-editor/page.tsx",
+      "target": "file:tests/video-editor.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:next.config.ts",
+      "target": "file:src/app/giveaways/video-editor/page.tsx",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:src/app/giveaways/video-editor/layout.tsx",
+      "target": "function:src/app/giveaways/video-editor/layout.tsx:VideoEditorLayout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/app/giveaways/video-editor/layout.tsx",
+      "target": "function:src/app/giveaways/video-editor/layout.tsx:VideoEditorLayout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/giveaways/video-editor/layout.tsx",
+      "target": "file:src/app/giveaways/video-editor/page.tsx",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:src/app/giveaways/ai-behavior-quiz/pack.ts",
+      "target": "file:src/lib/pack-page.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/app/giveaways/ai-behavior-quiz/page.tsx",
+      "target": "file:src/components/giveaways/PackPage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/app/giveaways/ai-levels-quiz/pack.ts",
+      "target": "file:src/lib/pack-page.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/app/giveaways/ai-levels-quiz/page.tsx",
+      "target": "file:src/components/giveaways/PackPage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/app/giveaways/chat-to-flowchart/pack.ts",
+      "target": "file:src/lib/pack-page.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/app/giveaways/chat-to-flowchart/page.tsx",
+      "target": "file:src/components/giveaways/PackPage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/app/giveaways/claude-md/pack.ts",
+      "target": "file:src/lib/pack-page.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/app/giveaways/desk-pet/pack.ts",
+      "target": "file:src/lib/pack-page.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/app/giveaways/desk-pet/page.tsx",
+      "target": "file:src/components/giveaways/PackPage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/app/giveaways/film/pack.ts",
+      "target": "file:src/lib/pack-page.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/app/giveaways/film/page.tsx",
+      "target": "file:src/components/giveaways/PackPage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-concat/page.tsx",
+      "target": "file:src/components/giveaways/PackPage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-salesman/page.tsx",
+      "target": "file:src/components/giveaways/PackPage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/app/giveaways/linkedin-kit/pack.ts",
+      "target": "file:src/lib/pack-page.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/app/giveaways/linkedin-kit/page.tsx",
+      "target": "file:src/components/giveaways/PackPage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/components/giveaways/PackPage.tsx",
+      "target": "file:src/lib/giveaway-offers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/components/giveaways/PackPage.tsx",
+      "target": "file:src/lib/pack-page.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/lib/free-ai-tools.ts",
+      "target": "file:src/lib/giveaway-offers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/lib/pack-page.ts",
+      "target": "file:src/lib/giveaway-offers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:tests/desk-pet.test.ts",
+      "target": "file:src/lib/giveaway-offers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:tests/desk-pet.test.ts",
+      "target": "file:src/lib/pack-page.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:tests/free-ai-tools.test.ts",
+      "target": "file:src/lib/giveaway-offers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:tests/linkedin-kit.test.ts",
+      "target": "file:src/lib/giveaway-offers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:tests/linkedin-kit.test.ts",
+      "target": "file:src/lib/pack-page.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
     }
   ],
   "version": "1.0.0",
@@ -4042,8 +4811,8 @@
       "GSAP"
     ],
     "description": "Masterminds Workshop Site is a Next.js application for event discovery and registration, workshop learning, and giveaway resource distribution, with shared content catalogs, payment integration, and email delivery.",
-    "analyzedAt": "2026-11-02T20:23:21.354049+00:00",
-    "gitCommitHash": "e8b185b28be6323b7f32afc53f4f0ef504502071"
+    "analyzedAt": "2026-11-05T20:06:37.682458+00:00",
+    "gitCommitHash": "31af93d9a652a0612690998381cff32a27d8da63"
   },
   "layers": [
     {
@@ -4097,20 +4866,27 @@
         "file:src/app/giveaways/linkedin-kit/layout.tsx",
         "file:src/app/giveaways/linkedin-kit/pack.ts",
         "file:src/app/giveaways/linkedin-kit/page.tsx",
-        "file:src/app/giveaways/linkedin-kit/prompt.ts"
+        "file:src/app/giveaways/linkedin-kit/prompt.ts",
+        "file:src/app/giveaways/video-editor/layout.tsx",
+        "file:src/app/giveaways/video-editor/pack.ts",
+        "file:src/app/giveaways/video-editor/page.tsx"
       ]
     },
     {
       "id": "layer:shared-libraries",
       "name": "Shared Libraries",
-      "description": "Shared event and giveaway catalogs, pricing helpers, email builders, follow-up planning and sitemap generation support workshop and resource delivery.",
+      "description": "Event and giveaway catalogs, pricing and email helpers, resource contracts and offer definitions support delivery; a lazy Supabase proxy defers client creation until first use.",
       "nodeIds": [
         "file:src/app/sitemap.ts",
         "file:src/lib/events.tsx",
         "file:src/lib/free-ai-tools.ts",
         "file:src/lib/generic-giveaway-email.ts",
         "file:src/lib/giveaway-followups.ts",
-        "file:src/lib/giveaways.ts"
+        "file:src/lib/giveaway-offers.ts",
+        "file:src/lib/giveaways.ts",
+        "file:src/lib/pack-page.ts",
+        "file:src/lib/supabase.ts",
+        "file:src/lib/utm.ts"
       ]
     },
     {
@@ -4136,20 +4912,34 @@
     {
       "id": "layer:test",
       "name": "Tests",
-      "description": "Catalog, LinkedIn Kit, Desk Pet and follow-up tests protect resource metadata, prompt parity, email delivery rules and suppression behavior.",
+      "description": "Catalog, resource pack and follow-up tests protect content contracts, asset integrity, email mappings and suppression behavior, including legacy Video Editor source guarantees.",
       "nodeIds": [
         "file:tests/desk-pet.test.ts",
         "file:tests/free-ai-tools.test.ts",
         "file:tests/giveaway-followups.test.ts",
-        "file:tests/linkedin-kit.test.ts"
+        "file:tests/linkedin-kit.test.ts",
+        "file:tests/video-editor.test.ts"
       ]
     },
     {
       "id": "layer:config",
       "name": "Configuration",
-      "description": "Next.js build tracing, bundle exclusions, legacy redirects and host-specific rewrites configure delivery of workshop and giveaway routes.",
+      "description": "Next.js tracing, exclusions, host rewrites and legacy redirects configure delivery, including migration of the free Video Editor route and ZIP to the paid Video Agent.",
       "nodeIds": [
         "config:next.config.ts"
+      ]
+    },
+    {
+      "id": "layer:ui-components",
+      "name": "UI Components",
+      "description": "Festival hero and program components, registration controls, ambient media and shared giveaway rendering support the event and resource pages.",
+      "nodeIds": [
+        "file:src/components/events/ScrollToRegisterButton.tsx",
+        "file:src/components/events/joechella/AmbientHeroVideo.tsx",
+        "file:src/components/events/joechella/FestivalHero.tsx",
+        "file:src/components/events/joechella/ProgramTimeline.tsx",
+        "file:src/components/events/joechella/festival.css",
+        "file:src/components/giveaways/PackPage.tsx"
       ]
     }
   ],
@@ -4174,7 +4964,17 @@
       "languageLesson": "Next.js App Router uses folders such as [slug] for dynamic route parameters, with page.tsx defining the rendered page."
     },
     {
-      "order": 3,
+      "title": "Festival Presentation and Attendance Windows",
+      "description": "The event catalog also feeds the Joechella hero and grouped program timeline. Follow these components to see the full-week celebration link, concurrent activities and the highlighted restriction on morning attendance.",
+      "nodeIds": [
+        "file:src/components/events/joechella/FestivalHero.tsx",
+        "file:src/components/events/joechella/ProgramTimeline.tsx",
+        "file:src/lib/events.tsx"
+      ],
+      "order": 3
+    },
+    {
+      "order": 4,
       "title": "Giveaway Catalogs and Discovery",
       "description": "Alongside paid events, the site organizes free resources in typed giveaway and free AI tool catalogs. Their lookup helpers centralize resource identity, while the sitemap uses free AI tool slugs to expose those pages to search engines.",
       "nodeIds": [
@@ -4184,7 +4984,7 @@
       ]
     },
     {
-      "order": 4,
+      "order": 5,
       "title": "Resource Packs and Prompts",
       "description": "With resource discovery established, examine the LinkedIn Kit\u2019s page, content pack and reusable prompt. The page imports its pack and the pack imports the prompt, illustrating how presentation and instructional content are separated across giveaway resources.",
       "nodeIds": [
@@ -4195,7 +4995,7 @@
       "languageLesson": "TypeScript content objects let multiple React pages share a rendering contract while keeping each resource\u2019s copy separate."
     },
     {
-      "order": 5,
+      "order": 6,
       "title": "Desk Pet Setup Workflow",
       "description": "Desk Pet applies the pack pattern to a Mac app builder guide with setup commands, troubleshooting and downloadable instructions. Its page adds HowTo structured data, while the canonical prompt supplies the instructions that distributed copies must match.",
       "nodeIds": [
@@ -4205,7 +5005,19 @@
       ]
     },
     {
-      "order": 6,
+      "title": "Legacy Video Editor and Paid Video Agent Migration",
+      "description": "The legacy page still defines a shared resource pack and HowTo metadata, and its tests protect the packaged editing workflow. Next.js redirects both the old giveaway route and the free ZIP URL to the paid Video Agent, so the remaining source does not imply a public free download.",
+      "nodeIds": [
+        "file:src/app/giveaways/video-editor/page.tsx",
+        "file:src/app/giveaways/video-editor/pack.ts",
+        "file:src/app/giveaways/video-editor/layout.tsx",
+        "config:next.config.ts",
+        "file:tests/video-editor.test.ts"
+      ],
+      "order": 7
+    },
+    {
+      "order": 8,
       "title": "Distributed Guides and Downloads",
       "description": "The public Desk Pet document turns the preceding source prompt into a user-facing setup guide covering personalization, installation and removal. Public ZIP archives deliver other resource kits, and their checksum files provide a separate integrity artifact alongside each download.",
       "nodeIds": [
@@ -4217,7 +5029,7 @@
       ]
     },
     {
-      "order": 7,
+      "order": 9,
       "title": "Quiz Content Variants",
       "description": "The same content-driven approach supports quizzes as well as downloadable kits. These thin page wrappers consume packs explaining distinct capability and behavioral scales, then direct visitors to quizzes hosted outside this application.",
       "nodeIds": [
@@ -4228,16 +5040,17 @@
       ]
     },
     {
-      "order": 8,
+      "order": 10,
       "title": "Email Delivery and Unsubscribe",
-      "description": "After visitors choose a resource, shared email helpers build HTML and plain-text delivery messages and restrict destinations to trusted giveaway links. The represented unsubscribe route verifies list-management tokens and records suppressions, showing the corresponding opt-out boundary.",
+      "description": "After visitors choose a resource, shared email helpers build HTML and plain-text delivery messages and restrict destinations to trusted giveaway links. The represented unsubscribe route verifies list-management tokens and records suppressions, showing the corresponding opt-out boundary. The shared Supabase proxy initializes its client on first access so imports can succeed without production credentials.",
       "nodeIds": [
         "file:src/lib/generic-giveaway-email.ts",
-        "file:src/app/api/unsubscribe/route.ts"
+        "file:src/app/api/unsubscribe/route.ts",
+        "file:src/lib/supabase.ts"
       ]
     },
     {
-      "order": 9,
+      "order": 11,
       "title": "Guarded Follow-up Operations",
       "description": "Beyond initial delivery, the follow-up service plans copy and schedules while applying suppression, timing, human handoff and real-event eligibility rules. Its operational runner combines those plans with external checks and supports previews, dry runs, review delivery and claimed sends.",
       "nodeIds": [
@@ -4246,9 +5059,9 @@
       ]
     },
     {
-      "order": 10,
+      "order": 12,
       "title": "Route Metadata and Configuration",
-      "description": "The resource journeys also depend on search metadata and routing behavior. Giveaway layouts supply page-specific metadata, while Next.js configuration controls redirects, host rewrites and build tracing for the site\u2019s delivery paths.",
+      "description": "The resource journeys also depend on search metadata and routing behavior. Giveaway layouts supply page-specific metadata, while Next.js configuration controls redirects, host rewrites and build tracing for the site\u2019s delivery paths. The configuration also migrates the former Video Editor page and archive to the paid Video Agent.",
       "nodeIds": [
         "file:src/app/giveaways/desk-pet/layout.tsx",
         "file:src/app/giveaways/linkedin-kit/layout.tsx",
@@ -4256,7 +5069,7 @@
       ]
     },
     {
-      "order": 11,
+      "order": 13,
       "title": "Workshop Learning Resources",
       "description": "Return to the learning side of the site after tracing discovery and delivery. Bonus workshop pages and the automated lead magnet guide provide instructional material, while the CLAUDE.md pack illustrates a longer configuration-focused resource using the same content organization.",
       "nodeIds": [
@@ -4266,7 +5079,7 @@
       ]
     },
     {
-      "order": 12,
+      "order": 14,
       "title": "Regression and Content Guarantees",
       "description": "Finish with tests that connect the catalog, kit and delivery pieces introduced earlier. They check metadata and source handling, LinkedIn content, Desk Pet prompt parity and assets, plus follow-up suppression and scheduling rules, making the intended boundaries concrete.",
       "nodeIds": [
