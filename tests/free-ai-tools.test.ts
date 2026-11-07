@@ -24,6 +24,14 @@ const WEEK2: Record<string, { slug: string; level: 'beginner' | 'builder' }> = {
   CUT: { slug: 'free-ai-concat', level: 'beginner' },
   // Week 3 Day 2 (Illy approved 2026-10-25), a Claude skills kit.
   SALESMAN: { slug: 'free-ai-salesman', level: 'beginner' },
+  // Week 5 reels (Mon 9 to Sat 14 Nov, Illy approved 2026-11-07 after hands-on tests).
+  // App downloads = beginner; Claude Code skill or plugin setup = builder.
+  PHOTO: { slug: 'free-ai-compositor', level: 'beginner' },
+  SONG: { slug: 'free-ai-yovoice', level: 'beginner' },
+  DEMO: { slug: 'free-ai-openscreen', level: 'beginner' },
+  FONT: { slug: 'free-ai-draw-your-font', level: 'builder' },
+  CANVA: { slug: 'free-ai-open-design', level: 'builder' },
+  SHOT: { slug: 'free-ai-draw-things', level: 'beginner' },
 }
 
 test('every Free AI Tool is present, one per keyword', () => {
