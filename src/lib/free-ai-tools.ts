@@ -1157,6 +1157,647 @@ Do not sign me up for anything.`,
         a: 'Open a terminal in the unzipped folder, not the zip. Run "bash install.sh", then restart Claude Code and say "Set up Salesman".',
       },
     ],
+  },
+  // Week 5 reels (Mon 9 to Sat 14 Nov 2026), Illy approved 2026-11-07 after hands-on tests.
+  // Facts from tasks/swarms/2026-11-07-github-giveaways-week5/tests/<lane>/REPORT.md only:
+  // photo (PHOTO), song (SONG), wow-av (DEMO), font (FONT), canva (CANVA), wow2-media (SHOT).
+  {
+    "slug": "free-ai-compositor",
+    "keyword": "PHOTO",
+    "name": "Compositor",
+    "tagline": "A free Photoshop-style photo editor for your Mac.",
+    "subline": "Compositor is a free, open source photo editor with layers, text and a Remove Background filter. It is under 15 MB, notarized by Apple, and runs on Apple chip Macs with macOS 26.",
+    "toolUrl": "https://github.com/robbietilton/Compositor/releases/latest",
+    "primaryLabel": "Download Compositor (official GitHub releases)",
+    "intro": "Compositor is a free, open source photo editor for Mac, made by Robbie Tilton. It looks and works a lot like Photoshop: layers with blend modes and masks, a type tool for text on photos, a Remove Background filter, resize and crop (with 9:16 and 3:4 crop presets), and export to PNG and JPG. Background removal runs on your Mac with Apple's own built-in tech, so your photos are not uploaded. No account. For comparison, Photoshop is about $276 a year.",
+    "steps": [
+      "Check your Mac first. Click the Apple menu, then About This Mac. You need an Apple chip (M1 or newer) and macOS 26 Tahoe or later. Intel Macs and older macOS will not run it.",
+      "Open the official download page (the button above) and download Compositor.dmg. It is about 9 MB.",
+      "Open the file, drag Compositor into your Applications folder, then open it. It is signed and notarized, so it should open without a security warning.",
+      "Try the simple flow first: drag in a photo, choose Filter, then Remove Background, press T to type your headline, then press Shift+Cmd+E to export a PNG."
+    ],
+    "howIUse": [
+      "Make a quick post: your photo, the background removed, a bold headline, exported as a PNG.",
+      "Use the 9:16 crop preset for story and reel covers, then Image Size to get the exact pixels you want.",
+      "Zoom in on hair and edges after you remove the background, and check them before you post."
+    ],
+    "goodToKnow": "Free and open source (MIT), made by Robbie Tilton. It is very new (it first appeared in September 2026) and updates often. It only runs on Apple chip Macs with macOS 26 or later. It has no accounts and no analytics. It goes online in two small ways: it checks for updates, and one optional lighting filter downloads a small 2.6 MB model the first time you use it. Your photos are not uploaded.",
+    "links": [
+      {
+        "label": "Download Compositor (official GitHub releases)",
+        "url": "https://github.com/robbietilton/Compositor/releases/latest"
+      },
+      {
+        "label": "The Compositor website",
+        "url": "https://robbietilton.com/compositor"
+      },
+      {
+        "label": "Report a problem to the maker",
+        "url": "https://github.com/robbietilton/Compositor/issues"
+      },
+      {
+        "label": "The code on GitHub",
+        "url": "https://github.com/robbietilton/Compositor"
+      }
+    ],
+    "githubUrl": "https://github.com/robbietilton/Compositor",
+    "stars": 18500,
+    "license": "MIT",
+    "why": "A free Photoshop-style editor with layers, text and background removal, so you can make your own photo posts without paying about $276 a year for Photoshop.",
+    "level": "beginner",
+    "who": "Anyone with a newer Mac who makes their own photo posts, covers or ads and does not want a Photoshop subscription.",
+    "needs": "An Apple chip Mac (M1 or newer) on macOS 26 Tahoe or later. It does not run on Intel Macs or Windows. About 15 MB of space.",
+    "ticks": [
+      "No sign-up here",
+      "Notarized by Apple, no warning",
+      "18,500 stars on GitHub"
+    ],
+    "claudePrompt": "Install Compositor, the free open source photo editor, on this Mac.\n\n1. Check this Mac first. It needs an Apple chip and macOS 26 or later. If it does not have both, stop and tell me, because Compositor will not run here.\n2. If Homebrew is already installed, run: brew install --cask robbietilton-compositor . If it is not, download Compositor.dmg only from https://github.com/robbietilton/Compositor/releases/latest , open it and copy Compositor into Applications. Do not install Homebrew without asking me.\n3. Check the app with: spctl -a -vv -t exec /Applications/Compositor.app . It should say accepted and Notarized Developer ID. If it does not, stop and tell me.\n4. Do not change my security settings.\n5. Tell me how to remove a background (Filter, then Remove Background), add text (press T) and export a PNG (Shift+Cmd+E).\n\nDo not sign me up for anything.",
+    "requirements": [
+      "A Mac with an Apple chip (M1 or newer). Intel Macs are not supported.",
+      "macOS 26 Tahoe or later. Check in System Settings, then General, then Software Update.",
+      "About 15 MB of free space. The download is about 9 MB.",
+      "Your own photos."
+    ],
+    "does": [
+      "Layers with blend modes, masks and opacity",
+      "Remove the background from a photo, on your Mac",
+      "Add text on photos with the type tool, with font, size and colour",
+      "Resize and crop, with 9:16 and 3:4 crop presets",
+      "Export PNG and JPG files",
+      "Work with no account"
+    ],
+    "doesNot": [
+      "Run on Intel Macs, older macOS, Windows, iPhone or iPad",
+      "Do everything Photoshop does. It is a young project",
+      "Get every cut-out perfect. Check hair and edges before you post"
+    ],
+    "limits": [
+      "It runs only on Apple chip Macs with macOS 26 or later. People have asked the maker for Intel and older macOS support, and it is not there today. There is no Windows version.",
+      "It is very new (September 2026) and changes fast, so expect the odd rough edge.",
+      "It checks for updates online, and the optional Volumetric Light filter downloads a 2.6 MB model once. Everything else, including background removal, runs on your Mac.",
+      "Photoshop for comparison: US$22.99 a month on Adobe's annual plan billed monthly, about $276 a year (adobe.com, 7 Nov 2026).",
+      "Free and open source under the MIT licence."
+    ],
+    "stuck": [
+      {
+        "q": "It will not open or says it needs a newer macOS",
+        "a": "Compositor needs macOS 26 Tahoe or later. Open System Settings, then General, then Software Update. If your Mac cannot update to macOS 26, it cannot run Compositor."
+      },
+      {
+        "q": "I have an Intel Mac",
+        "a": "Sorry, it only runs on Apple chip Macs (M1 or newer). Click the Apple menu, then About This Mac. If it says Processor and Intel, this one is not for your Mac."
+      },
+      {
+        "q": "My Mac shows a security warning",
+        "a": "It should not, because the app is notarized by Apple. If you see one, delete the file and download it again from the official link above, not from another site."
+      },
+      {
+        "q": "The cut-out has rough edges",
+        "a": "Zoom in and check hair and fine edges. The filter has a Basic and an Advanced mode, so try the other one. A photo with a plain background and good light cuts out best."
+      },
+      {
+        "q": "A filter wants to download something",
+        "a": "That is the optional 2.6 MB depth model for the Volumetric Light filter. It downloads once from the maker's GitHub. You can skip that filter if you prefer."
+      }
+    ]
+  },
+  {
+    "slug": "free-ai-yovoice",
+    "keyword": "SONG",
+    "name": "yovoice",
+    "tagline": "Make a song with vocals on your own computer.",
+    "subline": "yovoice is a free, open source app. Type your lyrics and a style, and it makes a song with singing on your Mac or Windows PC. No account and no fee per song.",
+    "toolUrl": "https://github.com/leemysw/yovoice/releases/latest",
+    "primaryLabel": "Download yovoice (official GitHub releases)",
+    "intro": "yovoice is a free, open source voice and music app made by leemysw. In the app you type lyrics and a style, and it makes a song with vocals on your own computer. For anything for your business, use the ACE-Step 1.5 model: the people who made that model say the music it makes can be used commercially. We made a 45 second song in about 22 seconds on a fast Mac Studio. I am not saying it sounds as good as Suno, so listen to each song before you use it. For comparison, Suno charges $8 or $24 a month for plans with commercial rights, and its free plan has none.",
+    "steps": [
+      "Check your computer. On a Mac you need an Apple chip and macOS 14 or later, and 16 GB of memory or more is recommended for songs. Windows works too, but songs are slow without a strong NVIDIA graphics card.",
+      "Open the download page (the button above). On a Mac, download the file ending in macos-arm64.dmg, open it and drag yovoice into Applications. On Windows, download the file ending in windows-x64-setup.exe and run it.",
+      "Open yovoice. In Settings, download the engine, then the ACE-Step 1.5 Turbo model. The model is about 6 GB, so give it 10 to 30 minutes on home wifi.",
+      "Make your song in the app: choose the ACE-Step 1.5 model, type a style (for example \"upbeat acoustic pop\") and your lyrics with [verse] and [chorus] tags, pick a length and generate."
+    ],
+    "howIUse": [
+      "Make a short jingle for a class, a launch or an ad. Twenty seconds is plenty.",
+      "Write lyrics with [verse] and [chorus] tags and enough lines to fill the length. Very short lyrics just get repeated.",
+      "Make two or three versions, listen all the way through, and keep the one where the words are clearest."
+    ],
+    "goodToKnow": "Free and open source (Apache-2.0), made mostly by one developer, leemysw. Use the ACE-Step 1.5 model for business. Some other models in the app (YuE2, OmniVoice, Breeze TTS) are for non-commercial use only. The Mac app checks GitHub for updates when it opens and every 4 hours, and downloads models when you ask. I found no tracking code in it. Your lyrics and songs are made on your computer.",
+    "links": [
+      {
+        "label": "Download yovoice (official GitHub releases)",
+        "url": "https://github.com/leemysw/yovoice/releases/latest"
+      },
+      {
+        "label": "The yovoice website",
+        "url": "https://yovoice.leemysw.com"
+      },
+      {
+        "label": "Report a problem to the maker",
+        "url": "https://github.com/leemysw/yovoice/issues"
+      },
+      {
+        "label": "The code on GitHub",
+        "url": "https://github.com/leemysw/yovoice"
+      }
+    ],
+    "githubUrl": "https://github.com/leemysw/yovoice",
+    "stars": 2096,
+    "license": "Apache-2.0 (ACE-Step 1.5 model: MIT)",
+    "why": "A free app that makes songs with vocals on your own computer, with a model whose makers allow commercial use, instead of paying Suno $8 to $24 a month.",
+    "level": "beginner",
+    "who": "Anyone who wants a jingle or a short song for a class, a launch or an ad, without a monthly music subscription.",
+    "needs": "An Apple chip Mac on macOS 14 or later (16 GB of memory recommended for songs), or a Windows PC. About 7 GB of free space for the app and the song model.",
+    "ticks": [
+      "No sign-up here",
+      "No fee per song",
+      "2k stars on GitHub"
+    ],
+    "claudePrompt": "Install yovoice, the free open source voice and music app, on this computer.\n\n1. Check this computer. On a Mac it needs an Apple chip and macOS 14 or later. Tell me how much memory it has (16 GB or more is recommended for songs) and how much free disk space (the song model needs about 6 GB).\n2. Download only from https://github.com/leemysw/yovoice/releases/latest . On a Mac use the file ending in macos-arm64.dmg. On Windows use the file ending in windows-x64-setup.exe. Also download SHA256SUMS.txt from the same release and check the file against it. If it does not match, stop and tell me.\n3. On a Mac, copy yovoice into Applications. Do not change my security settings.\n4. Tell me to open yovoice, download the engine and the ACE-Step 1.5 Turbo model in Settings, and make songs with the ACE-Step 1.5 model.\n5. Do not set up voice cloning, and do not choose YuE2, OmniVoice or Breeze TTS. Those models are for non-commercial use only.\n\nDo not sign me up for anything.",
+    "requirements": [
+      "An Apple chip Mac on macOS 14 or later. Intel Macs are not supported. 16 GB of memory or more is recommended for songs.",
+      "Or a Windows PC. Songs are slow without a strong NVIDIA graphics card (the docs suggest 12 GB of video memory).",
+      "About 7 GB of free disk space. The ACE-Step 1.5 Turbo model alone is about 6 GB.",
+      "Your own lyrics, or an idea for them."
+    ],
+    "usePrompt": {
+      "title": "A starter song to try (change the words to your own)",
+      "text": "Style: upbeat acoustic pop, warm female vocal, happy\n\nLyrics:\n[verse]\nMorning light at Sunny Yoga\nBreathe in slow, let it go\n\n[chorus]\nCome and stretch with us\nEverybody's welcome, come on down"
+    },
+    "does": [
+      "Make a song with vocals from your lyrics and a style",
+      "Make the song on your own computer, with no account",
+      "Let you pick the model, including ACE-Step 1.5, whose makers allow commercial use",
+      "Read text out loud too (text to speech)"
+    ],
+    "doesNot": [
+      "Promise Suno quality. Listen before you use a song",
+      "Get every word clear. Some lyrics come out mumbled",
+      "Make every model safe for business. YuE2, OmniVoice and Breeze TTS are non-commercial",
+      "Run on Intel Macs"
+    ],
+    "limits": [
+      "Use ACE-Step 1.5 for anything for your business. Its makers (MIT licence) say the music it makes can be used commercially. YuE2, OmniVoice and Breeze TTS are for non-commercial use only. This is the model makers' statement, not legal advice, and AI music may not get copyright protection.",
+      "Quality varies. In my test the singing was clear in places and mumbled in others. Listen to every song before you post it.",
+      "The first setup downloads about 6 GB, so it takes a while on home wifi.",
+      "I tested the app's own engine and the ACE-Step model, not every screen of the app, so your buttons may look a little different from my steps.",
+      "The Mac app checks GitHub for updates every 4 hours and downloads models when you ask. I found no tracking code.",
+      "It is new (September 2026) and made mostly by one developer, so updates depend on them.",
+      "Suno for comparison: Pro $8 a month and Premier $24 a month, both with commercial rights. Suno Free has no commercial rights (suno.com, 7 Nov 2026).",
+      "The app is free and open source under the Apache-2.0 licence."
+    ],
+    "stuck": [
+      {
+        "q": "It says I need a newer Mac or macOS",
+        "a": "On a Mac, yovoice needs an Apple chip and macOS 14 or later. Intel Macs are not supported. Click the Apple menu, then About This Mac to check."
+      },
+      {
+        "q": "The model download is taking forever",
+        "a": "The ACE-Step 1.5 Turbo model is about 6 GB. Leave it running on good wifi, 10 to 30 minutes is normal. Keep your computer awake until it finishes."
+      },
+      {
+        "q": "Which model do I pick?",
+        "a": "ACE-Step 1.5 for any song you will use in your business. Skip YuE2, OmniVoice and Breeze TTS for business, because their licences are non-commercial."
+      },
+      {
+        "q": "The words are hard to understand",
+        "a": "Use [verse] and [chorus] tags and write enough lines to fill the length. Each run comes out different, so make two or three and keep the clearest one."
+      },
+      {
+        "q": "It is very slow on Windows",
+        "a": "The basic Windows setup runs on the processor, which is slow for songs. If you have an NVIDIA graphics card, use one of the cuda setup files from the same download page."
+      }
+    ]
+  },
+  {
+    "slug": "free-ai-openscreen",
+    "keyword": "DEMO",
+    "name": "OpenScreen",
+    "tagline": "Free screen recordings that zoom in where you click.",
+    "subline": "OpenScreen is a free, open source screen recorder for Mac and Windows. It zooms in on your clicks, puts your recording on a clean background and exports with no watermark and no subscription.",
+    "toolUrl": "https://github.com/getopenscreen/openscreen/releases/latest",
+    "primaryLabel": "Download OpenScreen (official GitHub releases)",
+    "intro": "OpenScreen is a free, open source screen recorder. You record your screen, and it zooms in smoothly wherever you clicked, then puts the recording on a clean background with rounded corners and a shadow. No watermark, no subscription. The auto zoom follows your clicks, it is not AI watching your screen. These notes use the maintained version at getopenscreen, the official continuation of the original OpenScreen project by siddharthvaddem, which moved there with the original author's approval. For comparison, Screen Studio costs $29 a month, or $9 a month billed yearly.",
+    "steps": [
+      "Open the download page (the button above). On a Mac with an Apple chip, download the file ending in macOS-Apple-Silicon dmg. On an Intel Mac, download the macOS-Intel dmg. On Windows, download the Setup exe (x64 for most PCs).",
+      "Open the file, drag OpenScreen into Applications and open it. The Mac app is notarized, so it should open normally. You need macOS 13 or later.",
+      "When it asks, allow Screen Recording and Accessibility in System Settings, then Privacy and Security. It needs these to record your screen and follow your clicks. Quit and reopen OpenScreen after you allow them.",
+      "Record a short test: 30 seconds with five or six clicks, a few seconds apart. Stop, check the zooms, then export."
+    ],
+    "howIUse": [
+      "Record a 30 to 60 second walkthrough of your website or your offer, and click slowly on the parts that matter.",
+      "Leave a few seconds between clicks. Clicks close together get merged into one zoom.",
+      "If you prefer, switch off the daily anonymous usage ping in the settings."
+    ],
+    "goodToKnow": "Free and open source (MIT). It sends one anonymous usage ping a day, and you can switch that off in the settings. The AI assistant inside is off unless you add your own AI key. Automatic captions need a one-time speech model download of about 264 MB. I am not saying it beats Screen Studio. It is a free option that does the main job.",
+    "links": [
+      {
+        "label": "Download OpenScreen (official GitHub releases)",
+        "url": "https://github.com/getopenscreen/openscreen/releases/latest"
+      },
+      {
+        "label": "The OpenScreen website",
+        "url": "https://getopenscreen.com"
+      },
+      {
+        "label": "Report a problem to the team",
+        "url": "https://github.com/getopenscreen/openscreen/issues"
+      },
+      {
+        "label": "The code on GitHub",
+        "url": "https://github.com/getopenscreen/openscreen"
+      },
+      {
+        "label": "The original project by siddharthvaddem (archived)",
+        "url": "https://github.com/siddharthvaddem/openscreen"
+      }
+    ],
+    "githubUrl": "https://github.com/getopenscreen/openscreen",
+    "stars": 6473,
+    "license": "MIT",
+    "why": "A free screen recorder that zooms in where you click and exports with no watermark, so you can make clean demo videos without paying for Screen Studio.",
+    "level": "beginner",
+    "who": "Anyone who records their screen to show a website, an app or how something works, and wants it to look polished.",
+    "needs": "A Mac on macOS 13 or later (Apple chip or Intel), or a Windows PC. You give it Screen Recording and Accessibility permission once.",
+    "ticks": [
+      "No sign-up here",
+      "No watermark, no subscription",
+      "6k stars on GitHub"
+    ],
+    "claudePrompt": "Install OpenScreen, the free open source screen recorder, on this Mac.\n\n1. Check what chip this Mac has and that it runs macOS 13 or later. Apple chip means the dmg with macOS-Apple-Silicon in its name. Intel means the one with macOS-Intel in its name.\n2. Download the latest release only from https://github.com/getopenscreen/openscreen/releases/latest . This is the maintained version of OpenScreen. Do not download from the old archived repo or any other site.\n3. Open the dmg and copy OpenScreen into Applications. Check it with spctl -a -vv -t exec on the app. It should say accepted and Notarized Developer ID. If it does not, stop and tell me.\n4. Tell me to open it and allow Screen Recording and Accessibility in System Settings, Privacy and Security. Do not change those settings yourself.\n5. Tell me that it sends one anonymous usage ping a day, and that I can switch it off in its settings.\n\nDo not sign me up for anything.",
+    "requirements": [
+      "A Mac on macOS 13 or later, Apple chip or Intel. Or a Windows PC.",
+      "Screen Recording and Accessibility permission, which you give once in System Settings.",
+      "About 264 MB more if you want automatic captions (a one-time speech model download)."
+    ],
+    "does": [
+      "Record your screen",
+      "Zoom in smoothly where you click",
+      "Add a background, rounded corners, a shadow and a smooth cursor",
+      "Export in 1080p with no watermark",
+      "Work with no subscription"
+    ],
+    "doesNot": [
+      "Use AI to pick the zooms. The zoom follows your clicks",
+      "Zoom on every click. Clicks close together get merged",
+      "Record without permissions. It needs Screen Recording and Accessibility",
+      "Stay fully silent. It sends one anonymous usage ping a day unless you switch it off"
+    ],
+    "limits": [
+      "It sends one anonymous usage ping a day. You can switch it off in the settings.",
+      "The auto zoom follows your clicks. Space your clicks a few seconds apart, or some get merged into one zoom.",
+      "It needs Screen Recording and Accessibility permission to work.",
+      "The AI assistant is off by default and only works with your own AI key, which that AI company may charge you for.",
+      "This is the maintained version at getopenscreen, the official continuation of the original project, which is now archived. Updates come from that team.",
+      "Screen Studio for comparison: $29 a month, or $9 a month billed yearly (screen.studio, November 2026).",
+      "Free and open source under the MIT licence."
+    ],
+    "stuck": [
+      {
+        "q": "It records a black screen or nothing at all",
+        "a": "Open System Settings, then Privacy and Security, then Screen Recording, and turn on OpenScreen. Then quit OpenScreen fully and open it again."
+      },
+      {
+        "q": "It does not zoom where I click",
+        "a": "Turn on OpenScreen under Privacy and Security, then Accessibility, and restart it. Also leave a few seconds between clicks, because clicks close together get merged."
+      },
+      {
+        "q": "I am not sure which download to pick",
+        "a": "Click the Apple menu, then About This Mac. Chip with Apple means the Apple-Silicon dmg. Processor with Intel means the Intel dmg. On Windows, most PCs use the x64 Setup file."
+      },
+      {
+        "q": "I found another OpenScreen on GitHub",
+        "a": "The original siddharthvaddem/openscreen is archived. The maintained version is github.com/getopenscreen/openscreen, which is the one linked on this page."
+      },
+      {
+        "q": "Captions are not working",
+        "a": "Captions need a one-time speech model download of about 264 MB. Let it finish, then try again."
+      }
+    ]
+  },
+  {
+    "slug": "free-ai-draw-your-font",
+    "keyword": "FONT",
+    "name": "Draw Your Font",
+    "tagline": "Turn your handwriting into a real font you can install.",
+    "subline": "Draw Your Font is a free, open source tool. You write the alphabet on a printed template, photograph it, and Claude Code turns it into a font file for your computer. Plan about 35 to 50 minutes the first time.",
+    "toolUrl": "https://github.com/danilo-znamerovszkij/draw-your-font",
+    "primaryLabel": "Open Draw Your Font on GitHub",
+    "intro": "Draw Your Font is a free, open source tool made by Danilo Znamerovszkij. You print a template, write each letter in its box with a dark pen, take a straight photo, and it builds a real font file (.ttf) you can install and type with. It runs on your own computer, nothing is uploaded. The easiest way is to let Claude Code do the fiddly part: it straightens the photo, finds your letters and fixes the messy bits. For comparison, Calligraphr Pro costs EUR 10 for one month, or EUR 6 a month on a 6 month plan.",
+    "steps": [
+      "Install Node.js (the LTS version from nodejs.org) and open Claude Code. Add the skill with: npx skills add danilo-znamerovszkij/draw-your-font",
+      "Make the template with: npx draw-your-font template -o template.pdf --charset minimal . Print both pages.",
+      "Write each letter in its box with a dark pen (a 0.5 mm pen works well). This is the longest part, about 15 to 20 minutes.",
+      "Photograph each page flat, from straight above, in good light with no shadows. Fill the frame with the grid.",
+      "Paste the prompt above into Claude Code and give it your two photos. When it is done, double-click the .ttf file and click Install Font."
+    ],
+    "howIUse": [
+      "Make a font from your own handwriting for thank-you cards, class handouts and social posts.",
+      "Write slowly and keep every letter inside its box. Neat letters make a better font.",
+      "Type a test sentence after you install it, and redo any letters that look wrong."
+    ],
+    "goodToKnow": "Free and open source (MIT), made by Danilo Znamerovszkij. It runs offline on your computer. The font has 79 characters: A to Z, a to z, 0 to 9 and basic punctuation, with no accents and no kerning. You need Node.js and Claude Code, and Claude Code needs a paid Claude plan. A tilted photo with the page edges showing confuses the plain tool, which is why my prompt tells Claude to crop and straighten it first.",
+    "links": [
+      {
+        "label": "Draw Your Font on GitHub",
+        "url": "https://github.com/danilo-znamerovszkij/draw-your-font"
+      },
+      {
+        "label": "The Draw Your Font website",
+        "url": "https://drawyourfont.com"
+      },
+      {
+        "label": "Report a problem to the maker",
+        "url": "https://github.com/danilo-znamerovszkij/draw-your-font/issues"
+      },
+      {
+        "label": "Get Node.js (free)",
+        "url": "https://nodejs.org"
+      }
+    ],
+    "githubUrl": "https://github.com/danilo-znamerovszkij/draw-your-font",
+    "stars": 853,
+    "license": "MIT",
+    "why": "A free tool that turns a photo of your handwriting into an installable font, so you can use your own hand in posts and handouts without paying for Calligraphr.",
+    "level": "builder",
+    "who": "Anyone who wants their own handwriting as a font for cards, posts or handouts, and is happy to do a small setup in Claude Code.",
+    "needs": "Node.js, Claude Code (needs a paid Claude plan), a printer, a dark pen and a phone camera. About 35 to 50 minutes the first time, most of it writing.",
+    "ticks": [
+      "No sign-up here",
+      "Runs offline on your computer",
+      "853 stars on GitHub"
+    ],
+    "claudePrompt": "Help me turn my handwriting into a font with draw-your-font (github.com/danilo-znamerovszkij/draw-your-font, MIT).\n\n1. Check that Node.js 18 or newer is installed. If it is not, tell me to install the LTS version from nodejs.org and stop.\n2. Install the skill with: npx skills add danilo-znamerovszkij/draw-your-font . Tell me in one line what it added.\n3. Make the template with: npx draw-your-font template -o template.pdf --charset minimal . Tell me where the PDF is so I can print both pages.\n4. When I give you my two photos, first crop and straighten each one to the letter grid. Remove the page edges, shadows and the printed header so only the grid is left. A tilted photo with page edges makes the letters come out wrong.\n5. Then follow the draw-your-font skill: find my letters, check them on the contact sheet by eye, and build the font. If printed guide lines stick to letters, use the skill's own fix (--cap 140).\n6. Name the font \"My Hand\", save the .ttf where I can find it, and tell me to double-click it and click Install Font.\n\nDo not upload my photos anywhere. Everything runs on this computer.",
+    "requirements": [
+      "Node.js 18 or newer, free from nodejs.org.",
+      "Claude Code. It needs a paid Claude plan.",
+      "A printer, plain paper and a dark pen (0.5 mm works well).",
+      "A phone or camera and good, even light.",
+      "About 35 to 50 minutes the first time, most of it writing."
+    ],
+    "does": [
+      "Make a printable letter template",
+      "Find your letters in a photo of the filled-in template",
+      "Build a real font file (.ttf) you can install and type with",
+      "Run on your own computer with no internet needed",
+      "Keep letters like g and y hanging below the line"
+    ],
+    "doesNot": [
+      "Work from just any snapshot. It needs a flat, straight, well-lit photo of the grid",
+      "Include accents, symbols like % or *, or kerning",
+      "Run without setup. You need Node.js and Claude Code",
+      "Take two minutes. Plan 35 to 50 minutes the first time"
+    ],
+    "limits": [
+      "79 characters: A to Z, a to z, 0 to 9 and basic punctuation like ! ? , . and @. No accents, no kerning, no ligatures.",
+      "The photo matters most. A tilted photo with page edges and shadows confuses the plain tool, so my prompt tells Claude to crop and straighten it first.",
+      "The tool is free, but Claude Code needs a paid Claude plan.",
+      "We tested it with a handwriting-style practice page, not a real pen page yet. Write a few letters with your own pen as a test before you do the full set.",
+      "It is a young tool (version 0.1.0) by one developer.",
+      "Calligraphr for comparison: Pro is EUR 10 for one month, or EUR 6 a month on a 6 month plan. Its free plan allows 75 characters (calligraphr.com, 7 Nov 2026).",
+      "Free and open source under the MIT licence."
+    ],
+    "stuck": [
+      {
+        "q": "The letters in my font are wrong or smeared",
+        "a": "That usually means the photo had page edges, shadows or a tilt. Ask Claude to crop and straighten the photo to the grid and try again, or retake it flat from straight above in good light."
+      },
+      {
+        "q": "Bits of the printed lines are stuck to my letters",
+        "a": "Ask Claude to run the segment step again with --cap 140. That is the fix the skill itself suggests."
+      },
+      {
+        "q": "It says npx is not found",
+        "a": "Node.js is not installed yet. Install the LTS version from nodejs.org, close and reopen your terminal or Claude Code, then try again."
+      },
+      {
+        "q": "I need an accent or a symbol like %",
+        "a": "The minimal set has 79 characters with no accents and only basic punctuation. It cannot add those today."
+      },
+      {
+        "q": "Where is my font?",
+        "a": "Ask Claude Code \"where did you save the .ttf?\". Double-click that file and click Install Font, then pick your font in Pages, Word or Canva."
+      }
+    ]
+  },
+  {
+    "slug": "free-ai-open-design",
+    "keyword": "CANVA",
+    "name": "Open Design",
+    "tagline": "Ask Claude for your Instagram posts, in your colours.",
+    "subline": "Open Design is a free, open source plugin for Claude. You describe the post, story or carousel you want, and Claude designs it in your brand colours and saves it as an Instagram-size PNG. You need a paid Claude plan.",
+    "toolUrl": "https://github.com/feimacode/open-design-agent-kit",
+    "primaryLabel": "Open the Open Design kit on GitHub",
+    "intro": "Open Design Agent Kit is a free, open source plugin made by feimacode, built on the Open Design project by nexu-io. Once it is in Claude, you ask for an Instagram post, story, carousel or poster in your colours, and Claude designs it and exports a PNG at the right size. No Canva account and no extra API key. You change a design by telling Claude what to change, not by dragging things around. It never posts for you: you save the PNG and upload it yourself.",
+    "steps": [
+      "Check you have a paid Claude plan (Pro or higher), Node.js 18 or newer (from nodejs.org) and Google Chrome. Chrome is what turns the design into a PNG.",
+      "In Claude Code, type /plugin marketplace add feimacode/open-design-agent-kit and then /plugin install open-design . Restart Claude Code.",
+      "Ask for a design, for example: \"Make an Instagram post for my yoga class, Monday 7am, in teal and sand.\" Answer its questions.",
+      "Look at the result and ask Claude to fix anything: text that overlaps, words that are hard to read, a colour that is off. Then ask it to export the PNG.",
+      "Find the PNG, read every word, and upload it to Instagram yourself."
+    ],
+    "howIUse": [
+      "Give it your exact brand colours and your real details (day, time, price). It sticks to what you give it.",
+      "Ask for one design at a time, then ask for changes in plain words: \"make the date bigger\", \"darker background\".",
+      "Read every word on the final PNG before you post. Its own check can miss text that overlaps."
+    ],
+    "goodToKnow": "The plugin is free and open source (MIT), made by feimacode on top of nexu-io's Open Design (Apache-2.0). It needs a paid Claude plan, so the software is free but Claude is not. It is young (September 2026) and run by a very small team. I found no tracking code in it. Only use text, photos and logos you have the rights to.",
+    "links": [
+      {
+        "label": "Open Design Agent Kit on GitHub",
+        "url": "https://github.com/feimacode/open-design-agent-kit"
+      },
+      {
+        "label": "Setup guide for Claude Code (from the maker)",
+        "url": "https://github.com/feimacode/open-design-agent-kit/blob/main/docs/getting-started/claude-code.md"
+      },
+      {
+        "label": "The Open Design Agent Kit docs",
+        "url": "https://feimacode.github.io/open-design-agent-kit/"
+      },
+      {
+        "label": "Open Design by nexu-io, the project it is built on",
+        "url": "https://github.com/nexu-io/open-design"
+      },
+      {
+        "label": "Report a problem to the maker",
+        "url": "https://github.com/feimacode/open-design-agent-kit/issues"
+      }
+    ],
+    "githubUrl": "https://github.com/feimacode/open-design-agent-kit",
+    "stars": 1039,
+    "license": "MIT (built on nexu-io/open-design, Apache-2.0)",
+    "why": "A free Claude plugin that designs Instagram posts, stories and carousels in your colours and saves real PNGs, so you can make simple posts without paying for Canva Pro.",
+    "level": "builder",
+    "who": "Anyone who already pays for Claude and wants simple, on-brand Instagram posts without opening Canva.",
+    "needs": "A paid Claude plan (Pro or higher), Claude Code or the Claude desktop app, Node.js 18 or newer, and Google Chrome for the PNG export.",
+    "ticks": [
+      "No sign-up here",
+      "No Canva account needed",
+      "1k stars on GitHub"
+    ],
+    "claudePrompt": "Set up the Open Design plugin (github.com/feimacode/open-design-agent-kit, MIT) in Claude Code on this computer.\n\n1. Check that Node.js 18 or newer is installed (node -v). If not, tell me to install the LTS version from nodejs.org and stop.\n2. Check that Google Chrome, Edge or Chromium is installed. The PNG export needs one of them. If none is there, tell me.\n3. Tell me to type these two commands in Claude Code myself: /plugin marketplace add feimacode/open-design-agent-kit and then /plugin install open-design . Then tell me to restart Claude Code.\n4. After the restart, make me one test design: an Instagram post, 1080 x 1080, for my business in my colours. Ask me for my business name, my two brand colours and the event details first.\n5. Before you export, look at the design yourself and fix any text that overlaps or is hard to read. Then export the PNG and tell me the exact folder it is in.\n\nDo not connect Figma, Canva or any other account, and do not publish anything online.",
+    "requirements": [
+      "A paid Claude plan, Pro or higher. Plugins are not on the free plan.",
+      "Claude Code or the Claude desktop app.",
+      "Node.js 18 or newer, free from nodejs.org.",
+      "Google Chrome (or Edge or Chromium) for the PNG export.",
+      "Your brand colours and the details for your post."
+    ],
+    "usePrompt": {
+      "title": "Three designs to try",
+      "text": "Make an Instagram post (1080 x 1080) for my class: (what it is), (day and time). Use my colours (colour 1) and (colour 2). Big clear title, short details, no stock photos.\n\nNow make a story version (1080 x 1920) of the same event.\n\nNow make a 3-slide carousel (1080 x 1080 each) with 3 tips about (your topic). One tip per slide, big text, simple shapes."
+    },
+    "does": [
+      "Design Instagram posts, stories, carousels and posters in your colours",
+      "Export real PNG files at Instagram size (1080 x 1080 and 1080 x 1920)",
+      "Change a design when you ask in plain words",
+      "Work with no Canva account and no extra API key"
+    ],
+    "doesNot": [
+      "Let you drag things around. You change designs by asking Claude",
+      "Post for you. You save the PNG and upload it",
+      "Catch every mistake. It can miss overlapping text, so check by eye",
+      "Draw people well. Simple illustrations can look rough",
+      "Work on the free Claude plan"
+    ],
+    "limits": [
+      "The software is free, but the plugin needs a paid Claude plan (Pro or higher).",
+      "It is not Canva. There is no photo library and no drag and drop, and the result is a PNG, not an editable layout.",
+      "Expect a round of fixes. In my tests two of three designs needed one (pale text and overlapping text), and its own check missed the overlap.",
+      "Its example library is mostly slide decks and web pages. The good social posts come from Claude designing fresh from your brief.",
+      "It is young (September 2026) and built by a very small team. Do not connect Figma, Canva or shop accounts to it.",
+      "Only use text, photos and logos you have the rights to.",
+      "Free and open source under the MIT licence, built on Open Design by nexu-io (Apache-2.0)."
+    ],
+    "stuck": [
+      {
+        "q": "Claude does not show the plugin",
+        "a": "Plugins need a paid Claude plan. In Claude Code, type /plugin, check that open-design is installed, then restart Claude Code. In the Claude desktop app, go to Customize, then Plugins, choose Add marketplace and type feimacode/open-design-agent-kit."
+      },
+      {
+        "q": "It says Node or npx is not found",
+        "a": "Install the LTS version of Node.js from nodejs.org, then quit and reopen Claude completely. If you installed Node another way (like nvm), the desktop app may not find it, so the nodejs.org installer is the easiest fix."
+      },
+      {
+        "q": "The export fails",
+        "a": "The PNG export needs Google Chrome, Edge or Chromium installed. Install Chrome and ask Claude to export again."
+      },
+      {
+        "q": "I cannot find my PNG",
+        "a": "Ask Claude \"what is the full path of the PNG you exported?\". In Claude Code it saves inside a hidden .open-design folder in your project, so ask Claude to copy it to your Desktop."
+      },
+      {
+        "q": "Text overlaps or is hard to read",
+        "a": "Tell Claude exactly what you see, for example \"the title on slide 3 overlaps the text, fix it\" or \"the date is too pale, make it darker\". Then export again."
+      }
+    ]
+  },
+  {
+    "slug": "free-ai-draw-things",
+    "keyword": "SHOT",
+    "name": "Draw Things",
+    "tagline": "Studio-style photos of you, made on your own Mac.",
+    "subline": "Draw Things is a free app on the Mac App Store. It turns your own selfie into a studio-style headshot, puts you in a new place, or turns a product snapshot into an ad photo. It runs on your Mac, with no monthly plan.",
+    "toolUrl": "https://apps.apple.com/us/app/draw-things-offline-ai-art/id6444050820",
+    "primaryLabel": "Get Draw Things (Mac App Store)",
+    "intro": "Draw Things is a free AI image app for Mac, iPhone and iPad, made by Draw Things Inc. Give it your own selfie and a prompt, and it makes a studio-style headshot that keeps your face. It can also put you in a new place, or turn a plain product photo into an ad-style shot. On our fast Mac Studio each picture took about 20 seconds. A normal laptop is slower. It runs on your Mac, so your photos stay with you, and there is no monthly plan like Midjourney.",
+    "steps": [
+      "Check your Mac. You need an Apple chip (M1 or newer). 16 GB of memory is recommended, plus about 15 GB of free space for the models.",
+      "Get Draw Things free from the Mac App Store (the button above) and open it.",
+      "Download one model first: FLUX.2 [klein] 4B, the one I tested. Find it in the model list and download it. It is several GB, so give it time.",
+      "Add your own selfie as the starting image, paste the headshot prompt below, and generate.",
+      "Not quite right? Change one thing in the prompt and generate again. Save the one you like."
+    ],
+    "howIUse": [
+      "Start with a clear, well-lit selfie looking at the camera. A better starting photo gives a better headshot.",
+      "Change one thing at a time in the prompt: the background, the clothes or the light.",
+      "Use only your own face and your own products. Not celebrities, and not other people without their OK."
+    ],
+    "goodToKnow": "The app is free on the Mac App Store, made by Draw Things Inc. The app itself is not open source, but its engine is (draw-things-community on GitHub, GPL-3.0). Models download from the internet once, then pictures are made on your Mac. The FLUX.2 [klein] 4B model I used has an Apache-2.0 licence, which allows business use. It does not do text or logos well, and I am not promising video.",
+    "links": [
+      {
+        "label": "Get Draw Things (Mac App Store)",
+        "url": "https://apps.apple.com/us/app/draw-things-offline-ai-art/id6444050820"
+      },
+      {
+        "label": "The Draw Things website",
+        "url": "https://drawthings.ai"
+      },
+      {
+        "label": "The open source engine on GitHub",
+        "url": "https://github.com/drawthingsai/draw-things-community"
+      }
+    ],
+    "githubUrl": "https://github.com/drawthingsai/draw-things-community",
+    "stars": 614,
+    "license": "Free app (closed source). Engine: GPL-3.0",
+    "why": "A free Mac app that turns your own selfie into a studio-style headshot and your product snapshots into ad photos, with no monthly plan like Midjourney.",
+    "level": "beginner",
+    "who": "Anyone with a newer Mac who needs better photos of themselves or their products for posts, ads and their website.",
+    "needs": "A Mac with an Apple chip (16 GB of memory recommended) and about 15 GB of free space for models. Also on iPhone and iPad. Not on Windows.",
+    "ticks": [
+      "No sign-up here",
+      "Free on the Mac App Store",
+      "Runs on your Mac"
+    ],
+    "claudePrompt": "Help me get Draw Things, the free AI image app, ready on this Mac.\n\n1. Check this Mac: it needs an Apple chip. Tell me how much memory it has (16 GB or more is recommended) and how much free disk space (the models need about 15 GB).\n2. Open the official Mac App Store page for me: https://apps.apple.com/us/app/draw-things-offline-ai-art/id6444050820 . Do not download Draw Things from any other site.\n3. Tell me to click Get, then open the app.\n4. Tell me to download the FLUX.2 [klein] 4B model from the model list first.\n5. Give me a starter prompt to turn my own selfie into a studio headshot that keeps my face exactly the same.\n\nDo not sign me up for anything and do not buy anything.",
+    "requirements": [
+      "A Mac with an Apple chip (M1 or newer). It also runs on iPhone and iPad.",
+      "16 GB of memory recommended. Macs with 8 GB will be slow or may not work.",
+      "About 15 GB of free disk space for the models.",
+      "A free Apple ID for the App Store.",
+      "A clear selfie or product photo of your own."
+    ],
+    "usePrompt": {
+      "title": "A starter prompt for your headshot",
+      "text": "Keep my face exactly the same. Professional studio headshot of this person, soft studio lighting, plain light grey background, simple dark blazer, friendly natural smile, sharp focus, photo realistic."
+    },
+    "does": [
+      "Turn your selfie into a studio-style headshot that keeps your face",
+      "Put you in a new place, in new clothes",
+      "Turn a plain product snapshot into an ad-style photo",
+      "Make pictures on your Mac once the model has downloaded",
+      "Work with no monthly plan"
+    ],
+    "doesNot": [
+      "Run on Windows or Android",
+      "Put words or logos in pictures reliably. Text comes out misspelled",
+      "Make videos. I am not promising that",
+      "Run well on Macs with 8 GB of memory",
+      "Keep every detail of a product exactly the same. Check shapes and labels"
+    ],
+    "limits": [
+      "The settings screen is busy. Stick to my steps: one model, your photo, one prompt.",
+      "The first model download is several GB and takes time. After that, pictures are made on your Mac.",
+      "Speed depends on your Mac. On our fast Mac Studio each picture took about 20 seconds. A normal laptop is slower.",
+      "Words and logos come out wrong, so add those yourself in another app.",
+      "Use only your own face, your own products, or people who said yes.",
+      "The app is free but not open source. Its engine is open source on GitHub under GPL-3.0. The FLUX.2 [klein] 4B model is Apache-2.0, which allows business use.",
+      "Midjourney for comparison: it charges a monthly plan. Draw Things has no monthly plan."
+    ],
+    "stuck": [
+      {
+        "q": "I cannot find the model",
+        "a": "Open the model list in Draw Things and search for FLUX.2, then pick FLUX.2 [klein] 4B. Apps change their lists, so if it is not there, pick another FLUX.2 model."
+      },
+      {
+        "q": "The model download is very slow or stops",
+        "a": "Models are several GB. Use good wifi, keep your Mac awake, and check you have about 15 GB of free space."
+      },
+      {
+        "q": "It does not look like me",
+        "a": "Start with a clearer, well-lit selfie looking straight at the camera, and keep \"Keep my face exactly the same\" at the start of the prompt. Then generate again."
+      },
+      {
+        "q": "It is very slow or stops working",
+        "a": "That usually means not enough memory. 16 GB is recommended. Close other apps and try again."
+      },
+      {
+        "q": "The words in my picture are wrong",
+        "a": "It does not spell well. Make the picture without words, then add your text in another app."
+      }
+    ]
   }
 
 ]
