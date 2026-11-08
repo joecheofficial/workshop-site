@@ -1,89 +1,47 @@
 {
   "mode": "incremental",
-  "completedAt": "2026-11-05T20:07:46.406735+00:00",
-  "baseCommit": "e8b185b28be6323b7f32afc53f4f0ef504502071",
-  "gitCommitHash": "31af93d9a652a0612690998381cff32a27d8da63",
-  "filesAnalyzed": 11,
-  "analyzedPaths": [
-    "next.config.ts",
-    "src/app/giveaways/video-editor/layout.tsx",
-    "src/app/giveaways/video-editor/pack.ts",
-    "src/app/giveaways/video-editor/page.tsx",
-    "src/components/events/joechella/FestivalHero.tsx",
-    "src/components/events/joechella/ProgramTimeline.tsx",
-    "src/lib/events.tsx",
-    "src/lib/generic-giveaway-email.ts",
-    "src/lib/giveaways.ts",
-    "src/lib/supabase.ts",
-    "tests/video-editor.test.ts"
+  "completedAt": "2026-11-08T20:09:23.635858+00:00",
+  "gitCommitHash": "9fe83fd64038f365b9f9c47266a4b7087ac83648",
+  "changedFilesAnalyzed": 15,
+  "dependencyFileNodesRecovered": 3,
+  "representedFiles": 79,
+  "inventoryFiles": 565,
+  "nodes": 190,
+  "edges": 330,
+  "layers": 9,
+  "tourSteps": 13,
+  "validation": "passed",
+  "warnings": [
+    "Node 'file:public/downloads/joes-linkedin-kit-v1.0.zip' has no edges (orphan)",
+    "Node 'file:public/downloads/joes-linkedin-kit-v1.0.zip.sha256' has no edges (orphan)",
+    "Node 'file:public/downloads/joes-salesman-v1.0.zip' has no edges (orphan)",
+    "Node 'file:public/downloads/joes-salesman-v1.0.zip.sha256' has no edges (orphan)",
+    "Node 'function:src/app/api/events/abandoned-checkout-followups/route.ts:acquireEventLock' has no edges (orphan)",
+    "Node 'function:src/app/api/events/cancel/route.ts:escapeHtml' has no edges (orphan)",
+    "Node 'function:src/app/api/events/session-reminders/route.ts:acquireEventWindowLock' has no edges (orphan)",
+    "Node 'file:src/app/api/unsubscribe/route.ts' has no edges (orphan)",
+    "Node 'file:src/app/bonus/auto-lead-magnet/page.tsx' has no edges (orphan)",
+    "Node 'file:src/lib/supabase.ts' has no edges (orphan)"
   ],
-  "totalInventoryFiles": 553,
-  "analyzedByCategory": {
-    "code": 11
-  },
-  "ignoredChangedPaths": [
-    "public/video-editor-example.mp4",
-    "public/video-editor.zip"
-  ],
-  "nodeCount": 163,
-  "edgeCount": 263,
-  "edgeNodeRatio": 1.6134969325153374,
-  "nodeTypes": {
-    "file": 62,
-    "function": 99,
-    "document": 1,
-    "config": 1
-  },
-  "edgeTypes": {
-    "contains": 87,
-    "imports": 62,
-    "tested_by": 12,
-    "calls": 42,
-    "related": 5,
-    "routes": 1,
-    "exports": 52,
-    "configures": 2
-  },
-  "layerNames": [
-    "API Routes",
-    "Pages",
-    "Giveaway Tools",
-    "Shared Libraries",
-    "Assets",
-    "Operations",
-    "Tests",
-    "Configuration",
-    "UI Components"
-  ],
-  "tourSteps": 14,
-  "fingerprintFiles": 553,
-  "validation": {
-    "schemaPassed": true,
-    "issues": [],
-    "warnings": [
-      "Node 'file:public/downloads/joes-linkedin-kit-v1.0.zip' has no edges (orphan)",
-      "Node 'file:public/downloads/joes-linkedin-kit-v1.0.zip.sha256' has no edges (orphan)",
-      "Node 'file:public/downloads/joes-salesman-v1.0.zip' has no edges (orphan)",
-      "Node 'file:public/downloads/joes-salesman-v1.0.zip.sha256' has no edges (orphan)",
-      "Node 'function:src/app/api/events/abandoned-checkout-followups/route.ts:acquireEventLock' has no edges (orphan)",
-      "Node 'function:src/app/api/events/cancel/route.ts:escapeHtml' has no edges (orphan)",
-      "Node 'function:src/app/api/events/session-reminders/route.ts:acquireEventWindowLock' has no edges (orphan)",
-      "Node 'file:src/app/api/unsubscribe/route.ts' has no edges (orphan)",
-      "Node 'file:src/app/bonus/auto-lead-magnet/page.tsx' has no edges (orphan)",
-      "Node 'file:src/lib/supabase.ts' has no edges (orphan)"
+  "newOrphans": [],
+  "assembleReview": {
+    "fixedSectionOk": true,
+    "nodesRecovered": 3,
+    "edgesRestored": 18,
+    "crossBatchEdgesAdded": 8,
+    "typesRemapped": 0,
+    "complexityRemapped": 0,
+    "notes": [
+      "Restored 18 original batch edges and 0 surviving previous inbound edges to refreshed nodes.",
+      "Merge report documents no ID or complexity normalization problems; three tested_by edges became valid after their production dependency-file endpoints were recovered and were restored with production-to-test direction.",
+      "Import-map gaps outside inherited partial graph scope remain: 488 absent source files and 16 absent target paths. No full graph expansion performed.",
+      "Three recovered dependency file nodes were read for accurate summaries; these are additional to the 15 changed files."
     ]
   },
-  "phaseWarnings": [
-    "File-analyzer subagent dispatch failed twice before starting: invalid thread-store request, no rollout found. Analyzer definitions and bundled extractors were executed in the main session.",
-    "Only 11 changed source/config/test files received semantic analysis. Seven absent dependency nodes were recovered from inventory metadata and tagged reference-only.",
-    "Previous partial graph coverage is preserved. Unrepresented unchanged source files remain outside semantic coverage.",
-    "The plugin ignores batch-existing.json; preserved nodes and edges use numeric batch-0.json instead.",
-    "One duplicate tested_by edge was dropped during merge; all canonical production-to-test relationships remain.",
-    "Batching split five oversized communities and truncated one high-degree neighbor list; all resolved imports are independently verified."
-  ],
-  "referenceOnlyNodes": 7,
-  "preservedUnchangedNodes": 119,
-  "graphPath": "/Users/myos/.myos/workspace/projects/mastermind/workshop-site/.understand-anything/knowledge-graph.json",
-  "dashboardLaunched": false,
-  "evidencePath": "/Users/myos/.myos/workspace/projects/mastermind/workshop-site/.understand-anything/.trash-20261105T200746Z"
+  "notes": [
+    "Inherited partial graph scope preserved.",
+    "Initial analyzer dispatch thread-context failure recovered by fresh-context dispatch.",
+    "Batching warned of oversized communities and neighborMap soft cap; all 15 changed files analyzed.",
+    "Dashboard not launched for graph-only non-interactive refresh."
+  ]
 }

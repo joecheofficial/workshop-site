@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "gitCommitHash": "31af93d9a652a0612690998381cff32a27d8da63",
-  "generatedAt": "2026-11-05T20:07:07.878Z",
+  "gitCommitHash": "9fe83fd64038f365b9f9c47266a4b7087ac83648",
+  "generatedAt": "2026-11-08T20:09:08.254Z",
   "files": {
     ".claude/settings.json": {
       "filePath": ".claude/settings.json",
@@ -6153,6 +6153,74 @@
       "totalLines": 16,
       "hasStructuralAnalysis": true
     },
+    "src/app/giveaways/free-ai-compositor/layout.tsx": {
+      "filePath": "src/app/giveaways/free-ai-compositor/layout.tsx",
+      "contentHash": "3a48fd9c8dee98ed487f1cb31291b2fffe6dcee2215793782819630ef2254567",
+      "functions": [
+        {
+          "name": "Layout",
+          "params": [
+            "{ children }"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "ReactNode"
+          ]
+        },
+        {
+          "source": "next",
+          "specifiers": [
+            "Metadata"
+          ]
+        }
+      ],
+      "exports": [
+        "metadata",
+        "Layout"
+      ],
+      "totalLines": 32,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/free-ai-compositor/page.tsx": {
+      "filePath": "src/app/giveaways/free-ai-compositor/page.tsx",
+      "contentHash": "8ee26bbee952cfebdcedfa151b6c155c39e273f62a14303ed1f02a37446db7a2",
+      "functions": [
+        {
+          "name": "FreeAiCompositorPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/components/giveaways/PackPage",
+          "specifiers": [
+            "PackPage"
+          ]
+        },
+        {
+          "source": "@/lib/free-ai-tool-pack",
+          "specifiers": [
+            "freeAiToolJsonLd",
+            "freeAiToolPack"
+          ]
+        }
+      ],
+      "exports": [
+        "FreeAiCompositorPage"
+      ],
+      "totalLines": 16,
+      "hasStructuralAnalysis": true
+    },
     "src/app/giveaways/free-ai-concat/layout.tsx": {
       "filePath": "src/app/giveaways/free-ai-concat/layout.tsx",
       "contentHash": "afb54aa663c09eaaa04c5a8fb5c795ec97b122aa6e3096d1307aeb229ea806a8",
@@ -6285,6 +6353,142 @@
       ],
       "exports": [
         "FreeAiDocumensoPage"
+      ],
+      "totalLines": 16,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/free-ai-draw-things/layout.tsx": {
+      "filePath": "src/app/giveaways/free-ai-draw-things/layout.tsx",
+      "contentHash": "b6fa6f16396de77f9e798d322a3a9af771e0cb0a9ee05459bfe71f52269e6d4e",
+      "functions": [
+        {
+          "name": "Layout",
+          "params": [
+            "{ children }"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "ReactNode"
+          ]
+        },
+        {
+          "source": "next",
+          "specifiers": [
+            "Metadata"
+          ]
+        }
+      ],
+      "exports": [
+        "metadata",
+        "Layout"
+      ],
+      "totalLines": 32,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/free-ai-draw-things/page.tsx": {
+      "filePath": "src/app/giveaways/free-ai-draw-things/page.tsx",
+      "contentHash": "7d5dbcb890b35a7191b619d3bf89db5d54afc4311aa06f9d46f21da099c631b9",
+      "functions": [
+        {
+          "name": "FreeAiDrawThingsPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/components/giveaways/PackPage",
+          "specifiers": [
+            "PackPage"
+          ]
+        },
+        {
+          "source": "@/lib/free-ai-tool-pack",
+          "specifiers": [
+            "freeAiToolJsonLd",
+            "freeAiToolPack"
+          ]
+        }
+      ],
+      "exports": [
+        "FreeAiDrawThingsPage"
+      ],
+      "totalLines": 16,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/free-ai-draw-your-font/layout.tsx": {
+      "filePath": "src/app/giveaways/free-ai-draw-your-font/layout.tsx",
+      "contentHash": "798f9c17be839d7f670b2d510773d9963e30f8d5566a79515b0500729f9bf901",
+      "functions": [
+        {
+          "name": "Layout",
+          "params": [
+            "{ children }"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "ReactNode"
+          ]
+        },
+        {
+          "source": "next",
+          "specifiers": [
+            "Metadata"
+          ]
+        }
+      ],
+      "exports": [
+        "metadata",
+        "Layout"
+      ],
+      "totalLines": 32,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/free-ai-draw-your-font/page.tsx": {
+      "filePath": "src/app/giveaways/free-ai-draw-your-font/page.tsx",
+      "contentHash": "371828fc963669e29bc3609fc01cac7bb2b509951d2fb965ae600563d6fe111e",
+      "functions": [
+        {
+          "name": "FreeAiDrawYourFontPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/components/giveaways/PackPage",
+          "specifiers": [
+            "PackPage"
+          ]
+        },
+        {
+          "source": "@/lib/free-ai-tool-pack",
+          "specifiers": [
+            "freeAiToolJsonLd",
+            "freeAiToolPack"
+          ]
+        }
+      ],
+      "exports": [
+        "FreeAiDrawYourFontPage"
       ],
       "totalLines": 16,
       "hasStructuralAnalysis": true
@@ -6693,6 +6897,142 @@
       ],
       "exports": [
         "FreeAiMempalacePage"
+      ],
+      "totalLines": 16,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/free-ai-open-design/layout.tsx": {
+      "filePath": "src/app/giveaways/free-ai-open-design/layout.tsx",
+      "contentHash": "dd7dc0ac46704f671c965a0203db749c784148553d11d0a005ee4460e4619630",
+      "functions": [
+        {
+          "name": "Layout",
+          "params": [
+            "{ children }"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "ReactNode"
+          ]
+        },
+        {
+          "source": "next",
+          "specifiers": [
+            "Metadata"
+          ]
+        }
+      ],
+      "exports": [
+        "metadata",
+        "Layout"
+      ],
+      "totalLines": 32,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/free-ai-open-design/page.tsx": {
+      "filePath": "src/app/giveaways/free-ai-open-design/page.tsx",
+      "contentHash": "796b29b3d184acc2eb51f10b6245fc4f836139602cbeb82f3138ee3f67587a6f",
+      "functions": [
+        {
+          "name": "FreeAiOpenDesignPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/components/giveaways/PackPage",
+          "specifiers": [
+            "PackPage"
+          ]
+        },
+        {
+          "source": "@/lib/free-ai-tool-pack",
+          "specifiers": [
+            "freeAiToolJsonLd",
+            "freeAiToolPack"
+          ]
+        }
+      ],
+      "exports": [
+        "FreeAiOpenDesignPage"
+      ],
+      "totalLines": 16,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/free-ai-openscreen/layout.tsx": {
+      "filePath": "src/app/giveaways/free-ai-openscreen/layout.tsx",
+      "contentHash": "ee30ccdafc0f2250b8fa84efb6efb3e9a3b6b1755f209d5f2337a1c676afbc74",
+      "functions": [
+        {
+          "name": "Layout",
+          "params": [
+            "{ children }"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "ReactNode"
+          ]
+        },
+        {
+          "source": "next",
+          "specifiers": [
+            "Metadata"
+          ]
+        }
+      ],
+      "exports": [
+        "metadata",
+        "Layout"
+      ],
+      "totalLines": 32,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/free-ai-openscreen/page.tsx": {
+      "filePath": "src/app/giveaways/free-ai-openscreen/page.tsx",
+      "contentHash": "f082d5d4f4f5ea9c23d09a27694990db115a1a77a95d115beac31e632664c327",
+      "functions": [
+        {
+          "name": "FreeAiOpenscreenPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/components/giveaways/PackPage",
+          "specifiers": [
+            "PackPage"
+          ]
+        },
+        {
+          "source": "@/lib/free-ai-tool-pack",
+          "specifiers": [
+            "freeAiToolJsonLd",
+            "freeAiToolPack"
+          ]
+        }
+      ],
+      "exports": [
+        "FreeAiOpenscreenPage"
       ],
       "totalLines": 16,
       "hasStructuralAnalysis": true
@@ -7133,6 +7473,74 @@
       ],
       "exports": [
         "FreeAiVoicestudioPage"
+      ],
+      "totalLines": 16,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/free-ai-yovoice/layout.tsx": {
+      "filePath": "src/app/giveaways/free-ai-yovoice/layout.tsx",
+      "contentHash": "346db6409d3d8a00118dd455d0db995944f9f054595ecd495dc18a915c4ec500",
+      "functions": [
+        {
+          "name": "Layout",
+          "params": [
+            "{ children }"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "ReactNode"
+          ]
+        },
+        {
+          "source": "next",
+          "specifiers": [
+            "Metadata"
+          ]
+        }
+      ],
+      "exports": [
+        "metadata",
+        "Layout"
+      ],
+      "totalLines": 32,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/free-ai-yovoice/page.tsx": {
+      "filePath": "src/app/giveaways/free-ai-yovoice/page.tsx",
+      "contentHash": "3aee23abc29f2d0bc3cd9b3066e9f05d1e0e2d5c5c44813f9b148a931b71eb27",
+      "functions": [
+        {
+          "name": "FreeAiYovoicePage",
+          "params": [],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/components/giveaways/PackPage",
+          "specifiers": [
+            "PackPage"
+          ]
+        },
+        {
+          "source": "@/lib/free-ai-tool-pack",
+          "specifiers": [
+            "freeAiToolJsonLd",
+            "freeAiToolPack"
+          ]
+        }
+      ],
+      "exports": [
+        "FreeAiYovoicePage"
       ],
       "totalLines": 16,
       "hasStructuralAnalysis": true
@@ -17077,7 +17485,7 @@
     },
     "src/lib/free-ai-tools.ts": {
       "filePath": "src/lib/free-ai-tools.ts",
-      "contentHash": "fef0285de479a67d8000743ad80e3ba932cfb6d6eb7e0eec13637979d0b862e0",
+      "contentHash": "acf073dd00761c68df49a9557068b15f76345d061c50d5b916709c50785adac8",
       "functions": [
         {
           "name": "getFreeAiTool",
@@ -17123,7 +17531,7 @@
         "isFreeAiToolSource",
         "formatStars"
       ],
-      "totalLines": 1182,
+      "totalLines": 1823,
       "hasStructuralAnalysis": true
     },
     "src/lib/generic-giveaway-email.ts": {
@@ -17631,7 +18039,7 @@
     },
     "src/lib/giveaways.ts": {
       "filePath": "src/lib/giveaways.ts",
-      "contentHash": "fdfc8ce7e0af8972f6346f076d09b57a716d9e4f671fbc02c9ffd7b16d6d206a",
+      "contentHash": "7b942541f4e8425b4517b80416d9f4f07f58341042d2549f606ced81e5b1776a",
       "functions": [
         {
           "name": "getGiveaway",
@@ -17649,7 +18057,7 @@
         "giveaways",
         "getGiveaway"
       ],
-      "totalLines": 445,
+      "totalLines": 493,
       "hasStructuralAnalysis": true
     },
     "src/lib/google-calendar-invite.ts": {
@@ -20811,7 +21219,7 @@
     },
     "tests/free-ai-tools.test.ts": {
       "filePath": "tests/free-ai-tools.test.ts",
-      "contentHash": "1320bb0c4e9ab89ef637ed885cd1612e8a7ce2a292ec065e130670f83b5c052e",
+      "contentHash": "af672ef00dad38bb6e002855f4d47641633570e2d21b72487a9bf7e8b0dad90e",
       "functions": [],
       "classes": [],
       "imports": [
@@ -20878,7 +21286,7 @@
         }
       ],
       "exports": [],
-      "totalLines": 118,
+      "totalLines": 126,
       "hasStructuralAnalysis": true
     },
     "tests/generic-giveaway-email.test.ts": {

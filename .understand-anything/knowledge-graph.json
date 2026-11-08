@@ -532,7 +532,7 @@
       "lineCount": 176,
       "symbolCount": 0,
       "complexity": "moderate",
-      "summary": "Stores Joe\u2019s LinkedIn Kit resource content and the downloadable ZIP path.",
+      "summary": "Stores Joe’s LinkedIn Kit resource content and the downloadable ZIP path.",
       "tags": [
         "content",
         "resource",
@@ -551,7 +551,7 @@
       "lineCount": 9,
       "symbolCount": 1,
       "complexity": "simple",
-      "summary": "Renders Joe\u2019s LinkedIn Kit giveaway page and its downloadable resource details.",
+      "summary": "Renders Joe’s LinkedIn Kit giveaway page and its downloadable resource details.",
       "tags": [
         "page",
         "route",
@@ -587,105 +587,11 @@
       "lineCount": 5,
       "symbolCount": 0,
       "complexity": "simple",
-      "summary": "Provides the reusable prompt text included with Joe\u2019s LinkedIn Kit.",
+      "summary": "Provides the reusable prompt text included with Joe’s LinkedIn Kit.",
       "tags": [
         "content",
         "resource",
         "giveaway"
-      ]
-    },
-    {
-      "id": "file:src/lib/free-ai-tools.ts",
-      "name": "free-ai-tools.ts",
-      "type": "file",
-      "filePath": "src/lib/free-ai-tools.ts",
-      "path": "src/lib/free-ai-tools.ts",
-      "language": "typescript",
-      "category": "code",
-      "lineCount": 1181,
-      "symbolCount": 3,
-      "complexity": "complex",
-      "summary": "Defines the free AI tool catalog, slug list, lookup helpers and source validation utilities.",
-      "tags": [
-        "utility",
-        "giveaway",
-        "content",
-        "tested"
-      ]
-    },
-    {
-      "id": "function:src/lib/free-ai-tools.ts:getFreeAiTool",
-      "name": "getFreeAiTool",
-      "type": "function",
-      "filePath": "src/lib/free-ai-tools.ts",
-      "complexity": "simple",
-      "summary": "Implements getFreeAiTool in free-ai-tools.ts.",
-      "tags": [
-        "function",
-        "giveaway"
-      ],
-      "metadata": {
-        "startLine": 1168,
-        "endLine": 1172,
-        "params": [
-          "slug"
-        ]
-      }
-    },
-    {
-      "id": "function:src/lib/free-ai-tools.ts:isFreeAiToolSource",
-      "name": "isFreeAiToolSource",
-      "type": "function",
-      "filePath": "src/lib/free-ai-tools.ts",
-      "complexity": "simple",
-      "summary": "Implements isFreeAiToolSource in free-ai-tools.ts.",
-      "tags": [
-        "function",
-        "giveaway"
-      ],
-      "metadata": {
-        "startLine": 1174,
-        "endLine": 1176,
-        "params": [
-          "source"
-        ]
-      }
-    },
-    {
-      "id": "function:src/lib/free-ai-tools.ts:formatStars",
-      "name": "formatStars",
-      "type": "function",
-      "filePath": "src/lib/free-ai-tools.ts",
-      "complexity": "simple",
-      "summary": "Implements formatStars in free-ai-tools.ts.",
-      "tags": [
-        "function",
-        "giveaway"
-      ],
-      "metadata": {
-        "startLine": 1179,
-        "endLine": 1181,
-        "params": [
-          "stars"
-        ]
-      }
-    },
-    {
-      "id": "file:tests/free-ai-tools.test.ts",
-      "name": "free-ai-tools.test.ts",
-      "type": "file",
-      "filePath": "tests/free-ai-tools.test.ts",
-      "path": "tests/free-ai-tools.test.ts",
-      "language": "typescript",
-      "category": "code",
-      "lineCount": 117,
-      "symbolCount": 0,
-      "complexity": "moderate",
-      "summary": "Checks free AI tool catalog lookup, source handling and formatting behavior.",
-      "tags": [
-        "test",
-        "giveaway",
-        "regression"
       ]
     },
     {
@@ -2704,36 +2610,6 @@
       "complexity": "simple"
     },
     {
-      "id": "file:src/lib/giveaways.ts",
-      "type": "file",
-      "name": "giveaways.ts",
-      "filePath": "src/lib/giveaways.ts",
-      "summary": "Maintains the typed giveaway catalog used to populate the giveaway index, with slugs, descriptions, icons and badges plus a lookup helper. Includes the Video Editor catalog entry, whose route is redirected to the paid Video Agent.",
-      "tags": [
-        "data-model",
-        "giveaway-catalog",
-        "content-registry"
-      ],
-      "complexity": "complex"
-    },
-    {
-      "id": "function:src/lib/giveaways.ts:getGiveaway",
-      "type": "function",
-      "name": "getGiveaway",
-      "filePath": "src/lib/giveaways.ts",
-      "lineRange": [
-        442,
-        444
-      ],
-      "summary": "Finds a giveaway entry by its exact slug, returning undefined when no entry matches.",
-      "tags": [
-        "utility",
-        "lookup",
-        "giveaway-catalog"
-      ],
-      "complexity": "simple"
-    },
-    {
       "id": "file:tests/video-editor.test.ts",
       "type": "file",
       "name": "video-editor.test.ts",
@@ -2881,6 +2757,528 @@
         "code"
       ],
       "complexity": "moderate"
+    },
+    {
+      "id": "file:src/lib/free-ai-tools.ts",
+      "type": "file",
+      "name": "free-ai-tools.ts",
+      "filePath": "src/lib/free-ai-tools.ts",
+      "summary": "Defines the Free AI Tools catalog shared by giveaway pages and delivery emails, including setup steps, requirements, prompts, limitations and tool links. Provides slug lookup, source validation and GitHub star formatting helpers.",
+      "tags": [
+        "data-model",
+        "giveaway",
+        "content-registry",
+        "validation",
+        "tested"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/lib/free-ai-tools.ts:getFreeAiTool",
+      "type": "function",
+      "name": "getFreeAiTool",
+      "filePath": "src/lib/free-ai-tools.ts",
+      "lineRange": [
+        1809,
+        1813
+      ],
+      "summary": "Looks up a Free AI Tool by slug and throws for an unknown slug.",
+      "tags": [
+        "utility",
+        "giveaway",
+        "lookup"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/free-ai-tools.ts:isFreeAiToolSource",
+      "type": "function",
+      "name": "isFreeAiToolSource",
+      "filePath": "src/lib/free-ai-tools.ts",
+      "lineRange": [
+        1815,
+        1817
+      ],
+      "summary": "Checks whether a source matches an own entry in the tool lookup table.",
+      "tags": [
+        "utility",
+        "giveaway",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/free-ai-tools.ts:formatStars",
+      "type": "function",
+      "name": "formatStars",
+      "filePath": "src/lib/free-ai-tools.ts",
+      "lineRange": [
+        1820,
+        1822
+      ],
+      "summary": "Formats GitHub star counts with a rounded k suffix for counts of at least one thousand.",
+      "tags": [
+        "utility",
+        "formatting",
+        "github"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/lib/giveaways.ts",
+      "type": "file",
+      "name": "giveaways.ts",
+      "filePath": "src/lib/giveaways.ts",
+      "summary": "Maintains the giveaway directory registry with titles, descriptions, icons and badges used to build the giveaways index. Provides an optional lookup by slug.",
+      "tags": [
+        "data-model",
+        "giveaway",
+        "content-registry",
+        "tested"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/lib/giveaways.ts:getGiveaway",
+      "type": "function",
+      "name": "getGiveaway",
+      "filePath": "src/lib/giveaways.ts",
+      "lineRange": [
+        490,
+        492
+      ],
+      "summary": "Finds a giveaway registry entry by slug, returning undefined when none matches.",
+      "tags": [
+        "utility",
+        "giveaway",
+        "lookup"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:tests/free-ai-tools.test.ts",
+      "type": "file",
+      "name": "free-ai-tools.test.ts",
+      "filePath": "tests/free-ai-tools.test.ts",
+      "summary": "Checks Free AI Tools catalog uniqueness, route and registry coverage, deliverable email links, setup prompts, audience levels and matched offers. Protects the original ten tools and rejects placeholder copy, unsupported results claims and em dashes.",
+      "tags": [
+        "test",
+        "giveaway",
+        "validation",
+        "email"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/app/giveaways/free-ai-compositor/layout.tsx",
+      "type": "file",
+      "name": "layout.tsx",
+      "filePath": "src/app/giveaways/free-ai-compositor/layout.tsx",
+      "summary": "Defines canonical URLs, search metadata, Open Graph and Twitter previews for the Compositor setup guide. Its route layout passes child content through.",
+      "tags": [
+        "metadata",
+        "seo",
+        "giveaway",
+        "route-layout"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/app/giveaways/free-ai-compositor/layout.tsx:Layout",
+      "type": "function",
+      "name": "Layout",
+      "filePath": "src/app/giveaways/free-ai-compositor/layout.tsx",
+      "lineRange": [
+        29,
+        31
+      ],
+      "summary": "Passes children through the Compositor route layout while its module supplies page metadata.",
+      "tags": [
+        "component",
+        "route-layout",
+        "giveaway"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/app/giveaways/free-ai-compositor/page.tsx",
+      "type": "file",
+      "name": "page.tsx",
+      "filePath": "src/app/giveaways/free-ai-compositor/page.tsx",
+      "summary": "Renders the Compositor giveaway setup guide through the shared PackPage component and tool-pack builder. Adds tool-specific JSON-LD structured data using the route slug.",
+      "tags": [
+        "entry-point",
+        "component",
+        "giveaway",
+        "structured-data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/app/giveaways/free-ai-compositor/page.tsx:FreeAiCompositorPage",
+      "type": "function",
+      "name": "FreeAiCompositorPage",
+      "filePath": "src/app/giveaways/free-ai-compositor/page.tsx",
+      "lineRange": [
+        8,
+        15
+      ],
+      "summary": "Builds the Compositor setup page and its JSON-LD from the shared tool catalog, then renders PackPage.",
+      "tags": [
+        "component",
+        "giveaway",
+        "structured-data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/app/giveaways/free-ai-draw-things/layout.tsx",
+      "type": "file",
+      "name": "layout.tsx",
+      "filePath": "src/app/giveaways/free-ai-draw-things/layout.tsx",
+      "summary": "Defines canonical URLs, search metadata, Open Graph and Twitter previews for the Draw Things setup guide. Its route layout passes child content through.",
+      "tags": [
+        "metadata",
+        "seo",
+        "giveaway",
+        "route-layout"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/app/giveaways/free-ai-draw-things/layout.tsx:Layout",
+      "type": "function",
+      "name": "Layout",
+      "filePath": "src/app/giveaways/free-ai-draw-things/layout.tsx",
+      "lineRange": [
+        29,
+        31
+      ],
+      "summary": "Passes children through the Draw Things route layout while its module supplies page metadata.",
+      "tags": [
+        "component",
+        "route-layout",
+        "giveaway"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/app/giveaways/free-ai-draw-things/page.tsx",
+      "type": "file",
+      "name": "page.tsx",
+      "filePath": "src/app/giveaways/free-ai-draw-things/page.tsx",
+      "summary": "Renders the Draw Things giveaway setup guide through the shared PackPage component and tool-pack builder. Adds tool-specific JSON-LD structured data using the route slug.",
+      "tags": [
+        "entry-point",
+        "component",
+        "giveaway",
+        "structured-data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/app/giveaways/free-ai-draw-things/page.tsx:FreeAiDrawThingsPage",
+      "type": "function",
+      "name": "FreeAiDrawThingsPage",
+      "filePath": "src/app/giveaways/free-ai-draw-things/page.tsx",
+      "lineRange": [
+        8,
+        15
+      ],
+      "summary": "Builds the Draw Things setup page and its JSON-LD from the shared tool catalog, then renders PackPage.",
+      "tags": [
+        "component",
+        "giveaway",
+        "structured-data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/app/giveaways/free-ai-draw-your-font/layout.tsx",
+      "type": "file",
+      "name": "layout.tsx",
+      "filePath": "src/app/giveaways/free-ai-draw-your-font/layout.tsx",
+      "summary": "Defines canonical URLs, search metadata, Open Graph and Twitter previews for the Draw Your Font setup guide. Its route layout passes child content through.",
+      "tags": [
+        "metadata",
+        "seo",
+        "giveaway",
+        "route-layout"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/app/giveaways/free-ai-draw-your-font/layout.tsx:Layout",
+      "type": "function",
+      "name": "Layout",
+      "filePath": "src/app/giveaways/free-ai-draw-your-font/layout.tsx",
+      "lineRange": [
+        29,
+        31
+      ],
+      "summary": "Passes children through the Draw Your Font route layout while its module supplies page metadata.",
+      "tags": [
+        "component",
+        "route-layout",
+        "giveaway"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/app/giveaways/free-ai-draw-your-font/page.tsx",
+      "type": "file",
+      "name": "page.tsx",
+      "filePath": "src/app/giveaways/free-ai-draw-your-font/page.tsx",
+      "summary": "Renders the Draw Your Font giveaway setup guide through the shared PackPage component and tool-pack builder. Adds tool-specific JSON-LD structured data using the route slug.",
+      "tags": [
+        "entry-point",
+        "component",
+        "giveaway",
+        "structured-data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/app/giveaways/free-ai-draw-your-font/page.tsx:FreeAiDrawYourFontPage",
+      "type": "function",
+      "name": "FreeAiDrawYourFontPage",
+      "filePath": "src/app/giveaways/free-ai-draw-your-font/page.tsx",
+      "lineRange": [
+        8,
+        15
+      ],
+      "summary": "Builds the Draw Your Font setup page and its JSON-LD from the shared tool catalog, then renders PackPage.",
+      "tags": [
+        "component",
+        "giveaway",
+        "structured-data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/app/giveaways/free-ai-open-design/layout.tsx",
+      "type": "file",
+      "name": "layout.tsx",
+      "filePath": "src/app/giveaways/free-ai-open-design/layout.tsx",
+      "summary": "Defines canonical URLs, search metadata, Open Graph and Twitter previews for the Open Design setup guide. Its route layout passes child content through.",
+      "tags": [
+        "metadata",
+        "seo",
+        "giveaway",
+        "route-layout"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/app/giveaways/free-ai-open-design/layout.tsx:Layout",
+      "type": "function",
+      "name": "Layout",
+      "filePath": "src/app/giveaways/free-ai-open-design/layout.tsx",
+      "lineRange": [
+        29,
+        31
+      ],
+      "summary": "Passes children through the Open Design route layout while its module supplies page metadata.",
+      "tags": [
+        "component",
+        "route-layout",
+        "giveaway"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/app/giveaways/free-ai-open-design/page.tsx",
+      "type": "file",
+      "name": "page.tsx",
+      "filePath": "src/app/giveaways/free-ai-open-design/page.tsx",
+      "summary": "Renders the Open Design giveaway setup guide through the shared PackPage component and tool-pack builder. Adds tool-specific JSON-LD structured data using the route slug.",
+      "tags": [
+        "entry-point",
+        "component",
+        "giveaway",
+        "structured-data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/app/giveaways/free-ai-open-design/page.tsx:FreeAiOpenDesignPage",
+      "type": "function",
+      "name": "FreeAiOpenDesignPage",
+      "filePath": "src/app/giveaways/free-ai-open-design/page.tsx",
+      "lineRange": [
+        8,
+        15
+      ],
+      "summary": "Builds the Open Design setup page and its JSON-LD from the shared tool catalog, then renders PackPage.",
+      "tags": [
+        "component",
+        "giveaway",
+        "structured-data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/app/giveaways/free-ai-openscreen/layout.tsx",
+      "type": "file",
+      "name": "layout.tsx",
+      "filePath": "src/app/giveaways/free-ai-openscreen/layout.tsx",
+      "summary": "Defines canonical URLs, search metadata, Open Graph and Twitter previews for the OpenScreen setup guide. Its route layout passes child content through.",
+      "tags": [
+        "metadata",
+        "seo",
+        "giveaway",
+        "route-layout"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/app/giveaways/free-ai-openscreen/layout.tsx:Layout",
+      "type": "function",
+      "name": "Layout",
+      "filePath": "src/app/giveaways/free-ai-openscreen/layout.tsx",
+      "lineRange": [
+        29,
+        31
+      ],
+      "summary": "Passes children through the OpenScreen route layout while its module supplies page metadata.",
+      "tags": [
+        "component",
+        "route-layout",
+        "giveaway"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/app/giveaways/free-ai-openscreen/page.tsx",
+      "type": "file",
+      "name": "page.tsx",
+      "filePath": "src/app/giveaways/free-ai-openscreen/page.tsx",
+      "summary": "Renders the OpenScreen giveaway setup guide through the shared PackPage component and tool-pack builder. Adds tool-specific JSON-LD structured data using the route slug.",
+      "tags": [
+        "entry-point",
+        "component",
+        "giveaway",
+        "structured-data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/app/giveaways/free-ai-openscreen/page.tsx:FreeAiOpenscreenPage",
+      "type": "function",
+      "name": "FreeAiOpenscreenPage",
+      "filePath": "src/app/giveaways/free-ai-openscreen/page.tsx",
+      "lineRange": [
+        8,
+        15
+      ],
+      "summary": "Builds the OpenScreen setup page and its JSON-LD from the shared tool catalog, then renders PackPage.",
+      "tags": [
+        "component",
+        "giveaway",
+        "structured-data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/app/giveaways/free-ai-yovoice/layout.tsx",
+      "type": "file",
+      "name": "layout.tsx",
+      "filePath": "src/app/giveaways/free-ai-yovoice/layout.tsx",
+      "summary": "Defines canonical URLs, search metadata, Open Graph and Twitter previews for the yovoice setup guide. Its route layout passes child content through.",
+      "tags": [
+        "metadata",
+        "seo",
+        "giveaway",
+        "route-layout"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/app/giveaways/free-ai-yovoice/layout.tsx:Layout",
+      "type": "function",
+      "name": "Layout",
+      "filePath": "src/app/giveaways/free-ai-yovoice/layout.tsx",
+      "lineRange": [
+        29,
+        31
+      ],
+      "summary": "Passes children through the yovoice route layout while its module supplies page metadata.",
+      "tags": [
+        "component",
+        "route-layout",
+        "giveaway"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/app/giveaways/free-ai-yovoice/page.tsx",
+      "type": "file",
+      "name": "page.tsx",
+      "filePath": "src/app/giveaways/free-ai-yovoice/page.tsx",
+      "summary": "Renders the yovoice giveaway setup guide through the shared PackPage component and tool-pack builder. Adds tool-specific JSON-LD structured data using the route slug.",
+      "tags": [
+        "entry-point",
+        "component",
+        "giveaway",
+        "structured-data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/app/giveaways/free-ai-yovoice/page.tsx:FreeAiYovoicePage",
+      "type": "function",
+      "name": "FreeAiYovoicePage",
+      "filePath": "src/app/giveaways/free-ai-yovoice/page.tsx",
+      "lineRange": [
+        8,
+        15
+      ],
+      "summary": "Builds the yovoice setup page and its JSON-LD from the shared tool catalog, then renders PackPage.",
+      "tags": [
+        "component",
+        "giveaway",
+        "structured-data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/lib/free-ai-tool-email.ts",
+      "type": "file",
+      "name": "free-ai-tool-email.ts",
+      "filePath": "src/lib/free-ai-tool-email.ts",
+      "summary": "Builds matching HTML and plain-text setup emails from the shared Free AI Tools catalog, with escaped content, tracked links and unsubscribe information.",
+      "tags": [
+        "email",
+        "giveaway",
+        "delivery"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/lib/free-ai-tool-pack.ts",
+      "type": "file",
+      "name": "free-ai-tool-pack.ts",
+      "filePath": "src/lib/free-ai-tool-pack.ts",
+      "summary": "Converts shared Free AI Tools catalog entries into typed PackPage content and HowTo structured data, supporting manual guides and one-prompt setup notes.",
+      "tags": [
+        "content-adapter",
+        "giveaway",
+        "structured-data"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/lib/lead-magnets.ts",
+      "type": "file",
+      "name": "lead-magnets.ts",
+      "filePath": "src/lib/lead-magnets.ts",
+      "summary": "Defines typed lead magnet assets and recognized delivery sources, rejects unknown sources, and renders tracked welcome email links with unsubscribe support.",
+      "tags": [
+        "data-model",
+        "email",
+        "validation"
+      ],
+      "complexity": "moderate"
     }
   ],
   "edges": [
@@ -2889,91 +3287,70 @@
       "target": "function:src/app/giveaways/chat-to-flowchart/layout.tsx:ChatToFlowchartLayout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/chat-to-flowchart/page.tsx",
       "target": "function:src/app/giveaways/chat-to-flowchart/page.tsx:ChatToFlowchartPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/film/layout.tsx",
       "target": "function:src/app/giveaways/film/layout.tsx:FilmLayout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/film/page.tsx",
       "target": "function:src/app/giveaways/film/page.tsx:FilmPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/free-ai-concat/layout.tsx",
       "target": "function:src/app/giveaways/free-ai-concat/layout.tsx:Layout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/free-ai-concat/page.tsx",
       "target": "function:src/app/giveaways/free-ai-concat/page.tsx:FreeAiConcatPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/free-ai-salesman/layout.tsx",
       "target": "function:src/app/giveaways/free-ai-salesman/layout.tsx:Layout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/free-ai-salesman/page.tsx",
       "target": "function:src/app/giveaways/free-ai-salesman/page.tsx:FreeAiSalesmanPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/linkedin-kit/layout.tsx",
       "target": "function:src/app/giveaways/linkedin-kit/layout.tsx:LinkedinKitLayout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/linkedin-kit/page.tsx",
       "target": "function:src/app/giveaways/linkedin-kit/page.tsx:LinkedinKitPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/free-ai-tools.ts",
-      "target": "function:src/lib/free-ai-tools.ts:getFreeAiTool",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/free-ai-tools.ts",
-      "target": "function:src/lib/free-ai-tools.ts:isFreeAiToolSource",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/free-ai-tools.ts",
-      "target": "function:src/lib/free-ai-tools.ts:formatStars",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/chat-to-flowchart/page.tsx",
@@ -3011,13 +3388,6 @@
       "weight": 0.7
     },
     {
-      "source": "file:tests/free-ai-tools.test.ts",
-      "target": "file:src/lib/free-ai-tools.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
       "source": "file:tests/linkedin-kit.test.ts",
       "target": "file:src/app/giveaways/linkedin-kit/pack.ts",
       "type": "imports",
@@ -3030,13 +3400,6 @@
       "type": "imports",
       "direction": "forward",
       "weight": 0.7
-    },
-    {
-      "source": "file:src/lib/free-ai-tools.ts",
-      "target": "file:tests/free-ai-tools.test.ts",
-      "type": "tested_by",
-      "direction": "forward",
-      "weight": 0.5
     },
     {
       "source": "file:src/app/giveaways/linkedin-kit/page.tsx",
@@ -3274,7 +3637,7 @@
       "target": "function:src/app/giveaways/desk-pet/page.tsx:DeskPetPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/desk-pet/page.tsx",
@@ -3330,14 +3693,14 @@
       "target": "function:scripts/giveaway-followups.mjs:lina",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
       "target": "function:scripts/giveaway-followups.mjs:stripeBuyer",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
@@ -3351,14 +3714,14 @@
       "target": "function:scripts/giveaway-followups.mjs:repliedByEmail",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
       "target": "function:scripts/giveaway-followups.mjs:crmFirstSource",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
@@ -3372,7 +3735,7 @@
       "target": "function:scripts/giveaway-followups.mjs:slugForKeyword",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
@@ -3386,7 +3749,7 @@
       "target": "function:scripts/giveaway-followups.mjs:checkoutStartedSince",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
@@ -3400,7 +3763,7 @@
       "target": "function:scripts/giveaway-followups.mjs:bookedCall",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
@@ -3414,14 +3777,14 @@
       "target": "function:scripts/giveaway-followups.mjs:findSubscriber",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
       "target": "function:scripts/giveaway-followups.mjs:bonusLink",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
@@ -3435,56 +3798,56 @@
       "target": "function:scripts/giveaway-followups.mjs:renderEmailFor",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
       "target": "function:scripts/giveaway-followups.mjs:resendSend",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
       "target": "function:scripts/giveaway-followups.mjs:sendOne",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
       "target": "function:scripts/giveaway-followups.mjs:allVariants",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
       "target": "function:scripts/giveaway-followups.mjs:renderAll",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
       "target": "function:scripts/giveaway-followups.mjs:testSends",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
       "target": "function:scripts/giveaway-followups.mjs:reviewSends",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
       "target": "function:scripts/giveaway-followups.mjs:main",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
@@ -3498,7 +3861,7 @@
       "target": "function:src/lib/giveaway-followups.ts:pickGift",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -3512,7 +3875,7 @@
       "target": "function:src/lib/giveaway-followups.ts:pickLiveEvent",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -3526,7 +3889,7 @@
       "target": "function:src/lib/giveaway-followups.ts:isSalesKeywordSource",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -3540,7 +3903,7 @@
       "target": "function:src/lib/giveaway-followups.ts:isTestEmail",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -3554,7 +3917,7 @@
       "target": "function:src/lib/giveaway-followups.ts:levelFromSource",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -3568,7 +3931,7 @@
       "target": "function:src/lib/giveaway-followups.ts:levelFromQuizScore",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -3582,7 +3945,7 @@
       "target": "function:src/lib/giveaway-followups.ts:parseLevelReply",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -3596,7 +3959,7 @@
       "target": "function:src/lib/giveaway-followups.ts:lastVariant",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -3610,7 +3973,7 @@
       "target": "function:src/lib/giveaway-followups.ts:salesOfferFor",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -3624,7 +3987,7 @@
       "target": "function:src/lib/giveaway-followups.ts:salesLastVariant",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -3638,7 +4001,7 @@
       "target": "function:src/lib/giveaway-followups.ts:stepLink",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -3652,14 +4015,14 @@
       "target": "function:src/lib/giveaway-followups.ts:baseVars",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
       "target": "function:src/lib/giveaway-followups.ts:renderTemplate",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -3673,7 +4036,7 @@
       "target": "function:src/lib/giveaway-followups.ts:renderQuickwin",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -3687,7 +4050,7 @@
       "target": "function:src/lib/giveaway-followups.ts:renderLast",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -3701,7 +4064,7 @@
       "target": "function:src/lib/giveaway-followups.ts:renderSalesDay2",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -3715,7 +4078,7 @@
       "target": "function:src/lib/giveaway-followups.ts:renderSalesDay5",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -3729,7 +4092,7 @@
       "target": "function:src/lib/giveaway-followups.ts:renderGift2",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -3743,7 +4106,7 @@
       "target": "function:src/lib/giveaway-followups.ts:renderLive",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -3757,7 +4120,7 @@
       "target": "function:src/lib/giveaway-followups.ts:renderDmLevel",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -3771,7 +4134,7 @@
       "target": "function:src/lib/giveaway-followups.ts:dayZeroPs",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -3785,7 +4148,7 @@
       "target": "function:src/lib/giveaway-followups.ts:withDayZeroPs",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -3799,7 +4162,7 @@
       "target": "function:src/lib/giveaway-followups.ts:toHtml",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -3813,7 +4176,7 @@
       "target": "function:src/lib/giveaway-followups.ts:planFollowups",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -4009,7 +4372,7 @@
       "target": "function:src/app/giveaways/desk-pet/layout.tsx:DeskPetLayout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/desk-pet/layout.tsx",
@@ -4023,7 +4386,7 @@
       "target": "function:src/app/sitemap.ts:sitemap",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/sitemap.ts",
@@ -4031,14 +4394,6 @@
       "type": "exports",
       "direction": "forward",
       "weight": 0.8
-    },
-    {
-      "source": "file:src/app/sitemap.ts",
-      "target": "file:src/lib/free-ai-tools.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "description": "Imports FREE_AI_TOOL_SLUGS through the @/lib alias (source-confirmed; extractor importMap omitted this alias)."
     },
     {
       "source": "document:public/desk-pet-prompt.txt",
@@ -4085,24 +4440,8 @@
       "weight": 0.7
     },
     {
-      "source": "file:tests/free-ai-tools.test.ts",
-      "target": "file:src/lib/giveaways.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
       "source": "file:tests/linkedin-kit.test.ts",
       "target": "file:src/lib/generic-giveaway-email.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
-      "source": "file:tests/linkedin-kit.test.ts",
-      "target": "file:src/lib/giveaways.ts",
       "type": "imports",
       "direction": "forward",
       "weight": 0.7,
@@ -4120,7 +4459,7 @@
       "target": "function:src/app/giveaways/video-editor/page.tsx:VideoEditorPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/video-editor/page.tsx",
@@ -4148,14 +4487,14 @@
       "target": "function:src/components/events/joechella/FestivalHero.tsx:Ticker",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/components/events/joechella/FestivalHero.tsx",
       "target": "function:src/components/events/joechella/FestivalHero.tsx:FestivalHero",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/components/events/joechella/FestivalHero.tsx",
@@ -4197,42 +4536,42 @@
       "target": "function:src/components/events/joechella/ProgramTimeline.tsx:ToneIcon",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/components/events/joechella/ProgramTimeline.tsx",
       "target": "function:src/components/events/joechella/ProgramTimeline.tsx:HighlightIcon",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/components/events/joechella/ProgramTimeline.tsx",
       "target": "function:src/components/events/joechella/ProgramTimeline.tsx:ItemTitle",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/components/events/joechella/ProgramTimeline.tsx",
       "target": "function:src/components/events/joechella/ProgramTimeline.tsx:ItemCard",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/components/events/joechella/ProgramTimeline.tsx",
       "target": "function:src/components/events/joechella/ProgramTimeline.tsx:Group",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/components/events/joechella/ProgramTimeline.tsx",
       "target": "function:src/components/events/joechella/ProgramTimeline.tsx:ProgramTimeline",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/components/events/joechella/ProgramTimeline.tsx",
@@ -4260,7 +4599,7 @@
       "target": "function:src/lib/events.tsx:getEventDiscountedPrice",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/events.tsx",
@@ -4274,7 +4613,7 @@
       "target": "function:src/lib/events.tsx:resolvePromoCode",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/events.tsx",
@@ -4288,7 +4627,7 @@
       "target": "function:src/lib/events.tsx:formatEventPrice",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/events.tsx",
@@ -4302,7 +4641,7 @@
       "target": "function:src/lib/events.tsx:formatDonationLabelNote",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/events.tsx",
@@ -4316,7 +4655,7 @@
       "target": "function:src/lib/events.tsx:toggleDonationPreset",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/events.tsx",
@@ -4330,7 +4669,7 @@
       "target": "function:src/lib/events.tsx:getEventBySlug",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/events.tsx",
@@ -4344,7 +4683,7 @@
       "target": "function:src/lib/events.tsx:getLiveEvents",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/events.tsx",
@@ -4358,7 +4697,7 @@
       "target": "function:src/lib/events.tsx:getUpcomingLiveEvents",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/events.tsx",
@@ -4386,7 +4725,7 @@
       "target": "function:src/lib/generic-giveaway-email.ts:validateGiveawayLink",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/generic-giveaway-email.ts",
@@ -4400,7 +4739,7 @@
       "target": "function:src/lib/generic-giveaway-email.ts:sanitizeGiveawayName",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/generic-giveaway-email.ts",
@@ -4414,7 +4753,7 @@
       "target": "function:src/lib/generic-giveaway-email.ts:isValidManychatSecret",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/generic-giveaway-email.ts",
@@ -4428,7 +4767,7 @@
       "target": "function:src/lib/generic-giveaway-email.ts:buildGenericGiveawayEmail",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/generic-giveaway-email.ts",
@@ -4442,7 +4781,7 @@
       "target": "function:src/lib/generic-giveaway-email.ts:websiteGiveawayEmail",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/generic-giveaway-email.ts",
@@ -4456,7 +4795,7 @@
       "target": "function:src/lib/generic-giveaway-email.ts:salesKeywordPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/generic-giveaway-email.ts",
@@ -4470,7 +4809,7 @@
       "target": "function:src/lib/generic-giveaway-email.ts:buildSalesKeywordEmail",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/generic-giveaway-email.ts",
@@ -4492,20 +4831,6 @@
       "type": "imports",
       "direction": "forward",
       "weight": 0.7
-    },
-    {
-      "source": "file:src/lib/giveaways.ts",
-      "target": "function:src/lib/giveaways.ts:getGiveaway",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/giveaways.ts",
-      "target": "function:src/lib/giveaways.ts:getGiveaway",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
     },
     {
       "source": "file:tests/video-editor.test.ts",
@@ -4582,7 +4907,7 @@
       "target": "function:src/app/giveaways/video-editor/layout.tsx:VideoEditorLayout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/video-editor/layout.tsx",
@@ -4735,14 +5060,6 @@
       "recoveredFromImportMap": true
     },
     {
-      "source": "file:src/lib/free-ai-tools.ts",
-      "target": "file:src/lib/giveaway-offers.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
       "source": "file:src/lib/pack-page.ts",
       "target": "file:src/lib/giveaway-offers.ts",
       "type": "imports",
@@ -4767,14 +5084,6 @@
       "recoveredFromImportMap": true
     },
     {
-      "source": "file:tests/free-ai-tools.test.ts",
-      "target": "file:src/lib/giveaway-offers.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
       "source": "file:tests/linkedin-kit.test.ts",
       "target": "file:src/lib/giveaway-offers.ts",
       "type": "imports",
@@ -4789,31 +5098,563 @@
       "direction": "forward",
       "weight": 0.7,
       "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/lib/free-ai-tools.ts",
+      "target": "function:src/lib/free-ai-tools.ts:getFreeAiTool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/free-ai-tools.ts",
+      "target": "function:src/lib/free-ai-tools.ts:getFreeAiTool",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/free-ai-tools.ts",
+      "target": "function:src/lib/free-ai-tools.ts:isFreeAiToolSource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/free-ai-tools.ts",
+      "target": "function:src/lib/free-ai-tools.ts:isFreeAiToolSource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/free-ai-tools.ts",
+      "target": "function:src/lib/free-ai-tools.ts:formatStars",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/free-ai-tools.ts",
+      "target": "function:src/lib/free-ai-tools.ts:formatStars",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/free-ai-tools.ts",
+      "target": "file:src/lib/giveaway-offers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/giveaways.ts",
+      "target": "function:src/lib/giveaways.ts:getGiveaway",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/giveaways.ts",
+      "target": "function:src/lib/giveaways.ts:getGiveaway",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tests/free-ai-tools.test.ts",
+      "target": "file:src/lib/free-ai-tools.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/free-ai-tools.ts",
+      "target": "file:tests/free-ai-tools.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:tests/free-ai-tools.test.ts",
+      "target": "file:src/lib/giveaway-offers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/giveaway-offers.ts",
+      "target": "file:tests/free-ai-tools.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:tests/free-ai-tools.test.ts",
+      "target": "file:src/lib/giveaways.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/giveaways.ts",
+      "target": "file:tests/free-ai-tools.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-compositor/layout.tsx",
+      "target": "function:src/app/giveaways/free-ai-compositor/layout.tsx:Layout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-compositor/layout.tsx",
+      "target": "function:src/app/giveaways/free-ai-compositor/layout.tsx:Layout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-compositor/page.tsx",
+      "target": "function:src/app/giveaways/free-ai-compositor/page.tsx:FreeAiCompositorPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-compositor/page.tsx",
+      "target": "function:src/app/giveaways/free-ai-compositor/page.tsx:FreeAiCompositorPage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/app/giveaways/free-ai-compositor/page.tsx:FreeAiCompositorPage",
+      "target": "file:src/components/giveaways/PackPage.tsx",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-compositor/page.tsx",
+      "target": "file:src/components/giveaways/PackPage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-draw-things/layout.tsx",
+      "target": "function:src/app/giveaways/free-ai-draw-things/layout.tsx:Layout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-draw-things/layout.tsx",
+      "target": "function:src/app/giveaways/free-ai-draw-things/layout.tsx:Layout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-draw-things/page.tsx",
+      "target": "function:src/app/giveaways/free-ai-draw-things/page.tsx:FreeAiDrawThingsPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-draw-things/page.tsx",
+      "target": "function:src/app/giveaways/free-ai-draw-things/page.tsx:FreeAiDrawThingsPage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/app/giveaways/free-ai-draw-things/page.tsx:FreeAiDrawThingsPage",
+      "target": "file:src/components/giveaways/PackPage.tsx",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-draw-things/page.tsx",
+      "target": "file:src/components/giveaways/PackPage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-draw-your-font/layout.tsx",
+      "target": "function:src/app/giveaways/free-ai-draw-your-font/layout.tsx:Layout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-draw-your-font/layout.tsx",
+      "target": "function:src/app/giveaways/free-ai-draw-your-font/layout.tsx:Layout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-draw-your-font/page.tsx",
+      "target": "function:src/app/giveaways/free-ai-draw-your-font/page.tsx:FreeAiDrawYourFontPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-draw-your-font/page.tsx",
+      "target": "function:src/app/giveaways/free-ai-draw-your-font/page.tsx:FreeAiDrawYourFontPage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/app/giveaways/free-ai-draw-your-font/page.tsx:FreeAiDrawYourFontPage",
+      "target": "file:src/components/giveaways/PackPage.tsx",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-draw-your-font/page.tsx",
+      "target": "file:src/components/giveaways/PackPage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-open-design/layout.tsx",
+      "target": "function:src/app/giveaways/free-ai-open-design/layout.tsx:Layout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-open-design/layout.tsx",
+      "target": "function:src/app/giveaways/free-ai-open-design/layout.tsx:Layout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-open-design/page.tsx",
+      "target": "function:src/app/giveaways/free-ai-open-design/page.tsx:FreeAiOpenDesignPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-open-design/page.tsx",
+      "target": "function:src/app/giveaways/free-ai-open-design/page.tsx:FreeAiOpenDesignPage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/app/giveaways/free-ai-open-design/page.tsx:FreeAiOpenDesignPage",
+      "target": "file:src/components/giveaways/PackPage.tsx",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-open-design/page.tsx",
+      "target": "file:src/components/giveaways/PackPage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-openscreen/layout.tsx",
+      "target": "function:src/app/giveaways/free-ai-openscreen/layout.tsx:Layout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-openscreen/layout.tsx",
+      "target": "function:src/app/giveaways/free-ai-openscreen/layout.tsx:Layout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-openscreen/page.tsx",
+      "target": "function:src/app/giveaways/free-ai-openscreen/page.tsx:FreeAiOpenscreenPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-openscreen/page.tsx",
+      "target": "function:src/app/giveaways/free-ai-openscreen/page.tsx:FreeAiOpenscreenPage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/app/giveaways/free-ai-openscreen/page.tsx:FreeAiOpenscreenPage",
+      "target": "file:src/components/giveaways/PackPage.tsx",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-openscreen/page.tsx",
+      "target": "file:src/components/giveaways/PackPage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-yovoice/layout.tsx",
+      "target": "function:src/app/giveaways/free-ai-yovoice/layout.tsx:Layout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-yovoice/layout.tsx",
+      "target": "function:src/app/giveaways/free-ai-yovoice/layout.tsx:Layout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-yovoice/page.tsx",
+      "target": "function:src/app/giveaways/free-ai-yovoice/page.tsx:FreeAiYovoicePage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-yovoice/page.tsx",
+      "target": "function:src/app/giveaways/free-ai-yovoice/page.tsx:FreeAiYovoicePage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/app/giveaways/free-ai-yovoice/page.tsx:FreeAiYovoicePage",
+      "target": "file:src/components/giveaways/PackPage.tsx",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-yovoice/page.tsx",
+      "target": "file:src/components/giveaways/PackPage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/sitemap.ts",
+      "target": "file:src/lib/free-ai-tools.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:tests/linkedin-kit.test.ts",
+      "target": "file:src/lib/giveaways.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:tests/free-ai-tools.test.ts",
+      "target": "file:src/lib/free-ai-tool-email.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:tests/free-ai-tools.test.ts",
+      "target": "file:src/lib/free-ai-tool-pack.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:tests/free-ai-tools.test.ts",
+      "target": "file:src/lib/lead-magnets.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:src/app/giveaways/free-ai-compositor/page.tsx:FreeAiCompositorPage",
+      "target": "file:src/lib/free-ai-tool-pack.ts",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-compositor/page.tsx",
+      "target": "file:src/lib/free-ai-tool-pack.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:src/app/giveaways/free-ai-draw-things/page.tsx:FreeAiDrawThingsPage",
+      "target": "file:src/lib/free-ai-tool-pack.ts",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-draw-things/page.tsx",
+      "target": "file:src/lib/free-ai-tool-pack.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:src/app/giveaways/free-ai-draw-your-font/page.tsx:FreeAiDrawYourFontPage",
+      "target": "file:src/lib/free-ai-tool-pack.ts",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-draw-your-font/page.tsx",
+      "target": "file:src/lib/free-ai-tool-pack.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:src/app/giveaways/free-ai-open-design/page.tsx:FreeAiOpenDesignPage",
+      "target": "file:src/lib/free-ai-tool-pack.ts",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-open-design/page.tsx",
+      "target": "file:src/lib/free-ai-tool-pack.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:src/app/giveaways/free-ai-openscreen/page.tsx:FreeAiOpenscreenPage",
+      "target": "file:src/lib/free-ai-tool-pack.ts",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-openscreen/page.tsx",
+      "target": "file:src/lib/free-ai-tool-pack.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:src/app/giveaways/free-ai-yovoice/page.tsx:FreeAiYovoicePage",
+      "target": "file:src/lib/free-ai-tool-pack.ts",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-yovoice/page.tsx",
+      "target": "file:src/lib/free-ai-tool-pack.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/free-ai-tool-email.ts",
+      "target": "file:tests/free-ai-tools.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/lib/free-ai-tool-pack.ts",
+      "target": "file:tests/free-ai-tools.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/lib/lead-magnets.ts",
+      "target": "file:tests/free-ai-tools.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-concat/page.tsx",
+      "target": "file:src/lib/free-ai-tool-pack.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/giveaways/free-ai-salesman/page.tsx",
+      "target": "file:src/lib/free-ai-tool-pack.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/free-ai-tool-email.ts",
+      "target": "file:src/lib/free-ai-tools.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/free-ai-tool-email.ts",
+      "target": "file:src/lib/utm.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/free-ai-tool-pack.ts",
+      "target": "file:src/lib/free-ai-tools.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/free-ai-tool-pack.ts",
+      "target": "file:src/lib/pack-page.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/lead-magnets.ts",
+      "target": "file:src/lib/free-ai-tools.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/lead-magnets.ts",
+      "target": "file:src/lib/utm.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
     }
   ],
-  "version": "1.0.0",
-  "project": {
-    "name": "masterminds-workshop",
-    "languages": [
-      "TypeScript",
-      "JavaScript",
-      "CSS",
-      "HTML",
-      "JSON"
-    ],
-    "frameworks": [
-      "Next.js",
-      "React",
-      "TailwindCSS",
-      "Stripe",
-      "Supabase",
-      "Framer Motion",
-      "GSAP"
-    ],
-    "description": "Masterminds Workshop Site is a Next.js application for event discovery and registration, workshop learning, and giveaway resource distribution, with shared content catalogs, payment integration, and email delivery.",
-    "analyzedAt": "2026-11-05T20:06:37.682458+00:00",
-    "gitCommitHash": "31af93d9a652a0612690998381cff32a27d8da63"
-  },
   "layers": [
     {
       "id": "layer:api-routes",
@@ -4838,23 +5679,11 @@
     {
       "id": "layer:giveaway-tools",
       "name": "Giveaway Tools",
-      "description": "Giveaway pages, SEO layouts, resource packs and reusable prompts present AI tools, quizzes and product guides.",
+      "description": "Giveaway routes, SEO layouts, setup guides and reusable prompts present AI tools, quizzes and downloadable resources using shared content adapters.",
       "nodeIds": [
-        "file:src/app/giveaways/ai-behavior-quiz/pack.ts",
-        "file:src/app/giveaways/ai-behavior-quiz/page.tsx",
-        "file:src/app/giveaways/ai-levels-quiz/pack.ts",
-        "file:src/app/giveaways/ai-levels-quiz/page.tsx",
-        "file:src/app/giveaways/all-sorted-overview/layout.tsx",
-        "file:src/app/giveaways/all-sorted-overview/page.tsx",
         "file:src/app/giveaways/chat-to-flowchart/layout.tsx",
         "file:src/app/giveaways/chat-to-flowchart/pack.ts",
         "file:src/app/giveaways/chat-to-flowchart/page.tsx",
-        "file:src/app/giveaways/claude-md/layout.tsx",
-        "file:src/app/giveaways/claude-md/pack.ts",
-        "file:src/app/giveaways/desk-pet/layout.tsx",
-        "file:src/app/giveaways/desk-pet/pack.ts",
-        "file:src/app/giveaways/desk-pet/page.tsx",
-        "file:src/app/giveaways/desk-pet/prompt.ts",
         "file:src/app/giveaways/film/layout.tsx",
         "file:src/app/giveaways/film/pack.ts",
         "file:src/app/giveaways/film/page.tsx",
@@ -4867,26 +5696,53 @@
         "file:src/app/giveaways/linkedin-kit/pack.ts",
         "file:src/app/giveaways/linkedin-kit/page.tsx",
         "file:src/app/giveaways/linkedin-kit/prompt.ts",
-        "file:src/app/giveaways/video-editor/layout.tsx",
+        "file:src/app/giveaways/ai-behavior-quiz/pack.ts",
+        "file:src/app/giveaways/ai-behavior-quiz/page.tsx",
+        "file:src/app/giveaways/ai-levels-quiz/pack.ts",
+        "file:src/app/giveaways/ai-levels-quiz/page.tsx",
+        "file:src/app/giveaways/all-sorted-overview/layout.tsx",
+        "file:src/app/giveaways/all-sorted-overview/page.tsx",
+        "file:src/app/giveaways/claude-md/layout.tsx",
+        "file:src/app/giveaways/claude-md/pack.ts",
+        "file:src/app/giveaways/desk-pet/pack.ts",
+        "file:src/app/giveaways/desk-pet/page.tsx",
+        "file:src/app/giveaways/desk-pet/prompt.ts",
+        "file:src/app/giveaways/desk-pet/layout.tsx",
         "file:src/app/giveaways/video-editor/pack.ts",
-        "file:src/app/giveaways/video-editor/page.tsx"
+        "file:src/app/giveaways/video-editor/page.tsx",
+        "file:src/app/giveaways/video-editor/layout.tsx",
+        "file:src/app/giveaways/free-ai-compositor/layout.tsx",
+        "file:src/app/giveaways/free-ai-compositor/page.tsx",
+        "file:src/app/giveaways/free-ai-draw-things/layout.tsx",
+        "file:src/app/giveaways/free-ai-draw-things/page.tsx",
+        "file:src/app/giveaways/free-ai-draw-your-font/layout.tsx",
+        "file:src/app/giveaways/free-ai-draw-your-font/page.tsx",
+        "file:src/app/giveaways/free-ai-open-design/layout.tsx",
+        "file:src/app/giveaways/free-ai-open-design/page.tsx",
+        "file:src/app/giveaways/free-ai-openscreen/layout.tsx",
+        "file:src/app/giveaways/free-ai-openscreen/page.tsx",
+        "file:src/app/giveaways/free-ai-yovoice/layout.tsx",
+        "file:src/app/giveaways/free-ai-yovoice/page.tsx"
       ]
     },
     {
       "id": "layer:shared-libraries",
       "name": "Shared Libraries",
-      "description": "Event and giveaway catalogs, pricing and email helpers, resource contracts and offer definitions support delivery; a lazy Supabase proxy defers client creation until first use.",
+      "description": "Event and giveaway catalogs, typed resource adapters, fail-closed delivery registries, email builders and lazy Supabase access support the represented pages and follow-up operations.",
       "nodeIds": [
+        "file:src/lib/giveaway-followups.ts",
         "file:src/app/sitemap.ts",
         "file:src/lib/events.tsx",
-        "file:src/lib/free-ai-tools.ts",
-        "file:src/lib/generic-giveaway-email.ts",
-        "file:src/lib/giveaway-followups.ts",
-        "file:src/lib/giveaway-offers.ts",
-        "file:src/lib/giveaways.ts",
-        "file:src/lib/pack-page.ts",
         "file:src/lib/supabase.ts",
-        "file:src/lib/utm.ts"
+        "file:src/lib/generic-giveaway-email.ts",
+        "file:src/lib/giveaway-offers.ts",
+        "file:src/lib/pack-page.ts",
+        "file:src/lib/utm.ts",
+        "file:src/lib/free-ai-tools.ts",
+        "file:src/lib/giveaways.ts",
+        "file:src/lib/free-ai-tool-email.ts",
+        "file:src/lib/free-ai-tool-pack.ts",
+        "file:src/lib/lead-magnets.ts"
       ]
     },
     {
@@ -4894,11 +5750,11 @@
       "name": "Assets",
       "description": "Downloadable resource ZIP archives, integrity checksums and the distributed Desk Pet setup guide supply giveaway delivery assets.",
       "nodeIds": [
-        "document:public/desk-pet-prompt.txt",
         "file:public/downloads/joes-linkedin-kit-v1.0.zip",
         "file:public/downloads/joes-linkedin-kit-v1.0.zip.sha256",
         "file:public/downloads/joes-salesman-v1.0.zip",
-        "file:public/downloads/joes-salesman-v1.0.zip.sha256"
+        "file:public/downloads/joes-salesman-v1.0.zip.sha256",
+        "document:public/desk-pet-prompt.txt"
       ]
     },
     {
@@ -4912,13 +5768,13 @@
     {
       "id": "layer:test",
       "name": "Tests",
-      "description": "Catalog, resource pack and follow-up tests protect content contracts, asset integrity, email mappings and suppression behavior, including legacy Video Editor source guarantees.",
+      "description": "Catalog, resource pack and follow-up tests protect route coverage, setup prompts, delivery source mappings, asset integrity and suppression behavior.",
       "nodeIds": [
-        "file:tests/desk-pet.test.ts",
-        "file:tests/free-ai-tools.test.ts",
-        "file:tests/giveaway-followups.test.ts",
         "file:tests/linkedin-kit.test.ts",
-        "file:tests/video-editor.test.ts"
+        "file:tests/desk-pet.test.ts",
+        "file:tests/giveaway-followups.test.ts",
+        "file:tests/video-editor.test.ts",
+        "file:tests/free-ai-tools.test.ts"
       ]
     },
     {
@@ -4934,10 +5790,10 @@
       "name": "UI Components",
       "description": "Festival hero and program components, registration controls, ambient media and shared giveaway rendering support the event and resource pages.",
       "nodeIds": [
-        "file:src/components/events/ScrollToRegisterButton.tsx",
-        "file:src/components/events/joechella/AmbientHeroVideo.tsx",
         "file:src/components/events/joechella/FestivalHero.tsx",
         "file:src/components/events/joechella/ProgramTimeline.tsx",
+        "file:src/components/events/ScrollToRegisterButton.tsx",
+        "file:src/components/events/joechella/AmbientHeroVideo.tsx",
         "file:src/components/events/joechella/festival.css",
         "file:src/components/giveaways/PackPage.tsx"
       ]
@@ -4946,148 +5802,162 @@
   "tour": [
     {
       "order": 1,
-      "title": "Project and Event Discovery",
-      "description": "Start with the main events listing to see the workshop site through a visitor\u2019s eyes: upcoming live events, prices, dates and links to details. This is the represented overview entry in the partial graph; the home page is outside its coverage.",
+      "title": "Workshop Site Overview",
+      "description": "This Next.js application supports event discovery, workshop learning and giveaway resource distribution. With no README or root application entry represented in this partial graph, begin at the highest-ranked represented entry: the guarded follow-up runner, which connects resource delivery to sales workflows. Its preview and eligibility controls show why operational actions are kept separate from page rendering.",
       "nodeIds": [
-        "file:src/app/events/page.tsx"
-      ]
-    },
-    {
-      "order": 2,
-      "title": "Event Data and Registration",
-      "description": "Follow the listing\u2019s dependency into the shared event catalog, which defines dates, capacities, pricing, promotions and setup content. The dynamic detail and attendee setup pages consume that same catalog, connecting discovery to registration and preparation.",
-      "nodeIds": [
-        "file:src/lib/events.tsx",
-        "file:src/app/events/[slug]/page.tsx",
-        "file:src/app/events/[slug]/setup/page.tsx"
-      ],
-      "languageLesson": "Next.js App Router uses folders such as [slug] for dynamic route parameters, with page.tsx defining the rendered page."
-    },
-    {
-      "title": "Festival Presentation and Attendance Windows",
-      "description": "The event catalog also feeds the Joechella hero and grouped program timeline. Follow these components to see the full-week celebration link, concurrent activities and the highlighted restriction on morning attendance.",
-      "nodeIds": [
-        "file:src/components/events/joechella/FestivalHero.tsx",
-        "file:src/components/events/joechella/ProgramTimeline.tsx",
-        "file:src/lib/events.tsx"
-      ],
-      "order": 3
-    },
-    {
-      "order": 4,
-      "title": "Giveaway Catalogs and Discovery",
-      "description": "Alongside paid events, the site organizes free resources in typed giveaway and free AI tool catalogs. Their lookup helpers centralize resource identity, while the sitemap uses free AI tool slugs to expose those pages to search engines.",
-      "nodeIds": [
-        "file:src/lib/giveaways.ts",
-        "file:src/lib/free-ai-tools.ts",
-        "file:src/app/sitemap.ts"
-      ]
-    },
-    {
-      "order": 5,
-      "title": "Resource Packs and Prompts",
-      "description": "With resource discovery established, examine the LinkedIn Kit\u2019s page, content pack and reusable prompt. The page imports its pack and the pack imports the prompt, illustrating how presentation and instructional content are separated across giveaway resources.",
-      "nodeIds": [
-        "file:src/app/giveaways/linkedin-kit/page.tsx",
-        "file:src/app/giveaways/linkedin-kit/pack.ts",
-        "file:src/app/giveaways/linkedin-kit/prompt.ts"
-      ],
-      "languageLesson": "TypeScript content objects let multiple React pages share a rendering contract while keeping each resource\u2019s copy separate."
-    },
-    {
-      "order": 6,
-      "title": "Desk Pet Setup Workflow",
-      "description": "Desk Pet applies the pack pattern to a Mac app builder guide with setup commands, troubleshooting and downloadable instructions. Its page adds HowTo structured data, while the canonical prompt supplies the instructions that distributed copies must match.",
-      "nodeIds": [
-        "file:src/app/giveaways/desk-pet/page.tsx",
-        "file:src/app/giveaways/desk-pet/pack.ts",
-        "file:src/app/giveaways/desk-pet/prompt.ts"
-      ]
-    },
-    {
-      "title": "Legacy Video Editor and Paid Video Agent Migration",
-      "description": "The legacy page still defines a shared resource pack and HowTo metadata, and its tests protect the packaged editing workflow. Next.js redirects both the old giveaway route and the free ZIP URL to the paid Video Agent, so the remaining source does not imply a public free download.",
-      "nodeIds": [
-        "file:src/app/giveaways/video-editor/page.tsx",
-        "file:src/app/giveaways/video-editor/pack.ts",
-        "file:src/app/giveaways/video-editor/layout.tsx",
-        "config:next.config.ts",
-        "file:tests/video-editor.test.ts"
-      ],
-      "order": 7
-    },
-    {
-      "order": 8,
-      "title": "Distributed Guides and Downloads",
-      "description": "The public Desk Pet document turns the preceding source prompt into a user-facing setup guide covering personalization, installation and removal. Public ZIP archives deliver other resource kits, and their checksum files provide a separate integrity artifact alongside each download.",
-      "nodeIds": [
-        "document:public/desk-pet-prompt.txt",
-        "file:public/downloads/joes-linkedin-kit-v1.0.zip",
-        "file:public/downloads/joes-linkedin-kit-v1.0.zip.sha256",
-        "file:public/downloads/joes-salesman-v1.0.zip",
-        "file:public/downloads/joes-salesman-v1.0.zip.sha256"
-      ]
-    },
-    {
-      "order": 9,
-      "title": "Quiz Content Variants",
-      "description": "The same content-driven approach supports quizzes as well as downloadable kits. These thin page wrappers consume packs explaining distinct capability and behavioral scales, then direct visitors to quizzes hosted outside this application.",
-      "nodeIds": [
-        "file:src/app/giveaways/ai-levels-quiz/page.tsx",
-        "file:src/app/giveaways/ai-levels-quiz/pack.ts",
-        "file:src/app/giveaways/ai-behavior-quiz/page.tsx",
-        "file:src/app/giveaways/ai-behavior-quiz/pack.ts"
-      ]
-    },
-    {
-      "order": 10,
-      "title": "Email Delivery and Unsubscribe",
-      "description": "After visitors choose a resource, shared email helpers build HTML and plain-text delivery messages and restrict destinations to trusted giveaway links. The represented unsubscribe route verifies list-management tokens and records suppressions, showing the corresponding opt-out boundary. The shared Supabase proxy initializes its client on first access so imports can succeed without production credentials.",
-      "nodeIds": [
-        "file:src/lib/generic-giveaway-email.ts",
-        "file:src/app/api/unsubscribe/route.ts",
-        "file:src/lib/supabase.ts"
-      ]
-    },
-    {
-      "order": 11,
-      "title": "Guarded Follow-up Operations",
-      "description": "Beyond initial delivery, the follow-up service plans copy and schedules while applying suppression, timing, human handoff and real-event eligibility rules. Its operational runner combines those plans with external checks and supports previews, dry runs, review delivery and claimed sends.",
-      "nodeIds": [
-        "file:src/lib/giveaway-followups.ts",
         "file:scripts/giveaway-followups.mjs"
       ]
     },
     {
-      "order": 12,
-      "title": "Route Metadata and Configuration",
-      "description": "The resource journeys also depend on search metadata and routing behavior. Giveaway layouts supply page-specific metadata, while Next.js configuration controls redirects, host rewrites and build tracing for the site\u2019s delivery paths. The configuration also migrates the former Video Editor page and archive to the paid Video Agent.",
+      "order": 2,
+      "title": "Follow-Up Planning Rules",
+      "description": "Following the runner’s direct dependency leads to the shared giveaway and sales follow-up planner. It defines schedules, copy and tracked links while applying suppression, human handoff and event timing rules. This separates the decision about who qualifies from the runner that coordinates delivery.",
       "nodeIds": [
-        "file:src/app/giveaways/desk-pet/layout.tsx",
-        "file:src/app/giveaways/linkedin-kit/layout.tsx",
-        "config:next.config.ts"
+        "file:src/lib/giveaway-followups.ts",
+        "file:tests/giveaway-followups.test.ts"
       ]
+    },
+    {
+      "order": 3,
+      "title": "Event Discovery And Registration",
+      "description": "The customer-facing counterpart to those follow-ups is the event listing and dynamic event detail route. Both draw on a typed event catalog covering dates, content, registration limits and checkout pricing. Read these together to see how shared event data feeds discovery and Stripe-related registration presentation.",
+      "nodeIds": [
+        "file:src/app/events/page.tsx",
+        "file:src/app/events/[slug]/page.tsx",
+        "file:src/lib/events.tsx"
+      ],
+      "languageLesson": "Next.js App Router uses page.tsx files as routes; a [slug] directory supplies a dynamic URL segment."
+    },
+    {
+      "order": 4,
+      "title": "Festival Presentation Components",
+      "description": "Building on the event catalog, the festival hero and program timeline turn event content into the Joechella experience. Ambient video, registration controls and grouped programming give the event route reusable presentation pieces. The schedule also carries the distinction between on-site morning access and day-pass programming.",
+      "nodeIds": [
+        "file:src/components/events/joechella/FestivalHero.tsx",
+        "file:src/components/events/joechella/ProgramTimeline.tsx",
+        "file:src/components/events/joechella/AmbientHeroVideo.tsx",
+        "file:src/components/events/joechella/festival.css"
+      ]
+    },
+    {
+      "order": 5,
+      "title": "Shared Giveaway Rendering",
+      "description": "Giveaways form a second major customer journey alongside events. The frequently referenced PackPage component and its content contract provide the common presentation surface, while a small LinkedIn Kit route demonstrates how an individual resource supplies content. This keeps route wrappers small and lets many resources share the same experience.",
+      "nodeIds": [
+        "file:src/components/giveaways/PackPage.tsx",
+        "file:src/lib/pack-page.ts",
+        "file:src/app/giveaways/linkedin-kit/page.tsx",
+        "file:src/app/giveaways/linkedin-kit/pack.ts"
+      ],
+      "languageLesson": "React component composition lets route components pass resource content into a reusable presentation component."
+    },
+    {
+      "order": 6,
+      "title": "Free Tool Content Pipeline",
+      "description": "The same rendering pattern extends to the Free AI Tools catalog. The catalog supplies setup steps, requirements, prompts and limits; the adapter turns each entry into PackPage content and HowTo structured data. A Compositor route illustrates how a new tool reuses that pipeline instead of duplicating guide content.",
+      "nodeIds": [
+        "file:src/lib/free-ai-tools.ts",
+        "file:src/lib/free-ai-tool-pack.ts",
+        "file:src/app/giveaways/free-ai-compositor/page.tsx"
+      ]
+    },
+    {
+      "order": 7,
+      "title": "New Tool Route Families",
+      "description": "With the shared pipeline established, compare the Open Design, OpenScreen and yovoice pages with their route metadata. These wrappers select a tool slug and reuse the adapter while their layouts provide search and social preview metadata. This is the extension point for adding more catalog-backed setup guides.",
+      "nodeIds": [
+        "file:src/app/giveaways/free-ai-open-design/page.tsx",
+        "file:src/app/giveaways/free-ai-open-design/layout.tsx",
+        "file:src/app/giveaways/free-ai-openscreen/page.tsx",
+        "file:src/app/giveaways/free-ai-yovoice/page.tsx"
+      ],
+      "languageLesson": "Next.js nested layout modules can export metadata while passing child page content through unchanged."
+    },
+    {
+      "order": 8,
+      "title": "Delivery Catalogs And Emails",
+      "description": "After a resource page captures interest, shared delivery code keeps emailed instructions aligned with the catalog. The tool email builder renders HTML and plain text, the lead magnet registry recognizes deliverable sources, and the generic email builder maps website slugs to approved destinations. Tracked links and explicit source handling connect this delivery path to the follow-up workflows from the start of the tour.",
+      "nodeIds": [
+        "file:src/lib/free-ai-tool-email.ts",
+        "file:src/lib/lead-magnets.ts",
+        "file:src/lib/generic-giveaway-email.ts",
+        "file:src/lib/utm.ts"
+      ]
+    },
+    {
+      "order": 9,
+      "title": "Resource Discovery And Offers",
+      "description": "The giveaway directory and sitemap expose the resources whose delivery was just described. Shared offer definitions sit alongside those catalogs to support the next step after receiving a resource. Keeping discovery and offer data centralized helps route coverage and audience levels stay consistent.",
+      "nodeIds": [
+        "file:src/lib/giveaways.ts",
+        "file:src/app/sitemap.ts",
+        "file:src/lib/giveaway-offers.ts"
+      ]
+    },
+    {
+      "order": 10,
+      "title": "Desk Pet Distribution Contract",
+      "description": "Desk Pet demonstrates how a guide becomes a distributed artifact. Its content pack and canonical prompt correspond to the downloadable setup text, while tests check prompt parity and packaged assets. Read the published text alongside the source prompt to understand why changing copy can affect the installation guidance a recipient receives.",
+      "nodeIds": [
+        "file:src/app/giveaways/desk-pet/pack.ts",
+        "file:src/app/giveaways/desk-pet/prompt.ts",
+        "document:public/desk-pet-prompt.txt",
+        "file:tests/desk-pet.test.ts"
+      ]
+    },
+    {
+      "order": 11,
+      "title": "Download Integrity And Coverage",
+      "description": "The same source-to-deliverable contract applies to downloadable resource archives. The LinkedIn Kit ZIP and checksum are represented delivery artifacts, and its test checks the resource wiring. The broader Free AI Tools test protects catalog uniqueness, route coverage and delivery mappings as new tool pages are introduced.",
+      "nodeIds": [
+        "file:public/downloads/joes-linkedin-kit-v1.0.zip",
+        "file:public/downloads/joes-linkedin-kit-v1.0.zip.sha256",
+        "file:tests/linkedin-kit.test.ts",
+        "file:tests/free-ai-tools.test.ts"
+      ]
+    },
+    {
+      "order": 12,
+      "title": "Suppression And Data Access",
+      "description": "Returning to the eligibility controls from the opening steps, the represented unsubscribe endpoint verifies tokens and records email suppressions. The shared Supabase module uses a lazy client proxy so importing the module does not immediately require production environment values. These boundaries support delivery behavior while keeping preview builds and email suppression concerns explicit.",
+      "nodeIds": [
+        "file:src/app/api/unsubscribe/route.ts",
+        "file:src/lib/supabase.ts"
+      ],
+      "languageLesson": "A JavaScript Proxy can defer client initialization until property access; binding methods to the real client preserves their receiver."
     },
     {
       "order": 13,
-      "title": "Workshop Learning Resources",
-      "description": "Return to the learning side of the site after tracing discovery and delivery. Bonus workshop pages and the automated lead magnet guide provide instructional material, while the CLAUDE.md pack illustrates a longer configuration-focused resource using the same content organization.",
+      "title": "Routing And Legacy Delivery",
+      "description": "Finish with the configuration that determines which resource URLs actually reach users. Next.js configuration defines host rewrites and legacy redirects, including the former Video Editor page and ZIP now pointing to the paid Video Agent. Compare the represented legacy page with its source tests to see why source asset checks alone do not establish the destination served by a redirected URL.",
       "nodeIds": [
-        "file:src/app/bonus-workshops/page.tsx",
-        "file:src/app/bonus/auto-lead-magnet/page.tsx",
-        "file:src/app/giveaways/claude-md/pack.ts"
-      ]
-    },
-    {
-      "order": 14,
-      "title": "Regression and Content Guarantees",
-      "description": "Finish with tests that connect the catalog, kit and delivery pieces introduced earlier. They check metadata and source handling, LinkedIn content, Desk Pet prompt parity and assets, plus follow-up suppression and scheduling rules, making the intended boundaries concrete.",
-      "nodeIds": [
-        "file:tests/free-ai-tools.test.ts",
-        "file:tests/linkedin-kit.test.ts",
-        "file:tests/desk-pet.test.ts",
-        "file:tests/giveaway-followups.test.ts"
+        "config:next.config.ts",
+        "file:src/app/giveaways/video-editor/page.tsx",
+        "file:tests/video-editor.test.ts"
       ]
     }
-  ]
+  ],
+  "version": "1.0.0",
+  "project": {
+    "name": "masterminds-workshop",
+    "languages": [
+      "TypeScript",
+      "JavaScript",
+      "CSS",
+      "HTML",
+      "JSON"
+    ],
+    "frameworks": [
+      "Next.js",
+      "React",
+      "TailwindCSS",
+      "Stripe",
+      "Supabase",
+      "Framer Motion",
+      "GSAP"
+    ],
+    "description": "Masterminds Workshop Site is a Next.js application for event discovery and registration, workshop learning, and giveaway resource distribution, with shared content catalogs, payment integration, and email delivery.",
+    "analyzedAt": "2026-11-08T20:09:06.563Z",
+    "gitCommitHash": "9fe83fd64038f365b9f9c47266a4b7087ac83648"
+  }
 }
