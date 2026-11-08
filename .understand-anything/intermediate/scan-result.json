@@ -1,6 +1,6 @@
 {
   "projectName": "masterminds-workshop",
-  "projectDescription": "Masterminds Workshop Site \u2014 a Next.js application for displaying workshop information, courses, and giveaways with advanced animations and interactive components.",
+  "projectDescription": "Masterminds Workshop Site — a Next.js application for displaying workshop information, courses, and giveaways with advanced animations and interactive components.",
   "languages": [
     "TypeScript",
     "JavaScript",
@@ -1181,6 +1181,18 @@
       "fileCategory": "code"
     },
     {
+      "path": "src/app/giveaways/free-ai-compositor/layout.tsx",
+      "language": "typescript",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/giveaways/free-ai-compositor/page.tsx",
+      "language": "typescript",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
       "path": "src/app/giveaways/free-ai-concat/layout.tsx",
       "language": "typescript",
       "sizeLines": 31,
@@ -1200,6 +1212,30 @@
     },
     {
       "path": "src/app/giveaways/free-ai-documenso/page.tsx",
+      "language": "typescript",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/giveaways/free-ai-draw-things/layout.tsx",
+      "language": "typescript",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/giveaways/free-ai-draw-things/page.tsx",
+      "language": "typescript",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/giveaways/free-ai-draw-your-font/layout.tsx",
+      "language": "typescript",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/giveaways/free-ai-draw-your-font/page.tsx",
       "language": "typescript",
       "sizeLines": 15,
       "fileCategory": "code"
@@ -1272,6 +1308,30 @@
     },
     {
       "path": "src/app/giveaways/free-ai-mempalace/page.tsx",
+      "language": "typescript",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/giveaways/free-ai-open-design/layout.tsx",
+      "language": "typescript",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/giveaways/free-ai-open-design/page.tsx",
+      "language": "typescript",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/giveaways/free-ai-openscreen/layout.tsx",
+      "language": "typescript",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/giveaways/free-ai-openscreen/page.tsx",
       "language": "typescript",
       "sizeLines": 15,
       "fileCategory": "code"
@@ -1350,6 +1410,18 @@
     },
     {
       "path": "src/app/giveaways/free-ai-voicestudio/page.tsx",
+      "language": "typescript",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/giveaways/free-ai-yovoice/layout.tsx",
+      "language": "typescript",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/giveaways/free-ai-yovoice/page.tsx",
       "language": "typescript",
       "sizeLines": 15,
       "fileCategory": "code"
@@ -2671,7 +2743,7 @@
     {
       "path": "src/lib/free-ai-tools.ts",
       "language": "typescript",
-      "sizeLines": 1181,
+      "sizeLines": 1822,
       "fileCategory": "code"
     },
     {
@@ -2701,7 +2773,7 @@
     {
       "path": "src/lib/giveaways.ts",
       "language": "typescript",
-      "sizeLines": 444,
+      "sizeLines": 492,
       "fileCategory": "code"
     },
     {
@@ -3181,7 +3253,7 @@
     {
       "path": "tests/free-ai-tools.test.ts",
       "language": "typescript",
-      "sizeLines": 117,
+      "sizeLines": 125,
       "fileCategory": "code"
     },
     {
@@ -3341,7 +3413,7 @@
       "fileCategory": "config"
     }
   ],
-  "fileCount": 553,
+  "fileCount": 565,
   "totalLines": 84355,
   "complexity": "complex",
   "filteredByIgnore": 43,
@@ -3827,6 +3899,11 @@
       "src/components/giveaways/PackPage.tsx",
       "src/lib/free-ai-tool-pack.ts"
     ],
+    "src/app/giveaways/free-ai-compositor/layout.tsx": [],
+    "src/app/giveaways/free-ai-compositor/page.tsx": [
+      "src/components/giveaways/PackPage.tsx",
+      "src/lib/free-ai-tool-pack.ts"
+    ],
     "src/app/giveaways/free-ai-concat/layout.tsx": [],
     "src/app/giveaways/free-ai-concat/page.tsx": [
       "src/components/giveaways/PackPage.tsx",
@@ -3834,6 +3911,16 @@
     ],
     "src/app/giveaways/free-ai-documenso/layout.tsx": [],
     "src/app/giveaways/free-ai-documenso/page.tsx": [
+      "src/components/giveaways/PackPage.tsx",
+      "src/lib/free-ai-tool-pack.ts"
+    ],
+    "src/app/giveaways/free-ai-draw-things/layout.tsx": [],
+    "src/app/giveaways/free-ai-draw-things/page.tsx": [
+      "src/components/giveaways/PackPage.tsx",
+      "src/lib/free-ai-tool-pack.ts"
+    ],
+    "src/app/giveaways/free-ai-draw-your-font/layout.tsx": [],
+    "src/app/giveaways/free-ai-draw-your-font/page.tsx": [
       "src/components/giveaways/PackPage.tsx",
       "src/lib/free-ai-tool-pack.ts"
     ],
@@ -3864,6 +3951,16 @@
     ],
     "src/app/giveaways/free-ai-mempalace/layout.tsx": [],
     "src/app/giveaways/free-ai-mempalace/page.tsx": [
+      "src/components/giveaways/PackPage.tsx",
+      "src/lib/free-ai-tool-pack.ts"
+    ],
+    "src/app/giveaways/free-ai-open-design/layout.tsx": [],
+    "src/app/giveaways/free-ai-open-design/page.tsx": [
+      "src/components/giveaways/PackPage.tsx",
+      "src/lib/free-ai-tool-pack.ts"
+    ],
+    "src/app/giveaways/free-ai-openscreen/layout.tsx": [],
+    "src/app/giveaways/free-ai-openscreen/page.tsx": [
       "src/components/giveaways/PackPage.tsx",
       "src/lib/free-ai-tool-pack.ts"
     ],
@@ -3899,6 +3996,11 @@
     ],
     "src/app/giveaways/free-ai-voicestudio/layout.tsx": [],
     "src/app/giveaways/free-ai-voicestudio/page.tsx": [
+      "src/components/giveaways/PackPage.tsx",
+      "src/lib/free-ai-tool-pack.ts"
+    ],
+    "src/app/giveaways/free-ai-yovoice/layout.tsx": [],
+    "src/app/giveaways/free-ai-yovoice/page.tsx": [
       "src/components/giveaways/PackPage.tsx",
       "src/lib/free-ai-tool-pack.ts"
     ],
@@ -4967,6 +5069,6 @@
       "total": 29
     }
   },
-  "totalFiles": 553,
+  "totalFiles": 565,
   "estimatedComplexity": "very-large"
 }
