@@ -1803,7 +1803,7 @@ Do not sign me up for anything.`,
   },
   {
     "slug": "free-ai-youtube-skills",
-    "keyword": "YOUTUBE",
+    "keyword": "SCRIPT",
     "name": "Claude Video Skills",
     "tagline": "Claude writes the words for your videos. You film and post.",
     "subline": "Eleven free Claude skills that do the writing for your videos and reels: the script and hooks in your own voice, the cover words, a list of cuts from your transcript, comment replies and a weekly plan. For reels, TikTok and longer videos.",

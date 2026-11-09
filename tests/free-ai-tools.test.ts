@@ -33,7 +33,7 @@ const WEEK2: Record<string, { slug: string; level: 'beginner' | 'builder'; offer
   CANVA: { slug: 'free-ai-open-design', level: 'builder' },
   SHOT: { slug: 'free-ai-draw-things', level: 'beginner' },
   // Week 5 Sunday (preview 9 Nov, awaits Illy): Claude Code skills = builder, ends on the $27 Video Agent.
-  YOUTUBE: { slug: 'free-ai-youtube-skills', level: 'builder', offer: 'video-agent' },
+  SCRIPT: { slug: 'free-ai-youtube-skills', level: 'builder', offer: 'video-agent' },
 }
 
 test('every Free AI Tool is present, one per keyword', () => {
