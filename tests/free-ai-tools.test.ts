@@ -13,7 +13,7 @@ const KEYWORDS = ['SKILL', 'HANDY', 'BRAIN', 'PAPER', 'CALLS', 'SHARP', 'SLOTS',
 
 // Week 2 reels (Illy approved 2026-10-16): keyword, slug and the honest level
 // (terminal or Claude Code setup = builder, an app or a website = beginner).
-const WEEK2: Record<string, { slug: string; level: 'beginner' | 'builder' }> = {
+const WEEK2: Record<string, { slug: string; level: 'beginner' | 'builder'; offer?: 'video-agent' }> = {
   VOICE: { slug: 'free-ai-voicestudio', level: 'beginner' },
   DATA: { slug: 'free-ai-firecrawl', level: 'beginner' },
   NOTES: { slug: 'free-ai-meetily', level: 'beginner' },
@@ -32,6 +32,8 @@ const WEEK2: Record<string, { slug: string; level: 'beginner' | 'builder' }> = {
   FONT: { slug: 'free-ai-draw-your-font', level: 'builder' },
   CANVA: { slug: 'free-ai-open-design', level: 'builder' },
   SHOT: { slug: 'free-ai-draw-things', level: 'beginner' },
+  // Week 5 Sunday (preview 9 Nov, awaits Illy): Claude Code skills = builder, ends on the $27 Video Agent.
+  YOUTUBE: { slug: 'free-ai-youtube-skills', level: 'builder', offer: 'video-agent' },
 }
 
 test('every Free AI Tool is present, one per keyword', () => {
@@ -84,7 +86,8 @@ test('Week 2 setup notes: honest level, matched offer, Claude Code prompt and li
     assert.equal(t.level, want.level, `${keyword} level`)
     const pack = freeAiToolPack(t.slug)
     assert.equal(pack.level, want.level)
-    assert.equal(offerForLevel(pack.level, t.slug)?.id, want.level === 'builder' ? 'get-found-kit' : 'website-workshop-demo', `${keyword} end offer`)
+    assert.equal(pack.offerId, want.offer, `${keyword} page offer`)
+    assert.equal(offerForLevel(pack.level, t.slug, pack.offerId)?.id, want.offer ?? (want.level === 'builder' ? 'get-found-kit' : 'website-workshop-demo'), `${keyword} end offer`)
     // The free thing first: the one prompt sits in the first block, with the official link.
     assert.equal(pack.hero.button.target, 'get')
     assert.equal(pack.get?.command?.text, t.claudePrompt)

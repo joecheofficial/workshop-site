@@ -15,6 +15,7 @@ import { isFreeAiToolSource } from '@/lib/free-ai-tools'
 import { buildQuizGiveawayEmail, isQuizGiveawaySource } from '@/lib/quiz-giveaway-email'
 import { withDayZeroPs } from '@/lib/giveaway-followups'
 import { withEmailLogo } from '@/lib/email-logo'
+import { GUARDOG_SETUP_PROMPT } from '@/app/giveaways/guardog/prompts'
 import {
   buildGenericGiveawayEmail,
   buildSalesKeywordEmail,
@@ -69,41 +70,10 @@ async function sendViaResend(
         </h1>
 
         <p style="font-size:16px;color:#444;line-height:1.7;margin-bottom:20px;">
-          Paste this into Claude Code or Codex and it will install GuardDog, walk you through getting a free VirusTotal API key, and confirm everything works. About a minute end to end.
+          Paste this into Claude Code or Codex. It installs GuardDog, helps you add a free VirusTotal key on your own computer, and runs a first check so you see what a result looks like. If you do not have Node.js 24 yet, it helps you install it first.
         </p>
 
-        <pre style="padding:20px;border-radius:10px;font-size:13px;line-height:1.65;white-space:pre-wrap;word-break:break-word;margin-bottom:24px;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;border-left:2px solid #d9d2ee;">Set up GuardDog on this computer and get a free VirusTotal API key.
-
---- STEP 1: Install GuardDog ---
-
-Run these commands in the terminal:
-npm install -g github:josephtandle/guardog
-guardog setup
-
-After setup:
-1. Confirm the guardog command is available globally.
-2. Tell me where npm installed the global command.
-3. Explain how I use GuardDog before installing unfamiliar packages.
-
---- STEP 2: Get a free VirusTotal API key ---
-
-VirusTotal scans packages against 70+ antivirus engines. The free tier gives 500 requests per day at 4 requests per minute. No credit card required.
-
-1. Open https://www.virustotal.com in my browser.
-2. Create a free account if I do not already have one (click Sign In).
-3. Once I confirm I am logged in, go to my profile icon (top-right) and click API Key.
-4. Tell me to copy the key shown there.
-5. Add the key to my shell profile. On macOS add to ~/.zshrc, on Linux add to ~/.bashrc:
-   export VIRUSTOTAL_API_KEY="&lt;paste my key here&gt;"
-   Resolve the home directory dynamically. Do not hard-code any paths.
-6. Reload the shell profile so the key is active immediately.
-7. Confirm the key loaded: echo $VIRUSTOTAL_API_KEY
-
---- STEP 3: Confirm everything works ---
-
-Run: guardog analyze lodash npm
-Show me the result and explain the verdict (SILENT, WHINE, or BARK).
-Remind me to run guardog analyze &lt;package-name&gt; &lt;npm or pypi&gt; before installing any unfamiliar package.</pre>
+        <pre style="padding:20px;border-radius:10px;font-size:13px;line-height:1.65;white-space:pre-wrap;word-break:break-word;margin-bottom:24px;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;border-left:2px solid #d9d2ee;">${escapeGuardogHtml(GUARDOG_SETUP_PROMPT)}</pre>
 
         <p style="margin-bottom:24px;">
           <a href="${guardogPageUrl}"
@@ -670,6 +640,10 @@ async function ingestIntoCrm(email: string, source: string) {
     }),
   })
   if (!res.ok) throw new Error(`CRM ingest failed: ${res.status}`)
+}
+
+function escapeGuardogHtml(s: string): string {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 }
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/

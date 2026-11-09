@@ -150,6 +150,14 @@ export const giveaways: Giveaway[] = [
     badgeVariant: 'pink',
   },
   {
+    slug: 'free-ai-youtube-skills',
+    title: 'Free AI Tools: YouTube Agent Skill setup notes',
+    description: 'Eleven free Claude skills for your videos: scored hooks, scripts, title and cover checks, cut lists and comment replies.',
+    icon: '◆',
+    badge: 'Free Tool',
+    badgeVariant: 'purple',
+  },
+  {
     slug: 'free-ai-salesman',
     title: 'Free AI Tools: Salesman Kit setup notes',
     description: "Four Claude skills that find businesses that fit your dream customer and draft a short first email about something real. You read it and send it yourself.",
