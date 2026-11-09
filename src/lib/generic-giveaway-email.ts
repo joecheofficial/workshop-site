@@ -176,6 +176,7 @@ export const WEBSITE_GENERIC_GIVEAWAYS: Readonly<Record<string, string>> = {
   'desk-pet': 'Desk Pet',
   'ray-dalio-council': 'The Ray Dalio Council',
   'squarespace-escape': 'The Squarespace Escape Kit',
+  'stop-paying': 'Stop Paying: 5 free swaps for the AI tools you pay for',
   'viral-hooks': 'The Visual Hooks guide',
 }
 
