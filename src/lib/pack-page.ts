@@ -1,4 +1,4 @@
-import type { GiveawayLevel } from './giveaway-offers'
+import type { GiveawayLevel, GiveawayOfferId } from './giveaway-offers'
 
 // ---------------------------------------------------------------------------
 // Content shape for the pack-style giveaway page (src/components/giveaways/
@@ -77,6 +77,8 @@ export type PackPageContent = {
   slug: string
   /** The buyer's AI level. Picks the end offer (match offers to AI level). */
   level: GiveawayLevel
+  /** Optional named paid offer that fits this gift better than the level default (giveaway-offers PAGE_OFFERS). */
+  offerId?: GiveawayOfferId
   hero: {
     title: string
     free: string

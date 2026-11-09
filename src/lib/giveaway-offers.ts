@@ -40,6 +40,8 @@ export type GiveawayOffer = {
 /** The free demo (name, email, WhatsApp unlock a ~5 minute video; the $67 offer shows at the reveal). */
 export const WORKSHOP_DEMO_URL = 'https://mastermindshq.business/website-workshop/demo'
 export const GET_FOUND_CHECKOUT_URL = 'https://mastermindshq.business/api/mhq-checkout?deal=get-found-kit'
+/** The $27 Video Agent sales page (mhq-homepage /video-agent). Facts below are from that live page, 9 Nov 2026. */
+export const VIDEO_AGENT_URL = 'https://mastermindshq.business/video-agent'
 
 export const GIVEAWAY_OFFERS: Record<GiveawayLevel, GiveawayOffer | null> = {
   beginner: {
@@ -100,12 +102,51 @@ export const GIVEAWAY_OFFERS: Record<GiveawayLevel, GiveawayOffer | null> = {
  * The end-of-page offer for a giveaway level, with campaign tags so sign-ups and sales can be
  * traced to the giveaway (the demo page saves them on the lead, mhq-homepage lead-capture).
  */
-export function offerForLevel(level: GiveawayLevel, slug: string): GiveawayOffer | null {
-  const offer = GIVEAWAY_OFFERS[level]
+export function offerForLevel(level: GiveawayLevel, slug: string, offerId?: GiveawayOfferId): GiveawayOffer | null {
+  const offer = offerId ? PAGE_OFFERS[offerId] : GIVEAWAY_OFFERS[level]
   if (!offer) return null
   const url = new URL(offer.cta.href)
   url.searchParams.set('utm_source', 'giveaway')
   url.searchParams.set('utm_medium', 'pack-page')
   url.searchParams.set('utm_campaign', slug)
   return { ...offer, cta: { ...offer.cta, href: url.toString() } }
+}
+
+// ---------------------------------------------------------------------------
+// Page-level offers (2026-11-09). A giveaway whose buyer clearly fits one paid
+// product names it with `offerId` instead of taking its level's default. Same
+// rule as above: one offer, at the buyer's level, paid stays paid.
+// Video Agent: for video-making gifts. The gift writes the words and lists the
+// cuts; the Video Agent does the edit. Every fact is from the live
+// mastermindshq.business/video-agent page (9 Nov 2026).
+// ---------------------------------------------------------------------------
+export type GiveawayOfferId = 'video-agent'
+
+export const PAGE_OFFERS: Record<GiveawayOfferId, GiveawayOffer> = {
+  'video-agent': {
+    id: 'video-agent',
+    level: 'builder',
+    name: 'Let Claude do the edit too.',
+    stats: [
+      { value: '$27', label: 'one payment, no subscription' },
+      { value: '1', label: 'line to paste into Claude Code' },
+      { value: '10', label: 'minutes to set up, about' },
+      { value: '30', label: 'day money-back if it will not run on your Mac' },
+    ],
+    body:
+      'The free skills write your hooks and titles and give you a list of cuts. They never touch the video. My Video Agent does the edit: drop in your raw footage and it keeps your best take, cuts the restarts and adds captions, with your sound in sync.',
+    checks: [
+      'Made for reels and short videos you film yourself, and it exports for Instagram, TikTok or YouTube.',
+      'Editing what you filmed costs nothing extra on an Apple Silicon Mac.',
+      'Mac only, and it needs Claude Code, which comes with a paid Claude plan.',
+    ],
+    promise: {
+      value: '$27',
+      text: 'One payment and you keep it. If it will not run on your Mac within 30 days, email me and I refund your $27.',
+    },
+    cta: { label: 'See the Video Agent', meta: '$27 \u00b7 one payment \u00b7 next page', href: VIDEO_AGENT_URL },
+    photo: { src: '/images/events/joe-che-bio-bw.jpg', alt: 'Joe Che' },
+    bridge:
+      'You came for the words: the hook, the title, the cut list. If you film on a Mac, the next step is letting Claude do the edit as well.',
+  },
 }
