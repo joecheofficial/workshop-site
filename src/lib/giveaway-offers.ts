@@ -120,7 +120,7 @@ export function offerForLevel(level: GiveawayLevel, slug: string, offerId?: Give
 // cuts; the Video Agent does the edit. Every fact is from the live
 // mastermindshq.business/video-agent page (9 Nov 2026).
 // ---------------------------------------------------------------------------
-export type GiveawayOfferId = 'video-agent' | 'video-agent-swaps'
+export type GiveawayOfferId = 'video-agent' | 'video-agent-swaps' | 'video-agent-film'
 
 export const PAGE_OFFERS: Record<GiveawayOfferId, GiveawayOffer> = {
   'video-agent': {
@@ -176,5 +176,32 @@ export const PAGE_OFFERS: Record<GiveawayOfferId, GiveawayOffer> = {
     photo: { src: '/images/events/joe-che-bio-bw.jpg', alt: 'Joe Che' },
     bridge:
       'You came for free tools. If you film your own videos on a Mac, the next step is letting Claude do the editing for you.',
+  },
+  // Same Video Agent facts, worded for the Make-a-Film page (keyword FILM, explainer reel 9 Nov 2026):
+  // the gift draws a film in code; the Video Agent edits the videos you film and can direct AI films.
+  // No bridge here: the FILM page's own bridge line is shown. Facts from the live /video-agent page, 9 Nov 2026.
+  'video-agent-film': {
+    id: 'video-agent-film',
+    level: 'builder',
+    name: 'Let Claude make your other videos too.',
+    stats: [
+      { value: '$27', label: 'one payment, no subscription' },
+      { value: '1', label: 'line to paste into Claude Code' },
+      { value: '10', label: 'minutes to set up, about' },
+      { value: '30', label: 'day money-back if it will not run on your Mac' },
+    ],
+    body:
+      'Lemo-Opuscar draws a film in code. My Video Agent works on the videos you film yourself: drop in your raw footage and it keeps your best take, cuts the restarts and adds captions, with your sound in sync. Give it an idea and it writes the story, the script and the shot plan.',
+    checks: [
+      'Made for reels and short videos, and it exports for Instagram, TikTok or YouTube.',
+      'Editing what you filmed costs nothing extra on an Apple Silicon Mac. Fully AI-made films use your own keys, about $5 to $12 for a 45 second Reel on budget models, and it shows you the cost first.',
+      'Mac only, and it needs Claude Code, which comes with a paid Claude plan.',
+    ],
+    promise: {
+      value: '$27',
+      text: 'One payment and you keep it. If it will not run on your Mac within 30 days, email me and I refund your $27.',
+    },
+    cta: { label: 'See the Video Agent', meta: '$27 \u00b7 one payment \u00b7 next page', href: VIDEO_AGENT_URL },
+    photo: { src: '/images/events/joe-che-bio-bw.jpg', alt: 'Joe Che' },
   },
 }

@@ -5,11 +5,11 @@ const BASE = 'https://workshop.mastermindshq.business'
 const URL = `${BASE}/giveaways/film`
 
 export const metadata: Metadata = {
-  title: 'Make a film with Claude: a short animated film from your story idea',
+  title: 'Make a film with Claude: animated explainers and short films from your idea',
   description:
-    'A free film-style library for Claude Code. Tell Claude your story idea and it draws, scores and renders a short animated film on your Mac. Fun stories, not everyday business work. Free, from Joe Che.',
+    'A free skill that teaches Claude Code 66 art styles. Describe your idea in plain English and Claude writes the story, adds a voiceover, music and sound, and draws a short animated film on your Mac. Free, from Joe Che.',
   keywords: [
-    'Claude Code', 'animated film', 'AI film', 'Lemo-Opuscar', 'short film from a story idea',
+    'Claude Code', 'animated film', 'animated explainer', 'whiteboard explainer video', 'AI film', 'Lemo-Opuscar', 'short film from a story idea',
     'AI Business Mastermind', 'Joe Che',
   ],
   authors: [{ name: 'Joe Che', url: 'https://www.mastermindshq.business' }],
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   alternates: { canonical: URL },
   openGraph: {
     title: 'Make a film with Claude: Free from Joe Che',
-    description: 'Tell Claude Code your story idea and it makes a short animated film on your Mac. Free.',
+    description: 'Tell Claude Code your idea and it makes a short animated film or explainer on your Mac. Free.',
     url: URL,
     siteName: 'Masterminds Workshop',
     type: 'website',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Make a film with Claude: Free from Joe Che',
-    description: 'One story idea in, one short animated film out, made by Claude Code.',
+    description: 'One idea in, one short animated film out, drawn in code by Claude Code.',
     creator: '@joecheuk',
   },
 }

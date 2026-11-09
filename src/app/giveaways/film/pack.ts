@@ -1,13 +1,21 @@
 import type { PackPageContent } from '@/lib/pack-page'
 import { FILM_PROMPT } from './prompt'
 
-// Words for the Make-a-Film pack page (IG keyword FILM, Sun 1 Nov 2026).
+// Words for the Make-a-Film pack page (IG keyword FILM, Sun 1 Nov 2026; explainer reel update 9 Nov 2026).
 // Layout, the email ask and the end offer live in src/components/giveaways/PackPage.tsx.
 // Tool: Lemo-Opuscar by LemoLab, github.com/lemomo-ai/lemo-opuscar (MIT code; demo films CC BY 4.0).
-// Facts come from a real test on 25 Oct 2026: workspace agents/give-first-studio/jobs/day20-film/TEST-REPORT.md.
-// Tested: clone + setup.sh deps + one 20 s film (about 11 minutes, Claude Code + Opus, Mac).
-// Not tested: the plugin install route, voice and music tiers, a Mac with none of the tools installed.
+// Facts come from real tests. 25 Oct 2026: clone + setup.sh deps + one 20 s film (about 11 minutes,
+// Claude Code + Opus, Mac), workspace agents/give-first-studio/jobs/day20-film/TEST-REPORT.md.
+// 9 Nov 2026 (library at 66 styles, workspace agents/video-editor/lemo-opuscar, SKILL.md "Known gaps"):
+//   Test A: one plain-English idea -> 27 s vertical whiteboard explainer with voiceover (our own voice file,
+//     the library's own voice is a computer voice), licensed music and code-made sound, ~30 min wall time,
+//     render ~20 s. 9:16 worked but Claude had to adapt the style engine for it.
+//   Test B: brand colours, fonts and logo -> Dark Tech Keynote turned into a brand style in ~20 min.
+//     Claude reads the reference pictures itself (no tool) and changes an existing style; not a new style.
+// Not allowed on this page: "under 10 minutes", "a whole new style", "studio quality", "works with any AI".
+// Not tested: the plugin install route, a Mac with none of the tools installed.
 // Illy 23 Oct: every instruction in very simple words, like for a 5-year-old.
+// End offer: the $27 Video Agent (offerId), the paid video product for people who make videos with Claude.
 
 export const GALLERY = 'https://lemomo-ai.github.io/lemo-opuscar/'
 export const REPO = 'https://github.com/lemomo-ai/lemo-opuscar'
@@ -15,10 +23,11 @@ export const REPO = 'https://github.com/lemomo-ai/lemo-opuscar'
 export const FILM_CONTENT: PackPageContent = {
   slug: 'film',
   level: 'builder',
+  offerId: 'video-agent-film',
   hero: {
-    title: 'Tell Claude a story. Get a short film.',
+    title: 'Tell Claude your idea. It draws the video.',
     free: 'It is free.',
-    lede: 'Claude Code can draw, add sound to and make a short animated film from your story idea. All on your Mac. It is for fun stories, not for everyday work. The first set-up takes a little while. Your first film can be done in about 10 minutes after that.',
+    lede: 'A free skill teaches Claude Code 66 art styles, like whiteboard, cartoon, watercolor and old newsreel. You pick one and describe your idea in plain English. Claude writes the story, adds a voiceover, music and sound, then draws every frame in code. All on your Mac. The first set-up takes a while. After that, a 20 to 30 second film took about 20 to 30 minutes in our tests.',
     button: {
       label: 'Take me to it',
       meta: 'free · on this page',
@@ -46,7 +55,7 @@ export const FILM_CONTENT: PackPageContent = {
   get: {
     heading: 'Get your film maker',
     intro:
-      'This is a free library of 59 film looks, like crayon picture book, watercolor, paper cut-out and pixel game. You tell Claude Code your story. It picks a look, draws every picture with code, adds sound and makes the video file. You copy one prompt. Claude Code does the set-up for you.',
+      'It is a free skill for Claude Code, called Lemo-Opuscar. It has 66 art styles, like whiteboard, cartoon, watercolor, old newsreel and crayon picture book. You tell Claude Code your idea. It can be something to explain, or a fun story. Claude helps you pick a style, writes the story, draws every picture with code, adds sound and makes the video file. You copy one prompt. Claude Code does the set-up for you.',
     note: {
       lead: 'It only works in Claude Code, on a Mac.',
       link: { label: 'See what you need, step by step.', target: 'guide' },
@@ -60,34 +69,37 @@ export const FILM_CONTENT: PackPageContent = {
   promise: {
     heading: 'What to expect. The honest version.',
     doesNot: [
-      'Make long films. The films here are short, about 20 seconds for a first one',
+      'Make long films. Ours were short, 20 to 30 seconds',
       'Make real people, or look like a big studio movie. The pictures are simple, drawn with code',
-      'Work for everyday business jobs. It is for fun stories',
+      'Sound like a real person on its own. Its own voice is a computer voice. Bring your own recording for a real voice',
+      'Make a brand new style from nothing. It changes one of its 66 styles to fit your brand',
       'Set up with one click. You need Claude Code, Node, ffmpeg and Python first',
       'Work as well in other AI tools. It is made for Claude, and works best with Claude Opus',
     ],
     does: [
-      'Turn one story idea into a finished video file',
-      'Draw it in a look you pick, like crayon picture book',
-      'Add sound effects. Voice and music are an extra step',
-      'Make a 20 second film in about 10 to 15 minutes, in our test',
+      'Turn one idea in plain English into a finished video file, like an explainer or a fun story',
+      'Draw it in a style you pick, like whiteboard or watercolor',
+      'Add a voiceover, music and sound effects. In our test we gave it our own voice recording and our own music',
+      'Make a 20 to 30 second film in about 20 to 30 minutes, in our tests, after the set-up',
+      'Turn one of its styles into your own, with your brand colors, fonts and logo. About 20 minutes in our test',
+      'Make tall videos for Reels (9:16). Claude may change the style a little to fit',
       'Make films that are yours. No watermark, no credit needed',
     ],
   },
   guide: {
     eyebrow: 'How it works',
-    heading: 'From your story idea to a video',
+    heading: 'From your idea to a video',
     intro:
-      'You paste one prompt into Claude Code. Claude checks your Mac, gets the free film library, and sets it up. Then it asks you for your story idea and makes the film.',
+      'You paste one prompt into Claude Code. Claude checks your Mac, gets the free film library, and sets it up. Then it asks you for your idea and makes the film.',
     sections: [
       {
         title: 'What you need',
         bullets: [
           'A Mac.',
           'Claude Code. It comes with the Claude app. You need a paid Claude plan (Pro or more).',
-          'Node (version 20 or newer), ffmpeg, and Python 3.11 or newer. The Python that comes with a Mac is too old. Claude will check each one and ask before it installs anything. If you have none of them, this set-up is the slowest part.',
-          'A story idea. Something fun, like a cat that opens a bakery.',
-          'A little patience. A short film takes Claude about 10 to 15 minutes to make.',
+          'Node (version 20 or newer), ffmpeg (version 7 or newer), and Python 3.11 or newer. The Python that comes with a Mac is too old. Claude will check each one and ask before it installs anything. If you have none of them, this set-up is the slowest part.',
+          'An idea. Something to explain, like how your service works. Or something fun, like a cat that opens a bakery.',
+          'Some patience. In our tests, a 20 to 30 second film took Claude about 20 to 30 minutes to make.',
         ],
       },
       {
@@ -98,13 +110,18 @@ export const FILM_CONTENT: PackPageContent = {
           'Click Code at the top of the app. Pick a new empty folder to work in.',
           'On this page, click Copy on the prompt. Paste it into the chat and press Enter.',
           'Say yes when Claude asks to install anything that is missing. If a box about "command line tools" pops up, click Install and wait.',
-          'When Claude asks for your story idea, type it. Pick one of its 3 looks. Say you want a short film with no voice and no music for your first one.',
+          'When Claude asks for your idea, type it in plain English. Pick one of the 3 styles it offers. Claude will tell you to keep your first film short, with no voice and no music. That is the fastest way to a first film.',
           'Wait. Claude draws, adds sound and makes the video. Then it tells you where the file is and opens it.',
         ],
       },
       {
         title: 'Make it better',
-        text: 'Your first film will be simple. That is normal. Ask Claude to change the look, the story or the length, and make it again. Voice and music are extras that need more set-up. Ask Claude about them once your first film works.',
+        text: 'Your first film will be simple. That is normal. Ask Claude to change the style, the story or the length, and make it again. Then try these.',
+        bullets: [
+          'Voice and music. Ask Claude to add a voiceover and music. Its own voice is a computer voice. For a real voice, give it your own recording. You can give it your own music too. This needs a little more set-up, and Claude does it for you.',
+          'Your brand. Give Claude your brand colors, fonts and logo, plus a few pictures of the look you want. Pick one of the 66 styles to start from. Claude looks at the pictures itself and changes that style to fit your brand. It is your own version of one style, not a brand new style. In our test it took about 20 minutes.',
+          'Tall videos for Reels. Ask for 9:16. It worked in our test, but Claude had to change the style a little to fit.',
+        ],
       },
       {
         title: 'Credit',
@@ -170,6 +187,6 @@ export const FILM_CONTENT: PackPageContent = {
     },
   ],
   bridge:
-    'Claude Code made a whole film from one sentence. It can build the things your business needs too.',
+    'You came to make a film with Claude. If you also film your own videos on a Mac, the next step is letting Claude do the editing too.',
   emailHeading: 'Want more free things like this from Claude Code?',
 }
