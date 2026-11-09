@@ -70,7 +70,7 @@ async function sendViaResend(
         </h1>
 
         <p style="font-size:16px;color:#444;line-height:1.7;margin-bottom:20px;">
-          Paste this into Claude Code or Codex. It installs GuardDog, helps you add a free VirusTotal key on your own computer, and runs a first check so you see what a result looks like. It needs Node.js 22 or 24.
+          Paste this into Claude Code or Codex. It installs GuardDog, helps you add a free VirusTotal key on your own computer, and runs a first check so you see what a result looks like. If you do not have Node.js 24 yet, it helps you install it first.
         </p>
 
         <pre style="padding:20px;border-radius:10px;font-size:13px;line-height:1.65;white-space:pre-wrap;word-break:break-word;margin-bottom:24px;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;border-left:2px solid #d9d2ee;">${escapeGuardogHtml(GUARDOG_SETUP_PROMPT)}</pre>

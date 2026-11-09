@@ -13,13 +13,19 @@ Use this exact project: ${GUARDOG_REPO}
 The product is MyOS Guard Dog and its command is myos-guard-dog. Do not use any other package with a similar name (guarddog, guardog or guard-dog are different projects).
 
 STEP 1: Check my computer
-Check my operating system and my Node.js version. GuardDog needs Node 22 or Node 24. If I have a different version, explain in plain English how to switch, then continue.
+Check my operating system and run: node -v
+GuardDog only runs on Node 22 or Node 24. The newest Node (26 and up) will NOT work.
+If Node is missing or not 22 or 24, install Node 24 for me:
+- If I already use nvm: nvm install 24 then nvm alias default 24
+- Otherwise: download the Node 24 installer from https://nodejs.org/dist/latest-v24.x/ (the .pkg file on a Mac, the -x64.msi file on Windows), tell me to double-click it and click through, then open a new terminal window.
+Run node -v again and only continue when it shows v22 or v24.
 
 STEP 2: Install it
 Confirm the v${GUARDOG_VERSION} release exists on GitHub, then run:
 npm install -g --ignore-scripts github:joecheofficial/myos-guard-dog#v${GUARDOG_VERSION}
 myos-guard-dog doctor --repair
 myos-guard-dog --version
+If npm says permission denied (EACCES), do not use sudo. Instead set npm to install global commands in my home folder (npm config set prefix ~/.npm-global), add ~/.npm-global/bin to my PATH in my shell profile, open a new terminal and run the install again.
 
 STEP 3: Set it up
 Run: myos-guard-dog setup --quick

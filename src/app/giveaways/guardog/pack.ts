@@ -44,7 +44,7 @@ export const GUARDOG_PACK: PackPageContent = {
   get: {
     heading: 'The GuardDog scanner',
     intro:
-      "Free, from Joe Che's AI class. A package security scanner you run from the terminal or from Claude Code. Install it once, then check anything you do not know before you install it. It needs Node.js 22 or 24.",
+      "Free, from Joe Che's AI class. A package security scanner you run from the terminal or from Claude Code. Install it once, then check anything you do not know before you install it. It needs Node.js 24 (the newest Node, 26, will not work).",
     note: {
       lead: 'On your phone?',
       link: { label: 'Read what it checks first.', target: 'guide' },
@@ -153,7 +153,7 @@ export const GUARDOG_PACK: PackPageContent = {
   use: {
     heading: 'Set it up with one prompt',
     intro:
-      'Tap Copy, open Claude Code or Codex, paste it and send. It installs GuardDog, helps you add your free VirusTotal key and shows you a first check. It needs Node.js 22 or 24.',
+      'Tap Copy, open Claude Code or Codex, paste it and send. It installs GuardDog, helps you add your free VirusTotal key and shows you a first check. If you do not have the right Node.js (version 24), the prompt sets it up first.',
     cards: [
       {
         label: 'install GuardDog in one prompt',
@@ -171,11 +171,15 @@ export const GUARDOG_PACK: PackPageContent = {
     },
     {
       q: 'It says npm: command not found',
-      a: 'GuardDog needs Node.js (version 22 or 24), which comes with npm. Install Node.js from nodejs.org first, then paste the setup prompt again.',
+      a: 'GuardDog needs Node.js version 24, which comes with npm. Do not take the newest version on the nodejs.org home page (26 and up will not work). Download the Node 24 installer from nodejs.org/dist/latest-v24.x (the .pkg file on a Mac, the -x64.msi file on Windows), double-click it, open a new terminal, then paste the setup prompt again.',
     },
     {
       q: 'It says my Node version is not supported',
-      a: 'GuardDog only runs on Node 22 or Node 24. Ask your AI: "switch me to Node 24 and keep my other settings", then paste the setup prompt again.',
+      a: 'GuardDog only runs on Node 22 or Node 24, and the newest Node (26) is the usual cause. Install Node 24 from nodejs.org/dist/latest-v24.x (the .pkg file on a Mac, the -x64.msi file on Windows), open a new terminal and paste the setup prompt again. Or ask your AI: "install Node 24 and make it my default".',
+    },
+    {
+      q: 'It says permission denied or EACCES',
+      a: 'Your computer blocked the install into a system folder. Do not use sudo. Ask your AI: "set npm to install global commands in my home folder, add it to my PATH, then run the GuardDog install again".',
     },
     {
       q: 'I do not use Claude Code',
