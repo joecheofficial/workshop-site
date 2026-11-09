@@ -733,11 +733,13 @@ Handle the common paths for me:
               code={`Install GuardDog and confirm it is ready to use on this computer.
 
 Run these commands:
-npm install -g github:josephtandle/guardog
-guardog setup
+npm install -g --ignore-scripts github:joecheofficial/myos-guard-dog#v5.2.1
+myos-guard-dog setup --quick
+
+It needs Node 22 or 24. The command is myos-guard-dog (not guarddog or guardog, those are other projects).
 
 After setup:
-1. Confirm the guardog command is available.
+1. Confirm the myos-guard-dog command is available with myos-guard-dog --version.
 2. Tell me where npm installed the global command.
 3. Run a harmless version or help check if GuardDog supports one.
 4. Explain how I should use GuardDog before installing unfamiliar packages.`}

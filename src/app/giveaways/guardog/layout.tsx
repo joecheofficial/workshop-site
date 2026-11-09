@@ -6,7 +6,7 @@ const URL = `${BASE}/giveaways/guardog`
 
 export const metadata: Metadata = {
   title: 'GuardDog | Free Package Security Scanner',
-  description: 'A free Claude Code skill that scans npm and PyPI packages for malware, CVEs, and suspicious patterns before you install them. One command to set up.',
+  description: 'A free scanner that checks npm and PyPI packages for known security holes and warning signs before you install them. One prompt to set up.',
   keywords: [
     'GuardDog', 'package security', 'npm security', 'supply chain attack', 'malware scanner',
     'CVE checker', 'Claude Code skill', 'package scanner', 'open source security',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   alternates: { canonical: URL },
   openGraph: {
     title: 'GuardDog | Free Package Security Scanner',
-    description: 'Scan npm and PyPI packages for malware, CVEs, and suspicious patterns before you install them. Free from the AI Business Mastermind.',
+    description: 'Check npm and PyPI packages for known security holes and warning signs before you install them. Free from the AI Business Mastermind.',
     url: URL,
     siteName: 'Masterminds Workshop',
     type: 'website',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'GuardDog | Free Package Security Scanner',
-    description: 'Scan npm and PyPI packages for malware, CVEs, and suspicious code before you install. One command to set up. Free.',
+    description: 'Check npm and PyPI packages for known security holes and warning signs before you install. One prompt to set up. Free.',
     creator: '@joecheuk',
   },
 }
