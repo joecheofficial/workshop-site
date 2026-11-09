@@ -1804,12 +1804,12 @@ Do not sign me up for anything.`,
   {
     "slug": "free-ai-youtube-skills",
     "keyword": "YOUTUBE",
-    "name": "YouTube Agent Skill",
+    "name": "Claude Video Skills",
     "tagline": "Claude writes the words for your videos. You film and post.",
-    "subline": "Eleven free Claude skills that do the writing for your videos and reels: the script and hooks in your own voice, the cover words, a list of cuts from your transcript, comment replies and a weekly plan. Made for YouTube, and most of it works for reels too.",
+    "subline": "Eleven free Claude skills that do the writing for your videos and reels: the script and hooks in your own voice, the cover words, a list of cuts from your transcript, comment replies and a weekly plan. For reels, TikTok and longer videos.",
     "toolUrl": "https://github.com/Jakeschincariol/youtube-agent-skill",
     "primaryLabel": "Open the skills on GitHub",
-    "intro": "A free pack of eleven Claude skills by Jake Schincariol (MIT licence). You type one line, like /yt-script, and Claude does that job for your video. Six of the skills come with a small checker for your hook, your title or your transcript, so it is more than a prompt. It writes and checks. You still film, edit and post.",
+    "intro": "A free pack of eleven Claude skills by Jake Schincariol (MIT licence), for anyone who makes videos. You type one line, like /yt-script, and Claude does that job for your video. Six of the skills come with a small checker for your hook, your title or your transcript, so it is more than a prompt. It writes and checks. You still film, edit and post.",
     "steps": [
       "You need a paid Claude plan (Pro or higher) and Claude Code, the version of Claude that can save files on your computer.",
       "Open Claude Code and paste the setup prompt from this page. It copies the eleven skills into your Claude skills folder.",
@@ -1822,10 +1822,10 @@ Do not sign me up for anything.`,
       "For reels, the cover rule is the one to keep: the cover should say what the caption does not, in three words or fewer.",
       "Paste your comments into /yt-comment. It sorts them into questions, corrections, praise and bait, and tells you which one to pin."
     ],
-    "goodToKnow": "The skills are free and open source (MIT), made by Jake Schincariol. I am not affiliated with him or with YouTube. They need a paid Claude plan, so the skills are free but Claude is not. I read every line of the six checkers: they only read the file you give them and print a result. They do not go online, need no account and no API key, and nothing gets posted for you.",
+    "goodToKnow": "The skills are free and open source (MIT), made by Jake Schincariol. I am not affiliated with him. They need a paid Claude plan, so the skills are free but Claude is not. I read every line of the six checkers: they only read the file you give them and print a result. They do not go online, need no account and no API key, and nothing gets posted for you.",
     "links": [
       {
-        "label": "The YouTube Agent Skill on GitHub",
+        "label": "The skill pack on GitHub",
         "url": "https://github.com/Jakeschincariol/youtube-agent-skill"
       },
       {
@@ -1854,7 +1854,7 @@ Do not sign me up for anything.`,
       "No API key, no account to connect",
       "5k stars on GitHub"
     ],
-    "claudePrompt": "Install the YouTube Agent Skill (github.com/Jakeschincariol/youtube-agent-skill, MIT) in Claude Code on this computer.\n\n1. Download it from that GitHub address only, then copy every folder in its skills folder that starts with yt- into my Claude skills folder (~/.claude/skills).\n2. Check that python3 works on this computer. The six checkers need it and nothing else. If it is missing, tell me how to install it and stop.\n3. Copy templates/voice.md to ~/.claude/youtube/voice.md. Then ask me for three of my own videos or reels (links, transcripts or files) and fill in my voice file from how I really talk.\n4. Test it: run /yt-script on this idea: (your next video idea). Show me the two hooks you like best and the start of the script.\n5. Tell me which eleven commands I now have, one line each.\n\nDo not connect YouTube, Instagram or any other account, and do not post anything.",
+    "claudePrompt": "Install Jake Schincariol's free Claude video skills (github.com/Jakeschincariol/youtube-agent-skill, MIT) in Claude Code on this computer.\n\n1. Download it from that GitHub address only, then copy every folder in its skills folder that starts with yt- into my Claude skills folder (~/.claude/skills).\n2. Check that python3 works on this computer. The six checkers need it and nothing else. If it is missing, tell me how to install it and stop.\n3. Copy templates/voice.md to ~/.claude/youtube/voice.md. Then ask me for three of my own videos or reels (links, transcripts or files) and fill in my voice file from how I really talk.\n4. Test it: run /yt-script on this idea: (your next video idea). Show me the two hooks you like best and the start of the script.\n5. Tell me which eleven commands I now have, one line each.\n\nDo not connect Instagram, TikTok, YouTube or any other account, and do not post anything.",
     "requirements": [
       "A paid Claude plan, Pro or higher. Claude Code is included.",
       "Claude Code on a Mac or a PC.",
@@ -1882,7 +1882,7 @@ Do not sign me up for anything.`,
     ],
     "limits": [
       "The skills are free, but Claude Code needs a paid Claude plan (Pro or higher).",
-      "It was made for YouTube. The hook, script, cover-text and comment skills work for reels too. The title length check (60 and 40 characters) and the chapters, search and retention skills are for YouTube only.",
+      "The hook, script, cover-text, cut-list and comment skills work for any video, reels included. The title length check (60 and 40 characters) and the chapters, search and retention skills are only for long videos on YouTube; skip them for reels.",
       "The hook score is a rough check, and the maker says so himself. We ran it on 20 of our own past reel hooks and it did not match which reels did well: \"Still paying for CapCut?\", the one that got the most comments, scored second lowest. Use it to spot a vague line, not to pick the winner.",
       "The cut list needs a transcript with timings. Claude can make one for you, or use the captions from an unlisted YouTube upload. It catches long pauses and a line restarted straight away. On our test clip it missed a line said again ten seconds later, so check the list by eye.",
       "Your voice file matters most. Without it the scripts sound generic.",
@@ -1906,8 +1906,8 @@ Do not sign me up for anything.`,
         "a": "Ask Claude Code to make one from your video file, or upload the video to YouTube as unlisted and download its captions. The cut list needs the timings."
       },
       {
-        "q": "I make reels, not YouTube videos",
-        "a": "Use /yt-script, /yt-package for the cover words, /yt-edit and /yt-comment. Skip the chapters, search and retention skills, those are for YouTube."
+        "q": "I make reels and short videos",
+        "a": "Use /yt-script, /yt-package for the cover words, /yt-edit and /yt-comment. Skip the chapters, search and retention skills, those are for long videos."
       }
     ]
   }

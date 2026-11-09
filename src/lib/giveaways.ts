@@ -151,7 +151,7 @@ export const giveaways: Giveaway[] = [
   },
   {
     slug: 'free-ai-youtube-skills',
-    title: 'Free AI Tools: YouTube Agent Skill setup notes',
+    title: 'Free AI Tools: Claude Video Skills setup notes',
     description: 'Eleven free Claude skills for your videos: scored hooks, scripts, title and cover checks, cut lists and comment replies.',
     icon: '◆',
     badge: 'Free Tool',
