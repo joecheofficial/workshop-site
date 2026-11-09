@@ -120,7 +120,7 @@ export function offerForLevel(level: GiveawayLevel, slug: string, offerId?: Give
 // cuts; the Video Agent does the edit. Every fact is from the live
 // mastermindshq.business/video-agent page (9 Nov 2026).
 // ---------------------------------------------------------------------------
-export type GiveawayOfferId = 'video-agent'
+export type GiveawayOfferId = 'video-agent' | 'video-agent-swaps'
 
 export const PAGE_OFFERS: Record<GiveawayOfferId, GiveawayOffer> = {
   'video-agent': {
@@ -148,5 +148,33 @@ export const PAGE_OFFERS: Record<GiveawayOfferId, GiveawayOffer> = {
     photo: { src: '/images/events/joe-che-bio-bw.jpg', alt: 'Joe Che' },
     bridge:
       'You came for the words: the hook, the title, the cut list. If you film on a Mac, the next step is letting Claude do the edit as well.',
+  },
+  // Same Video Agent facts, worded for the Stop Paying bundle (keyword FREE, 16 Nov 2026):
+  // the gift is a free video editor, so the bridge is "the edit still takes your time".
+  'video-agent-swaps': {
+    id: 'video-agent-swaps',
+    level: 'builder',
+    name: 'Let Claude do the edit for you.',
+    stats: [
+      { value: '$27', label: 'one payment, no subscription' },
+      { value: '1', label: 'line to paste into Claude Code' },
+      { value: '10', label: 'minutes to set up, about' },
+      { value: '30', label: 'day money-back if it will not run on your Mac' },
+    ],
+    body:
+      'A free editor still leaves the cutting to you. My Video Agent does the edit: drop in your raw footage and it keeps your best take, cuts the restarts and adds captions, with your sound in sync.',
+    checks: [
+      'Made for reels and short videos you film yourself, and it exports for Instagram, TikTok or YouTube.',
+      'Editing what you filmed costs nothing extra on an Apple Silicon Mac.',
+      'Mac only, and it needs Claude Code, which comes with a paid Claude plan.',
+    ],
+    promise: {
+      value: '$27',
+      text: 'One payment and you keep it. If it will not run on your Mac within 30 days, email me and I refund your $27.',
+    },
+    cta: { label: 'See the Video Agent', meta: '$27 \u00b7 one payment \u00b7 next page', href: VIDEO_AGENT_URL },
+    photo: { src: '/images/events/joe-che-bio-bw.jpg', alt: 'Joe Che' },
+    bridge:
+      'You came for free tools. If you film your own videos on a Mac, the next step is letting Claude do the editing for you.',
   },
 }
