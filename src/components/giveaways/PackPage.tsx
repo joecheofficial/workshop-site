@@ -57,7 +57,7 @@ export default function PackPage({
   children?: ReactNode
 }) {
   const c = content
-  const offer = offerForLevel(c.level, slug)
+  const offer = offerForLevel(c.level, slug, c.offerId)
   const sections = packSections(c)
   // An interactive body is something to use, so the ask waits for a copy or download, not the end of the page.
   const hasAction = packHasAction(c) || Boolean(children)

@@ -85,6 +85,7 @@ function setupNotesPack(t: FreeAiTool): PackPageContent {
   return {
     slug: t.slug,
     level: t.level ?? 'beginner',
+    ...(t.offerId ? { offerId: t.offerId } : {}),
     hero: {
       title: `Here are my ${t.name} setup notes.`,
       free: 'They are free.',
