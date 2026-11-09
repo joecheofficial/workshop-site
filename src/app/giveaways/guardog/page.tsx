@@ -9,7 +9,7 @@ const jsonLd = {
   '@type': 'HowTo',
   name: 'Install GuardDog for Claude Code',
   description:
-    'A free package security scanner that checks npm and PyPI packages for malware, CVEs, and suspicious patterns before you install them.',
+    'A free package security scanner that checks npm and PyPI packages for known security holes and warning signs before you install them.',
   author: {
     '@type': 'Person',
     name: 'Joe Che',
@@ -23,20 +23,20 @@ const jsonLd = {
   step: [
     {
       '@type': 'HowToStep',
-      name: 'Copy the install command',
-      text: 'Copy the one-line install command from this page.',
+      name: 'Copy the setup prompt',
+      text: 'Copy the setup prompt from this page.',
       position: 1,
     },
     {
       '@type': 'HowToStep',
-      name: 'Run it in your terminal',
-      text: 'Paste and run the command in your terminal. It clones the repo, installs dependencies, sets up the Claude Code skill, and optionally walks you through adding a free VirusTotal API key.',
+      name: 'Paste it into Claude Code or Codex',
+      text: 'It installs the myos-guard-dog command, helps you add a free VirusTotal key on your own computer, and runs a first check.',
       position: 2,
     },
     {
       '@type': 'HowToStep',
-      name: 'Type /guardog in Claude Code',
-      text: 'Open Claude Code and type /guardog followed by any package name. GuardDog scans it and tells you whether it is safe to install.',
+      name: 'Check packages before you install them',
+      text: 'Run myos-guard-dog analyze followed by a package name, or ask Claude to check it with GuardDog. You get one verdict: SILENT, WHINE or BARK.',
       position: 3,
     },
   ],

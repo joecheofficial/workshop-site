@@ -1,10 +1,14 @@
 import type { PackPageContent } from '@/lib/pack-page'
-import { GUARDOG_SETUP_PROMPT } from './prompts'
+import { GUARDOG_REPO, GUARDOG_SETUP_PROMPT, GUARDOG_VERSION } from './prompts'
 
 // Words for the GuardDog pack page. Layout and behaviour live in
-// src/components/giveaways/PackPage.tsx. Prompt copied verbatim from the old page.
+// src/components/giveaways/PackPage.tsx.
+// 9 Nov 2026: rewritten for MyOS Guard Dog 5.2.1 (new repo + myos-guard-dog
+// command). Every claim checked against the tool's README/QUICKSTART and a
+// clean test install. The tool does NOT do name-similarity (typosquat)
+// detection, is NOT antivirus, and SILENT never means "safe".
 
-export const GITHUB_URL = 'https://github.com/josephtandle/guardog'
+export const GITHUB_URL = GUARDOG_REPO
 
 export const GUARDOG_PACK: PackPageContent = {
   slug: 'guardog',
@@ -12,7 +16,7 @@ export const GUARDOG_PACK: PackPageContent = {
   hero: {
     title: 'Here is GuardDog.',
     free: 'It is free.',
-    lede: 'Think of it as free antivirus for your code packages. It scans an npm or PyPI package for hidden malware and known security holes before you install it.',
+    lede: 'A free scanner that checks an npm or PyPI code package for warning signs and known security holes before you install it.',
     button: {
       label: 'Take me to it',
       meta: 'free · on this page',
@@ -40,7 +44,7 @@ export const GUARDOG_PACK: PackPageContent = {
   get: {
     heading: 'The GuardDog scanner',
     intro:
-      "Free, from Joe Che's AI class. A package security scanner for Claude Code. Install it once, then run it before you install anything you do not know. It needs Node.js and npm.",
+      "Free, from Joe Che's AI class. A package security scanner you run from the terminal or from Claude Code. Install it once, then check anything you do not know before you install it. It needs Node.js 22 or 24.",
     note: {
       lead: 'On your phone?',
       link: { label: 'Read what it checks first.', target: 'guide' },
@@ -48,117 +52,113 @@ export const GUARDOG_PACK: PackPageContent = {
     },
     primary: {
       label: 'Open GuardDog on GitHub',
-      meta: 'github.com/josephtandle/guardog',
+      meta: 'github.com/joecheofficial/myos-guard-dog',
       href: GITHUB_URL,
     },
     command: {
       label: 'Or install it by hand in the terminal',
-      text: 'npm install -g github:josephtandle/guardog\nguardog setup',
+      text: `npm install -g --ignore-scripts github:joecheofficial/myos-guard-dog#v${GUARDOG_VERSION}\nmyos-guard-dog setup --quick`,
     },
   },
   promise: {
-    heading: 'It scans. You decide what to install.',
+    heading: 'It checks. You decide what to install.',
     doesNot: [
       'Need a credit card',
-      'Need a VirusTotal key to work (CVE lookups, reputation checks and pattern analysis run without one)',
+      'Run the package code while it checks it',
+      'Promise a package is safe (no scanner can)',
     ],
     does: [
-      'Scan an npm or PyPI package before you install it',
-      'Give one of three verdicts: SILENT, WHINE or BARK',
-      'Install the guardog command globally with npm',
-      'Add your free VirusTotal key to ~/.zshrc (macOS) or ~/.bashrc (Linux), if you do that optional step',
+      'Check an npm or PyPI package before you install it',
+      'Give one verdict: SILENT, WHINE or BARK',
+      'Tell you when a check could not run, instead of calling it clean',
+      'Keep your free VirusTotal key on your own computer, if you add one',
     ],
   },
   guide: {
     eyebrow: 'How it works',
-    heading: 'Free antivirus for your packages.',
+    heading: 'Check it before you install it.',
     intro:
-      'Supply chain attacks through npm and PyPI have hit companies you have heard of. The packages look real. The names are close. The installs are silent. GuardDog costs nothing.',
+      'Every time Claude or Codex builds something for you, it installs code packages written by strangers. Sonatype has logged 1,960,846 malicious packages since 2017. Most look completely normal. GuardDog checks a package before it lands on your computer, and it costs nothing.',
     sections: [
       {
-        title: 'Install once. Scan anything.',
+        title: 'Install once. Check anything.',
         steps: [
           'Copy the setup prompt from the Use it now box below.',
-          'Paste it into Claude Code or Codex. It installs GuardDog, walks you through getting a free VirusTotal key (500 scans per day, no credit card), and confirms everything is working.',
-          'Scan before you install. In Claude Code: /guardog express npm. In the terminal: guardog analyze express npm.',
+          'Paste it into Claude Code or Codex. It installs GuardDog, helps you add a free VirusTotal key (no card), and runs a first check so you see what a result looks like.',
+          'Check before you install: myos-guard-dog analyze express npm. Or let it check and install in one go: myos-guard-dog install express.',
         ],
       },
       {
-        title: 'It reads the real files',
-        text: 'When you run GuardDog, it reads the actual package code sitting on your disk. It checks for credential harvesters, obfuscated scripts, crypto miners, reverse shells and more. In all it looks for 30+ malicious code patterns. No sample or summary. The real files.',
+        title: 'It checks the latest known security holes every time',
+        text: 'A package that was clean last month may have a serious hole found today. GuardDog asks Google\'s open vulnerability database (OSV) every time you run it, so you check against today\'s list, not an old copy. No account needed.',
       },
       {
-        title: 'It checks live threat lists every time',
-        text: 'A package that was clean last month may have a critical CVE found today. GuardDog queries live vulnerability databases every time you run it, so you check against the latest known threats. Not a snapshot. Live data.',
+        title: 'It can read the real code',
+        text: 'For npm packages, the artifact and install checks open the exact package files without running them. They look for code that grabs your passwords or keys and sends them out, and for hidden code that unscrambles itself and runs. Anything it cannot read is marked incomplete, never clean.',
       },
       {
-        title: 'Three verdicts. No ambiguity.',
+        title: 'One verdict. Read it with the coverage.',
         table: {
-          head: ['Verdict', 'Score', 'What it means'],
+          head: ['Verdict', 'What it means'],
           rows: [
-            ['SILENT', 'Under 50', 'The package passed all checks. Safe to install.'],
-            ['WHINE', '50-99', 'Suspicious signals found. Review before installing.'],
-            ['BARK', '100+', 'Dangerous. Do not install.'],
+            ['SILENT', 'The checks that ran found no warning signs.'],
+            ['WHINE', 'Something looks off. Look closer before you install.'],
+            ['BARK', 'Serious warning signs. Do not install it.'],
+            ['INCOMPLETE', 'Some checks could not run. This is not a clean result.'],
           ],
         },
       },
       {
-        title: 'Check: CVE database (no key needed)',
+        title: 'Check: known security holes (no key needed)',
         bullets: [
-          'Google OSV: queries the Open Source Vulnerabilities database maintained by Google. Covers npm, PyPI and hundreds of other ecosystems. Returns known CVEs with severity ratings.',
-          'Severity scoring: each CVE is scored as critical (+25), high (+15), medium (+5) or low (+2). The scores stack into a total threat score that drives the final verdict.',
-          'No API key required: OSV is a free, open API. CVE lookups work out of the box on every scan, no account needed.',
+          'Google OSV: the free, open vulnerability database. Covers npm, PyPI and many more. Returns known holes with how serious they are.',
+          'Serious holes push the score up. Enough of them turns the verdict to WHINE or BARK.',
+          'No API key needed: this check works out of the box on every scan.',
         ],
       },
       {
         title: 'Check: package reputation',
         bullets: [
-          'npm registry: checks download counts, package age, maintainer count and metadata signals. A package with 12 downloads published 3 days ago scores very differently than lodash.',
-          'PyPI registry: the same reputation signals for Python packages. Age, downloads, maintainer history, and whether the project links to a real repository.',
-          'GitHub signals: checks whether the package links to a real GitHub repo. A missing repo, zero stars and brand-new accounts all add to the threat score.',
+          'npm and PyPI registry: how old the package is, how many people download it and who maintains it. A package with 12 downloads published 3 days ago scores very differently than lodash.',
+          'GitHub: whether the package links to a real code page, and what that page looks like.',
         ],
       },
       {
-        title: 'Check: code patterns (30+)',
+        title: 'Check: inside the package (npm)',
         bullets: [
-          'Credential harvesting: patterns that read environment variables, AWS keys, SSH files or browser credential stores and write them to network calls.',
-          'Obfuscation: flags eval(), Function(), fromCharCode() and base64-encoded execution chains. Legitimate packages have no reason to hide what they do.',
-          'Crypto miners: mining library imports, CPU-pegging loops and wallet address patterns embedded in install scripts.',
-          'Reverse shells: patterns that open outbound sockets, spawn shell processes and set up persistence on the host system.',
-          'Supply chain hooks: scans postinstall, preinstall and prepare scripts for suspicious network calls and file system writes outside the package directory.',
-          'Typosquat signals: compares the package name against a list of popular packages. A name one character away from "express" or "react" is an immediate flag.',
+          'Password and key grabbing: code that reads SSH keys, cloud logins or saved npm tokens in the same file that sends data out.',
+          'Secret grabbing: code that reads tokens or passwords from your settings and sends data out.',
+          'Hidden code: scrambled code that unscrambles itself and runs.',
+          'Blind spots: files it cannot read as text (apps, scripts in other languages) are listed as incomplete.',
         ],
       },
       {
         title: 'Check: VirusTotal (optional, free)',
-        text: 'GuardDog already scans package code, checks live vulnerability databases and runs 30+ pattern checks on its own. VirusTotal adds a second layer: it submits the package URL or file hash to 70+ antivirus engines at once. That takes about 5 seconds. It is recommended but not required. The setup prompt opens virustotal.com, walks you through a free account, puts your API key in your shell profile and confirms it works. You can skip that step. GuardDog works without it.',
-        bullets: [
-          '500 requests per day on the free tier',
-          '4 requests per minute',
-          'No credit card required',
-        ],
+        text: 'VirusTotal adds a malware check from many antivirus engines. GuardDog looks up the fingerprint of the exact package file, so none of your private files are uploaded. You add the key on your own computer during setup, never in a chat. Without a key the other checks still run, but GuardDog marks the malware check as incomplete, and the check-and-install command stays blocked until you add one.',
+        bullets: ['Free account at virustotal.com', 'No credit card'],
         links: [{ label: 'Open virustotal.com', href: 'https://www.virustotal.com' }],
       },
       {
-        title: 'Other ways to run it',
+        title: 'Ways to run it',
         bullets: [
-          'In Claude Code: type /guardog followed by any package name. GuardDog runs the scan and Claude explains the result in plain English.',
-          'In the terminal: guardog analyze <package-name> <npm or pypi>',
-          'Straight from the folder, without Claude Code: node ~/guardog/src/index.js analyze lodash npm',
+          'Ask Claude Code or Codex: "check the package express with GuardDog before you install it". It runs the check and explains the result in plain English.',
+          'Check one package: myos-guard-dog analyze <package> npm (or pypi)',
+          'Check and install an npm package in one step: myos-guard-dog install <package>',
+          'Check a whole project you already have: myos-guard-dog scan "<your project folder>"',
         ],
-        links: [{ label: 'Manual install on GitHub', href: GITHUB_URL }],
+        links: [{ label: 'Full instructions on GitHub', href: GITHUB_URL }],
       },
     ],
   },
   use: {
     heading: 'Set it up with one prompt',
     intro:
-      'Tap Copy, open Claude Code or Codex, paste it and send. It installs GuardDog, gets your free VirusTotal key and shows you a first scan. It needs Node.js and npm.',
+      'Tap Copy, open Claude Code or Codex, paste it and send. It installs GuardDog, helps you add your free VirusTotal key and shows you a first check. It needs Node.js 22 or 24.',
     cards: [
       {
         label: 'install GuardDog in one prompt',
         title: 'Set up GuardDog',
-        text: 'It installs the guardog command, helps you get a free VirusTotal key, then scans lodash so you see what a verdict looks like.',
+        text: 'It installs the myos-guard-dog command, helps you add a free VirusTotal key, then checks lodash so you see what a result looks like.',
         prompt: GUARDOG_SETUP_PROMPT,
       },
     ],
@@ -171,23 +171,27 @@ export const GUARDOG_PACK: PackPageContent = {
     },
     {
       q: 'It says npm: command not found',
-      a: 'GuardDog needs Node.js and npm. Install them first, then paste the setup prompt again.',
+      a: 'GuardDog needs Node.js (version 22 or 24), which comes with npm. Install Node.js from nodejs.org first, then paste the setup prompt again.',
+    },
+    {
+      q: 'It says my Node version is not supported',
+      a: 'GuardDog only runs on Node 22 or Node 24. Ask your AI: "switch me to Node 24 and keep my other settings", then paste the setup prompt again.',
     },
     {
       q: 'I do not use Claude Code',
-      a: 'The setup prompt works in Claude Code or Codex. You can also install by hand with the two commands in the Get it box, or follow the manual install on GitHub. After that, scan from the terminal with guardog analyze followed by the package name and npm or pypi.',
+      a: 'The setup prompt works in Claude Code or Codex. You can also install by hand with the two commands in the Get it box. After that, check from the terminal with myos-guard-dog analyze followed by the package name and npm or pypi.',
     },
     {
       q: 'I do not want a VirusTotal account',
-      a: 'You can skip that step. CVE lookups, reputation checks and pattern analysis all run without a key. VirusTotal adds a deeper malware layer on top.',
+      a: 'You can skip it. The security hole check and the reputation check still run. GuardDog will say the malware check is incomplete, and the check-and-install command stays blocked until you add a key.',
     },
     {
-      q: 'The result says WHINE or BARK',
-      a: 'WHINE means suspicious signals were found: review the package before you install it. BARK means dangerous: do not install it. SILENT means it passed all checks and is safe to install.',
+      q: 'The result says WHINE, BARK or INCOMPLETE',
+      a: 'WHINE means something looks off: look closer before you install. BARK means serious warning signs: do not install it. INCOMPLETE means a check could not run, often a missing VirusTotal key: run myos-guard-dog doctor --repair and myos-guard-dog test to see what is missing.',
     },
     {
-      q: 'My VirusTotal key does not seem to load',
-      a: 'Setup puts the key in ~/.zshrc on a Mac or ~/.bashrc on Linux and reloads it. Check it with: echo $VIRUSTOTAL_API_KEY. If it prints nothing, tell your AI the key did not load and ask it to redo step 2 of the setup prompt. The free key allows 4 requests a minute and 500 a day.',
+      q: 'My AI installed a different "guarddog"',
+      a: 'There are other tools with similar names. Ours is MyOS Guard Dog from github.com/joecheofficial/myos-guard-dog and its command is myos-guard-dog. Ask your AI to remove the other one and paste the setup prompt again.',
     },
     {
       q: 'None of these fixed it',
