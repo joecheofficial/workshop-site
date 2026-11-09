@@ -98,15 +98,12 @@ export const GUARDOG_PACK: PackPageContent = {
       },
       {
         title: 'One verdict. Read it with the coverage.',
-        table: {
-          head: ['Verdict', 'What it means'],
-          rows: [
-            ['SILENT', 'The checks that ran found no warning signs.'],
-            ['WHINE', 'Something looks off. Look closer before you install.'],
-            ['BARK', 'Serious warning signs. Do not install it.'],
-            ['INCOMPLETE', 'Some checks could not run. This is not a clean result.'],
-          ],
-        },
+        bullets: [
+          'SILENT: the checks that ran found no warning signs.',
+          'WHINE: something looks off. Look closer before you install.',
+          'BARK: serious warning signs. Do not install it.',
+          'INCOMPLETE: some checks could not run. This is not a clean result.',
+        ],
       },
       {
         title: 'Check: known security holes (no key needed)',
