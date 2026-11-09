@@ -1806,19 +1806,19 @@ Do not sign me up for anything.`,
     "keyword": "YOUTUBE",
     "name": "YouTube Agent Skill",
     "tagline": "Claude writes the words for your videos. You film and post.",
-    "subline": "Eleven free Claude skills for your videos: hooks that get scored before you film, a title and cover checker, a list of cuts from your transcript, comment replies in your voice, and a weekly plan. Made for YouTube, and most of it works for reels too.",
+    "subline": "Eleven free Claude skills that do the writing for your videos and reels: the script and hooks in your own voice, the cover words, a list of cuts from your transcript, comment replies and a weekly plan. Made for YouTube, and most of it works for reels too.",
     "toolUrl": "https://github.com/Jakeschincariol/youtube-agent-skill",
     "primaryLabel": "Open the skills on GitHub",
-    "intro": "A free pack of eleven Claude skills by Jake Schincariol (MIT licence). You type one line, like /yt-script, and Claude does that job for your video. Six of the skills come with a small checker that actually measures your hook, your title or your transcript, so it is more than a prompt. It writes and checks. You still film, edit and post.",
+    "intro": "A free pack of eleven Claude skills by Jake Schincariol (MIT licence). You type one line, like /yt-script, and Claude does that job for your video. Six of the skills come with a small checker for your hook, your title or your transcript, so it is more than a prompt. It writes and checks. You still film, edit and post.",
     "steps": [
       "You need a paid Claude plan (Pro or higher) and Claude Code, the version of Claude that can save files on your computer.",
       "Open Claude Code and paste the setup prompt from this page. It copies the eleven skills into your Claude skills folder.",
       "Make your voice file: give Claude three of your own videos or reels (transcripts work) and say \"write my voice.md from these\". Every skill reads it.",
-      "Try it on your next video: type /yt-script and your idea. You get five hook options with scores, then the script.",
+      "Try it on your next video: type /yt-script and your idea. You get five hook options, then the script.",
       "Before you post, type /yt-package for the title and cover text, and /yt-comment when the comments come in."
     ],
     "howIUse": [
-      "Start with /yt-script for the first line. It scores five hook options and names the weakest part of each one.",
+      "Start with /yt-script. Give it your idea and it writes five hook options, then the full script with what is on screen at each beat.",
       "For reels, the cover rule is the one to keep: the cover should say what the caption does not, in three words or fewer.",
       "Paste your comments into /yt-comment. It sorts them into questions, corrections, praise and bait, and tells you which one to pin."
     ],
@@ -1854,7 +1854,7 @@ Do not sign me up for anything.`,
       "No API key, no account to connect",
       "5k stars on GitHub"
     ],
-    "claudePrompt": "Install the YouTube Agent Skill (github.com/Jakeschincariol/youtube-agent-skill, MIT) in Claude Code on this computer.\n\n1. Download it from that GitHub address only, then copy every folder in its skills folder that starts with yt- into my Claude skills folder (~/.claude/skills).\n2. Check that python3 works on this computer. The six checkers need it and nothing else. If it is missing, tell me how to install it and stop.\n3. Copy templates/voice.md to ~/.claude/youtube/voice.md. Then ask me for three of my own videos or reels (links, transcripts or files) and fill in my voice file from how I really talk.\n4. Test it: run /yt-script on this idea: (your next video idea). Show me the two best hooks with their scores.\n5. Tell me which eleven commands I now have, one line each.\n\nDo not connect YouTube, Instagram or any other account, and do not post anything.",
+    "claudePrompt": "Install the YouTube Agent Skill (github.com/Jakeschincariol/youtube-agent-skill, MIT) in Claude Code on this computer.\n\n1. Download it from that GitHub address only, then copy every folder in its skills folder that starts with yt- into my Claude skills folder (~/.claude/skills).\n2. Check that python3 works on this computer. The six checkers need it and nothing else. If it is missing, tell me how to install it and stop.\n3. Copy templates/voice.md to ~/.claude/youtube/voice.md. Then ask me for three of my own videos or reels (links, transcripts or files) and fill in my voice file from how I really talk.\n4. Test it: run /yt-script on this idea: (your next video idea). Show me the two hooks you like best and the start of the script.\n5. Tell me which eleven commands I now have, one line each.\n\nDo not connect YouTube, Instagram or any other account, and do not post anything.",
     "requirements": [
       "A paid Claude plan, Pro or higher. Claude Code is included.",
       "Claude Code on a Mac or a PC.",
@@ -1866,7 +1866,7 @@ Do not sign me up for anything.`,
       "text": "/yt-script (your idea for your next video or reel). I film it myself, talking to camera, about 60 seconds.\n\n/yt-package Give me ten titles and the cover text for this video: (one line about it). Keep the cover to three words.\n\n/yt-comment Here are the comments on my last video. Sort them, write the replies in my voice, and tell me which one to pin: (paste the comments)"
     },
     "does": [
-      "Write five hook options for your video and score each one before you film",
+      "Write five hook options for your video, in your own voice",
       "Write the full script, with what should be on screen at each beat",
       "Check a title and its cover text together, so they do not say the same thing twice",
       "Turn a transcript into a list of cuts: long pauses, \"um\" lines and back-to-back restarts, with timecodes",
