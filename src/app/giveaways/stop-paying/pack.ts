@@ -39,19 +39,19 @@ export const STOP_PAYING_PACK: PackPageContent = {
       {
         title: 'The 5 swaps at a glance',
         table: {
-          head: ['You pay for', 'Free swap', 'What it does', 'Runs on'],
+          head: ['You pay for', 'Free swap', 'What it does'],
           rows: [
-            ['CapCut', 'Concat', 'Edits your videos and adds captions, with no watermark', 'Mac, Windows, Linux, Android'],
-            ['ElevenLabs', 'VoiceStudio', 'Clones a voice and reads your script out loud', 'Mac, Windows, Linux'],
-            ['Claude Code', 'OpenCode', 'Builds a website or a small app from what you type', 'Mac, Windows, Linux'],
-            ['Photoshop', 'Compositor', 'Edits photos, and the background disappears in one click', 'Newer Macs (Apple chip, macOS 26)'],
-            ['Suno', 'yovoice', 'You type the lyrics, it sings the song', 'Mac, Windows'],
+            ['CapCut', 'Concat', 'Edits your videos and adds captions, no watermark'],
+            ['ElevenLabs', 'VoiceStudio', 'Clones a voice and reads your script out loud'],
+            ['Claude Code', 'OpenCode', 'Builds a website from what you type'],
+            ['Photoshop', 'Compositor', 'Edits photos, background gone in one click'],
+            ['Suno', 'yovoice', 'You type the lyrics, it sings the song'],
           ],
         },
       },
       {
         title: 'Swap 1: CapCut to Concat',
-        text: 'Concat is a free, open source video editor. It cuts clips, adds captions and exports up to 4K, with no watermark, no account and no subscription. The catch: it is a beta, and the Mac app is not signed by Apple, so the first time you open it you click Open Anyway in System Settings, Privacy and Security. You only do that once.',
+        text: 'Concat is a free, open source video editor for Mac, Windows, Linux and Android. It cuts clips, adds captions and exports up to 4K, with no watermark, no account and no subscription. The catch: it is a beta, and the Mac app is not signed by Apple, so the first time you open it you click Open Anyway in System Settings, Privacy and Security. You only do that once.',
         links: [
           { label: 'My step-by-step setup notes for Concat', href: '/giveaways/free-ai-concat' },
           { label: 'Download Concat (official GitHub releases)', href: 'https://github.com/jub0t/Concat/releases/latest' },
@@ -65,7 +65,7 @@ export const STOP_PAYING_PACK: PackPageContent = {
           'Open the Model Manager inside the app and download the default VoiceStudio voice model. You only do this once, then it works on your computer.',
           'To clone a voice, add a short, clear recording of that voice, then type what you want it to say.',
         ],
-        text: 'Free and open source (AGPL-3.0), no account. Once the model is downloaded, it runs on your own computer. Usage stats stay off unless you switch them on. The catch: it is a beta, the app is about 260 MB plus the model, and there are paid Pro and Cloud plans you do not need. Only clone your own voice, or a voice you have permission to use.',
+        text: 'Free and open source (AGPL-3.0), for Mac, Windows and Linux, no account. Once the model is downloaded, it runs on your own computer. Usage stats stay off unless you switch them on. The catch: it is a beta, the app is about 260 MB plus the model, and there are paid Pro and Cloud plans you do not need. Only clone your own voice, or a voice you have permission to use.',
         links: [
           { label: 'Download VoiceStudio (official GitHub releases)', href: 'https://github.com/debpalash/VoiceStudio/releases/latest' },
           { label: 'The VoiceStudio website', href: 'https://voicestudio.sh' },
@@ -84,7 +84,7 @@ export const STOP_PAYING_PACK: PackPageContent = {
           label: 'Try this first (change the business to yours)',
           text: 'Make a one-page website for my yoga studio called Sunny Yoga. Add a class schedule for the week, a short welcome section and a contact form. Save it as index.html.',
         },
-        text: 'Free and open source (MIT). We gave it one sentence like the one above and it built a full studio website in about a minute, with a free model and no account. The catch: the free models are free for a limited time and can change. Some free models may use what you type to improve themselves, but GLM-5.3-Flash Free and DeepSeek V4.1 Flash Free do not keep your data, so use one of those for anything about clients. The free models are good, but they are not Claude. Check every fact on the page it makes: ours made up a star rating.',
+        text: 'Free and open source (MIT), for Mac, Windows and Linux. We gave it one sentence like the one above and it built a full studio website in about a minute, with a free model and no account. The catch: the free models are free for a limited time and can change. Some free models may use what you type to improve themselves, but GLM-5.3-Flash Free and DeepSeek V4.1 Flash Free do not keep your data, so use one of those for anything about clients. The free models are good, but they are not Claude. Check every fact on the page it makes: ours made up a star rating.',
         links: [
           { label: 'Install OpenCode (official instructions)', href: 'https://github.com/anomalyco/opencode#installation' },
           { label: 'The OpenCode website', href: 'https://opencode.ai' },
