@@ -117,6 +117,7 @@ export type EventSection =
         label: string
         caption?: string
       }
+      hideImageCaptions?: boolean
       images: Array<{ src: string; alt: string }>
     }
   | {
@@ -686,6 +687,7 @@ export const events: EventDefinition[] = [
       {
         type: 'gallery',
         id: 'bloom',
+        hideImageCaptions: true,
         eyebrow: 'This Is The Energy',
         video: {
           src: 'https://pub-c8d5d807eda94fd7a89d74f95de97030.r2.dev/videos/bali-bloom-recap.mp4',

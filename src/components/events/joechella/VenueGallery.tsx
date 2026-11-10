@@ -71,16 +71,20 @@ export default function VenueGallery({ section }: { section: GallerySection }) {
                 sizes={index === 0 ? '(min-width: 768px) 50vw, 100vw' : '(min-width: 768px) 25vw, 50vw'}
                 className="object-cover"
               />
-              <div
-                aria-hidden="true"
-                className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-[linear-gradient(180deg,transparent,rgba(10,7,20,0.75))]"
-              />
-              <figcaption
-                aria-hidden="true"
-                className="absolute bottom-3 left-4 right-4 text-xs font-semibold leading-5 text-[#FCF4EB]/90 md:bottom-4 md:text-sm"
-              >
-                {image.alt}
-              </figcaption>
+              {!section.hideImageCaptions ? (
+                <>
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-[linear-gradient(180deg,transparent,rgba(10,7,20,0.75))]"
+                  />
+                  <figcaption
+                    aria-hidden="true"
+                    className="absolute bottom-3 left-4 right-4 text-xs font-semibold leading-5 text-[#FCF4EB]/90 md:bottom-4 md:text-sm"
+                  >
+                    {image.alt}
+                  </figcaption>
+                </>
+              ) : null}
             </figure>
           ))}
         </div>
