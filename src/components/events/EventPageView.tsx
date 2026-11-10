@@ -588,7 +588,7 @@ export default function EventPageView({
       <main className="pb-24">
         <FestivalMotion />
         <FestivalHero event={event} eventEnded={eventEnded} />
-        {event.sections.map((section) =>
+        {event.sections.filter((section) => section.type !== 'hosts').map((section) =>
           section.type === 'timeline' || section.type === 'gallery' ? (
             renderSection(section, event, promo, eventEnded)
           ) : (
@@ -616,6 +616,11 @@ export default function EventPageView({
             initialPromoMessage={promo ? promo.description || 'Promo code applied.' : null}
           />
         )}
+        {event.sections.filter((section) => section.type === 'hosts').map((section) => (
+          <div key={section.id} data-jc-reveal="">
+            {renderSection(section, event, promo, eventEnded)}
+          </div>
+        ))}
       </main>
     )
   }
