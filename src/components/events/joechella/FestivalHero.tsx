@@ -98,13 +98,6 @@ export default function FestivalHero({ event, eventEnded }: { event: EventDefini
             ) : null}
           </h1>
 
-          <p
-            className="jc-rise mt-4 max-w-2xl text-[1.05rem] leading-7 md:mt-5 md:leading-8 text-[#FCF4EB]/86 md:text-xl md:leading-9"
-            style={{ ['--jc-i' as string]: 2 }}
-          >
-            {event.summary}
-          </p>
-
           <div className="jc-rise mt-6 grid max-w-3xl gap-3 sm:grid-cols-2 md:mt-7" style={{ ['--jc-i' as string]: 3 }}>
             <div className="rounded-[1.3rem] border border-white/15 bg-[rgba(16,12,28,0.55)] px-5 py-4 backdrop-blur-md md:p-5">
               <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#BDB3E8]">When</p>
@@ -142,20 +135,7 @@ export default function FestivalHero({ event, eventEnded }: { event: EventDefini
                   <path d="M10 14.5 4.5 9l1.4-1.4L10 11.7l4.1-4.1L15.5 9z" />
                 </svg>
               </a>
-              {event.slug === 'joechella-big-one-december-11-2026' ? (
-                <a
-                  href="https://50th.joe-che.com/"
-                  className="inline-flex min-h-[52px] items-center justify-center rounded-xl border border-[#F5C3C6]/40 bg-black/30 px-6 py-4 text-base font-semibold text-[#F5C3C6] backdrop-blur-md transition hover:border-[#F5C3C6]/70 hover:bg-black/45 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#BDB3E8]"
-                >
-                  Join us for the whole week!
-                </a>
-              ) : null}
             </div>
-            {!eventEnded && !event.ticketPricePending ? (
-              <p className="pl-1 text-xs leading-5 text-[#FCF4EB]/60">
-                Have a promo code? Enter it in the registration section below.
-              </p>
-            ) : null}
           </div>
         </div>
       </section>
