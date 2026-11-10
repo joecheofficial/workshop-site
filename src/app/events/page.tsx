@@ -41,7 +41,7 @@ export default function EventsIndexPage() {
       <section className="mx-auto max-w-6xl px-6">
         <div className="flex flex-col gap-6">
           {events.map((event) => {
-            const priceLabel = event.pricing.fullPrice === 0 ? 'Free' : formatEventPrice(event)
+            const priceLabel = event.ticketPricePending ? formatEventPrice(event) : event.pricing.fullPrice === 0 ? 'Free' : formatEventPrice(event)
             const modalityLabel = event.badge ?? (event.zoomLink ? 'Online' : null)
             return (
               <Link
