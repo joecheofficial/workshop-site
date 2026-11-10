@@ -404,7 +404,7 @@ test('Joechella weekend program has separate public days and no producer-only Sa
   const saturday = event.sections.find(section => section.type === 'timeline' && section.id === 'saturday-program')
   assert.ok(friday?.type === 'timeline')
   assert.ok(saturday?.type === 'timeline')
-  assert.equal(friday.groups[0].items[0].time, '8:00 AM to 12:30 PM')
+  assert.equal(friday.groups[0].items[0].time, '8:00 AM to 11:30 AM')
   assert.equal(saturday.groups[0].note, 'For guests staying on site only.')
   const items = saturday.groups.flatMap(group => group.items)
   assert.ok(items.some(item => item.title === 'Surprise Performance' && item.time === '7:30 PM to 8:00 PM'))
