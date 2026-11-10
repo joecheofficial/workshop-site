@@ -151,7 +151,7 @@ export default function FestivalHero({ event, eventEnded }: { event: EventDefini
                 </a>
               ) : null}
             </div>
-            {!eventEnded ? (
+            {!eventEnded && !event.ticketPricePending ? (
               <p className="pl-1 text-xs leading-5 text-[#FCF4EB]/60">
                 Have a promo code? Enter it in the registration section below.
               </p>

@@ -236,6 +236,7 @@ export type EventDefinition = {
   capacityReservation?: {
     holdMinutes: number
   }
+  ticketPricePending?: boolean
   manuallyClosed?: boolean
   // Post-checkout copy for the success modal. Without this an event falls back
   // to the generic paid-event line about setting up two free accounts, which is
@@ -285,6 +286,7 @@ export function resolvePromoCode(event: EventDefinition, promoCode?: string | nu
 }
 
 export function formatEventPrice(event: EventDefinition, promo?: EventPromoCode) {
+  if (event.ticketPricePending) return 'Price to be announced'
   const value = getEventDiscountedPrice(event, promo)
   const rounded = Number.isInteger(value) ? String(value) : value.toFixed(2)
   return `${event.pricing.currencySymbol}${rounded}`
@@ -571,17 +573,17 @@ export const events: EventDefinition[] = [
     status: 'live',
     title: "Joechella: Joe Che's 50th Birthday Party",
     shortTitle: 'Joechella: The Big One',
-    eyebrow: 'Friday, December 11',
+    eyebrow: 'Friday + Saturday, December 11 + 12',
     badge: 'The Big One',
-    ctaLabel: 'Get Your Pass',
+    ctaLabel: 'Get a Weekend Pass',
     summary:
-      'The big day of Joechella, my 50th birthday. A mini Bali Bloom festival at Bali Beach Glamping, from lightning talks to bonfires and music late into the night.',
+      'Two days of Joechella, my 50th birthday celebration at Bali Beach Glamping. One weekend pass covers Friday and Saturday: come for either day or both.',
     description:
-      'Joechella is five days that feel like 50. Friday is the big one: the day the whole Bali community comes to celebrate with us. Talks, workshops, a welcome ceremony, a pool party, sunset, bonfires and live music until late.',
-    dateLabel: 'Friday, December 11, 2026',
-    timeLabel: '12:30 PM until late',
+      'Join us for a weekend of talks, workshops, connection, a pool party, live music and Emergent Theatre. Your ticket helps cover the celebration costs, with an optional PKP donation on top.',
+    dateLabel: 'Friday + Saturday, December 11 + 12, 2026',
+    timeLabel: 'Friday from 12:30 PM; Saturday from 2:00 PM until late',
     locationLabel: 'Bali Beach Glamping, Tabanan, Bali',
-    durationLabel: 'Your Day Pass',
+    durationLabel: 'One weekend pass: come for either day or both',
     heroImage: '/events/joechella-big-one/bbg-drone-shots.jpeg',
     heroAlt: 'Bali Beach Glamping from above, the Joechella venue',
     heroVideoSrc: '/events/joechella-big-one/joechella-party-20261029.mp4',
@@ -608,17 +610,18 @@ export const events: EventDefinition[] = [
     ],
     outcomes: [
       'Celebrate Joe turning 50 with the people he loves',
-      'A full day of talks, workshops and connection',
+      'A weekend of talks, workshops, connection and Emergent Theatre',
       'Pool party, sunset, bonfires and live music',
-      'Every rupiah above the minimum goes to PKP Community Centre',
+      'Add an optional donation to support PKP Community Centre',
     ],
     calendarEvent: {
       startIso: '2026-12-11T12:30:00+08:00',
-      endIso: '2026-12-12T01:00:00+08:00',
+      endIso: '2026-12-13T04:00:00+08:00',
     },
     capacity: undefined,
     capacityReservation: undefined,
-    manuallyClosed: false,
+    ticketPricePending: true,
+    manuallyClosed: true,
     privateLocationReminder: undefined,
     emailConfig: {
       ...connectionDinnerCangguTemplate.emailConfig,
@@ -626,37 +629,26 @@ export const events: EventDefinition[] = [
     },
     pricing: {
       currencySymbol: '$',
-      fullPrice: 12,
-      minDonation: 12,
-      donationMode: true,
+      fullPrice: 0,
+      donationMode: false,
       checkoutHref: '',
-      checkoutNote:
-        'IDR 200K (about $12) is the minimum and covers the event. Everything above that goes directly to PKP Community Centre.',
-      donationLabelNote: 'minimum IDR 200K, about $12',
-      donationPresets: [
-        { amount: 33, label: 'Add IDR 600K (about $33) for PKP' },
-        {
-          amount: 83,
-          label: 'Add IDR 1.5M (about $83)',
-          description: 'Takes one woman out of an abusive relationship for one month.',
-        },
-      ],
+      checkoutNote: 'Ticket price to be announced. One weekend pass covers Friday and Saturday: come for either day or both. Optional PKP donations are on top of your ticket price.',
     },
     successDetail:
-      "You're in for the big day of Joechella on Friday, December 11. We'll send details closer to the date.",
+      "You're in for Joechella on Friday and Saturday, December 11 and 12. Your weekend pass covers either day or both.",
     postPurchase: {
-      setupPageTitle: "You're in for Joechella's big day.",
-      setupPageIntro: 'Friday, December 11, 2026 at Bali Beach Glamping, Tabanan.',
+      setupPageTitle: "You're in for Joechella's weekend.",
+      setupPageIntro: 'Friday and Saturday, December 11 and 12, 2026 at Bali Beach Glamping, Tabanan.',
       setupPageBody: [
-        'The program starts at 12:30 PM and runs until late. We will send you the full schedule and directions closer to the date.',
-        'Thank you for supporting PKP Community Centre.',
+        'Join from 12:30 PM on Friday or 2:00 PM on Saturday. Your weekend pass covers either day or both. We will send directions closer to the date.',
+        'Your ticket supports the celebration, with optional PKP donations on top.',
       ],
       setupItems: [],
     },
     metadata: {
-      title: "Joechella: Joe Che's 50th Birthday Party, December 11, 2026",
+      title: "Joechella: Joe Che's 50th Birthday Weekend, December 11 + 12, 2026",
       description:
-        'The big day of Joechella at Bali Beach Glamping, Tabanan. Talks, workshops, pool party, bonfires and music until late. Donations go to PKP Community Centre.',
+        'Join Joechella at Bali Beach Glamping on December 11 and 12. One weekend pass covers either day or both, with optional PKP donations on top.',
     },
     sections: [
       {
@@ -666,9 +658,9 @@ export const events: EventDefinition[] = [
         html: `
           <div class="not-prose">
             <h2 class="text-[2.8rem] font-extrabold leading-[1.0] tracking-tight text-[#FCF4EB] md:text-[3.5rem] mb-5">Joechella: the big one.</h2>
-            <p class="text-[1.25rem] font-semibold text-[#FCF4EB]/85 mb-7 leading-relaxed">Five days that feel like 50, and Friday is when everyone comes.</p>
-            <p class="text-base leading-8 text-[#FCF4EB]/68 mb-4">I am turning 50 and I am celebrating with a micro-festival at Bali Beach Glamping, the same land where we held Bali Bloom. Friday, December 11 is the big day: the whole Bali community joins the people who are staying with us all week.</p>
-            <p class="text-base leading-8 text-[#FCF4EB]/68">Expect talks, workshops, a welcome ceremony, a pool party, sunset together, bonfires, and live music until late. Come for the afternoon, stay for the night.</p>
+            <p class="text-[1.25rem] font-semibold text-[#FCF4EB]/85 mb-7 leading-relaxed">Five days that feel like 50. Join us for Friday and Saturday.</p>
+            <p class="text-base leading-8 text-[#FCF4EB]/68 mb-4">I am turning 50 and I am celebrating with a micro-festival at Bali Beach Glamping, the same land where we held Bali Bloom. Friday, December 11 and Saturday, December 12 are open to the whole Bali community, joining the people staying with us all week.</p>
+            <p class="text-base leading-8 text-[#FCF4EB]/68">Expect talks, workshops, a welcome ceremony, a pool party, sunset together, bonfires, and live music until late. One weekend pass covers either day or both. Ticket price to be announced.</p>
           </div>
         `,
       },
@@ -689,118 +681,161 @@ export const events: EventDefinition[] = [
         ],
       },
       {
-        type: 'timeline',
-        id: 'schedule',
-        eyebrow: 'Friday, December 11',
-        title: 'The Program',
-        intro: 'Draft program. Some sessions are still being confirmed and times may move.',
-        groups: [
+        "type": "html",
+        "id": "weekend-program",
+        "html": "<nav aria-label=\"Weekend program\" class=\"mx-auto flex max-w-6xl flex-wrap gap-3 px-6 py-6\"><a href=\"#schedule\" class=\"rounded-xl border border-white/20 px-5 py-3 font-semibold text-[#FCF4EB] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#BDB3E8]\">Friday Program</a><a href=\"#saturday-program\" class=\"rounded-xl border border-white/20 px-5 py-3 font-semibold text-[#FCF4EB] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#BDB3E8]\">Saturday Program</a></nav>"
+      },
+      {
+        "type": "timeline",
+        "id": "schedule",
+        "eyebrow": "Friday, December 11",
+        "title": "Friday Program",
+        "intro": "All times are Bali time. Weekend-pass guests join from 12:30 PM for talks and workshops.",
+        "groups": [
           {
-            label: 'Morning',
-            note: 'For guests staying on site only.',
-            tone: 'morning',
-            items: [
+            "label": "Morning",
+            "tone": "morning",
+            "items": [
               {
-                time: '8:00 AM to 12:30 PM',
-                title: 'Long, slow breakfast / free morning',
-                body: 'For guests staying on site only. Enjoy a long, slow breakfast, rest by the pool, soak up the sunshine and get ready for celebrations.',
-              },
+                "time": "8:00 AM to 12:30 PM",
+                "title": "Long, slow breakfast / free morning",
+                "body": "For guests staying on site only. Enjoy a long, slow breakfast, rest by the pool, soak up the sunshine and get ready for celebrations."
+              }
             ],
+            "note": "For guests staying on site only."
           },
           {
-            label: 'Afternoon',
-            note: 'Day-pass guests join from 12:30 PM for talks and workshops.',
-            tone: 'afternoon',
-            items: [
+            "label": "Afternoon",
+            "tone": "afternoon",
+            "items": [
               {
-                time: '12:30 PM to 3:00 PM',
-                title: 'AI lightning talks',
-                body: 'In the Yoga Shala with five brilliant minds in the field. More programming to be announced.',
+                "time": "12:30 PM to 3:00 PM",
+                "title": "AI Lightning Talks",
+                "body": "Ideas and insights from brilliant minds in AI. Yoga Shala."
               },
               {
-                time: '12:30 PM to 3:00 PM',
-                title: 'Somatic therapy for female leaders with Ali',
-                body: 'Tea Lounge. More workshops to be announced.',
+                "time": "12:30 PM to 3:00 PM",
+                "title": "Somatic Therapy for Female Leaders",
+                "body": "Tea Lounge."
               },
               {
-                time: '3:00 PM to 4:00 PM',
-                title: 'Opening connection activation and welcome ceremony with Edric',
-                body: 'Yoga Shala.',
-              },
+                "time": "3:00 PM to 4:00 PM",
+                "title": "Opening Connection Activation and Welcome Ceremony",
+                "body": "Yoga Shala."
+              }
             ],
+            "note": "Weekend-pass guests join from 12:30 PM for talks and workshops."
           },
           {
-            label: 'Pool party and sunset',
-            note: 'The pool party starts at 4:00 PM.',
-            tone: 'sunset',
-            items: [
+            "label": "Pool party and sunset",
+            "tone": "sunset",
+            "items": [
               {
-                time: '4:00 PM to 6:30 PM',
-                title: 'The pool party begins',
-                body: 'DJs, floaties, bubbles and dancing. Join the party from 4:00 PM, with workshops alongside it.',
+                "time": "4:00 PM to 6:30 PM",
+                "title": "Pool Party",
+                "body": "DJs, dancing, acro yoga, dance classes, couples intimacy through dance and movement, and flow arts."
               },
               {
-                time: '4:00 PM to 6:30 PM',
-                title: 'Acro yoga and flow arts with Brent and Fabiola',
-                body: 'Alongside the pool party. More workshops to be announced.',
-              },
-              {
-                time: '5:00 PM to 6:00 PM',
-                title: 'Kizomba with Anna',
-                body: 'Dance workshop.',
-              },
-              {
-                time: '5:00 PM to 6:00 PM',
-                title: 'Couples workshop by Tomcat and Samita',
-                body: 'Intimacy building through dance and movement.',
-              },
-              {
-                time: '6:30 PM to 7:30 PM',
-                title: 'Sunset dinner together',
-                body: 'Come together for sunset and dinner.',
-              },
+                "time": "6:30 PM to 7:30 PM",
+                "title": "Sunset Activation and Dinner"
+              }
             ],
+            "note": "The pool party starts at 4:00 PM."
           },
           {
-            label: 'Night',
-            note: 'A surprise performance, Joe’s reflections and live music into the night.',
-            tone: 'night',
-            items: [
+            "label": "Night",
+            "tone": "night",
+            "items": [
               {
-                time: '7:30 PM to 8:00 PM',
-                title: 'Surprise performance',
-                body: 'A surprise to take us into the evening.',
+                "time": "7:30 PM to 8:00 PM",
+                "title": "Surprise Performance"
               },
               {
-                time: '8:00 PM to 8:30 PM',
-                title: 'Joe speaks: Most Important Lessons I’ve Learned in 50 Years',
-                body: 'Joe shares the most important lessons from his first 50 years.',
-                highlight: 'talk',
+                "time": "8:00 PM to 8:30 PM",
+                "title": "Joe",
+                "body": "Most Important Lessons I’ve Learned in 50 Years.",
+                "highlight": "talk"
               },
               {
-                time: '8:30 PM to 9:30 PM',
-                title: 'Keyboard performance',
-                body: 'Yoga Shala.',
-                highlight: 'music',
+                "time": "8:30 PM to midnight",
+                "title": "DJs and Live Music with Aqib and Jagwolf",
+                "body": "Birthday moment for Joe at 9:30 PM to 9:45 PM.",
+                "highlight": "music"
               },
               {
-                time: '9:30 PM to 9:45 PM',
-                title: 'Birthday moment for Joe',
-                body: 'Come together to celebrate Joe.',
-              },
+                "time": "Midnight until late",
+                "title": "Skin Bliss Temple and Tea Lounge Activations"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "timeline",
+        "id": "saturday-program",
+        "eyebrow": "Saturday, December 12",
+        "title": "Saturday Program",
+        "intro": "All times are Bali time. A full afternoon of ideas, connection and play, followed by Emergent Theatre.",
+        "groups": [
+          {
+            "label": "Morning",
+            "tone": "morning",
+            "items": [
               {
-                time: '9:45 PM to midnight',
-                title: 'Live music: Jagwolf',
-                body: 'Yoga Shala.',
-                highlight: 'music',
-              },
-              {
-                time: 'Midnight until late',
-                title: 'Skin Bliss Temple with Edric',
-              },
+                "time": "9:00 AM to noon",
+                "title": "Recovery Brunch",
+                "body": "A slow morning to rest and recharge."
+              }
             ],
+            "note": "For guests staying on site only."
           },
-        ],
+          {
+            "label": "Afternoon",
+            "tone": "afternoon",
+            "items": [
+              {
+                "time": "Noon to 2:00 PM",
+                "title": "Free Time",
+                "body": "Beach, pool, tea and time to relax."
+              },
+              {
+                "time": "2:00 PM to 6:30 PM",
+                "title": "An Afternoon of Ideas, Connection and Play",
+                "body": "Lightning talks with brilliant minds, Sensual Tantra activations, Dance of Connection, Deep Dating, pop-up styling sessions with Yoshi Zen, and a PKP cultural booth with traditional Balinese offerings."
+              }
+            ]
+          },
+          {
+            "label": "Sunset",
+            "tone": "sunset",
+            "items": [
+              {
+                "time": "6:30 PM to 7:30 PM",
+                "title": "Sunset and Family Dinner"
+              }
+            ]
+          },
+          {
+            "label": "Night",
+            "tone": "night",
+            "items": [
+              {
+                "time": "7:30 PM to 8:00 PM",
+                "title": "Surprise Performance"
+              },
+              {
+                "time": "8:00 PM to 10:00 PM",
+                "title": "Emergent Theatre",
+                "body": "Music, tarot, sensation stations, poetry and pop-up acts."
+              },
+              {
+                "time": "10:00 PM until late",
+                "title": "Tea, Music and Sweet Hangs",
+                "body": "A soft, relaxed social evening."
+              }
+            ]
+          }
+        ]
       },
       {
         type: 'html',
@@ -808,7 +843,7 @@ export const events: EventDefinition[] = [
         html: `
           <div class="not-prose text-center py-2">
             <a href="#register" class="copy-button-glass copy-button-primary inline-flex min-w-[220px] items-center justify-center rounded-xl px-6 py-4 text-base font-semibold no-underline">
-              Get Your Pass
+              Get a Weekend Pass
             </a>
           </div>
         `,
@@ -816,10 +851,10 @@ export const events: EventDefinition[] = [
       {
         type: 'split',
         id: 'pkp',
-        eyebrow: '100% of Donations Go To PKP',
+        eyebrow: 'Optional Donations Go To PKP',
         title: 'Supporting PKP Community Centre',
         body: [
-          'Every dollar donated above the IDR 200K (about $12) minimum goes directly to PKP. Add IDR 600K, or add IDR 1.5M, which takes one woman out of an abusive relationship for one month.',
+          'Your weekend ticket helps cover the celebration costs. An optional donation to PKP Community Centre is separate and on top of your ticket price.',
           'PKP is a community centre in Bali founded by Ibu Sari. It trains women in sewing, cooking and English so they can earn for their families, and it is a safe place for women and children facing domestic violence, divorce or social exclusion.',
         ],
         imageSrc: '/events/connection-dinner-canggu/pkp-catering.jpg',
