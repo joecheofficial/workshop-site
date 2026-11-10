@@ -193,6 +193,7 @@ export type EventDefinition = {
     promoFieldHint?: string
     donationMode?: boolean
     minDonation?: number
+    donationPackages?: Array<{ amount: number; label: string; description: string }>
     donationPresets?: Array<{ amount: number; label: string; description?: string }>
     donationLabelNote?: string
   }
@@ -620,8 +621,8 @@ export const events: EventDefinition[] = [
     },
     capacity: undefined,
     capacityReservation: undefined,
-    ticketPricePending: true,
-    manuallyClosed: true,
+    ticketPricePending: false,
+    manuallyClosed: false,
     privateLocationReminder: undefined,
     emailConfig: {
       ...connectionDinnerCangguTemplate.emailConfig,
@@ -629,10 +630,29 @@ export const events: EventDefinition[] = [
     },
     pricing: {
       currencySymbol: '$',
-      fullPrice: 0,
-      donationMode: false,
+      fullPrice: 17,
+      minDonation: 17,
+      donationMode: true,
       checkoutHref: '',
-      checkoutNote: 'Ticket price to be announced. Come for Friday, or join us for Friday and Saturday. Your donation includes both days. Optional PKP donations are on top of your ticket price.',
+      donationLabelNote: 'USD; two-day ticket starts at US$17, approximately IDR 300K',
+      checkoutNote: 'One contribution covers Friday or Friday and Saturday. The IDR 300K ticket (US$17) helps cover the celebration. Every dollar above US$17 goes directly to PKP. Checkout is charged in USD; rupiah amounts are approximate equivalents.',
+      donationPackages: [
+        {
+          amount: 17,
+          label: '2-day ticket only',
+          description: 'IDR 300K (US$17 total). Entry for Friday or Friday and Saturday. Supports the celebration costs.',
+        },
+        {
+          amount: 50,
+          label: '2-day ticket + IDR 600K donation to PKP',
+          description: 'IDR 900K total (US$50): US$17 ticket + US$33 for PKP. Helps fund PKP Community Centre’s catering van and dedicated kitchen, creating paid work for local women in need, as well as a permanent community centre offering safe harbour for women and children.',
+        },
+        {
+          amount: 100,
+          label: '2-day ticket + IDR 1.5M donation to PKP',
+          description: 'IDR 1.8M total (US$100): US$17 ticket + US$83 for PKP. Takes one woman out of an abusive relationship for one month.',
+        },
+      ],
     },
     successDetail:
       "You're in for Joechella on Friday and Saturday, December 11 and 12. Your weekend pass covers either day or both.",
@@ -641,14 +661,14 @@ export const events: EventDefinition[] = [
       setupPageIntro: 'Friday and Saturday, December 11 and 12, 2026 at Bali Beach Glamping, Tabanan.',
       setupPageBody: [
         'Join from 11:30 AM on Friday or 2:00 PM on Saturday. Your weekend pass covers either day or both. We will send directions closer to the date.',
-        'Your ticket supports the celebration, with optional PKP donations on top.',
+        'Your ticket supports the celebration, with every dollar above the ticket amount going directly to PKP.',
       ],
       setupItems: [],
     },
     metadata: {
       title: "Joechella: Joe Che's 50th Birthday Weekend, December 11 + 12, 2026",
       description:
-        'Join Joechella at Bali Beach Glamping on December 11 and 12. One contribution covers Friday, or Friday and Saturday, with optional PKP donations on top.',
+        'Join Joechella at Bali Beach Glamping on December 11 and 12. One contribution covers Friday, or Friday and Saturday, with every dollar above the ticket amount going directly to PKP.',
     },
     sections: [
       {
@@ -660,7 +680,7 @@ export const events: EventDefinition[] = [
             <h2 class="text-[2.8rem] font-extrabold leading-[1.0] tracking-tight text-[#FCF4EB] md:text-[3.5rem] mb-5">Joechella: the big one.</h2>
             <p class="text-[1.25rem] font-semibold text-[#FCF4EB]/85 mb-7 leading-relaxed">Five days that feel like 50. Join us for Friday and Saturday.</p>
             <p class="text-base leading-8 text-[#FCF4EB]/68 mb-4">I am turning 50 and I am celebrating with a micro-festival at Bali Beach Glamping, the same land where we held Bali Bloom. Friday, December 11 and Saturday, December 12 are open to the whole Bali community, joining the people staying with us all week.</p>
-            <p class="text-base leading-8 text-[#FCF4EB]/68">Expect talks, workshops, a welcome ceremony, a pool party, sunset together, bonfires, and live music until late. One contribution covers Friday, or Friday and Saturday. Ticket price to be announced.</p>
+            <p class="text-base leading-8 text-[#FCF4EB]/68">Expect talks, workshops, a welcome ceremony, a pool party, sunset together, bonfires, and live music until late. One contribution covers Friday, or Friday and Saturday. Two-day ticket: IDR 300K (US$17). Every dollar above the ticket amount goes directly to PKP.</p>
           </div>
         `,
       },
@@ -854,7 +874,7 @@ export const events: EventDefinition[] = [
         eyebrow: 'Optional Donations Go To PKP',
         title: 'Supporting PKP Community Centre',
         body: [
-          'Your weekend ticket helps cover the celebration costs. An optional donation to PKP Community Centre is separate and on top of your ticket price.',
+          'The IDR 300K two-day ticket (US$17) helps cover the celebration costs. Every dollar above US$17 goes directly to PKP. Add IDR 600K (US$33) to help fund PKP’s catering van and dedicated kitchen, creating paid work for local women in need, as well as a permanent community centre offering safe harbour for women and children, or add IDR 1.5M (US$83), which takes one woman out of an abusive relationship for one month.',
           'PKP is a community centre in Bali founded by Ibu Sari. It trains women in sewing, cooking and English so they can earn for their families, and it is a safe place for women and children facing domestic violence, divorce or social exclusion.',
         ],
         imageSrc: '/events/connection-dinner-canggu/pkp-catering.jpg',
