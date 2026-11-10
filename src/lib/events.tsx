@@ -790,7 +790,6 @@ export const events: EventDefinition[] = [
         "id": "saturday-program",
         "eyebrow": "The Program",
         "title": "Saturday, December 12",
-        "intro": "The event starts at 2:00 PM. Recovery brunch and free time before 2:00 PM are for guests staying on site only.",
         "groups": [
           {
             "label": "Morning",
