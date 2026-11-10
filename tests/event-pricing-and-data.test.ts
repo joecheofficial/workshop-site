@@ -317,7 +317,7 @@ test('toggleDonationPreset adds and removes preset amounts and clamps to minDona
   assert.deepEqual(step4, { nextDonation: 12, nextSelected: false })
 })
 
-test('server checkout-session route rejects a pending-price weekend pass before checkout', async () => {
+test('server checkout-session route rejects a weekend contribution below the ticket minimum', async () => {
   const response = await POST(
     new Request('https://workshop.mastermindshq.business/api/events/checkout-session', {
       method: 'POST',
@@ -334,22 +334,23 @@ test('server checkout-session route rejects a pending-price weekend pass before 
     }),
   )
 
-  assert.equal(response.status, 410)
+  assert.equal(response.status, 400)
   const payload = await response.json()
-  assert.match(String(payload.error), /registration is now closed/i)
+  assert.match(String(payload.error), /at least \$17/i)
 })
 
 test('Joechella event has expected configuration and no dinner-specific copy or em dashes', () => {
   const event = getEventBySlug('joechella-big-one-december-11-2026')
   assert.ok(event, 'Joechella event must exist')
   assert.equal(event.status, 'live')
-  assert.equal(event.pricing.donationMode, false)
-  assert.equal(event.ticketPricePending, true)
-  assert.equal(formatEventPrice(event), 'Price to be announced')
-  assert.equal(event.pricing.minDonation, undefined)
+  assert.equal(event.pricing.donationMode, true)
+  assert.equal(event.ticketPricePending, false)
+  assert.equal(formatEventPrice(event), '$17')
+  assert.equal(event.pricing.minDonation, 17)
+  assert.deepEqual(event.pricing.donationPackages?.map(option => option.amount), [17, 50, 100])
   assert.equal(event.capacity, undefined)
   assert.equal(event.capacityReservation, undefined)
-  assert.equal(event.manuallyClosed, true)
+  assert.equal(event.manuallyClosed, false)
   assert.equal(event.privateLocationReminder, undefined)
   assert.equal(event.calendarEvent?.googleCalendarEventId, undefined)
   assert.equal(
@@ -404,7 +405,7 @@ test('Joechella weekend program has separate public days and no producer-only Sa
   const saturday = event.sections.find(section => section.type === 'timeline' && section.id === 'saturday-program')
   assert.ok(friday?.type === 'timeline')
   assert.ok(saturday?.type === 'timeline')
-  assert.equal(friday.groups[0].items[0].time, '8:00 AM to 12:30 PM')
+  assert.equal(friday.groups[0].items[0].time, '8:00 AM to 11:30 AM')
   assert.equal(saturday.groups[0].note, 'For guests staying on site only.')
   const items = saturday.groups.flatMap(group => group.items)
   assert.ok(items.some(item => item.title === 'Surprise Performance' && item.time === '7:30 PM to 8:00 PM'))

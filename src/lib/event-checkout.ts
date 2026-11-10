@@ -69,6 +69,10 @@ export function buildEventCheckoutSessionParams({
     attendee_name: attendeeName,
     attendee_email: attendeeEmail,
     promo_code: promo?.code ?? '',
+    ...(event.pricing.donationPackages ? {
+      ticket_amount_usd: event.pricing.fullPrice.toFixed(2),
+      pkp_donation_usd: Math.max(0, amount - event.pricing.fullPrice).toFixed(2),
+    } : {}),
     ...(seatReservation ? { event_seat_reservation_id: seatReservation.reservationId } : {}),
   }
 

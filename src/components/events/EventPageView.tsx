@@ -555,13 +555,14 @@ export default function EventPageView({
     capacityReservation: Boolean(event.capacityReservation),
     isVirtual: isVirtualEvent,
     intakeFields: event.intakeFields,
-    durationLabel: event.pricing.donationMode ? undefined : event.durationLabel,
+    durationLabel: event.pricing.donationMode && !event.pricing.donationPackages ? undefined : event.durationLabel,
     pricing: {
       currencySymbol: event.pricing.currencySymbol,
       fullPrice: event.pricing.fullPrice,
       checkoutNote: event.pricing.checkoutNote,
       donationMode: event.pricing.donationMode,
       minDonation: event.pricing.minDonation,
+      donationPackages: event.pricing.donationPackages,
       donationPresets: event.pricing.donationPresets,
       donationLabelNote: event.pricing.donationLabelNote,
     },
@@ -602,7 +603,7 @@ export default function EventPageView({
             <div className="rounded-2xl border border-white/15 bg-white/[0.04] p-6 md:p-10">
               <h2 className="text-3xl font-bold text-[#FCF4EB]">Get a Weekend Pass</h2>
               <p className="mt-4 text-xl font-semibold text-[#F5C3C6]">Ticket price to be announced.</p>
-              <p className="mt-3 leading-8 text-[#FCF4EB]/80">One ticket covers Friday and Saturday. Come for either day or both. Your ticket helps cover the celebration costs.</p>
+              <p className="mt-3 leading-8 text-[#FCF4EB]/80">Come for Friday, or join us for Friday and Saturday. Your donation includes both days and helps cover the celebration costs.</p>
               <p className="mt-3 leading-8 text-[#FCF4EB]/80">You can add an optional donation to PKP on top of your ticket price. Ticket sales will open once the price is confirmed.</p>
             </div>
           </section>
