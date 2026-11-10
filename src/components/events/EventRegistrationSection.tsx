@@ -66,6 +66,7 @@ export type EventRegistrationData = {
     checkoutNote: string
     donationMode?: boolean
     minDonation?: number
+    donationPackages?: Array<{ amount: number; label: string; description: string }>
     donationPresets?: Array<{ amount: number; label: string; description?: string }>
     donationLabelNote?: string
   }
@@ -887,9 +888,26 @@ export default function EventRegistrationSection({
 
             {event.pricing.donationMode ? (
               <div className="grid gap-3">
+                {event.pricing.donationPackages?.length ? (
+                  <div role="radiogroup" aria-label="Choose your two-day ticket" className="grid gap-3">
+                    {event.pricing.donationPackages.map((option) => {
+                      const selected = donationAmount === option.amount
+                      return (
+                        <label
+                          key={option.amount}
+                          className={`block min-h-[52px] cursor-pointer rounded-xl border px-4 py-4 text-left transition focus-within:outline focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-[#BDB3E8] ${selected ? 'border-[#BDB3E8] bg-[#8B79D4]/25 ring-1 ring-[#BDB3E8]/50' : 'border-white/15 bg-white/5 hover:border-[#BDB3E8]/60'}`}
+                        >
+                          <input type="radio" name="weekend-ticket" value={option.amount} checked={selected} onChange={() => setDonationAmount(option.amount)} className="sr-only" />
+                          <span className="block text-base font-semibold text-[#FCF4EB]">{option.label}</span>
+                          <span className="mt-2 block text-sm leading-6 text-[#FCF4EB]/75">{option.description}</span>
+                        </label>
+                      )
+                    })}
+                  </div>
+                ) : null}
                 <label className="grid gap-2">
                   <span className="text-sm font-semibold text-[#FCF4EB]">
-                    Donation amount{' '}
+                    {event.pricing.donationPackages ? 'Total contribution' : 'Donation amount'}{' '}
                     <span className="font-normal text-[#FCF4EB]/55">
                       {formatDonationLabelNote(event.pricing)}
                     </span>

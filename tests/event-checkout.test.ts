@@ -134,3 +134,17 @@ test('capacity-managed checkout expires with its seat hold and carries the reser
   assert.equal(params.payment_intent_data?.metadata?.event_seat_reservation_id, 'seat-1')
   assert.equal(params.expires_at, 1791119400)
 })
+
+
+test('Joechella options charge the whole total and record only the amount above the ticket for PKP', () => {
+  const event = getEventBySlug('joechella-big-one-december-11-2026')!
+  for (const [amount, pkp] of [[17, '0.00'], [50, '33.00'], [100, '83.00'], [120, '103.00']] as const) {
+    const result = resolveEventCheckoutAmount({ event, rawDonationAmount: amount })
+    assert.equal(result.amount, amount)
+    const params = buildEventCheckoutSessionParams({ event, attendeeName: 'Test Guest', attendeeEmail: 'guest@example.com', amount: result.amount, promo: null, baseUrl: 'https://workshop.mastermindshq.business', mode: 'hosted' })
+    assert.equal(params.line_items?.[0].price_data?.unit_amount, amount * 100)
+    assert.equal(params.metadata?.ticket_amount_usd, '17.00')
+    assert.equal(params.metadata?.pkp_donation_usd, pkp)
+    assert.equal(params.payment_intent_data?.metadata?.pkp_donation_usd, pkp)
+  }
+})
