@@ -98,13 +98,6 @@ export default function FestivalHero({ event, eventEnded }: { event: EventDefini
             ) : null}
           </h1>
 
-          <p
-            className="jc-rise mt-4 max-w-2xl text-[1.05rem] leading-7 md:mt-5 md:leading-8 text-[#FCF4EB]/86 md:text-xl md:leading-9"
-            style={{ ['--jc-i' as string]: 2 }}
-          >
-            {event.summary}
-          </p>
-
           <div className="jc-rise mt-6 grid max-w-3xl gap-3 sm:grid-cols-2 md:mt-7" style={{ ['--jc-i' as string]: 3 }}>
             <div className="rounded-[1.3rem] border border-white/15 bg-[rgba(16,12,28,0.55)] px-5 py-4 backdrop-blur-md md:p-5">
               <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#BDB3E8]">When</p>
