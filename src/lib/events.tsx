@@ -580,7 +580,7 @@ export const events: EventDefinition[] = [
     summary:
       'Two days of Joechella, my 50th birthday celebration at Bali Beach Glamping. Come for Friday, or join us for Friday and Saturday. Your donation includes both days.',
     description:
-      'Join us for a weekend of talks, workshops, connection, a pool party, live music and Emergent Theatre. Your ticket helps cover the celebration costs, with an optional PKP donation on top.',
+      "Join us for a weekend of Lightning talks, workshops, connection games, pool party, live music and a special Theatre experience. Your ticket helps cover the celebration costs, with an optional donation to support our favorite Balinese initiative - PKP Women's Shelter.",
     dateLabel: 'Friday + Saturday, December 11 + 12, 2026',
     timeLabel: 'Friday from 11:30 AM; Saturday from 2:00 PM until late',
     locationLabel: 'Bali Beach Glamping, Tabanan, Bali',
@@ -680,7 +680,6 @@ export const events: EventDefinition[] = [
             <h2 class="text-[2.8rem] font-extrabold leading-[1.0] tracking-tight text-[#FCF4EB] md:text-[3.5rem] mb-5">Joechella: the big one.</h2>
             <p class="text-[1.25rem] font-semibold text-[#FCF4EB]/85 mb-7 leading-relaxed">Five days that feel like 50. Join us for Friday and Saturday.</p>
             <p class="text-base leading-8 text-[#FCF4EB]/68 mb-4">I am turning 50 and I am celebrating with a micro-festival at Bali Beach Glamping, the same land where we held Bali Bloom. Friday, December 11 and Saturday, December 12 are open to the whole Bali community, joining the people staying with us all week.</p>
-            <p class="text-base leading-8 text-[#FCF4EB]/68">Expect talks, workshops, a welcome ceremony, a pool party, sunset together, bonfires, and live music until late. One contribution covers Friday, or Friday and Saturday. Two-day ticket: IDR 300K (US$17). Every dollar above the ticket amount goes directly to PKP.</p>
           </div>
         `,
       },
@@ -703,13 +702,13 @@ export const events: EventDefinition[] = [
       {
         "type": "html",
         "id": "weekend-program",
-        "html": "<nav aria-label=\"Weekend program\" class=\"mx-auto flex max-w-6xl flex-wrap gap-3 px-6 py-6\"><a href=\"#schedule\" class=\"rounded-xl border border-white/20 px-5 py-3 font-semibold text-[#FCF4EB] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#BDB3E8]\">Friday Program</a><a href=\"#saturday-program\" class=\"rounded-xl border border-white/20 px-5 py-3 font-semibold text-[#FCF4EB] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#BDB3E8]\">Saturday Program</a></nav>"
+        "html": "<section class=\"mx-auto max-w-6xl px-6 pt-10 pb-2\"><h2 class=\"event-gradient-title text-[2.2rem] font-extrabold leading-tight md:text-[3.4rem]\">The Experience</h2><p class=\"mt-4 text-base leading-8 text-[#FCF4EB]/75\">The program for Friday and Saturday. All times are Bali time.</p></section>"
       },
       {
         "type": "timeline",
         "id": "schedule",
-        "eyebrow": "Friday, December 11",
-        "title": "Friday Program",
+        "eyebrow": "The Program",
+        "title": "Friday, December 11",
         "intro": "All times are Bali time. Friday begins at 11:30 AM. Come for Friday, or join us for Friday and Saturday. Your donation includes both days.",
         "groups": [
           {
@@ -794,9 +793,9 @@ export const events: EventDefinition[] = [
       {
         "type": "timeline",
         "id": "saturday-program",
-        "eyebrow": "Saturday, December 12",
-        "title": "Saturday Program",
-        "intro": "All times are Bali time. A full afternoon of ideas, connection and play, followed by Emergent Theatre.",
+        "eyebrow": "The Program",
+        "title": "Saturday, December 12",
+        "intro": "The event starts at 2:00 PM. Recovery brunch and free time before 2:00 PM are for guests staying on site only.",
         "groups": [
           {
             "label": "Morning",
@@ -805,7 +804,12 @@ export const events: EventDefinition[] = [
               {
                 "time": "9:00 AM to noon",
                 "title": "Recovery Brunch",
-                "body": "A slow morning to rest and recharge."
+                "body": "For guests staying on site only. A slow morning to rest and recharge."
+              },
+              {
+                "time": "Noon to 2:00 PM",
+                "title": "Free Time",
+                "body": "For guests staying on site only. Beach, pool, tea and relaxation."
               }
             ],
             "note": "For guests staying on site only."
@@ -815,16 +819,12 @@ export const events: EventDefinition[] = [
             "tone": "afternoon",
             "items": [
               {
-                "time": "Noon to 2:00 PM",
-                "title": "Free Time",
-                "body": "Beach, pool, tea and relaxation."
-              },
-              {
                 "time": "2:00 PM to 6:00 PM",
                 "title": "An Afternoon of Ideas, Connection and Play",
                 "body": "Lightning talks, tea room, Dance of Connection, Tantra activations, pop-up styling and photo booth, PKP cultural activations, and Kizomba."
               }
-            ]
+            ],
+            "note": "The event begins at 2:00 PM for weekend-pass guests."
           },
           {
             "label": "Sunset",
@@ -851,7 +851,7 @@ export const events: EventDefinition[] = [
               },
               {
                 "time": "10:00 PM until late",
-                "title": "Archetypes of Desire"
+                "title": "Archetypes of Desire and Tea Lounge Activations"
               }
             ]
           }
