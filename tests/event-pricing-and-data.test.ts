@@ -274,10 +274,9 @@ test('formatDonationLabelNote renders Connection Dinner label with a comma and n
 })
 
 test('formatDonationLabelNote uses custom donationLabelNote when set', () => {
-  const joechella = getEventBySlug('joechella-big-one-december-11-2026')
-  assert.ok(joechella)
-  assert.equal(formatDonationLabelNote(joechella.pricing), '(minimum IDR 200K, about $12)')
-  assert.ok(!formatDonationLabelNote(joechella.pricing).includes('—'))
+  const pricing = { currencySymbol: '$', fullPrice: 12, donationLabelNote: 'minimum IDR 200K, about $12' }
+  assert.equal(formatDonationLabelNote(pricing), '(minimum IDR 200K, about $12)')
+  assert.ok(!formatDonationLabelNote(pricing).includes('—'))
 })
 
 test('toggleDonationPreset adds and removes preset amounts and clamps to minDonation', () => {
@@ -318,7 +317,7 @@ test('toggleDonationPreset adds and removes preset amounts and clamps to minDona
   assert.deepEqual(step4, { nextDonation: 12, nextSelected: false })
 })
 
-test('server checkout-session route rejects a donation below minDonation with 400', async () => {
+test('server checkout-session route rejects a pending-price weekend pass before checkout', async () => {
   const response = await POST(
     new Request('https://workshop.mastermindshq.business/api/events/checkout-session', {
       method: 'POST',
@@ -335,22 +334,22 @@ test('server checkout-session route rejects a donation below minDonation with 40
     }),
   )
 
-  assert.equal(response.status, 400)
+  assert.equal(response.status, 410)
   const payload = await response.json()
-  assert.match(String(payload.error), /at least \$12/i)
+  assert.match(String(payload.error), /registration is now closed/i)
 })
 
 test('Joechella event has expected configuration and no dinner-specific copy or em dashes', () => {
   const event = getEventBySlug('joechella-big-one-december-11-2026')
   assert.ok(event, 'Joechella event must exist')
   assert.equal(event.status, 'live')
-  assert.equal(event.pricing.donationMode, true)
-  assert.equal(event.pricing.fullPrice, 12)
-  assert.equal(event.pricing.minDonation, 12)
-  assert.equal(event.pricing.donationPresets?.length, 2)
+  assert.equal(event.pricing.donationMode, false)
+  assert.equal(event.ticketPricePending, true)
+  assert.equal(formatEventPrice(event), 'Price to be announced')
+  assert.equal(event.pricing.minDonation, undefined)
   assert.equal(event.capacity, undefined)
   assert.equal(event.capacityReservation, undefined)
-  assert.equal(event.manuallyClosed, false)
+  assert.equal(event.manuallyClosed, true)
   assert.equal(event.privateLocationReminder, undefined)
   assert.equal(event.calendarEvent?.googleCalendarEventId, undefined)
   assert.equal(
@@ -396,4 +395,19 @@ test('mobile hero video fields point at small local files and stay opt-in', asyn
     assert.equal(other.heroVideoMobileSrc, undefined, `${other.slug} must not gain a phone hero video`)
     assert.equal(other.heroVideoMobilePoster, undefined, `${other.slug} must not gain a phone hero poster`)
   }
+})
+
+
+test('Joechella weekend program has separate public days and no producer-only Saturday content', () => {
+  const event = getEventBySlug('joechella-big-one-december-11-2026')!
+  const friday = event.sections.find(section => section.type === 'timeline' && section.id === 'schedule')
+  const saturday = event.sections.find(section => section.type === 'timeline' && section.id === 'saturday-program')
+  assert.ok(friday?.type === 'timeline')
+  assert.ok(saturday?.type === 'timeline')
+  assert.equal(friday.groups[0].items[0].time, '8:00 AM to 12:30 PM')
+  assert.equal(saturday.groups[0].note, 'For guests staying on site only.')
+  const items = saturday.groups.flatMap(group => group.items)
+  assert.ok(items.some(item => item.title === 'Surprise Performance' && item.time === '7:30 PM to 8:00 PM'))
+  assert.ok(items.some(item => item.title === 'Emergent Theatre' && item.time === '8:00 PM to 10:00 PM'))
+  assert.doesNotMatch(JSON.stringify(saturday), /Thomas Oliver|Call to Presence|Transition Moment|contribution|soundcheck|crew|Set up/i)
 })

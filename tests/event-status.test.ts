@@ -39,3 +39,8 @@ test('an event with no registrationClosesIso never reports the window as passed'
     assert.equal(isRegistrationWindowPassed(event, new Date('2099-01-01T00:00:00Z')), false)
   }
 })
+
+
+test('a price-pending event cannot register even if manual closure is cleared', () => {
+  assert.equal(isEventRegistrationClosed({ ticketPricePending: true, manuallyClosed: false }), true)
+})

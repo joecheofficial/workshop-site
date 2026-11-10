@@ -8,10 +8,10 @@ export function isEventEnded(event: Pick<EventDefinition, 'calendarEvent'>, now:
 }
 
 export function isEventRegistrationClosed(
-  event: Pick<EventDefinition, 'manuallyClosed' | 'registrationClosesIso'>,
+  event: Pick<EventDefinition, 'manuallyClosed' | 'registrationClosesIso' | 'ticketPricePending'>,
   now: Date = new Date(),
 ) {
-  return event.manuallyClosed || isRegistrationWindowPassed(event, now)
+  return event.ticketPricePending || event.manuallyClosed || isRegistrationWindowPassed(event, now)
 }
 
 // Split out from isEventRegistrationClosed so the page can tell "closed because

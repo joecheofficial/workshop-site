@@ -597,13 +597,24 @@ export default function EventPageView({
           ),
         )}
         {event.video ? <EventVideoSection video={event.video} /> : null}
-        <EventRegistrationSection
-          event={registrationEvent}
-          publishableKey={publishableKey}
-          initialPromoCode={initialPromoCode}
-          initialPromoAmount={initialPromoAmount}
-          initialPromoMessage={promo ? promo.description || 'Promo code applied.' : null}
-        />
+        {event.ticketPricePending ? (
+          <section id="register" className="mx-auto max-w-4xl scroll-mt-24 px-6 py-12">
+            <div className="rounded-2xl border border-white/15 bg-white/[0.04] p-6 md:p-10">
+              <h2 className="text-3xl font-bold text-[#FCF4EB]">Get a Weekend Pass</h2>
+              <p className="mt-4 text-xl font-semibold text-[#F5C3C6]">Ticket price to be announced.</p>
+              <p className="mt-3 leading-8 text-[#FCF4EB]/80">One ticket covers Friday and Saturday. Come for either day or both. Your ticket helps cover the celebration costs.</p>
+              <p className="mt-3 leading-8 text-[#FCF4EB]/80">You can add an optional donation to PKP on top of your ticket price. Ticket sales will open once the price is confirmed.</p>
+            </div>
+          </section>
+        ) : (
+          <EventRegistrationSection
+            event={registrationEvent}
+            publishableKey={publishableKey}
+            initialPromoCode={initialPromoCode}
+            initialPromoAmount={initialPromoAmount}
+            initialPromoMessage={promo ? promo.description || 'Promo code applied.' : null}
+          />
+        )}
       </main>
     )
   }
