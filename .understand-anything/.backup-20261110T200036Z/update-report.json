@@ -1,0 +1,47 @@
+{
+  "mode": "incremental",
+  "completedAt": "2026-11-08T20:09:23.635858+00:00",
+  "gitCommitHash": "9fe83fd64038f365b9f9c47266a4b7087ac83648",
+  "changedFilesAnalyzed": 15,
+  "dependencyFileNodesRecovered": 3,
+  "representedFiles": 79,
+  "inventoryFiles": 565,
+  "nodes": 190,
+  "edges": 330,
+  "layers": 9,
+  "tourSteps": 13,
+  "validation": "passed",
+  "warnings": [
+    "Node 'file:public/downloads/joes-linkedin-kit-v1.0.zip' has no edges (orphan)",
+    "Node 'file:public/downloads/joes-linkedin-kit-v1.0.zip.sha256' has no edges (orphan)",
+    "Node 'file:public/downloads/joes-salesman-v1.0.zip' has no edges (orphan)",
+    "Node 'file:public/downloads/joes-salesman-v1.0.zip.sha256' has no edges (orphan)",
+    "Node 'function:src/app/api/events/abandoned-checkout-followups/route.ts:acquireEventLock' has no edges (orphan)",
+    "Node 'function:src/app/api/events/cancel/route.ts:escapeHtml' has no edges (orphan)",
+    "Node 'function:src/app/api/events/session-reminders/route.ts:acquireEventWindowLock' has no edges (orphan)",
+    "Node 'file:src/app/api/unsubscribe/route.ts' has no edges (orphan)",
+    "Node 'file:src/app/bonus/auto-lead-magnet/page.tsx' has no edges (orphan)",
+    "Node 'file:src/lib/supabase.ts' has no edges (orphan)"
+  ],
+  "newOrphans": [],
+  "assembleReview": {
+    "fixedSectionOk": true,
+    "nodesRecovered": 3,
+    "edgesRestored": 18,
+    "crossBatchEdgesAdded": 8,
+    "typesRemapped": 0,
+    "complexityRemapped": 0,
+    "notes": [
+      "Restored 18 original batch edges and 0 surviving previous inbound edges to refreshed nodes.",
+      "Merge report documents no ID or complexity normalization problems; three tested_by edges became valid after their production dependency-file endpoints were recovered and were restored with production-to-test direction.",
+      "Import-map gaps outside inherited partial graph scope remain: 488 absent source files and 16 absent target paths. No full graph expansion performed.",
+      "Three recovered dependency file nodes were read for accurate summaries; these are additional to the 15 changed files."
+    ]
+  },
+  "notes": [
+    "Inherited partial graph scope preserved.",
+    "Initial analyzer dispatch thread-context failure recovered by fresh-context dispatch.",
+    "Batching warned of oversized communities and neighborMap soft cap; all 15 changed files analyzed.",
+    "Dashboard not launched for graph-only non-interactive refresh."
+  ]
+}

@@ -1,128 +1,8 @@
 {
   "version": "1.0.0",
-  "gitCommitHash": "9fe83fd64038f365b9f9c47266a4b7087ac83648",
-  "generatedAt": "2026-11-08T20:09:08.254Z",
+  "gitCommitHash": "a1865212b9904b638503325449a6f0a258b50773",
+  "generatedAt": "2026-11-10T20:05:56.843Z",
   "files": {
-    ".claude/settings.json": {
-      "filePath": ".claude/settings.json",
-      "contentHash": "9080f054caa171d47803957c0ac398cfc643584893497356635d44278c40260b",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 17,
-      "hasStructuralAnalysis": true
-    },
-    ".claude/skills/gitnexus/gitnexus-cli/SKILL.md": {
-      "filePath": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
-      "contentHash": "5d75f4b23ae076e949a34b34558e1f106d306053eb485822469cdf01a2fd9c82",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 90,
-      "hasStructuralAnalysis": true
-    },
-    ".claude/skills/gitnexus/gitnexus-debugging/SKILL.md": {
-      "filePath": ".claude/skills/gitnexus/gitnexus-debugging/SKILL.md",
-      "contentHash": "e30f9a663bde28a1b6ed178acd7253f69427bb342a6463917bc1ac1c53370b8a",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 96,
-      "hasStructuralAnalysis": true
-    },
-    ".claude/skills/gitnexus/gitnexus-exploring/SKILL.md": {
-      "filePath": ".claude/skills/gitnexus/gitnexus-exploring/SKILL.md",
-      "contentHash": "25c9f5291d94a20a1499b213fe30ee52ac1ab7de2ebb9477933e60d1e59a989a",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 85,
-      "hasStructuralAnalysis": true
-    },
-    ".claude/skills/gitnexus/gitnexus-guide/SKILL.md": {
-      "filePath": ".claude/skills/gitnexus/gitnexus-guide/SKILL.md",
-      "contentHash": "b2f748891a218d01e8031dc12a6ea0261e7b1fe8bb542d382cc8c8091f10d6a8",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 71,
-      "hasStructuralAnalysis": true
-    },
-    ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md": {
-      "filePath": ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md",
-      "contentHash": "f5ea1b2a02b64b3ec950dec9bc610a7f0f2e57acdc5b6b6a8cc4aac837ce248e",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 104,
-      "hasStructuralAnalysis": true
-    },
-    ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md": {
-      "filePath": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
-      "contentHash": "f824aae5903dbd7137d6dade0e86b8f9207ca3221bf205bfecba36d759d76497",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 128,
-      "hasStructuralAnalysis": true
-    },
-    ".env.example": {
-      "filePath": ".env.example",
-      "contentHash": "247d90662759af7e673617b14d0ce000979bb8337581daf44845e4a57ed9b677",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 26,
-      "hasStructuralAnalysis": true
-    },
-    ".impeccable.md": {
-      "filePath": ".impeccable.md",
-      "contentHash": "be5e60b5e278456f296631fe0b6c87a24c1d333dc61c5979550347d247099e42",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 79,
-      "hasStructuralAnalysis": true
-    },
-    ".myos-writer-patches/writer-1787555349515-03409f.patch": {
-      "filePath": ".myos-writer-patches/writer-1787555349515-03409f.patch",
-      "contentHash": "8c62c3b2429b8bdcb605ce92a30d56755d04c26d1528f5d203b2093c9a094593",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 14,
-      "hasStructuralAnalysis": false
-    },
-    ".myos-writer-patches/writer-1787555351568-5c26e3.patch": {
-      "filePath": ".myos-writer-patches/writer-1787555351568-5c26e3.patch",
-      "contentHash": "1746980991b4ab8e279162e296a591b5b13139bb93d1c8bd80270dffd67a6550",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 1061,
-      "hasStructuralAnalysis": false
-    },
-    ".pagespeed/history.jsonl": {
-      "filePath": ".pagespeed/history.jsonl",
-      "contentHash": "6719ad7fd679048fc9f85fd249c4975d40076809515770d2a3012191c6642d91",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 4,
-      "hasStructuralAnalysis": false
-    },
     ".understandignore": {
       "filePath": ".understandignore",
       "contentHash": "e7470e304541ea0f2f264411c65cbaf5f12090812f0bcf5aeeb1faef04840272",
@@ -132,166 +12,6 @@
       "exports": [],
       "totalLines": 2,
       "hasStructuralAnalysis": false
-    },
-    "AGENTS.md": {
-      "filePath": "AGENTS.md",
-      "contentHash": "d8006e3990408089a7f69eccc8dd25dd3bdb89dbc79cd314988ad8eab8271d8a",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 52,
-      "hasStructuralAnalysis": true
-    },
-    "atelier.audience-policy.json": {
-      "filePath": "atelier.audience-policy.json",
-      "contentHash": "7bdcffc0ae2d5ac47563c10d2f335e8e256c246716af293ab4471c81143ee634",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 7,
-      "hasStructuralAnalysis": true
-    },
-    "atelier.lock.json": {
-      "filePath": "atelier.lock.json",
-      "contentHash": "38f5ca293e52b17cf3daca003258c67a961a8a0760a7957db2098f2cefa8acf3",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 93,
-      "hasStructuralAnalysis": true
-    },
-    "atelier.project.json": {
-      "filePath": "atelier.project.json",
-      "contentHash": "b72b730d439a6716059abe5367fd7324089c9e0ec6640a8d1858b7a605133269",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 35,
-      "hasStructuralAnalysis": true
-    },
-    "boundary-policy.v1.json": {
-      "filePath": "boundary-policy.v1.json",
-      "contentHash": "201e415a429cf86e1eaaf686f0249b5725dba0375c1233549f91b19c2e00b1af",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 47,
-      "hasStructuralAnalysis": true
-    },
-    "CLAUDE.md": {
-      "filePath": "CLAUDE.md",
-      "contentHash": "beca147941d596de436b6ad9880e07baef569f35a513f5dc195c761cac261bf7",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 52,
-      "hasStructuralAnalysis": true
-    },
-    "docs/giveaway-followups.md": {
-      "filePath": "docs/giveaway-followups.md",
-      "contentHash": "5b931199766d7875dead73e4d6075741d1ff09d75e7f6cdd4e02c104cee16a12",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 58,
-      "hasStructuralAnalysis": true
-    },
-    "docs/giveaways/BACKLOG.md": {
-      "filePath": "docs/giveaways/BACKLOG.md",
-      "contentHash": "98d29574fcea0427d5764bd8ea29bbb152963b042d3b881dd4edbee921830eea",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 72,
-      "hasStructuralAnalysis": true
-    },
-    "docs/giveaways/grades/tokens-2026-10-02-r1.md": {
-      "filePath": "docs/giveaways/grades/tokens-2026-10-02-r1.md",
-      "contentHash": "8524629ed781174644b3cddd257ca70aba75e0a2dea7489c6153eeac9213e7dd",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 78,
-      "hasStructuralAnalysis": true
-    },
-    "docs/giveaways/grades/tokens-2026-10-02-r2.md": {
-      "filePath": "docs/giveaways/grades/tokens-2026-10-02-r2.md",
-      "contentHash": "6f3bf89d6f6fdcf5d4db0f0760b94886c9fb79b038812bcc20bbf0c7aa03edf7",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 68,
-      "hasStructuralAnalysis": true
-    },
-    "docs/giveaways/grades/tokens-2026-10-02-r3.md": {
-      "filePath": "docs/giveaways/grades/tokens-2026-10-02-r3.md",
-      "contentHash": "32fb88c52d0637206238eb89e4b655d24d7aa4a9d3421ef088124825974f1c96",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 61,
-      "hasStructuralAnalysis": true
-    },
-    "docs/giveaways/LESSONS.md": {
-      "filePath": "docs/giveaways/LESSONS.md",
-      "contentHash": "efad06b7321ac258436617dc759fbe00c38a6a219bdf25924e1d768d424accc7",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 121,
-      "hasStructuralAnalysis": true
-    },
-    "docs/giveaways/PROCESS.md": {
-      "filePath": "docs/giveaways/PROCESS.md",
-      "contentHash": "49700ee9953b672c0b0ece1f2d76f53aad296d8f343898a3df5bab1a50ab8c85",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 568,
-      "hasStructuralAnalysis": true
-    },
-    "docs/giveaways/USEFULNESS-RUBRIC.md": {
-      "filePath": "docs/giveaways/USEFULNESS-RUBRIC.md",
-      "contentHash": "a5727c7f144b4841997aad6abba7cb7c55c9a4aae063a3bae61909f3180673f0",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 49,
-      "hasStructuralAnalysis": true
-    },
-    "docs/STRIPE-TRIAL-MECHANICS.md": {
-      "filePath": "docs/STRIPE-TRIAL-MECHANICS.md",
-      "contentHash": "c00a5d9777b1c81c67ea8c36f36eef8bbe5eda5138a3f082754c0e33fd4f3f3b",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 55,
-      "hasStructuralAnalysis": true
-    },
-    "LESSONS.md": {
-      "filePath": "LESSONS.md",
-      "contentHash": "25807778ab4de7f0331708590432409cec5ca15c4900a8f931eabdc34c69d921",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 12,
-      "hasStructuralAnalysis": true
     },
     "next-env.d.ts": {
       "filePath": "next-env.d.ts",
@@ -331,16 +51,6 @@
       "totalLines": 89,
       "hasStructuralAnalysis": true
     },
-    "package.json": {
-      "filePath": "package.json",
-      "contentHash": "7ff7d84f2ef9ec1c57c17a797fe915c96e5e82a9210d1833008c552bcbd54589",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 51,
-      "hasStructuralAnalysis": true
-    },
     "pdf/client-launch-checklist.html": {
       "filePath": "pdf/client-launch-checklist.html",
       "contentHash": "1756b1f1d9f632b0522d7d9b9b282db46871caf999b33dd90c07b3c7ff268a59",
@@ -351,16 +61,6 @@
       "totalLines": 306,
       "hasStructuralAnalysis": false
     },
-    "pdf/client-launch-checklist.html.kg.json": {
-      "filePath": "pdf/client-launch-checklist.html.kg.json",
-      "contentHash": "a6b22dfd14857f96634fda76f9fac95cf31ebead800d438b3b0f000d25bcf023",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 17,
-      "hasStructuralAnalysis": true
-    },
     "pdf/cross-cli-compatibility-routing-guide.html": {
       "filePath": "pdf/cross-cli-compatibility-routing-guide.html",
       "contentHash": "8dbec708571a38dd1a170509c1ba313cfe7e446717e3b21fa9b61d4e1f6d7c1f",
@@ -370,16 +70,6 @@
       "exports": [],
       "totalLines": 583,
       "hasStructuralAnalysis": false
-    },
-    "pdf/cross-cli-compatibility-routing-guide.html.kg.json": {
-      "filePath": "pdf/cross-cli-compatibility-routing-guide.html.kg.json",
-      "contentHash": "9d9f1c886ec72e94cf322b2e1adcaf1dfe5fb76145a6929c73ddf2493e173a13",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 17,
-      "hasStructuralAnalysis": true
     },
     "pdf/render-client-launch-checklist.js": {
       "filePath": "pdf/render-client-launch-checklist.js",
@@ -457,16 +147,6 @@
       "totalLines": 1450,
       "hasStructuralAnalysis": false
     },
-    "public/2x-with-ai-playbook.html.kg.json": {
-      "filePath": "public/2x-with-ai-playbook.html.kg.json",
-      "contentHash": "0811e298b5798383931b1aff57fdf551e12d4e9d0b91f723f79e1d50518bbdc8",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 17,
-      "hasStructuralAnalysis": true
-    },
     "public/ai-os-architecture.html": {
       "filePath": "public/ai-os-architecture.html",
       "contentHash": "96509256960fa5c550cdfc6ce60bd26671893a0e0c975de934b494ae91d1a39f",
@@ -476,16 +156,6 @@
       "exports": [],
       "totalLines": 203,
       "hasStructuralAnalysis": false
-    },
-    "public/ai-os-architecture.html.kg.json": {
-      "filePath": "public/ai-os-architecture.html.kg.json",
-      "contentHash": "9ab9c6e61fa0c53de6f9677990f4e2e23c8e2442a3c0d9a1500d63a14224d346",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 17,
-      "hasStructuralAnalysis": true
     },
     "public/automation-audit-sample.html": {
       "filePath": "public/automation-audit-sample.html",
@@ -497,26 +167,6 @@
       "totalLines": 652,
       "hasStructuralAnalysis": false
     },
-    "public/automation-audit-sample.html.kg.json": {
-      "filePath": "public/automation-audit-sample.html.kg.json",
-      "contentHash": "718dbda169d871aa138e27c2881aa9bd3951dcfbf7f889c7c518ba1d7286e75f",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 17,
-      "hasStructuralAnalysis": true
-    },
-    "public/client-launch-checklist.pdf.kg.json": {
-      "filePath": "public/client-launch-checklist.pdf.kg.json",
-      "contentHash": "14b36e50f36b483ac6b034ef52df3254735917db9f4337e9aff68f0e513d7dea",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 17,
-      "hasStructuralAnalysis": true
-    },
     "public/coach-kit-onboarding-matrix.html": {
       "filePath": "public/coach-kit-onboarding-matrix.html",
       "contentHash": "789ffcaecd80f4b7446835e4579d33949000db6b9f989fb0a429bfa4f6cf5fb1",
@@ -525,76 +175,6 @@
       "imports": [],
       "exports": [],
       "totalLines": 1110,
-      "hasStructuralAnalysis": false
-    },
-    "public/coach-kit-onboarding-matrix.html.kg.json": {
-      "filePath": "public/coach-kit-onboarding-matrix.html.kg.json",
-      "contentHash": "6006b31436fc402bbf00380a05bd49a94f31810f5d03508eda778ba83a4dc8cc",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 17,
-      "hasStructuralAnalysis": true
-    },
-    "public/cross-cli-compatibility-routing-guide.pdf.kg.json": {
-      "filePath": "public/cross-cli-compatibility-routing-guide.pdf.kg.json",
-      "contentHash": "4e0d741ad759ce73434511f813570b104880a590b6ee6b55721d6d12551a8de9",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 17,
-      "hasStructuralAnalysis": true
-    },
-    "public/desk-pet-prompt.txt": {
-      "filePath": "public/desk-pet-prompt.txt",
-      "contentHash": "aabf03d3eb9d73ca70884a15650a31f6abde5aeee89e6e00411b42261b23fee4",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 29,
-      "hasStructuralAnalysis": false
-    },
-    "public/docs/jill-linkedin-cleanup-sop.md": {
-      "filePath": "public/docs/jill-linkedin-cleanup-sop.md",
-      "contentHash": "5a68668bd5f01351eaf14fa1877330598e308895da342e8a5c71216111772390",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 66,
-      "hasStructuralAnalysis": true
-    },
-    "public/downloads/allsorted-crm-module-v1.5.zip.sha256": {
-      "filePath": "public/downloads/allsorted-crm-module-v1.5.zip.sha256",
-      "contentHash": "32e582429390b76dc2c1d4c87f28a1bd40641f1451c0cbfa0b9a6bbde719078c",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 2,
-      "hasStructuralAnalysis": false
-    },
-    "public/downloads/joes-linkedin-kit-v1.0.zip.sha256": {
-      "filePath": "public/downloads/joes-linkedin-kit-v1.0.zip.sha256",
-      "contentHash": "b88ba20c8f7653fe4134f19b77f2900b1e6a64d570f13adf1578b01fd6c6b1e6",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 2,
-      "hasStructuralAnalysis": false
-    },
-    "public/downloads/joes-salesman-v1.0.zip.sha256": {
-      "filePath": "public/downloads/joes-salesman-v1.0.zip.sha256",
-      "contentHash": "4bd991aba6288f91429cf57cbba8ebd1d2d963a1889bf9e89c61dcab13d4d8ac",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 2,
       "hasStructuralAnalysis": false
     },
     "public/downloads/maccleaner-installer.sh": {
@@ -614,16 +194,6 @@
       "totalLines": 36,
       "hasStructuralAnalysis": true
     },
-    "public/giveaways/cross-cli-compatibility-routing-prompt.md": {
-      "filePath": "public/giveaways/cross-cli-compatibility-routing-prompt.md",
-      "contentHash": "1cf3855701ade5bbcd64fdf7b54c55b1399e13932d3f43671a9cdd959e751b78",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 218,
-      "hasStructuralAnalysis": true
-    },
     "public/hated-task-prompts.html": {
       "filePath": "public/hated-task-prompts.html",
       "contentHash": "bb1b8515349466f4099ce45868eac94645bb90ba99b62885a3000cc4db20e81e",
@@ -633,136 +203,6 @@
       "exports": [],
       "totalLines": 372,
       "hasStructuralAnalysis": false
-    },
-    "public/hated-task-prompts.html.kg.json": {
-      "filePath": "public/hated-task-prompts.html.kg.json",
-      "contentHash": "24a20ca4af34d67fcfa8669cb8cfa297e42ef011018e55d60eb78a80878f1cef",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 17,
-      "hasStructuralAnalysis": true
-    },
-    "public/images/participants/beata-fuller.webp": {
-      "filePath": "public/images/participants/beata-fuller.webp",
-      "contentHash": "1f1a7a68153cb0012f3e89551c9856f7725b9e6cf729d5798055c21435909c57",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 165,
-      "hasStructuralAnalysis": false
-    },
-    "public/images/participants/david-cook.webp": {
-      "filePath": "public/images/participants/david-cook.webp",
-      "contentHash": "f356366615c2b80fa70829d999b136cd9b294f765b1afc8f7737b7bf4dc3496f",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 135,
-      "hasStructuralAnalysis": false
-    },
-    "public/images/participants/gianluca-balducci.webp": {
-      "filePath": "public/images/participants/gianluca-balducci.webp",
-      "contentHash": "2aa78e2c32dc31b48c7e8b5a9cf54023b8acde3a00103b8fe895e751fcd5ee80",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 184,
-      "hasStructuralAnalysis": false
-    },
-    "public/images/participants/jessica-saunders.webp": {
-      "filePath": "public/images/participants/jessica-saunders.webp",
-      "contentHash": "271990e8002e765d05311cace2088a54e411e8f249f4cb1951dd32a7f6b8ab4e",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 54,
-      "hasStructuralAnalysis": false
-    },
-    "public/images/participants/jonathan-marshall.webp": {
-      "filePath": "public/images/participants/jonathan-marshall.webp",
-      "contentHash": "1bb8068c01d3b0d097c7726373cd17d4b5db17fa3e6d6013d5c441791443903a",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 280,
-      "hasStructuralAnalysis": false
-    },
-    "public/images/participants/naomi-galinski.webp": {
-      "filePath": "public/images/participants/naomi-galinski.webp",
-      "contentHash": "046cb1692f3f89c00eb3cc80f27cb64159052a45d3a1629de7d05725999888d9",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 262,
-      "hasStructuralAnalysis": false
-    },
-    "public/images/participants/racheli-avruch.webp": {
-      "filePath": "public/images/participants/racheli-avruch.webp",
-      "contentHash": "12426bf77c162a184ee2427cca063a851d3d82e7eafa312d4805a172fbc15729",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 641,
-      "hasStructuralAnalysis": false
-    },
-    "public/images/participants/sofia-konstantinidou.webp": {
-      "filePath": "public/images/participants/sofia-konstantinidou.webp",
-      "contentHash": "c3e91ee518441e1cd7972cf732ac3e67684b085ef9aa7c9bbf3de81ddc9047d6",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 210,
-      "hasStructuralAnalysis": false
-    },
-    "public/images/participants/vonetta-taylor.webp": {
-      "filePath": "public/images/participants/vonetta-taylor.webp",
-      "contentHash": "be50ff98a01c8506ece4e985cff39ac78197411944c90770e5df9f9f2c6912e3",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 141,
-      "hasStructuralAnalysis": false
-    },
-    "public/images/participants/wesley-jones.webp": {
-      "filePath": "public/images/participants/wesley-jones.webp",
-      "contentHash": "c8c20dade471c63b24b999d324366549ca1122a9520568d51a28983a9d5863f2",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 323,
-      "hasStructuralAnalysis": false
-    },
-    "public/joe-che-claude.md": {
-      "filePath": "public/joe-che-claude.md",
-      "contentHash": "65ce4e7987205be02ed1848c60f29b67e9ff208797cb71d2fbd9e7deefb8424a",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 118,
-      "hasStructuralAnalysis": true
-    },
-    "public/Lead-Machine-Quick-Start.pdf.kg.json": {
-      "filePath": "public/Lead-Machine-Quick-Start.pdf.kg.json",
-      "contentHash": "eb665786e3a1adac23c4434c99090aa72d425507ea5bb4092794dbbcd41761b1",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 17,
-      "hasStructuralAnalysis": true
     },
     "public/lead-magnet.html": {
       "filePath": "public/lead-magnet.html",
@@ -774,26 +214,6 @@
       "totalLines": 818,
       "hasStructuralAnalysis": false
     },
-    "public/lead-magnet.html.kg.json": {
-      "filePath": "public/lead-magnet.html.kg.json",
-      "contentHash": "06fcb164767ab3f82b9d4f849dd0b98b8e017d9bab3cbb307d52713efad50bae",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 17,
-      "hasStructuralAnalysis": true
-    },
-    "public/llms.txt": {
-      "filePath": "public/llms.txt",
-      "contentHash": "76c58ac2e99d0381d6e0f6b393debc05431476eeaa2625b8b5b3f16d01dbc352",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 49,
-      "hasStructuralAnalysis": false
-    },
     "public/mhq-consent.js": {
       "filePath": "public/mhq-consent.js",
       "contentHash": "690d6dbea62986688db0d76ca56ab47bcd528ff98e4987b33624b6d517444c2b",
@@ -802,36 +222,6 @@
       "imports": [],
       "exports": [],
       "totalLines": 161,
-      "hasStructuralAnalysis": true
-    },
-    "public/posture-coach-prompt.txt": {
-      "filePath": "public/posture-coach-prompt.txt",
-      "contentHash": "8561cfca3428d22b6af409256ca78711e85aafc98965185dc7f7ac5d00bf469f",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 28,
-      "hasStructuralAnalysis": false
-    },
-    "public/unlearning-success.pdf.kg.json": {
-      "filePath": "public/unlearning-success.pdf.kg.json",
-      "contentHash": "236a582a4cd3648c6e3b92bb83f02fd10bbd5ce9f40bfceac5694de0107222b1",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 17,
-      "hasStructuralAnalysis": true
-    },
-    "repo-access.v1.json": {
-      "filePath": "repo-access.v1.json",
-      "contentHash": "033c62f7eb01f80c11971d6ce73ff20a49f49ac6537153ded2edc5cfdbc3f7e8",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 10,
       "hasStructuralAnalysis": true
     },
     "scripts/abandoned-checkout-control.mjs": {
@@ -3352,7 +2742,7 @@
     },
     "src/app/api/lead-magnet/route.ts": {
       "filePath": "src/app/api/lead-magnet/route.ts",
-      "contentHash": "e779ab1e6fb034f31c71bdfa0b43796135d6291c55289aad8f9e2ee9748a7b29",
+      "contentHash": "62ad03b5588b4586d7d03dd5cbf4bbfee5c856348c16c23128313ca8f73d101b",
       "functions": [
         {
           "name": "sendViaResend",
@@ -3363,7 +2753,7 @@
             "generic"
           ],
           "exported": false,
-          "lineCount": 608
+          "lineCount": 577
         },
         {
           "name": "ingestIntoCrm",
@@ -3373,6 +2763,15 @@
           ],
           "exported": false,
           "lineCount": 16
+        },
+        {
+          "name": "escapeGuardogHtml",
+          "params": [
+            "s"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 3
         },
         {
           "name": "POST",
@@ -3494,6 +2893,12 @@
           ]
         },
         {
+          "source": "@/app/giveaways/guardog/prompts",
+          "specifiers": [
+            "GUARDOG_SETUP_PROMPT"
+          ]
+        },
+        {
           "source": "@/lib/generic-giveaway-email",
           "specifiers": [
             "buildGenericGiveawayEmail",
@@ -3509,7 +2914,7 @@
       "exports": [
         "POST"
       ],
-      "totalLines": 853,
+      "totalLines": 827,
       "hasStructuralAnalysis": true
     },
     "src/app/api/lead-magnets/claudemd/route 2.ts": {
@@ -4134,7 +3539,7 @@
     },
     "src/app/events/page.tsx": {
       "filePath": "src/app/events/page.tsx",
-      "contentHash": "9e05e2c1ba27d238043c2d2ee05ccf25b4b4e46dccedb4b1b2decb81e634b469",
+      "contentHash": "8224f15423f5132e9d402d84bfd8ade16f481e911ed65f331790cfd44b765f72",
       "functions": [
         {
           "name": "EventsIndexPage",
@@ -7477,6 +6882,74 @@
       "totalLines": 16,
       "hasStructuralAnalysis": true
     },
+    "src/app/giveaways/free-ai-youtube-skills/layout.tsx": {
+      "filePath": "src/app/giveaways/free-ai-youtube-skills/layout.tsx",
+      "contentHash": "407dd4add766f42f42e5c0d7fbf96dbd8eb1287a4db04355c412a12806031670",
+      "functions": [
+        {
+          "name": "Layout",
+          "params": [
+            "{ children }"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "ReactNode"
+          ]
+        },
+        {
+          "source": "next",
+          "specifiers": [
+            "Metadata"
+          ]
+        }
+      ],
+      "exports": [
+        "metadata",
+        "Layout"
+      ],
+      "totalLines": 32,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/free-ai-youtube-skills/page.tsx": {
+      "filePath": "src/app/giveaways/free-ai-youtube-skills/page.tsx",
+      "contentHash": "a0dd9ba09a621f290ea2b0cd80953427956c54ed142b229b8b6816ca1e4af9b7",
+      "functions": [
+        {
+          "name": "FreeAiYoutubeSkillsPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/components/giveaways/PackPage",
+          "specifiers": [
+            "PackPage"
+          ]
+        },
+        {
+          "source": "@/lib/free-ai-tool-pack",
+          "specifiers": [
+            "freeAiToolJsonLd",
+            "freeAiToolPack"
+          ]
+        }
+      ],
+      "exports": [
+        "FreeAiYoutubeSkillsPage"
+      ],
+      "totalLines": 16,
+      "hasStructuralAnalysis": true
+    },
     "src/app/giveaways/free-ai-yovoice/layout.tsx": {
       "filePath": "src/app/giveaways/free-ai-yovoice/layout.tsx",
       "contentHash": "346db6409d3d8a00118dd455d0db995944f9f054595ecd495dc18a915c4ec500",
@@ -7653,7 +7126,7 @@
     },
     "src/app/giveaways/guardog/layout.tsx": {
       "filePath": "src/app/giveaways/guardog/layout.tsx",
-      "contentHash": "8bacccb213c2dfc93078ca182e4ce86b6cc3a9019adb9477bbb9701f263826d1",
+      "contentHash": "4005fe50917cb606e622e95d66189244b26ddf056aae48db7d781baf1a8e1f83",
       "functions": [
         {
           "name": "GuardogLayout",
@@ -7688,7 +7161,7 @@
     },
     "src/app/giveaways/guardog/pack.ts": {
       "filePath": "src/app/giveaways/guardog/pack.ts",
-      "contentHash": "d5b9e9d8b375f39940f4d64b6b937c4f4fd51c464e5a2ca117ca4762e1012f5f",
+      "contentHash": "067c3af3264a09f7f39f740387e6cd0e35512cab9a5cf6e67d40a2f50a0af5f9",
       "functions": [],
       "classes": [],
       "imports": [
@@ -7701,7 +7174,9 @@
         {
           "source": "./prompts",
           "specifiers": [
-            "GUARDOG_SETUP_PROMPT"
+            "GUARDOG_REPO",
+            "GUARDOG_SETUP_PROMPT",
+            "GUARDOG_VERSION"
           ]
         }
       ],
@@ -7709,12 +7184,12 @@
         "GITHUB_URL",
         "GUARDOG_PACK"
       ],
-      "totalLines": 202,
+      "totalLines": 207,
       "hasStructuralAnalysis": true
     },
     "src/app/giveaways/guardog/page.tsx": {
       "filePath": "src/app/giveaways/guardog/page.tsx",
-      "contentHash": "c888f250ad4af5a1fdbfe8050738d0805d946c9551abc7a7bb16ed56c57de48f",
+      "contentHash": "9a2f9443facaa87d6ab6dacb1e2635a7a5fcfb23d75791d3af93597350fd352f",
       "functions": [
         {
           "name": "GuardogPage",
@@ -7746,14 +7221,16 @@
     },
     "src/app/giveaways/guardog/prompts.ts": {
       "filePath": "src/app/giveaways/guardog/prompts.ts",
-      "contentHash": "0ef6bffbdef480335232ed28075bbd904d90cd82e7930352e8fb85fe67ee09e5",
+      "contentHash": "7e3205f91a71ff145a6a521030f42e5e9c8bf5bcd84ccdb0d3fe9c23939aaab2",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [
+        "GUARDOG_VERSION",
+        "GUARDOG_REPO",
         "GUARDOG_SETUP_PROMPT"
       ],
-      "totalLines": 36,
+      "totalLines": 48,
       "hasStructuralAnalysis": true
     },
     "src/app/giveaways/hated-task-prompts/layout.tsx": {
@@ -9043,6 +8520,92 @@
         "SQUARESPACE_PROMPT"
       ],
       "totalLines": 55,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/stop-paying/layout.tsx": {
+      "filePath": "src/app/giveaways/stop-paying/layout.tsx",
+      "contentHash": "4648b7804b67705be7d4edd8ceb528fb94f5fa4c58daf470259d4953ee934536",
+      "functions": [
+        {
+          "name": "Layout",
+          "params": [
+            "{ children }"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "ReactNode"
+          ]
+        },
+        {
+          "source": "next",
+          "specifiers": [
+            "Metadata"
+          ]
+        }
+      ],
+      "exports": [
+        "metadata",
+        "Layout"
+      ],
+      "totalLines": 23,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/stop-paying/pack.ts": {
+      "filePath": "src/app/giveaways/stop-paying/pack.ts",
+      "contentHash": "243bd210f0a94350ee3355f2a8fcbd5ce987844c6cac96d780039e9952f0c5f7",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/lib/pack-page",
+          "specifiers": [
+            "PackPageContent"
+          ]
+        }
+      ],
+      "exports": [
+        "STOP_PAYING_PACK"
+      ],
+      "totalLines": 133,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/stop-paying/page.tsx": {
+      "filePath": "src/app/giveaways/stop-paying/page.tsx",
+      "contentHash": "fcd0250971efb975b75a289c4e9125d2442e33dea53d9fd64f4f5985d4507b72",
+      "functions": [
+        {
+          "name": "StopPayingPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/components/giveaways/PackPage",
+          "specifiers": [
+            "PackPage"
+          ]
+        },
+        {
+          "source": "./pack",
+          "specifiers": [
+            "STOP_PAYING_PACK"
+          ]
+        }
+      ],
+      "exports": [
+        "StopPayingPage"
+      ],
+      "totalLines": 31,
       "hasStructuralAnalysis": true
     },
     "src/app/giveaways/terminal-to-claude-desktop/layout.tsx": {
@@ -12322,7 +11885,7 @@
     },
     "src/components/events/EventPageView.tsx": {
       "filePath": "src/components/events/EventPageView.tsx",
-      "contentHash": "63054f14d56fda0698d945be6d0b34f39ed514446af2b46be8a68f74a2429c41",
+      "contentHash": "f6b4edc66edb89465492c435fc344d2a77841abc67d22e9f33b692564f4a6174",
       "functions": [
         {
           "name": "sectionTitleClass",
@@ -12461,7 +12024,7 @@
             "{\n  event,\n  promo,\n  publishableKey,\n  initialPromoCode,\n}"
           ],
           "exported": true,
-          "lineCount": 205
+          "lineCount": 222
         }
       ],
       "classes": [],
@@ -12576,12 +12139,12 @@
       "exports": [
         "EventPageView"
       ],
-      "totalLines": 701,
+      "totalLines": 718,
       "hasStructuralAnalysis": true
     },
     "src/components/events/EventRegistrationSection.tsx": {
       "filePath": "src/components/events/EventRegistrationSection.tsx",
-      "contentHash": "392688a5cba485800cd1c45e74907605c70c375e65a86451cc66771b3af56a48",
+      "contentHash": "f39a7a5acd29bba6ce66f49be2b96cb59f62b155bb0db316036097326498d7a5",
       "functions": [
         {
           "name": "useAnimatedNumber",
@@ -12599,7 +12162,7 @@
             "{\n  event,\n  publishableKey,\n  initialPromoCode,\n  initialPromoAmount,\n  initialPromoMessage,\n}"
           ],
           "exported": true,
-          "lineCount": 967
+          "lineCount": 984
         }
       ],
       "classes": [],
@@ -12686,7 +12249,7 @@
       "exports": [
         "EventRegistrationSection"
       ],
-      "totalLines": 1078,
+      "totalLines": 1096,
       "hasStructuralAnalysis": true
     },
     "src/components/events/HeroVideo.tsx": {
@@ -12767,7 +12330,7 @@
     },
     "src/components/events/joechella/FestivalHero.tsx": {
       "filePath": "src/components/events/joechella/FestivalHero.tsx",
-      "contentHash": "cbb8a0581c13d2fa55f2b537a7596604d36805e42b768027039f1cfd344f1c88",
+      "contentHash": "37d7de3c64ca764a6631ce102149e2c263345b6f2f2cc030a978cc893e77755a",
       "functions": [
         {
           "name": "splitTitle",
@@ -12791,7 +12354,7 @@
             "{ event, eventEnded }"
           ],
           "exported": true,
-          "lineCount": 130
+          "lineCount": 110
         }
       ],
       "classes": [],
@@ -12828,7 +12391,7 @@
       "exports": [
         "FestivalHero"
       ],
-      "totalLines": 173,
+      "totalLines": 153,
       "hasStructuralAnalysis": true
     },
     "src/components/events/joechella/FestivalMotion.tsx": {
@@ -12955,7 +12518,7 @@
     },
     "src/components/events/joechella/VenueGallery.tsx": {
       "filePath": "src/components/events/joechella/VenueGallery.tsx",
-      "contentHash": "f61329c4997c2d382d8874c6dcbf11c317ec9bac8bc1d1845ad3f16453856c92",
+      "contentHash": "75b0602360239771f341bb86cd2a4af6cd787cee7a33f17c5972e0e0e1f9e105",
       "functions": [
         {
           "name": "VenueGallery",
@@ -12963,7 +12526,7 @@
             "{ section }"
           ],
           "exported": true,
-          "lineCount": 77
+          "lineCount": 81
         }
       ],
       "classes": [],
@@ -12994,7 +12557,7 @@
       "exports": [
         "VenueGallery"
       ],
-      "totalLines": 91,
+      "totalLines": 95,
       "hasStructuralAnalysis": true
     },
     "src/components/events/ScrollToRegisterButton.tsx": {
@@ -13219,7 +12782,7 @@
     },
     "src/components/giveaways/PackPage.tsx": {
       "filePath": "src/components/giveaways/PackPage.tsx",
-      "contentHash": "976facf278a3ae6397a9340c6c6dc028da59cd20c7d199754e922a454e868583",
+      "contentHash": "fcc9261731202b00446dce24aaee21ce7396a1b632f36e2caa852c311dae04c7",
       "functions": [
         {
           "name": "usePackAsk",
@@ -14975,7 +14538,7 @@
     },
     "src/content/session-8-guide.tsx": {
       "filePath": "src/content/session-8-guide.tsx",
-      "contentHash": "92cccd2447c38f7f1c231a8c743fa4c47a9ccab3ff289468f9ba94b6e4ab6230",
+      "contentHash": "ecfafeadb49f7a567506ba5d8d66abc923e4ac594c68bf4eb26fbf56f5cb6df0",
       "functions": [
         {
           "name": "WebFetchUseCaseIcon",
@@ -14989,7 +14552,7 @@
           "name": "Session8Guide",
           "params": [],
           "exported": true,
-          "lineCount": 954
+          "lineCount": 956
         }
       ],
       "classes": [],
@@ -15028,7 +14591,7 @@
       "exports": [
         "Session8Guide"
       ],
-      "totalLines": 1023,
+      "totalLines": 1025,
       "hasStructuralAnalysis": true
     },
     "src/content/session-8-prep.tsx": {
@@ -16208,7 +15771,7 @@
     },
     "src/lib/event-checkout.ts": {
       "filePath": "src/lib/event-checkout.ts",
-      "contentHash": "04f5bfb255e6be7ac79d43b2c78f371559c300d59f2334da69ccb62136fe852f",
+      "contentHash": "09a8efd2b31fdc55b99ae99feb3358ad32c5f284f52a1890f262314061435211",
       "functions": [
         {
           "name": "resolveCheckoutMode",
@@ -16236,7 +15799,7 @@
           ],
           "returnType": "Stripe.Checkout.SessionCreateParams",
           "exported": true,
-          "lineCount": 85
+          "lineCount": 89
         }
       ],
       "classes": [],
@@ -16278,7 +15841,7 @@
         "resolveEventCheckoutAmount",
         "buildEventCheckoutSessionParams"
       ],
-      "totalLines": 122,
+      "totalLines": 126,
       "hasStructuralAnalysis": true
     },
     "src/lib/event-confirmation-email.ts": {
@@ -17073,7 +16636,7 @@
     },
     "src/lib/event-status.ts": {
       "filePath": "src/lib/event-status.ts",
-      "contentHash": "51f198d92a7324ffffa10d280e563fdde746a2aa3f7ea64e4a3e405c121f3ce6",
+      "contentHash": "1250323a26db096072df7a687ac3cc79797f42eff6a253cfe41432b2da669ffb",
       "functions": [
         {
           "name": "isEventEnded",
@@ -17191,7 +16754,7 @@
     },
     "src/lib/events.tsx": {
       "filePath": "src/lib/events.tsx",
-      "contentHash": "33bf695aaeefa442caa9527115e55ca89a2bd9696675a53a58d8a32705f17f35",
+      "contentHash": "73a85fb0033dd269c2122e5d46e4b1755804435f771ae13f36f9610824af9baf",
       "functions": [
         {
           "name": "getDiscountedPrice",
@@ -17227,7 +16790,7 @@
             "promo"
           ],
           "exported": true,
-          "lineCount": 5
+          "lineCount": 6
         },
         {
           "name": "formatDonationLabelNote",
@@ -17296,7 +16859,7 @@
         "getLiveEvents",
         "getUpcomingLiveEvents"
       ],
-      "totalLines": 1922,
+      "totalLines": 1981,
       "hasStructuralAnalysis": true
     },
     "src/lib/free-ai-tool-email.ts": {
@@ -17344,7 +16907,7 @@
     },
     "src/lib/free-ai-tool-pack.ts": {
       "filePath": "src/lib/free-ai-tool-pack.ts",
-      "contentHash": "24cf3d58b69093e4eefd27de52f0ef682a9f0c6b7fca876b5b7f45e906dd9a31",
+      "contentHash": "34d24f0c259c45e34c72a9c09eb2be81673532766dd18078a84dd24b01b88d62",
       "functions": [
         {
           "name": "freeAiToolPack",
@@ -17362,7 +16925,7 @@
           ],
           "returnType": "PackPageContent",
           "exported": false,
-          "lineCount": 57
+          "lineCount": 58
         },
         {
           "name": "freeAiToolJsonLd",
@@ -17400,7 +16963,7 @@
         "freeAiToolPack",
         "freeAiToolJsonLd"
       ],
-      "totalLines": 142,
+      "totalLines": 143,
       "hasStructuralAnalysis": true
     },
     "src/lib/free-ai-tools-hub-email.ts": {
@@ -17485,7 +17048,7 @@
     },
     "src/lib/free-ai-tools.ts": {
       "filePath": "src/lib/free-ai-tools.ts",
-      "contentHash": "acf073dd00761c68df49a9557068b15f76345d061c50d5b916709c50785adac8",
+      "contentHash": "f5ba1d48d4a2710ad0eb8f091f0c7cce435634ec91c063796756065240a857e0",
       "functions": [
         {
           "name": "getFreeAiTool",
@@ -17520,7 +17083,8 @@
         {
           "source": "./giveaway-offers",
           "specifiers": [
-            "GiveawayLevel"
+            "GiveawayLevel",
+            "GiveawayOfferId"
           ]
         }
       ],
@@ -17531,12 +17095,12 @@
         "isFreeAiToolSource",
         "formatStars"
       ],
-      "totalLines": 1823,
+      "totalLines": 1934,
       "hasStructuralAnalysis": true
     },
     "src/lib/generic-giveaway-email.ts": {
       "filePath": "src/lib/generic-giveaway-email.ts",
-      "contentHash": "d1eca6dab2488396c66d8ed2af78731904218e54fdbe8ba8e8dc6cc1e49aa1b5",
+      "contentHash": "c4f494248e49c1ca0206480735cf6abb3d65e2f7550029481f7c0062cbb9fa1a",
       "functions": [
         {
           "name": "esc",
@@ -17655,7 +17219,7 @@
         "salesKeywordPage",
         "buildSalesKeywordEmail"
       ],
-      "totalLines": 256,
+      "totalLines": 257,
       "hasStructuralAnalysis": true
     },
     "src/lib/giveaway-dm.ts": {
@@ -18013,13 +17577,14 @@
     },
     "src/lib/giveaway-offers.ts": {
       "filePath": "src/lib/giveaway-offers.ts",
-      "contentHash": "804d063b8a1da5fd3549317e1c8b48ae451a2f43b3f03fd75b507f51397b4965",
+      "contentHash": "27aded58dbe2f8b9aac68a1a5e04dbaf8d96da1682a52d80d25a673909841336",
       "functions": [
         {
           "name": "offerForLevel",
           "params": [
             "level",
-            "slug"
+            "slug",
+            "offerId"
           ],
           "returnType": "GiveawayOffer | null",
           "exported": true,
@@ -18031,15 +17596,17 @@
       "exports": [
         "WORKSHOP_DEMO_URL",
         "GET_FOUND_CHECKOUT_URL",
+        "VIDEO_AGENT_URL",
         "GIVEAWAY_OFFERS",
-        "offerForLevel"
+        "offerForLevel",
+        "PAGE_OFFERS"
       ],
-      "totalLines": 112,
+      "totalLines": 181,
       "hasStructuralAnalysis": true
     },
     "src/lib/giveaways.ts": {
       "filePath": "src/lib/giveaways.ts",
-      "contentHash": "7b942541f4e8425b4517b80416d9f4f07f58341042d2549f606ced81e5b1776a",
+      "contentHash": "0b6d795d425e83e6b673449bace3587b9b80a35ed761fd9db681375f1b3c4133",
       "functions": [
         {
           "name": "getGiveaway",
@@ -18057,7 +17624,7 @@
         "giveaways",
         "getGiveaway"
       ],
-      "totalLines": 493,
+      "totalLines": 509,
       "hasStructuralAnalysis": true
     },
     "src/lib/google-calendar-invite.ts": {
@@ -19012,7 +18579,7 @@
     },
     "src/lib/pack-page.ts": {
       "filePath": "src/lib/pack-page.ts",
-      "contentHash": "444682bb098323584c6f6838bcfcbe5dde2e384c3bf1e63805a4849d6342bc42",
+      "contentHash": "d67730d74684bd5761891c3faffca30e448cc9a23059a2b562f563296f7b66ac",
       "functions": [
         {
           "name": "fillPrompt",
@@ -19057,7 +18624,8 @@
         {
           "source": "./giveaway-offers",
           "specifiers": [
-            "GiveawayLevel"
+            "GiveawayLevel",
+            "GiveawayOfferId"
           ]
         }
       ],
@@ -19067,7 +18635,7 @@
         "packHasAction",
         "validatePackContent"
       ],
-      "totalLines": 181,
+      "totalLines": 183,
       "hasStructuralAnalysis": true
     },
     "src/lib/quiz-giveaway-email.ts": {
@@ -19776,206 +19344,6 @@
       "totalLines": 83,
       "hasStructuralAnalysis": true
     },
-    "supabase/migrations/001_event_registrations.sql": {
-      "filePath": "supabase/migrations/001_event_registrations.sql",
-      "contentHash": "d16e1159bd0eb9ae7a34db635787ada080b97182731a3fd366021cea5059978d",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 36,
-      "hasStructuralAnalysis": true
-    },
-    "supabase/migrations/002_unique_email_constraints.sql": {
-      "filePath": "supabase/migrations/002_unique_email_constraints.sql",
-      "contentHash": "cde51eac6647a00f977797ba36480132109b544ddb20f5243940c1f82115b45d",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 11,
-      "hasStructuralAnalysis": true
-    },
-    "supabase/migrations/003_rate_limit_and_cron_locks.sql": {
-      "filePath": "supabase/migrations/003_rate_limit_and_cron_locks.sql",
-      "contentHash": "224386eed42ed7cd42d56b0feb4e5fd881e950633528b3308bfd5333a50e8e32",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 21,
-      "hasStructuralAnalysis": true
-    },
-    "supabase/migrations/004_abandoned_checkout_followups.sql": {
-      "filePath": "supabase/migrations/004_abandoned_checkout_followups.sql",
-      "contentHash": "e40d9cf4ada05ded3e149363f53491ad6bfc9b6f6288dd935afe8b5c46bc27e7",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 54,
-      "hasStructuralAnalysis": true
-    },
-    "supabase/migrations/005_abandoned_checkout_live_claims.sql": {
-      "filePath": "supabase/migrations/005_abandoned_checkout_live_claims.sql",
-      "contentHash": "2c94a6d79a79e92bfd334403304b8b1fcd8d34a3ae452636c019cd5db334611a",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 69,
-      "hasStructuralAnalysis": true
-    },
-    "supabase/migrations/006_abandoned_checkout_t12h_seed.sql": {
-      "filePath": "supabase/migrations/006_abandoned_checkout_t12h_seed.sql",
-      "contentHash": "2ccdbd863d9a387f0fc306415548e1fff314600137a5ec02aedebbf475e1ce93",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 8,
-      "hasStructuralAnalysis": true
-    },
-    "supabase/migrations/007_ai_agent_income_subscriptions.sql": {
-      "filePath": "supabase/migrations/007_ai_agent_income_subscriptions.sql",
-      "contentHash": "028094237a04a82b7f1e89a58506735163032ce781786455bf9df8807081a5c8",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 68,
-      "hasStructuralAnalysis": true
-    },
-    "supabase/migrations/008_leads_and_lead_magnet_signups.sql": {
-      "filePath": "supabase/migrations/008_leads_and_lead_magnet_signups.sql",
-      "contentHash": "0bc2296ef6ceb0421f45ed1284d562524d68e2b11ffa42d85a162cba1dd5d7ec",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 68,
-      "hasStructuralAnalysis": true
-    },
-    "supabase/migrations/009_event_registration_acquisition_ref.sql": {
-      "filePath": "supabase/migrations/009_event_registration_acquisition_ref.sql",
-      "contentHash": "aa8a7673e0a7da7c8e2bada5ab731b18ec34e11ea9085aab5bc9983da8d2b461",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 3,
-      "hasStructuralAnalysis": true
-    },
-    "supabase/migrations/010_email_suppressions.sql": {
-      "filePath": "supabase/migrations/010_email_suppressions.sql",
-      "contentHash": "11ff338bde9787a7895cad2810c5193008741f9c2c119e5ff8b97a8792b4e5f9",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 27,
-      "hasStructuralAnalysis": true
-    },
-    "supabase/migrations/011_event_registration_intake.sql": {
-      "filePath": "supabase/migrations/011_event_registration_intake.sql",
-      "contentHash": "be378c3e1a8162ba1ef4d49dd88f6244ca108617d949c9124fd9dc05c9b14939",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 35,
-      "hasStructuralAnalysis": true
-    },
-    "supabase/migrations/012_fix_intake_upsert_conflict_target.sql": {
-      "filePath": "supabase/migrations/012_fix_intake_upsert_conflict_target.sql",
-      "contentHash": "e9c9d224c76a7a3cd1d26638463f3aac751c69f0a9fe7d0afa905a2201e58a95",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 15,
-      "hasStructuralAnalysis": true
-    },
-    "supabase/migrations/013_event_email_send_log.sql": {
-      "filePath": "supabase/migrations/013_event_email_send_log.sql",
-      "contentHash": "7bef8161a6fa543d18f2c92c31e0ca2cc503536fb394ef72be2e51d3d49b98d8",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 32,
-      "hasStructuralAnalysis": true
-    },
-    "supabase/migrations/014_event_capacity_reservations.sql": {
-      "filePath": "supabase/migrations/014_event_capacity_reservations.sql",
-      "contentHash": "8a79305baef8ce61cca86b7f966d4aa44995dd1b492b300201d7f1a19df5a495",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 312,
-      "hasStructuralAnalysis": true
-    },
-    "supabase/migrations/015_event_registration_ai_level.sql": {
-      "filePath": "supabase/migrations/015_event_registration_ai_level.sql",
-      "contentHash": "1838bb9cecded6e6ce3a8c76f523c4eddb242de6a371388c5fe6ea3660fa13e6",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 12,
-      "hasStructuralAnalysis": true
-    },
-    "supabase/migrations/016_event_registration_ai_grades_and_attendance.sql": {
-      "filePath": "supabase/migrations/016_event_registration_ai_grades_and_attendance.sql",
-      "contentHash": "d0cd4f3fcfb1f51189d9f4b14b5a472912d4007c6f2e48e20cd1ef2ee9751a50",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 56,
-      "hasStructuralAnalysis": true
-    },
-    "supabase/migrations/017_event_registration_intake_rls.sql": {
-      "filePath": "supabase/migrations/017_event_registration_intake_rls.sql",
-      "contentHash": "1b34c2e2bfc1bf078dd1defd443a3ecae8d26b48c48c8f559ec47e16f36c425a",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 12,
-      "hasStructuralAnalysis": true
-    },
-    "supabase/migrations/018_giveaway_followup_sends.sql": {
-      "filePath": "supabase/migrations/018_giveaway_followup_sends.sql",
-      "contentHash": "18a75e364a9b397e02a1f96e88affb81c2317e5dcf62570b5471e89735ded94f",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 34,
-      "hasStructuralAnalysis": true
-    },
-    "supabase/migrations/019_giveaway_followup_day14_day30.sql": {
-      "filePath": "supabase/migrations/019_giveaway_followup_day14_day30.sql",
-      "contentHash": "d688ffb2a1755faef23636946d2fbb91fa698e535b54db06741a3bb1088d4e29",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 17,
-      "hasStructuralAnalysis": true
-    },
-    "supabase/migrations/020_giveaway_followup_sales_track.sql": {
-      "filePath": "supabase/migrations/020_giveaway_followup_sales_track.sql",
-      "contentHash": "c5e91104b2a30657576e5d3a01cc11495e6315c79ea7bf82363a412492a0c873",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 14,
-      "hasStructuralAnalysis": true
-    },
     "tailwind.config.ts": {
       "filePath": "tailwind.config.ts",
       "contentHash": "d0e7f5430c09256c9b9429fcb4cc15b67b88af912ce3fabb1cbd858eacecc361",
@@ -20626,7 +19994,7 @@
     },
     "tests/event-checkout.test.ts": {
       "filePath": "tests/event-checkout.test.ts",
-      "contentHash": "619f54ba6f0d03030207d199e0bcc0ae7aa479006e26dd763af85a359e88513f",
+      "contentHash": "47c8476b31c7dcfa585681ae5bd8817aea55bcffb9576922111dfa1773b1cedf",
       "functions": [],
       "classes": [],
       "imports": [
@@ -20659,7 +20027,7 @@
         }
       ],
       "exports": [],
-      "totalLines": 137,
+      "totalLines": 151,
       "hasStructuralAnalysis": true
     },
     "tests/event-confirmation-location-privacy.test.ts": {
@@ -20906,7 +20274,7 @@
     },
     "tests/event-pricing-and-data.test.ts": {
       "filePath": "tests/event-pricing-and-data.test.ts",
-      "contentHash": "7525a661a1ed3e641f4ba4f0e523c521b4dc4af293e5b8eabc7abf39e685b784",
+      "contentHash": "abfcf9dcfc162b63a86781e88ae9bf41297f9a1d0016574619d4cb751a1bc4d1",
       "functions": [
         {
           "name": "nowAt",
@@ -20977,7 +20345,7 @@
         }
       ],
       "exports": [],
-      "totalLines": 400,
+      "totalLines": 415,
       "hasStructuralAnalysis": true
     },
     "tests/event-registration-flow.test.ts": {
@@ -21074,7 +20442,7 @@
     },
     "tests/event-status.test.ts": {
       "filePath": "tests/event-status.test.ts",
-      "contentHash": "fae0f8e50d5bb4957663c45fc83ead60f16d1b90c9cc237ffa822af34680568e",
+      "contentHash": "ebcdb2ead6b8f608ceadc908f5b515f8fd1fee9e92d5ef6ee33f74782b999d59",
       "functions": [],
       "classes": [],
       "imports": [
@@ -21105,7 +20473,7 @@
         }
       ],
       "exports": [],
-      "totalLines": 42,
+      "totalLines": 47,
       "hasStructuralAnalysis": true
     },
     "tests/event-tokens.test.ts": {
@@ -21219,7 +20587,7 @@
     },
     "tests/free-ai-tools.test.ts": {
       "filePath": "tests/free-ai-tools.test.ts",
-      "contentHash": "af672ef00dad38bb6e002855f4d47641633570e2d21b72487a9bf7e8b0dad90e",
+      "contentHash": "51798a933da2c28727ef32040ae8b4cc71a6cc209633fef7a93d6d1b83d89a60",
       "functions": [],
       "classes": [],
       "imports": [
@@ -21286,7 +20654,7 @@
         }
       ],
       "exports": [],
-      "totalLines": 126,
+      "totalLines": 129,
       "hasStructuralAnalysis": true
     },
     "tests/generic-giveaway-email.test.ts": {
@@ -22592,26 +21960,6 @@
       ],
       "exports": [],
       "totalLines": 9,
-      "hasStructuralAnalysis": true
-    },
-    "tsconfig.json": {
-      "filePath": "tsconfig.json",
-      "contentHash": "55134881a23efd2a1f9266d2d0752731ff9c40d0e867136cd8863ea679560a09",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 42,
-      "hasStructuralAnalysis": true
-    },
-    "vercel.json": {
-      "filePath": "vercel.json",
-      "contentHash": "7eb65ef586f8be9d47fd557b4813d81105d024f0f744073eb3a81d6d6931cd52",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 48,
       "hasStructuralAnalysis": true
     }
   }

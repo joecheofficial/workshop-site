@@ -1,16 +1,31 @@
 {
   "mode": "incremental",
-  "completedAt": "2026-11-08T20:09:23.635858+00:00",
-  "gitCommitHash": "9fe83fd64038f365b9f9c47266a4b7087ac83648",
-  "changedFilesAnalyzed": 15,
-  "dependencyFileNodesRecovered": 3,
-  "representedFiles": 79,
-  "inventoryFiles": 565,
-  "nodes": 190,
-  "edges": 330,
+  "completedAt": "2026-11-10T20:06:02.741213+00:00",
+  "gitCommitHash": "a1865212b9904b638503325449a6f0a258b50773",
+  "changedFilesAnalyzed": 30,
+  "representedFiles": 109,
+  "inventoryFiles": 581,
+  "nodes": 256,
+  "edges": 479,
   "layers": 9,
-  "tourSteps": 13,
+  "tourSteps": 14,
   "validation": "passed",
+  "nodeTypes": {
+    "file": 96,
+    "function": 158,
+    "document": 1,
+    "config": 1
+  },
+  "edgeTypes": {
+    "contains": 152,
+    "imports": 120,
+    "tested_by": 20,
+    "calls": 74,
+    "related": 5,
+    "exports": 94,
+    "configures": 2,
+    "depends_on": 12
+  },
   "warnings": [
     "Node 'file:public/downloads/joes-linkedin-kit-v1.0.zip' has no edges (orphan)",
     "Node 'file:public/downloads/joes-linkedin-kit-v1.0.zip.sha256' has no edges (orphan)",
@@ -23,25 +38,27 @@
     "Node 'file:src/app/bonus/auto-lead-magnet/page.tsx' has no edges (orphan)",
     "Node 'file:src/lib/supabase.ts' has no edges (orphan)"
   ],
-  "newOrphans": [],
   "assembleReview": {
     "fixedSectionOk": true,
-    "nodesRecovered": 3,
-    "edgesRestored": 18,
-    "crossBatchEdgesAdded": 8,
+    "nodesRecovered": 0,
+    "edgesRestored": 13,
+    "crossBatchEdgesAdded": 0,
     "typesRemapped": 0,
     "complexityRemapped": 0,
     "notes": [
-      "Restored 18 original batch edges and 0 surviving previous inbound edges to refreshed nodes.",
-      "Merge report documents no ID or complexity normalization problems; three tested_by edges became valid after their production dependency-file endpoints were recovered and were restored with production-to-test direction.",
-      "Import-map gaps outside inherited partial graph scope remain: 488 absent source files and 16 absent target paths. No full graph expansion performed.",
-      "Three recovered dependency file nodes were read for accurate summaries; these are additional to the 15 changed files."
+      "Strict incremental review: 30 changed files were refreshed; unchanged dependencies were not read or reanalyzed.",
+      "Merge fixed section is reasonable: four tested_by edges had missing endpoints; no systemic ID or complexity corrections occurred.",
+      "Restored 13 valid prior inbound edges from unchanged sources to refreshed nodes; restored 0 original batch edges. No prior outgoing edges from changed sources were restored.",
+      "66 original batch edges still lack at least one endpoint and remain excluded under the inherited partial graph scope.",
+      "Import map coverage remains partial: 487 source files have no represented file node, and 42 distinct imported target paths from represented sources lack a file node.",
+      "All prior nodes remain represented. No batch nodes were erroneously dropped. Final graph has zero dangling edges."
     ]
   },
   "notes": [
-    "Inherited partial graph scope preserved.",
-    "Initial analyzer dispatch thread-context failure recovered by fresh-context dispatch.",
-    "Batching warned of oversized communities and neighborMap soft cap; all 15 changed files analyzed.",
-    "Dashboard not launched for graph-only non-interactive refresh."
+    "Inherited partial graph scope preserved; only 30 changed source/test files analyzed. Eleven added WebP images omitted from semantic analysis.",
+    "Batch communities filtered to changed files only. Batching warnings: oversized communities; PackPage neighborMap soft cap.",
+    "Initial dispatch thread-context load failed; fresh-context single retry succeeded.",
+    "Every batch normalized before merge using Python 3.11.",
+    "Dashboard skipped for non-interactive graph-only refresh."
   ]
 }

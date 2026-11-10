@@ -1,6 +1,6 @@
 {
   "projectName": "masterminds-workshop",
-  "projectDescription": "Masterminds Workshop Site — a Next.js application for displaying workshop information, courses, and giveaways with advanced animations and interactive components.",
+  "projectDescription": "Masterminds Workshop Site \u2014 a Next.js application for displaying workshop information, courses, and giveaways with advanced animations and interactive components.",
   "languages": [
     "TypeScript",
     "JavaScript",
@@ -359,6 +359,72 @@
       "fileCategory": "script"
     },
     {
+      "path": "public/events/joechella-big-one/bali-bloom/balibloom3_arronshoots_012.webp",
+      "language": "webp",
+      "sizeLines": 858,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/events/joechella-big-one/bali-bloom/balibloom3_arronshoots_018.webp",
+      "language": "webp",
+      "sizeLines": 547,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/events/joechella-big-one/bali-bloom/balibloom3_arronshoots_041.webp",
+      "language": "webp",
+      "sizeLines": 355,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/events/joechella-big-one/bali-bloom/balibloom3_arronshoots_061.webp",
+      "language": "webp",
+      "sizeLines": 795,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/events/joechella-big-one/bali-bloom/balibloom3_arronshoots_088.webp",
+      "language": "webp",
+      "sizeLines": 512,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/events/joechella-big-one/bali-bloom/balibloom3_arronshoots_150.webp",
+      "language": "webp",
+      "sizeLines": 272,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_LIGHTSART_-59.webp",
+      "language": "webp",
+      "sizeLines": 753,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_slavicakostovski_-6780.webp",
+      "language": "webp",
+      "sizeLines": 434,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_yurygoryanoy_IMG_3876.webp",
+      "language": "webp",
+      "sizeLines": 824,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_yurygoryanoy_IMG_4552.webp",
+      "language": "webp",
+      "sizeLines": 390,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_yurygoryanoy_IMG_5784.webp",
+      "language": "webp",
+      "sizeLines": 1113,
+      "fileCategory": "code"
+    },
+    {
       "path": "public/giveaways/cross-cli-compatibility-routing-prompt.md",
       "language": "markdown",
       "sizeLines": 217,
@@ -715,7 +781,7 @@
     {
       "path": "src/app/api/lead-magnet/route.ts",
       "language": "typescript",
-      "sizeLines": 852,
+      "sizeLines": 826,
       "fileCategory": "code"
     },
     {
@@ -1415,6 +1481,18 @@
       "fileCategory": "code"
     },
     {
+      "path": "src/app/giveaways/free-ai-youtube-skills/layout.tsx",
+      "language": "typescript",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/giveaways/free-ai-youtube-skills/page.tsx",
+      "language": "typescript",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
       "path": "src/app/giveaways/free-ai-yovoice/layout.tsx",
       "language": "typescript",
       "sizeLines": 31,
@@ -1459,7 +1537,7 @@
     {
       "path": "src/app/giveaways/guardog/pack.ts",
       "language": "typescript",
-      "sizeLines": 201,
+      "sizeLines": 206,
       "fileCategory": "code"
     },
     {
@@ -1471,7 +1549,7 @@
     {
       "path": "src/app/giveaways/guardog/prompts.ts",
       "language": "typescript",
-      "sizeLines": 35,
+      "sizeLines": 47,
       "fileCategory": "code"
     },
     {
@@ -1754,6 +1832,24 @@
       "path": "src/app/giveaways/squarespace-escape/prompts.ts",
       "language": "typescript",
       "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/giveaways/stop-paying/layout.tsx",
+      "language": "typescript",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/giveaways/stop-paying/pack.ts",
+      "language": "typescript",
+      "sizeLines": 132,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/giveaways/stop-paying/page.tsx",
+      "language": "typescript",
+      "sizeLines": 30,
       "fileCategory": "code"
     },
     {
@@ -2239,13 +2335,13 @@
     {
       "path": "src/components/events/EventPageView.tsx",
       "language": "typescript",
-      "sizeLines": 700,
+      "sizeLines": 717,
       "fileCategory": "code"
     },
     {
       "path": "src/components/events/EventRegistrationSection.tsx",
       "language": "typescript",
-      "sizeLines": 1077,
+      "sizeLines": 1095,
       "fileCategory": "code"
     },
     {
@@ -2269,7 +2365,7 @@
     {
       "path": "src/components/events/joechella/FestivalHero.tsx",
       "language": "typescript",
-      "sizeLines": 172,
+      "sizeLines": 152,
       "fileCategory": "code"
     },
     {
@@ -2287,7 +2383,7 @@
     {
       "path": "src/components/events/joechella/VenueGallery.tsx",
       "language": "typescript",
-      "sizeLines": 90,
+      "sizeLines": 94,
       "fileCategory": "code"
     },
     {
@@ -2563,7 +2659,7 @@
     {
       "path": "src/content/session-8-guide.tsx",
       "language": "typescript",
-      "sizeLines": 1022,
+      "sizeLines": 1024,
       "fileCategory": "code"
     },
     {
@@ -2653,7 +2749,7 @@
     {
       "path": "src/lib/event-checkout.ts",
       "language": "typescript",
-      "sizeLines": 121,
+      "sizeLines": 125,
       "fileCategory": "code"
     },
     {
@@ -2713,7 +2809,7 @@
     {
       "path": "src/lib/events.tsx",
       "language": "typescript",
-      "sizeLines": 1921,
+      "sizeLines": 1980,
       "fileCategory": "code"
     },
     {
@@ -2725,7 +2821,7 @@
     {
       "path": "src/lib/free-ai-tool-pack.ts",
       "language": "typescript",
-      "sizeLines": 141,
+      "sizeLines": 142,
       "fileCategory": "code"
     },
     {
@@ -2743,13 +2839,13 @@
     {
       "path": "src/lib/free-ai-tools.ts",
       "language": "typescript",
-      "sizeLines": 1822,
+      "sizeLines": 1933,
       "fileCategory": "code"
     },
     {
       "path": "src/lib/generic-giveaway-email.ts",
       "language": "typescript",
-      "sizeLines": 255,
+      "sizeLines": 256,
       "fileCategory": "code"
     },
     {
@@ -2767,13 +2863,13 @@
     {
       "path": "src/lib/giveaway-offers.ts",
       "language": "typescript",
-      "sizeLines": 111,
+      "sizeLines": 180,
       "fileCategory": "code"
     },
     {
       "path": "src/lib/giveaways.ts",
       "language": "typescript",
-      "sizeLines": 492,
+      "sizeLines": 508,
       "fileCategory": "code"
     },
     {
@@ -2851,7 +2947,7 @@
     {
       "path": "src/lib/pack-page.ts",
       "language": "typescript",
-      "sizeLines": 180,
+      "sizeLines": 182,
       "fileCategory": "code"
     },
     {
@@ -3181,7 +3277,7 @@
     {
       "path": "tests/event-checkout.test.ts",
       "language": "typescript",
-      "sizeLines": 136,
+      "sizeLines": 150,
       "fileCategory": "code"
     },
     {
@@ -3217,7 +3313,7 @@
     {
       "path": "tests/event-pricing-and-data.test.ts",
       "language": "typescript",
-      "sizeLines": 399,
+      "sizeLines": 414,
       "fileCategory": "code"
     },
     {
@@ -3235,7 +3331,7 @@
     {
       "path": "tests/event-status.test.ts",
       "language": "typescript",
-      "sizeLines": 41,
+      "sizeLines": 46,
       "fileCategory": "code"
     },
     {
@@ -3253,7 +3349,7 @@
     {
       "path": "tests/free-ai-tools.test.ts",
       "language": "typescript",
-      "sizeLines": 125,
+      "sizeLines": 128,
       "fileCategory": "code"
     },
     {
@@ -3413,10 +3509,10 @@
       "fileCategory": "config"
     }
   ],
-  "fileCount": 565,
+  "fileCount": 581,
   "totalLines": 84355,
   "complexity": "complex",
-  "filteredByIgnore": 43,
+  "filteredByIgnore": 54,
   "importMap": {
     ".claude/settings.json": [],
     ".claude/skills/gitnexus/gitnexus-cli/SKILL.md": [],
@@ -3474,6 +3570,17 @@
     "public/downloads/joes-linkedin-kit-v1.0.zip.sha256": [],
     "public/downloads/joes-salesman-v1.0.zip.sha256": [],
     "public/downloads/maccleaner-installer.sh": [],
+    "public/events/joechella-big-one/bali-bloom/balibloom3_arronshoots_012.webp": [],
+    "public/events/joechella-big-one/bali-bloom/balibloom3_arronshoots_018.webp": [],
+    "public/events/joechella-big-one/bali-bloom/balibloom3_arronshoots_041.webp": [],
+    "public/events/joechella-big-one/bali-bloom/balibloom3_arronshoots_061.webp": [],
+    "public/events/joechella-big-one/bali-bloom/balibloom3_arronshoots_088.webp": [],
+    "public/events/joechella-big-one/bali-bloom/balibloom3_arronshoots_150.webp": [],
+    "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_LIGHTSART_-59.webp": [],
+    "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_slavicakostovski_-6780.webp": [],
+    "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_yurygoryanoy_IMG_3876.webp": [],
+    "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_yurygoryanoy_IMG_4552.webp": [],
+    "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_yurygoryanoy_IMG_5784.webp": [],
     "public/giveaways/cross-cli-compatibility-routing-prompt.md": [],
     "public/hated-task-prompts.html": [],
     "public/hated-task-prompts.html.kg.json": [],
@@ -3653,6 +3760,7 @@
     "src/app/api/illy-auth/route.ts": [],
     "src/app/api/jill-auth/route.ts": [],
     "src/app/api/lead-magnet/route.ts": [
+      "src/app/giveaways/guardog/prompts.ts",
       "src/lib/email-logo.ts",
       "src/lib/email-suppressions.ts",
       "src/lib/free-ai-tool-email.ts",
@@ -3999,6 +4107,11 @@
       "src/components/giveaways/PackPage.tsx",
       "src/lib/free-ai-tool-pack.ts"
     ],
+    "src/app/giveaways/free-ai-youtube-skills/layout.tsx": [],
+    "src/app/giveaways/free-ai-youtube-skills/page.tsx": [
+      "src/components/giveaways/PackPage.tsx",
+      "src/lib/free-ai-tool-pack.ts"
+    ],
     "src/app/giveaways/free-ai-yovoice/layout.tsx": [],
     "src/app/giveaways/free-ai-yovoice/page.tsx": [
       "src/components/giveaways/PackPage.tsx",
@@ -4149,6 +4262,14 @@
       "src/components/giveaways/PackPage.tsx"
     ],
     "src/app/giveaways/squarespace-escape/prompts.ts": [],
+    "src/app/giveaways/stop-paying/layout.tsx": [],
+    "src/app/giveaways/stop-paying/pack.ts": [
+      "src/lib/pack-page.ts"
+    ],
+    "src/app/giveaways/stop-paying/page.tsx": [
+      "src/app/giveaways/stop-paying/pack.ts",
+      "src/components/giveaways/PackPage.tsx"
+    ],
     "src/app/giveaways/terminal-to-claude-desktop/layout.tsx": [],
     "src/app/giveaways/terminal-to-claude-desktop/pack.ts": [
       "src/lib/pack-page.ts"
@@ -5069,6 +5190,6 @@
       "total": 29
     }
   },
-  "totalFiles": 565,
+  "totalFiles": 581,
   "estimatedComplexity": "very-large"
 }
