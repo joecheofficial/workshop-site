@@ -700,11 +700,6 @@ export const events: EventDefinition[] = [
         ],
       },
       {
-        "type": "html",
-        "id": "weekend-program",
-        "html": "<section class=\"mx-auto max-w-6xl px-6 pt-10 pb-2\"><h2 class=\"event-gradient-title text-[2.2rem] font-extrabold leading-tight md:text-[3.4rem]\">The Experience</h2><p class=\"mt-4 text-base leading-8 text-[#FCF4EB]/75\">The program for Friday and Saturday. All times are Bali time.</p></section>"
-      },
-      {
         "type": "timeline",
         "id": "schedule",
         "eyebrow": "The Program",
