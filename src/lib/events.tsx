@@ -745,7 +745,7 @@ export const events: EventDefinition[] = [
               </article>
               <article class="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] shadow-[0_20px_60px_-30px_rgba(0,0,0,0.8)]">
                 <div class="relative aspect-[4/3] overflow-hidden">
-                  <img src="/events/joechella-big-one/sunset-card.webp" alt="Sunset over the ocean at the resort" loading="lazy" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" style="object-position:center" />
+                  <img src="/events/joechella-big-one/hot-air-balloon-card.webp" alt="A two-person hot air balloon on a tether at sunset by the ocean" loading="lazy" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" style="object-position:center 35%" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
                   <span class="absolute bottom-4 left-4 rounded-full bg-[#F5C3C6] px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-[#2A1418]">Saturday evening</span>
                 </div>
