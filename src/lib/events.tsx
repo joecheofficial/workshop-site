@@ -576,18 +576,18 @@ export const events: EventDefinition[] = [
     status: 'live',
     title: "JOECHELLA: The Big One",
     shortTitle: 'Joechella: The Big One',
-    eyebrow: 'Friday + Saturday, December 11 + 12',
+    eyebrow: 'December 11th to 12th',
     badge: 'The Big One',
     ctaLabel: 'Get a Weekend Pass',
     summary:
-      'Two days of Joechella, my 50th birthday celebration at Bali Beach Glamping. Come for Friday, or join us for Friday and Saturday. Your donation includes both days.',
-    description: "Join us at Bali Beach Glamping for two unforgettable days of community, creativity and celebration. Your ticket helps bring the celebration to life, with the option to make an additional donation to PKP Women's Initiative, supporting women in Bali.",
-    dateLabel: 'Friday + Saturday, December 11 + 12, 2026',
+      "Two days of Joechella, Joe Che's 50th birthday celebration at a luxury oceanside resort in Tabanan, Bali. For friends, and friends of friends. Your IDR 500K ticket covers both days.",
+    description: "Join us at a luxury oceanside resort in Tabanan, Bali for two unforgettable days of community, creativity and celebration. Your ticket helps bring the celebration to life, with the option to make an additional donation to PKP Women's Initiative, supporting women in Bali.",
+    dateLabel: 'December 11th to 12th, 2026',
     timeLabel: 'Friday from 11:30 AM; Saturday from 2:00 PM until late',
-    locationLabel: 'Bali Beach Glamping, Tabanan, Bali',
+    locationLabel: 'Luxury resort, Tabanan, Bali. Address sent to ticket holders.',
     durationLabel: 'Come Friday, or Friday and Saturday. One contribution covers both.',
     heroImage: '/events/joechella-big-one/bbg-drone-shots.jpeg',
-    heroAlt: 'Bali Beach Glamping from above, the Joechella venue',
+    heroAlt: 'The Joechella resort from above, on the ocean in Tabanan, Bali',
     heroVideoSrc: '/events/joechella-big-one/joechella-party-20261029.mp4',
     heroVideoPoster: '/events/joechella-big-one/joechella-party-20261029-poster.jpg',
     heroVideoMobileSrc: '/events/joechella-big-one/joechella-party-20261029-mobile.mp4',
@@ -606,7 +606,7 @@ export const events: EventDefinition[] = [
     },
     audience: [
       'Friends of Joe',
-      'The Bali community',
+      'Friends of friends of Joe',
       'Builders and creators',
       'Dancers and music lovers',
       'Anyone who loved Bali Bloom',
@@ -632,32 +632,32 @@ export const events: EventDefinition[] = [
     },
     pricing: {
       currencySymbol: '$',
-      fullPrice: 17,
-      minDonation: 17,
+      fullPrice: 28,
+      minDonation: 28,
       donationMode: true,
       checkoutHref: '',
-      donationLabelNote: 'USD; two-day ticket starts at US$17, approximately IDR 300K',
-      checkoutNote: 'One contribution covers Friday or Friday and Saturday. The IDR 300K ticket (US$17) helps cover the celebration. Every dollar above US$17 goes directly to PKP. Checkout is charged in USD; rupiah amounts are approximate equivalents.',
+      donationLabelNote: 'USD; two-day ticket starts at US$28, approximately IDR 500K',
+      checkoutNote: 'One contribution covers Friday or Friday and Saturday. The IDR 500K ticket (US$28) helps cover the celebration. Every dollar above US$28 goes directly to PKP. Checkout is charged in USD; rupiah amounts are approximate equivalents.',
       donationPackages: [
         {
-          amount: 17,
+          amount: 28,
           label: '2-day ticket only',
-          description: 'IDR 300K (US$17 total). Entry for Friday or Friday and Saturday. Supports the celebration costs.',
+          description: 'IDR 500K (US$28 total). Entry for Friday or Friday and Saturday. Supports the celebration costs.',
         },
         {
-          amount: 50,
+          amount: 61,
           label: '2-day ticket + IDR 600K donation to PKP',
-          description: 'IDR 900K total (US$50): US$17 ticket + US$33 for PKP. Helps fund PKP Community Centre’s catering van and dedicated kitchen, creating paid work for local women in need, as well as a permanent community centre offering safe harbour for women and children.',
+          description: 'IDR 1.1M total (US$61): US$28 ticket + US$33 for PKP. Helps fund PKP Community Centre’s catering van and dedicated kitchen, creating paid work for local women in need, as well as a permanent community centre offering safe harbour for women and children.',
         },
         {
-          amount: 100,
+          amount: 111,
           label: '2-day ticket + IDR 1.5M donation to PKP',
-          description: 'IDR 1.8M total (US$100): US$17 ticket + US$83 for PKP. Takes one woman out of an abusive relationship for one month.',
+          description: 'IDR 2M total (US$111): US$28 ticket + US$83 for PKP. Takes one woman out of an abusive relationship for one month.',
         },
       ],
     },
     successDetail:
-      "You're in for Joechella on Friday and Saturday, December 11 and 12. Your weekend pass covers either day or both.",
+      "You're in for Joechella on Friday and Saturday, December 11 and 12. We'll send the address before the weekend. Your weekend pass covers either day or both.",
     postPurchase: {
       setupPageTitle: "You're in for Joechella's weekend.",
       setupPageIntro: 'Friday and Saturday, December 11 and 12, 2026 at Bali Beach Glamping, Tabanan.',
@@ -668,23 +668,105 @@ export const events: EventDefinition[] = [
       setupItems: [],
     },
     metadata: {
-      title: "Joechella: Joe Che's 50th Birthday Weekend, December 11 + 12, 2026",
+      title: "Joechella: Joe Che's 50th Birthday Weekend, December 11 to 12, 2026",
       description:
-        'Join Joechella at Bali Beach Glamping on December 11 and 12. One contribution covers Friday, or Friday and Saturday, with every dollar above the ticket amount going directly to PKP.',
+        "Joe Che's 50th birthday weekend at a luxury oceanside resort in Tabanan, Bali, December 11 to 12. For friends and friends of friends. One IDR 500K ticket covers both days.",
+      icons: {
+        icon: [{ url: '/events/joechella-big-one/joe-favicon.png', type: 'image/png', sizes: '256x256' }],
+        apple: [{ url: '/events/joechella-big-one/joe-apple-icon.png', sizes: '180x180' }],
+      },
     },
     sections: [
       {
         type: 'html',
         id: 'invite',
         html: `
-          <div class="not-prose max-w-4xl">
-            <h2 class="text-[2.8rem] font-extrabold leading-[1.0] tracking-tight text-[#FCF4EB] md:text-[3.5rem] mb-5">JOECHELLA: The Big One</h2>
-            <h3 class="text-2xl font-bold leading-tight text-[#F5C3C6] md:text-3xl mb-6">Half a Century. A Whole Lot of Magic.</h3>
-            <p class="text-xl leading-8 text-[#FCF4EB]/90 mb-5"><strong>You're invited to celebrate Joe's 50th!</strong></p>
-            <p class="text-lg leading-8 text-[#FCF4EB]/80 mb-5">Join us at <strong>Bali Beach Glamping</strong> for two unforgettable days of community, creativity and celebration.</p>
-            <p class="text-lg leading-8 text-[#FCF4EB]/90 mb-5"><strong>December 11–12 | Open to the Bali Community</strong></p>
-            <p class="text-lg leading-8 text-[#FCF4EB]/80 mb-5">Expect a pool party, lightning talks, workshops, connection games, live music, ceremony, DJ's Tea Lounge, a special immersive theatre experience and so much more!</p>
-            <p class="text-lg leading-8 text-[#FCF4EB]/80">Come celebrate with us in true Joe Che style. With community, in connection and fully expressed. Your ticket helps bring the celebration to life, with the option to make an additional donation to <strong>PKP Women's Initiative</strong>, supporting women in Bali.</p>
+          <div class="not-prose">
+            <div class="max-w-4xl">
+              <p class="mb-4 text-sm font-bold uppercase tracking-[0.28em] text-[#F5C3C6]">You're invited</p>
+              <h2 class="mb-5 text-[2.8rem] font-extrabold leading-[1.0] tracking-tight text-[#FCF4EB] md:text-[3.75rem]">JOECHELLA: The Big One</h2>
+              <h3 class="mb-6 text-2xl font-bold leading-tight text-[#F5C3C6] md:text-3xl">Half a Century. A Whole Lot of Magic.</h3>
+              <p class="mb-6 text-xl leading-8 text-[#FCF4EB]/90">Joe Che is turning 50, and he's celebrating with two days of community, creativity and celebration on the ocean in Bali. This one is for friends, and friends of friends, of Joe.</p>
+              <div class="mb-10 flex flex-wrap gap-3">
+                <span class="rounded-full border border-[#F5C3C6]/40 bg-[#F5C3C6]/10 px-4 py-2 text-sm font-semibold text-[#FCF4EB]">December 11th to 12th</span>
+                <span class="rounded-full border border-[#F5C3C6]/40 bg-[#F5C3C6]/10 px-4 py-2 text-sm font-semibold text-[#FCF4EB]">Luxury resort, Tabanan, Bali</span>
+                <span class="rounded-full border border-[#F5C3C6]/40 bg-[#F5C3C6]/10 px-4 py-2 text-sm font-semibold text-[#FCF4EB]">Address sent to ticket holders</span>
+                <span class="rounded-full border border-[#F5C3C6]/40 bg-[#F5C3C6]/10 px-4 py-2 text-sm font-semibold text-[#FCF4EB]">IDR 500K covers both days</span>
+              </div>
+            </div>
+            <div class="mb-10 max-w-4xl rounded-3xl border border-white/10 bg-gradient-to-br from-[#F5C3C6]/15 via-white/[0.03] to-transparent p-7 md:p-9">
+              <p class="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-[#F5C3C6]">What to expect</p>
+              <p class="text-lg leading-8 text-[#FCF4EB]/85">Picture an oceanside resort taken over by the people Joe loves. Friday starts with ideas: lightning talks, workshops and connection games, then a welcome ceremony that turns strangers into friends. By late afternoon the pool party is in full swing, the sun drops into the ocean, we sit down to a family dinner, and the fire comes out. Then the music takes over until late. Saturday is slower and stranger in the best way: tea, dance, play, immersive theatre and a hot air balloon at sunset.</p>
+            </div>
+            <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+              <article class="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] shadow-[0_20px_60px_-30px_rgba(0,0,0,0.8)]">
+                <div class="relative aspect-[4/3] overflow-hidden">
+                  <img src="/events/joechella-big-one/pool-sunny-card.webp" alt="The infinity pool facing the ocean at the Joechella resort" loading="lazy" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" style="object-position:center" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+                  <span class="absolute bottom-4 left-4 rounded-full bg-[#F5C3C6] px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-[#2A1418]">Friday afternoon</span>
+                </div>
+                <div class="p-6">
+                  <h4 class="mb-3 text-2xl font-bold leading-tight text-[#FCF4EB]">The Pool Party</h4>
+                  <p class="text-base leading-7 text-[#FCF4EB]/75">From 4:00 PM the pool becomes the dance floor. DJs on the deck, the ocean right there, acro yoga, floaties, cold drinks and the kind of shenanigans you'll still be telling people about next year. Bring your swimsuit and your best sunglasses.</p>
+                </div>
+              </article>
+              <article class="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] shadow-[0_20px_60px_-30px_rgba(0,0,0,0.8)]">
+                <div class="relative aspect-[4/3] overflow-hidden">
+                  <img src="/events/joechella-big-one/bali-bloom/balibloom3_arronshoots_041.webp" alt="Friends laughing together at a gathering on the same land" loading="lazy" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" style="object-position:center" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+                  <span class="absolute bottom-4 left-4 rounded-full bg-[#F5C3C6] px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-[#2A1418]">Talks and workshops</span>
+                </div>
+                <div class="p-6">
+                  <h4 class="mb-3 text-2xl font-bold leading-tight text-[#FCF4EB]">Big Ideas, No Name Tags</h4>
+                  <p class="text-base leading-7 text-[#FCF4EB]/75">Short, sharp lightning talks and workshops from friends who build companies, heal bodies and live interesting lives: AI, somatic work, relationships and Deep Dating. We're not naming the speakers here. We don't want to get anyone in trouble. Come and hear them in person.</p>
+                </div>
+              </article>
+              <article class="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] shadow-[0_20px_60px_-30px_rgba(0,0,0,0.8)]">
+                <div class="relative aspect-[4/3] overflow-hidden">
+                  <img src="/events/joechella-big-one/jazzy-o.webp" alt="Jazzy O, DJ and music director" loading="lazy" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" style="object-position:center 30%" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+                  <span class="absolute bottom-4 left-4 rounded-full bg-[#F5C3C6] px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-[#2A1418]">Live music</span>
+                </div>
+                <div class="p-6">
+                  <h4 class="mb-3 text-2xl font-bold leading-tight text-[#FCF4EB]">Jazzy O and Friends</h4>
+                  <p class="text-base leading-7 text-[#FCF4EB]/75">Friday night is live, interactive music. You're not watching a show, you're part of it. Jazzy O is playing, along with international DJs and artists we can't mention, and the musicians we think are the best on the island. They're playing until late.</p>
+                </div>
+              </article>
+              <article class="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] shadow-[0_20px_60px_-30px_rgba(0,0,0,0.8)]">
+                <div class="relative aspect-[4/3] overflow-hidden">
+                  <img src="/events/joechella-big-one/bali-bloom/balibloom3_arronshoots_150.webp" alt="A fire performance lighting up the night" loading="lazy" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" style="object-position:center" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+                  <span class="absolute bottom-4 left-4 rounded-full bg-[#F5C3C6] px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-[#2A1418]">Friday night</span>
+                </div>
+                <div class="p-6">
+                  <h4 class="mb-3 text-2xl font-bold leading-tight text-[#FCF4EB]">Sunset, Fire and Family Dinner</h4>
+                  <p class="text-base leading-7 text-[#FCF4EB]/75">Sunset by the ocean, a long family-style dinner, a fire show, and a few words from Joe on lessons from 50 years of life. Then a birthday surprise we're not allowed to tell you about.</p>
+                </div>
+              </article>
+              <article class="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] shadow-[0_20px_60px_-30px_rgba(0,0,0,0.8)]">
+                <div class="relative aspect-[4/3] overflow-hidden">
+                  <img src="/events/joechella-big-one/hot-air-balloon-card.webp" alt="A two-person hot air balloon on a tether at sunset by the ocean" loading="lazy" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" style="object-position:center 35%" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+                  <span class="absolute bottom-4 left-4 rounded-full bg-[#F5C3C6] px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-[#2A1418]">Saturday evening</span>
+                </div>
+                <div class="p-6">
+                  <h4 class="mb-3 text-2xl font-bold leading-tight text-[#FCF4EB]">Hot Air Balloon</h4>
+                  <p class="text-base leading-7 text-[#FCF4EB]/75">On Saturday evening Arthur brings his two-person hot air balloon. It goes up on a tether, two at a time, as the sun sets. If you've never been up in one, this is your moment.</p>
+                </div>
+              </article>
+              <article class="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] shadow-[0_20px_60px_-30px_rgba(0,0,0,0.8)]">
+                <div class="relative aspect-[4/3] overflow-hidden">
+                  <img src="/events/joechella-big-one/bali-bloom/BALIBLOOM3_yurygoryanoy_IMG_4552.webp" alt="Guests celebrating beneath festival lights" loading="lazy" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" style="object-position:center" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+                  <span class="absolute bottom-4 left-4 rounded-full bg-[#F5C3C6] px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-[#2A1418]">Saturday night</span>
+                </div>
+                <div class="p-6">
+                  <h4 class="mb-3 text-2xl font-bold leading-tight text-[#FCF4EB]">Emergent Theatre and Tea Lounge</h4>
+                  <p class="text-base leading-7 text-[#FCF4EB]/75">An immersive theatre night with music, tarot, tea, poetry and pop-up acts, then the late-night tea lounge. Things will happen that we can't fully explain on a web page.</p>
+                </div>
+              </article>
+            </div>
+            <p class="mt-10 max-w-4xl text-lg leading-8 text-[#FCF4EB]/80">Come celebrate in true Joe Che style: with community, in connection and fully expressed. Your ticket helps bring the celebration to life, with the option to add a donation to <strong>PKP Women's Initiative</strong>, supporting women in Bali.</p>
           </div>
         `,
       },
@@ -696,7 +778,7 @@ export const events: EventDefinition[] = [
         video: {
           src: 'https://pub-c8d5d807eda94fd7a89d74f95de97030.r2.dev/videos/bali-bloom-recap.mp4',
           poster: '/events/joechella-big-one/sunset-poster.jpg',
-          label: 'Bali Bloom recap video. Sunset at Bali Beach Glamping.',
+          label: 'Bali Bloom recap video. Sunset on the same land.',
           caption: 'Bali Bloom, the festival we held on this land.',
         },
         images: [
@@ -777,7 +859,8 @@ export const events: EventDefinition[] = [
               },
               {
                 "time": "8:30 PM to midnight",
-                "title": "DJs, Live Music and a Birthday Surprise"
+                "title": "Live Interactive Music, DJs and a Birthday Surprise",
+                "body": "Jazzy O, international DJs and artists we can't mention, and the best musicians on the island."
               },
               {
                 "time": "Midnight until late",
@@ -829,6 +912,11 @@ export const events: EventDefinition[] = [
               {
                 "time": "6:00 PM to 7:30 PM",
                 "title": "PKP Community Performance and Sunset Dinner"
+              },
+              {
+                "time": "Sunset",
+                "title": "Hot Air Balloon",
+                "body": "Arthur's two-person hot air balloon goes up on a tether, two at a time, as the sun sets."
               }
             ]
           },
@@ -875,20 +963,12 @@ export const events: EventDefinition[] = [
         eyebrow: 'Optional Donations Go To PKP',
         title: 'Supporting PKP Community Centre',
         body: [
-          'The IDR 300K two-day ticket (US$17) helps cover the celebration costs. Every dollar above US$17 goes directly to PKP. Add IDR 600K (US$33) to help fund PKP’s catering van and dedicated kitchen, creating paid work for local women in need, as well as a permanent community centre offering safe harbour for women and children, or add IDR 1.5M (US$83), which takes one woman out of an abusive relationship for one month.',
+          'The IDR 500K two-day ticket (US$28) helps cover the celebration costs. Every dollar above US$28 goes directly to PKP. Add IDR 600K (US$33) to help fund PKP’s catering van and dedicated kitchen, creating paid work for local women in need, as well as a permanent community centre offering safe harbour for women and children, or add IDR 1.5M (US$83), which takes one woman out of an abusive relationship for one month.',
           'PKP is a community centre in Bali founded by Ibu Sari. It trains women in sewing, cooking and English so they can earn for their families, and it is a safe place for women and children facing domestic violence, divorce or social exclusion.',
         ],
         imageSrc: '/events/connection-dinner-canggu/pkp-catering.jpg',
         imageAlt: 'PKP Community Centre women, Bali',
         caption: 'PKP Community Centre, Bali, pkpcommunitycentre.org',
-      },
-      {
-        type: 'hosts',
-        id: 'hosts',
-        eyebrow: 'Hosted By',
-        title: 'Joe Che',
-        intro: '',
-        hosts: [],
       },
     ],
   },
