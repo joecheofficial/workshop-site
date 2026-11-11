@@ -718,7 +718,7 @@ export const events: EventDefinition[] = [
         "id": "schedule",
         "eyebrow": "The Program",
         "title": "Friday, December 11",
-        "intro": "All times are Bali time. Friday begins at 11:30 AM. Come for Friday, or join us for Friday and Saturday. Your donation includes both days.",
+        "intro": "Friday begins at 11:30 AM. Come for Friday, or join us for Friday and Saturday. Your donation includes both days.",
         "groups": [
           {
             "label": "Morning",
