@@ -178,6 +178,7 @@ export type EventDefinition = {
   // Opt-in festival layout: full-bleed ambient video hero, highlight ticker and
   // scroll reveals. Events without this field render exactly as before.
   festivalLayout?: {
+    hideDescription?: boolean
     ticker?: string[]
   }
   zoomLink?: string
@@ -573,15 +574,14 @@ export const events: EventDefinition[] = [
     ...connectionDinnerCangguTemplate,
     slug: 'joechella-big-one-december-11-2026',
     status: 'live',
-    title: "Joechella: Joe Che's 50th Birthday Party",
+    title: "JOECHELLA: The Big One",
     shortTitle: 'Joechella: The Big One',
     eyebrow: 'Friday + Saturday, December 11 + 12',
     badge: 'The Big One',
     ctaLabel: 'Get a Weekend Pass',
     summary:
       'Two days of Joechella, my 50th birthday celebration at Bali Beach Glamping. Come for Friday, or join us for Friday and Saturday. Your donation includes both days.',
-    description:
-      "Join us for a weekend of Lightning talks, workshops, connection games, pool party, live music and a special Theatre experience. Your ticket helps cover the celebration costs, with an optional donation to support our favorite Balinese initiative - PKP Women's Shelter.",
+    description: "Join us at Bali Beach Glamping for two unforgettable days of community, creativity and celebration. Your ticket helps bring the celebration to life, with the option to make an additional donation to PKP Women's Initiative, supporting women in Bali.",
     dateLabel: 'Friday + Saturday, December 11 + 12, 2026',
     timeLabel: 'Friday from 11:30 AM; Saturday from 2:00 PM until late',
     locationLabel: 'Bali Beach Glamping, Tabanan, Bali',
@@ -593,6 +593,7 @@ export const events: EventDefinition[] = [
     heroVideoMobileSrc: '/events/joechella-big-one/joechella-party-20261029-mobile.mp4',
     heroVideoMobilePoster: '/events/joechella-big-one/joechella-party-20261029-poster.jpg',
     festivalLayout: {
+      hideDescription: true,
       ticker: [
         'Lightning talks',
         'Workshops',
@@ -675,12 +676,15 @@ export const events: EventDefinition[] = [
       {
         type: 'html',
         id: 'invite',
-        eyebrow: "You're Invited",
         html: `
-          <div class="not-prose">
-            <h2 class="text-[2.8rem] font-extrabold leading-[1.0] tracking-tight text-[#FCF4EB] md:text-[3.5rem] mb-5">Joechella: the big one.</h2>
-            <p class="text-[1.25rem] font-semibold text-[#FCF4EB]/85 mb-7 leading-relaxed">Five days that feel like 50. Join us for Friday and Saturday.</p>
-            <p class="text-base leading-8 text-[#FCF4EB]/68 mb-4">I am turning 50 and I am celebrating with a micro-festival at Bali Beach Glamping, the same land where we held Bali Bloom. Friday, December 11 and Saturday, December 12 are open to the whole Bali community, joining the people staying with us all week.</p>
+          <div class="not-prose max-w-4xl">
+            <h2 class="text-[2.8rem] font-extrabold leading-[1.0] tracking-tight text-[#FCF4EB] md:text-[3.5rem] mb-5">JOECHELLA: The Big One</h2>
+            <h3 class="text-2xl font-bold leading-tight text-[#F5C3C6] md:text-3xl mb-6">Half a Century. A Whole Lot of Magic.</h3>
+            <p class="text-xl leading-8 text-[#FCF4EB]/90 mb-5"><strong>You're invited to celebrate Joe's 50th!</strong></p>
+            <p class="text-lg leading-8 text-[#FCF4EB]/80 mb-5">Join us at <strong>Bali Beach Glamping</strong> for two unforgettable days of community, creativity and celebration.</p>
+            <p class="text-lg leading-8 text-[#FCF4EB]/90 mb-5"><strong>December 11–12 | Open to the Bali Community</strong></p>
+            <p class="text-lg leading-8 text-[#FCF4EB]/80 mb-5">Expect a pool party, lightning talks, workshops, connection games, live music, ceremony, DJ's Tea Lounge, a special immersive theatre experience and so much more!</p>
+            <p class="text-lg leading-8 text-[#FCF4EB]/80">Come celebrate with us in true Joe Che style. With community, in connection and fully expressed. Your ticket helps bring the celebration to life, with the option to make an additional donation to <strong>PKP Women's Initiative</strong>, supporting women in Bali.</p>
           </div>
         `,
       },

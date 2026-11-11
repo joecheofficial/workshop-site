@@ -142,11 +142,13 @@ export default function FestivalHero({ event, eventEnded }: { event: EventDefini
 
       {ticker.length ? <Ticker items={ticker} /> : null}
 
-      <section className="mx-auto max-w-6xl px-6 pb-2 pt-10 md:pt-14" data-jc-reveal="">
-        <p className="max-w-4xl border-l-2 border-[#F5C3C6]/60 pl-5 text-lg leading-8 text-[#FCF4EB]/80 md:pl-7 md:text-[1.4rem] md:leading-10">
-          {event.description}
-        </p>
-      </section>
+      {event.description && !event.festivalLayout?.hideDescription ? (
+        <section className="mx-auto max-w-6xl px-6 pb-2 pt-10 md:pt-14" data-jc-reveal="">
+          <p className="max-w-4xl border-l-2 border-[#F5C3C6]/60 pl-5 text-lg leading-8 text-[#FCF4EB]/80 md:pl-7 md:text-[1.4rem] md:leading-10">
+            {event.description}
+          </p>
+        </section>
+      ) : null}
     </>
   )
 }
