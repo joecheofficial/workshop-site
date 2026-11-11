@@ -737,25 +737,9 @@ export const events: EventDefinition[] = [
             "tone": "afternoon",
             "items": [
               {
-                "time": "11:30 AM to 1:00 PM",
-                "title": "AI Lightning Talks",
-                "body": "Ideas and insights from brilliant minds in AI."
-              },
-              {
-                "time": "11:30 AM to 1:00 PM",
-                "title": "Somatic Therapy for Female Leaders"
-              },
-              {
-                "time": "1:30 PM to 2:30 PM",
-                "title": "Relationship Q&A"
-              },
-              {
-                "time": "1:30 PM to 2:30 PM",
-                "title": "Deep Dating"
-              },
-              {
-                "time": "2:30 PM to 4:00 PM",
-                "title": "Opening Connection Activation and Welcome Ceremony"
+                "time": "11:30 AM to 4:00 PM",
+                "title": "An Afternoon of Ideas, Connection and Celebration",
+                "body": "AI lightning talks, somatic therapy for female leaders, relationship Q&A, Deep Dating, connection activations and a welcome ceremony."
               }
             ],
             "note": "Weekend guests join from 11:30 AM for talks and workshops."
