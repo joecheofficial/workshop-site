@@ -1,18 +1,8 @@
 {
   "version": "1.0.0",
-  "gitCommitHash": "a1865212b9904b638503325449a6f0a258b50773",
-  "generatedAt": "2026-11-10T20:05:56.843Z",
+  "gitCommitHash": "b320c54a84487b266c3879731b075f5b5cca0cea",
+  "generatedAt": "2026-11-11T20:07:39.141Z",
   "files": {
-    ".understandignore": {
-      "filePath": ".understandignore",
-      "contentHash": "e7470e304541ea0f2f264411c65cbaf5f12090812f0bcf5aeeb1faef04840272",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 2,
-      "hasStructuralAnalysis": false
-    },
     "next-env.d.ts": {
       "filePath": "next-env.d.ts",
       "contentHash": "7b550dda9686c16f36a17bf9051d5dbf31e98555b30d114ac49fc49a1e712651",
@@ -3405,7 +3395,7 @@
     },
     "src/app/events/[slug]/page.tsx": {
       "filePath": "src/app/events/[slug]/page.tsx",
-      "contentHash": "8d657bd83af5ad149cc22ae67e83d857850e9d7fdcf52ed55bc0d1735e431eec",
+      "contentHash": "d19ae43dca9cbd314083ca2976fc5db600842344bd0d651bf320c0ab5c3ce294",
       "functions": [
         {
           "name": "getPromoParam",
@@ -3422,7 +3412,7 @@
           ],
           "returnType": "Promise<Metadata>",
           "exported": true,
-          "lineCount": 34
+          "lineCount": 36
         },
         {
           "name": "EventDetailPage",
@@ -3478,7 +3468,7 @@
         "generateMetadata",
         "EventDetailPage"
       ],
-      "totalLines": 91,
+      "totalLines": 93,
       "hasStructuralAnalysis": true
     },
     "src/app/events/[slug]/setup/page.tsx": {
@@ -12330,7 +12320,7 @@
     },
     "src/components/events/joechella/FestivalHero.tsx": {
       "filePath": "src/components/events/joechella/FestivalHero.tsx",
-      "contentHash": "37d7de3c64ca764a6631ce102149e2c263345b6f2f2cc030a978cc893e77755a",
+      "contentHash": "424def6a519e27c5065529cd5a85f939718bce8a1e209fd5f743220bb5c99af1",
       "functions": [
         {
           "name": "splitTitle",
@@ -12354,7 +12344,7 @@
             "{ event, eventEnded }"
           ],
           "exported": true,
-          "lineCount": 110
+          "lineCount": 112
         }
       ],
       "classes": [],
@@ -12391,7 +12381,7 @@
       "exports": [
         "FestivalHero"
       ],
-      "totalLines": 153,
+      "totalLines": 155,
       "hasStructuralAnalysis": true
     },
     "src/components/events/joechella/FestivalMotion.tsx": {
@@ -16754,7 +16744,7 @@
     },
     "src/lib/events.tsx": {
       "filePath": "src/lib/events.tsx",
-      "contentHash": "73a85fb0033dd269c2122e5d46e4b1755804435f771ae13f36f9610824af9baf",
+      "contentHash": "c371e8f6b79347e71b4a9704e6a24a9d2fa98f833f436a5ba7c3c0dbb37c7ab8",
       "functions": [
         {
           "name": "getDiscountedPrice",
@@ -16859,7 +16849,7 @@
         "getLiveEvents",
         "getUpcomingLiveEvents"
       ],
-      "totalLines": 1981,
+      "totalLines": 2058,
       "hasStructuralAnalysis": true
     },
     "src/lib/free-ai-tool-email.ts": {
@@ -17048,7 +17038,7 @@
     },
     "src/lib/free-ai-tools.ts": {
       "filePath": "src/lib/free-ai-tools.ts",
-      "contentHash": "f5ba1d48d4a2710ad0eb8f091f0c7cce435634ec91c063796756065240a857e0",
+      "contentHash": "04e3d68d038a36fbb07cdb5b5ea648bb23e324458b6e6af16eb2ca1b373930f9",
       "functions": [
         {
           "name": "getFreeAiTool",
@@ -17095,7 +17085,7 @@
         "isFreeAiToolSource",
         "formatStars"
       ],
-      "totalLines": 1934,
+      "totalLines": 1935,
       "hasStructuralAnalysis": true
     },
     "src/lib/generic-giveaway-email.ts": {
@@ -19994,7 +19984,7 @@
     },
     "tests/event-checkout.test.ts": {
       "filePath": "tests/event-checkout.test.ts",
-      "contentHash": "47c8476b31c7dcfa585681ae5bd8817aea55bcffb9576922111dfa1773b1cedf",
+      "contentHash": "cd18868b05e6dc199a11de328b41be0c9d37dad5ca8285e496c1e290aeac38c4",
       "functions": [],
       "classes": [],
       "imports": [
@@ -20274,7 +20264,7 @@
     },
     "tests/event-pricing-and-data.test.ts": {
       "filePath": "tests/event-pricing-and-data.test.ts",
-      "contentHash": "abfcf9dcfc162b63a86781e88ae9bf41297f9a1d0016574619d4cb751a1bc4d1",
+      "contentHash": "b9d2e9c5751083108923622f16ac7f1e869049a6ccaf52248611e28727eec421",
       "functions": [
         {
           "name": "nowAt",

@@ -1,4 +1,27 @@
 {
+  "version": "1.0.0",
+  "project": {
+    "name": "masterminds-workshop",
+    "languages": [
+      "TypeScript",
+      "JavaScript",
+      "CSS",
+      "HTML",
+      "JSON"
+    ],
+    "frameworks": [
+      "Next.js",
+      "React",
+      "TailwindCSS",
+      "Stripe",
+      "Supabase",
+      "Framer Motion",
+      "GSAP"
+    ],
+    "description": "Masterminds Workshop Site is a Next.js application for event discovery and registration, workshop learning, and giveaway resource distribution, with shared content catalogs, payment integration, and email delivery.",
+    "analyzedAt": "2026-11-11T20:09:03.496Z",
+    "gitCommitHash": "b320c54a84487b266c3879731b075f5b5cca0cea"
+  },
   "nodes": [
     {
       "id": "file:public/downloads/joes-linkedin-kit-v1.0.zip",
@@ -929,32 +952,6 @@
       "summary": "Comprehensive guide page for generating custom lead magnet PDFs using Claude. Includes a 217-line prompt for automating lead magnet creation, feature explanations, step-by-step instructions, and a sample PDF link.",
       "type": "file",
       "filePath": "src/app/bonus/auto-lead-magnet/page.tsx"
-    },
-    {
-      "id": "file:src/app/events/[slug]/page.tsx",
-      "name": "Event detail page",
-      "category": "Page",
-      "subCategory": "Dynamic Page Component",
-      "relPath": "src/app/events/[slug]/page.tsx",
-      "sizeLines": 90,
-      "language": "typescript-jsx",
-      "description": "Dynamic event detail page with slug-based routing. Generates metadata, resolves promo codes, fetches event data, and renders EventPageView component with Stripe integration.",
-      "exports": [
-        "generateMetadata",
-        "default"
-      ],
-      "tags": [
-        "page",
-        "dynamic-route",
-        "event",
-        "commerce",
-        "metadata"
-      ],
-      "languageNotes": "Uses async metadata generation and server-side data fetching. Handles multiple search parameter variations for promo codes.",
-      "complexity": "moderate",
-      "summary": "Dynamic event detail page with slug-based routing. Generates metadata, resolves promo codes, fetches event data, and renders EventPageView component with Stripe integration.",
-      "type": "file",
-      "filePath": "src/app/events/[slug]/page.tsx"
     },
     {
       "id": "file:src/app/events/[slug]/setup/page.tsx",
@@ -3414,53 +3411,6 @@
       "complexity": "complex"
     },
     {
-      "id": "file:src/components/events/joechella/FestivalHero.tsx",
-      "type": "file",
-      "name": "FestivalHero.tsx",
-      "filePath": "src/components/events/joechella/FestivalHero.tsx",
-      "summary": "Renders the Joechella festival hero with ambient responsive video, event information, registration actions, and a looping promotional ticker.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:src/components/events/joechella/FestivalHero.tsx:Ticker",
-      "type": "function",
-      "name": "Ticker",
-      "filePath": "src/components/events/joechella/FestivalHero.tsx",
-      "lineRange": [
-        16,
-        41
-      ],
-      "summary": "Builds duplicated rows of promotional text for a continuous decorative festival ticker.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/components/events/joechella/FestivalHero.tsx:FestivalHero",
-      "type": "function",
-      "name": "FestivalHero",
-      "filePath": "src/components/events/joechella/FestivalHero.tsx",
-      "lineRange": [
-        43,
-        152
-      ],
-      "summary": "Renders the Joechella festival hero with ambient responsive video, event information, registration actions, and a looping promotional ticker.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "moderate"
-    },
-    {
       "id": "file:src/components/events/joechella/VenueGallery.tsx",
       "type": "file",
       "name": "VenueGallery.tsx",
@@ -3621,156 +3571,6 @@
       "complexity": "simple"
     },
     {
-      "id": "file:src/lib/events.tsx",
-      "type": "file",
-      "name": "events.tsx",
-      "filePath": "src/lib/events.tsx",
-      "summary": "Defines typed event content, the event catalogue and festival configuration, and helpers for promotional pricing, donations, slug lookup, and upcoming live event ordering.",
-      "tags": [
-        "events",
-        "data-model",
-        "pricing",
-        "tested"
-      ],
-      "complexity": "complex"
-    },
-    {
-      "id": "function:src/lib/events.tsx:getEventDiscountedPrice",
-      "type": "function",
-      "name": "getEventDiscountedPrice",
-      "filePath": "src/lib/events.tsx",
-      "lineRange": [
-        280,
-        282
-      ],
-      "summary": "Computes the event ticket price after an optional fixed or percentage promotional discount.",
-      "tags": [
-        "events",
-        "data-model",
-        "pricing"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/events.tsx:resolvePromoCode",
-      "type": "function",
-      "name": "resolvePromoCode",
-      "filePath": "src/lib/events.tsx",
-      "lineRange": [
-        284,
-        288
-      ],
-      "summary": "Finds an event promo code after trimming and case-insensitive normalization, returning null when no code matches.",
-      "tags": [
-        "events",
-        "data-model",
-        "pricing"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/events.tsx:formatEventPrice",
-      "type": "function",
-      "name": "formatEventPrice",
-      "filePath": "src/lib/events.tsx",
-      "lineRange": [
-        290,
-        295
-      ],
-      "summary": "Formats the discounted ticket amount with its currency symbol or displays the pending-price message.",
-      "tags": [
-        "events",
-        "data-model",
-        "pricing"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/events.tsx:formatDonationLabelNote",
-      "type": "function",
-      "name": "formatDonationLabelNote",
-      "filePath": "src/lib/events.tsx",
-      "lineRange": [
-        297,
-        307
-      ],
-      "summary": "Formats a custom donation note or a suggested and minimum donation label.",
-      "tags": [
-        "events",
-        "data-model",
-        "pricing"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/events.tsx:toggleDonationPreset",
-      "type": "function",
-      "name": "toggleDonationPreset",
-      "filePath": "src/lib/events.tsx",
-      "lineRange": [
-        309,
-        326
-      ],
-      "summary": "Adds or removes a donation preset contribution while clamping the resulting amount to the configured minimum.",
-      "tags": [
-        "events",
-        "data-model",
-        "pricing"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/events.tsx:getEventBySlug",
-      "type": "function",
-      "name": "getEventBySlug",
-      "filePath": "src/lib/events.tsx",
-      "lineRange": [
-        1957,
-        1959
-      ],
-      "summary": "Finds the event definition matching a route slug.",
-      "tags": [
-        "events",
-        "data-model",
-        "pricing"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/events.tsx:getLiveEvents",
-      "type": "function",
-      "name": "getLiveEvents",
-      "filePath": "src/lib/events.tsx",
-      "lineRange": [
-        1961,
-        1963
-      ],
-      "summary": "Returns catalogue events whose status is live.",
-      "tags": [
-        "events",
-        "data-model",
-        "pricing"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/events.tsx:getUpcomingLiveEvents",
-      "type": "function",
-      "name": "getUpcomingLiveEvents",
-      "filePath": "src/lib/events.tsx",
-      "lineRange": [
-        1965,
-        1980
-      ],
-      "summary": "Filters live events against their end or start time and sorts upcoming events chronologically, placing undated events last.",
-      "tags": [
-        "events",
-        "data-model",
-        "pricing"
-      ],
-      "complexity": "simple"
-    },
-    {
       "id": "file:src/content/session-8-guide.tsx",
       "type": "file",
       "name": "session-8-guide.tsx",
@@ -3814,32 +3614,6 @@
         "workshop-content",
         "react",
         "setup-guide"
-      ],
-      "complexity": "complex"
-    },
-    {
-      "id": "file:tests/event-checkout.test.ts",
-      "type": "file",
-      "name": "event-checkout.test.ts",
-      "filePath": "tests/event-checkout.test.ts",
-      "summary": "Tests checkout mode selection, donation minimums, promotional and affiliate pricing, Stripe redirect configuration, reservation expiry, and festival contribution metadata.",
-      "tags": [
-        "test",
-        "events",
-        "validation"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "file:tests/event-pricing-and-data.test.ts",
-      "type": "file",
-      "name": "event-pricing-and-data.test.ts",
-      "filePath": "tests/event-pricing-and-data.test.ts",
-      "summary": "Checks event catalogue consistency, promotional and donation pricing, closure timing, waitlist notification windows, URL normalization, checkout minimum enforcement, and Joechella content and media configuration.",
-      "tags": [
-        "test",
-        "events",
-        "validation"
       ],
       "complexity": "complex"
     },
@@ -3923,71 +3697,6 @@
         "manychat"
       ],
       "complexity": "complex"
-    },
-    {
-      "id": "file:src/lib/free-ai-tools.ts",
-      "type": "file",
-      "name": "free-ai-tools.ts",
-      "filePath": "src/lib/free-ai-tools.ts",
-      "summary": "Defines the shared Free AI Tools giveaway catalog, including setup steps, official links, usage guidance, limits, prompts and offer targeting. Exposes slug lookup, source validation and compact star-count formatting.",
-      "tags": [
-        "giveaway-catalog",
-        "setup-notes",
-        "shared-content",
-        "tested"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:src/lib/free-ai-tools.ts:getFreeAiTool",
-      "type": "function",
-      "name": "getFreeAiTool",
-      "filePath": "src/lib/free-ai-tools.ts",
-      "lineRange": [
-        1920,
-        1924
-      ],
-      "summary": "Looks up a Free AI Tools catalog entry by slug.",
-      "tags": [
-        "giveaway-catalog",
-        "setup-notes",
-        "shared-content"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/free-ai-tools.ts:isFreeAiToolSource",
-      "type": "function",
-      "name": "isFreeAiToolSource",
-      "filePath": "src/lib/free-ai-tools.ts",
-      "lineRange": [
-        1926,
-        1928
-      ],
-      "summary": "Checks whether a source belongs to the Free AI Tools slug lookup.",
-      "tags": [
-        "giveaway-catalog",
-        "setup-notes",
-        "shared-content"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/free-ai-tools.ts:formatStars",
-      "type": "function",
-      "name": "formatStars",
-      "filePath": "src/lib/free-ai-tools.ts",
-      "lineRange": [
-        1931,
-        1933
-      ],
-      "summary": "Formats star counts as whole numbers or rounded thousands.",
-      "tags": [
-        "giveaway-catalog",
-        "setup-notes",
-        "shared-content"
-      ],
-      "complexity": "simple"
     },
     {
       "id": "file:src/lib/generic-giveaway-email.ts",
@@ -4323,6 +4032,412 @@
         "rendering"
       ],
       "complexity": "simple"
+    },
+    {
+      "id": "file:src/app/events/[slug]/page.tsx",
+      "type": "file",
+      "name": "page.tsx",
+      "filePath": "src/app/events/[slug]/page.tsx",
+      "summary": "Serves dynamic event detail pages, resolves promotional codes, and supplies public event data and Stripe configuration to the event view. Generates canonical and social metadata with event-specific icons.",
+      "tags": [
+        "entry-point",
+        "event-page",
+        "metadata"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/app/events/[slug]/page.tsx:generateMetadata",
+      "type": "function",
+      "name": "generateMetadata",
+      "filePath": "src/app/events/[slug]/page.tsx",
+      "lineRange": [
+        28,
+        63
+      ],
+      "summary": "Builds event-specific search and social metadata with hero image dimensions and optional icons.",
+      "tags": [
+        "entry-point",
+        "event-page",
+        "metadata"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/app/events/[slug]/page.tsx:EventDetailPage",
+      "type": "function",
+      "name": "EventDetailPage",
+      "filePath": "src/app/events/[slug]/page.tsx",
+      "lineRange": [
+        65,
+        92
+      ],
+      "summary": "Loads an event, resolves its incoming promo code, and renders public event data with Stripe configuration.",
+      "tags": [
+        "entry-point",
+        "event-page",
+        "metadata"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/events/joechella/FestivalHero.tsx",
+      "type": "file",
+      "name": "FestivalHero.tsx",
+      "filePath": "src/components/events/joechella/FestivalHero.tsx",
+      "summary": "Renders the festival hero with responsive ambient video, title and venue cards, registration controls, and an optional animated ticker and description. Disables ticket actions after the event.",
+      "tags": [
+        "component",
+        "festival",
+        "hero"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/events/joechella/FestivalHero.tsx:Ticker",
+      "type": "function",
+      "name": "Ticker",
+      "filePath": "src/components/events/joechella/FestivalHero.tsx",
+      "lineRange": [
+        16,
+        41
+      ],
+      "summary": "Renders duplicate decorative ticker rows for continuous festival text animation.",
+      "tags": [
+        "component",
+        "festival",
+        "presentation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/events/joechella/FestivalHero.tsx:FestivalHero",
+      "type": "function",
+      "name": "FestivalHero",
+      "filePath": "src/components/events/joechella/FestivalHero.tsx",
+      "lineRange": [
+        43,
+        154
+      ],
+      "summary": "Composes ambient festival media, event details, registration actions, ticker text, and optional description.",
+      "tags": [
+        "component",
+        "festival",
+        "presentation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/lib/events.tsx",
+      "type": "file",
+      "name": "events.tsx",
+      "filePath": "src/lib/events.tsx",
+      "summary": "Defines shared event content, pricing, schedules, registration configuration, and presentation variants. Provides promo resolution, donation controls, and live-event lookup helpers.",
+      "tags": [
+        "data-model",
+        "event-catalog",
+        "pricing",
+        "tested"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/lib/events.tsx:getEventDiscountedPrice",
+      "type": "function",
+      "name": "getEventDiscountedPrice",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        281,
+        283
+      ],
+      "summary": "Calculates an event ticket price using its base price and optional promotion.",
+      "tags": [
+        "utility",
+        "event-catalog",
+        "pricing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/events.tsx:resolvePromoCode",
+      "type": "function",
+      "name": "resolvePromoCode",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        285,
+        289
+      ],
+      "summary": "Normalizes an incoming promo code and finds a case-insensitive match in event pricing.",
+      "tags": [
+        "utility",
+        "event-catalog",
+        "pricing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/events.tsx:formatEventPrice",
+      "type": "function",
+      "name": "formatEventPrice",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        291,
+        296
+      ],
+      "summary": "Formats discounted ticket prices with the currency symbol or returns a pending-price label.",
+      "tags": [
+        "utility",
+        "event-catalog",
+        "pricing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/events.tsx:formatDonationLabelNote",
+      "type": "function",
+      "name": "formatDonationLabelNote",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        298,
+        308
+      ],
+      "summary": "Formats a custom donation note or the suggested and minimum contribution amounts.",
+      "tags": [
+        "utility",
+        "event-catalog",
+        "pricing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/events.tsx:toggleDonationPreset",
+      "type": "function",
+      "name": "toggleDonationPreset",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        310,
+        327
+      ],
+      "summary": "Adds or removes a donation preset and clamps the resulting amount to the minimum donation.",
+      "tags": [
+        "utility",
+        "event-catalog",
+        "pricing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/events.tsx:getEventBySlug",
+      "type": "function",
+      "name": "getEventBySlug",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        2034,
+        2036
+      ],
+      "summary": "Finds a configured event by its slug.",
+      "tags": [
+        "utility",
+        "event-catalog",
+        "pricing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/events.tsx:getLiveEvents",
+      "type": "function",
+      "name": "getLiveEvents",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        2038,
+        2040
+      ],
+      "summary": "Selects configured events with live publication status.",
+      "tags": [
+        "utility",
+        "event-catalog",
+        "pricing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/events.tsx:getUpcomingLiveEvents",
+      "type": "function",
+      "name": "getUpcomingLiveEvents",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        2042,
+        2057
+      ],
+      "summary": "Filters live events using calendar end times and sorts them by start time while retaining undated events.",
+      "tags": [
+        "utility",
+        "event-catalog",
+        "pricing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:tests/event-checkout.test.ts",
+      "type": "file",
+      "name": "event-checkout.test.ts",
+      "filePath": "tests/event-checkout.test.ts",
+      "summary": "Tests hosted and embedded Stripe checkout configuration, donation minimums, promotional and affiliate discounts, reservation expiry, and Joechella contributions.",
+      "tags": [
+        "test",
+        "checkout",
+        "pricing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/event-pricing-and-data.test.ts",
+      "type": "file",
+      "name": "event-pricing-and-data.test.ts",
+      "filePath": "tests/event-pricing-and-data.test.ts",
+      "summary": "Validates event data, promotional pricing, donation controls, closure times, waitlist windows, and URL normalization. Exercises checkout minimum enforcement and Joechella configuration, mobile media, and public schedule constraints.",
+      "tags": [
+        "test",
+        "event-data",
+        "validation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/lib/free-ai-tools.ts",
+      "type": "file",
+      "name": "free-ai-tools.ts",
+      "filePath": "src/lib/free-ai-tools.ts",
+      "summary": "Maintains the free AI tool giveaway catalog used by pages and delivery emails, including instructions, prompts, links, and offer targeting. Provides slug validation, tool lookup, and compact star formatting.",
+      "tags": [
+        "data-model",
+        "giveaway",
+        "tool-catalog"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/lib/free-ai-tools.ts:getFreeAiTool",
+      "type": "function",
+      "name": "getFreeAiTool",
+      "filePath": "src/lib/free-ai-tools.ts",
+      "lineRange": [
+        1921,
+        1925
+      ],
+      "summary": "Retrieves a tool by slug and throws an error for an unknown slug.",
+      "tags": [
+        "utility",
+        "giveaway",
+        "tool-catalog"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/free-ai-tools.ts:isFreeAiToolSource",
+      "type": "function",
+      "name": "isFreeAiToolSource",
+      "filePath": "src/lib/free-ai-tools.ts",
+      "lineRange": [
+        1927,
+        1929
+      ],
+      "summary": "Checks whether a source string names a configured free AI tool.",
+      "tags": [
+        "utility",
+        "giveaway",
+        "tool-catalog"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/free-ai-tools.ts:formatStars",
+      "type": "function",
+      "name": "formatStars",
+      "filePath": "src/lib/free-ai-tools.ts",
+      "lineRange": [
+        1932,
+        1934
+      ],
+      "summary": "Formats GitHub star counts with rounded thousands for compact badges.",
+      "tags": [
+        "utility",
+        "giveaway",
+        "tool-catalog"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/lib/image-size.ts",
+      "type": "file",
+      "name": "image-size.ts",
+      "filePath": "src/lib/image-size.ts",
+      "summary": "Referenced project dependency recovered from verified inventory and import context. Its source was not semantically re-analyzed in this incremental update.",
+      "tags": [
+        "inventory-recovered",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/lib/stripe.ts",
+      "type": "file",
+      "name": "stripe.ts",
+      "filePath": "src/lib/stripe.ts",
+      "summary": "Referenced project dependency recovered from verified inventory and import context. Its source was not semantically re-analyzed in this incremental update.",
+      "tags": [
+        "inventory-recovered",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/app/api/events/checkout-session/route.ts",
+      "type": "file",
+      "name": "route.ts",
+      "filePath": "src/app/api/events/checkout-session/route.ts",
+      "summary": "Referenced project dependency recovered from verified inventory and import context. Its source was not semantically re-analyzed in this incremental update.",
+      "tags": [
+        "inventory-recovered",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/lib/event-confirmation-email.ts",
+      "type": "file",
+      "name": "event-confirmation-email.ts",
+      "filePath": "src/lib/event-confirmation-email.ts",
+      "summary": "Referenced project dependency recovered from verified inventory and import context. Its source was not semantically re-analyzed in this incremental update.",
+      "tags": [
+        "inventory-recovered",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/lib/url-utils.ts",
+      "type": "file",
+      "name": "url-utils.ts",
+      "filePath": "src/lib/url-utils.ts",
+      "summary": "Referenced project dependency recovered from verified inventory and import context. Its source was not semantically re-analyzed in this incremental update.",
+      "tags": [
+        "inventory-recovered",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/lib/waitlist-notify-windows.ts",
+      "type": "file",
+      "name": "waitlist-notify-windows.ts",
+      "filePath": "src/lib/waitlist-notify-windows.ts",
+      "summary": "Referenced project dependency recovered from verified inventory and import context. Its source was not semantically re-analyzed in this incremental update.",
+      "tags": [
+        "inventory-recovered",
+        "typescript"
+      ],
+      "complexity": "moderate"
     }
   ],
   "edges": [
@@ -4331,70 +4446,70 @@
       "target": "function:src/app/giveaways/chat-to-flowchart/layout.tsx:ChatToFlowchartLayout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/chat-to-flowchart/page.tsx",
       "target": "function:src/app/giveaways/chat-to-flowchart/page.tsx:ChatToFlowchartPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/film/layout.tsx",
       "target": "function:src/app/giveaways/film/layout.tsx:FilmLayout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/film/page.tsx",
       "target": "function:src/app/giveaways/film/page.tsx:FilmPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/free-ai-concat/layout.tsx",
       "target": "function:src/app/giveaways/free-ai-concat/layout.tsx:Layout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/free-ai-concat/page.tsx",
       "target": "function:src/app/giveaways/free-ai-concat/page.tsx:FreeAiConcatPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/free-ai-salesman/layout.tsx",
       "target": "function:src/app/giveaways/free-ai-salesman/layout.tsx:Layout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/free-ai-salesman/page.tsx",
       "target": "function:src/app/giveaways/free-ai-salesman/page.tsx:FreeAiSalesmanPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/linkedin-kit/layout.tsx",
       "target": "function:src/app/giveaways/linkedin-kit/layout.tsx:LinkedinKitLayout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/linkedin-kit/page.tsx",
       "target": "function:src/app/giveaways/linkedin-kit/page.tsx:LinkedinKitPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/chat-to-flowchart/page.tsx",
@@ -4598,15 +4713,6 @@
       "weight": 0.7
     },
     {
-      "source": "file:src/app/events/[slug]/page.tsx",
-      "target": "file:src/app/events/[slug]/setup/page.tsx",
-      "type": "related",
-      "kind": "route-hierarchy",
-      "description": "Event detail page and setup page are sibling routes under events/[slug]/",
-      "direction": "forward",
-      "weight": 0.5
-    },
-    {
       "source": "file:src/app/giveaways/all-sorted-overview/layout.tsx",
       "target": "file:src/app/giveaways/all-sorted-overview/page.tsx",
       "type": "contains",
@@ -4663,7 +4769,7 @@
       "target": "function:src/app/giveaways/desk-pet/page.tsx:DeskPetPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/desk-pet/page.tsx",
@@ -4719,14 +4825,14 @@
       "target": "function:scripts/giveaway-followups.mjs:lina",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
       "target": "function:scripts/giveaway-followups.mjs:stripeBuyer",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
@@ -4740,14 +4846,14 @@
       "target": "function:scripts/giveaway-followups.mjs:repliedByEmail",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
       "target": "function:scripts/giveaway-followups.mjs:crmFirstSource",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
@@ -4761,7 +4867,7 @@
       "target": "function:scripts/giveaway-followups.mjs:slugForKeyword",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
@@ -4775,7 +4881,7 @@
       "target": "function:scripts/giveaway-followups.mjs:checkoutStartedSince",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
@@ -4789,7 +4895,7 @@
       "target": "function:scripts/giveaway-followups.mjs:bookedCall",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
@@ -4803,14 +4909,14 @@
       "target": "function:scripts/giveaway-followups.mjs:findSubscriber",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
       "target": "function:scripts/giveaway-followups.mjs:bonusLink",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
@@ -4824,56 +4930,56 @@
       "target": "function:scripts/giveaway-followups.mjs:renderEmailFor",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
       "target": "function:scripts/giveaway-followups.mjs:resendSend",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
       "target": "function:scripts/giveaway-followups.mjs:sendOne",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
       "target": "function:scripts/giveaway-followups.mjs:allVariants",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
       "target": "function:scripts/giveaway-followups.mjs:renderAll",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
       "target": "function:scripts/giveaway-followups.mjs:testSends",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
       "target": "function:scripts/giveaway-followups.mjs:reviewSends",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
       "target": "function:scripts/giveaway-followups.mjs:main",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
@@ -4887,7 +4993,7 @@
       "target": "function:src/lib/giveaway-followups.ts:pickGift",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -4901,7 +5007,7 @@
       "target": "function:src/lib/giveaway-followups.ts:pickLiveEvent",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -4915,7 +5021,7 @@
       "target": "function:src/lib/giveaway-followups.ts:isSalesKeywordSource",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -4929,7 +5035,7 @@
       "target": "function:src/lib/giveaway-followups.ts:isTestEmail",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -4943,7 +5049,7 @@
       "target": "function:src/lib/giveaway-followups.ts:levelFromSource",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -4957,7 +5063,7 @@
       "target": "function:src/lib/giveaway-followups.ts:levelFromQuizScore",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -4971,7 +5077,7 @@
       "target": "function:src/lib/giveaway-followups.ts:parseLevelReply",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -4985,7 +5091,7 @@
       "target": "function:src/lib/giveaway-followups.ts:lastVariant",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -4999,7 +5105,7 @@
       "target": "function:src/lib/giveaway-followups.ts:salesOfferFor",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -5013,7 +5119,7 @@
       "target": "function:src/lib/giveaway-followups.ts:salesLastVariant",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -5027,7 +5133,7 @@
       "target": "function:src/lib/giveaway-followups.ts:stepLink",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -5041,14 +5147,14 @@
       "target": "function:src/lib/giveaway-followups.ts:baseVars",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
       "target": "function:src/lib/giveaway-followups.ts:renderTemplate",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -5062,7 +5168,7 @@
       "target": "function:src/lib/giveaway-followups.ts:renderQuickwin",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -5076,7 +5182,7 @@
       "target": "function:src/lib/giveaway-followups.ts:renderLast",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -5090,7 +5196,7 @@
       "target": "function:src/lib/giveaway-followups.ts:renderSalesDay2",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -5104,7 +5210,7 @@
       "target": "function:src/lib/giveaway-followups.ts:renderSalesDay5",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -5118,7 +5224,7 @@
       "target": "function:src/lib/giveaway-followups.ts:renderGift2",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -5132,7 +5238,7 @@
       "target": "function:src/lib/giveaway-followups.ts:renderLive",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -5146,7 +5252,7 @@
       "target": "function:src/lib/giveaway-followups.ts:renderDmLevel",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -5160,7 +5266,7 @@
       "target": "function:src/lib/giveaway-followups.ts:dayZeroPs",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -5174,7 +5280,7 @@
       "target": "function:src/lib/giveaway-followups.ts:withDayZeroPs",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -5188,7 +5294,7 @@
       "target": "function:src/lib/giveaway-followups.ts:toHtml",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -5202,7 +5308,7 @@
       "target": "function:src/lib/giveaway-followups.ts:planFollowups",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-followups.ts",
@@ -5398,7 +5504,7 @@
       "target": "function:src/app/giveaways/desk-pet/layout.tsx:DeskPetLayout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/desk-pet/layout.tsx",
@@ -5412,7 +5518,7 @@
       "target": "function:src/app/sitemap.ts:sitemap",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/sitemap.ts",
@@ -5442,7 +5548,7 @@
       "target": "function:src/app/giveaways/video-editor/page.tsx:VideoEditorPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/video-editor/page.tsx",
@@ -5463,42 +5569,42 @@
       "target": "function:src/components/events/joechella/ProgramTimeline.tsx:ToneIcon",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/components/events/joechella/ProgramTimeline.tsx",
       "target": "function:src/components/events/joechella/ProgramTimeline.tsx:HighlightIcon",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/components/events/joechella/ProgramTimeline.tsx",
       "target": "function:src/components/events/joechella/ProgramTimeline.tsx:ItemTitle",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/components/events/joechella/ProgramTimeline.tsx",
       "target": "function:src/components/events/joechella/ProgramTimeline.tsx:ItemCard",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/components/events/joechella/ProgramTimeline.tsx",
       "target": "function:src/components/events/joechella/ProgramTimeline.tsx:Group",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/components/events/joechella/ProgramTimeline.tsx",
       "target": "function:src/components/events/joechella/ProgramTimeline.tsx:ProgramTimeline",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/components/events/joechella/ProgramTimeline.tsx",
@@ -5547,7 +5653,7 @@
       "target": "function:src/app/giveaways/video-editor/layout.tsx:VideoEditorLayout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/video-editor/layout.tsx",
@@ -5568,7 +5674,7 @@
       "target": "function:src/app/giveaways/free-ai-compositor/layout.tsx:Layout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/free-ai-compositor/layout.tsx",
@@ -5582,7 +5688,7 @@
       "target": "function:src/app/giveaways/free-ai-compositor/page.tsx:FreeAiCompositorPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/free-ai-compositor/page.tsx",
@@ -5596,7 +5702,7 @@
       "target": "function:src/app/giveaways/free-ai-draw-things/layout.tsx:Layout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/free-ai-draw-things/layout.tsx",
@@ -5610,7 +5716,7 @@
       "target": "function:src/app/giveaways/free-ai-draw-things/page.tsx:FreeAiDrawThingsPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/free-ai-draw-things/page.tsx",
@@ -5624,7 +5730,7 @@
       "target": "function:src/app/giveaways/free-ai-draw-your-font/layout.tsx:Layout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/free-ai-draw-your-font/layout.tsx",
@@ -5638,7 +5744,7 @@
       "target": "function:src/app/giveaways/free-ai-draw-your-font/page.tsx:FreeAiDrawYourFontPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/free-ai-draw-your-font/page.tsx",
@@ -5652,7 +5758,7 @@
       "target": "function:src/app/giveaways/free-ai-open-design/layout.tsx:Layout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/free-ai-open-design/layout.tsx",
@@ -5666,7 +5772,7 @@
       "target": "function:src/app/giveaways/free-ai-open-design/page.tsx:FreeAiOpenDesignPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/free-ai-open-design/page.tsx",
@@ -5680,7 +5786,7 @@
       "target": "function:src/app/giveaways/free-ai-openscreen/layout.tsx:Layout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/free-ai-openscreen/layout.tsx",
@@ -5694,7 +5800,7 @@
       "target": "function:src/app/giveaways/free-ai-openscreen/page.tsx:FreeAiOpenscreenPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/free-ai-openscreen/page.tsx",
@@ -5708,7 +5814,7 @@
       "target": "function:src/app/giveaways/free-ai-yovoice/layout.tsx:Layout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/free-ai-yovoice/layout.tsx",
@@ -5722,7 +5828,7 @@
       "target": "function:src/app/giveaways/free-ai-yovoice/page.tsx:FreeAiYovoicePage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/free-ai-yovoice/page.tsx",
@@ -5750,7 +5856,7 @@
       "target": "function:src/app/giveaways/free-ai-youtube-skills/page.tsx:FreeAiYoutubeSkillsPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/free-ai-youtube-skills/page.tsx",
@@ -5792,7 +5898,7 @@
       "target": "function:src/app/giveaways/guardog/page.tsx:GuardogPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/guardog/page.tsx",
@@ -5834,14 +5940,14 @@
       "target": "function:src/components/giveaways/PackPage.tsx:PackPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "function:src/app/giveaways/guardog/page.tsx:GuardogPage",
       "target": "function:src/components/giveaways/PackPage.tsx:PackPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/stop-paying/pack.ts",
@@ -5855,7 +5961,7 @@
       "target": "function:src/app/giveaways/stop-paying/page.tsx:StopPayingPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/stop-paying/page.tsx",
@@ -5883,7 +5989,7 @@
       "target": "function:src/components/giveaways/PackPage.tsx:usePackAsk",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/components/giveaways/PackPage.tsx",
@@ -5897,7 +6003,7 @@
       "target": "function:src/components/giveaways/PackPage.tsx:PackPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/components/giveaways/PackPage.tsx",
@@ -5911,21 +6017,21 @@
       "target": "function:src/components/giveaways/PackPage.tsx:CommandBlock",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/components/giveaways/PackPage.tsx",
       "target": "function:src/components/giveaways/PackPage.tsx:PromptBox",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/components/giveaways/PackPage.tsx",
       "target": "function:src/components/giveaways/PackPage.tsx:GuideBlock",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/components/giveaways/PackPage.tsx",
@@ -5946,7 +6052,7 @@
       "target": "function:src/lib/free-ai-tool-pack.ts:freeAiToolPack",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/free-ai-tool-pack.ts",
@@ -5960,14 +6066,14 @@
       "target": "function:src/lib/free-ai-tool-pack.ts:setupNotesPack",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/free-ai-tool-pack.ts",
       "target": "function:src/lib/free-ai-tool-pack.ts:freeAiToolJsonLd",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/free-ai-tool-pack.ts",
@@ -5975,13 +6081,6 @@
       "type": "exports",
       "direction": "forward",
       "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/free-ai-tool-pack.ts",
-      "target": "file:src/lib/free-ai-tools.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
     },
     {
       "source": "file:src/lib/free-ai-tool-pack.ts",
@@ -5995,7 +6094,7 @@
       "target": "function:src/lib/pack-page.ts:fillPrompt",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/pack-page.ts",
@@ -6009,7 +6108,7 @@
       "target": "function:src/lib/pack-page.ts:packSections",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/pack-page.ts",
@@ -6023,7 +6122,7 @@
       "target": "function:src/lib/pack-page.ts:packHasAction",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/pack-page.ts",
@@ -6037,7 +6136,7 @@
       "target": "function:src/lib/pack-page.ts:validatePackContent",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/pack-page.ts",
@@ -6083,35 +6182,7 @@
     },
     {
       "source": "function:src/lib/free-ai-tool-pack.ts:freeAiToolPack",
-      "target": "function:src/lib/free-ai-tools.ts:getFreeAiTool",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/lib/free-ai-tool-pack.ts:freeAiToolPack",
       "target": "function:src/lib/free-ai-tool-pack.ts:setupNotesPack",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/lib/free-ai-tool-pack.ts:freeAiToolPack",
-      "target": "function:src/lib/free-ai-tools.ts:formatStars",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/lib/free-ai-tool-pack.ts:setupNotesPack",
-      "target": "function:src/lib/free-ai-tools.ts:formatStars",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/lib/free-ai-tool-pack.ts:freeAiToolJsonLd",
-      "target": "function:src/lib/free-ai-tools.ts:getFreeAiTool",
       "type": "calls",
       "direction": "forward",
       "weight": 0.8
@@ -6128,42 +6199,42 @@
       "target": "function:src/components/giveaways/PackPage.tsx:PackPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "function:src/components/giveaways/PackPage.tsx:PackPage",
       "target": "function:src/components/giveaways/PackPage.tsx:CommandBlock",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "function:src/components/giveaways/PackPage.tsx:PackPage",
       "target": "function:src/components/giveaways/PackPage.tsx:PromptBox",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "function:src/components/giveaways/PackPage.tsx:PackPage",
       "target": "function:src/components/giveaways/PackPage.tsx:GuideBlock",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/components/events/EventRegistrationSection.tsx",
       "target": "function:src/components/events/EventRegistrationSection.tsx:useAnimatedNumber",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/components/events/EventRegistrationSection.tsx",
       "target": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/components/events/EventRegistrationSection.tsx",
@@ -6173,29 +6244,8 @@
       "weight": 0.8
     },
     {
-      "source": "file:src/components/events/EventRegistrationSection.tsx",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
       "source": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
       "target": "function:src/components/events/EventRegistrationSection.tsx:useAnimatedNumber",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
-      "target": "function:src/lib/events.tsx:formatDonationLabelNote",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
-      "target": "function:src/lib/events.tsx:toggleDonationPreset",
       "type": "calls",
       "direction": "forward",
       "weight": 0.8
@@ -6205,91 +6255,91 @@
       "target": "function:src/components/events/EventPageView.tsx:SectionShell",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/components/events/EventPageView.tsx",
       "target": "function:src/components/events/EventPageView.tsx:StorySection",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/components/events/EventPageView.tsx",
       "target": "function:src/components/events/EventPageView.tsx:ChecklistSection",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/components/events/EventPageView.tsx",
       "target": "function:src/components/events/EventPageView.tsx:CardsSection",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/components/events/EventPageView.tsx",
       "target": "function:src/components/events/EventPageView.tsx:SplitSection",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/components/events/EventPageView.tsx",
       "target": "function:src/components/events/EventPageView.tsx:ImageSection",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/components/events/EventPageView.tsx",
       "target": "function:src/components/events/EventPageView.tsx:HtmlSection",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/components/events/EventPageView.tsx",
       "target": "function:src/components/events/EventPageView.tsx:QuoteCardSection",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/components/events/EventPageView.tsx",
       "target": "function:src/components/events/EventPageView.tsx:HostsSection",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/components/events/EventPageView.tsx",
       "target": "function:src/components/events/EventPageView.tsx:EventVideoSection",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/components/events/EventPageView.tsx",
       "target": "function:src/components/events/EventPageView.tsx:CtaSection",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/components/events/EventPageView.tsx",
       "target": "function:src/components/events/EventPageView.tsx:renderSection",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/components/events/EventPageView.tsx",
       "target": "function:src/components/events/EventPageView.tsx:EventPageView",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/components/events/EventPageView.tsx",
@@ -6301,13 +6351,6 @@
     {
       "source": "file:src/components/events/EventPageView.tsx",
       "target": "file:src/components/events/EventRegistrationSection.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "file:src/components/events/joechella/FestivalHero.tsx",
       "type": "imports",
       "direction": "forward",
       "weight": 0.7
@@ -6341,69 +6384,6 @@
       "weight": 0.7
     },
     {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/components/events/joechella/FestivalHero.tsx",
-      "target": "function:src/components/events/joechella/FestivalHero.tsx:Ticker",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/components/events/joechella/FestivalHero.tsx",
-      "target": "function:src/components/events/joechella/FestivalHero.tsx:FestivalHero",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/components/events/joechella/FestivalHero.tsx",
-      "target": "function:src/components/events/joechella/FestivalHero.tsx:FestivalHero",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/components/events/joechella/FestivalHero.tsx",
-      "target": "file:src/components/events/joechella/AmbientHeroVideo.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/components/events/joechella/FestivalHero.tsx",
-      "target": "file:src/components/events/joechella/festival.css",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/components/events/joechella/FestivalHero.tsx",
-      "target": "file:src/components/events/ScrollToRegisterButton.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/components/events/joechella/FestivalHero.tsx",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "function:src/components/events/EventPageView.tsx:CtaSection",
-      "target": "function:src/lib/events.tsx:formatEventPrice",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
       "source": "function:src/components/events/EventPageView.tsx:EventPageView",
       "target": "function:src/lib/event-status.ts:isEventEnded",
       "type": "calls",
@@ -6413,13 +6393,6 @@
     {
       "source": "function:src/components/events/EventPageView.tsx:EventPageView",
       "target": "function:src/lib/event-status.ts:isRegistrationWindowPassed",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/components/events/EventPageView.tsx:EventPageView",
-      "target": "function:src/lib/events.tsx:getEventDiscountedPrice",
       "type": "calls",
       "direction": "forward",
       "weight": 0.8
@@ -6436,7 +6409,7 @@
       "target": "function:src/components/events/joechella/VenueGallery.tsx:VenueGallery",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/components/events/joechella/VenueGallery.tsx",
@@ -6453,18 +6426,11 @@
       "weight": 0.7
     },
     {
-      "source": "file:src/components/events/joechella/VenueGallery.tsx",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
       "source": "file:src/lib/event-checkout.ts",
       "target": "function:src/lib/event-checkout.ts:resolveCheckoutMode",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/event-checkout.ts",
@@ -6478,7 +6444,7 @@
       "target": "function:src/lib/event-checkout.ts:resolveEventCheckoutAmount",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/event-checkout.ts",
@@ -6492,7 +6458,7 @@
       "target": "function:src/lib/event-checkout.ts:buildEventCheckoutSessionParams",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/event-checkout.ts",
@@ -6502,18 +6468,11 @@
       "weight": 0.8
     },
     {
-      "source": "file:src/lib/event-checkout.ts",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
       "source": "file:src/lib/event-status.ts",
       "target": "function:src/lib/event-status.ts:isEventEnded",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/event-status.ts",
@@ -6527,7 +6486,7 @@
       "target": "function:src/lib/event-status.ts:isEventRegistrationClosed",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/event-status.ts",
@@ -6541,138 +6500,12 @@
       "target": "function:src/lib/event-status.ts:isRegistrationWindowPassed",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/event-status.ts",
       "target": "function:src/lib/event-status.ts:isRegistrationWindowPassed",
       "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/event-status.ts",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:getEventDiscountedPrice",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:getEventDiscountedPrice",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:resolvePromoCode",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:resolvePromoCode",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:formatEventPrice",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:formatEventPrice",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:formatDonationLabelNote",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:formatDonationLabelNote",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:toggleDonationPreset",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:toggleDonationPreset",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:getEventBySlug",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:getEventBySlug",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:getLiveEvents",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:getLiveEvents",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:getUpcomingLiveEvents",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:getUpcomingLiveEvents",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/lib/event-checkout.ts:resolveEventCheckoutAmount",
-      "target": "function:src/lib/events.tsx:resolvePromoCode",
-      "type": "calls",
       "direction": "forward",
       "weight": 0.8
     },
@@ -6684,32 +6517,18 @@
       "weight": 0.8
     },
     {
-      "source": "function:src/lib/events.tsx:formatEventPrice",
-      "target": "function:src/lib/events.tsx:getEventDiscountedPrice",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/lib/events.tsx:getUpcomingLiveEvents",
-      "target": "function:src/lib/events.tsx:getLiveEvents",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
       "source": "file:src/content/session-8-guide.tsx",
       "target": "function:src/content/session-8-guide.tsx:WebFetchUseCaseIcon",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/content/session-8-guide.tsx",
       "target": "function:src/content/session-8-guide.tsx:Session8Guide",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/content/session-8-guide.tsx",
@@ -6719,62 +6538,6 @@
       "weight": 0.8
     },
     {
-      "source": "file:tests/event-checkout.test.ts",
-      "target": "file:src/lib/event-checkout.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/lib/event-checkout.ts",
-      "target": "file:tests/event-checkout.test.ts",
-      "type": "tested_by",
-      "direction": "forward",
-      "weight": 0.5
-    },
-    {
-      "source": "file:tests/event-checkout.test.ts",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "file:tests/event-checkout.test.ts",
-      "type": "tested_by",
-      "direction": "forward",
-      "weight": 0.5
-    },
-    {
-      "source": "file:tests/event-pricing-and-data.test.ts",
-      "target": "file:src/lib/event-status.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/lib/event-status.ts",
-      "target": "file:tests/event-pricing-and-data.test.ts",
-      "type": "tested_by",
-      "direction": "forward",
-      "weight": 0.5
-    },
-    {
-      "source": "file:tests/event-pricing-and-data.test.ts",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "file:tests/event-pricing-and-data.test.ts",
-      "type": "tested_by",
-      "direction": "forward",
-      "weight": 0.5
-    },
-    {
       "source": "file:tests/event-status.test.ts",
       "target": "file:src/lib/event-status.ts",
       "type": "imports",
@@ -6783,20 +6546,6 @@
     },
     {
       "source": "file:src/lib/event-status.ts",
-      "target": "file:tests/event-status.test.ts",
-      "type": "tested_by",
-      "direction": "forward",
-      "weight": 0.5
-    },
-    {
-      "source": "file:tests/event-status.test.ts",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/lib/events.tsx",
       "target": "file:tests/event-status.test.ts",
       "type": "tested_by",
       "direction": "forward",
@@ -6807,21 +6556,21 @@
       "target": "function:src/app/api/lead-magnet/route.ts:sendViaResend",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/api/lead-magnet/route.ts",
       "target": "function:src/app/api/lead-magnet/route.ts:ingestIntoCrm",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/api/lead-magnet/route.ts",
       "target": "function:src/app/api/lead-magnet/route.ts:POST",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/api/lead-magnet/route.ts",
@@ -6840,13 +6589,6 @@
     {
       "source": "file:src/app/api/lead-magnet/route.ts",
       "target": "file:src/lib/free-ai-tool-email.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/app/api/lead-magnet/route.ts",
-      "target": "file:src/lib/free-ai-tools.ts",
       "type": "imports",
       "direction": "forward",
       "weight": 0.7
@@ -6880,60 +6622,11 @@
       "weight": 0.7
     },
     {
-      "source": "file:src/lib/free-ai-tools.ts",
-      "target": "function:src/lib/free-ai-tools.ts:getFreeAiTool",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/free-ai-tools.ts",
-      "target": "function:src/lib/free-ai-tools.ts:getFreeAiTool",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/free-ai-tools.ts",
-      "target": "function:src/lib/free-ai-tools.ts:isFreeAiToolSource",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/free-ai-tools.ts",
-      "target": "function:src/lib/free-ai-tools.ts:isFreeAiToolSource",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/free-ai-tools.ts",
-      "target": "function:src/lib/free-ai-tools.ts:formatStars",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/free-ai-tools.ts",
-      "target": "function:src/lib/free-ai-tools.ts:formatStars",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/free-ai-tools.ts",
-      "target": "file:src/lib/giveaway-offers.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
       "source": "file:src/lib/generic-giveaway-email.ts",
       "target": "function:src/lib/generic-giveaway-email.ts:validateGiveawayLink",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/generic-giveaway-email.ts",
@@ -6947,7 +6640,7 @@
       "target": "function:src/lib/generic-giveaway-email.ts:sanitizeGiveawayName",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/generic-giveaway-email.ts",
@@ -6961,7 +6654,7 @@
       "target": "function:src/lib/generic-giveaway-email.ts:isValidManychatSecret",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/generic-giveaway-email.ts",
@@ -6975,7 +6668,7 @@
       "target": "function:src/lib/generic-giveaway-email.ts:buildGenericGiveawayEmail",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/generic-giveaway-email.ts",
@@ -6989,7 +6682,7 @@
       "target": "function:src/lib/generic-giveaway-email.ts:websiteGiveawayEmail",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/generic-giveaway-email.ts",
@@ -7003,7 +6696,7 @@
       "target": "function:src/lib/generic-giveaway-email.ts:salesKeywordPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/generic-giveaway-email.ts",
@@ -7017,7 +6710,7 @@
       "target": "function:src/lib/generic-giveaway-email.ts:buildSalesKeywordEmail",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/generic-giveaway-email.ts",
@@ -7038,7 +6731,7 @@
       "target": "function:src/lib/giveaway-offers.ts:offerForLevel",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaway-offers.ts",
@@ -7052,19 +6745,12 @@
       "target": "function:src/lib/giveaways.ts:getGiveaway",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/lib/giveaways.ts",
       "target": "function:src/lib/giveaways.ts:getGiveaway",
       "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/api/lead-magnet/route.ts:sendViaResend",
-      "target": "function:src/lib/free-ai-tools.ts:isFreeAiToolSource",
-      "type": "calls",
       "direction": "forward",
       "weight": 0.8
     },
@@ -7147,20 +6833,6 @@
     },
     {
       "source": "file:src/lib/free-ai-tool-pack.ts",
-      "target": "file:tests/free-ai-tools.test.ts",
-      "type": "tested_by",
-      "direction": "forward",
-      "weight": 0.5
-    },
-    {
-      "source": "file:tests/free-ai-tools.test.ts",
-      "target": "file:src/lib/free-ai-tools.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/lib/free-ai-tools.ts",
       "target": "file:tests/free-ai-tools.test.ts",
       "type": "tested_by",
       "direction": "forward",
@@ -7213,7 +6885,7 @@
       "target": "function:src/app/events/page.tsx:EventsIndexPage",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/events/page.tsx",
@@ -7223,32 +6895,11 @@
       "weight": 0.8
     },
     {
-      "source": "file:src/app/events/page.tsx",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "function:src/app/events/page.tsx:EventsIndexPage",
-      "target": "function:src/lib/events.tsx:getUpcomingLiveEvents",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/events/page.tsx:EventsIndexPage",
-      "target": "function:src/lib/events.tsx:formatEventPrice",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
       "source": "file:src/app/giveaways/free-ai-youtube-skills/layout.tsx",
       "target": "function:src/app/giveaways/free-ai-youtube-skills/layout.tsx:Layout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/free-ai-youtube-skills/layout.tsx",
@@ -7262,7 +6913,7 @@
       "target": "function:src/app/giveaways/guardog/layout.tsx:GuardogLayout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/guardog/layout.tsx",
@@ -7276,7 +6927,7 @@
       "target": "function:src/app/giveaways/stop-paying/layout.tsx:Layout",
       "type": "contains",
       "direction": "forward",
-      "weight": 1.0
+      "weight": 1
     },
     {
       "source": "file:src/app/giveaways/stop-paying/layout.tsx",
@@ -7284,30 +6935,6 @@
       "type": "exports",
       "direction": "forward",
       "weight": 0.8
-    },
-    {
-      "source": "file:src/app/events/[slug]/page.tsx",
-      "target": "file:src/components/events/EventPageView.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
-      "source": "file:src/app/events/[slug]/page.tsx",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
-      "source": "file:src/app/events/[slug]/setup/page.tsx",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
     },
     {
       "source": "file:src/app/giveaways/ai-behavior-quiz/pack.ts",
@@ -7558,38 +7185,6 @@
       "recoveredFromImportMap": true
     },
     {
-      "source": "file:src/app/sitemap.ts",
-      "target": "file:src/lib/free-ai-tools.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
-      "source": "file:src/components/events/joechella/ProgramTimeline.tsx",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
-      "source": "file:src/lib/free-ai-tool-email.ts",
-      "target": "file:src/lib/free-ai-tools.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
-      "source": "file:src/lib/lead-magnets.ts",
-      "target": "file:src/lib/free-ai-tools.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
       "source": "file:tests/desk-pet.test.ts",
       "target": "file:src/lib/generic-giveaway-email.ts",
       "type": "imports",
@@ -7761,16 +7356,586 @@
       "type": "depends_on",
       "direction": "forward",
       "weight": 0.6
+    },
+    {
+      "source": "file:src/app/events/[slug]/page.tsx",
+      "target": "function:src/app/events/[slug]/page.tsx:generateMetadata",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/app/events/[slug]/page.tsx",
+      "target": "function:src/app/events/[slug]/page.tsx:generateMetadata",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/events/[slug]/page.tsx",
+      "target": "function:src/app/events/[slug]/page.tsx:EventDetailPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/app/events/[slug]/page.tsx",
+      "target": "function:src/app/events/[slug]/page.tsx:EventDetailPage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/events/[slug]/page.tsx",
+      "target": "file:src/components/events/EventPageView.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/events/[slug]/page.tsx",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:src/app/events/[slug]/page.tsx:generateMetadata",
+      "target": "function:src/lib/events.tsx:getEventBySlug",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/app/events/[slug]/page.tsx:EventDetailPage",
+      "target": "function:src/lib/events.tsx:getEventBySlug",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/app/events/[slug]/page.tsx:EventDetailPage",
+      "target": "function:src/lib/events.tsx:resolvePromoCode",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/events/joechella/FestivalHero.tsx",
+      "target": "function:src/components/events/joechella/FestivalHero.tsx:Ticker",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/joechella/FestivalHero.tsx",
+      "target": "function:src/components/events/joechella/FestivalHero.tsx:FestivalHero",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/joechella/FestivalHero.tsx",
+      "target": "function:src/components/events/joechella/FestivalHero.tsx:FestivalHero",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/events/joechella/FestivalHero.tsx",
+      "target": "file:src/components/events/joechella/AmbientHeroVideo.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/joechella/FestivalHero.tsx",
+      "target": "file:src/components/events/joechella/festival.css",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/joechella/FestivalHero.tsx",
+      "target": "file:src/components/events/ScrollToRegisterButton.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/joechella/FestivalHero.tsx",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:getEventDiscountedPrice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:getEventDiscountedPrice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:resolvePromoCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:resolvePromoCode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:formatEventPrice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:formatEventPrice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:formatDonationLabelNote",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:formatDonationLabelNote",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:toggleDonationPreset",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:toggleDonationPreset",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:getEventBySlug",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:getEventBySlug",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:getLiveEvents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:getLiveEvents",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:getUpcomingLiveEvents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:getUpcomingLiveEvents",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/lib/events.tsx:formatEventPrice",
+      "target": "function:src/lib/events.tsx:getEventDiscountedPrice",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/lib/events.tsx:getUpcomingLiveEvents",
+      "target": "function:src/lib/events.tsx:getLiveEvents",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tests/event-checkout.test.ts",
+      "target": "file:src/lib/event-checkout.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/event-checkout.ts",
+      "target": "file:tests/event-checkout.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:tests/event-checkout.test.ts",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "file:tests/event-checkout.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:tests/event-pricing-and-data.test.ts",
+      "target": "file:src/lib/event-status.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/event-status.ts",
+      "target": "file:tests/event-pricing-and-data.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:tests/event-pricing-and-data.test.ts",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "file:tests/event-pricing-and-data.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/lib/free-ai-tools.ts",
+      "target": "function:src/lib/free-ai-tools.ts:getFreeAiTool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/free-ai-tools.ts",
+      "target": "function:src/lib/free-ai-tools.ts:getFreeAiTool",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/free-ai-tools.ts",
+      "target": "function:src/lib/free-ai-tools.ts:isFreeAiToolSource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/free-ai-tools.ts",
+      "target": "function:src/lib/free-ai-tools.ts:isFreeAiToolSource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/free-ai-tools.ts",
+      "target": "function:src/lib/free-ai-tools.ts:formatStars",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/free-ai-tools.ts",
+      "target": "function:src/lib/free-ai-tools.ts:formatStars",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/free-ai-tools.ts",
+      "target": "file:src/lib/giveaway-offers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/api/lead-magnet/route.ts",
+      "target": "file:src/lib/free-ai-tools.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/app/events/[slug]/setup/page.tsx",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/app/events/page.tsx",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/app/sitemap.ts",
+      "target": "file:src/lib/free-ai-tools.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "file:src/components/events/joechella/FestivalHero.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/components/events/EventRegistrationSection.tsx",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/components/events/joechella/ProgramTimeline.tsx",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/components/events/joechella/VenueGallery.tsx",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/lib/event-checkout.ts",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/lib/event-status.ts",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/lib/free-ai-tool-email.ts",
+      "target": "file:src/lib/free-ai-tools.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/lib/free-ai-tool-pack.ts",
+      "target": "file:src/lib/free-ai-tools.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/lib/lead-magnets.ts",
+      "target": "file:src/lib/free-ai-tools.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:tests/event-status.test.ts",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:tests/free-ai-tools.test.ts",
+      "target": "file:src/lib/free-ai-tools.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/app/events/[slug]/page.tsx",
+      "target": "file:src/lib/image-size.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/events/[slug]/page.tsx",
+      "target": "file:src/lib/stripe.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:tests/event-pricing-and-data.test.ts",
+      "target": "file:src/app/api/events/checkout-session/route.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:tests/event-pricing-and-data.test.ts",
+      "target": "file:src/lib/event-confirmation-email.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:tests/event-pricing-and-data.test.ts",
+      "target": "file:src/lib/url-utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:tests/event-pricing-and-data.test.ts",
+      "target": "file:src/lib/waitlist-notify-windows.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/api/events/checkout-session/route.ts",
+      "target": "file:src/lib/event-checkout.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/api/events/checkout-session/route.ts",
+      "target": "file:src/lib/event-confirmation-email.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/api/events/checkout-session/route.ts",
+      "target": "file:src/lib/event-status.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/api/events/checkout-session/route.ts",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/api/events/checkout-session/route.ts",
+      "target": "file:src/lib/stripe.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/api/events/checkout-session/route.ts",
+      "target": "file:src/lib/url-utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/event-confirmation-email.ts",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/event-confirmation-email.ts",
+      "target": "file:src/lib/utm.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
     }
   ],
   "layers": [
     {
       "id": "layer:api-routes",
       "name": "API Routes",
-      "description": "Lead capture and delivery routes enforce source validation, suppression and routing rules, while unsubscribe handlers verify tokens and record list suppressions.",
+      "description": "Lead capture and unsubscribe routes handle resource delivery and list suppression, while the represented checkout endpoint connects event registration to Stripe.",
       "nodeIds": [
         "file:src/app/api/lead-magnet/route.ts",
-        "file:src/app/api/unsubscribe/route.ts"
+        "file:src/app/api/unsubscribe/route.ts",
+        "file:src/app/api/events/checkout-session/route.ts"
       ]
     },
     {
@@ -7847,7 +8012,7 @@
     {
       "id": "layer:shared-libraries",
       "name": "Shared Libraries",
-      "description": "Event pricing and registration rules, checkout parameter builders, giveaway catalogs, content adapters, email builders, follow-up planning and Supabase access support the represented routes and operations.",
+      "description": "Event content, pricing, checkout, giveaway catalogs, email generation, follow-up planning and Supabase access support represented pages, API routes and operations.",
       "nodeIds": [
         "file:src/app/sitemap.ts",
         "file:src/lib/event-checkout.ts",
@@ -7863,7 +8028,12 @@
         "file:src/lib/lead-magnets.ts",
         "file:src/lib/pack-page.ts",
         "file:src/lib/supabase.ts",
-        "file:src/lib/utm.ts"
+        "file:src/lib/utm.ts",
+        "file:src/lib/image-size.ts",
+        "file:src/lib/stripe.ts",
+        "file:src/lib/event-confirmation-email.ts",
+        "file:src/lib/url-utils.ts",
+        "file:src/lib/waitlist-notify-windows.ts"
       ]
     },
     {
@@ -7929,178 +8099,123 @@
   "tour": [
     {
       "order": 1,
-      "title": "Workshop Site Overview",
-      "description": "Begin at the represented event listing to understand this Next.js site: visitors discover workshops, register for events, and access learning resources. Its event cards introduce the dates, delivery format, and pricing that the next steps trace into shared data and registration.",
+      "title": "Workshop Site Entry",
+      "description": "Start at the represented events index to see how visitors discover upcoming workshops through dated event cards, prices and modality badges. This tour follows the event experience first, then the giveaway and delivery systems; the homepage and a project README are not represented in this partial graph.",
       "nodeIds": [
         "file:src/app/events/page.tsx"
-      ]
+      ],
+      "languageLesson": "Next.js App Router maps an app directory's page.tsx to a public route, so src/app/events/page.tsx supplies /events."
     },
     {
       "order": 2,
-      "title": "Event Data And Routes",
-      "description": "Follow the listing into the shared event catalogue, a widely referenced foundation for event pages and checkout. The dynamic detail route resolves a slug and promotional code before rendering the event view. Status helpers distinguish ended events, manual closure, and scheduled registration cutoffs so those states can receive different presentation.",
+      "title": "Shared Event Rules",
+      "description": "The index depends on the central event catalog, which brings together schedules, pricing, registration settings and presentation variants. Read the status helpers alongside it to understand how scheduled cutoffs, ended events and manual closure affect the rest of the experience.",
       "nodeIds": [
         "file:src/lib/events.tsx",
-        "file:src/app/events/[slug]/page.tsx",
-        "file:src/components/events/EventPageView.tsx",
         "file:src/lib/event-status.ts"
       ]
     },
     {
       "order": 3,
-      "title": "Registration And Payment",
-      "description": "Building on the catalogue, the registration component collects attendee details and handles donations, promo codes, free reservations, and embedded or hosted Stripe checkout. The checkout library constructs branded payment parameters and carries reservation expiry and attribution metadata. Read the accompanying tests to see the intended pricing, return-flow, and closure boundaries.",
+      "title": "Event Page Composition",
+      "description": "The dynamic event route resolves an event and promotion before supplying public data to the event view. The view composes hero media, content sections, calendar links and registration state, while the festival hero illustrates how a specialized event presentation fits that shared model.",
       "nodeIds": [
-        "file:src/components/events/EventRegistrationSection.tsx",
-        "file:src/lib/event-checkout.ts",
-        "file:tests/event-checkout.test.ts",
-        "file:tests/event-status.test.ts",
-        "file:tests/event-pricing-and-data.test.ts"
+        "file:src/app/events/[slug]/page.tsx",
+        "file:src/components/events/EventPageView.tsx",
+        "file:src/components/events/joechella/FestivalHero.tsx"
       ]
     },
     {
       "order": 4,
-      "title": "Festival Presentation",
-      "description": "The same event data also drives a specialized Joechella presentation. Its hero introduces the event, the timeline groups programming and access notes, and the venue gallery combines imagery with optional video. These components show how an event-specific experience fits inside the shared landing-page architecture.",
+      "title": "Registration And Checkout",
+      "description": "Building on the event rules, the client registration component coordinates attendee intake, donations, promo codes, waitlisting and Stripe checkout choices. The checkout helper converts pricing and attribution into hosted or embedded Stripe parameters; the endpoint is represented as an inventory-recovered dependency rather than a fresh semantic analysis.",
       "nodeIds": [
-        "file:src/components/events/joechella/FestivalHero.tsx",
-        "file:src/components/events/joechella/ProgramTimeline.tsx",
-        "file:src/components/events/joechella/VenueGallery.tsx"
+        "file:src/components/events/EventRegistrationSection.tsx",
+        "file:src/lib/event-checkout.ts",
+        "file:src/app/api/events/checkout-session/route.ts"
       ]
     },
     {
       "order": 5,
-      "title": "Attendee Learning Resources",
-      "description": "After registration, event setup pages give attendees preparation instructions and next steps. The session guide expands that learning journey into browser workflows, local transcription, package scanning, and Git checkpoints. The lead magnet workshop guide provides another example of detailed instructional content delivered through the site.",
+      "title": "Giveaway Content Contracts",
+      "description": "The second major experience is the giveaway system, organized around a registry, a reusable pack content model and a shared free AI tool catalog. The tool-pack adapter transforms that catalog into setup guides and structured search data, letting many routes reuse the same source content.",
       "nodeIds": [
-        "file:src/app/events/[slug]/setup/page.tsx",
-        "file:src/content/session-8-guide.tsx",
-        "file:src/app/bonus/auto-lead-magnet/page.tsx"
-      ]
-    },
-    {
-      "order": 6,
-      "title": "Shared Giveaway Rendering",
-      "description": "Giveaways form the second major visitor journey alongside workshops. The heavily reused PackPage component renders structured content, copyable commands, personalized prompts, matched offers, and email capture. Its content model and tool adapter separate interactive presentation from resource-specific instructions and generated HowTo metadata.",
-      "nodeIds": [
-        "file:src/components/giveaways/PackPage.tsx",
+        "file:src/lib/giveaways.ts",
         "file:src/lib/pack-page.ts",
+        "file:src/lib/free-ai-tools.ts",
         "file:src/lib/free-ai-tool-pack.ts"
       ]
     },
     {
-      "order": 7,
-      "title": "Catalog Backed Tool Guides",
-      "description": "With that rendering contract established, explore the Free AI Tools catalogue and routes that select a tool from it. The Compositor, Open Design, and Claude Video Skills pages illustrate reusable setup guides and structured search metadata. The catalogue tests protect route coverage, prerequisites, delivery links, and audience targeting as this family expands.",
+      "order": 6,
+      "title": "Reusable Giveaway Rendering",
+      "description": "PackPage turns those content contracts into an interactive page with optional sections, copyable commands, personalized prompts and contextual email capture. The Claude Video Skills route is a concrete example of a small route module rendering catalog-backed content, while the offer selector adds the appropriate follow-on call to action.",
       "nodeIds": [
-        "file:src/lib/free-ai-tools.ts",
-        "file:src/app/giveaways/free-ai-compositor/page.tsx",
-        "file:src/app/giveaways/free-ai-open-design/page.tsx",
+        "file:src/components/giveaways/PackPage.tsx",
         "file:src/app/giveaways/free-ai-youtube-skills/page.tsx",
-        "file:tests/free-ai-tools.test.ts"
+        "file:src/lib/giveaway-offers.ts"
+      ]
+    },
+    {
+      "order": 7,
+      "title": "Distributed Resource Instructions",
+      "description": "The Desk Pet pack shows how a giveaway includes both website content and a reusable setup prompt. Compare the source prompt with its downloadable text document to understand why distribution parity matters when users follow installation instructions outside the site.",
+      "nodeIds": [
+        "file:src/app/giveaways/desk-pet/pack.ts",
+        "file:src/app/giveaways/desk-pet/prompt.ts",
+        "document:public/desk-pet-prompt.txt"
       ]
     },
     {
       "order": 8,
-      "title": "Curated Guides And Prompts",
-      "description": "Some resources need dedicated content rather than a standard catalogue entry. GuardDog shares a pinned setup prompt between its guide and delivery email, while the five free tool swaps pack explains alternatives, limits, and follow-on offers. The film resource pairs guide content with a reusable prompt, showing the same separation of presentation and instructions.",
+      "title": "Lead Capture And Delivery",
+      "description": "The lead-magnet API connects giveaway engagement to email delivery, analytics and CRM records while applying rate limits, suppression checks and source-specific routing. Its email helpers build approved resource messages, and the unsubscribe route closes the loop by verifying tokens and recording list suppressions.",
       "nodeIds": [
-        "file:src/app/giveaways/guardog/pack.ts",
-        "file:src/app/giveaways/guardog/prompts.ts",
-        "file:src/app/giveaways/stop-paying/pack.ts",
-        "file:src/app/giveaways/film/pack.ts",
-        "file:src/app/giveaways/film/prompt.ts"
+        "file:src/app/api/lead-magnet/route.ts",
+        "file:src/lib/generic-giveaway-email.ts",
+        "file:src/lib/free-ai-tool-email.ts",
+        "file:src/app/api/unsubscribe/route.ts"
       ]
     },
     {
       "order": 9,
-      "title": "Lead Capture And Delivery",
-      "description": "Once a visitor requests a guide, the lead-magnet API validates the source, checks suppression, records lead information, and dispatches the appropriate email. Catalogue-driven email builders keep setup instructions aligned with the website, while generic delivery code restricts destinations to approved mappings. The lazy Supabase client supports data access without requiring production configuration at import time.",
+      "title": "Guarded Follow-up Operations",
+      "description": "After initial delivery, the follow-up planner selects eligible email and Instagram steps using timing, suppression and human-handoff rules. The operational runner combines that plan with provider checks, previews, dry runs and claimed sends, making the distinction between planning content and executing delivery explicit.",
       "nodeIds": [
-        "file:src/app/api/lead-magnet/route.ts",
-        "file:src/lib/lead-magnets.ts",
-        "file:src/lib/free-ai-tool-email.ts",
-        "file:src/lib/generic-giveaway-email.ts",
+        "file:src/lib/giveaway-followups.ts",
+        "file:scripts/giveaway-followups.mjs",
         "file:src/lib/supabase.ts"
       ]
     },
     {
       "order": 10,
-      "title": "Discovery Metadata And Offers",
-      "description": "The resources just delivered also need consistent discovery and next-step links. The giveaway registry and sitemap describe available resources, while route layouts provide canonical and social metadata. Shared offer definitions select the relevant continuation and add campaign parameters to its destination.",
+      "title": "Workshop Learning Content",
+      "description": "Beyond registration and giveaways, the site also carries instructional workshop material. The session guide demonstrates this content role through browser workflows, local transcription, GuardDog setup and Git checkpoints, complementing the attendee setup page's post-purchase instructions.",
       "nodeIds": [
-        "file:src/lib/giveaways.ts",
-        "file:src/app/sitemap.ts",
-        "file:src/app/giveaways/guardog/layout.tsx",
-        "file:src/lib/giveaway-offers.ts"
+        "file:src/content/session-8-guide.tsx",
+        "file:src/app/events/[slug]/setup/page.tsx"
       ]
     },
     {
       "order": 11,
-      "title": "Guarded Follow Up Workflows",
-      "description": "Resource delivery continues into follow-up planning, where shared rules determine copy, timing, audience eligibility, suppression, and human handoff. A separate operational runner coordinates previews and claimed sends using external account checks. Read the tests and unsubscribe handler alongside it to understand the eligibility and opt-out boundaries around those actions.",
+      "title": "Behavior And Resource Checks",
+      "description": "The represented tests document important contracts across event pricing, Stripe checkout, tool catalog wiring and follow-up eligibility. Read them after the corresponding features to see both behavioral assertions and source or asset checks; these graph entries do not establish a current test run or a verified production experience.",
       "nodeIds": [
-        "file:src/lib/giveaway-followups.ts",
-        "file:scripts/giveaway-followups.mjs",
+        "file:tests/event-checkout.test.ts",
+        "file:tests/event-pricing-and-data.test.ts",
+        "file:tests/free-ai-tools.test.ts",
         "file:tests/giveaway-followups.test.ts",
-        "file:src/app/api/unsubscribe/route.ts"
-      ]
-    },
-    {
-      "order": 12,
-      "title": "Desk Pet Distribution Contract",
-      "description": "Return to a concrete delivered resource to see why source text and published assets must stay aligned. The Desk Pet pack and canonical prompt describe setup, personalization, installation, and removal, while the downloadable prompt is the instruction document recipients actually receive. Tests check prompt parity and packaged assets, connecting the content model to its distribution contract.",
-      "nodeIds": [
-        "file:src/app/giveaways/desk-pet/pack.ts",
-        "file:src/app/giveaways/desk-pet/prompt.ts",
-        "document:public/desk-pet-prompt.txt",
         "file:tests/desk-pet.test.ts"
       ]
     },
     {
-      "order": 13,
-      "title": "Download Integrity And Coverage",
-      "description": "The LinkedIn Kit provides a parallel example for archive-based delivery. Its pack and prompt supply the resource content, while the public ZIP and SHA-256 file represent the distributed archive and its integrity check. The associated test checks the page and registered content, illustrating a separate concern from whether an archive is intact.",
-      "nodeIds": [
-        "file:src/app/giveaways/linkedin-kit/pack.ts",
-        "file:src/app/giveaways/linkedin-kit/prompt.ts",
-        "file:public/downloads/joes-linkedin-kit-v1.0.zip",
-        "file:public/downloads/joes-linkedin-kit-v1.0.zip.sha256",
-        "file:tests/linkedin-kit.test.ts"
-      ]
-    },
-    {
-      "order": 14,
-      "title": "Routing And Legacy Delivery",
-      "description": "Finish with the configuration that determines which of those resource URLs reaches users. Next.js configuration controls tracing, media exclusions, host rewrites, and legacy redirects, including the former free Video Editor page and archive now pointing to the paid Video Agent. Comparing the legacy page and its source tests makes clear why asset presence alone does not prove the destination served by a redirected URL.",
+      "order": 12,
+      "title": "Routing And Delivery Configuration",
+      "description": "Finish with the Next.js configuration, which controls build tracing, excluded media, redirects and host rewrites around the routes explored earlier. The legacy Video Editor page and ZIP redirect to the paid Video Agent, illustrating why a source page and its tests alone do not determine what visitors can currently download.",
       "nodeIds": [
         "config:next.config.ts",
-        "file:src/app/giveaways/video-editor/page.tsx",
-        "file:tests/video-editor.test.ts"
+        "file:src/app/giveaways/video-editor/page.tsx"
       ]
     }
-  ],
-  "version": "1.0.0",
-  "project": {
-    "name": "masterminds-workshop",
-    "languages": [
-      "TypeScript",
-      "JavaScript",
-      "CSS",
-      "HTML",
-      "JSON"
-    ],
-    "frameworks": [
-      "Next.js",
-      "React",
-      "TailwindCSS",
-      "Stripe",
-      "Supabase",
-      "Framer Motion",
-      "GSAP"
-    ],
-    "description": "Masterminds Workshop Site is a Next.js application for event discovery and registration, workshop learning, and giveaway resource distribution, with shared content catalogs, payment integration, and email delivery.",
-    "analyzedAt": "2026-11-10T20:05:51.009965+00:00",
-    "gitCommitHash": "a1865212b9904b638503325449a6f0a258b50773"
-  }
+  ]
 }

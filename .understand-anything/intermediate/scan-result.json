@@ -841,7 +841,7 @@
     {
       "path": "src/app/events/[slug]/page.tsx",
       "language": "typescript",
-      "sizeLines": 90,
+      "sizeLines": 92,
       "fileCategory": "code"
     },
     {
@@ -2365,7 +2365,7 @@
     {
       "path": "src/components/events/joechella/FestivalHero.tsx",
       "language": "typescript",
-      "sizeLines": 152,
+      "sizeLines": 154,
       "fileCategory": "code"
     },
     {
@@ -2809,7 +2809,7 @@
     {
       "path": "src/lib/events.tsx",
       "language": "typescript",
-      "sizeLines": 1980,
+      "sizeLines": 2057,
       "fileCategory": "code"
     },
     {
@@ -2839,7 +2839,7 @@
     {
       "path": "src/lib/free-ai-tools.ts",
       "language": "typescript",
-      "sizeLines": 1933,
+      "sizeLines": 1934,
       "fileCategory": "code"
     },
     {
