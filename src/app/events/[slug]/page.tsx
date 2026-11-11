@@ -43,6 +43,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title,
     description,
     alternates: { canonical: `https://workshop.mastermindshq.business/events/${event.slug}` },
+    // Per-event favicon when an event sets one (Joechella uses Joe's face, 2026-11-11).
+    ...(event.metadata?.icons ? { icons: event.metadata.icons } : {}),
     openGraph: {
       title,
       description,
