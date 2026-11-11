@@ -336,7 +336,7 @@ test('server checkout-session route rejects a weekend contribution below the tic
 
   assert.equal(response.status, 400)
   const payload = await response.json()
-  assert.match(String(payload.error), /at least \$17/i)
+  assert.match(String(payload.error), /at least \$28/i)
 })
 
 test('Joechella event has expected configuration and no dinner-specific copy or em dashes', () => {
@@ -345,9 +345,9 @@ test('Joechella event has expected configuration and no dinner-specific copy or 
   assert.equal(event.status, 'live')
   assert.equal(event.pricing.donationMode, true)
   assert.equal(event.ticketPricePending, false)
-  assert.equal(formatEventPrice(event), '$17')
-  assert.equal(event.pricing.minDonation, 17)
-  assert.deepEqual(event.pricing.donationPackages?.map(option => option.amount), [17, 50, 100])
+  assert.equal(formatEventPrice(event), '$28')
+  assert.equal(event.pricing.minDonation, 28)
+  assert.deepEqual(event.pricing.donationPackages?.map(option => option.amount), [28, 61, 111])
   assert.equal(event.capacity, undefined)
   assert.equal(event.capacityReservation, undefined)
   assert.equal(event.manuallyClosed, false)
