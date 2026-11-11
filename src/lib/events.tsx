@@ -865,6 +865,11 @@ export const events: EventDefinition[] = [
         `,
       },
       {
+        type: 'html',
+        id: 'pkp-introduction',
+        html: `<h2 class="not-prose text-3xl font-bold leading-tight text-[#FCF4EB] md:text-4xl">A cause we're passionate about.</h2>`,
+      },
+      {
         type: 'split',
         id: 'pkp',
         eyebrow: 'Optional Donations Go To PKP',
