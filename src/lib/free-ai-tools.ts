@@ -1700,10 +1700,10 @@ Do not sign me up for anything.`,
     "keyword": "SHOT",
     "name": "Draw Things",
     "tagline": "Studio-style photos of you, made on your own Mac.",
-    "subline": "Draw Things is a free app on the Mac App Store. It turns your own selfie into a studio-style headshot, puts you in a new place, or turns a product snapshot into an ad photo. It runs on your Mac, with no monthly plan.",
+    "subline": "Draw Things is a free app on the Mac App Store. It gives your own photo a new outfit and background, puts you in a new place, or turns a product snapshot into an ad photo. It runs on your Mac, with no monthly plan.",
     "toolUrl": "https://apps.apple.com/us/app/draw-things-offline-ai-art/id6444050820",
     "primaryLabel": "Get Draw Things (Mac App Store)",
-    "intro": "Draw Things is a free AI image app for Mac, iPhone and iPad, made by Draw Things Inc. Give it your own selfie and a prompt, and it makes a studio-style headshot that keeps your face. It can also put you in a new place, or turn a plain product photo into an ad-style shot. On our fast Mac Studio each picture took about 20 seconds. A normal laptop is slower. It runs on your Mac, so your photos stay with you, and there is no monthly plan like Midjourney.",
+    "intro": "Draw Things is a free AI image app for Mac, iPhone and iPad, made by Draw Things Inc. Give it your own photo and a prompt, and it changes your outfit and background, for example into a studio-style headshot. Faces can change a little, especially the eyes, so check yours closely and keep only the ones that look like you. It can also put you in a new place, or turn a plain product photo into an ad-style shot. On our fast Mac Studio each picture took about 20 seconds. A normal laptop is slower. It runs on your Mac, so your photos stay with you, and there is no monthly plan like Midjourney.",
     "steps": [
       "Check your Mac. You need an Apple chip (M1 or newer). 16 GB of memory is recommended, plus about 15 GB of free space for the models.",
       "Get Draw Things free from the Mac App Store (the button above) and open it.",
@@ -1734,7 +1734,7 @@ Do not sign me up for anything.`,
     "githubUrl": "https://github.com/drawthingsai/draw-things-community",
     "stars": 614,
     "license": "Free app (closed source). Engine: GPL-3.0",
-    "why": "A free Mac app that turns your own selfie into a studio-style headshot and your product snapshots into ad photos, with no monthly plan like Midjourney.",
+    "why": "A free Mac app that gives your own photo a new outfit and background and turns your product snapshots into ad photos, with no monthly plan like Midjourney.",
     "level": "beginner",
     "who": "Anyone with a newer Mac who needs better photos of themselves or their products for posts, ads and their website.",
     "needs": "A Mac with an Apple chip (16 GB of memory recommended) and about 15 GB of free space for models. Also on iPhone and iPad. Not on Windows.",
@@ -1743,7 +1743,7 @@ Do not sign me up for anything.`,
       "Free on the Mac App Store",
       "Runs on your Mac"
     ],
-    "claudePrompt": "Help me get Draw Things, the free AI image app, ready on this Mac.\n\n1. Check this Mac: it needs an Apple chip. Tell me how much memory it has (16 GB or more is recommended) and how much free disk space (the models need about 15 GB).\n2. Open the official Mac App Store page for me: https://apps.apple.com/us/app/draw-things-offline-ai-art/id6444050820 . Do not download Draw Things from any other site.\n3. Tell me to click Get, then open the app.\n4. Tell me to download the FLUX.2 [klein] 4B model from the model list first.\n5. Give me a starter prompt to turn my own selfie into a studio headshot that keeps my face exactly the same.\n\nDo not sign me up for anything and do not buy anything.",
+    "claudePrompt": "Help me get Draw Things, the free AI image app, ready on this Mac.\n\n1. Check this Mac: it needs an Apple chip. Tell me how much memory it has (16 GB or more is recommended) and how much free disk space (the models need about 15 GB).\n2. Open the official Mac App Store page for me: https://apps.apple.com/us/app/draw-things-offline-ai-art/id6444050820 . Do not download Draw Things from any other site.\n3. Tell me to click Get, then open the app.\n4. Tell me to download the FLUX.2 [klein] 4B model from the model list first.\n5. Give me a starter prompt that changes only the clothes and background of my own photo, like a studio headshot, and asks to keep my face and eyes the same. Remind me to check the face closely, because it can change a little.\n\nDo not sign me up for anything and do not buy anything.",
     "requirements": [
       "A Mac with an Apple chip (M1 or newer). It also runs on iPhone and iPad.",
       "16 GB of memory recommended. Macs with 8 GB will be slow or may not work.",
@@ -1753,16 +1753,17 @@ Do not sign me up for anything.`,
     ],
     "usePrompt": {
       "title": "A starter prompt for your headshot",
-      "text": "Keep my face exactly the same. Professional studio headshot of this person, soft studio lighting, plain light grey background, simple dark blazer, friendly natural smile, sharp focus, photo realistic."
+      "text": "Keep my face, eyes and expression the same. Change only the clothes and background. Professional studio headshot of this person, soft studio lighting, plain light grey background, simple dark blazer, friendly natural smile, sharp focus, photo realistic."
     },
     "does": [
-      "Turn your selfie into a studio-style headshot that keeps your face",
+      "Give your own photo a new outfit and background, like a studio headshot",
       "Put you in a new place, in new clothes",
       "Turn a plain product snapshot into an ad-style photo",
       "Make pictures on your Mac once the model has downloaded",
       "Work with no monthly plan"
     ],
     "doesNot": [
+      "Keep your face exactly the same every time. Eyes and skin can change, so check closely",
       "Run on Windows or Android",
       "Put words or logos in pictures reliably. Text comes out misspelled",
       "Make videos. I am not promising that",
@@ -1789,7 +1790,7 @@ Do not sign me up for anything.`,
       },
       {
         "q": "It does not look like me",
-        "a": "Start with a clearer, well-lit selfie looking straight at the camera, and keep \"Keep my face exactly the same\" at the start of the prompt. Then generate again."
+        "a": "Faces can drift, especially the eyes. Start with a clear, well-lit photo looking straight at the camera, keep the first line of the starter prompt, change only the clothes or background, and generate a few times. Keep only the ones that really look like you."
       },
       {
         "q": "It is very slow or stops working",
