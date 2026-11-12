@@ -90,6 +90,8 @@ export type EventRegistrationData = {
     intro?: string
     submitLabel?: string
     hideAside?: boolean
+    phoneLabel?: string
+    phoneHelp?: string
   }
   intakeFields?: {
     aiLevelStep?: boolean
@@ -804,10 +806,10 @@ export default function EventRegistrationSection({
             {collectsWhatsapp ? (
               <label className="grid gap-2">
                 <span className="min-h-[14px] text-sm font-semibold leading-none text-[#FCF4EB]">
-                  WhatsApp number <span className="text-[#F5C3C6]">*</span>
+                  {event.appearance?.phoneLabel ?? 'WhatsApp number'} <span className="text-[#F5C3C6]">*</span>
                 </span>
                 <input
-                  aria-label="WhatsApp number"
+                  aria-label={event.appearance?.phoneLabel ?? 'WhatsApp number'}
                   aria-invalid={Boolean(fieldErrors.whatsappNumber)}
                   aria-describedby={fieldErrors.whatsappNumber ? 'whatsapp-error' : undefined}
                   autoComplete="off"
@@ -834,9 +836,9 @@ export default function EventRegistrationSection({
                   </p>
                 ) : (
                   <p className="text-sm text-[#FCF4EB]/55">
-                    {event.isVirtual
+                    {event.appearance?.phoneHelp ?? (event.isVirtual
                       ? 'Include your country code. This is how I send you reminders and the Zoom link.'
-                      : 'Include your country code. This is how I send you the venue details.'}
+                      : 'Include your country code. This is how I send you the venue details.')}
                   </p>
                 )}
               </label>
