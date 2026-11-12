@@ -181,6 +181,29 @@ export type EventDefinition = {
     hideDescription?: boolean
     ticker?: string[]
   }
+  // Opt-in Voice Studio layout (Make AI Sound Exactly Like You, Illy 2026-11-12):
+  // the purple and pink look of Joe's Voice Studio, living sound waves, a before
+  // and after wipe, and the class time in each visitor's own time zone. All copy
+  // lives here so wording changes never touch the component. Events without
+  // this field render exactly as before.
+  voiceStudioLayout?: {
+    headline: string
+    lede: string
+    heroNote: string
+    cutoutSrc: string
+    compareTitle: [string, string]
+    compareHint: string
+    compareGeneric: string[]
+    compareVoice: string[]
+    leaveWithTitle: [string, string]
+    leaveWith: Array<{ title: string; body: string }>
+    storyTitle: [string, string]
+    story: string[]
+    needs: Array<{ title: string; body: string }>
+    registerTitle: [string, string]
+    registerIntro: string
+    bio: string[]
+  }
   zoomLink?: string
   badge?: string
   audience: string[]
@@ -1688,6 +1711,132 @@ export const events: EventDefinition[] = [
       title: 'How to Get AI Making You More Sales and Less Busy Work',
       description:
         'A free two-hour live session with Joe Che. Bring your business and your questions, get answers on the spot, and watch real businesses get AI working on their sales and their busywork right in front of you.',
+    },
+  },
+  {
+    // Free C6 lead class, built 2026-11-12 from FREE_WORKSHOP_TEMPLATE (copied
+    // from bring-the-task-you-hate) with the opt-in Voice Studio layout Illy
+    // approved. Event description is the approved copy in
+    // projects/mastermind/evergreen-test-2026-11/WORKSHOP-AI-IN-YOUR-VOICE.md, word for word.
+    slug: 'make-ai-sound-exactly-like-you',
+    status: 'live',
+    title: 'Make AI Sound Exactly Like You',
+    shortTitle: 'Make AI Sound Exactly Like You',
+    eyebrow: 'Free live class with Joe Che',
+    summary:
+      "Most AI writing sounds like AI, and your clients can tell. You can't be in every reply, every post and every follow-up. Your voice can.",
+    description:
+      'A free live class with Joe Che. Build an AI that writes the way you actually talk, on your own laptop in Codex or Claude Code, and leave with your voice profile, your voice print and a post or email ready to send.',
+    dateLabel: 'Tuesday, December 1, 2026',
+    // Global audience: the confirmation email prints this line, so it names four
+    // cities (house rule). The page itself shows each visitor their own time.
+    timeLabel: '8:00 to 10:00 PM Singapore, 1:00 to 3:00 PM Berlin, 7:00 to 9:00 AM New York, 4:00 to 6:00 AM Los Angeles',
+    locationLabel: 'Free online class',
+    durationLabel: '90 minutes of building together, then 30 minutes of Q&A',
+    heroImage: '/images/events/make-ai-sound-exactly-like-you-hero.jpg',
+    heroAlt: 'Joe Che beside the class title Make AI Sound Exactly Like You, a free live class on Tuesday, December 1',
+    heroNoOverlay: true,
+    zoomLink: 'https://us02web.zoom.us/j/88020677190?pwd=fXck1hgPMeWqbN39vtdSrORyakwfTI.1',
+    ctaLabel: 'Save My Free Seat',
+    intakeFields: {
+      whatsappNumber: true,
+      businessContext: true,
+      aiLevelStep: true,
+      businessContextLabel: 'What will you write in your voice first?',
+      businessContextPlaceholder: 'Example: my weekly newsletter, replies to new enquiries, a LinkedIn post',
+      businessContextMinLength: 3,
+    },
+    successDetail:
+      'You are in. Your Zoom link and calendar invite are on their way from joe@mastermindshq.business. Before the class, put three to five things you have written into one document: an email to a client, a post, a message to a friend. If nothing shows up in a couple of minutes, check spam and add that address to your contacts so the reminders reach you.',
+    audience: [
+      'Anyone under Level 7 on the AI Capability Levels',
+      'Coaches, consultants and founders who write their own emails and posts',
+      'People who have never built anything with AI',
+    ],
+    outcomes: [
+      'Your own voice profile, on your computer',
+      'Your voice print, to tune and share',
+      'A post or email in your voice, ready to send',
+    ],
+    hosts: [
+      {
+        name: 'Joe Che',
+        firstName: 'Joe',
+        role: 'Founder • AI Entrepreneur • Teacher',
+        photoSrc: '/images/events/joe-che-bio-bw.jpg',
+        bio: [
+          'Joe Che is the author of How to Build Your Own AI Agent Operating System, which hit number one in three categories across business and AI. He is the founder of 26 companies across tech, education, real estate, and community building. One of those companies became the largest software and business training company in New York City, where he trained more than 90,000 people, including Fortune 5 executives, the CIA, Microsoft, and Tyra Banks.',
+          'He has spent nearly 30 years helping people turn big ideas into something real: cleaner systems, clearer offers, better decisions, and businesses that are easier to run.',
+        ],
+      },
+    ],
+    pricing: {
+      currencySymbol: '$',
+      fullPrice: 0,
+      checkoutHref: '',
+      checkoutNote: 'Free registration. The Zoom link will be emailed right after you sign up.',
+    },
+    calendarEvent: {
+      startIso: '2026-12-01T20:00:00+08:00',
+      endIso: '2026-12-01T22:00:00+08:00',
+      // Joe's own 20:00-22:00 block on newyork1 primary, renamed for the class.
+      // Pinned in code so registrants never fall through to the shared fallback.
+      googleCalendarEventId: '4plcuisn2vfe4okeiufi81bgak',
+    },
+    emailConfig: {
+      contactName: 'Joe Che',
+      contactWhatsAppLink: 'https://wa.me/16462092333',
+      contactWhatsAppDisplay: '+1 (646) 209-2333',
+      signatureName: 'Joe Che\nMasterminds HQ',
+    },
+    voiceStudioLayout: {
+      headline: 'Make AI Sound Exactly Like You.',
+      lede: "Most AI writing sounds like AI, and your clients can tell. You can't be in every reply, every post and every follow-up. Your voice can.",
+      heroNote: "Free. Mac or Windows. Bring three to five things you've written.",
+      cutoutSrc: '/images/events/make-ai-sound-exactly-like-you-joe.webp',
+      compareTitle: ['Same message.', 'Two voices.'],
+      compareHint: 'Drag the line. That right side is what you build on the night, in your words.',
+      compareGeneric: [
+        'Dear Sarah,',
+        "I hope this message finds you well. Thank you for reaching out regarding the February cohort. I am delighted to share that it may be an excellent fit for your goals. Please don't hesitate to let me know if you have any further questions.",
+        'Best regards',
+      ],
+      compareVoice: [
+        'Hey Sarah!',
+        'So good to hear from you. The February cohort is the one. We start on the 8th. Bring the task that eats your week. Bring the messy inbox too. Want me to save you a seat?',
+        'Joe',
+      ],
+      leaveWithTitle: ['Three things on', 'your laptop.'],
+      leaveWith: [
+        { title: 'Your voice profile', body: 'A file your AI rereads every time it writes for you. Not a prompt you copy and forget.' },
+        { title: 'Your voice print', body: 'A living picture of how you write. Tune it, save it, share it.' },
+        { title: 'A post or email, ready', body: 'Real writing for this week, in your voice, before the class ends.' },
+      ],
+      storyTitle: ['Not a prompt.', 'A voice.'],
+      story: [
+        "In this class you build an AI that writes the way you actually talk. Bring three to five things you've written, like an email to a client, a post or a message to a friend. We set it up together on your own laptop in Codex or Claude Code, and it learns your voice from your own words.",
+        "This is not a prompt you copy and forget. It's a file your AI rereads every time it writes for you. Then we build with it. You'll see your voice as a living voice print you can tune and share, and you'll use it to create real content for this week. You leave with your voice profile on your computer, your voice print, and a post or email in your voice that's ready to send.",
+        "I designed this for anyone under Level 7 on my AI Capability Levels. If you've never built anything with AI, you're exactly who I made it for. You'll need a laptop, Mac or Windows, and ChatGPT on the free plan or Plus ($20 a month). Already on Claude Pro? That works too.",
+        "I've been teaching since 1998, and most of the people in my Mastermind didn't come in as techies. That's the whole point. Bring the thing you've been putting off writing. I'd love to see what it sounds like in your voice.",
+      ],
+      needs: [
+        { title: 'A laptop', body: 'Mac or Windows' },
+        { title: 'ChatGPT', body: 'Free plan or Plus ($20 a month). Claude Pro works too.' },
+        { title: 'Your writing', body: 'Three to five pieces: an email, a post, a message' },
+        { title: '2 hours', body: '90 minutes of building together, then 30 minutes of Q&A' },
+      ],
+      registerTitle: ['Your voice,', 'on the night.'],
+      registerIntro: 'Free. Your Zoom link and calendar invite arrive by email from joe@mastermindshq.business.',
+      bio: [
+        'Joe Che is the author of How to Build Your Own AI Agent Operating System, which hit number one in three categories across business and AI. He founded the largest software and business training company in New York City and has trained more than 90,000 people.',
+        'Most of the people in his AI Business Mastermind came in as non-techies.',
+      ],
+    },
+    sections: [],
+    metadata: {
+      title: 'Make AI Sound Exactly Like You: free live class with Joe Che',
+      description:
+        "Most AI writing sounds like AI, and your clients can tell. Build an AI that writes the way you actually talk, live with Joe Che on Tuesday, December 1. Free, Mac or Windows.",
     },
   },
   {

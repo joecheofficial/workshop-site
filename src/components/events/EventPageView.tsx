@@ -15,6 +15,7 @@ import FestivalHero from '@/components/events/joechella/FestivalHero'
 import FestivalMotion from '@/components/events/joechella/FestivalMotion'
 import ProgramTimeline from '@/components/events/joechella/ProgramTimeline'
 import VenueGallery from '@/components/events/joechella/VenueGallery'
+import VoiceStudioPage from '@/components/events/voice-studio/VoiceStudioPage'
 
 function sectionTitleClass(sectionId?: string) {
   if (sectionId === 'creative-lab' || sectionId === 'outcomes') {
@@ -580,6 +581,12 @@ export default function EventPageView({
     successRedirect: hasSetupItems ? undefined : `/events/${event.slug}`,
   }
   const initialPromoAmount = promo ? getEventDiscountedPrice(event, promo) : null
+
+  // Opt-in Voice Studio layout (Make AI Sound Exactly Like You). Same
+  // registration data and form as every other event, new look only.
+  if (event.voiceStudioLayout) {
+    return <VoiceStudioPage event={event} registrationEvent={registrationEvent} publishableKey={publishableKey} />
+  }
 
   // Opt-in festival layout (Joechella). Every other event takes the default
   // branch below and renders exactly as before.
