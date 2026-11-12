@@ -82,6 +82,15 @@ export type EventRegistrationData = {
   eventEnded?: boolean
   isVirtual?: boolean
   capacityReservation?: boolean
+  // Optional per-event wording and layout for the registration block. Events
+  // without it render exactly as before (voice-studio layout, 2026-11-12).
+  appearance?: {
+    eyebrow?: string
+    heading?: string
+    intro?: string
+    submitLabel?: string
+    hideAside?: boolean
+  }
   intakeFields?: {
     aiLevelStep?: boolean
     whatsappNumber?: boolean
@@ -730,21 +739,21 @@ export default function EventRegistrationSection({
         </div>
       ) : null}
       <div className="mb-5">
-        <p className="mb-3 text-[12px] font-semibold uppercase tracking-[0.24em] text-[#BDB3E8] md:text-[13px]">Reserve Your Spot</p>
+        <p className="mb-3 text-[12px] font-semibold uppercase tracking-[0.24em] text-[#BDB3E8] md:text-[13px]">{event.appearance?.eyebrow ?? 'Reserve Your Spot'}</p>
         <h2 className="event-gradient-title text-[2.2rem] font-extrabold leading-[0.92] tracking-tight md:text-[4.1rem]">
-          {isFreeRegistration ? 'Register free below.' : 'Reserve your seat and check out below.'}
+          {event.appearance?.heading ?? (isFreeRegistration ? 'Register free below.' : 'Reserve your seat and check out below.')}
         </h2>
         <p className="mt-4 text-base leading-8 text-[#FCF4EB]/68 md:text-lg">
-          {isFreeRegistration
+          {event.appearance?.intro ?? (isFreeRegistration
             ? event.isVirtual
               ? 'Enter your name and email. I will send the confirmation email and Zoom link right away.'
               : 'Enter your name and email. I will send the confirmation email right away.'
-            : 'Enter your information here. Once you continue, Stripe opens securely to complete your checkout.'}
+            : 'Enter your information here. Once you continue, Stripe opens securely to complete your checkout.')}
         </p>
       </div>
 
       <div className="event-registration-shell rounded-[2rem] border border-white/10 bg-[linear-gradient(145deg,rgba(252,244,235,0.08),rgba(139,121,212,0.08))] p-6 shadow-[0_24px_70px_rgba(0,0,0,0.26)] md:p-8">
-        <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_320px]">
+        <div className={event.appearance?.hideAside ? 'grid gap-6' : 'grid gap-6 lg:grid-cols-[minmax(0,1fr)_320px]'}>
           <form action={handleSubmit} autoComplete="off" className="grid gap-5">
             <div className="grid gap-5 md:grid-cols-2">
               <label className="grid gap-2">
@@ -1023,13 +1032,14 @@ export default function EventRegistrationSection({
                 disabled={isPending}
                 className="copy-button-glass copy-button-primary inline-flex min-w-[220px] items-center justify-center rounded-xl px-6 py-4 text-base font-semibold shadow-[0_16px_38px_rgba(139,121,212,0.22)] disabled:cursor-wait disabled:opacity-70"
               >
-                {isPending ? 'Preparing...' : isFreeRegistration ? 'Register Free' : 'Continue To Checkout'}
+                {isPending ? 'Preparing...' : event.appearance?.submitLabel ?? (isFreeRegistration ? 'Register Free' : 'Continue To Checkout')}
               </button>
               {completionMessage ? <p className="text-sm text-[#BDE7C0]">{completionMessage}</p> : null}
               {error ? <p className="text-sm text-[#F5C3C6]">{error}</p> : null}
             </div>
           </form>
 
+          {event.appearance?.hideAside ? null : (
           <aside className="relative overflow-hidden rounded-[1.6rem] border border-[#8B79D4]/55 bg-[#0C0715] px-6 py-7 text-center shadow-[0_0_0_1px_rgba(139,121,212,0.10),0_24px_70px_rgba(0,0,0,0.32)]">
             <div className="pointer-events-none absolute inset-x-10 top-0 h-px bg-[#BDB3E8]/70" />
             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#BDB3E8]">
@@ -1066,6 +1076,7 @@ export default function EventRegistrationSection({
               <p className="mt-4 text-sm leading-6 text-[#FCF4EB]/58">{event.pricing.checkoutNote}</p>
             )}
           </aside>
+          )}
         </div>
 
         {clientSecret && stripePromise && embeddedCheckoutOptions ? (
