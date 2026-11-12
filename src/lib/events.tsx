@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
+import DinnerPhotoCarousel from '@/components/events/DinnerPhotoCarousel'
 
 export type EventHost = {
   name: string
@@ -621,6 +622,11 @@ export const events: EventDefinition[] = [
         'The restaurant is on Jalan Pantai Pererenan, just off the main Pererenan strip.',
       ],
     },
+    sections: connectionDinnerCangguTemplate.sections
+      .filter((section) => section.id !== 'pkp-photos')
+      .map((section): EventSection => section.id === 'gallery'
+        ? { type: 'custom', id: 'dinner-photo-carousel', render: <DinnerPhotoCarousel /> }
+        : section),
     metadata: {
       title: "Joe Che's Connection Dinner, December 16, 2026",
       description:
