@@ -92,6 +92,7 @@ export type EventRegistrationData = {
     hideAside?: boolean
     phoneLabel?: string
     phoneHelp?: string
+    boxNote?: string
   }
   intakeFields?: {
     aiLevelStep?: boolean
@@ -755,6 +756,7 @@ export default function EventRegistrationSection({
       </div>
 
       <div className="event-registration-shell rounded-[2rem] border border-white/10 bg-[linear-gradient(145deg,rgba(252,244,235,0.08),rgba(139,121,212,0.08))] p-6 shadow-[0_24px_70px_rgba(0,0,0,0.26)] md:p-8">
+        {event.appearance?.boxNote ? <p className="event-box-note mb-4 text-sm font-semibold text-[#F5C3C6]">{event.appearance.boxNote}</p> : null}
         <div className={event.appearance?.hideAside ? 'grid gap-6' : 'grid gap-6 lg:grid-cols-[minmax(0,1fr)_320px]'}>
           <form action={handleSubmit} autoComplete="off" className="grid gap-5">
             <div className="grid gap-5 md:grid-cols-2">

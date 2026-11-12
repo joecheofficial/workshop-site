@@ -208,7 +208,7 @@ export type EventDefinition = {
     bioSeal: string
     testimonialsKicker: string
     testimonialsTitle: [string, string]
-    testimonials: Array<{ name: string; location: string; quote: string }>
+    testimonials: Array<{ name: string; photo: string; quote: string }>
   }
   zoomLink?: string
   badge?: string
@@ -1852,7 +1852,7 @@ export const events: EventDefinition[] = [
         'So good to hear from you. The February cohort is the one. We start on the 8th. Bring the task that eats your week. Bring the messy inbox too. Want me to save you a seat?',
         'Joe',
       ],
-      leaveWithTitle: ['Three things on', 'your laptop.'],
+      leaveWithTitle: ['Leave with', '3 things.'],
       leaveWith: [
         { title: 'Your voice profile', body: 'Your AI learns how you write and keeps it. Not a prompt you copy and forget.' },
         { title: 'Your voice print', body: 'A living picture of how you write. Tune it, save it, share it.' },
@@ -1868,7 +1868,7 @@ export const events: EventDefinition[] = [
       urgency: [
         { title: '100 seats', body: 'The live Zoom room holds 100 people. When it is full, the doors close.' },
         { title: '2 to 3 hot seats', body: 'I rebuild a few people\'s writing live, picked from the answers on this form.' },
-        { title: 'One night only', body: 'Tuesday, December 1. Live, with me, on your own laptop.' },
+        { title: 'One night only', body: 'Tuesday, December 1. Live, with me.' },
       ],
       registerTitle: ['Your voice,', 'on the night.'],
       registerIntro: 'Free. Your Zoom link and calendar invite arrive by email from joe@mastermindshq.business.',
@@ -1885,12 +1885,13 @@ export const events: EventDefinition[] = [
       // Kicker = people taught (90,000+, Joe's bio), not the testimonial count (Illy 12 Nov).
       testimonialsKicker: '90,000+ people taught since 1998',
       testimonialsTitle: ['Not techies.', 'Now they build.'],
+      // Short verbatim cuts with face + full name, no location (Illy 12 Nov).
       testimonials: [
-        { name: 'Heather Brand', location: 'Bali, Indonesia', quote: "I am a total beginner, I know nothing about anything technical. … Joe's is a thousand times better, and with each section he makes sure that nobody gets left behind." },
-        { name: 'Jasmine Oh', location: 'Bali, Indonesia', quote: "Whether it's SEO, websites, funnels or leads, I always had to hire somebody else to do it, and now I can finally do those things myself." },
-        { name: 'Leyolah Dekanic', location: 'AI Business Mastermind, Cohort 4', quote: 'It has become my fabulous assistant. We built a lead magnet page and I had 300 signups.' },
-        { name: 'Miia Nern', location: 'Berlin, Germany', quote: 'Learning how to use AI in a proper way and knowing when to use what has saved me literally at least 20 to 25 hours a week.' },
-        { name: 'Johanna Bieber', location: 'Uluwatu, Bali', quote: 'So many things that you would have needed a whole team for, you can do now on your own.' },
+        { name: 'Heather Brand', photo: '/images/events/voice-class/face-heather-brand.webp', quote: 'With each section he makes sure that nobody gets left behind.' },
+        { name: 'Jasmine Oh', photo: '/images/events/voice-class/face-jasmine-oh.webp', quote: 'Now I can finally do those things myself.' },
+        { name: 'Naomi Galinski', photo: '/images/events/voice-class/face-naomi-galinski.webp', quote: 'I am not a design person… Now I can build it directly with Claude Code.' },
+        { name: 'Miia Nern', photo: '/images/events/voice-class/face-miia-nern.webp', quote: 'Saved me literally at least 20 to 25 hours a week.' },
+        { name: 'Johanna Bieber', photo: '/images/events/voice-class/face-johanna-bieber.webp', quote: 'So many things that you would have needed a whole team for, you can do now on your own.' },
       ],
     },
     sections: [],
