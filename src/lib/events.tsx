@@ -1867,7 +1867,6 @@ export const events: EventDefinition[] = [
       ],
       urgency: [
         { title: '100 seats', body: 'The live Zoom room holds 100 people. When it is full, the doors close.' },
-        { title: '2 to 3 hot seats', body: 'I rebuild a few people\'s writing live, picked from the answers on this form.' },
         { title: 'One night only', body: 'Tuesday, December 1. Live, with me.' },
       ],
       registerTitle: ['Your voice,', 'on the night.'],
