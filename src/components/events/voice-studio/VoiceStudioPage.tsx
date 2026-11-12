@@ -83,6 +83,8 @@ function usePrefersReducedMotion() {
 function VoicePrint({ size, voice, className }: { size: number; voice: Voice; className?: string }) {
   const ref = useRef<HTMLCanvasElement>(null)
   const reduce = usePrefersReducedMotion()
+  const voiceRef = useRef(voice)
+  voiceRef.current = voice
   useEffect(() => {
     const c = ref.current
     if (!c) return
@@ -96,7 +98,7 @@ function VoicePrint({ size, voice, className }: { size: number; voice: Voice; cl
     const loop = () => {
       if (visible) {
         ctx.clearRect(0, 0, size, size)
-        drawPrint(ctx, size, size / 2, size / 2, voice, t)
+        drawPrint(ctx, size, size / 2, size / 2, voiceRef.current, t)
         if (!reduce) t += 0.012
       }
       frame = requestAnimationFrame(loop)
@@ -106,7 +108,7 @@ function VoicePrint({ size, voice, className }: { size: number; voice: Voice; cl
       cancelAnimationFrame(frame)
       io.disconnect()
     }
-  }, [size, voice, reduce])
+  }, [size, reduce])
   return <canvas ref={ref} width={size} height={size} className={className} aria-hidden="true" />
 }
 
@@ -265,28 +267,102 @@ function Compare({ generic, voice }: { generic: string[]; voice: string[] }) {
   )
 }
 
-type Testimonial = { name: string; location: string; quote: string; videoUrl: string; poster: string }
+type Tune = { casual: number; direct: number; short: number }
 
-function TestimonialCard({ t }: { t: Testimonial }) {
-  const [play, setPlay] = useState(false)
+// Simple rules, no AI: the sample reply rewrites itself as the sliders move.
+function sampleReply({ casual, direct, short }: Tune) {
+  const hello = casual > 62 ? 'Hey Sarah!' : casual > 32 ? 'Hi Sarah,' : 'Dear Sarah,'
+  const point = direct > 55 ? 'The February cohort is the one for you.' : 'I think the February cohort could be a really good fit for you.'
+  const more = short > 55 ? '' : ' We start on the 8th, and you build your own systems with a small group.'
+  const ask = direct > 55 ? (casual > 62 ? 'Want me to save you a seat?' : 'Shall I reserve your seat?') : 'Let me know if you would like me to hold a place for you.'
+  const bye = casual > 62 ? 'Joe' : 'Warm regards, Joe'
+  return { hello, body: `${point}${more} ${ask}`, bye }
+}
+
+function VoiceTuner({ tune, setTune }: { tune: Tune; setTune: (t: Tune) => void }) {
+  const rows: Array<[keyof Tune, string, string]> = [
+    ['casual', 'Formal', 'Casual'],
+    ['direct', 'Careful', 'Direct'],
+    ['short', 'Long', 'Short'],
+  ]
+  const r = sampleReply(tune)
   return (
-    <figure className="vs-tcard vs-glass vs-reveal">
-      <div className="vs-tvid">
-        {play ? (
-          <video src={t.videoUrl} poster={t.poster} controls autoPlay playsInline />
-        ) : (
-          <button type="button" onClick={() => setPlay(true)} aria-label={`Play ${t.name}'s video`}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={t.poster} alt="" loading="lazy" />
-            <span className="vs-play" aria-hidden="true">&#9654;</span>
-          </button>
-        )}
+    <div className="vs-tune">
+      {rows.map(([k, left, right]) => (
+        <label key={k} className="row">
+          <span>{left}</span>
+          <input
+            type="range"
+            min={0}
+            max={100}
+            value={tune[k]}
+            aria-label={`${left} to ${right}`}
+            style={{ ['--p' as string]: `${tune[k]}%` }}
+            onChange={(e) => setTune({ ...tune, [k]: Number(e.target.value) })}
+          />
+          <span>{right}</span>
+        </label>
+      ))}
+      <div className="vs-reply" aria-live="polite">
+        <p>{r.hello}</p>
+        <p>{r.body}</p>
+        <p>{r.bye}</p>
       </div>
-      <blockquote>&ldquo;{t.quote}&rdquo;</blockquote>
+      <div className="vs-drag">Drag the dots. The reply changes with you.</div>
+    </div>
+  )
+}
+
+type Testimonial = { name: string; location: string; quote: string }
+
+function TestimonialCard({ t, i }: { t: Testimonial; i: number }) {
+  return (
+    <figure className="vs-tcard vs-glass vs-reveal" style={{ transitionDelay: `${i * 0.12}s` }}>
+      <span className="vs-qmark" aria-hidden="true">&ldquo;</span>
+      <blockquote>{t.quote}</blockquote>
       <figcaption>
-        <b>{t.name}</b> {t.location}
+        <b>{t.name}</b>
+        <span>{t.location}</span>
       </figcaption>
     </figure>
+  )
+}
+
+// Counts the first number in the kicker up from 0 when it scrolls into view.
+function CountUpKicker({ text }: { text: string }) {
+  const m = text.match(/^([\d,]+)(.*)$/)
+  const target = m ? parseInt(m[1].replace(/,/g, ''), 10) : 0
+  const [n, setN] = useState(target)
+  const ref = useRef<HTMLDivElement>(null)
+  const reduce = usePrefersReducedMotion()
+  useEffect(() => {
+    if (!m || reduce || !ref.current) return
+    setN(0)
+    let raf = 0
+    const io = new IntersectionObserver((es) => {
+      if (!es[0].isIntersecting) return
+      io.disconnect()
+      const t0 = performance.now()
+      const step = (now: number) => {
+        const k = Math.min((now - t0) / 1400, 1)
+        setN(Math.round(target * (1 - Math.pow(1 - k, 3))))
+        if (k < 1) raf = requestAnimationFrame(step)
+      }
+      raf = requestAnimationFrame(step)
+    })
+    io.observe(ref.current)
+    return () => {
+      io.disconnect()
+      cancelAnimationFrame(raf)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [target, reduce])
+  if (!m) return <div className="vs-kicker">{text}</div>
+  return (
+    <div ref={ref} className="vs-bignum">
+      <b>{n.toLocaleString('en-US')}{m[2].startsWith('+') ? '+' : ''}</b>
+      <span>{m[2].replace(/^\+/, '').trim()}</span>
+    </div>
   )
 }
 
@@ -335,6 +411,7 @@ export default function VoiceStudioPage({
   const timeText = local?.time ?? '8:00 PM'
   const zoneText = local?.zone ?? 'Singapore time'
   const host = event.hosts[0]
+  const [tune, setTune] = useState<Tune>({ casual: 74, direct: 68, short: 62 })
 
   useEffect(() => {
     const els = document.querySelectorAll('.vs-reveal')
@@ -419,20 +496,15 @@ export default function VoiceStudioPage({
           </h2>
           <div className="vs-cards">
             <div className="vs-card vs-glass vs-reveal">
-              <div className="vs-vis">
-                <div className="vs-tune">
-                  <div className="row"><span>Formal</span><i><b style={{ left: '74%' }} /></i><span>Casual</span></div>
-                  <div className="row"><span>Careful</span><i><b style={{ left: '68%' }} /></i><span>Direct</span></div>
-                  <div className="row"><span>Long</span><i><b style={{ left: '62%' }} /></i><span>Short</span></div>
-                  <div className="words">Sounds like you: <em>&quot;quick one&quot;</em>, <em>&quot;honestly&quot;</em></div>
-                </div>
+              <div className="vs-vis vs-vis-tune">
+                <VoiceTuner tune={tune} setTune={setTune} />
               </div>
               <h3>{v.leaveWith[0]?.title}</h3>
               <p>{v.leaveWith[0]?.body}</p>
             </div>
             <div className="vs-card vs-glass vs-reveal">
               <div className="vs-vis">
-                <VoicePrint size={300} voice={{ warmth: 60, direct: 55, length: 30, humour: 60 }} className="vs-mini" />
+                <VoicePrint size={300} voice={{ warmth: tune.casual, direct: tune.direct, length: 100 - tune.short, humour: 50 }} className="vs-mini" />
               </div>
               <h3>{v.leaveWith[1]?.title}</h3>
               <p>{v.leaveWith[1]?.body}</p>
@@ -477,14 +549,14 @@ export default function VoiceStudioPage({
 
       <section className="vs-sec">
         <div className="vs-wrap">
-          <div className="vs-kicker vs-reveal">{v.testimonialsKicker}</div>
+          <CountUpKicker text={v.testimonialsKicker} />
           <h2 className="vs-h2 vs-reveal">
             {v.testimonialsTitle[0]} <em>{v.testimonialsTitle[1]}</em>
           </h2>
-          <p className="vs-tsub vs-reveal">Members of my AI Business Mastermind, in their own words. Swipe for more.</p>
+          <p className="vs-tsub vs-reveal">Members of my AI Business Mastermind, in their own words.<span className="vs-swipe"> Swipe for more &rarr;</span></p>
           <div className="vs-tgrid">
-            {v.testimonials.map((t) => (
-              <TestimonialCard key={t.name} t={t} />
+            {v.testimonials.map((t, i) => (
+              <TestimonialCard key={t.name} t={t} i={i} />
             ))}
           </div>
         </div>
@@ -492,30 +564,32 @@ export default function VoiceStudioPage({
 
       <section className="vs-sec vs-reg-sec">
         <div className="vs-wrap vs-reg">
-          <div className="vs-reveal">
-            <div className="vs-kicker">Save your seat</div>
-            <h2 className="vs-h2">
-              {v.registerTitle[0]} <em>{v.registerTitle[1]}</em>
-            </h2>
-            <div className="vs-printbox">
-              <VoicePrint size={840} voice={{ warmth: 72, direct: 70, length: 45, humour: 40 }} className="vs-print" />
+          <div className="vs-reg-side">
+            <div className="vs-desk-only">
+              <div className="vs-kicker">Save your seat</div>
+              <h2 className="vs-h2">
+                {v.registerTitle[0]} <em>{v.registerTitle[1]}</em>
+              </h2>
+              <div className="vs-printbox">
+                <VoicePrint size={840} voice={{ warmth: 72, direct: 70, length: 45, humour: 40 }} className="vs-print" />
+              </div>
             </div>
             <div className="vs-urgency">
               {v.urgency.map((u) => (
-                <div key={u.title}>
-                  <b>{u.title}</b>
-                  <span>{u.body}</span>
-                </div>
+                <span key={u.title}>{u.title}</span>
               ))}
             </div>
-            <p className="vs-note">{v.registerIntro}</p>
-            <div className="vs-zones">
-              {ZONES.map(([name, tz]) => (
-                <span key={tz}>
-                  <b>{name}</b> {startIso ? zoneLine(startIso, tz) : ''}
-                </span>
-              ))}
-            </div>
+            <p className="vs-note">{v.urgency[0]?.body} {v.urgency[1]?.body}</p>
+            <details className="vs-zones-box">
+              <summary>Other time zones</summary>
+              <div className="vs-zones">
+                {ZONES.map(([name, tz]) => (
+                  <span key={tz}>
+                    <b>{name}</b> {startIso ? zoneLine(startIso, tz) : ''}
+                  </span>
+                ))}
+              </div>
+            </details>
           </div>
           <div className="vs-form">
             <EventRegistrationSection event={reg} publishableKey={publishableKey} />
@@ -603,13 +677,20 @@ const VS_CSS = `
 .vs-card h3{font-family:var(--serif);font-weight:600;font-size:23px;margin:0 0 6px;line-height:1.15;color:var(--ink)}
 .vs-card p{margin:0;color:var(--muted);font-size:15px}
 .vs-mini{width:150px;height:150px}
-.vs-tune{width:86%;font-size:12px;color:var(--muted)}
-.vs-tune .row{display:grid;grid-template-columns:52px 1fr 48px;align-items:center;gap:10px;margin:7px 0}
+.vs-vis-tune{height:auto;padding:18px 0}
+.vs-tune{width:88%;font-size:13px;color:var(--muted)}
+.vs-tune .row{display:grid;grid-template-columns:56px 1fr 52px;align-items:center;gap:10px;margin:4px 0;cursor:pointer}
 .vs-tune .row span:last-child{text-align:right;color:#e9e2fb}
-.vs-tune i{position:relative;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--purple),var(--pink))}
-.vs-tune b{position:absolute;top:50%;width:14px;height:14px;border-radius:50%;background:#fff;transform:translate(-50%,-50%);box-shadow:0 0 0 3px rgba(139,121,212,.45)}
-.vs-tune .words{margin-top:10px;color:#d9d1ee;font-size:12.5px}
-.vs-tune em{font-style:normal;color:var(--pink)}
+.vs-tune input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:36px;background:transparent;margin:0;touch-action:pan-y;cursor:pointer}
+.vs-tune input[type=range]::-webkit-slider-runnable-track{height:6px;border-radius:6px;background:linear-gradient(90deg,var(--purple),var(--pink) var(--p),rgba(255,255,255,.14) var(--p))}
+.vs-tune input[type=range]::-moz-range-track{height:6px;border-radius:6px;background:linear-gradient(90deg,var(--purple),var(--pink) var(--p),rgba(255,255,255,.14) var(--p))}
+.vs-tune input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;margin-top:-10px;border-radius:50%;background:#fff;border:0;box-shadow:0 0 0 5px rgba(139,121,212,.45),0 4px 14px rgba(0,0,0,.4)}
+.vs-tune input[type=range]::-moz-range-thumb{width:26px;height:26px;border-radius:50%;background:#fff;border:0;box-shadow:0 0 0 5px rgba(139,121,212,.45)}
+.vs-tune input[type=range]:focus-visible{outline:2px solid var(--pink);outline-offset:4px;border-radius:8px}
+.vs-reply{margin-top:12px;background:var(--cream);color:#1a1526;border-radius:16px 16px 16px 4px;padding:12px 14px;font-size:14px;line-height:1.45;min-height:112px;transition:background .2s}
+.vs-card .vs-reply p{margin:0 0 4px;color:#1a1526;font-size:inherit}
+.vs-card .vs-reply p:last-child{margin:0;color:#6b5f8a}
+.vs-drag{margin-top:8px;font-size:12px;color:var(--pink);text-align:center}
 .vs-bubble{background:var(--cream);color:#1a1526;border-radius:18px 18px 18px 4px;padding:12px 16px;font-size:14px;max-width:84%;line-height:1.45;box-shadow:0 10px 30px rgba(0,0,0,.35)}
 .vs-bubble .t{display:block;margin-top:6px;font-size:11px;color:#8B79D4}
 
@@ -620,20 +701,27 @@ const VS_CSS = `
 
 .vs-midcta{margin-top:34px;text-align:center}
 .vs-tsub{color:var(--muted);margin:-6px 0 26px;font-size:15px}
-.vs-tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.vs-tcard{margin:0;padding:14px;display:flex;flex-direction:column}
-.vs-tvid{position:relative;aspect-ratio:9/12;border-radius:16px;overflow:hidden;background:#000}
-.vs-tvid button{all:unset;cursor:pointer;display:block;width:100%;height:100%}
-.vs-tvid img,.vs-tvid video{width:100%;height:100%;object-fit:cover;display:block}
-.vs-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:58px;height:58px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:20px;padding-left:4px;
-  background:linear-gradient(120deg,#8B79D4,#E7A9D8);box-shadow:0 10px 30px rgba(0,0,0,.45)}
-.vs-tcard blockquote{margin:14px 4px 10px;font-family:var(--serif);font-size:17px;line-height:1.4;color:#fff}
-.vs-tcard figcaption{margin:auto 4px 4px;font-size:13px;color:var(--muted)}
-.vs-tcard figcaption b{color:var(--pink);font-weight:600;margin-right:4px}
-.vs-urgency{display:grid;gap:10px;margin:6px 0 18px}
-.vs-urgency div{display:grid;grid-template-columns:112px 1fr;gap:12px;align-items:baseline;padding:12px 0;border-top:1px solid var(--line)}
-.vs-urgency b{font-family:var(--serif);font-weight:600;font-size:19px;color:var(--pink)}
-.vs-urgency span{font-size:14px;color:#d9d1ee}
+.vs-tgrid{display:grid;grid-template-columns:1fr;gap:14px}
+.vs-tcard{position:relative;margin:0;padding:24px 22px 20px;overflow:hidden;transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1),border-color .4s}
+.vs-tcard::before{content:"";position:absolute;inset:0 0 auto 0;height:2px;background:linear-gradient(90deg,transparent,var(--lilac),var(--pink),transparent);transform:translateX(-100%);transition:transform 1.4s ease .3s}
+.vs-tcard.vs-in::before{transform:translateX(100%)}
+.vs-qmark{position:absolute;top:-14px;right:14px;font-family:var(--serif);font-size:110px;line-height:1;color:var(--pink);opacity:.18}
+.vs-tcard blockquote{margin:0 0 14px;font-family:var(--serif);font-size:20px;line-height:1.4;color:#fff}
+.vs-tcard figcaption{display:flex;flex-direction:column;gap:2px;font-size:14px;color:var(--muted)}
+.vs-tcard figcaption b{color:var(--pink);font-weight:600;font-size:15px}
+.vs-swipe{display:none;color:var(--pink)}
+.vs-bignum{display:flex;flex-direction:column;margin-bottom:6px}
+.vs-bignum b{font-family:var(--serif);font-weight:800;font-size:56px;line-height:1;letter-spacing:-.02em;background:linear-gradient(120deg,#fff,var(--lilac) 55%,var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+.vs-bignum span{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--lilac);margin-top:8px}
+@media (min-width:901px){.vs-tgrid{grid-template-columns:repeat(2,1fr)}.vs-tcard:first-child{grid-column:1/-1}.vs-tcard:first-child blockquote{font-size:26px}.vs-bignum b{font-size:72px}}
+.vs-urgency{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 10px}
+.vs-urgency span{padding:8px 14px;border-radius:999px;border:1px solid rgba(231,169,216,.35);background:rgba(231,169,216,.08);color:var(--pink);font-weight:600;font-size:14px}
+.vs-zones-box{margin-top:10px;font-size:14px;color:var(--muted)}
+.vs-zones-box summary{cursor:pointer;color:var(--lilac);list-style:none;padding:6px 0}
+.vs-zones-box summary::-webkit-details-marker{display:none}
+.vs-zones-box summary::after{content:" +";color:var(--pink)}
+.vs-zones-box[open] summary::after{content:" −"}
+.vs-zones-box .vs-zones{margin-top:8px}
 /* Site footer: quiet on this page so nothing pulls people away from the form */
 .vs-page ~ footer,footer.footer-glow{margin-top:0 !important;padding:18px 0 !important;opacity:.55}
 footer.footer-glow p:first-of-type{font-size:12px !important;line-height:1.6 !important}
@@ -644,7 +732,7 @@ footer.footer-glow > div{gap:10px !important}
 .vs-reg{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;align-items:start}
 .vs-printbox{aspect-ratio:1;max-width:380px;margin:10px auto 0}
 .vs-print{width:100%;height:100%;display:block}
-.vs-note{font-size:14px;color:var(--muted);margin:10px 0 18px}
+.vs-note{font-size:15px;line-height:1.55;color:#d9d1ee;margin:4px 0 0}
 .vs-zones{display:grid;grid-template-columns:repeat(2,1fr);gap:6px 18px;font-size:13px;color:var(--muted)}
 .vs-zones b{color:#e9e2fb;font-weight:500}
 
@@ -680,7 +768,8 @@ footer.footer-glow > div{gap:10px !important}
   .vs-joe{max-width:230px;order:-1;margin-bottom:-24px}
   .vs-tag{display:none}
   .vs-cards,.vs-tgrid{grid-template-columns:1fr 1fr}
-  .vs-story,.vs-reg{grid-template-columns:1fr;gap:24px}
+  .vs-story,.vs-reg{grid-template-columns:1fr;gap:20px}
+  .vs-desk-only{display:none}
   .vs-printbox{max-width:240px}
 }
 @media (max-width:600px){
@@ -693,16 +782,20 @@ footer.footer-glow > div{gap:10px !important}
   .vs-when{gap:8px;margin-bottom:18px}
   .vs-chip{padding:7px 12px;font-size:13px}
   .vs-cards{grid-template-columns:1fr}
+  .vs-tune{width:90%;font-size:14px}
+  .vs-tune .row{grid-template-columns:1fr 1fr;gap:0;margin:2px 0 6px}
+  .vs-tune .row input{grid-column:1/-1;grid-row:2;height:40px}
+  .vs-reply{font-size:15px}
   .vs-tgrid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:0 -24px;padding:0 24px 8px;scrollbar-width:none}
   .vs-tgrid::-webkit-scrollbar{display:none}
-  .vs-tcard{flex:0 0 78%;scroll-snap-align:center}
-  .vs-tvid{aspect-ratio:4/5}
+  .vs-tcard{flex:0 0 84%;scroll-snap-align:center}
+  .vs-swipe{display:inline}
   .vs-urgency div{grid-template-columns:92px 1fr}
   .vs-pane{padding:26px 22px 34px}
-  .vs-bio{grid-template-columns:96px 1fr;gap:18px;padding:16px}
-  .vs-bio-photo img:first-child{width:96px;height:122px}
-  .vs-bio-photo .seal{width:46px;height:46px;right:-12px;bottom:-10px}
-  .vs-bio h3{font-size:21px}.vs-bio p{font-size:13.5px}
+  .vs-bio{grid-template-columns:1fr;justify-items:center;text-align:center;gap:18px;padding:26px 22px 24px}
+  .vs-bio-photo img:first-child{width:200px;height:250px;border-radius:20px}
+  .vs-bio-photo .seal{width:84px;height:84px;right:-26px;bottom:-18px}
+  .vs-bio h3{font-size:30px;margin:2px 0 8px}.vs-bio p{font-size:17px;line-height:1.5}
   .vs-sec{padding-top:70px}
 }
 @media (prefers-reduced-motion:reduce){.vs-reveal{opacity:1;transform:none;transition:none}.vs-caret{animation:none}}

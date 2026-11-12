@@ -208,7 +208,7 @@ export type EventDefinition = {
     bioSeal: string
     testimonialsKicker: string
     testimonialsTitle: [string, string]
-    testimonials: Array<{ name: string; location: string; quote: string; videoUrl: string; poster: string }>
+    testimonials: Array<{ name: string; location: string; quote: string }>
   }
   zoomLink?: string
   badge?: string
@@ -1878,18 +1878,19 @@ export const events: EventDefinition[] = [
       ],
       bioPhoto: '/images/events/voice-class/joe-with-book.jpg',
       bioSeal: '/images/events/voice-class/amazon-best-seller-seal.png',
-      // Real Mastermind members, all already public on mastermindshq.business. 53 people have
-      // testimonials there, 50 on video (counted 12 Nov), so the page says "50+". Left out on
-      // purpose: anyone with a personal or business tie to Joe, and the never-contact list.
-      testimonialsKicker: '50+ video testimonials',
+      // Five real Mastermind members, word for word from mastermindshq.business testimonials.json,
+      // picked for this class (beginners, writing, time back). Text only (Illy 12 Nov). Left out on
+      // purpose: anyone with a personal or business tie to Joe, the never-contact list, and Craig
+      // Soles (Illy 12 Nov: he does not want his testimonial used).
+      // Kicker = people taught (90,000+, Joe's bio), not the testimonial count (Illy 12 Nov).
+      testimonialsKicker: '90,000+ people taught since 1998',
       testimonialsTitle: ['Not techies.', 'Now they build.'],
       testimonials: [
-        { name: 'Craig Soles', location: 'Vancouver, Canada', quote: "Me, 64 years old, no coding experience, no prior technology experience when it comes to this or AI, could step in and under 30 days build what I built.", videoUrl: 'https://media.mastermindshq.business/testimonials/craig-soles-mastermind-2026.mp4', poster: '/images/events/voice-class/craig-soles-mastermind-2026.webp' },
-        { name: 'Beata Fuller', location: 'Bali', quote: 'I took the idea to an app developer and I was quoted $200,000 and about two years of work. Then I got into Joe\'s mastermind, and a day later the prototype existed.', videoUrl: 'https://media.mastermindshq.business/testimonials/beata-fuller-mastermind-2026.mp4', poster: '/images/events/voice-class/beata-fuller-mastermind-2026.webp' },
-        { name: 'Miia Nern', location: 'Berlin, Germany', quote: 'Learning how to use AI in a proper way and knowing when to use what has saved me literally at least 20 to 25 hours a week.', videoUrl: 'https://media.mastermindshq.business/testimonials/miia-nern-business-automation-mastermind-testimonial-short.mp4', poster: '/images/events/voice-class/miia-nern-business-automation-mastermind-testimonial-short.webp' },
-        { name: 'Jasmine Oh', location: 'Bali, Indonesia', quote: "Whether it's SEO, websites, funnels or leads, I always had to hire somebody else to do it, and now I can finally do those things myself.", videoUrl: 'https://media.mastermindshq.business/testimonials/jasmine-oh-business-automation-mastermind-testimonial-short.mp4', poster: '/images/events/voice-class/jasmine-oh-business-automation-mastermind-testimonial-short.webp' },
-        { name: 'Tiyana Jovic', location: 'Ubud, Bali', quote: 'These small website and landing pages that could have taken me like three days or more in the past to build could take me 30 minutes.', videoUrl: 'https://media.mastermindshq.business/testimonials/tiyana-jovic-business-automation-mastermind-testimonial-short.mp4', poster: '/images/events/voice-class/tiyana-jovic-business-automation-mastermind-testimonial-short.webp' },
-        { name: 'Quincee Lark', location: 'Bali, Indonesia', quote: 'This had already paid for itself, completely.', videoUrl: 'https://media.mastermindshq.business/testimonials/quincee-lark-mastermind-2026-short.mp4', poster: '/images/events/voice-class/quincee-lark-mastermind-2026-short.webp' },
+        { name: 'Heather Brand', location: 'Bali, Indonesia', quote: "I am a total beginner, I know nothing about anything technical. … Joe's is a thousand times better, and with each section he makes sure that nobody gets left behind." },
+        { name: 'Jasmine Oh', location: 'Bali, Indonesia', quote: "Whether it's SEO, websites, funnels or leads, I always had to hire somebody else to do it, and now I can finally do those things myself." },
+        { name: 'Leyolah Dekanic', location: 'AI Business Mastermind, Cohort 4', quote: 'It has become my fabulous assistant. We built a lead magnet page and I had 300 signups.' },
+        { name: 'Miia Nern', location: 'Berlin, Germany', quote: 'Learning how to use AI in a proper way and knowing when to use what has saved me literally at least 20 to 25 hours a week.' },
+        { name: 'Johanna Bieber', location: 'Uluwatu, Bali', quote: 'So many things that you would have needed a whole team for, you can do now on your own.' },
       ],
     },
     sections: [],
