@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
+import DinnerPhotoCarousel from '@/components/events/DinnerPhotoCarousel'
 
 export type EventHost = {
   name: string
@@ -199,10 +200,15 @@ export type EventDefinition = {
     leaveWith: Array<{ title: string; body: string }>
     storyTitle: [string, string]
     story: string[]
-    needs: Array<{ title: string; body: string }>
+    urgency: Array<{ title: string; body: string }>
     registerTitle: [string, string]
     registerIntro: string
     bio: string[]
+    bioPhoto: string
+    bioSeal: string
+    testimonialsKicker: string
+    testimonialsTitle: [string, string]
+    testimonials: Array<{ name: string; location: string; quote: string; videoUrl: string; poster: string }>
   }
   zoomLink?: string
   badge?: string
@@ -589,6 +595,45 @@ export const events: EventDefinition[] = [
     },
     metadata: {
       title: "Joe Che's Connection Dinner, October 4, 2026",
+      description:
+        'A monthly dinner for entrepreneurs, founders, and people doing interesting things in Canggu. Donations go to PKP Community Centre.',
+    },
+  },
+  {
+    ...connectionDinnerCangguTemplate,
+    slug: 'joe-ches-connection-dinner-wednesday-december-16-2026',
+    status: 'live',
+    title: "Joe Che's Connection Dinner",
+    shortTitle: 'Connection Dinner',
+    dateLabel: 'Wednesday, December 16, 2026',
+    timeLabel: '6:00 PM',
+    badge: 'December Dinner',
+    calendarEvent: {
+      startIso: '2026-12-16T18:00:00+08:00',
+      endIso: '2026-12-16T21:00:00+08:00',
+    },
+    capacityReservation: {
+      holdMinutes: 30,
+    },
+    manuallyClosed: false,
+    privateLocationReminder: {
+      eventStartIso: '2026-12-16T18:00:00+08:00',
+      leadHours: 4,
+      exactAddress: 'Mostly Restaurant, Jl. Pantai Pererenan No.114, Pererenan, Mengwi, Bali 80351',
+      googleMapsUrl:
+        'https://www.google.com/maps/search/?api=1&query=Mostly+Restaurant+Jl.+Pantai+Pererenan+No.114+Pererenan+Mengwi+Bali',
+      parkingInstructions: [
+        'Arrival is at 6:00 PM. Doors close at 6:30 PM.',
+        'The restaurant is on Jalan Pantai Pererenan, just off the main Pererenan strip.',
+      ],
+    },
+    sections: connectionDinnerCangguTemplate.sections
+      .filter((section) => section.id !== 'pkp-photos')
+      .map((section): EventSection => section.id === 'gallery'
+        ? { type: 'custom', id: 'dinner-photo-carousel', render: <DinnerPhotoCarousel /> }
+        : section),
+    metadata: {
+      title: "Joe Che's Connection Dinner, December 16, 2026",
       description:
         'A monthly dinner for entrepreneurs, founders, and people doing interesting things in Canggu. Donations go to PKP Community Centre.',
     },
@@ -1726,13 +1771,14 @@ export const events: EventDefinition[] = [
     summary:
       "Most AI writing sounds like AI, and your clients can tell. You can't be in every reply, every post and every follow-up. Your voice can.",
     description:
-      'A free live class with Joe Che. Build an AI that writes the way you actually talk, on your own laptop in Codex or Claude Code, and leave with your voice profile, your voice print and a post or email ready to send.',
+      'A free live class with Joe Che. Build an AI that writes the way you actually talk, on your own laptop in Codex or Claude Code, and leave with your voice profile, your voice print and a social media post ready to send.',
     dateLabel: 'Tuesday, December 1, 2026',
     // Global audience: the confirmation email prints this line, so it names four
     // cities (house rule). The page itself shows each visitor their own time.
-    timeLabel: '8:00 to 10:00 PM Singapore, 1:00 to 3:00 PM Berlin, 7:00 to 9:00 AM New York, 4:00 to 6:00 AM Los Angeles',
+    // Start times only (Illy 12 Nov: do not show how long the class runs).
+    timeLabel: 'Starts 8:00 PM Singapore, 1:00 PM Berlin, 7:00 AM New York, 4:00 AM Los Angeles',
     locationLabel: 'Free online class',
-    durationLabel: '90 minutes of building together, then 30 minutes of Q&A',
+    durationLabel: 'Live on Zoom',
     heroImage: '/images/events/make-ai-sound-exactly-like-you-hero.jpg',
     heroAlt: 'Joe Che beside the class title Make AI Sound Exactly Like You, a free live class on Tuesday, December 1',
     heroNoOverlay: true,
@@ -1747,16 +1793,16 @@ export const events: EventDefinition[] = [
       businessContextMinLength: 3,
     },
     successDetail:
-      'You are in. Your Zoom link and calendar invite are on their way from joe@mastermindshq.business. Before the class, put three to five things you have written into one document: an email to a client, a post, a message to a friend. If nothing shows up in a couple of minutes, check spam and add that address to your contacts so the reminders reach you.',
+      'You are in. Your Zoom link and calendar invite are on their way from joe@mastermindshq.business. Before the class, put three to five things you have written into one document: an email to a client, a post, a newsletter. If nothing shows up in a couple of minutes, check spam and add that address to your contacts so the reminders reach you.',
     audience: [
-      'Anyone under Level 7 on the AI Capability Levels',
+      'People who use AI but have not built anything with it yet',
       'Coaches, consultants and founders who write their own emails and posts',
       'People who have never built anything with AI',
     ],
     outcomes: [
       'Your own voice profile, on your computer',
       'Your voice print, to tune and share',
-      'A post or email in your voice, ready to send',
+      'A social media post in your voice, ready to send',
     ],
     hosts: [
       {
@@ -1764,7 +1810,7 @@ export const events: EventDefinition[] = [
         firstName: 'Joe',
         role: 'Founder • AI Entrepreneur • Teacher',
         photoSrc: '/images/events/joe-che-bio-bw.jpg',
-        bio: [
+          bio: [
           'Joe Che is the author of How to Build Your Own AI Agent Operating System, which hit number one in three categories across business and AI. He is the founder of 26 companies across tech, education, real estate, and community building. One of those companies became the largest software and business training company in New York City, where he trained more than 90,000 people, including Fortune 5 executives, the CIA, Microsoft, and Tyra Banks.',
           'He has spent nearly 30 years helping people turn big ideas into something real: cleaner systems, clearer offers, better decisions, and businesses that are easier to run.',
         ],
@@ -1808,28 +1854,42 @@ export const events: EventDefinition[] = [
       ],
       leaveWithTitle: ['Three things on', 'your laptop.'],
       leaveWith: [
-        { title: 'Your voice profile', body: 'A file your AI rereads every time it writes for you. Not a prompt you copy and forget.' },
+        { title: 'Your voice profile', body: 'Your AI learns how you write and keeps it. Not a prompt you copy and forget.' },
         { title: 'Your voice print', body: 'A living picture of how you write. Tune it, save it, share it.' },
-        { title: 'A post or email, ready', body: 'Real writing for this week, in your voice, before the class ends.' },
+        { title: 'A post, ready to go', body: 'A social media post for this week, in your voice, before the class ends.' },
       ],
       storyTitle: ['Not a prompt.', 'A voice.'],
       story: [
-        "In this class you build an AI that writes the way you actually talk. Bring three to five things you've written, like an email to a client, a post or a message to a friend. We set it up together on your own laptop in Codex or Claude Code, and it learns your voice from your own words.",
-        "This is not a prompt you copy and forget. It's a file your AI rereads every time it writes for you. Then we build with it. You'll see your voice as a living voice print you can tune and share, and you'll use it to create real content for this week. You leave with your voice profile on your computer, your voice print, and a post or email in your voice that's ready to send.",
-        "I designed this for anyone under Level 7 on my AI Capability Levels. If you've never built anything with AI, you're exactly who I made it for. You'll need a laptop, Mac or Windows, and ChatGPT on the free plan or Plus ($20 a month). Already on Claude Pro? That works too.",
+        "In this class you build an AI that writes the way you actually talk. Bring three to five things you've written, like an email to a client, a post or a newsletter. We set it up together on your own laptop in Codex or Claude Code, and it learns your voice from your own words.",
+        "This is not a prompt you copy and forget. It's a file your AI rereads every time it writes for you. Then we build with it. You'll see your voice as a living voice print you can tune and share, and you'll use it to create real content for this week. You leave with your voice profile on your computer, your voice print, and a social media post in your voice that's ready to send.",
+        "I designed this for people who use AI but haven't built anything with it yet. If that's you, or you've never touched AI at all, you're exactly who I made it for. You'll need a laptop, Mac or Windows, and ChatGPT or Claude. The free ChatGPT plan works.",
         "I've been teaching since 1998, and most of the people in my Mastermind didn't come in as techies. That's the whole point. Bring the thing you've been putting off writing. I'd love to see what it sounds like in your voice.",
       ],
-      needs: [
-        { title: 'A laptop', body: 'Mac or Windows' },
-        { title: 'ChatGPT', body: 'Free plan or Plus ($20 a month). Claude Pro works too.' },
-        { title: 'Your writing', body: 'Three to five pieces: an email, a post, a message' },
-        { title: '2 hours', body: '90 minutes of building together, then 30 minutes of Q&A' },
+      urgency: [
+        { title: '100 seats', body: 'The live Zoom room holds 100 people. When it is full, the doors close.' },
+        { title: '2 to 3 hot seats', body: 'I rebuild a few people\'s writing live, picked from the answers on this form.' },
+        { title: 'One night only', body: 'Tuesday, December 1. Live, with me, on your own laptop.' },
       ],
       registerTitle: ['Your voice,', 'on the night.'],
       registerIntro: 'Free. Your Zoom link and calendar invite arrive by email from joe@mastermindshq.business.',
       bio: [
-        'Joe Che is the author of How to Build Your Own AI Agent Operating System, which hit number one in three categories across business and AI. He founded the largest software and business training company in New York City and has trained more than 90,000 people.',
-        'Most of the people in his AI Business Mastermind came in as non-techies.',
+        '#1 Amazon bestselling author of How to Build Your Own AI Agent Operating System.',
+        'Teaching since 1998. More than 90,000 people trained.',
+      ],
+      bioPhoto: '/images/events/voice-class/joe-with-book.jpg',
+      bioSeal: '/images/events/voice-class/amazon-best-seller-seal.png',
+      // Real Mastermind members, all already public on mastermindshq.business. 53 people have
+      // testimonials there, 50 on video (counted 12 Nov), so the page says "50+". Left out on
+      // purpose: anyone with a personal or business tie to Joe, and the never-contact list.
+      testimonialsKicker: '50+ video testimonials',
+      testimonialsTitle: ['Not techies.', 'Now they build.'],
+      testimonials: [
+        { name: 'Craig Soles', location: 'Vancouver, Canada', quote: "Me, 64 years old, no coding experience, no prior technology experience when it comes to this or AI, could step in and under 30 days build what I built.", videoUrl: 'https://media.mastermindshq.business/testimonials/craig-soles-mastermind-2026.mp4', poster: '/images/events/voice-class/craig-soles-mastermind-2026.webp' },
+        { name: 'Beata Fuller', location: 'Bali', quote: 'I took the idea to an app developer and I was quoted $200,000 and about two years of work. Then I got into Joe\'s mastermind, and a day later the prototype existed.', videoUrl: 'https://media.mastermindshq.business/testimonials/beata-fuller-mastermind-2026.mp4', poster: '/images/events/voice-class/beata-fuller-mastermind-2026.webp' },
+        { name: 'Miia Nern', location: 'Berlin, Germany', quote: 'Learning how to use AI in a proper way and knowing when to use what has saved me literally at least 20 to 25 hours a week.', videoUrl: 'https://media.mastermindshq.business/testimonials/miia-nern-business-automation-mastermind-testimonial-short.mp4', poster: '/images/events/voice-class/miia-nern-business-automation-mastermind-testimonial-short.webp' },
+        { name: 'Jasmine Oh', location: 'Bali, Indonesia', quote: "Whether it's SEO, websites, funnels or leads, I always had to hire somebody else to do it, and now I can finally do those things myself.", videoUrl: 'https://media.mastermindshq.business/testimonials/jasmine-oh-business-automation-mastermind-testimonial-short.mp4', poster: '/images/events/voice-class/jasmine-oh-business-automation-mastermind-testimonial-short.webp' },
+        { name: 'Tiyana Jovic', location: 'Ubud, Bali', quote: 'These small website and landing pages that could have taken me like three days or more in the past to build could take me 30 minutes.', videoUrl: 'https://media.mastermindshq.business/testimonials/tiyana-jovic-business-automation-mastermind-testimonial-short.mp4', poster: '/images/events/voice-class/tiyana-jovic-business-automation-mastermind-testimonial-short.webp' },
+        { name: 'Quincee Lark', location: 'Bali, Indonesia', quote: 'This had already paid for itself, completely.', videoUrl: 'https://media.mastermindshq.business/testimonials/quincee-lark-mastermind-2026-short.mp4', poster: '/images/events/voice-class/quincee-lark-mastermind-2026-short.webp' },
       ],
     },
     sections: [],

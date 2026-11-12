@@ -265,6 +265,31 @@ function Compare({ generic, voice }: { generic: string[]; voice: string[] }) {
   )
 }
 
+type Testimonial = { name: string; location: string; quote: string; videoUrl: string; poster: string }
+
+function TestimonialCard({ t }: { t: Testimonial }) {
+  const [play, setPlay] = useState(false)
+  return (
+    <figure className="vs-tcard vs-glass vs-reveal">
+      <div className="vs-tvid">
+        {play ? (
+          <video src={t.videoUrl} poster={t.poster} controls autoPlay playsInline />
+        ) : (
+          <button type="button" onClick={() => setPlay(true)} aria-label={`Play ${t.name}'s video`}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={t.poster} alt="" loading="lazy" />
+            <span className="vs-play" aria-hidden="true">&#9654;</span>
+          </button>
+        )}
+      </div>
+      <blockquote>&ldquo;{t.quote}&rdquo;</blockquote>
+      <figcaption>
+        <b>{t.name}</b> {t.location}
+      </figcaption>
+    </figure>
+  )
+}
+
 function useLocalTime(startIso: string, endIso: string) {
   const [local, setLocal] = useState<{ date: string; time: string; zone: string } | null>(null)
   useEffect(() => {
@@ -273,12 +298,11 @@ function useLocalTime(startIso: string, endIso: string) {
       const start = new Date(startIso)
       const end = new Date(endIso)
       const t = (d: Date) => d.toLocaleTimeString('en-US', { timeZone: tz, hour: 'numeric', minute: '2-digit' })
-      const s = t(start)
-      const e = t(end)
-      const sameHalf = s.slice(-2) === e.slice(-2)
+      void end
+      // Start time only (Illy 12 Nov: do not show how long the class runs).
       setLocal({
         date: start.toLocaleDateString('en-US', { timeZone: tz, weekday: 'long', month: 'long', day: 'numeric' }),
-        time: `${sameHalf ? s.replace(/ (AM|PM)$/, '') : s} to ${e}`,
+        time: t(start),
         zone: `your time (${(tz.split('/').pop() || tz).replace(/_/g, ' ')})`,
       })
     } catch {
@@ -308,7 +332,7 @@ export default function VoiceStudioPage({
   const local = useLocalTime(startIso, endIso)
   // Before hydration (and without JS) show the Singapore time, never blank.
   const dateText = local?.date ?? 'Tuesday, December 1'
-  const timeText = local?.time ?? '8:00 to 10:00 PM'
+  const timeText = local?.time ?? '8:00 PM'
   const zoneText = local?.zone ?? 'Singapore time'
   const host = event.hosts[0]
 
@@ -331,11 +355,13 @@ export default function VoiceStudioPage({
   const reg: EventRegistrationData = {
     ...registrationEvent,
     appearance: {
-      eyebrow: 'Save your seat',
+      eyebrow: 'Free registration',
       heading: event.title,
       intro: `${dateText} · ${timeText} ${zoneText} · Live on Zoom`,
       submitLabel: event.ctaLabel,
       hideAside: true,
+      phoneLabel: 'WhatsApp or phone number',
+      phoneHelp: "WhatsApp if you have it, any mobile number works. Include your country code so I can send you a reminder.",
     },
   }
 
@@ -394,14 +420,11 @@ export default function VoiceStudioPage({
           <div className="vs-cards">
             <div className="vs-card vs-glass vs-reveal">
               <div className="vs-vis">
-                <div className="vs-file">
-                  <span className="c"># my-voice.md</span>
-                  <br />
-                  <span className="k">tone:</span> warm, direct
-                  <br />
-                  <span className="k">sentences:</span> short, then one long
-                  <br />
-                  <span className="k">never say:</span> &quot;delighted&quot;
+                <div className="vs-tune">
+                  <div className="row"><span>Formal</span><i><b style={{ left: '74%' }} /></i><span>Casual</span></div>
+                  <div className="row"><span>Careful</span><i><b style={{ left: '68%' }} /></i><span>Direct</span></div>
+                  <div className="row"><span>Long</span><i><b style={{ left: '62%' }} /></i><span>Short</span></div>
+                  <div className="words">Sounds like you: <em>&quot;quick one&quot;</em>, <em>&quot;honestly&quot;</em></div>
                 </div>
               </div>
               <h3>{v.leaveWith[0]?.title}</h3>
@@ -417,13 +440,19 @@ export default function VoiceStudioPage({
             <div className="vs-card vs-glass vs-reveal">
               <div className="vs-vis">
                 <div className="vs-bubble">
-                  Quick one. I finished your proposal and I think you&apos;ll like where it landed.
-                  <span className="t">Ready to send</span>
+                  Honestly? Most of my best client wins started with one question. Here&apos;s the one I ask first.
+                  <span className="t">Ready to post</span>
                 </div>
               </div>
               <h3>{v.leaveWith[2]?.title}</h3>
               <p>{v.leaveWith[2]?.body}</p>
             </div>
+          </div>
+          <div className="vs-midcta vs-reveal">
+            <a className="vs-cta" href="#register">
+              {event.ctaLabel} <span aria-hidden="true">&rarr;</span>
+            </a>
+            <span className="vs-free">{v.urgency[0]?.body}</span>
           </div>
         </div>
       </section>
@@ -445,14 +474,19 @@ export default function VoiceStudioPage({
         </div>
       </section>
 
-      <section className="vs-sec vs-sec-tight">
-        <div className="vs-wrap vs-need">
-          {v.needs.map((n) => (
-            <div key={n.title} className="vs-glass vs-reveal">
-              <b>{n.title}</b>
-              <span>{n.body}</span>
-            </div>
-          ))}
+
+      <section className="vs-sec">
+        <div className="vs-wrap">
+          <div className="vs-kicker vs-reveal">{v.testimonialsKicker}</div>
+          <h2 className="vs-h2 vs-reveal">
+            {v.testimonialsTitle[0]} <em>{v.testimonialsTitle[1]}</em>
+          </h2>
+          <p className="vs-tsub vs-reveal">Members of my AI Business Mastermind, in their own words. Swipe for more.</p>
+          <div className="vs-tgrid">
+            {v.testimonials.map((t) => (
+              <TestimonialCard key={t.name} t={t} />
+            ))}
+          </div>
         </div>
       </section>
 
@@ -465,6 +499,14 @@ export default function VoiceStudioPage({
             </h2>
             <div className="vs-printbox">
               <VoicePrint size={840} voice={{ warmth: 72, direct: 70, length: 45, humour: 40 }} className="vs-print" />
+            </div>
+            <div className="vs-urgency">
+              {v.urgency.map((u) => (
+                <div key={u.title}>
+                  <b>{u.title}</b>
+                  <span>{u.body}</span>
+                </div>
+              ))}
             </div>
             <p className="vs-note">{v.registerIntro}</p>
             <div className="vs-zones">
@@ -485,9 +527,14 @@ export default function VoiceStudioPage({
         <section className="vs-sec vs-sec-tight">
           <div className="vs-wrap">
             <div className="vs-bio vs-glass vs-reveal">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={host.photoSrc} alt={host.name} width={240} height={240} />
+              <div className="vs-bio-photo">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={v.bioPhoto} alt="Joe Che holding his book, How to Build Your Own AI Agent Operating System" width={640} height={930} />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img className="seal" src={v.bioSeal} alt="Amazon #1 Best Seller" width={120} height={120} />
+              </div>
               <div>
+                <div className="vs-kicker">Your teacher</div>
                 <h3>{host.name}</h3>
                 {v.bio.map((p) => (
                   <p key={p}>{p}</p>
@@ -556,8 +603,13 @@ const VS_CSS = `
 .vs-card h3{font-family:var(--serif);font-weight:600;font-size:23px;margin:0 0 6px;line-height:1.15;color:var(--ink)}
 .vs-card p{margin:0;color:var(--muted);font-size:15px}
 .vs-mini{width:150px;height:150px}
-.vs-file{font:500 13px/1.6 ui-monospace,Menlo,monospace;color:#d9d1ee;text-align:left;padding:14px 18px;width:86%}
-.vs-file .k{color:var(--pink)}.vs-file .c{color:#6f6984}
+.vs-tune{width:86%;font-size:12px;color:var(--muted)}
+.vs-tune .row{display:grid;grid-template-columns:52px 1fr 48px;align-items:center;gap:10px;margin:7px 0}
+.vs-tune .row span:last-child{text-align:right;color:#e9e2fb}
+.vs-tune i{position:relative;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--purple),var(--pink))}
+.vs-tune b{position:absolute;top:50%;width:14px;height:14px;border-radius:50%;background:#fff;transform:translate(-50%,-50%);box-shadow:0 0 0 3px rgba(139,121,212,.45)}
+.vs-tune .words{margin-top:10px;color:#d9d1ee;font-size:12.5px}
+.vs-tune em{font-style:normal;color:var(--pink)}
 .vs-bubble{background:var(--cream);color:#1a1526;border-radius:18px 18px 18px 4px;padding:12px 16px;font-size:14px;max-width:84%;line-height:1.45;box-shadow:0 10px 30px rgba(0,0,0,.35)}
 .vs-bubble .t{display:block;margin-top:6px;font-size:11px;color:#8B79D4}
 
@@ -566,10 +618,27 @@ const VS_CSS = `
 .vs-body p:first-child{font-family:var(--serif);font-size:clamp(22px,2.2vw,27px);line-height:1.35;color:#fff}
 .vs-sig{margin-top:8px;font-family:var(--serif);font-style:italic;font-size:22px;color:var(--pink)}
 
-.vs-need{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.vs-need .vs-glass{padding:22px}
-.vs-need b{display:block;font-family:var(--serif);font-weight:600;font-size:20px;color:#fff;margin-bottom:4px}
-.vs-need span{font-size:14px;color:var(--muted)}
+.vs-midcta{margin-top:34px;text-align:center}
+.vs-tsub{color:var(--muted);margin:-6px 0 26px;font-size:15px}
+.vs-tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.vs-tcard{margin:0;padding:14px;display:flex;flex-direction:column}
+.vs-tvid{position:relative;aspect-ratio:9/12;border-radius:16px;overflow:hidden;background:#000}
+.vs-tvid button{all:unset;cursor:pointer;display:block;width:100%;height:100%}
+.vs-tvid img,.vs-tvid video{width:100%;height:100%;object-fit:cover;display:block}
+.vs-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:58px;height:58px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:20px;padding-left:4px;
+  background:linear-gradient(120deg,#8B79D4,#E7A9D8);box-shadow:0 10px 30px rgba(0,0,0,.45)}
+.vs-tcard blockquote{margin:14px 4px 10px;font-family:var(--serif);font-size:17px;line-height:1.4;color:#fff}
+.vs-tcard figcaption{margin:auto 4px 4px;font-size:13px;color:var(--muted)}
+.vs-tcard figcaption b{color:var(--pink);font-weight:600;margin-right:4px}
+.vs-urgency{display:grid;gap:10px;margin:6px 0 18px}
+.vs-urgency div{display:grid;grid-template-columns:112px 1fr;gap:12px;align-items:baseline;padding:12px 0;border-top:1px solid var(--line)}
+.vs-urgency b{font-family:var(--serif);font-weight:600;font-size:19px;color:var(--pink)}
+.vs-urgency span{font-size:14px;color:#d9d1ee}
+/* Site footer: quiet on this page so nothing pulls people away from the form */
+.vs-page ~ footer,footer.footer-glow{margin-top:0 !important;padding:18px 0 !important;opacity:.55}
+footer.footer-glow p:first-of-type{font-size:12px !important;line-height:1.6 !important}
+footer.footer-glow .w-10{width:30px !important;height:30px !important}
+footer.footer-glow > div{gap:10px !important}
 
 .vs-reg-sec{padding-top:70px}
 .vs-reg{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;align-items:start}
@@ -599,16 +668,18 @@ const VS_CSS = `
   background:linear-gradient(120deg,#8B79D4,#b48ad6 60%,#E7A9D8) !important;box-shadow:0 18px 50px rgba(139,121,212,.38) !important}
 .vs-form .event-registration-shell form > div:last-child{align-items:stretch}
 
-.vs-bio{display:grid;grid-template-columns:120px 1fr;gap:26px;align-items:center;padding:28px}
-.vs-bio img{width:120px;height:120px;object-fit:cover;object-position:50% 20%;border-radius:50%;filter:grayscale(1);border:2px solid rgba(189,179,232,.35)}
-.vs-bio h3{font-family:var(--serif);font-weight:600;font-size:26px;margin:0;color:var(--ink)}
-.vs-bio p{margin:6px 0 0;color:var(--muted);font-size:15px}
+.vs-bio{display:grid;grid-template-columns:150px 1fr;gap:26px;align-items:center;padding:22px}
+.vs-bio-photo{position:relative}
+.vs-bio-photo img:first-child{width:150px;height:190px;object-fit:cover;object-position:50% 15%;border-radius:16px;display:block}
+.vs-bio-photo .seal{position:absolute;right:-18px;bottom:-14px;width:68px;height:68px;filter:drop-shadow(0 6px 14px rgba(0,0,0,.5))}
+.vs-bio h3{font-family:var(--serif);font-weight:600;font-size:26px;margin:4px 0 6px;color:var(--ink)}
+.vs-bio p{margin:4px 0 0;color:#d9d1ee;font-size:15px}
 
 @media (max-width:900px){
   .vs-hero-grid{grid-template-columns:1fr;padding-top:100px}
   .vs-joe{max-width:230px;order:-1;margin-bottom:-24px}
   .vs-tag{display:none}
-  .vs-cards,.vs-need{grid-template-columns:1fr 1fr}
+  .vs-cards,.vs-tgrid{grid-template-columns:1fr 1fr}
   .vs-story,.vs-reg{grid-template-columns:1fr;gap:24px}
   .vs-printbox{max-width:240px}
 }
@@ -621,9 +692,17 @@ const VS_CSS = `
   .vs-lede{font-size:16px;margin-bottom:18px}
   .vs-when{gap:8px;margin-bottom:18px}
   .vs-chip{padding:7px 12px;font-size:13px}
-  .vs-cards,.vs-need{grid-template-columns:1fr}
+  .vs-cards{grid-template-columns:1fr}
+  .vs-tgrid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:0 -24px;padding:0 24px 8px;scrollbar-width:none}
+  .vs-tgrid::-webkit-scrollbar{display:none}
+  .vs-tcard{flex:0 0 78%;scroll-snap-align:center}
+  .vs-tvid{aspect-ratio:4/5}
+  .vs-urgency div{grid-template-columns:92px 1fr}
   .vs-pane{padding:26px 22px 34px}
-  .vs-bio{grid-template-columns:1fr;text-align:center}.vs-bio img{margin:0 auto}
+  .vs-bio{grid-template-columns:96px 1fr;gap:18px;padding:16px}
+  .vs-bio-photo img:first-child{width:96px;height:122px}
+  .vs-bio-photo .seal{width:46px;height:46px;right:-12px;bottom:-10px}
+  .vs-bio h3{font-size:21px}.vs-bio p{font-size:13.5px}
   .vs-sec{padding-top:70px}
 }
 @media (prefers-reduced-motion:reduce){.vs-reveal{opacity:1;transform:none;transition:none}.vs-caret{animation:none}}

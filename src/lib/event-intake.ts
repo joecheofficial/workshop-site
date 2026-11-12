@@ -70,7 +70,7 @@ export function normalizeWhatsappNumber(value: string): string {
 
 export function validateWhatsappNumber(value: string): string | undefined {
   const trimmed = value.trim()
-  if (!trimmed) return 'Please add your WhatsApp number.'
+  if (!trimmed) return 'Please add your WhatsApp or phone number.'
   if (trimmed.length > WHATSAPP_MAX_LENGTH) return 'That number looks too long.'
   if (/[^\d\s+()\-.]/.test(trimmed)) return 'Use digits only, with an optional + for the country code.'
 
