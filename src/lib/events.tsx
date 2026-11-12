@@ -1867,7 +1867,6 @@ export const events: EventDefinition[] = [
       ],
       urgency: [
         { title: '100 seats', body: 'The live Zoom room holds 100 people. When it is full, the doors close.' },
-        { title: '2 to 3 hot seats', body: 'I rebuild a few people\'s writing live, picked from the answers on this form.' },
         { title: 'One night only', body: 'Tuesday, December 1. Live, with me.' },
       ],
       registerTitle: ['Your voice,', 'on the night.'],
@@ -1885,13 +1884,15 @@ export const events: EventDefinition[] = [
       // Kicker = people taught (90,000+, Joe's bio), not the testimonial count (Illy 12 Nov).
       testimonialsKicker: '90,000+ people taught since 1998',
       testimonialsTitle: ['Not techies.', 'Now they build.'],
-      // Short verbatim cuts with face + full name, no location (Illy 12 Nov).
+      // Voice-specific, word for word from members (Illy picked all five, 12 Nov). Source: quotes table in
+      // data/mastermind-participants.db (ids 1118, 1659, 2476, 204, 2031). Only Tiyana's is marked
+      // approved there; the other four were said in class / the members' WhatsApp group (consent not asked).
       testimonials: [
-        { name: 'Heather Brand', photo: '/images/events/voice-class/face-heather-brand.webp', quote: 'With each section he makes sure that nobody gets left behind.' },
-        { name: 'Jasmine Oh', photo: '/images/events/voice-class/face-jasmine-oh.webp', quote: 'Now I can finally do those things myself.' },
-        { name: 'Naomi Galinski', photo: '/images/events/voice-class/face-naomi-galinski.webp', quote: 'I am not a design person… Now I can build it directly with Claude Code.' },
-        { name: 'Miia Nern', photo: '/images/events/voice-class/face-miia-nern.webp', quote: 'Saved me literally at least 20 to 25 hours a week.' },
-        { name: 'Johanna Bieber', photo: '/images/events/voice-class/face-johanna-bieber.webp', quote: 'So many things that you would have needed a whole team for, you can do now on your own.' },
+        { name: 'Sheree Murray', photo: '/images/events/voice-class/face-sheree-murray.webp', quote: "Claude even wrote all the emails, and it's even in my own voice. … Normally I get AI slop, but this was really good." },
+        { name: 'Nichole Knight', photo: '/images/events/voice-class/face-nichole-knight.webp', quote: 'She literally writes like me now.' },
+        { name: 'Veronica Kaulinis', photo: '/images/events/voice-class/face-veronica-kaulinis.webp', quote: '…got Claude Code to get very clear on my voice profile and wow it is such a game changer.' },
+        { name: 'Beata Fuller', photo: '/images/events/voice-class/face-beata-fuller.webp', quote: "Now that it's loaded with my voice, I actually trusted it to edit the books well." },
+        { name: 'Tiyana Jovic', photo: '/images/events/voice-class/face-tiyana-jovic.webp', quote: 'Things that are actually resonating with my voice, with my brand, with my way of thinking.' },
       ],
     },
     sections: [],
