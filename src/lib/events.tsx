@@ -595,6 +595,40 @@ export const events: EventDefinition[] = [
   },
   {
     ...connectionDinnerCangguTemplate,
+    slug: 'joe-ches-connection-dinner-wednesday-december-16-2026',
+    status: 'live',
+    title: "Joe Che's Connection Dinner",
+    shortTitle: 'Connection Dinner',
+    dateLabel: 'Wednesday, December 16, 2026',
+    timeLabel: '6:00 PM',
+    badge: 'December Dinner',
+    calendarEvent: {
+      startIso: '2026-12-16T18:00:00+08:00',
+      endIso: '2026-12-16T21:00:00+08:00',
+    },
+    capacityReservation: {
+      holdMinutes: 30,
+    },
+    manuallyClosed: false,
+    privateLocationReminder: {
+      eventStartIso: '2026-12-16T18:00:00+08:00',
+      leadHours: 4,
+      exactAddress: 'Mostly Restaurant, Jl. Pantai Pererenan No.114, Pererenan, Mengwi, Bali 80351',
+      googleMapsUrl:
+        'https://www.google.com/maps/search/?api=1&query=Mostly+Restaurant+Jl.+Pantai+Pererenan+No.114+Pererenan+Mengwi+Bali',
+      parkingInstructions: [
+        'Arrival is at 6:00 PM. Doors close at 6:30 PM.',
+        'The restaurant is on Jalan Pantai Pererenan, just off the main Pererenan strip.',
+      ],
+    },
+    metadata: {
+      title: "Joe Che's Connection Dinner, December 16, 2026",
+      description:
+        'A monthly dinner for entrepreneurs, founders, and people doing interesting things in Canggu. Donations go to PKP Community Centre.',
+    },
+  },
+  {
+    ...connectionDinnerCangguTemplate,
     slug: 'joechella-big-one-december-11-2026',
     status: 'live',
     title: "JOECHELLA: The Big One",
