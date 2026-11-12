@@ -83,6 +83,8 @@ function usePrefersReducedMotion() {
 function VoicePrint({ size, voice, className }: { size: number; voice: Voice; className?: string }) {
   const ref = useRef<HTMLCanvasElement>(null)
   const reduce = usePrefersReducedMotion()
+  const voiceRef = useRef(voice)
+  voiceRef.current = voice
   useEffect(() => {
     const c = ref.current
     if (!c) return
@@ -96,7 +98,7 @@ function VoicePrint({ size, voice, className }: { size: number; voice: Voice; cl
     const loop = () => {
       if (visible) {
         ctx.clearRect(0, 0, size, size)
-        drawPrint(ctx, size, size / 2, size / 2, voice, t)
+        drawPrint(ctx, size, size / 2, size / 2, voiceRef.current, t)
         if (!reduce) t += 0.012
       }
       frame = requestAnimationFrame(loop)
@@ -106,7 +108,7 @@ function VoicePrint({ size, voice, className }: { size: number; voice: Voice; cl
       cancelAnimationFrame(frame)
       io.disconnect()
     }
-  }, [size, voice, reduce])
+  }, [size, reduce])
   return <canvas ref={ref} width={size} height={size} className={className} aria-hidden="true" />
 }
 
@@ -265,6 +267,52 @@ function Compare({ generic, voice }: { generic: string[]; voice: string[] }) {
   )
 }
 
+type Tune = { casual: number; direct: number; short: number }
+
+// Simple rules, no AI: the sample reply rewrites itself as the sliders move.
+function sampleReply({ casual, direct, short }: Tune) {
+  const hello = casual > 62 ? 'Hey Sarah!' : casual > 32 ? 'Hi Sarah,' : 'Dear Sarah,'
+  const point = direct > 55 ? 'The February cohort is the one for you.' : 'I think the February cohort could be a really good fit for you.'
+  const more = short > 55 ? '' : ' We start on the 8th, and you build your own systems with a small group.'
+  const ask = direct > 55 ? (casual > 62 ? 'Want me to save you a seat?' : 'Shall I reserve your seat?') : 'Let me know if you would like me to hold a place for you.'
+  const bye = casual > 62 ? 'Joe' : 'Warm regards, Joe'
+  return { hello, body: `${point}${more} ${ask}`, bye }
+}
+
+function VoiceTuner({ tune, setTune }: { tune: Tune; setTune: (t: Tune) => void }) {
+  const rows: Array<[keyof Tune, string, string]> = [
+    ['casual', 'Formal', 'Casual'],
+    ['direct', 'Careful', 'Direct'],
+    ['short', 'Long', 'Short'],
+  ]
+  const r = sampleReply(tune)
+  return (
+    <div className="vs-tune">
+      {rows.map(([k, left, right]) => (
+        <label key={k} className="row">
+          <span>{left}</span>
+          <input
+            type="range"
+            min={0}
+            max={100}
+            value={tune[k]}
+            aria-label={`${left} to ${right}`}
+            style={{ ['--p' as string]: `${tune[k]}%` }}
+            onChange={(e) => setTune({ ...tune, [k]: Number(e.target.value) })}
+          />
+          <span>{right}</span>
+        </label>
+      ))}
+      <div className="vs-reply" aria-live="polite">
+        <p>{r.hello}</p>
+        <p>{r.body}</p>
+        <p>{r.bye}</p>
+      </div>
+      <div className="vs-drag">Drag the dots. The reply changes with you.</div>
+    </div>
+  )
+}
+
 type Testimonial = { name: string; location: string; quote: string }
 
 function TestimonialCard({ t, i }: { t: Testimonial; i: number }) {
@@ -363,6 +411,7 @@ export default function VoiceStudioPage({
   const timeText = local?.time ?? '8:00 PM'
   const zoneText = local?.zone ?? 'Singapore time'
   const host = event.hosts[0]
+  const [tune, setTune] = useState<Tune>({ casual: 74, direct: 68, short: 62 })
 
   useEffect(() => {
     const els = document.querySelectorAll('.vs-reveal')
@@ -447,20 +496,15 @@ export default function VoiceStudioPage({
           </h2>
           <div className="vs-cards">
             <div className="vs-card vs-glass vs-reveal">
-              <div className="vs-vis">
-                <div className="vs-tune">
-                  <div className="row"><span>Formal</span><i><b style={{ left: '74%' }} /></i><span>Casual</span></div>
-                  <div className="row"><span>Careful</span><i><b style={{ left: '68%' }} /></i><span>Direct</span></div>
-                  <div className="row"><span>Long</span><i><b style={{ left: '62%' }} /></i><span>Short</span></div>
-                  <div className="words">Sounds like you: <em>&quot;quick one&quot;</em>, <em>&quot;honestly&quot;</em></div>
-                </div>
+              <div className="vs-vis vs-vis-tune">
+                <VoiceTuner tune={tune} setTune={setTune} />
               </div>
               <h3>{v.leaveWith[0]?.title}</h3>
               <p>{v.leaveWith[0]?.body}</p>
             </div>
             <div className="vs-card vs-glass vs-reveal">
               <div className="vs-vis">
-                <VoicePrint size={300} voice={{ warmth: 60, direct: 55, length: 30, humour: 60 }} className="vs-mini" />
+                <VoicePrint size={300} voice={{ warmth: tune.casual, direct: tune.direct, length: 100 - tune.short, humour: 50 }} className="vs-mini" />
               </div>
               <h3>{v.leaveWith[1]?.title}</h3>
               <p>{v.leaveWith[1]?.body}</p>
@@ -633,13 +677,20 @@ const VS_CSS = `
 .vs-card h3{font-family:var(--serif);font-weight:600;font-size:23px;margin:0 0 6px;line-height:1.15;color:var(--ink)}
 .vs-card p{margin:0;color:var(--muted);font-size:15px}
 .vs-mini{width:150px;height:150px}
-.vs-tune{width:86%;font-size:12px;color:var(--muted)}
-.vs-tune .row{display:grid;grid-template-columns:52px 1fr 48px;align-items:center;gap:10px;margin:7px 0}
+.vs-vis-tune{height:auto;padding:18px 0}
+.vs-tune{width:88%;font-size:13px;color:var(--muted)}
+.vs-tune .row{display:grid;grid-template-columns:56px 1fr 52px;align-items:center;gap:10px;margin:4px 0;cursor:pointer}
 .vs-tune .row span:last-child{text-align:right;color:#e9e2fb}
-.vs-tune i{position:relative;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--purple),var(--pink))}
-.vs-tune b{position:absolute;top:50%;width:14px;height:14px;border-radius:50%;background:#fff;transform:translate(-50%,-50%);box-shadow:0 0 0 3px rgba(139,121,212,.45)}
-.vs-tune .words{margin-top:10px;color:#d9d1ee;font-size:12.5px}
-.vs-tune em{font-style:normal;color:var(--pink)}
+.vs-tune input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:36px;background:transparent;margin:0;touch-action:pan-y;cursor:pointer}
+.vs-tune input[type=range]::-webkit-slider-runnable-track{height:6px;border-radius:6px;background:linear-gradient(90deg,var(--purple),var(--pink) var(--p),rgba(255,255,255,.14) var(--p))}
+.vs-tune input[type=range]::-moz-range-track{height:6px;border-radius:6px;background:linear-gradient(90deg,var(--purple),var(--pink) var(--p),rgba(255,255,255,.14) var(--p))}
+.vs-tune input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;margin-top:-10px;border-radius:50%;background:#fff;border:0;box-shadow:0 0 0 5px rgba(139,121,212,.45),0 4px 14px rgba(0,0,0,.4)}
+.vs-tune input[type=range]::-moz-range-thumb{width:26px;height:26px;border-radius:50%;background:#fff;border:0;box-shadow:0 0 0 5px rgba(139,121,212,.45)}
+.vs-tune input[type=range]:focus-visible{outline:2px solid var(--pink);outline-offset:4px;border-radius:8px}
+.vs-reply{margin-top:12px;background:var(--cream);color:#1a1526;border-radius:16px 16px 16px 4px;padding:12px 14px;font-size:14px;line-height:1.45;min-height:112px;transition:background .2s}
+.vs-card .vs-reply p{margin:0 0 4px;color:#1a1526;font-size:inherit}
+.vs-card .vs-reply p:last-child{margin:0;color:#6b5f8a}
+.vs-drag{margin-top:8px;font-size:12px;color:var(--pink);text-align:center}
 .vs-bubble{background:var(--cream);color:#1a1526;border-radius:18px 18px 18px 4px;padding:12px 16px;font-size:14px;max-width:84%;line-height:1.45;box-shadow:0 10px 30px rgba(0,0,0,.35)}
 .vs-bubble .t{display:block;margin-top:6px;font-size:11px;color:#8B79D4}
 
@@ -731,6 +782,10 @@ footer.footer-glow > div{gap:10px !important}
   .vs-when{gap:8px;margin-bottom:18px}
   .vs-chip{padding:7px 12px;font-size:13px}
   .vs-cards{grid-template-columns:1fr}
+  .vs-tune{width:90%;font-size:14px}
+  .vs-tune .row{grid-template-columns:1fr 1fr;gap:0;margin:2px 0 6px}
+  .vs-tune .row input{grid-column:1/-1;grid-row:2;height:40px}
+  .vs-reply{font-size:15px}
   .vs-tgrid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:0 -24px;padding:0 24px 8px;scrollbar-width:none}
   .vs-tgrid::-webkit-scrollbar{display:none}
   .vs-tcard{flex:0 0 84%;scroll-snap-align:center}
