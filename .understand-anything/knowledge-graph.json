@@ -1,27 +1,4 @@
 {
-  "version": "1.0.0",
-  "project": {
-    "name": "masterminds-workshop",
-    "languages": [
-      "TypeScript",
-      "JavaScript",
-      "CSS",
-      "HTML",
-      "JSON"
-    ],
-    "frameworks": [
-      "Next.js",
-      "React",
-      "TailwindCSS",
-      "Stripe",
-      "Supabase",
-      "Framer Motion",
-      "GSAP"
-    ],
-    "description": "Masterminds Workshop Site is a Next.js application for event discovery and registration, workshop learning, and giveaway resource distribution, with shared content catalogs, payment integration, and email delivery.",
-    "analyzedAt": "2026-11-11T20:09:03.496Z",
-    "gitCommitHash": "b320c54a84487b266c3879731b075f5b5cca0cea"
-  },
   "nodes": [
     {
       "id": "file:public/downloads/joes-linkedin-kit-v1.0.zip",
@@ -555,7 +532,7 @@
       "lineCount": 176,
       "symbolCount": 0,
       "complexity": "moderate",
-      "summary": "Stores Joe\u2019s LinkedIn Kit resource content and the downloadable ZIP path.",
+      "summary": "Stores Joe’s LinkedIn Kit resource content and the downloadable ZIP path.",
       "tags": [
         "content",
         "resource",
@@ -574,7 +551,7 @@
       "lineCount": 9,
       "symbolCount": 1,
       "complexity": "simple",
-      "summary": "Renders Joe\u2019s LinkedIn Kit giveaway page and its downloadable resource details.",
+      "summary": "Renders Joe’s LinkedIn Kit giveaway page and its downloadable resource details.",
       "tags": [
         "page",
         "route",
@@ -610,7 +587,7 @@
       "lineCount": 5,
       "symbolCount": 0,
       "complexity": "simple",
-      "summary": "Provides the reusable prompt text included with Joe\u2019s LinkedIn Kit.",
+      "summary": "Provides the reusable prompt text included with Joe’s LinkedIn Kit.",
       "tags": [
         "content",
         "resource",
@@ -3130,287 +3107,6 @@
       "complexity": "simple"
     },
     {
-      "id": "file:src/components/events/EventRegistrationSection.tsx",
-      "type": "file",
-      "name": "EventRegistrationSection.tsx",
-      "filePath": "src/components/events/EventRegistrationSection.tsx",
-      "summary": "Client registration interface handling attendee intake, donations and promo codes, free reservations, embedded or hosted Stripe checkout, completion recovery, and waitlisting when capacity is reached.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "complex"
-    },
-    {
-      "id": "function:src/components/events/EventRegistrationSection.tsx:useAnimatedNumber",
-      "type": "function",
-      "name": "useAnimatedNumber",
-      "filePath": "src/components/events/EventRegistrationSection.tsx",
-      "lineRange": [
-        7,
-        41
-      ],
-      "summary": "Animates numeric price changes with requestAnimationFrame and cubic easing, cancelling pending frames when dependencies change or the component unmounts.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
-      "type": "function",
-      "name": "EventRegistrationSection",
-      "filePath": "src/components/events/EventRegistrationSection.tsx",
-      "lineRange": [
-        112,
-        1095
-      ],
-      "summary": "Client registration interface handling attendee intake, donations and promo codes, free reservations, embedded or hosted Stripe checkout, completion recovery, and waitlisting when capacity is reached.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "complex"
-    },
-    {
-      "id": "file:src/components/events/EventPageView.tsx",
-      "type": "file",
-      "name": "EventPageView.tsx",
-      "filePath": "src/components/events/EventPageView.tsx",
-      "summary": "Composes event landing pages from typed content sections, hero media, calendar links, pricing, and registration state. Supports specialized festival layouts and closed or ended event presentation.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "complex"
-    },
-    {
-      "id": "function:src/components/events/EventPageView.tsx:SectionShell",
-      "type": "function",
-      "name": "SectionShell",
-      "filePath": "src/components/events/EventPageView.tsx",
-      "lineRange": [
-        30,
-        63
-      ],
-      "summary": "Wraps event content in a consistent section layout with optional eyebrow, title, and introduction.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/components/events/EventPageView.tsx:StorySection",
-      "type": "function",
-      "name": "StorySection",
-      "filePath": "src/components/events/EventPageView.tsx",
-      "lineRange": [
-        75,
-        85
-      ],
-      "summary": "Renders a story content section using the shared section wrapper and paragraph formatting.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/components/events/EventPageView.tsx:ChecklistSection",
-      "type": "function",
-      "name": "ChecklistSection",
-      "filePath": "src/components/events/EventPageView.tsx",
-      "lineRange": [
-        87,
-        107
-      ],
-      "summary": "Renders event checklist items within the shared section presentation.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/components/events/EventPageView.tsx:CardsSection",
-      "type": "function",
-      "name": "CardsSection",
-      "filePath": "src/components/events/EventPageView.tsx",
-      "lineRange": [
-        109,
-        147
-      ],
-      "summary": "Renders a collection of event content cards with shared headings and layout.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/components/events/EventPageView.tsx:SplitSection",
-      "type": "function",
-      "name": "SplitSection",
-      "filePath": "src/components/events/EventPageView.tsx",
-      "lineRange": [
-        149,
-        169
-      ],
-      "summary": "Renders a split content section with its supplied text and visual content.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/components/events/EventPageView.tsx:ImageSection",
-      "type": "function",
-      "name": "ImageSection",
-      "filePath": "src/components/events/EventPageView.tsx",
-      "lineRange": [
-        171,
-        198
-      ],
-      "summary": "Renders an event image section with shared heading and descriptive content.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/components/events/EventPageView.tsx:HtmlSection",
-      "type": "function",
-      "name": "HtmlSection",
-      "filePath": "src/components/events/EventPageView.tsx",
-      "lineRange": [
-        200,
-        225
-      ],
-      "summary": "Renders configured HTML content, replacing registration-linked content with a disabled ended-event action after the event ends.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/components/events/EventPageView.tsx:QuoteCardSection",
-      "type": "function",
-      "name": "QuoteCardSection",
-      "filePath": "src/components/events/EventPageView.tsx",
-      "lineRange": [
-        227,
-        316
-      ],
-      "summary": "Renders quote-card content with image or video media and accompanying quotation text.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:src/components/events/EventPageView.tsx:HostsSection",
-      "type": "function",
-      "name": "HostsSection",
-      "filePath": "src/components/events/EventPageView.tsx",
-      "lineRange": [
-        318,
-        361
-      ],
-      "summary": "Renders event host profiles and their accompanying information.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/components/events/EventPageView.tsx:EventVideoSection",
-      "type": "function",
-      "name": "EventVideoSection",
-      "filePath": "src/components/events/EventPageView.tsx",
-      "lineRange": [
-        363,
-        387
-      ],
-      "summary": "Renders an event video block using the shared event media player.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/components/events/EventPageView.tsx:CtaSection",
-      "type": "function",
-      "name": "CtaSection",
-      "filePath": "src/components/events/EventPageView.tsx",
-      "lineRange": [
-        397,
-        463
-      ],
-      "summary": "Displays event pricing and promo details beside registration and optional secondary actions, disabling registration for ended events.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:src/components/events/EventPageView.tsx:renderSection",
-      "type": "function",
-      "name": "renderSection",
-      "filePath": "src/components/events/EventPageView.tsx",
-      "lineRange": [
-        465,
-        494
-      ],
-      "summary": "Dispatches typed event sections to the appropriate renderer, including festival timelines, galleries, custom content, and standard editorial sections.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/components/events/EventPageView.tsx:EventPageView",
-      "type": "function",
-      "name": "EventPageView",
-      "filePath": "src/components/events/EventPageView.tsx",
-      "lineRange": [
-        496,
-        717
-      ],
-      "summary": "Composes event landing pages from typed content sections, hero media, calendar links, pricing, and registration state. Supports specialized festival layouts and closed or ended event presentation.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "complex"
-    },
-    {
       "id": "file:src/components/events/joechella/VenueGallery.tsx",
       "type": "file",
       "name": "VenueGallery.tsx",
@@ -4128,156 +3824,6 @@
       "complexity": "moderate"
     },
     {
-      "id": "file:src/lib/events.tsx",
-      "type": "file",
-      "name": "events.tsx",
-      "filePath": "src/lib/events.tsx",
-      "summary": "Defines shared event content, pricing, schedules, registration configuration, and presentation variants. Provides promo resolution, donation controls, and live-event lookup helpers.",
-      "tags": [
-        "data-model",
-        "event-catalog",
-        "pricing",
-        "tested"
-      ],
-      "complexity": "complex"
-    },
-    {
-      "id": "function:src/lib/events.tsx:getEventDiscountedPrice",
-      "type": "function",
-      "name": "getEventDiscountedPrice",
-      "filePath": "src/lib/events.tsx",
-      "lineRange": [
-        281,
-        283
-      ],
-      "summary": "Calculates an event ticket price using its base price and optional promotion.",
-      "tags": [
-        "utility",
-        "event-catalog",
-        "pricing"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/events.tsx:resolvePromoCode",
-      "type": "function",
-      "name": "resolvePromoCode",
-      "filePath": "src/lib/events.tsx",
-      "lineRange": [
-        285,
-        289
-      ],
-      "summary": "Normalizes an incoming promo code and finds a case-insensitive match in event pricing.",
-      "tags": [
-        "utility",
-        "event-catalog",
-        "pricing"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/events.tsx:formatEventPrice",
-      "type": "function",
-      "name": "formatEventPrice",
-      "filePath": "src/lib/events.tsx",
-      "lineRange": [
-        291,
-        296
-      ],
-      "summary": "Formats discounted ticket prices with the currency symbol or returns a pending-price label.",
-      "tags": [
-        "utility",
-        "event-catalog",
-        "pricing"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/events.tsx:formatDonationLabelNote",
-      "type": "function",
-      "name": "formatDonationLabelNote",
-      "filePath": "src/lib/events.tsx",
-      "lineRange": [
-        298,
-        308
-      ],
-      "summary": "Formats a custom donation note or the suggested and minimum contribution amounts.",
-      "tags": [
-        "utility",
-        "event-catalog",
-        "pricing"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/events.tsx:toggleDonationPreset",
-      "type": "function",
-      "name": "toggleDonationPreset",
-      "filePath": "src/lib/events.tsx",
-      "lineRange": [
-        310,
-        327
-      ],
-      "summary": "Adds or removes a donation preset and clamps the resulting amount to the minimum donation.",
-      "tags": [
-        "utility",
-        "event-catalog",
-        "pricing"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/events.tsx:getEventBySlug",
-      "type": "function",
-      "name": "getEventBySlug",
-      "filePath": "src/lib/events.tsx",
-      "lineRange": [
-        2034,
-        2036
-      ],
-      "summary": "Finds a configured event by its slug.",
-      "tags": [
-        "utility",
-        "event-catalog",
-        "pricing"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/events.tsx:getLiveEvents",
-      "type": "function",
-      "name": "getLiveEvents",
-      "filePath": "src/lib/events.tsx",
-      "lineRange": [
-        2038,
-        2040
-      ],
-      "summary": "Selects configured events with live publication status.",
-      "tags": [
-        "utility",
-        "event-catalog",
-        "pricing"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/events.tsx:getUpcomingLiveEvents",
-      "type": "function",
-      "name": "getUpcomingLiveEvents",
-      "filePath": "src/lib/events.tsx",
-      "lineRange": [
-        2042,
-        2057
-      ],
-      "summary": "Filters live events using calendar end times and sorts them by start time while retaining undated events.",
-      "tags": [
-        "utility",
-        "event-catalog",
-        "pricing"
-      ],
-      "complexity": "simple"
-    },
-    {
       "id": "file:tests/event-checkout.test.ts",
       "type": "file",
       "name": "event-checkout.test.ts",
@@ -4438,6 +3984,967 @@
         "typescript"
       ],
       "complexity": "moderate"
+    },
+    {
+      "id": "file:src/components/events/EventRegistrationSection.tsx",
+      "type": "file",
+      "name": "EventRegistrationSection.tsx",
+      "filePath": "src/components/events/EventRegistrationSection.tsx",
+      "summary": "Client registration interface handling attendee intake, donations and promo codes, free reservations, embedded or hosted Stripe checkout, completion recovery, and waitlisting when capacity is reached.",
+      "tags": [
+        "component",
+        "events",
+        "registration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/components/events/EventRegistrationSection.tsx:useAnimatedNumber",
+      "type": "function",
+      "name": "useAnimatedNumber",
+      "filePath": "src/components/events/EventRegistrationSection.tsx",
+      "lineRange": [
+        7,
+        41
+      ],
+      "summary": "Animates numeric price changes with requestAnimationFrame and cubic easing, cancelling pending frames when dependencies change or the component unmounts.",
+      "tags": [
+        "component",
+        "events",
+        "registration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
+      "type": "function",
+      "name": "EventRegistrationSection",
+      "filePath": "src/components/events/EventRegistrationSection.tsx",
+      "lineRange": [
+        124,
+        1110
+      ],
+      "summary": "Client registration interface handling attendee intake, donations and promo codes, free reservations, embedded or hosted Stripe checkout, completion recovery, and waitlisting when capacity is reached.",
+      "tags": [
+        "component",
+        "events",
+        "registration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/events/voice-studio/VoiceStudioPage.tsx",
+      "type": "file",
+      "name": "VoiceStudioPage.tsx",
+      "filePath": "src/components/events/voice-studio/VoiceStudioPage.tsx",
+      "summary": "Renders the opt-in Voice Studio event landing page with interactive voice demonstrations, animated canvases, testimonials, visitor-local start time, and the shared event registration form.",
+      "tags": [
+        "component",
+        "events",
+        "user-interface"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:drawPrint",
+      "type": "function",
+      "name": "drawPrint",
+      "filePath": "src/components/events/voice-studio/VoiceStudioPage.tsx",
+      "lineRange": [
+        33,
+        72
+      ],
+      "summary": "Draws a colorful radial voice fingerprint on a canvas, varying rings, lobes, wobble, and hue with the supplied voice settings and animation time.",
+      "tags": [
+        "component",
+        "events",
+        "user-interface"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:VoicePrint",
+      "type": "function",
+      "name": "VoicePrint",
+      "filePath": "src/components/events/voice-studio/VoiceStudioPage.tsx",
+      "lineRange": [
+        83,
+        113
+      ],
+      "summary": "Displays an animated canvas voice fingerprint, tracks visibility, and cancels animation and observation when unmounted.",
+      "tags": [
+        "component",
+        "events",
+        "user-interface"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:Waves",
+      "type": "function",
+      "name": "Waves",
+      "filePath": "src/components/events/voice-studio/VoiceStudioPage.tsx",
+      "lineRange": [
+        115,
+        191
+      ],
+      "summary": "Draws responsive pointer-reactive sound waves in the hero canvas, pausing visual updates while offscreen and respecting reduced-motion preferences.",
+      "tags": [
+        "component",
+        "events",
+        "user-interface"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:TypedHeadline",
+      "type": "function",
+      "name": "TypedHeadline",
+      "filePath": "src/components/events/voice-studio/VoiceStudioPage.tsx",
+      "lineRange": [
+        193,
+        215
+      ],
+      "summary": "Reveals a decorative headline character by character while exposing the complete title to assistive technology and honoring reduced motion.",
+      "tags": [
+        "component",
+        "events",
+        "user-interface"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:Compare",
+      "type": "function",
+      "name": "Compare",
+      "filePath": "src/components/events/voice-studio/VoiceStudioPage.tsx",
+      "lineRange": [
+        217,
+        268
+      ],
+      "summary": "Provides a draggable and keyboard-controlled before-and-after slider comparing generic AI copy with personalized voice copy.",
+      "tags": [
+        "component",
+        "events",
+        "user-interface"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:VoiceTuner",
+      "type": "function",
+      "name": "VoiceTuner",
+      "filePath": "src/components/events/voice-studio/VoiceStudioPage.tsx",
+      "lineRange": [
+        282,
+        313
+      ],
+      "summary": "Displays tone sliders and a deterministic sample reply that changes with casualness, directness, and brevity settings.",
+      "tags": [
+        "component",
+        "events",
+        "user-interface"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:TestimonialCard",
+      "type": "function",
+      "name": "TestimonialCard",
+      "filePath": "src/components/events/voice-studio/VoiceStudioPage.tsx",
+      "lineRange": [
+        317,
+        328
+      ],
+      "summary": "Displays a participant photograph, quote, and attribution with a staggered reveal delay.",
+      "tags": [
+        "component",
+        "events",
+        "user-interface"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:CountUpKicker",
+      "type": "function",
+      "name": "CountUpKicker",
+      "filePath": "src/components/events/voice-studio/VoiceStudioPage.tsx",
+      "lineRange": [
+        331,
+        366
+      ],
+      "summary": "Animates a leading numeric statistic when it enters the viewport, preserving static content for reduced motion or nonnumeric text.",
+      "tags": [
+        "component",
+        "events",
+        "user-interface"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:useLocalTime",
+      "type": "function",
+      "name": "useLocalTime",
+      "filePath": "src/components/events/voice-studio/VoiceStudioPage.tsx",
+      "lineRange": [
+        368,
+        388
+      ],
+      "summary": "Formats an event start date and time in the visitor browser timezone after hydration, returning null if formatting fails.",
+      "tags": [
+        "component",
+        "events",
+        "user-interface"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:VoiceStudioPage",
+      "type": "function",
+      "name": "VoiceStudioPage",
+      "filePath": "src/components/events/voice-studio/VoiceStudioPage.tsx",
+      "lineRange": [
+        395,
+        613
+      ],
+      "summary": "Renders the opt-in Voice Studio event landing page with interactive voice demonstrations, animated canvases, testimonials, visitor-local start time, and the shared event registration form.",
+      "tags": [
+        "component",
+        "events",
+        "user-interface"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/events/DinnerPhotoCarousel.tsx",
+      "type": "file",
+      "name": "DinnerPhotoCarousel.tsx",
+      "filePath": "src/components/events/DinnerPhotoCarousel.tsx",
+      "summary": "Displays past Connection Dinner photographs in a scroll-snap carousel with boundary-aware navigation buttons and reduced-motion scrolling.",
+      "tags": [
+        "component",
+        "events",
+        "user-interface"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/events/DinnerPhotoCarousel.tsx:DinnerPhotoCarousel",
+      "type": "function",
+      "name": "DinnerPhotoCarousel",
+      "filePath": "src/components/events/DinnerPhotoCarousel.tsx",
+      "lineRange": [
+        12,
+        64
+      ],
+      "summary": "Displays past Connection Dinner photographs in a scroll-snap carousel with boundary-aware navigation buttons and reduced-motion scrolling.",
+      "tags": [
+        "component",
+        "events",
+        "user-interface"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/lib/event-intake.ts",
+      "type": "file",
+      "name": "event-intake.ts",
+      "filePath": "src/lib/event-intake.ts",
+      "summary": "Shares registration intake rules between browser forms and API handlers, including international phone validation and normalization, business-context limits, and AI-level bounds.",
+      "tags": [
+        "validation",
+        "registration",
+        "phone-number"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/event-intake.ts:countPhoneDigits",
+      "type": "function",
+      "name": "countPhoneDigits",
+      "filePath": "src/lib/event-intake.ts",
+      "lineRange": [
+        18,
+        20
+      ],
+      "summary": "Counts numeric digits in a phone input independently of punctuation and spacing.",
+      "tags": [
+        "validation",
+        "registration",
+        "phone-number"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/event-intake.ts:toE164",
+      "type": "function",
+      "name": "toE164",
+      "filePath": "src/lib/event-intake.ts",
+      "lineRange": [
+        56,
+        62
+      ],
+      "summary": "Parses a valid international phone number into E.164 format without guessing a default country, returning null for invalid input.",
+      "tags": [
+        "validation",
+        "registration",
+        "phone-number"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/event-intake.ts:normalizeWhatsappNumber",
+      "type": "function",
+      "name": "normalizeWhatsappNumber",
+      "filePath": "src/lib/event-intake.ts",
+      "lineRange": [
+        64,
+        69
+      ],
+      "summary": "Normalizes a WhatsApp number to E.164 when valid, retaining trimmed original input when parsing fails.",
+      "tags": [
+        "validation",
+        "registration",
+        "phone-number"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/event-intake.ts:validateWhatsappNumber",
+      "type": "function",
+      "name": "validateWhatsappNumber",
+      "filePath": "src/lib/event-intake.ts",
+      "lineRange": [
+        71,
+        87
+      ],
+      "summary": "Checks required WhatsApp input, permitted characters, length, and international phone validity using libphonenumber-js.",
+      "tags": [
+        "validation",
+        "registration",
+        "phone-number"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/event-intake.ts:validateBusinessContext",
+      "type": "function",
+      "name": "validateBusinessContext",
+      "filePath": "src/lib/event-intake.ts",
+      "lineRange": [
+        89,
+        102
+      ],
+      "summary": "Validates required business context against a configurable minimum and shared maximum length, returning a field-specific message.",
+      "tags": [
+        "validation",
+        "registration",
+        "phone-number"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/event-intake.ts:validateIntakeFields",
+      "type": "function",
+      "name": "validateIntakeFields",
+      "filePath": "src/lib/event-intake.ts",
+      "lineRange": [
+        104,
+        119
+      ],
+      "summary": "Combines phone and business-context validation, permitting empty business context during the optional AI-level profile step.",
+      "tags": [
+        "validation",
+        "registration",
+        "phone-number"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/event-intake.ts:hasIntakeErrors",
+      "type": "function",
+      "name": "hasIntakeErrors",
+      "filePath": "src/lib/event-intake.ts",
+      "lineRange": [
+        121,
+        123
+      ],
+      "summary": "Reports whether either WhatsApp or business-context validation produced an error.",
+      "tags": [
+        "validation",
+        "registration",
+        "phone-number"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/event-intake.ts:isValidAiLevel",
+      "type": "function",
+      "name": "isValidAiLevel",
+      "filePath": "src/lib/event-intake.ts",
+      "lineRange": [
+        125,
+        127
+      ],
+      "summary": "Accepts only integer AI-level values from zero through fourteen.",
+      "tags": [
+        "validation",
+        "registration",
+        "phone-number"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/lib/events.tsx",
+      "type": "file",
+      "name": "events.tsx",
+      "filePath": "src/lib/events.tsx",
+      "summary": "Defines shared event content, pricing, schedules, registration configuration, and presentation variants. Provides promo resolution, donation controls, and live-event lookup helpers.",
+      "tags": [
+        "data-model",
+        "event-catalog",
+        "pricing",
+        "tested"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/lib/events.tsx:getEventDiscountedPrice",
+      "type": "function",
+      "name": "getEventDiscountedPrice",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        310,
+        312
+      ],
+      "summary": "Calculates an event ticket price using its base price and optional promotion.",
+      "tags": [
+        "utility",
+        "event-catalog",
+        "pricing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/events.tsx:resolvePromoCode",
+      "type": "function",
+      "name": "resolvePromoCode",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        314,
+        318
+      ],
+      "summary": "Normalizes an incoming promo code and finds a case-insensitive match in event pricing.",
+      "tags": [
+        "utility",
+        "event-catalog",
+        "pricing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/events.tsx:formatEventPrice",
+      "type": "function",
+      "name": "formatEventPrice",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        320,
+        325
+      ],
+      "summary": "Formats discounted ticket prices with the currency symbol or returns a pending-price label.",
+      "tags": [
+        "utility",
+        "event-catalog",
+        "pricing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/events.tsx:formatDonationLabelNote",
+      "type": "function",
+      "name": "formatDonationLabelNote",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        327,
+        337
+      ],
+      "summary": "Formats a custom donation note or the suggested and minimum contribution amounts.",
+      "tags": [
+        "utility",
+        "event-catalog",
+        "pricing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/events.tsx:toggleDonationPreset",
+      "type": "function",
+      "name": "toggleDonationPreset",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        339,
+        356
+      ],
+      "summary": "Adds or removes a donation preset and clamps the resulting amount to the minimum donation.",
+      "tags": [
+        "utility",
+        "event-catalog",
+        "pricing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/events.tsx:getEventBySlug",
+      "type": "function",
+      "name": "getEventBySlug",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        2246,
+        2248
+      ],
+      "summary": "Finds a configured event by its slug.",
+      "tags": [
+        "utility",
+        "event-catalog",
+        "pricing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/events.tsx:getLiveEvents",
+      "type": "function",
+      "name": "getLiveEvents",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        2250,
+        2252
+      ],
+      "summary": "Selects configured events with live publication status.",
+      "tags": [
+        "utility",
+        "event-catalog",
+        "pricing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/events.tsx:getUpcomingLiveEvents",
+      "type": "function",
+      "name": "getUpcomingLiveEvents",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        2254,
+        2269
+      ],
+      "summary": "Filters live events using calendar end times and sorts them by start time while retaining undated events.",
+      "tags": [
+        "utility",
+        "event-catalog",
+        "pricing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/events/EventPageView.tsx",
+      "type": "file",
+      "name": "EventPageView.tsx",
+      "filePath": "src/components/events/EventPageView.tsx",
+      "summary": "Composes event landing pages from typed sections, hero media, calendars, pricing, and registration state. Routes configured events into festival or Voice Studio layouts and presents closed or ended registration states.",
+      "tags": [
+        "component",
+        "events",
+        "registration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/components/events/EventPageView.tsx:SectionShell",
+      "type": "function",
+      "name": "SectionShell",
+      "filePath": "src/components/events/EventPageView.tsx",
+      "lineRange": [
+        31,
+        64
+      ],
+      "summary": "Wraps event content in a consistent section layout with optional eyebrow, title, and introduction.",
+      "tags": [
+        "component",
+        "events",
+        "registration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/events/EventPageView.tsx:StorySection",
+      "type": "function",
+      "name": "StorySection",
+      "filePath": "src/components/events/EventPageView.tsx",
+      "lineRange": [
+        76,
+        86
+      ],
+      "summary": "Renders a story content section using the shared section wrapper and paragraph formatting.",
+      "tags": [
+        "component",
+        "events",
+        "registration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/events/EventPageView.tsx:ChecklistSection",
+      "type": "function",
+      "name": "ChecklistSection",
+      "filePath": "src/components/events/EventPageView.tsx",
+      "lineRange": [
+        88,
+        108
+      ],
+      "summary": "Renders event checklist items within the shared section presentation.",
+      "tags": [
+        "component",
+        "events",
+        "registration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/events/EventPageView.tsx:CardsSection",
+      "type": "function",
+      "name": "CardsSection",
+      "filePath": "src/components/events/EventPageView.tsx",
+      "lineRange": [
+        110,
+        148
+      ],
+      "summary": "Renders a collection of event content cards with shared headings and layout.",
+      "tags": [
+        "component",
+        "events",
+        "registration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/events/EventPageView.tsx:SplitSection",
+      "type": "function",
+      "name": "SplitSection",
+      "filePath": "src/components/events/EventPageView.tsx",
+      "lineRange": [
+        150,
+        170
+      ],
+      "summary": "Renders a split content section with its supplied text and visual content.",
+      "tags": [
+        "component",
+        "events",
+        "registration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/events/EventPageView.tsx:ImageSection",
+      "type": "function",
+      "name": "ImageSection",
+      "filePath": "src/components/events/EventPageView.tsx",
+      "lineRange": [
+        172,
+        199
+      ],
+      "summary": "Renders an event image section with shared heading and descriptive content.",
+      "tags": [
+        "component",
+        "events",
+        "registration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/events/EventPageView.tsx:HtmlSection",
+      "type": "function",
+      "name": "HtmlSection",
+      "filePath": "src/components/events/EventPageView.tsx",
+      "lineRange": [
+        201,
+        226
+      ],
+      "summary": "Renders configured HTML content, replacing registration-linked content with a disabled ended-event action after the event ends.",
+      "tags": [
+        "component",
+        "events",
+        "registration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/events/EventPageView.tsx:QuoteCardSection",
+      "type": "function",
+      "name": "QuoteCardSection",
+      "filePath": "src/components/events/EventPageView.tsx",
+      "lineRange": [
+        228,
+        317
+      ],
+      "summary": "Renders quote-card content with image or video media and accompanying quotation text.",
+      "tags": [
+        "component",
+        "events",
+        "registration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/events/EventPageView.tsx:HostsSection",
+      "type": "function",
+      "name": "HostsSection",
+      "filePath": "src/components/events/EventPageView.tsx",
+      "lineRange": [
+        319,
+        362
+      ],
+      "summary": "Renders event host profiles and their accompanying information.",
+      "tags": [
+        "component",
+        "events",
+        "registration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/events/EventPageView.tsx:EventVideoSection",
+      "type": "function",
+      "name": "EventVideoSection",
+      "filePath": "src/components/events/EventPageView.tsx",
+      "lineRange": [
+        364,
+        388
+      ],
+      "summary": "Renders an event video block using the shared event media player.",
+      "tags": [
+        "component",
+        "events",
+        "registration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/events/EventPageView.tsx:CtaSection",
+      "type": "function",
+      "name": "CtaSection",
+      "filePath": "src/components/events/EventPageView.tsx",
+      "lineRange": [
+        398,
+        464
+      ],
+      "summary": "Displays event pricing and promo details beside registration and optional secondary actions, disabling registration for ended events.",
+      "tags": [
+        "component",
+        "events",
+        "registration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/events/EventPageView.tsx:renderSection",
+      "type": "function",
+      "name": "renderSection",
+      "filePath": "src/components/events/EventPageView.tsx",
+      "lineRange": [
+        466,
+        495
+      ],
+      "summary": "Dispatches typed event sections to the appropriate renderer, including festival timelines, galleries, custom content, and standard editorial sections.",
+      "tags": [
+        "component",
+        "events",
+        "registration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/events/EventPageView.tsx:EventPageView",
+      "type": "function",
+      "name": "EventPageView",
+      "filePath": "src/components/events/EventPageView.tsx",
+      "lineRange": [
+        497,
+        724
+      ],
+      "summary": "Composes event landing pages from typed sections, hero media, calendars, pricing, and registration state. Routes configured events into festival or Voice Studio layouts and presents closed or ended registration states.",
+      "tags": [
+        "component",
+        "events",
+        "registration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/events/WaitlistJoinForm.tsx",
+      "type": "file",
+      "name": "WaitlistJoinForm.tsx",
+      "filePath": "src/components/events/WaitlistJoinForm.tsx",
+      "summary": "Inventory-verified dependency referenced by analyzed event code. Its implementation was not re-analyzed in this incremental update.",
+      "tags": [
+        "reference-only",
+        "dependency",
+        "inventory-verified"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Reference node only; no function-level analysis was performed in this update."
+    },
+    {
+      "id": "file:src/data/ai-levels-signup.ts",
+      "type": "file",
+      "name": "ai-levels-signup.ts",
+      "filePath": "src/data/ai-levels-signup.ts",
+      "summary": "Inventory-verified dependency referenced by analyzed event code. Its implementation was not re-analyzed in this incremental update.",
+      "tags": [
+        "reference-only",
+        "dependency",
+        "inventory-verified"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Reference node only; no function-level analysis was performed in this update."
+    },
+    {
+      "id": "file:src/lib/celebrate.ts",
+      "type": "file",
+      "name": "celebrate.ts",
+      "filePath": "src/lib/celebrate.ts",
+      "summary": "Inventory-verified dependency referenced by analyzed event code. Its implementation was not re-analyzed in this incremental update.",
+      "tags": [
+        "reference-only",
+        "dependency",
+        "inventory-verified"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Reference node only; no function-level analysis was performed in this update."
+    },
+    {
+      "id": "file:src/lib/email-validation.ts",
+      "type": "file",
+      "name": "email-validation.ts",
+      "filePath": "src/lib/email-validation.ts",
+      "summary": "Inventory-verified dependency referenced by analyzed event code. Its implementation was not re-analyzed in this incremental update.",
+      "tags": [
+        "reference-only",
+        "dependency",
+        "inventory-verified"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Reference node only; no function-level analysis was performed in this update."
+    },
+    {
+      "id": "file:src/lib/event-registration-flow.ts",
+      "type": "file",
+      "name": "event-registration-flow.ts",
+      "filePath": "src/lib/event-registration-flow.ts",
+      "summary": "Inventory-verified dependency referenced by analyzed event code. Its implementation was not re-analyzed in this incremental update.",
+      "tags": [
+        "reference-only",
+        "dependency",
+        "inventory-verified"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Reference node only; no function-level analysis was performed in this update."
+    },
+    {
+      "id": "file:src/lib/meta-pixel.ts",
+      "type": "file",
+      "name": "meta-pixel.ts",
+      "filePath": "src/lib/meta-pixel.ts",
+      "summary": "Inventory-verified dependency referenced by analyzed event code. Its implementation was not re-analyzed in this incremental update.",
+      "tags": [
+        "reference-only",
+        "dependency",
+        "inventory-verified"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Reference node only; no function-level analysis was performed in this update."
+    },
+    {
+      "id": "file:src/components/events/AskAnAiExpertQuoteStrip.tsx",
+      "type": "file",
+      "name": "AskAnAiExpertQuoteStrip.tsx",
+      "filePath": "src/components/events/AskAnAiExpertQuoteStrip.tsx",
+      "summary": "Inventory-verified dependency referenced by analyzed event code. Its implementation was not re-analyzed in this incremental update.",
+      "tags": [
+        "reference-only",
+        "dependency",
+        "inventory-verified"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Reference node only; no function-level analysis was performed in this update."
+    },
+    {
+      "id": "file:src/components/events/EventMediaVideo.tsx",
+      "type": "file",
+      "name": "EventMediaVideo.tsx",
+      "filePath": "src/components/events/EventMediaVideo.tsx",
+      "summary": "Inventory-verified dependency referenced by analyzed event code. Its implementation was not re-analyzed in this incremental update.",
+      "tags": [
+        "reference-only",
+        "dependency",
+        "inventory-verified"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Reference node only; no function-level analysis was performed in this update."
+    },
+    {
+      "id": "file:src/components/events/HeroVideo.tsx",
+      "type": "file",
+      "name": "HeroVideo.tsx",
+      "filePath": "src/components/events/HeroVideo.tsx",
+      "summary": "Inventory-verified dependency referenced by analyzed event code. Its implementation was not re-analyzed in this incremental update.",
+      "tags": [
+        "reference-only",
+        "dependency",
+        "inventory-verified"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Reference node only; no function-level analysis was performed in this update."
+    },
+    {
+      "id": "file:src/components/events/joechella/FestivalMotion.tsx",
+      "type": "file",
+      "name": "FestivalMotion.tsx",
+      "filePath": "src/components/events/joechella/FestivalMotion.tsx",
+      "summary": "Inventory-verified dependency referenced by analyzed event code. Its implementation was not re-analyzed in this incremental update.",
+      "tags": [
+        "reference-only",
+        "dependency",
+        "inventory-verified"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Reference node only; no function-level analysis was performed in this update."
+    },
+    {
+      "id": "file:src/components/Reveal.tsx",
+      "type": "file",
+      "name": "Reveal.tsx",
+      "filePath": "src/components/Reveal.tsx",
+      "summary": "Inventory-verified dependency referenced by analyzed event code. Its implementation was not re-analyzed in this incremental update.",
+      "tags": [
+        "reference-only",
+        "dependency",
+        "inventory-verified"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Reference node only; no function-level analysis was performed in this update."
+    },
+    {
+      "id": "file:src/lib/calendar.ts",
+      "type": "file",
+      "name": "calendar.ts",
+      "filePath": "src/lib/calendar.ts",
+      "summary": "Inventory-verified dependency referenced by analyzed event code. Its implementation was not re-analyzed in this incremental update.",
+      "tags": [
+        "reference-only",
+        "dependency",
+        "inventory-verified"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Reference node only; no function-level analysis was performed in this update."
     }
   ],
   "edges": [
@@ -6223,188 +6730,6 @@
       "weight": 1
     },
     {
-      "source": "file:src/components/events/EventRegistrationSection.tsx",
-      "target": "function:src/components/events/EventRegistrationSection.tsx:useAnimatedNumber",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/components/events/EventRegistrationSection.tsx",
-      "target": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/components/events/EventRegistrationSection.tsx",
-      "target": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
-      "target": "function:src/components/events/EventRegistrationSection.tsx:useAnimatedNumber",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "function:src/components/events/EventPageView.tsx:SectionShell",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "function:src/components/events/EventPageView.tsx:StorySection",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "function:src/components/events/EventPageView.tsx:ChecklistSection",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "function:src/components/events/EventPageView.tsx:CardsSection",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "function:src/components/events/EventPageView.tsx:SplitSection",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "function:src/components/events/EventPageView.tsx:ImageSection",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "function:src/components/events/EventPageView.tsx:HtmlSection",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "function:src/components/events/EventPageView.tsx:QuoteCardSection",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "function:src/components/events/EventPageView.tsx:HostsSection",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "function:src/components/events/EventPageView.tsx:EventVideoSection",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "function:src/components/events/EventPageView.tsx:CtaSection",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "function:src/components/events/EventPageView.tsx:renderSection",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "function:src/components/events/EventPageView.tsx:EventPageView",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "function:src/components/events/EventPageView.tsx:EventPageView",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "file:src/components/events/EventRegistrationSection.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "file:src/components/events/joechella/ProgramTimeline.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "file:src/components/events/joechella/VenueGallery.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "file:src/components/events/ScrollToRegisterButton.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "file:src/lib/event-status.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "function:src/components/events/EventPageView.tsx:EventPageView",
-      "target": "function:src/lib/event-status.ts:isEventEnded",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/components/events/EventPageView.tsx:EventPageView",
-      "target": "function:src/lib/event-status.ts:isRegistrationWindowPassed",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/components/events/EventPageView.tsx:EventPageView",
-      "target": "function:src/components/events/EventPageView.tsx:renderSection",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
       "source": "file:src/components/events/joechella/VenueGallery.tsx",
       "target": "function:src/components/events/joechella/VenueGallery.tsx:VenueGallery",
       "type": "contains",
@@ -7386,41 +7711,6 @@
       "weight": 0.8
     },
     {
-      "source": "file:src/app/events/[slug]/page.tsx",
-      "target": "file:src/components/events/EventPageView.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/app/events/[slug]/page.tsx",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "function:src/app/events/[slug]/page.tsx:generateMetadata",
-      "target": "function:src/lib/events.tsx:getEventBySlug",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/events/[slug]/page.tsx:EventDetailPage",
-      "target": "function:src/lib/events.tsx:getEventBySlug",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/events/[slug]/page.tsx:EventDetailPage",
-      "target": "function:src/lib/events.tsx:resolvePromoCode",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
       "source": "file:src/components/events/joechella/FestivalHero.tsx",
       "target": "function:src/components/events/joechella/FestivalHero.tsx:Ticker",
       "type": "contains",
@@ -7463,139 +7753,6 @@
       "weight": 0.7
     },
     {
-      "source": "file:src/components/events/joechella/FestivalHero.tsx",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:getEventDiscountedPrice",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:getEventDiscountedPrice",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:resolvePromoCode",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:resolvePromoCode",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:formatEventPrice",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:formatEventPrice",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:formatDonationLabelNote",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:formatDonationLabelNote",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:toggleDonationPreset",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:toggleDonationPreset",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:getEventBySlug",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:getEventBySlug",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:getLiveEvents",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:getLiveEvents",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:getUpcomingLiveEvents",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:getUpcomingLiveEvents",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/lib/events.tsx:formatEventPrice",
-      "target": "function:src/lib/events.tsx:getEventDiscountedPrice",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/lib/events.tsx:getUpcomingLiveEvents",
-      "target": "function:src/lib/events.tsx:getLiveEvents",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
       "source": "file:tests/event-checkout.test.ts",
       "target": "file:src/lib/event-checkout.ts",
       "type": "imports",
@@ -7610,20 +7767,6 @@
       "weight": 0.5
     },
     {
-      "source": "file:tests/event-checkout.test.ts",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "file:tests/event-checkout.test.ts",
-      "type": "tested_by",
-      "direction": "forward",
-      "weight": 0.5
-    },
-    {
       "source": "file:tests/event-pricing-and-data.test.ts",
       "target": "file:src/lib/event-status.ts",
       "type": "imports",
@@ -7632,20 +7775,6 @@
     },
     {
       "source": "file:src/lib/event-status.ts",
-      "target": "file:tests/event-pricing-and-data.test.ts",
-      "type": "tested_by",
-      "direction": "forward",
-      "weight": 0.5
-    },
-    {
-      "source": "file:tests/event-pricing-and-data.test.ts",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/lib/events.tsx",
       "target": "file:tests/event-pricing-and-data.test.ts",
       "type": "tested_by",
       "direction": "forward",
@@ -7709,80 +7838,8 @@
       "recoveredFromImportMap": true
     },
     {
-      "source": "file:src/app/events/[slug]/setup/page.tsx",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
-      "source": "file:src/app/events/page.tsx",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
       "source": "file:src/app/sitemap.ts",
       "target": "file:src/lib/free-ai-tools.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "file:src/components/events/joechella/FestivalHero.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
-      "source": "file:src/components/events/EventRegistrationSection.tsx",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
-      "source": "file:src/components/events/joechella/ProgramTimeline.tsx",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
-      "source": "file:src/components/events/joechella/VenueGallery.tsx",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
-      "source": "file:src/lib/event-checkout.ts",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
-      "source": "file:src/lib/event-status.ts",
-      "target": "file:src/lib/events.tsx",
       "type": "imports",
       "direction": "forward",
       "weight": 0.7,
@@ -7807,14 +7864,6 @@
     {
       "source": "file:src/lib/lead-magnets.ts",
       "target": "file:src/lib/free-ai-tools.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
-      "source": "file:tests/event-status.test.ts",
-      "target": "file:src/lib/events.tsx",
       "type": "imports",
       "direction": "forward",
       "weight": 0.7,
@@ -7893,13 +7942,6 @@
     },
     {
       "source": "file:src/app/api/events/checkout-session/route.ts",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/app/api/events/checkout-session/route.ts",
       "target": "file:src/lib/stripe.ts",
       "type": "imports",
       "direction": "forward",
@@ -7914,14 +7956,1009 @@
     },
     {
       "source": "file:src/lib/event-confirmation-email.ts",
+      "target": "file:src/lib/utm.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventRegistrationSection.tsx",
+      "target": "function:src/components/events/EventRegistrationSection.tsx:useAnimatedNumber",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/EventRegistrationSection.tsx",
+      "target": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/EventRegistrationSection.tsx",
+      "target": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/events/EventRegistrationSection.tsx",
+      "target": "file:src/lib/event-intake.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventRegistrationSection.tsx",
       "target": "file:src/lib/events.tsx",
       "type": "imports",
       "direction": "forward",
       "weight": 0.7
     },
     {
+      "source": "file:src/components/events/voice-studio/VoiceStudioPage.tsx",
+      "target": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:drawPrint",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/voice-studio/VoiceStudioPage.tsx",
+      "target": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:VoicePrint",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/voice-studio/VoiceStudioPage.tsx",
+      "target": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:Waves",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/voice-studio/VoiceStudioPage.tsx",
+      "target": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:TypedHeadline",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/voice-studio/VoiceStudioPage.tsx",
+      "target": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:Compare",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/voice-studio/VoiceStudioPage.tsx",
+      "target": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:VoiceTuner",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/voice-studio/VoiceStudioPage.tsx",
+      "target": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:TestimonialCard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/voice-studio/VoiceStudioPage.tsx",
+      "target": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:CountUpKicker",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/voice-studio/VoiceStudioPage.tsx",
+      "target": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:useLocalTime",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/voice-studio/VoiceStudioPage.tsx",
+      "target": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:VoiceStudioPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/voice-studio/VoiceStudioPage.tsx",
+      "target": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:VoiceStudioPage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/events/voice-studio/VoiceStudioPage.tsx",
+      "target": "file:src/components/events/EventRegistrationSection.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/voice-studio/VoiceStudioPage.tsx",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:VoicePrint",
+      "target": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:drawPrint",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:VoiceStudioPage",
+      "target": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:useLocalTime",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
+      "target": "function:src/components/events/EventRegistrationSection.tsx:useAnimatedNumber",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
+      "target": "function:src/lib/event-intake.ts:validateIntakeFields",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
+      "target": "function:src/lib/event-intake.ts:hasIntakeErrors",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
+      "target": "function:src/lib/event-intake.ts:validateBusinessContext",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
+      "target": "function:src/lib/events.tsx:formatDonationLabelNote",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
+      "target": "function:src/lib/events.tsx:toggleDonationPreset",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:VoiceStudioPage",
+      "target": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:VoiceStudioPage",
+      "target": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:Waves",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:VoiceStudioPage",
+      "target": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:VoicePrint",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:VoiceStudioPage",
+      "target": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:TypedHeadline",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:VoiceStudioPage",
+      "target": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:Compare",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:VoiceStudioPage",
+      "target": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:VoiceTuner",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:VoiceStudioPage",
+      "target": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:TestimonialCard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:VoiceStudioPage",
+      "target": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:CountUpKicker",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/DinnerPhotoCarousel.tsx",
+      "target": "function:src/components/events/DinnerPhotoCarousel.tsx:DinnerPhotoCarousel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/DinnerPhotoCarousel.tsx",
+      "target": "function:src/components/events/DinnerPhotoCarousel.tsx:DinnerPhotoCarousel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/event-intake.ts",
+      "target": "function:src/lib/event-intake.ts:countPhoneDigits",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/event-intake.ts",
+      "target": "function:src/lib/event-intake.ts:countPhoneDigits",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/event-intake.ts",
+      "target": "function:src/lib/event-intake.ts:toE164",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/event-intake.ts",
+      "target": "function:src/lib/event-intake.ts:toE164",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/event-intake.ts",
+      "target": "function:src/lib/event-intake.ts:normalizeWhatsappNumber",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/event-intake.ts",
+      "target": "function:src/lib/event-intake.ts:normalizeWhatsappNumber",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/event-intake.ts",
+      "target": "function:src/lib/event-intake.ts:validateWhatsappNumber",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/event-intake.ts",
+      "target": "function:src/lib/event-intake.ts:validateWhatsappNumber",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/event-intake.ts",
+      "target": "function:src/lib/event-intake.ts:validateBusinessContext",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/event-intake.ts",
+      "target": "function:src/lib/event-intake.ts:validateBusinessContext",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/event-intake.ts",
+      "target": "function:src/lib/event-intake.ts:validateIntakeFields",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/event-intake.ts",
+      "target": "function:src/lib/event-intake.ts:validateIntakeFields",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/event-intake.ts",
+      "target": "function:src/lib/event-intake.ts:hasIntakeErrors",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/event-intake.ts",
+      "target": "function:src/lib/event-intake.ts:hasIntakeErrors",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/event-intake.ts",
+      "target": "function:src/lib/event-intake.ts:isValidAiLevel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/event-intake.ts",
+      "target": "function:src/lib/event-intake.ts:isValidAiLevel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:getEventDiscountedPrice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:getEventDiscountedPrice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:resolvePromoCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:resolvePromoCode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:formatEventPrice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:formatEventPrice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:formatDonationLabelNote",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:formatDonationLabelNote",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:toggleDonationPreset",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:toggleDonationPreset",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:getEventBySlug",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:getEventBySlug",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:getLiveEvents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:getLiveEvents",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:getUpcomingLiveEvents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:getUpcomingLiveEvents",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "file:src/components/events/DinnerPhotoCarousel.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:src/lib/events.tsx:formatEventPrice",
+      "target": "function:src/lib/events.tsx:getEventDiscountedPrice",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/lib/events.tsx:getUpcomingLiveEvents",
+      "target": "function:src/lib/events.tsx:getLiveEvents",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/lib/event-intake.ts:normalizeWhatsappNumber",
+      "target": "function:src/lib/event-intake.ts:toE164",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/lib/event-intake.ts:validateIntakeFields",
+      "target": "function:src/lib/event-intake.ts:validateWhatsappNumber",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/lib/event-intake.ts:validateIntakeFields",
+      "target": "function:src/lib/event-intake.ts:validateBusinessContext",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "function:src/components/events/EventPageView.tsx:SectionShell",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "function:src/components/events/EventPageView.tsx:StorySection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "function:src/components/events/EventPageView.tsx:ChecklistSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "function:src/components/events/EventPageView.tsx:CardsSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "function:src/components/events/EventPageView.tsx:SplitSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "function:src/components/events/EventPageView.tsx:ImageSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "function:src/components/events/EventPageView.tsx:HtmlSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "function:src/components/events/EventPageView.tsx:QuoteCardSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "function:src/components/events/EventPageView.tsx:HostsSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "function:src/components/events/EventPageView.tsx:EventVideoSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "function:src/components/events/EventPageView.tsx:CtaSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "function:src/components/events/EventPageView.tsx:renderSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "function:src/components/events/EventPageView.tsx:EventPageView",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "function:src/components/events/EventPageView.tsx:EventPageView",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "file:src/components/events/EventRegistrationSection.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "file:src/components/events/joechella/FestivalHero.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "file:src/components/events/joechella/ProgramTimeline.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "file:src/components/events/joechella/VenueGallery.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "file:src/components/events/ScrollToRegisterButton.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "file:src/components/events/voice-studio/VoiceStudioPage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "file:src/lib/event-status.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:src/components/events/EventPageView.tsx:CtaSection",
+      "target": "function:src/lib/events.tsx:formatEventPrice",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/components/events/EventPageView.tsx:EventPageView",
+      "target": "function:src/lib/event-status.ts:isEventEnded",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/components/events/EventPageView.tsx:EventPageView",
+      "target": "function:src/lib/event-status.ts:isRegistrationWindowPassed",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/components/events/EventPageView.tsx:EventPageView",
+      "target": "function:src/lib/events.tsx:getEventDiscountedPrice",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/components/events/EventPageView.tsx:EventPageView",
+      "target": "function:src/components/events/EventPageView.tsx:renderSection",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/components/events/EventPageView.tsx:EventPageView",
+      "target": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:VoiceStudioPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:src/components/events/EventPageView.tsx:EventPageView",
+      "target": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/app/api/events/checkout-session/route.ts",
+      "target": "file:src/lib/event-intake.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/app/api/events/checkout-session/route.ts",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/app/events/[slug]/page.tsx",
+      "target": "file:src/components/events/EventPageView.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/app/events/[slug]/page.tsx",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/app/events/[slug]/setup/page.tsx",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/app/events/page.tsx",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/components/events/joechella/FestivalHero.tsx",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/components/events/joechella/ProgramTimeline.tsx",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/components/events/joechella/VenueGallery.tsx",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/lib/event-checkout.ts",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
       "source": "file:src/lib/event-confirmation-email.ts",
-      "target": "file:src/lib/utm.ts",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/lib/event-status.ts",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:tests/event-checkout.test.ts",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:tests/event-pricing-and-data.test.ts",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:tests/event-status.test.ts",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "function:src/app/events/[slug]/page.tsx:generateMetadata",
+      "target": "function:src/lib/events.tsx:getEventBySlug",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/app/events/[slug]/page.tsx:EventDetailPage",
+      "target": "function:src/lib/events.tsx:getEventBySlug",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/app/events/[slug]/page.tsx:EventDetailPage",
+      "target": "function:src/lib/events.tsx:resolvePromoCode",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/api/events/checkout-session/route.ts",
+      "target": "file:src/lib/email-validation.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/api/events/checkout-session/route.ts",
+      "target": "file:src/lib/event-registration-flow.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/events/page.tsx",
+      "target": "file:src/components/Reveal.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "file:src/components/events/AskAnAiExpertQuoteStrip.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "file:src/components/events/EventMediaVideo.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "file:src/components/events/HeroVideo.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "file:src/components/events/joechella/FestivalMotion.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "file:src/components/Reveal.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "file:src/lib/calendar.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventRegistrationSection.tsx",
+      "target": "file:src/components/events/WaitlistJoinForm.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventRegistrationSection.tsx",
+      "target": "file:src/data/ai-levels-signup.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventRegistrationSection.tsx",
+      "target": "file:src/lib/celebrate.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventRegistrationSection.tsx",
+      "target": "file:src/lib/email-validation.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventRegistrationSection.tsx",
+      "target": "file:src/lib/event-registration-flow.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventRegistrationSection.tsx",
+      "target": "file:src/lib/meta-pixel.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/HeroVideo.tsx",
+      "target": "file:src/components/events/EventMediaVideo.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/joechella/VenueGallery.tsx",
+      "target": "file:src/components/events/EventMediaVideo.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/WaitlistJoinForm.tsx",
+      "target": "file:src/lib/email-validation.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/WaitlistJoinForm.tsx",
+      "target": "file:src/lib/meta-pixel.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/event-confirmation-email.ts",
+      "target": "file:src/lib/calendar.ts",
       "type": "imports",
       "direction": "forward",
       "weight": 0.7
@@ -7933,9 +8970,9 @@
       "name": "API Routes",
       "description": "Lead capture and unsubscribe routes handle resource delivery and list suppression, while the represented checkout endpoint connects event registration to Stripe.",
       "nodeIds": [
+        "file:src/app/api/events/checkout-session/route.ts",
         "file:src/app/api/lead-magnet/route.ts",
-        "file:src/app/api/unsubscribe/route.ts",
-        "file:src/app/api/events/checkout-session/route.ts"
+        "file:src/app/api/unsubscribe/route.ts"
       ]
     },
     {
@@ -8012,10 +9049,17 @@
     {
       "id": "layer:shared-libraries",
       "name": "Shared Libraries",
-      "description": "Event content, pricing, checkout, giveaway catalogs, email generation, follow-up planning and Supabase access support represented pages, API routes and operations.",
+      "description": "Event catalogs, pricing, status, intake validation, giveaway content adapters, email generation, follow-up planning and database access support pages and resource delivery, with inventory-only dependencies labeled separately.",
       "nodeIds": [
         "file:src/app/sitemap.ts",
+        "file:src/data/ai-levels-signup.ts",
+        "file:src/lib/calendar.ts",
+        "file:src/lib/celebrate.ts",
+        "file:src/lib/email-validation.ts",
         "file:src/lib/event-checkout.ts",
+        "file:src/lib/event-confirmation-email.ts",
+        "file:src/lib/event-intake.ts",
+        "file:src/lib/event-registration-flow.ts",
         "file:src/lib/event-status.ts",
         "file:src/lib/events.tsx",
         "file:src/lib/free-ai-tool-email.ts",
@@ -8025,14 +9069,14 @@
         "file:src/lib/giveaway-followups.ts",
         "file:src/lib/giveaway-offers.ts",
         "file:src/lib/giveaways.ts",
-        "file:src/lib/lead-magnets.ts",
-        "file:src/lib/pack-page.ts",
-        "file:src/lib/supabase.ts",
-        "file:src/lib/utm.ts",
         "file:src/lib/image-size.ts",
+        "file:src/lib/lead-magnets.ts",
+        "file:src/lib/meta-pixel.ts",
+        "file:src/lib/pack-page.ts",
         "file:src/lib/stripe.ts",
-        "file:src/lib/event-confirmation-email.ts",
+        "file:src/lib/supabase.ts",
         "file:src/lib/url-utils.ts",
+        "file:src/lib/utm.ts",
         "file:src/lib/waitlist-notify-windows.ts"
       ]
     },
@@ -8082,16 +9126,24 @@
     {
       "id": "layer:ui-components",
       "name": "UI Components",
-      "description": "Reusable event landing and registration components, festival media and programming, and interactive giveaway rendering support workshop and resource pages.",
+      "description": "Shared event and giveaway components provide registration, typed sections, festival layouts, dinner photos, and Voice Studio interactions, alongside explicitly labeled inventory-only media and reveal dependencies.",
       "nodeIds": [
+        "file:src/components/Reveal.tsx",
+        "file:src/components/events/AskAnAiExpertQuoteStrip.tsx",
+        "file:src/components/events/DinnerPhotoCarousel.tsx",
+        "file:src/components/events/EventMediaVideo.tsx",
         "file:src/components/events/EventPageView.tsx",
         "file:src/components/events/EventRegistrationSection.tsx",
+        "file:src/components/events/HeroVideo.tsx",
         "file:src/components/events/ScrollToRegisterButton.tsx",
+        "file:src/components/events/WaitlistJoinForm.tsx",
         "file:src/components/events/joechella/AmbientHeroVideo.tsx",
         "file:src/components/events/joechella/FestivalHero.tsx",
+        "file:src/components/events/joechella/FestivalMotion.tsx",
         "file:src/components/events/joechella/ProgramTimeline.tsx",
         "file:src/components/events/joechella/VenueGallery.tsx",
         "file:src/components/events/joechella/festival.css",
+        "file:src/components/events/voice-studio/VoiceStudioPage.tsx",
         "file:src/components/giveaways/PackPage.tsx"
       ]
     }
@@ -8100,16 +9152,17 @@
     {
       "order": 1,
       "title": "Workshop Site Entry",
-      "description": "Start at the represented events index to see how visitors discover upcoming workshops through dated event cards, prices and modality badges. This tour follows the event experience first, then the giveaway and delivery systems; the homepage and a project README are not represented in this partial graph.",
+      "description": "Start at the dynamic event route to see how the workshop site turns an event slug into public content, promotion details, metadata, and an event presentation. This tour follows that visitor journey before connecting it to giveaways, resource delivery, and operational follow-ups; the represented graph is partial, and no project README is available.",
       "nodeIds": [
+        "file:src/app/events/[slug]/page.tsx",
         "file:src/app/events/page.tsx"
       ],
-      "languageLesson": "Next.js App Router maps an app directory's page.tsx to a public route, so src/app/events/page.tsx supplies /events."
+      "languageLesson": "In the Next.js App Router, a [slug] directory captures a dynamic URL segment, while page.tsx defines its page component."
     },
     {
       "order": 2,
       "title": "Shared Event Rules",
-      "description": "The index depends on the central event catalog, which brings together schedules, pricing, registration settings and presentation variants. Read the status helpers alongside it to understand how scheduled cutoffs, ended events and manual closure affect the rest of the experience.",
+      "description": "The entry route depends on the central event catalog for schedules, pricing, registration settings, and presentation variants. Read the status helpers beside it to understand how scheduled cutoffs, ended events, and manual closure shape the page and registration decisions.",
       "nodeIds": [
         "file:src/lib/events.tsx",
         "file:src/lib/event-status.ts"
@@ -8118,25 +9171,38 @@
     {
       "order": 3,
       "title": "Event Page Composition",
-      "description": "The dynamic event route resolves an event and promotion before supplying public data to the event view. The view composes hero media, content sections, calendar links and registration state, while the festival hero illustrates how a specialized event presentation fits that shared model.",
+      "description": "The event view turns the catalog into typed content sections, hero media, calendar links, and registration data. Festival-specific components and the dinner photo carousel show how distinct presentations fit around that shared content model without becoming separate checkout systems.",
       "nodeIds": [
-        "file:src/app/events/[slug]/page.tsx",
         "file:src/components/events/EventPageView.tsx",
-        "file:src/components/events/joechella/FestivalHero.tsx"
+        "file:src/components/events/joechella/FestivalHero.tsx",
+        "file:src/components/events/DinnerPhotoCarousel.tsx"
       ]
     },
     {
       "order": 4,
-      "title": "Registration And Checkout",
-      "description": "Building on the event rules, the client registration component coordinates attendee intake, donations, promo codes, waitlisting and Stripe checkout choices. The checkout helper converts pricing and attribution into hosted or embedded Stripe parameters; the endpoint is represented as an inventory-recovered dependency rather than a fresh semantic analysis.",
+      "title": "Interactive Voice Studio",
+      "description": "The event view can also select the opt-in Voice Studio presentation, which combines canvas visuals, copy comparisons, tone controls, and testimonials. Its local-time hook formats the start time for the visitor, while the page reuses the shared registration component explored next.",
       "nodeIds": [
-        "file:src/components/events/EventRegistrationSection.tsx",
-        "file:src/lib/event-checkout.ts",
-        "file:src/app/api/events/checkout-session/route.ts"
-      ]
+        "file:src/components/events/voice-studio/VoiceStudioPage.tsx",
+        "function:src/components/events/voice-studio/VoiceStudioPage.tsx:VoicePrint",
+        "function:src/components/events/voice-studio/VoiceStudioPage.tsx:useLocalTime"
+      ],
+      "languageLesson": "React effects coordinate browser-only animation and timezone formatting after hydration; cleanup functions release animation frames and observers."
     },
     {
       "order": 5,
+      "title": "Registration And Intake",
+      "description": "The shared registration component coordinates attendee details, promotions, donations, free reservations, waitlisting, and Stripe checkout. Intake helpers keep phone validation, E.164 normalization, business-context limits, and AI-level bounds consistent between form and server consumers; the checkout endpoint remains an inventory-only reference rather than a fresh implementation analysis.",
+      "nodeIds": [
+        "file:src/components/events/EventRegistrationSection.tsx",
+        "file:src/lib/event-intake.ts",
+        "file:src/lib/event-checkout.ts",
+        "file:src/app/api/events/checkout-session/route.ts"
+      ],
+      "languageLesson": "A TypeScript type predicate such as isValidAiLevel narrows unknown input only after the runtime integer and range checks succeed."
+    },
+    {
+      "order": 6,
       "title": "Giveaway Content Contracts",
       "description": "The second major experience is the giveaway system, organized around a registry, a reusable pack content model and a shared free AI tool catalog. The tool-pack adapter transforms that catalog into setup guides and structured search data, letting many routes reuse the same source content.",
       "nodeIds": [
@@ -8147,7 +9213,7 @@
       ]
     },
     {
-      "order": 6,
+      "order": 7,
       "title": "Reusable Giveaway Rendering",
       "description": "PackPage turns those content contracts into an interactive page with optional sections, copyable commands, personalized prompts and contextual email capture. The Claude Video Skills route is a concrete example of a small route module rendering catalog-backed content, while the offer selector adds the appropriate follow-on call to action.",
       "nodeIds": [
@@ -8157,7 +9223,7 @@
       ]
     },
     {
-      "order": 7,
+      "order": 8,
       "title": "Distributed Resource Instructions",
       "description": "The Desk Pet pack shows how a giveaway includes both website content and a reusable setup prompt. Compare the source prompt with its downloadable text document to understand why distribution parity matters when users follow installation instructions outside the site.",
       "nodeIds": [
@@ -8167,7 +9233,7 @@
       ]
     },
     {
-      "order": 8,
+      "order": 9,
       "title": "Lead Capture And Delivery",
       "description": "The lead-magnet API connects giveaway engagement to email delivery, analytics and CRM records while applying rate limits, suppression checks and source-specific routing. Its email helpers build approved resource messages, and the unsubscribe route closes the loop by verifying tokens and recording list suppressions.",
       "nodeIds": [
@@ -8178,7 +9244,7 @@
       ]
     },
     {
-      "order": 9,
+      "order": 10,
       "title": "Guarded Follow-up Operations",
       "description": "After initial delivery, the follow-up planner selects eligible email and Instagram steps using timing, suppression and human-handoff rules. The operational runner combines that plan with provider checks, previews, dry runs and claimed sends, making the distinction between planning content and executing delivery explicit.",
       "nodeIds": [
@@ -8188,7 +9254,7 @@
       ]
     },
     {
-      "order": 10,
+      "order": 11,
       "title": "Workshop Learning Content",
       "description": "Beyond registration and giveaways, the site also carries instructional workshop material. The session guide demonstrates this content role through browser workflows, local transcription, GuardDog setup and Git checkpoints, complementing the attendee setup page's post-purchase instructions.",
       "nodeIds": [
@@ -8197,7 +9263,7 @@
       ]
     },
     {
-      "order": 11,
+      "order": 12,
       "title": "Behavior And Resource Checks",
       "description": "The represented tests document important contracts across event pricing, Stripe checkout, tool catalog wiring and follow-up eligibility. Read them after the corresponding features to see both behavioral assertions and source or asset checks; these graph entries do not establish a current test run or a verified production experience.",
       "nodeIds": [
@@ -8209,7 +9275,7 @@
       ]
     },
     {
-      "order": 12,
+      "order": 13,
       "title": "Routing And Delivery Configuration",
       "description": "Finish with the Next.js configuration, which controls build tracing, excluded media, redirects and host rewrites around the routes explored earlier. The legacy Video Editor page and ZIP redirect to the paid Video Agent, illustrating why a source page and its tests alone do not determine what visitors can currently download.",
       "nodeIds": [
@@ -8217,5 +9283,28 @@
         "file:src/app/giveaways/video-editor/page.tsx"
       ]
     }
-  ]
+  ],
+  "version": "1.0.0",
+  "project": {
+    "name": "masterminds-workshop",
+    "languages": [
+      "TypeScript",
+      "JavaScript",
+      "CSS",
+      "HTML",
+      "JSON"
+    ],
+    "frameworks": [
+      "Next.js",
+      "React",
+      "TailwindCSS",
+      "Stripe",
+      "Supabase",
+      "Framer Motion",
+      "GSAP"
+    ],
+    "description": "Masterminds Workshop Site is a Next.js application for event discovery and registration, workshop learning, and giveaway resource distribution, with shared content catalogs, payment integration, and email delivery.",
+    "analyzedAt": "2026-11-12T20:12:30.664018+00:00",
+    "gitCommitHash": "87a8bd3fd90d4bf9f16e400b88c5d65127c85737"
+  }
 }

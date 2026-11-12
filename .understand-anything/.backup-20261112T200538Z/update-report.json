@@ -1,0 +1,84 @@
+{
+  "mode": "incremental",
+  "filesAnalyzed": 6,
+  "analyzedFilePaths": [
+    "src/app/events/[slug]/page.tsx",
+    "src/components/events/joechella/FestivalHero.tsx",
+    "src/lib/events.tsx",
+    "src/lib/free-ai-tools.ts",
+    "tests/event-checkout.test.ts",
+    "tests/event-pricing-and-data.test.ts"
+  ],
+  "excludedChangedAssets": [
+    "public/events/joechella-big-one/hot-air-balloon-card.webp",
+    "public/events/joechella-big-one/jazzy-o.webp",
+    "public/events/joechella-big-one/joe-apple-icon.png",
+    "public/events/joechella-big-one/joe-favicon.png",
+    "public/events/joechella-big-one/pool-sunny-card.webp"
+  ],
+  "nodeCount": 264,
+  "edgeCount": 485,
+  "layerCount": 9,
+  "tourSteps": 12,
+  "validation": {
+    "issues": [],
+    "warnings": [
+      "Node 'file:public/downloads/joes-linkedin-kit-v1.0.zip' has no edges (orphan)",
+      "Node 'file:public/downloads/joes-linkedin-kit-v1.0.zip.sha256' has no edges (orphan)",
+      "Node 'file:public/downloads/joes-salesman-v1.0.zip' has no edges (orphan)",
+      "Node 'file:public/downloads/joes-salesman-v1.0.zip.sha256' has no edges (orphan)",
+      "Node 'function:src/app/api/events/abandoned-checkout-followups/route.ts:acquireEventLock' has no edges (orphan)",
+      "Node 'function:src/app/api/events/cancel/route.ts:escapeHtml' has no edges (orphan)",
+      "Node 'function:src/app/api/events/session-reminders/route.ts:acquireEventWindowLock' has no edges (orphan)",
+      "Node 'file:src/app/api/unsubscribe/route.ts' has no edges (orphan)",
+      "Node 'file:src/app/bonus/auto-lead-magnet/page.tsx' has no edges (orphan)",
+      "Node 'file:src/lib/supabase.ts' has no edges (orphan)"
+    ],
+    "stats": {
+      "totalNodes": 264,
+      "totalEdges": 485,
+      "totalLayers": 9,
+      "tourSteps": 12,
+      "nodeTypes": {
+        "file": 102,
+        "function": 160,
+        "document": 1,
+        "config": 1
+      },
+      "edgeTypes": {
+        "contains": 154,
+        "imports": 134,
+        "tested_by": 18,
+        "calls": 65,
+        "related": 4,
+        "exports": 96,
+        "configures": 2,
+        "depends_on": 12
+      }
+    }
+  },
+  "assembleReview": {
+    "fixedSectionOk": true,
+    "nodesRecovered": 6,
+    "edgesRestored": 6,
+    "crossBatchEdgesAdded": 8,
+    "typesRemapped": 0,
+    "complexityRemapped": 0,
+    "notes": [
+      "The reported normalization required no node field corrections; the prior 16 import repairs are already present.",
+      "Recovered only six directly referenced existing file nodes from verified inventory; no source re-analysis or fabricated function nodes.",
+      "Two calls to unrepresented getPublicImageSize and getStripePublishableKey functions remain omitted; four invalid tested_by edges remain removed.",
+      "Coverage is intentionally partial: retained graph plus six changed source files, not a complete analysis of the 581-file inventory."
+    ]
+  },
+  "phaseWarnings": [
+    "Optional README.md absent; package manifest and existing project description used.",
+    "First agent dispatch failed with invalid thread-store request; fresh-context retry succeeded.",
+    "Bundled merge rejects prescribed batch-existing.json; renamed to numeric batch-0.json and successfully re-merged.",
+    "Cached inventory has 581 files; pre-existing graph has 109 file paths. Incremental analysis retained inherited partial coverage.",
+    "Batch computation emitted large-community split and neighbor soft-cap warnings; six changed files retained for analysis."
+  ],
+  "fingerprintsBaseline": 486,
+  "graphPath": "/Users/myos/.myos/workspace/projects/mastermind/workshop-site/.understand-anything/knowledge-graph.json",
+  "dashboardLaunched": false
+}

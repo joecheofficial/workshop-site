@@ -1,8 +1,298 @@
 {
   "version": "1.0.0",
-  "gitCommitHash": "b320c54a84487b266c3879731b075f5b5cca0cea",
-  "generatedAt": "2026-11-11T20:07:39.141Z",
+  "gitCommitHash": "87a8bd3fd90d4bf9f16e400b88c5d65127c85737",
+  "generatedAt": "2026-11-12T20:12:36.429Z",
   "files": {
+    ".claude/settings.json": {
+      "filePath": ".claude/settings.json",
+      "contentHash": "9080f054caa171d47803957c0ac398cfc643584893497356635d44278c40260b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": true
+    },
+    ".claude/skills/gitnexus/gitnexus-cli/SKILL.md": {
+      "filePath": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
+      "contentHash": "5d75f4b23ae076e949a34b34558e1f106d306053eb485822469cdf01a2fd9c82",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 90,
+      "hasStructuralAnalysis": true
+    },
+    ".claude/skills/gitnexus/gitnexus-debugging/SKILL.md": {
+      "filePath": ".claude/skills/gitnexus/gitnexus-debugging/SKILL.md",
+      "contentHash": "e30f9a663bde28a1b6ed178acd7253f69427bb342a6463917bc1ac1c53370b8a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 96,
+      "hasStructuralAnalysis": true
+    },
+    ".claude/skills/gitnexus/gitnexus-exploring/SKILL.md": {
+      "filePath": ".claude/skills/gitnexus/gitnexus-exploring/SKILL.md",
+      "contentHash": "25c9f5291d94a20a1499b213fe30ee52ac1ab7de2ebb9477933e60d1e59a989a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 85,
+      "hasStructuralAnalysis": true
+    },
+    ".claude/skills/gitnexus/gitnexus-guide/SKILL.md": {
+      "filePath": ".claude/skills/gitnexus/gitnexus-guide/SKILL.md",
+      "contentHash": "b2f748891a218d01e8031dc12a6ea0261e7b1fe8bb542d382cc8c8091f10d6a8",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 71,
+      "hasStructuralAnalysis": true
+    },
+    ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md": {
+      "filePath": ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md",
+      "contentHash": "f5ea1b2a02b64b3ec950dec9bc610a7f0f2e57acdc5b6b6a8cc4aac837ce248e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 104,
+      "hasStructuralAnalysis": true
+    },
+    ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md": {
+      "filePath": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
+      "contentHash": "f824aae5903dbd7137d6dade0e86b8f9207ca3221bf205bfecba36d759d76497",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 128,
+      "hasStructuralAnalysis": true
+    },
+    ".env.example": {
+      "filePath": ".env.example",
+      "contentHash": "247d90662759af7e673617b14d0ce000979bb8337581daf44845e4a57ed9b677",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 26,
+      "hasStructuralAnalysis": true
+    },
+    ".impeccable.md": {
+      "filePath": ".impeccable.md",
+      "contentHash": "be5e60b5e278456f296631fe0b6c87a24c1d333dc61c5979550347d247099e42",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 79,
+      "hasStructuralAnalysis": true
+    },
+    ".myos-writer-patches/writer-1787555349515-03409f.patch": {
+      "filePath": ".myos-writer-patches/writer-1787555349515-03409f.patch",
+      "contentHash": "8c62c3b2429b8bdcb605ce92a30d56755d04c26d1528f5d203b2093c9a094593",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 14,
+      "hasStructuralAnalysis": false
+    },
+    ".myos-writer-patches/writer-1787555351568-5c26e3.patch": {
+      "filePath": ".myos-writer-patches/writer-1787555351568-5c26e3.patch",
+      "contentHash": "1746980991b4ab8e279162e296a591b5b13139bb93d1c8bd80270dffd67a6550",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1061,
+      "hasStructuralAnalysis": false
+    },
+    ".pagespeed/history.jsonl": {
+      "filePath": ".pagespeed/history.jsonl",
+      "contentHash": "6719ad7fd679048fc9f85fd249c4975d40076809515770d2a3012191c6642d91",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 4,
+      "hasStructuralAnalysis": false
+    },
+    ".understandignore": {
+      "filePath": ".understandignore",
+      "contentHash": "e7470e304541ea0f2f264411c65cbaf5f12090812f0bcf5aeeb1faef04840272",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "AGENTS.md": {
+      "filePath": "AGENTS.md",
+      "contentHash": "d8006e3990408089a7f69eccc8dd25dd3bdb89dbc79cd314988ad8eab8271d8a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 52,
+      "hasStructuralAnalysis": true
+    },
+    "atelier.audience-policy.json": {
+      "filePath": "atelier.audience-policy.json",
+      "contentHash": "7bdcffc0ae2d5ac47563c10d2f335e8e256c246716af293ab4471c81143ee634",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 7,
+      "hasStructuralAnalysis": true
+    },
+    "atelier.lock.json": {
+      "filePath": "atelier.lock.json",
+      "contentHash": "38f5ca293e52b17cf3daca003258c67a961a8a0760a7957db2098f2cefa8acf3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 93,
+      "hasStructuralAnalysis": true
+    },
+    "atelier.project.json": {
+      "filePath": "atelier.project.json",
+      "contentHash": "b72b730d439a6716059abe5367fd7324089c9e0ec6640a8d1858b7a605133269",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 35,
+      "hasStructuralAnalysis": true
+    },
+    "boundary-policy.v1.json": {
+      "filePath": "boundary-policy.v1.json",
+      "contentHash": "201e415a429cf86e1eaaf686f0249b5725dba0375c1233549f91b19c2e00b1af",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 47,
+      "hasStructuralAnalysis": true
+    },
+    "CLAUDE.md": {
+      "filePath": "CLAUDE.md",
+      "contentHash": "beca147941d596de436b6ad9880e07baef569f35a513f5dc195c761cac261bf7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 52,
+      "hasStructuralAnalysis": true
+    },
+    "docs/giveaway-followups.md": {
+      "filePath": "docs/giveaway-followups.md",
+      "contentHash": "5b931199766d7875dead73e4d6075741d1ff09d75e7f6cdd4e02c104cee16a12",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 58,
+      "hasStructuralAnalysis": true
+    },
+    "docs/giveaways/BACKLOG.md": {
+      "filePath": "docs/giveaways/BACKLOG.md",
+      "contentHash": "98d29574fcea0427d5764bd8ea29bbb152963b042d3b881dd4edbee921830eea",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 72,
+      "hasStructuralAnalysis": true
+    },
+    "docs/giveaways/grades/tokens-2026-10-02-r1.md": {
+      "filePath": "docs/giveaways/grades/tokens-2026-10-02-r1.md",
+      "contentHash": "8524629ed781174644b3cddd257ca70aba75e0a2dea7489c6153eeac9213e7dd",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 78,
+      "hasStructuralAnalysis": true
+    },
+    "docs/giveaways/grades/tokens-2026-10-02-r2.md": {
+      "filePath": "docs/giveaways/grades/tokens-2026-10-02-r2.md",
+      "contentHash": "6f3bf89d6f6fdcf5d4db0f0760b94886c9fb79b038812bcc20bbf0c7aa03edf7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 68,
+      "hasStructuralAnalysis": true
+    },
+    "docs/giveaways/grades/tokens-2026-10-02-r3.md": {
+      "filePath": "docs/giveaways/grades/tokens-2026-10-02-r3.md",
+      "contentHash": "32fb88c52d0637206238eb89e4b655d24d7aa4a9d3421ef088124825974f1c96",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 61,
+      "hasStructuralAnalysis": true
+    },
+    "docs/giveaways/LESSONS.md": {
+      "filePath": "docs/giveaways/LESSONS.md",
+      "contentHash": "efad06b7321ac258436617dc759fbe00c38a6a219bdf25924e1d768d424accc7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 121,
+      "hasStructuralAnalysis": true
+    },
+    "docs/giveaways/PROCESS.md": {
+      "filePath": "docs/giveaways/PROCESS.md",
+      "contentHash": "49700ee9953b672c0b0ece1f2d76f53aad296d8f343898a3df5bab1a50ab8c85",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 568,
+      "hasStructuralAnalysis": true
+    },
+    "docs/giveaways/USEFULNESS-RUBRIC.md": {
+      "filePath": "docs/giveaways/USEFULNESS-RUBRIC.md",
+      "contentHash": "a5727c7f144b4841997aad6abba7cb7c55c9a4aae063a3bae61909f3180673f0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 49,
+      "hasStructuralAnalysis": true
+    },
+    "docs/STRIPE-TRIAL-MECHANICS.md": {
+      "filePath": "docs/STRIPE-TRIAL-MECHANICS.md",
+      "contentHash": "c00a5d9777b1c81c67ea8c36f36eef8bbe5eda5138a3f082754c0e33fd4f3f3b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 55,
+      "hasStructuralAnalysis": true
+    },
+    "LESSONS.md": {
+      "filePath": "LESSONS.md",
+      "contentHash": "25807778ab4de7f0331708590432409cec5ca15c4900a8f931eabdc34c69d921",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 12,
+      "hasStructuralAnalysis": true
+    },
     "next-env.d.ts": {
       "filePath": "next-env.d.ts",
       "contentHash": "7b550dda9686c16f36a17bf9051d5dbf31e98555b30d114ac49fc49a1e712651",
@@ -41,6 +331,16 @@
       "totalLines": 89,
       "hasStructuralAnalysis": true
     },
+    "package.json": {
+      "filePath": "package.json",
+      "contentHash": "7ff7d84f2ef9ec1c57c17a797fe915c96e5e82a9210d1833008c552bcbd54589",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 51,
+      "hasStructuralAnalysis": true
+    },
     "pdf/client-launch-checklist.html": {
       "filePath": "pdf/client-launch-checklist.html",
       "contentHash": "1756b1f1d9f632b0522d7d9b9b282db46871caf999b33dd90c07b3c7ff268a59",
@@ -51,6 +351,16 @@
       "totalLines": 306,
       "hasStructuralAnalysis": false
     },
+    "pdf/client-launch-checklist.html.kg.json": {
+      "filePath": "pdf/client-launch-checklist.html.kg.json",
+      "contentHash": "a6b22dfd14857f96634fda76f9fac95cf31ebead800d438b3b0f000d25bcf023",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": true
+    },
     "pdf/cross-cli-compatibility-routing-guide.html": {
       "filePath": "pdf/cross-cli-compatibility-routing-guide.html",
       "contentHash": "8dbec708571a38dd1a170509c1ba313cfe7e446717e3b21fa9b61d4e1f6d7c1f",
@@ -60,6 +370,16 @@
       "exports": [],
       "totalLines": 583,
       "hasStructuralAnalysis": false
+    },
+    "pdf/cross-cli-compatibility-routing-guide.html.kg.json": {
+      "filePath": "pdf/cross-cli-compatibility-routing-guide.html.kg.json",
+      "contentHash": "9d9f1c886ec72e94cf322b2e1adcaf1dfe5fb76145a6929c73ddf2493e173a13",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": true
     },
     "pdf/render-client-launch-checklist.js": {
       "filePath": "pdf/render-client-launch-checklist.js",
@@ -137,6 +457,16 @@
       "totalLines": 1450,
       "hasStructuralAnalysis": false
     },
+    "public/2x-with-ai-playbook.html.kg.json": {
+      "filePath": "public/2x-with-ai-playbook.html.kg.json",
+      "contentHash": "0811e298b5798383931b1aff57fdf551e12d4e9d0b91f723f79e1d50518bbdc8",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": true
+    },
     "public/ai-os-architecture.html": {
       "filePath": "public/ai-os-architecture.html",
       "contentHash": "96509256960fa5c550cdfc6ce60bd26671893a0e0c975de934b494ae91d1a39f",
@@ -146,6 +476,16 @@
       "exports": [],
       "totalLines": 203,
       "hasStructuralAnalysis": false
+    },
+    "public/ai-os-architecture.html.kg.json": {
+      "filePath": "public/ai-os-architecture.html.kg.json",
+      "contentHash": "9ab9c6e61fa0c53de6f9677990f4e2e23c8e2442a3c0d9a1500d63a14224d346",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": true
     },
     "public/automation-audit-sample.html": {
       "filePath": "public/automation-audit-sample.html",
@@ -157,6 +497,26 @@
       "totalLines": 652,
       "hasStructuralAnalysis": false
     },
+    "public/automation-audit-sample.html.kg.json": {
+      "filePath": "public/automation-audit-sample.html.kg.json",
+      "contentHash": "718dbda169d871aa138e27c2881aa9bd3951dcfbf7f889c7c518ba1d7286e75f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": true
+    },
+    "public/client-launch-checklist.pdf.kg.json": {
+      "filePath": "public/client-launch-checklist.pdf.kg.json",
+      "contentHash": "14b36e50f36b483ac6b034ef52df3254735917db9f4337e9aff68f0e513d7dea",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": true
+    },
     "public/coach-kit-onboarding-matrix.html": {
       "filePath": "public/coach-kit-onboarding-matrix.html",
       "contentHash": "789ffcaecd80f4b7446835e4579d33949000db6b9f989fb0a429bfa4f6cf5fb1",
@@ -165,6 +525,76 @@
       "imports": [],
       "exports": [],
       "totalLines": 1110,
+      "hasStructuralAnalysis": false
+    },
+    "public/coach-kit-onboarding-matrix.html.kg.json": {
+      "filePath": "public/coach-kit-onboarding-matrix.html.kg.json",
+      "contentHash": "6006b31436fc402bbf00380a05bd49a94f31810f5d03508eda778ba83a4dc8cc",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": true
+    },
+    "public/cross-cli-compatibility-routing-guide.pdf.kg.json": {
+      "filePath": "public/cross-cli-compatibility-routing-guide.pdf.kg.json",
+      "contentHash": "4e0d741ad759ce73434511f813570b104880a590b6ee6b55721d6d12551a8de9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": true
+    },
+    "public/desk-pet-prompt.txt": {
+      "filePath": "public/desk-pet-prompt.txt",
+      "contentHash": "aabf03d3eb9d73ca70884a15650a31f6abde5aeee89e6e00411b42261b23fee4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 29,
+      "hasStructuralAnalysis": false
+    },
+    "public/docs/jill-linkedin-cleanup-sop.md": {
+      "filePath": "public/docs/jill-linkedin-cleanup-sop.md",
+      "contentHash": "5a68668bd5f01351eaf14fa1877330598e308895da342e8a5c71216111772390",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 66,
+      "hasStructuralAnalysis": true
+    },
+    "public/downloads/allsorted-crm-module-v1.5.zip.sha256": {
+      "filePath": "public/downloads/allsorted-crm-module-v1.5.zip.sha256",
+      "contentHash": "32e582429390b76dc2c1d4c87f28a1bd40641f1451c0cbfa0b9a6bbde719078c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "public/downloads/joes-linkedin-kit-v1.0.zip.sha256": {
+      "filePath": "public/downloads/joes-linkedin-kit-v1.0.zip.sha256",
+      "contentHash": "b88ba20c8f7653fe4134f19b77f2900b1e6a64d570f13adf1578b01fd6c6b1e6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "public/downloads/joes-salesman-v1.0.zip.sha256": {
+      "filePath": "public/downloads/joes-salesman-v1.0.zip.sha256",
+      "contentHash": "4bd991aba6288f91429cf57cbba8ebd1d2d963a1889bf9e89c61dcab13d4d8ac",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
       "hasStructuralAnalysis": false
     },
     "public/downloads/maccleaner-installer.sh": {
@@ -184,6 +614,156 @@
       "totalLines": 36,
       "hasStructuralAnalysis": true
     },
+    "public/events/joechella-big-one/bali-bloom/balibloom3_arronshoots_012.webp": {
+      "filePath": "public/events/joechella-big-one/bali-bloom/balibloom3_arronshoots_012.webp",
+      "contentHash": "70eec70602b435f703c10b13394cce23cd1730605ec8477554c90e4aa433fed7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 859,
+      "hasStructuralAnalysis": false
+    },
+    "public/events/joechella-big-one/bali-bloom/balibloom3_arronshoots_018.webp": {
+      "filePath": "public/events/joechella-big-one/bali-bloom/balibloom3_arronshoots_018.webp",
+      "contentHash": "e1f0833bd60f7fdc5a9bc1ec3b39845d53a48bb8fae1725b5720237c1b3b055c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 548,
+      "hasStructuralAnalysis": false
+    },
+    "public/events/joechella-big-one/bali-bloom/balibloom3_arronshoots_041.webp": {
+      "filePath": "public/events/joechella-big-one/bali-bloom/balibloom3_arronshoots_041.webp",
+      "contentHash": "1fd5455d692b518dc5cba1ef75db0dbfea83e021e6a06f3266eb63f5995e4a27",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 356,
+      "hasStructuralAnalysis": false
+    },
+    "public/events/joechella-big-one/bali-bloom/balibloom3_arronshoots_061.webp": {
+      "filePath": "public/events/joechella-big-one/bali-bloom/balibloom3_arronshoots_061.webp",
+      "contentHash": "0a5102a49563e02d2e7a297605235fc6420c7e7ea6a38625ab68f4ffed3614f0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 796,
+      "hasStructuralAnalysis": false
+    },
+    "public/events/joechella-big-one/bali-bloom/balibloom3_arronshoots_088.webp": {
+      "filePath": "public/events/joechella-big-one/bali-bloom/balibloom3_arronshoots_088.webp",
+      "contentHash": "5cba4eef365605135aace70ceee336d76a4933ee79463da5071d310b9fbb5621",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 513,
+      "hasStructuralAnalysis": false
+    },
+    "public/events/joechella-big-one/bali-bloom/balibloom3_arronshoots_150.webp": {
+      "filePath": "public/events/joechella-big-one/bali-bloom/balibloom3_arronshoots_150.webp",
+      "contentHash": "d7e8e67e6d16e88100d4cac486a9d32876d33e5d80846f402ec3104ec1c2b120",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 273,
+      "hasStructuralAnalysis": false
+    },
+    "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_LIGHTSART_-59.webp": {
+      "filePath": "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_LIGHTSART_-59.webp",
+      "contentHash": "48da9e1aa9ebe5c46f98dddc73517e9b07ac716872f1d42c81264e8d8029c5ed",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 754,
+      "hasStructuralAnalysis": false
+    },
+    "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_slavicakostovski_-6780.webp": {
+      "filePath": "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_slavicakostovski_-6780.webp",
+      "contentHash": "a9a6e462df336b5a21814b7fec8f3d9bd3bab817ebc30e2af0f5a5446cdb1478",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 435,
+      "hasStructuralAnalysis": false
+    },
+    "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_yurygoryanoy_IMG_3876.webp": {
+      "filePath": "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_yurygoryanoy_IMG_3876.webp",
+      "contentHash": "e68e66fb24d95262f3cd765ee436b616dc6ccd1155604e2ce7b455da166f4b8a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 825,
+      "hasStructuralAnalysis": false
+    },
+    "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_yurygoryanoy_IMG_4552.webp": {
+      "filePath": "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_yurygoryanoy_IMG_4552.webp",
+      "contentHash": "1c88e284f41978616fa306c55b3ee09ede5f6f7970c628f9607f41f0baf62c84",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 391,
+      "hasStructuralAnalysis": false
+    },
+    "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_yurygoryanoy_IMG_5784.webp": {
+      "filePath": "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_yurygoryanoy_IMG_5784.webp",
+      "contentHash": "7491870dfbcd2bf4bff097f7fb948862357d4f95466d159738facc7bc62ede41",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1114,
+      "hasStructuralAnalysis": false
+    },
+    "public/events/joechella-big-one/hot-air-balloon-card.webp": {
+      "filePath": "public/events/joechella-big-one/hot-air-balloon-card.webp",
+      "contentHash": "0e82e8fe932301db65e789c5f05b32c1e8231e1208fc7c878f2d0419359eae40",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 456,
+      "hasStructuralAnalysis": false
+    },
+    "public/events/joechella-big-one/jazzy-o.webp": {
+      "filePath": "public/events/joechella-big-one/jazzy-o.webp",
+      "contentHash": "2e5168c5484d38f371c6d328d03b245ef1f70f82e9099705cbe877ab64a2b4f9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 92,
+      "hasStructuralAnalysis": false
+    },
+    "public/events/joechella-big-one/pool-sunny-card.webp": {
+      "filePath": "public/events/joechella-big-one/pool-sunny-card.webp",
+      "contentHash": "327b9bb1b9fa7e2462e3a2fb79a9c9ed0d6475eb9aeacec22a2a4815550ffa32",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 315,
+      "hasStructuralAnalysis": false
+    },
+    "public/giveaways/cross-cli-compatibility-routing-prompt.md": {
+      "filePath": "public/giveaways/cross-cli-compatibility-routing-prompt.md",
+      "contentHash": "1cf3855701ade5bbcd64fdf7b54c55b1399e13932d3f43671a9cdd959e751b78",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 218,
+      "hasStructuralAnalysis": true
+    },
     "public/hated-task-prompts.html": {
       "filePath": "public/hated-task-prompts.html",
       "contentHash": "bb1b8515349466f4099ce45868eac94645bb90ba99b62885a3000cc4db20e81e",
@@ -193,6 +773,196 @@
       "exports": [],
       "totalLines": 372,
       "hasStructuralAnalysis": false
+    },
+    "public/hated-task-prompts.html.kg.json": {
+      "filePath": "public/hated-task-prompts.html.kg.json",
+      "contentHash": "24a20ca4af34d67fcfa8669cb8cfa297e42ef011018e55d60eb78a80878f1cef",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": true
+    },
+    "public/images/events/make-ai-sound-exactly-like-you-joe.webp": {
+      "filePath": "public/images/events/make-ai-sound-exactly-like-you-joe.webp",
+      "contentHash": "64c1056d65d217f290beb879f387e031bc2f13423b26569d2e2b59c192201044",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 200,
+      "hasStructuralAnalysis": false
+    },
+    "public/images/events/voice-class/face-beata-fuller.webp": {
+      "filePath": "public/images/events/voice-class/face-beata-fuller.webp",
+      "contentHash": "a4c6097709d2dcbe7e341d15a5b8d26e6661502c2265d539b7cb8d1eb1554756",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 36,
+      "hasStructuralAnalysis": false
+    },
+    "public/images/events/voice-class/face-nichole-knight.webp": {
+      "filePath": "public/images/events/voice-class/face-nichole-knight.webp",
+      "contentHash": "012213f5411c251b22dffbb43c1e6477ab2e5e24150bdc1e1400cad9e985bc35",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 21,
+      "hasStructuralAnalysis": false
+    },
+    "public/images/events/voice-class/face-sheree-murray.webp": {
+      "filePath": "public/images/events/voice-class/face-sheree-murray.webp",
+      "contentHash": "0d91b4de7998ee66bf3ec267df42191f063c243d134b02f1fd42aec1533c560b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 15,
+      "hasStructuralAnalysis": false
+    },
+    "public/images/events/voice-class/face-tiyana-jovic.webp": {
+      "filePath": "public/images/events/voice-class/face-tiyana-jovic.webp",
+      "contentHash": "1be8164ff1b771882ac1ac9964c78d81865ed0e5a2239ebab841ccac43c5ee91",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 9,
+      "hasStructuralAnalysis": false
+    },
+    "public/images/events/voice-class/face-veronica-kaulinis.webp": {
+      "filePath": "public/images/events/voice-class/face-veronica-kaulinis.webp",
+      "contentHash": "5c405b3f356afd18cbfca3844ed512a382b51b2f5b4a7ad45d42ca14579d8750",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 27,
+      "hasStructuralAnalysis": false
+    },
+    "public/images/participants/beata-fuller.webp": {
+      "filePath": "public/images/participants/beata-fuller.webp",
+      "contentHash": "1f1a7a68153cb0012f3e89551c9856f7725b9e6cf729d5798055c21435909c57",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 165,
+      "hasStructuralAnalysis": false
+    },
+    "public/images/participants/david-cook.webp": {
+      "filePath": "public/images/participants/david-cook.webp",
+      "contentHash": "f356366615c2b80fa70829d999b136cd9b294f765b1afc8f7737b7bf4dc3496f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 135,
+      "hasStructuralAnalysis": false
+    },
+    "public/images/participants/gianluca-balducci.webp": {
+      "filePath": "public/images/participants/gianluca-balducci.webp",
+      "contentHash": "2aa78e2c32dc31b48c7e8b5a9cf54023b8acde3a00103b8fe895e751fcd5ee80",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 184,
+      "hasStructuralAnalysis": false
+    },
+    "public/images/participants/jessica-saunders.webp": {
+      "filePath": "public/images/participants/jessica-saunders.webp",
+      "contentHash": "271990e8002e765d05311cace2088a54e411e8f249f4cb1951dd32a7f6b8ab4e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 54,
+      "hasStructuralAnalysis": false
+    },
+    "public/images/participants/jonathan-marshall.webp": {
+      "filePath": "public/images/participants/jonathan-marshall.webp",
+      "contentHash": "1bb8068c01d3b0d097c7726373cd17d4b5db17fa3e6d6013d5c441791443903a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 280,
+      "hasStructuralAnalysis": false
+    },
+    "public/images/participants/naomi-galinski.webp": {
+      "filePath": "public/images/participants/naomi-galinski.webp",
+      "contentHash": "046cb1692f3f89c00eb3cc80f27cb64159052a45d3a1629de7d05725999888d9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 262,
+      "hasStructuralAnalysis": false
+    },
+    "public/images/participants/racheli-avruch.webp": {
+      "filePath": "public/images/participants/racheli-avruch.webp",
+      "contentHash": "12426bf77c162a184ee2427cca063a851d3d82e7eafa312d4805a172fbc15729",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 641,
+      "hasStructuralAnalysis": false
+    },
+    "public/images/participants/sofia-konstantinidou.webp": {
+      "filePath": "public/images/participants/sofia-konstantinidou.webp",
+      "contentHash": "c3e91ee518441e1cd7972cf732ac3e67684b085ef9aa7c9bbf3de81ddc9047d6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 210,
+      "hasStructuralAnalysis": false
+    },
+    "public/images/participants/vonetta-taylor.webp": {
+      "filePath": "public/images/participants/vonetta-taylor.webp",
+      "contentHash": "be50ff98a01c8506ece4e985cff39ac78197411944c90770e5df9f9f2c6912e3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 141,
+      "hasStructuralAnalysis": false
+    },
+    "public/images/participants/wesley-jones.webp": {
+      "filePath": "public/images/participants/wesley-jones.webp",
+      "contentHash": "c8c20dade471c63b24b999d324366549ca1122a9520568d51a28983a9d5863f2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 323,
+      "hasStructuralAnalysis": false
+    },
+    "public/joe-che-claude.md": {
+      "filePath": "public/joe-che-claude.md",
+      "contentHash": "65ce4e7987205be02ed1848c60f29b67e9ff208797cb71d2fbd9e7deefb8424a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 118,
+      "hasStructuralAnalysis": true
+    },
+    "public/Lead-Machine-Quick-Start.pdf.kg.json": {
+      "filePath": "public/Lead-Machine-Quick-Start.pdf.kg.json",
+      "contentHash": "eb665786e3a1adac23c4434c99090aa72d425507ea5bb4092794dbbcd41761b1",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": true
     },
     "public/lead-magnet.html": {
       "filePath": "public/lead-magnet.html",
@@ -204,6 +974,26 @@
       "totalLines": 818,
       "hasStructuralAnalysis": false
     },
+    "public/lead-magnet.html.kg.json": {
+      "filePath": "public/lead-magnet.html.kg.json",
+      "contentHash": "06fcb164767ab3f82b9d4f849dd0b98b8e017d9bab3cbb307d52713efad50bae",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": true
+    },
+    "public/llms.txt": {
+      "filePath": "public/llms.txt",
+      "contentHash": "76c58ac2e99d0381d6e0f6b393debc05431476eeaa2625b8b5b3f16d01dbc352",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 49,
+      "hasStructuralAnalysis": false
+    },
     "public/mhq-consent.js": {
       "filePath": "public/mhq-consent.js",
       "contentHash": "690d6dbea62986688db0d76ca56ab47bcd528ff98e4987b33624b6d517444c2b",
@@ -212,6 +1002,36 @@
       "imports": [],
       "exports": [],
       "totalLines": 161,
+      "hasStructuralAnalysis": true
+    },
+    "public/posture-coach-prompt.txt": {
+      "filePath": "public/posture-coach-prompt.txt",
+      "contentHash": "8561cfca3428d22b6af409256ca78711e85aafc98965185dc7f7ac5d00bf469f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 28,
+      "hasStructuralAnalysis": false
+    },
+    "public/unlearning-success.pdf.kg.json": {
+      "filePath": "public/unlearning-success.pdf.kg.json",
+      "contentHash": "236a582a4cd3648c6e3b92bb83f02fd10bbd5ce9f40bfceac5694de0107222b1",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": true
+    },
+    "repo-access.v1.json": {
+      "filePath": "repo-access.v1.json",
+      "contentHash": "033c62f7eb01f80c11971d6ce73ff20a49f49ac6537153ded2edc5cfdbc3f7e8",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 10,
       "hasStructuralAnalysis": true
     },
     "scripts/abandoned-checkout-control.mjs": {
@@ -11852,6 +12672,33 @@
       "totalLines": 128,
       "hasStructuralAnalysis": true
     },
+    "src/components/events/DinnerPhotoCarousel.tsx": {
+      "filePath": "src/components/events/DinnerPhotoCarousel.tsx",
+      "contentHash": "8bc3b82d75987480e37e758a881733fcbd3b3021c701938b7853a5ef9bcf43bf",
+      "functions": [
+        {
+          "name": "DinnerPhotoCarousel",
+          "params": [],
+          "exported": true,
+          "lineCount": 53
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "useRef",
+            "useState"
+          ]
+        }
+      ],
+      "exports": [
+        "DinnerPhotoCarousel"
+      ],
+      "totalLines": 65,
+      "hasStructuralAnalysis": true
+    },
     "src/components/events/EventMediaVideo.tsx": {
       "filePath": "src/components/events/EventMediaVideo.tsx",
       "contentHash": "e08b940ad79efd5e281eb4a0236613ea9551617e792c24741a00e022166a9887",
@@ -11875,7 +12722,7 @@
     },
     "src/components/events/EventPageView.tsx": {
       "filePath": "src/components/events/EventPageView.tsx",
-      "contentHash": "f6b4edc66edb89465492c435fc344d2a77841abc67d22e9f33b692564f4a6174",
+      "contentHash": "2e9d58f0cf232711cd462630e513fc3debb6ba9324b13c4467bb970b9c98158d",
       "functions": [
         {
           "name": "sectionTitleClass",
@@ -12014,7 +12861,7 @@
             "{\n  event,\n  promo,\n  publishableKey,\n  initialPromoCode,\n}"
           ],
           "exported": true,
-          "lineCount": 222
+          "lineCount": 228
         }
       ],
       "classes": [],
@@ -12124,17 +12971,23 @@
           "specifiers": [
             "VenueGallery"
           ]
+        },
+        {
+          "source": "@/components/events/voice-studio/VoiceStudioPage",
+          "specifiers": [
+            "VoiceStudioPage"
+          ]
         }
       ],
       "exports": [
         "EventPageView"
       ],
-      "totalLines": 718,
+      "totalLines": 725,
       "hasStructuralAnalysis": true
     },
     "src/components/events/EventRegistrationSection.tsx": {
       "filePath": "src/components/events/EventRegistrationSection.tsx",
-      "contentHash": "f39a7a5acd29bba6ce66f49be2b96cb59f62b155bb0db316036097326498d7a5",
+      "contentHash": "e3c1c07ba9f748893747a0d8663dfa9c8ac68ea43fd7bccd6fedaf6db05eec18",
       "functions": [
         {
           "name": "useAnimatedNumber",
@@ -12152,7 +13005,7 @@
             "{\n  event,\n  publishableKey,\n  initialPromoCode,\n  initialPromoAmount,\n  initialPromoMessage,\n}"
           ],
           "exported": true,
-          "lineCount": 984
+          "lineCount": 987
         }
       ],
       "classes": [],
@@ -12239,7 +13092,7 @@
       "exports": [
         "EventRegistrationSection"
       ],
-      "totalLines": 1096,
+      "totalLines": 1111,
       "hasStructuralAnalysis": true
     },
     "src/components/events/HeroVideo.tsx": {
@@ -12576,6 +13429,160 @@
         "ScrollToRegisterButton"
       ],
       "totalLines": 28,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/events/voice-studio/VoiceStudioPage.tsx": {
+      "filePath": "src/components/events/voice-studio/VoiceStudioPage.tsx",
+      "contentHash": "db113058def53df045c2af18372eb5478e8d93219654d3490a9693a50095f84a",
+      "functions": [
+        {
+          "name": "drawPrint",
+          "params": [
+            "ctx",
+            "S",
+            "cx",
+            "cy",
+            "v",
+            "time"
+          ],
+          "exported": false,
+          "lineCount": 40
+        },
+        {
+          "name": "usePrefersReducedMotion",
+          "params": [],
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "VoicePrint",
+          "params": [
+            "{ size, voice, className }"
+          ],
+          "exported": false,
+          "lineCount": 31
+        },
+        {
+          "name": "Waves",
+          "params": [],
+          "exported": false,
+          "lineCount": 77
+        },
+        {
+          "name": "TypedHeadline",
+          "params": [
+            "{ text }"
+          ],
+          "exported": false,
+          "lineCount": 23
+        },
+        {
+          "name": "Compare",
+          "params": [
+            "{ generic, voice }"
+          ],
+          "exported": false,
+          "lineCount": 52
+        },
+        {
+          "name": "sampleReply",
+          "params": [
+            "{ casual, direct, short }"
+          ],
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "VoiceTuner",
+          "params": [
+            "{ tune, setTune }"
+          ],
+          "exported": false,
+          "lineCount": 32
+        },
+        {
+          "name": "TestimonialCard",
+          "params": [
+            "{ t, i }"
+          ],
+          "exported": false,
+          "lineCount": 12
+        },
+        {
+          "name": "CountUpKicker",
+          "params": [
+            "{ text }"
+          ],
+          "exported": false,
+          "lineCount": 36
+        },
+        {
+          "name": "useLocalTime",
+          "params": [
+            "startIso",
+            "endIso"
+          ],
+          "exported": false,
+          "lineCount": 21
+        },
+        {
+          "name": "zoneLine",
+          "params": [
+            "startIso",
+            "tz"
+          ],
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "VoiceStudioPage",
+          "params": [
+            "{\n  event,\n  registrationEvent,\n  publishableKey,\n}"
+          ],
+          "exported": true,
+          "lineCount": 219
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "useEffect",
+            "useRef",
+            "useState"
+          ]
+        },
+        {
+          "source": "next/font/google",
+          "specifiers": [
+            "Fraunces",
+            "Inter"
+          ]
+        },
+        {
+          "source": "@/lib/events",
+          "specifiers": [
+            "EventDefinition"
+          ]
+        },
+        {
+          "source": "@/components/events/EventRegistrationSection",
+          "specifiers": [
+            "EventRegistrationSection"
+          ]
+        },
+        {
+          "source": "@/components/events/EventRegistrationSection",
+          "specifiers": [
+            "EventRegistrationData"
+          ]
+        }
+      ],
+      "exports": [
+        "VoiceStudioPage"
+      ],
+      "totalLines": 794,
       "hasStructuralAnalysis": true
     },
     "src/components/events/WaitlistJoinForm.tsx": {
@@ -16298,7 +17305,7 @@
     },
     "src/lib/event-intake.ts": {
       "filePath": "src/lib/event-intake.ts",
-      "contentHash": "5bf94798ac8d9152f808e70aa3a86f266d315108e6daec4d689b7345eba18e1d",
+      "contentHash": "5dd7b85029d8075ca719902b93f23f6b725aa0d0e881504b04c525d439dcc215",
       "functions": [
         {
           "name": "countPhoneDigits",
@@ -16744,7 +17751,7 @@
     },
     "src/lib/events.tsx": {
       "filePath": "src/lib/events.tsx",
-      "contentHash": "c371e8f6b79347e71b4a9704e6a24a9d2fa98f833f436a5ba7c3c0dbb37c7ab8",
+      "contentHash": "89f9e5a41a14cd6ad0f8bafee062ce77ac13e38fcc4bc6de2a67f135a1886250",
       "functions": [
         {
           "name": "getDiscountedPrice",
@@ -16836,6 +17843,12 @@
           "specifiers": [
             "ReactNode"
           ]
+        },
+        {
+          "source": "@/components/events/DinnerPhotoCarousel",
+          "specifiers": [
+            "DinnerPhotoCarousel"
+          ]
         }
       ],
       "exports": [
@@ -16849,7 +17862,7 @@
         "getLiveEvents",
         "getUpcomingLiveEvents"
       ],
-      "totalLines": 2058,
+      "totalLines": 2270,
       "hasStructuralAnalysis": true
     },
     "src/lib/free-ai-tool-email.ts": {
@@ -19332,6 +20345,206 @@
         "ToolPageTemplate"
       ],
       "totalLines": 83,
+      "hasStructuralAnalysis": true
+    },
+    "supabase/migrations/001_event_registrations.sql": {
+      "filePath": "supabase/migrations/001_event_registrations.sql",
+      "contentHash": "d16e1159bd0eb9ae7a34db635787ada080b97182731a3fd366021cea5059978d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 36,
+      "hasStructuralAnalysis": true
+    },
+    "supabase/migrations/002_unique_email_constraints.sql": {
+      "filePath": "supabase/migrations/002_unique_email_constraints.sql",
+      "contentHash": "cde51eac6647a00f977797ba36480132109b544ddb20f5243940c1f82115b45d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 11,
+      "hasStructuralAnalysis": true
+    },
+    "supabase/migrations/003_rate_limit_and_cron_locks.sql": {
+      "filePath": "supabase/migrations/003_rate_limit_and_cron_locks.sql",
+      "contentHash": "224386eed42ed7cd42d56b0feb4e5fd881e950633528b3308bfd5333a50e8e32",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 21,
+      "hasStructuralAnalysis": true
+    },
+    "supabase/migrations/004_abandoned_checkout_followups.sql": {
+      "filePath": "supabase/migrations/004_abandoned_checkout_followups.sql",
+      "contentHash": "e40d9cf4ada05ded3e149363f53491ad6bfc9b6f6288dd935afe8b5c46bc27e7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 54,
+      "hasStructuralAnalysis": true
+    },
+    "supabase/migrations/005_abandoned_checkout_live_claims.sql": {
+      "filePath": "supabase/migrations/005_abandoned_checkout_live_claims.sql",
+      "contentHash": "2c94a6d79a79e92bfd334403304b8b1fcd8d34a3ae452636c019cd5db334611a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 69,
+      "hasStructuralAnalysis": true
+    },
+    "supabase/migrations/006_abandoned_checkout_t12h_seed.sql": {
+      "filePath": "supabase/migrations/006_abandoned_checkout_t12h_seed.sql",
+      "contentHash": "2ccdbd863d9a387f0fc306415548e1fff314600137a5ec02aedebbf475e1ce93",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 8,
+      "hasStructuralAnalysis": true
+    },
+    "supabase/migrations/007_ai_agent_income_subscriptions.sql": {
+      "filePath": "supabase/migrations/007_ai_agent_income_subscriptions.sql",
+      "contentHash": "028094237a04a82b7f1e89a58506735163032ce781786455bf9df8807081a5c8",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 68,
+      "hasStructuralAnalysis": true
+    },
+    "supabase/migrations/008_leads_and_lead_magnet_signups.sql": {
+      "filePath": "supabase/migrations/008_leads_and_lead_magnet_signups.sql",
+      "contentHash": "0bc2296ef6ceb0421f45ed1284d562524d68e2b11ffa42d85a162cba1dd5d7ec",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 68,
+      "hasStructuralAnalysis": true
+    },
+    "supabase/migrations/009_event_registration_acquisition_ref.sql": {
+      "filePath": "supabase/migrations/009_event_registration_acquisition_ref.sql",
+      "contentHash": "aa8a7673e0a7da7c8e2bada5ab731b18ec34e11ea9085aab5bc9983da8d2b461",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 3,
+      "hasStructuralAnalysis": true
+    },
+    "supabase/migrations/010_email_suppressions.sql": {
+      "filePath": "supabase/migrations/010_email_suppressions.sql",
+      "contentHash": "11ff338bde9787a7895cad2810c5193008741f9c2c119e5ff8b97a8792b4e5f9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 27,
+      "hasStructuralAnalysis": true
+    },
+    "supabase/migrations/011_event_registration_intake.sql": {
+      "filePath": "supabase/migrations/011_event_registration_intake.sql",
+      "contentHash": "be378c3e1a8162ba1ef4d49dd88f6244ca108617d949c9124fd9dc05c9b14939",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 35,
+      "hasStructuralAnalysis": true
+    },
+    "supabase/migrations/012_fix_intake_upsert_conflict_target.sql": {
+      "filePath": "supabase/migrations/012_fix_intake_upsert_conflict_target.sql",
+      "contentHash": "e9c9d224c76a7a3cd1d26638463f3aac751c69f0a9fe7d0afa905a2201e58a95",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 15,
+      "hasStructuralAnalysis": true
+    },
+    "supabase/migrations/013_event_email_send_log.sql": {
+      "filePath": "supabase/migrations/013_event_email_send_log.sql",
+      "contentHash": "7bef8161a6fa543d18f2c92c31e0ca2cc503536fb394ef72be2e51d3d49b98d8",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 32,
+      "hasStructuralAnalysis": true
+    },
+    "supabase/migrations/014_event_capacity_reservations.sql": {
+      "filePath": "supabase/migrations/014_event_capacity_reservations.sql",
+      "contentHash": "8a79305baef8ce61cca86b7f966d4aa44995dd1b492b300201d7f1a19df5a495",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 312,
+      "hasStructuralAnalysis": true
+    },
+    "supabase/migrations/015_event_registration_ai_level.sql": {
+      "filePath": "supabase/migrations/015_event_registration_ai_level.sql",
+      "contentHash": "1838bb9cecded6e6ce3a8c76f523c4eddb242de6a371388c5fe6ea3660fa13e6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 12,
+      "hasStructuralAnalysis": true
+    },
+    "supabase/migrations/016_event_registration_ai_grades_and_attendance.sql": {
+      "filePath": "supabase/migrations/016_event_registration_ai_grades_and_attendance.sql",
+      "contentHash": "d0cd4f3fcfb1f51189d9f4b14b5a472912d4007c6f2e48e20cd1ef2ee9751a50",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 56,
+      "hasStructuralAnalysis": true
+    },
+    "supabase/migrations/017_event_registration_intake_rls.sql": {
+      "filePath": "supabase/migrations/017_event_registration_intake_rls.sql",
+      "contentHash": "1b34c2e2bfc1bf078dd1defd443a3ecae8d26b48c48c8f559ec47e16f36c425a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 12,
+      "hasStructuralAnalysis": true
+    },
+    "supabase/migrations/018_giveaway_followup_sends.sql": {
+      "filePath": "supabase/migrations/018_giveaway_followup_sends.sql",
+      "contentHash": "18a75e364a9b397e02a1f96e88affb81c2317e5dcf62570b5471e89735ded94f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 34,
+      "hasStructuralAnalysis": true
+    },
+    "supabase/migrations/019_giveaway_followup_day14_day30.sql": {
+      "filePath": "supabase/migrations/019_giveaway_followup_day14_day30.sql",
+      "contentHash": "d688ffb2a1755faef23636946d2fbb91fa698e535b54db06741a3bb1088d4e29",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": true
+    },
+    "supabase/migrations/020_giveaway_followup_sales_track.sql": {
+      "filePath": "supabase/migrations/020_giveaway_followup_sales_track.sql",
+      "contentHash": "c5e91104b2a30657576e5d3a01cc11495e6315c79ea7bf82363a412492a0c873",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 14,
       "hasStructuralAnalysis": true
     },
     "tailwind.config.ts": {
@@ -21950,6 +23163,26 @@
       ],
       "exports": [],
       "totalLines": 9,
+      "hasStructuralAnalysis": true
+    },
+    "tsconfig.json": {
+      "filePath": "tsconfig.json",
+      "contentHash": "55134881a23efd2a1f9266d2d0752731ff9c40d0e867136cd8863ea679560a09",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 42,
+      "hasStructuralAnalysis": true
+    },
+    "vercel.json": {
+      "filePath": "vercel.json",
+      "contentHash": "7eb65ef586f8be9d47fd557b4813d81105d024f0f744073eb3a81d6d6931cd52",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 48,
       "hasStructuralAnalysis": true
     }
   }

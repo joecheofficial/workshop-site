@@ -425,6 +425,24 @@
       "fileCategory": "code"
     },
     {
+      "path": "public/events/joechella-big-one/hot-air-balloon-card.webp",
+      "language": "webp",
+      "sizeLines": 455,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/events/joechella-big-one/jazzy-o.webp",
+      "language": "webp",
+      "sizeLines": 91,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/events/joechella-big-one/pool-sunny-card.webp",
+      "language": "webp",
+      "sizeLines": 314,
+      "fileCategory": "code"
+    },
+    {
       "path": "public/giveaways/cross-cli-compatibility-routing-prompt.md",
       "language": "markdown",
       "sizeLines": 217,
@@ -441,6 +459,42 @@
       "language": "json",
       "sizeLines": 16,
       "fileCategory": "config"
+    },
+    {
+      "path": "public/images/events/make-ai-sound-exactly-like-you-joe.webp",
+      "language": "webp",
+      "sizeLines": 199,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/images/events/voice-class/face-beata-fuller.webp",
+      "language": "webp",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/images/events/voice-class/face-nichole-knight.webp",
+      "language": "webp",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/images/events/voice-class/face-sheree-murray.webp",
+      "language": "webp",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/images/events/voice-class/face-tiyana-jovic.webp",
+      "language": "webp",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/images/events/voice-class/face-veronica-kaulinis.webp",
+      "language": "webp",
+      "sizeLines": 26,
+      "fileCategory": "code"
     },
     {
       "path": "public/images/participants/beata-fuller.webp",
@@ -2327,6 +2381,12 @@
       "fileCategory": "code"
     },
     {
+      "path": "src/components/events/DinnerPhotoCarousel.tsx",
+      "language": "typescript",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
       "path": "src/components/events/EventMediaVideo.tsx",
       "language": "typescript",
       "sizeLines": 62,
@@ -2335,13 +2395,13 @@
     {
       "path": "src/components/events/EventPageView.tsx",
       "language": "typescript",
-      "sizeLines": 717,
+      "sizeLines": 724,
       "fileCategory": "code"
     },
     {
       "path": "src/components/events/EventRegistrationSection.tsx",
       "language": "typescript",
-      "sizeLines": 1095,
+      "sizeLines": 1110,
       "fileCategory": "code"
     },
     {
@@ -2390,6 +2450,12 @@
       "path": "src/components/events/ScrollToRegisterButton.tsx",
       "language": "typescript",
       "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/events/voice-studio/VoiceStudioPage.tsx",
+      "language": "typescript",
+      "sizeLines": 793,
       "fileCategory": "code"
     },
     {
@@ -2809,7 +2875,7 @@
     {
       "path": "src/lib/events.tsx",
       "language": "typescript",
-      "sizeLines": 2057,
+      "sizeLines": 2269,
       "fileCategory": "code"
     },
     {
@@ -3512,7 +3578,7 @@
   "fileCount": 581,
   "totalLines": 84355,
   "complexity": "complex",
-  "filteredByIgnore": 54,
+  "filteredByIgnore": 65,
   "importMap": {
     ".claude/settings.json": [],
     ".claude/skills/gitnexus/gitnexus-cli/SKILL.md": [],
@@ -3581,9 +3647,18 @@
     "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_yurygoryanoy_IMG_3876.webp": [],
     "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_yurygoryanoy_IMG_4552.webp": [],
     "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_yurygoryanoy_IMG_5784.webp": [],
+    "public/events/joechella-big-one/hot-air-balloon-card.webp": [],
+    "public/events/joechella-big-one/jazzy-o.webp": [],
+    "public/events/joechella-big-one/pool-sunny-card.webp": [],
     "public/giveaways/cross-cli-compatibility-routing-prompt.md": [],
     "public/hated-task-prompts.html": [],
     "public/hated-task-prompts.html.kg.json": [],
+    "public/images/events/make-ai-sound-exactly-like-you-joe.webp": [],
+    "public/images/events/voice-class/face-beata-fuller.webp": [],
+    "public/images/events/voice-class/face-nichole-knight.webp": [],
+    "public/images/events/voice-class/face-sheree-murray.webp": [],
+    "public/images/events/voice-class/face-tiyana-jovic.webp": [],
+    "public/images/events/voice-class/face-veronica-kaulinis.webp": [],
     "public/images/participants/beata-fuller.webp": [],
     "public/images/participants/david-cook.webp": [],
     "public/images/participants/gianluca-balducci.webp": [],
@@ -4544,6 +4619,7 @@
     "src/components/events/AskAnAiExpertQuoteStrip.tsx": [
       "src/components/events/ask-an-ai-expert-quotes.ts"
     ],
+    "src/components/events/DinnerPhotoCarousel.tsx": [],
     "src/components/events/EventMediaVideo.tsx": [],
     "src/components/events/EventPageView.tsx": [
       "src/components/events/AskAnAiExpertQuoteStrip.tsx",
@@ -4555,6 +4631,7 @@
       "src/components/events/joechella/ProgramTimeline.tsx",
       "src/components/events/joechella/VenueGallery.tsx",
       "src/components/events/ScrollToRegisterButton.tsx",
+      "src/components/events/voice-studio/VoiceStudioPage.tsx",
       "src/components/Reveal.tsx",
       "src/lib/calendar.ts",
       "src/lib/event-status.ts",
@@ -4592,6 +4669,10 @@
       "src/lib/events.tsx"
     ],
     "src/components/events/ScrollToRegisterButton.tsx": [],
+    "src/components/events/voice-studio/VoiceStudioPage.tsx": [
+      "src/components/events/EventRegistrationSection.tsx",
+      "src/lib/events.tsx"
+    ],
     "src/components/events/WaitlistJoinForm.tsx": [
       "src/lib/email-validation.ts",
       "src/lib/meta-pixel.ts"
@@ -4824,7 +4905,9 @@
       "src/lib/events.tsx"
     ],
     "src/lib/event-tokens.ts": [],
-    "src/lib/events.tsx": [],
+    "src/lib/events.tsx": [
+      "src/components/events/DinnerPhotoCarousel.tsx"
+    ],
     "src/lib/free-ai-tool-email.ts": [
       "src/lib/free-ai-tools.ts",
       "src/lib/utm.ts"
@@ -5190,6 +5273,6 @@
       "total": 29
     }
   },
-  "totalFiles": 581,
+  "totalFiles": 592,
   "estimatedComplexity": "very-large"
 }
