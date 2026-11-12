@@ -1889,7 +1889,7 @@ export const events: EventDefinition[] = [
       testimonials: [
         { name: 'Heather Brand', photo: '/images/events/voice-class/face-heather-brand.webp', quote: 'With each section he makes sure that nobody gets left behind.' },
         { name: 'Jasmine Oh', photo: '/images/events/voice-class/face-jasmine-oh.webp', quote: 'Now I can finally do those things myself.' },
-        { name: 'Leyolah Dekanic', photo: '/images/events/voice-class/face-leyolah-dekanic.webp', quote: 'It has become my fabulous assistant.' },
+        { name: 'Naomi Galinski', photo: '/images/events/voice-class/face-naomi-galinski.webp', quote: 'I am not a design person… Now I can build it directly with Claude Code.' },
         { name: 'Miia Nern', photo: '/images/events/voice-class/face-miia-nern.webp', quote: 'Saved me literally at least 20 to 25 hours a week.' },
         { name: 'Johanna Bieber', photo: '/images/events/voice-class/face-johanna-bieber.webp', quote: 'So many things that you would have needed a whole team for, you can do now on your own.' },
       ],
