@@ -272,9 +272,9 @@ type Tune = { casual: number; direct: number; short: number }
 // Simple rules, no AI: the sample reply rewrites itself as the sliders move.
 function sampleReply({ casual, direct, short }: Tune) {
   const hello = casual > 62 ? 'Hey Sarah!' : casual > 32 ? 'Hi Sarah,' : 'Dear Sarah,'
-  const point = direct > 55 ? 'The February cohort is the one for you.' : 'I think the February cohort could be a really good fit for you.'
-  const more = short > 55 ? '' : ' We start on the 8th, and you build your own systems with a small group.'
-  const ask = direct > 55 ? (casual > 62 ? 'Want me to save you a seat?' : 'Shall I reserve your seat?') : 'Let me know if you would like me to hold a place for you.'
+  const point = direct > 55 ? 'February is the one for you.' : 'I think February could be a great fit.'
+  const more = short > 55 ? '' : ' We start on the 8th.'
+  const ask = direct > 55 ? (casual > 62 ? 'Want a seat?' : 'Shall I save you a seat?') : 'Happy to hold a place if you like.'
   const bye = casual > 62 ? 'Joe' : 'Warm regards, Joe'
   return { hello, body: `${point}${more} ${ask}`, bye }
 }
@@ -308,22 +308,21 @@ function VoiceTuner({ tune, setTune }: { tune: Tune; setTune: (t: Tune) => void 
         <p>{r.body}</p>
         <p>{r.bye}</p>
       </div>
-      <div className="vs-drag">Drag the dots. The reply changes with you.</div>
     </div>
   )
 }
 
-type Testimonial = { name: string; location: string; quote: string }
+type Testimonial = { name: string; photo: string; quote: string }
 
 function TestimonialCard({ t, i }: { t: Testimonial; i: number }) {
   return (
     <figure className="vs-tcard vs-glass vs-reveal" style={{ transitionDelay: `${i * 0.12}s` }}>
-      <span className="vs-qmark" aria-hidden="true">&ldquo;</span>
-      <blockquote>{t.quote}</blockquote>
-      <figcaption>
-        <b>{t.name}</b>
-        <span>{t.location}</span>
-      </figcaption>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img className="vs-face" src={t.photo} alt={t.name} width={56} height={56} loading="lazy" />
+      <div>
+        <blockquote>&ldquo;{t.quote}&rdquo;</blockquote>
+        <figcaption>{t.name}</figcaption>
+      </div>
     </figure>
   )
 }
@@ -437,6 +436,7 @@ export default function VoiceStudioPage({
       intro: `${dateText} · ${timeText} ${zoneText} · Live on Zoom`,
       submitLabel: event.ctaLabel,
       hideAside: true,
+      boxNote: 'Only 100 seats in the live room.',
       phoneLabel: 'WhatsApp or phone number',
       phoneHelp: "WhatsApp if you have it, any mobile number works. Include your country code so I can send you a reminder.",
     },
@@ -490,10 +490,10 @@ export default function VoiceStudioPage({
 
       <section className="vs-sec">
         <div className="vs-wrap">
-          <div className="vs-kicker vs-reveal">You leave with</div>
           <h2 className="vs-h2 vs-reveal">
             {v.leaveWithTitle[0]} <em>{v.leaveWithTitle[1]}</em>
           </h2>
+          <p className="vs-tsub vs-swipe-only">Swipe for all 3 &rarr; Drag the dots to try it.</p>
           <div className="vs-cards">
             <div className="vs-card vs-glass vs-reveal">
               <div className="vs-vis vs-vis-tune">
@@ -553,7 +553,7 @@ export default function VoiceStudioPage({
           <h2 className="vs-h2 vs-reveal">
             {v.testimonialsTitle[0]} <em>{v.testimonialsTitle[1]}</em>
           </h2>
-          <p className="vs-tsub vs-reveal">Members of my AI Business Mastermind, in their own words.<span className="vs-swipe"> Swipe for more &rarr;</span></p>
+          <p className="vs-tsub vs-reveal">Members of my AI Business Mastermind, in their own words.</p>
           <div className="vs-tgrid">
             {v.testimonials.map((t, i) => (
               <TestimonialCard key={t.name} t={t} i={i} />
@@ -564,32 +564,22 @@ export default function VoiceStudioPage({
 
       <section className="vs-sec vs-reg-sec">
         <div className="vs-wrap vs-reg">
-          <div className="vs-reg-side">
-            <div className="vs-desk-only">
-              <div className="vs-kicker">Save your seat</div>
-              <h2 className="vs-h2">
-                {v.registerTitle[0]} <em>{v.registerTitle[1]}</em>
-              </h2>
-              <div className="vs-printbox">
-                <VoicePrint size={840} voice={{ warmth: 72, direct: 70, length: 45, humour: 40 }} className="vs-print" />
-              </div>
+          <div className="vs-reveal">
+            <div className="vs-kicker">Save your seat</div>
+            <h2 className="vs-h2">
+              {v.registerTitle[0]} <em>{v.registerTitle[1]}</em>
+            </h2>
+            <div className="vs-printbox">
+              <VoicePrint size={840} voice={{ warmth: 72, direct: 70, length: 45, humour: 40 }} className="vs-print" />
             </div>
-            <div className="vs-urgency">
-              {v.urgency.map((u) => (
-                <span key={u.title}>{u.title}</span>
+            <p className="vs-note">{v.registerIntro}</p>
+            <div className="vs-zones">
+              {ZONES.map(([name, tz]) => (
+                <span key={tz}>
+                  <b>{name}</b> {startIso ? zoneLine(startIso, tz) : ''}
+                </span>
               ))}
             </div>
-            <p className="vs-note">{v.urgency[0]?.body} {v.urgency[1]?.body}</p>
-            <details className="vs-zones-box">
-              <summary>Other time zones</summary>
-              <div className="vs-zones">
-                {ZONES.map(([name, tz]) => (
-                  <span key={tz}>
-                    <b>{name}</b> {startIso ? zoneLine(startIso, tz) : ''}
-                  </span>
-                ))}
-              </div>
-            </details>
           </div>
           <div className="vs-form">
             <EventRegistrationSection event={reg} publishableKey={publishableKey} />
@@ -687,7 +677,7 @@ const VS_CSS = `
 .vs-tune input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;margin-top:-10px;border-radius:50%;background:#fff;border:0;box-shadow:0 0 0 5px rgba(139,121,212,.45),0 4px 14px rgba(0,0,0,.4)}
 .vs-tune input[type=range]::-moz-range-thumb{width:26px;height:26px;border-radius:50%;background:#fff;border:0;box-shadow:0 0 0 5px rgba(139,121,212,.45)}
 .vs-tune input[type=range]:focus-visible{outline:2px solid var(--pink);outline-offset:4px;border-radius:8px}
-.vs-reply{margin-top:12px;background:var(--cream);color:#1a1526;border-radius:16px 16px 16px 4px;padding:12px 14px;font-size:14px;line-height:1.45;min-height:112px;transition:background .2s}
+.vs-reply{margin-top:12px;background:var(--cream);color:#1a1526;border-radius:16px 16px 16px 4px;padding:12px 14px;font-size:14px;line-height:1.45;min-height:92px;transition:background .2s}
 .vs-card .vs-reply p{margin:0 0 4px;color:#1a1526;font-size:inherit}
 .vs-card .vs-reply p:last-child{margin:0;color:#6b5f8a}
 .vs-drag{margin-top:8px;font-size:12px;color:var(--pink);text-align:center}
@@ -702,18 +692,16 @@ const VS_CSS = `
 .vs-midcta{margin-top:34px;text-align:center}
 .vs-tsub{color:var(--muted);margin:-6px 0 26px;font-size:15px}
 .vs-tgrid{display:grid;grid-template-columns:1fr;gap:14px}
-.vs-tcard{position:relative;margin:0;padding:24px 22px 20px;overflow:hidden;transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1),border-color .4s}
+.vs-tcard{position:relative;margin:0;padding:16px 18px;display:flex;gap:14px;align-items:center;overflow:hidden;transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
 .vs-tcard::before{content:"";position:absolute;inset:0 0 auto 0;height:2px;background:linear-gradient(90deg,transparent,var(--lilac),var(--pink),transparent);transform:translateX(-100%);transition:transform 1.4s ease .3s}
 .vs-tcard.vs-in::before{transform:translateX(100%)}
-.vs-qmark{position:absolute;top:-14px;right:14px;font-family:var(--serif);font-size:110px;line-height:1;color:var(--pink);opacity:.18}
-.vs-tcard blockquote{margin:0 0 14px;font-family:var(--serif);font-size:20px;line-height:1.4;color:#fff}
-.vs-tcard figcaption{display:flex;flex-direction:column;gap:2px;font-size:14px;color:var(--muted)}
-.vs-tcard figcaption b{color:var(--pink);font-weight:600;font-size:15px}
-.vs-swipe{display:none;color:var(--pink)}
+.vs-face{width:56px;height:56px;border-radius:50%;object-fit:cover;flex:none;border:2px solid rgba(231,169,216,.5)}
+.vs-tcard blockquote{margin:0 0 4px;font-family:var(--serif);font-size:18px;line-height:1.35;color:#fff}
+.vs-tcard figcaption{font-size:14px;color:var(--pink);font-weight:600}
 .vs-bignum{display:flex;flex-direction:column;margin-bottom:6px}
-.vs-bignum b{font-family:var(--serif);font-weight:800;font-size:56px;line-height:1;letter-spacing:-.02em;background:linear-gradient(120deg,#fff,var(--lilac) 55%,var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
-.vs-bignum span{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--lilac);margin-top:8px}
-@media (min-width:901px){.vs-tgrid{grid-template-columns:repeat(2,1fr)}.vs-tcard:first-child{grid-column:1/-1}.vs-tcard:first-child blockquote{font-size:26px}.vs-bignum b{font-size:72px}}
+.vs-bignum b{font-family:var(--serif);font-weight:800;font-size:34px;line-height:1;letter-spacing:-.02em;background:linear-gradient(120deg,#fff,var(--lilac) 55%,var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+.vs-bignum span{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--lilac);margin-top:4px}
+@media (min-width:901px){.vs-tgrid{grid-template-columns:repeat(2,1fr)}.vs-bignum b{font-size:40px}}
 .vs-urgency{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 10px}
 .vs-urgency span{padding:8px 14px;border-radius:999px;border:1px solid rgba(231,169,216,.35);background:rgba(231,169,216,.08);color:var(--pink);font-weight:600;font-size:14px}
 .vs-zones-box{margin-top:10px;font-size:14px;color:var(--muted)}
@@ -732,7 +720,7 @@ footer.footer-glow > div{gap:10px !important}
 .vs-reg{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;align-items:start}
 .vs-printbox{aspect-ratio:1;max-width:380px;margin:10px auto 0}
 .vs-print{width:100%;height:100%;display:block}
-.vs-note{font-size:15px;line-height:1.55;color:#d9d1ee;margin:4px 0 0}
+.vs-note{font-size:14px;color:var(--muted);margin:10px 0 18px}
 .vs-zones{display:grid;grid-template-columns:repeat(2,1fr);gap:6px 18px;font-size:13px;color:var(--muted)}
 .vs-zones b{color:#e9e2fb;font-weight:500}
 
@@ -768,8 +756,7 @@ footer.footer-glow > div{gap:10px !important}
   .vs-joe{max-width:230px;order:-1;margin-bottom:-24px}
   .vs-tag{display:none}
   .vs-cards,.vs-tgrid{grid-template-columns:1fr 1fr}
-  .vs-story,.vs-reg{grid-template-columns:1fr;gap:20px}
-  .vs-desk-only{display:none}
+  .vs-story,.vs-reg{grid-template-columns:1fr;gap:24px}
   .vs-printbox{max-width:240px}
 }
 @media (max-width:600px){
@@ -782,14 +769,18 @@ footer.footer-glow > div{gap:10px !important}
   .vs-when{gap:8px;margin-bottom:18px}
   .vs-chip{padding:7px 12px;font-size:13px}
   .vs-cards{grid-template-columns:1fr}
-  .vs-tune{width:90%;font-size:14px}
-  .vs-tune .row{grid-template-columns:1fr 1fr;gap:0;margin:2px 0 6px}
-  .vs-tune .row input{grid-column:1/-1;grid-row:2;height:40px}
-  .vs-reply{font-size:15px}
-  .vs-tgrid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:0 -24px;padding:0 24px 8px;scrollbar-width:none}
-  .vs-tgrid::-webkit-scrollbar{display:none}
-  .vs-tcard{flex:0 0 84%;scroll-snap-align:center}
-  .vs-swipe{display:inline}
+  .vs-cards{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:18px -24px 0;padding:0 24px 8px;scrollbar-width:none}
+  .vs-cards::-webkit-scrollbar{display:none}
+  .vs-card{flex:0 0 86%;scroll-snap-align:center;padding:18px}
+  .vs-swipe-only{display:block;color:var(--pink);margin:-4px 0 0}
+  .vs-vis-tune{padding:12px 0}
+  .vs-tune{width:90%;font-size:13px}
+  .vs-tune .row{grid-template-columns:1fr 1fr;gap:0;margin:0}
+  .vs-tune .row input{grid-column:1/-1;grid-row:2;height:30px}
+  .vs-reply{font-size:14px;min-height:0;margin-top:8px;padding:10px 12px}
+  .vs-card h3{font-size:21px}
+  .vs-card p{font-size:14px}
+  .vs-tgrid{grid-template-columns:1fr;gap:10px}
   .vs-urgency div{grid-template-columns:92px 1fr}
   .vs-pane{padding:26px 22px 34px}
   .vs-bio{grid-template-columns:1fr;justify-items:center;text-align:center;gap:18px;padding:26px 22px 24px}
