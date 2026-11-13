@@ -545,6 +545,7 @@ async function sendResendEmail(input: {
   attendeeEmail: string
   subject: string
   html: string
+  text?: string
   idempotencyKey?: string
   attachments?: ResendAttachment[]
   /**
@@ -571,6 +572,7 @@ async function sendResendEmail(input: {
       to: [input.attendeeEmail],
       subject: input.subject,
       html: input.html,
+      ...(input.text ? { text: input.text } : {}),
       ...(input.attachments?.length ? { attachments: input.attachments } : {}),
       ...(input.headers ? { headers: input.headers } : {}),
     }),
@@ -600,6 +602,41 @@ export function buildAskAnAiExpertWelcomeIdempotencyKey(email: string): string {
   return `ask-an-ai-expert-welcome/${email.trim().toLowerCase()}`
 }
 
+function escapeLetterHtml(value: string): string {
+  return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
+}
+
+/**
+ * Plain-letter confirmation (Illy 12-13 Nov 2026): Georgia, no logo, no images,
+ * no buttons, one text link, hidden preview line, plus a plain-text part. This
+ * format landed in Gmail Primary where the branded template went to spam.
+ */
+export function buildLetterConfirmation(
+  letter: { subject: string; preview: string; body: string },
+  attendeeName: string,
+  zoomLink?: string,
+): { html: string; text: string } {
+  const first = (attendeeName || '').trim().split(/\s+/)[0] || 'there'
+  const paragraphs = letter.body.replace(/\{first\}/g, first).split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean)
+  const linkStyle = 'color:#6f5cc4;font-weight:bold'
+  const htmlParts = paragraphs.map((p) => {
+    if (p === 'Join the class on Zoom' && zoomLink) {
+      return `<p style="margin:0 0 18px"><a href="${escapeLetterHtml(zoomLink)}" style="${linkStyle}">Join the class on Zoom</a></p>`
+    }
+    return `<p style="margin:0 0 18px">${p.split('\n').map(escapeLetterHtml).join('<br>')}</p>`
+  })
+  const textParts = paragraphs.map((p) =>
+    p === 'Join the class on Zoom' && zoomLink ? `Join the class on Zoom: ${zoomLink}` : p,
+  )
+  const html =
+    '<!doctype html><html><body style="margin:0;padding:0;background:#ffffff">' +
+    `<div style="display:none;max-height:0;overflow:hidden;opacity:0">${escapeLetterHtml(letter.preview)}</div>` +
+    '<div style="max-width:560px;margin:0 auto;padding:24px 20px;font-family:Georgia,\'Times New Roman\',serif;font-size:16px;line-height:1.6;color:#2a2536">' +
+    htmlParts.join('') +
+    '</div></body></html>'
+  return { html, text: textParts.join('\n\n') + '\n' }
+}
+
 export async function sendEventConfirmationEmail(input: {
   event: EventDefinition
   attendeeName: string
@@ -617,8 +654,14 @@ export async function sendEventConfirmationEmail(input: {
       now,
     })
 
-  const subject = `Your seat is reserved for ${input.event.title}`
-  const html = buildConfirmationEmailHtml(input.event, input.attendeeName, input.cancelToken, now)
+  const letter = input.event.emailConfig?.letterConfirmation
+  const letterParts = letter
+    ? buildLetterConfirmation(letter, input.attendeeName, input.event.zoomLink)
+    : null
+  const subject = letter ? letter.subject : `Your seat is reserved for ${input.event.title}`
+  const html = letterParts
+    ? letterParts.html
+    : buildConfirmationEmailHtml(input.event, input.attendeeName, input.cancelToken, now)
 
   const attachments = input.event.calendarEvent
     ? [
@@ -652,6 +695,7 @@ export async function sendEventConfirmationEmail(input: {
     attendeeEmail: input.attendeeEmail,
     subject,
     html,
+    ...(letterParts ? { text: letterParts.text } : {}),
     idempotencyKey: buildConfirmationIdempotencyKey(input.event.slug, input.attendeeEmail),
     attachments,
   })
