@@ -106,7 +106,8 @@ export async function inviteAttendeeToEvent(
     await calendar.events.patch({
       calendarId: CALENDAR_ID,
       eventId,
-      sendUpdates: 'all',
+      // Silent when our confirmation email already carries the invite card.
+      sendUpdates: event.calendarEvent?.silentGoogleInvite ? 'none' : 'all',
       requestBody: {
         ...guestPrivacy,
         attendees: [...attendees, { email, displayName: attendeeName || undefined }],

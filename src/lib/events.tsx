@@ -262,6 +262,10 @@ export type EventDefinition = {
     startIso: string
     endIso: string
     googleCalendarEventId?: string
+    // Add registrants to the Google event WITHOUT Google's own invite email.
+    // Use when the confirmation email already carries the invite (.ics card),
+    // so people get one email, not two (Illy 13 Nov 2026).
+    silentGoogleInvite?: boolean
   }
   registrationClosesIso?: string
   capacity?: number
@@ -295,6 +299,15 @@ export type EventDefinition = {
     mapsUrl?: string
     skipSetupInstructions?: boolean
     signatureName?: string
+    // Plain-letter confirmation from Joe instead of the branded template
+    // (Illy 12 Nov 2026: free-class emails are short letters). Paragraphs are
+    // separated by a blank line. {first} = first name. A paragraph that is
+    // exactly 'Join the class on Zoom' becomes the Zoom link.
+    letterConfirmation?: {
+      subject: string
+      preview: string
+      body: string
+    }
   }
   sections: EventSection[]
   metadata?: Partial<Metadata>
@@ -1828,8 +1841,15 @@ export const events: EventDefinition[] = [
       // Joe's own 20:00-22:00 block on newyork1 primary, renamed for the class.
       // Pinned in code so registrants never fall through to the shared fallback.
       googleCalendarEventId: '4plcuisn2vfe4okeiufi81bgak',
+      silentGoogleInvite: true,
     },
     emailConfig: {
+      // Approved v4 copy, Illy 13 Nov 2026 ("looks good" after test sends).
+      letterConfirmation: {
+        subject: "You're in. Tuesday 1 Dec",
+        preview: 'Your seat for Make AI Sound Exactly Like You',
+        body: "Hi {first},\n\nYou're in for Tuesday 1 Dec. I'm really glad you're coming.\n\nI've sent you a Google Calendar invite with the Zoom link inside. Tap yes and it's in your calendar, at your own time.\n\nJoin the class on Zoom\n\nYou'll leave with an AI that writes the way you actually talk, your own voice print, and a social media post in your voice, ready to send.\n\nOne quick thing. Hit reply and tell me two things: what time you'll join, and what you want to write in your voice.\n\nJoe\n\nP.S. We build it together, step by step, from one setup prompt. If you get stuck, there's help right there in the room.",
+      },
       contactName: 'Joe Che',
       contactWhatsAppLink: 'https://wa.me/16462092333',
       contactWhatsAppDisplay: '+1 (646) 209-2333',
