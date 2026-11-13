@@ -104,7 +104,7 @@ function linaToken() {
   process.env.LINA_TELEGRAM_BOT_TOKEN ||= read('LINA_TELEGRAM_BOT_TOKEN')
   process.env.LINA_OWNER_CHAT_IDS ||= read('LINA_OWNER_CHAT_IDS')
 }
-// A failure that repeats every 15 minutes pings Illy at most once per 6 hours per kind.
+// A failure that repeats every 15 minutes is queued for the auto-fixer at most once per 6 hours per kind.
 const ALERT_STATE = path.join(homedir(), '.myos/logs/giveaway-followups-alerts.json')
 function alertDue(kind) {
   let state = {}
@@ -113,6 +113,17 @@ function alertDue(kind) {
   state[kind] = Date.now()
   try { mkdirSync(path.dirname(ALERT_STATE), { recursive: true }); writeFileSync(ALERT_STATE, JSON.stringify(state)) } catch {}
   return true
+}
+
+// Illy 2026-11-13: "If something is failed, then fix it. Don't send me notifications."
+// Breakage (failed sends, failed lookups, crashes) never goes to Lina. It is logged and
+// queued for the teammate auto-fixer (ops/employee-access/report-fix.sh), which fixes it
+// quietly. Lina is only for people who need a human reply (dm_human below).
+function reportFix(text) {
+  console.error(`auto-fix queued: ${text}`)
+  try {
+    execFileSync('/usr/bin/sudo', ['-n', `${WS}/ops/employee-access/report-fix.sh`, `workshop-site/scripts/giveaway-followups.mjs (cron giveaway-followups): ${text}`], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'], timeout: 15000 })
+  } catch (e) { console.error('report-fix failed:', e.message) }
 }
 
 async function lina(text) {
@@ -138,10 +149,21 @@ async function domainAlive(email) {
 
 // ---------------------------------------------------------------- lookups
 
+// A WAL db that no process holds open has no -wal/-shm, and `sqlite3 -readonly` cannot create
+// them, so it fails with "unable to open database file (14)". A plain open recreates them and
+// a SELECT writes nothing. Never use immutable=1 (it ignores the WAL and returns stale rows).
+function sqliteRead(db, sql) {
+  try {
+    return execFileSync('/usr/bin/sqlite3', ['-readonly', db, sql], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] })
+  } catch (err) {
+    if (!/\(14\)|unable to open database/i.test(`${err.stderr || ''} ${err.message}`)) throw err
+    return execFileSync('/usr/bin/sqlite3', ['-cmd', '.timeout 5000', db, sql], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] })
+  }
+}
+
 function participantEmails() {
-  const out = execFileSync('/usr/bin/sqlite3', ['-readonly', PARTICIPANTS_DB,
-    "select lower(trim(email)) from participants where email like '%@%' union select lower(trim(secondary_email)) from participants where secondary_email like '%@%' union select lower(trim(calendar_invite_email)) from participants where calendar_invite_email like '%@%'"],
-  { encoding: 'utf8' })
+  const out = sqliteRead(PARTICIPANTS_DB,
+    "select lower(trim(email)) from participants where email like '%@%' union select lower(trim(secondary_email)) from participants where secondary_email like '%@%' union select lower(trim(calendar_invite_email)) from participants where calendar_invite_email like '%@%'")
   return new Set(out.split('\n').map((s) => s.trim()).filter(Boolean))
 }
 
@@ -187,7 +209,7 @@ function repliedByEmail(email, since) {
 /** Free gifts the CRM knows they grabbed (first and latest source). */
 function crmFirstSource(email) {
   const e = email.replace(/'/g, "''")
-  const out = execFileSync('/usr/bin/sqlite3', ['-readonly', CRM_DB, `select source_first from crm_contacts where lower(primary_email)='${e}' and source_first like 'giveaway-%' union select source_latest from crm_contacts where lower(primary_email)='${e}' and source_latest like 'giveaway-%'`], { encoding: 'utf8' })
+  const out = sqliteRead(CRM_DB, `select source_first from crm_contacts where lower(primary_email)='${e}' and source_first like 'giveaway-%' union select source_latest from crm_contacts where lower(primary_email)='${e}' and source_latest like 'giveaway-%'`)
   return out.split('\n').map((x) => x.trim().replace(/^giveaway-/, '')).filter(Boolean)
 }
 let keywordToSlug = null
@@ -573,8 +595,8 @@ async function main() {
     }
   }
   console.log(`sent ${count}, failed ${failures.length}`)
-  if (failures.length && alert && alertDue('send_failed')) await lina(`Free-gift follow-ups: ${failures.length} send(s) failed.\n${failures.slice(0, 5).join('\n')}\nLog: ~/.myos/logs/giveaway-followups.log`)
-  if (lookupFailed.size && alert && alertDue('lookup_failed')) await lina(`Free-gift follow-ups: lookups failed for ${lookupFailed.size} lead(s), they were skipped this run. Log: ~/.myos/logs/giveaway-followups.log`)
+  if (failures.length && alert && alertDue('send_failed')) reportFix(`${failures.length} send(s) failed.\n${failures.slice(0, 5).join('\n')}\nLog: ~/.myos/logs/giveaway-followups.log`)
+  if (lookupFailed.size && alert && alertDue('lookup_failed')) reportFix(`lookups failed for ${lookupFailed.size} lead(s), skipped this run. Log: ~/.myos/logs/giveaway-followups.log`)
 }
 
 // Lookups exported for a live smoke check (import does not run main on Node 26).
@@ -582,7 +604,7 @@ export { checkoutStartedSince, bookedCall, crmFirstSource, slugForKeyword, strip
 
 if (import.meta.main) main().catch(async (err) => {
   console.error(err.stack || err.message)
-  if (alert && alertDue('crash')) await lina(`Free-gift follow-ups crashed: ${err.message}\nLog: ~/.myos/logs/giveaway-followups.log`)
+  if (alert && alertDue('crash')) reportFix(`crashed: ${err.message}\nLog: ~/.myos/logs/giveaway-followups.log`)
   process.exitCode = 1
 })
 
