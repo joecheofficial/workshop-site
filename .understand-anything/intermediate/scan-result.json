@@ -107,6 +107,18 @@
       "fileCategory": "docs"
     },
     {
+      "path": "CLAUDE.md",
+      "language": "markdown",
+      "sizeLines": 51,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "LESSONS.md",
+      "language": "markdown",
+      "sizeLines": 11,
+      "fileCategory": "docs"
+    },
+    {
       "path": "atelier.audience-policy.json",
       "language": "json",
       "sizeLines": 6,
@@ -131,9 +143,9 @@
       "fileCategory": "config"
     },
     {
-      "path": "CLAUDE.md",
+      "path": "docs/STRIPE-TRIAL-MECHANICS.md",
       "language": "markdown",
-      "sizeLines": 51,
+      "sizeLines": 54,
       "fileCategory": "docs"
     },
     {
@@ -146,24 +158,6 @@
       "path": "docs/giveaways/BACKLOG.md",
       "language": "markdown",
       "sizeLines": 71,
-      "fileCategory": "docs"
-    },
-    {
-      "path": "docs/giveaways/grades/tokens-2026-10-02-r1.md",
-      "language": "markdown",
-      "sizeLines": 77,
-      "fileCategory": "docs"
-    },
-    {
-      "path": "docs/giveaways/grades/tokens-2026-10-02-r2.md",
-      "language": "markdown",
-      "sizeLines": 67,
-      "fileCategory": "docs"
-    },
-    {
-      "path": "docs/giveaways/grades/tokens-2026-10-02-r3.md",
-      "language": "markdown",
-      "sizeLines": 60,
       "fileCategory": "docs"
     },
     {
@@ -185,15 +179,21 @@
       "fileCategory": "docs"
     },
     {
-      "path": "docs/STRIPE-TRIAL-MECHANICS.md",
+      "path": "docs/giveaways/grades/tokens-2026-10-02-r1.md",
       "language": "markdown",
-      "sizeLines": 54,
+      "sizeLines": 77,
       "fileCategory": "docs"
     },
     {
-      "path": "LESSONS.md",
+      "path": "docs/giveaways/grades/tokens-2026-10-02-r2.md",
       "language": "markdown",
-      "sizeLines": 11,
+      "sizeLines": 67,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/giveaways/grades/tokens-2026-10-02-r3.md",
+      "language": "markdown",
+      "sizeLines": 60,
       "fileCategory": "docs"
     },
     {
@@ -270,6 +270,12 @@
     },
     {
       "path": "public/2x-with-ai-playbook.html.kg.json",
+      "language": "json",
+      "sizeLines": 16,
+      "fileCategory": "config"
+    },
+    {
+      "path": "public/Lead-Machine-Quick-Start.pdf.kg.json",
       "language": "json",
       "sizeLines": 16,
       "fileCategory": "config"
@@ -359,6 +365,36 @@
       "fileCategory": "script"
     },
     {
+      "path": "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_LIGHTSART_-59.webp",
+      "language": "webp",
+      "sizeLines": 753,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_slavicakostovski_-6780.webp",
+      "language": "webp",
+      "sizeLines": 434,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_yurygoryanoy_IMG_3876.webp",
+      "language": "webp",
+      "sizeLines": 824,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_yurygoryanoy_IMG_4552.webp",
+      "language": "webp",
+      "sizeLines": 390,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_yurygoryanoy_IMG_5784.webp",
+      "language": "webp",
+      "sizeLines": 1113,
+      "fileCategory": "code"
+    },
+    {
       "path": "public/events/joechella-big-one/bali-bloom/balibloom3_arronshoots_012.webp",
       "language": "webp",
       "sizeLines": 858,
@@ -392,36 +428,6 @@
       "path": "public/events/joechella-big-one/bali-bloom/balibloom3_arronshoots_150.webp",
       "language": "webp",
       "sizeLines": 272,
-      "fileCategory": "code"
-    },
-    {
-      "path": "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_LIGHTSART_-59.webp",
-      "language": "webp",
-      "sizeLines": 753,
-      "fileCategory": "code"
-    },
-    {
-      "path": "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_slavicakostovski_-6780.webp",
-      "language": "webp",
-      "sizeLines": 434,
-      "fileCategory": "code"
-    },
-    {
-      "path": "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_yurygoryanoy_IMG_3876.webp",
-      "language": "webp",
-      "sizeLines": 824,
-      "fileCategory": "code"
-    },
-    {
-      "path": "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_yurygoryanoy_IMG_4552.webp",
-      "language": "webp",
-      "sizeLines": 390,
-      "fileCategory": "code"
-    },
-    {
-      "path": "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_yurygoryanoy_IMG_5784.webp",
-      "language": "webp",
-      "sizeLines": 1113,
       "fileCategory": "code"
     },
     {
@@ -563,12 +569,6 @@
       "fileCategory": "docs"
     },
     {
-      "path": "public/Lead-Machine-Quick-Start.pdf.kg.json",
-      "language": "json",
-      "sizeLines": 16,
-      "fileCategory": "config"
-    },
-    {
       "path": "public/lead-magnet.html",
       "language": "html",
       "sizeLines": 817,
@@ -637,8 +637,8 @@
     {
       "path": "scripts/giveaway-followups.mjs",
       "language": "javascript",
-      "sizeLines": 588,
-      "fileCategory": "code"
+      "sizeLines": 610,
+      "fileCategory": "script"
     },
     {
       "path": "scripts/lib/estimate-ai-level.mjs",
@@ -671,12 +671,6 @@
       "fileCategory": "code"
     },
     {
-      "path": "src/app/ai-agent-income/page.tsx",
-      "language": "typescript",
-      "sizeLines": 178,
-      "fileCategory": "code"
-    },
-    {
       "path": "src/app/ai-agent-income/PromptPackRequestForm.tsx",
       "language": "typescript",
       "sizeLines": 50,
@@ -686,6 +680,12 @@
       "path": "src/app/ai-agent-income/PurchaseTracker.tsx",
       "language": "typescript",
       "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/ai-agent-income/page.tsx",
+      "language": "typescript",
+      "sizeLines": 178,
       "fileCategory": "code"
     },
     {
@@ -2147,42 +2147,6 @@
       "fileCategory": "code"
     },
     {
-      "path": "src/app/session/[slug]/bonus/page 2.tsx",
-      "language": "typescript",
-      "sizeLines": 65,
-      "fileCategory": "code"
-    },
-    {
-      "path": "src/app/session/[slug]/bonus/page.tsx",
-      "language": "typescript",
-      "sizeLines": 65,
-      "fileCategory": "code"
-    },
-    {
-      "path": "src/app/session/[slug]/guide-brain/page.tsx",
-      "language": "typescript",
-      "sizeLines": 75,
-      "fileCategory": "code"
-    },
-    {
-      "path": "src/app/session/[slug]/guide/page.tsx",
-      "language": "typescript",
-      "sizeLines": 98,
-      "fileCategory": "code"
-    },
-    {
-      "path": "src/app/session/[slug]/page.tsx",
-      "language": "typescript",
-      "sizeLines": 561,
-      "fileCategory": "code"
-    },
-    {
-      "path": "src/app/session/[slug]/prep/page.tsx",
-      "language": "typescript",
-      "sizeLines": 83,
-      "fileCategory": "code"
-    },
-    {
       "path": "src/app/session/1/prep-codex/page 2.tsx",
       "language": "typescript",
       "sizeLines": 47,
@@ -2351,6 +2315,42 @@
       "fileCategory": "code"
     },
     {
+      "path": "src/app/session/[slug]/bonus/page 2.tsx",
+      "language": "typescript",
+      "sizeLines": 65,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/session/[slug]/bonus/page.tsx",
+      "language": "typescript",
+      "sizeLines": 65,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/session/[slug]/guide-brain/page.tsx",
+      "language": "typescript",
+      "sizeLines": 75,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/session/[slug]/guide/page.tsx",
+      "language": "typescript",
+      "sizeLines": 98,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/session/[slug]/page.tsx",
+      "language": "typescript",
+      "sizeLines": 561,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/session/[slug]/prep/page.tsx",
+      "language": "typescript",
+      "sizeLines": 83,
+      "fileCategory": "code"
+    },
+    {
       "path": "src/app/sitemap.ts",
       "language": "typescript",
       "sizeLines": 37,
@@ -2360,138 +2360,6 @@
       "path": "src/components/CodeBlock.tsx",
       "language": "typescript",
       "sizeLines": 157,
-      "fileCategory": "code"
-    },
-    {
-      "path": "src/components/consent/MetaPixelConsent.tsx",
-      "language": "typescript",
-      "sizeLines": 111,
-      "fileCategory": "code"
-    },
-    {
-      "path": "src/components/events/ask-an-ai-expert-quotes.ts",
-      "language": "typescript",
-      "sizeLines": 310,
-      "fileCategory": "code"
-    },
-    {
-      "path": "src/components/events/AskAnAiExpertQuoteStrip.tsx",
-      "language": "typescript",
-      "sizeLines": 127,
-      "fileCategory": "code"
-    },
-    {
-      "path": "src/components/events/DinnerPhotoCarousel.tsx",
-      "language": "typescript",
-      "sizeLines": 64,
-      "fileCategory": "code"
-    },
-    {
-      "path": "src/components/events/EventMediaVideo.tsx",
-      "language": "typescript",
-      "sizeLines": 62,
-      "fileCategory": "code"
-    },
-    {
-      "path": "src/components/events/EventPageView.tsx",
-      "language": "typescript",
-      "sizeLines": 724,
-      "fileCategory": "code"
-    },
-    {
-      "path": "src/components/events/EventRegistrationSection.tsx",
-      "language": "typescript",
-      "sizeLines": 1110,
-      "fileCategory": "code"
-    },
-    {
-      "path": "src/components/events/HeroVideo.tsx",
-      "language": "typescript",
-      "sizeLines": 54,
-      "fileCategory": "code"
-    },
-    {
-      "path": "src/components/events/joechella/AmbientHeroVideo.tsx",
-      "language": "typescript",
-      "sizeLines": 120,
-      "fileCategory": "code"
-    },
-    {
-      "path": "src/components/events/joechella/festival.css",
-      "language": "css",
-      "sizeLines": 168,
-      "fileCategory": "markup"
-    },
-    {
-      "path": "src/components/events/joechella/FestivalHero.tsx",
-      "language": "typescript",
-      "sizeLines": 154,
-      "fileCategory": "code"
-    },
-    {
-      "path": "src/components/events/joechella/FestivalMotion.tsx",
-      "language": "typescript",
-      "sizeLines": 46,
-      "fileCategory": "code"
-    },
-    {
-      "path": "src/components/events/joechella/ProgramTimeline.tsx",
-      "language": "typescript",
-      "sizeLines": 271,
-      "fileCategory": "code"
-    },
-    {
-      "path": "src/components/events/joechella/VenueGallery.tsx",
-      "language": "typescript",
-      "sizeLines": 94,
-      "fileCategory": "code"
-    },
-    {
-      "path": "src/components/events/ScrollToRegisterButton.tsx",
-      "language": "typescript",
-      "sizeLines": 27,
-      "fileCategory": "code"
-    },
-    {
-      "path": "src/components/events/voice-studio/VoiceStudioPage.tsx",
-      "language": "typescript",
-      "sizeLines": 793,
-      "fileCategory": "code"
-    },
-    {
-      "path": "src/components/events/WaitlistJoinForm.tsx",
-      "language": "typescript",
-      "sizeLines": 146,
-      "fileCategory": "code"
-    },
-    {
-      "path": "src/components/giveaways/GiveawayAutoModal.tsx",
-      "language": "typescript",
-      "sizeLines": 52,
-      "fileCategory": "code"
-    },
-    {
-      "path": "src/components/giveaways/GiveawayCopyEmailGate.tsx",
-      "language": "typescript",
-      "sizeLines": 55,
-      "fileCategory": "code"
-    },
-    {
-      "path": "src/components/giveaways/GiveawayEmailModal.tsx",
-      "language": "typescript",
-      "sizeLines": 176,
-      "fileCategory": "code"
-    },
-    {
-      "path": "src/components/giveaways/PackPage.module.css",
-      "language": "css",
-      "sizeLines": 1103,
-      "fileCategory": "markup"
-    },
-    {
-      "path": "src/components/giveaways/PackPage.tsx",
-      "language": "typescript",
-      "sizeLines": 794,
       "fileCategory": "code"
     },
     {
@@ -2528,12 +2396,6 @@
       "path": "src/components/ScreenshotCard.tsx",
       "language": "typescript",
       "sizeLines": 22,
-      "fileCategory": "code"
-    },
-    {
-      "path": "src/components/sections/MastermindReactionsSection.tsx",
-      "language": "typescript",
-      "sizeLines": 151,
       "fileCategory": "code"
     },
     {
@@ -2594,6 +2456,144 @@
       "path": "src/components/VantaHero.tsx",
       "language": "typescript",
       "sizeLines": 94,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/consent/MetaPixelConsent.tsx",
+      "language": "typescript",
+      "sizeLines": 111,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/events/AskAnAiExpertQuoteStrip.tsx",
+      "language": "typescript",
+      "sizeLines": 127,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/events/DinnerPhotoCarousel.tsx",
+      "language": "typescript",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/events/EventMediaVideo.tsx",
+      "language": "typescript",
+      "sizeLines": 62,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/events/EventPageView.tsx",
+      "language": "typescript",
+      "sizeLines": 724,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/events/EventRegistrationSection.tsx",
+      "language": "typescript",
+      "sizeLines": 1110,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/events/HeroVideo.tsx",
+      "language": "typescript",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/events/ScrollToRegisterButton.tsx",
+      "language": "typescript",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/events/WaitlistJoinForm.tsx",
+      "language": "typescript",
+      "sizeLines": 146,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/events/ask-an-ai-expert-quotes.ts",
+      "language": "typescript",
+      "sizeLines": 310,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/events/joechella/AmbientHeroVideo.tsx",
+      "language": "typescript",
+      "sizeLines": 120,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/events/joechella/FestivalHero.tsx",
+      "language": "typescript",
+      "sizeLines": 154,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/events/joechella/FestivalMotion.tsx",
+      "language": "typescript",
+      "sizeLines": 46,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/events/joechella/ProgramTimeline.tsx",
+      "language": "typescript",
+      "sizeLines": 271,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/events/joechella/VenueGallery.tsx",
+      "language": "typescript",
+      "sizeLines": 94,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/events/joechella/festival.css",
+      "language": "css",
+      "sizeLines": 168,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "src/components/events/voice-studio/VoiceStudioPage.tsx",
+      "language": "typescript",
+      "sizeLines": 793,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/giveaways/GiveawayAutoModal.tsx",
+      "language": "typescript",
+      "sizeLines": 52,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/giveaways/GiveawayCopyEmailGate.tsx",
+      "language": "typescript",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/giveaways/GiveawayEmailModal.tsx",
+      "language": "typescript",
+      "sizeLines": 176,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/giveaways/PackPage.module.css",
+      "language": "css",
+      "sizeLines": 1103,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "src/components/giveaways/PackPage.tsx",
+      "language": "typescript",
+      "sizeLines": 794,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/sections/MastermindReactionsSection.tsx",
+      "language": "typescript",
+      "sizeLines": 151,
       "fileCategory": "code"
     },
     {
@@ -2821,7 +2821,7 @@
     {
       "path": "src/lib/event-confirmation-email.ts",
       "language": "typescript",
-      "sizeLines": 965,
+      "sizeLines": 1009,
       "fileCategory": "code"
     },
     {
@@ -2875,7 +2875,7 @@
     {
       "path": "src/lib/events.tsx",
       "language": "typescript",
-      "sizeLines": 2269,
+      "sizeLines": 2289,
       "fileCategory": "code"
     },
     {
@@ -2941,7 +2941,7 @@
     {
       "path": "src/lib/google-calendar-invite.ts",
       "language": "typescript",
-      "sizeLines": 121,
+      "sizeLines": 122,
       "fileCategory": "code"
     },
     {
@@ -3467,6 +3467,12 @@
       "fileCategory": "code"
     },
     {
+      "path": "tests/letter-confirmation.test.ts",
+      "language": "typescript",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
       "path": "tests/linkedin-kit.test.ts",
       "language": "typescript",
       "sizeLines": 55,
@@ -3575,8 +3581,8 @@
       "fileCategory": "config"
     }
   ],
-  "fileCount": 581,
-  "totalLines": 84355,
+  "fileCount": 593,
+  "totalLines": 95178,
   "complexity": "complex",
   "filteredByIgnore": 65,
   "importMap": {
@@ -5259,7 +5265,11 @@
       "src/lib/with-timeout.ts"
     ],
     "tsconfig.json": [],
-    "vercel.json": []
+    "vercel.json": [],
+    "tests/letter-confirmation.test.ts": [
+      "src/lib/event-confirmation-email.ts",
+      "src/lib/events.tsx"
+    ]
   },
   "summary": {
     "srcFiles": 365,
@@ -5273,6 +5283,6 @@
       "total": 29
     }
   },
-  "totalFiles": 592,
+  "totalFiles": 593,
   "estimatedComplexity": "very-large"
 }

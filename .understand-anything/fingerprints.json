@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "gitCommitHash": "87a8bd3fd90d4bf9f16e400b88c5d65127c85737",
-  "generatedAt": "2026-11-12T20:12:36.429Z",
+  "gitCommitHash": "a0947d51cb7eab20abf0326c98189ebb89784360",
+  "generatedAt": "2026-11-13T20:09:02.148Z",
   "files": {
     ".claude/settings.json": {
       "filePath": ".claude/settings.json",
@@ -143,6 +143,26 @@
       "totalLines": 52,
       "hasStructuralAnalysis": true
     },
+    "CLAUDE.md": {
+      "filePath": "CLAUDE.md",
+      "contentHash": "beca147941d596de436b6ad9880e07baef569f35a513f5dc195c761cac261bf7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 52,
+      "hasStructuralAnalysis": true
+    },
+    "LESSONS.md": {
+      "filePath": "LESSONS.md",
+      "contentHash": "25807778ab4de7f0331708590432409cec5ca15c4900a8f931eabdc34c69d921",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 12,
+      "hasStructuralAnalysis": true
+    },
     "atelier.audience-policy.json": {
       "filePath": "atelier.audience-policy.json",
       "contentHash": "7bdcffc0ae2d5ac47563c10d2f335e8e256c246716af293ab4471c81143ee634",
@@ -183,14 +203,14 @@
       "totalLines": 47,
       "hasStructuralAnalysis": true
     },
-    "CLAUDE.md": {
-      "filePath": "CLAUDE.md",
-      "contentHash": "beca147941d596de436b6ad9880e07baef569f35a513f5dc195c761cac261bf7",
+    "docs/STRIPE-TRIAL-MECHANICS.md": {
+      "filePath": "docs/STRIPE-TRIAL-MECHANICS.md",
+      "contentHash": "c00a5d9777b1c81c67ea8c36f36eef8bbe5eda5138a3f082754c0e33fd4f3f3b",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 52,
+      "totalLines": 55,
       "hasStructuralAnalysis": true
     },
     "docs/giveaway-followups.md": {
@@ -211,36 +231,6 @@
       "imports": [],
       "exports": [],
       "totalLines": 72,
-      "hasStructuralAnalysis": true
-    },
-    "docs/giveaways/grades/tokens-2026-10-02-r1.md": {
-      "filePath": "docs/giveaways/grades/tokens-2026-10-02-r1.md",
-      "contentHash": "8524629ed781174644b3cddd257ca70aba75e0a2dea7489c6153eeac9213e7dd",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 78,
-      "hasStructuralAnalysis": true
-    },
-    "docs/giveaways/grades/tokens-2026-10-02-r2.md": {
-      "filePath": "docs/giveaways/grades/tokens-2026-10-02-r2.md",
-      "contentHash": "6f3bf89d6f6fdcf5d4db0f0760b94886c9fb79b038812bcc20bbf0c7aa03edf7",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 68,
-      "hasStructuralAnalysis": true
-    },
-    "docs/giveaways/grades/tokens-2026-10-02-r3.md": {
-      "filePath": "docs/giveaways/grades/tokens-2026-10-02-r3.md",
-      "contentHash": "32fb88c52d0637206238eb89e4b655d24d7aa4a9d3421ef088124825974f1c96",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 61,
       "hasStructuralAnalysis": true
     },
     "docs/giveaways/LESSONS.md": {
@@ -273,24 +263,34 @@
       "totalLines": 49,
       "hasStructuralAnalysis": true
     },
-    "docs/STRIPE-TRIAL-MECHANICS.md": {
-      "filePath": "docs/STRIPE-TRIAL-MECHANICS.md",
-      "contentHash": "c00a5d9777b1c81c67ea8c36f36eef8bbe5eda5138a3f082754c0e33fd4f3f3b",
+    "docs/giveaways/grades/tokens-2026-10-02-r1.md": {
+      "filePath": "docs/giveaways/grades/tokens-2026-10-02-r1.md",
+      "contentHash": "8524629ed781174644b3cddd257ca70aba75e0a2dea7489c6153eeac9213e7dd",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 55,
+      "totalLines": 78,
       "hasStructuralAnalysis": true
     },
-    "LESSONS.md": {
-      "filePath": "LESSONS.md",
-      "contentHash": "25807778ab4de7f0331708590432409cec5ca15c4900a8f931eabdc34c69d921",
+    "docs/giveaways/grades/tokens-2026-10-02-r2.md": {
+      "filePath": "docs/giveaways/grades/tokens-2026-10-02-r2.md",
+      "contentHash": "6f3bf89d6f6fdcf5d4db0f0760b94886c9fb79b038812bcc20bbf0c7aa03edf7",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 12,
+      "totalLines": 68,
+      "hasStructuralAnalysis": true
+    },
+    "docs/giveaways/grades/tokens-2026-10-02-r3.md": {
+      "filePath": "docs/giveaways/grades/tokens-2026-10-02-r3.md",
+      "contentHash": "32fb88c52d0637206238eb89e4b655d24d7aa4a9d3421ef088124825974f1c96",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 61,
       "hasStructuralAnalysis": true
     },
     "next-env.d.ts": {
@@ -467,6 +467,16 @@
       "totalLines": 17,
       "hasStructuralAnalysis": true
     },
+    "public/Lead-Machine-Quick-Start.pdf.kg.json": {
+      "filePath": "public/Lead-Machine-Quick-Start.pdf.kg.json",
+      "contentHash": "eb665786e3a1adac23c4434c99090aa72d425507ea5bb4092794dbbcd41761b1",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": true
+    },
     "public/ai-os-architecture.html": {
       "filePath": "public/ai-os-architecture.html",
       "contentHash": "96509256960fa5c550cdfc6ce60bd26671893a0e0c975de934b494ae91d1a39f",
@@ -614,6 +624,56 @@
       "totalLines": 36,
       "hasStructuralAnalysis": true
     },
+    "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_LIGHTSART_-59.webp": {
+      "filePath": "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_LIGHTSART_-59.webp",
+      "contentHash": "48da9e1aa9ebe5c46f98dddc73517e9b07ac716872f1d42c81264e8d8029c5ed",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 754,
+      "hasStructuralAnalysis": false
+    },
+    "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_slavicakostovski_-6780.webp": {
+      "filePath": "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_slavicakostovski_-6780.webp",
+      "contentHash": "a9a6e462df336b5a21814b7fec8f3d9bd3bab817ebc30e2af0f5a5446cdb1478",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 435,
+      "hasStructuralAnalysis": false
+    },
+    "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_yurygoryanoy_IMG_3876.webp": {
+      "filePath": "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_yurygoryanoy_IMG_3876.webp",
+      "contentHash": "e68e66fb24d95262f3cd765ee436b616dc6ccd1155604e2ce7b455da166f4b8a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 825,
+      "hasStructuralAnalysis": false
+    },
+    "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_yurygoryanoy_IMG_4552.webp": {
+      "filePath": "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_yurygoryanoy_IMG_4552.webp",
+      "contentHash": "1c88e284f41978616fa306c55b3ee09ede5f6f7970c628f9607f41f0baf62c84",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 391,
+      "hasStructuralAnalysis": false
+    },
+    "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_yurygoryanoy_IMG_5784.webp": {
+      "filePath": "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_yurygoryanoy_IMG_5784.webp",
+      "contentHash": "7491870dfbcd2bf4bff097f7fb948862357d4f95466d159738facc7bc62ede41",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1114,
+      "hasStructuralAnalysis": false
+    },
     "public/events/joechella-big-one/bali-bloom/balibloom3_arronshoots_012.webp": {
       "filePath": "public/events/joechella-big-one/bali-bloom/balibloom3_arronshoots_012.webp",
       "contentHash": "70eec70602b435f703c10b13394cce23cd1730605ec8477554c90e4aa433fed7",
@@ -672,56 +732,6 @@
       "imports": [],
       "exports": [],
       "totalLines": 273,
-      "hasStructuralAnalysis": false
-    },
-    "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_LIGHTSART_-59.webp": {
-      "filePath": "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_LIGHTSART_-59.webp",
-      "contentHash": "48da9e1aa9ebe5c46f98dddc73517e9b07ac716872f1d42c81264e8d8029c5ed",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 754,
-      "hasStructuralAnalysis": false
-    },
-    "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_slavicakostovski_-6780.webp": {
-      "filePath": "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_slavicakostovski_-6780.webp",
-      "contentHash": "a9a6e462df336b5a21814b7fec8f3d9bd3bab817ebc30e2af0f5a5446cdb1478",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 435,
-      "hasStructuralAnalysis": false
-    },
-    "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_yurygoryanoy_IMG_3876.webp": {
-      "filePath": "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_yurygoryanoy_IMG_3876.webp",
-      "contentHash": "e68e66fb24d95262f3cd765ee436b616dc6ccd1155604e2ce7b455da166f4b8a",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 825,
-      "hasStructuralAnalysis": false
-    },
-    "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_yurygoryanoy_IMG_4552.webp": {
-      "filePath": "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_yurygoryanoy_IMG_4552.webp",
-      "contentHash": "1c88e284f41978616fa306c55b3ee09ede5f6f7970c628f9607f41f0baf62c84",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 391,
-      "hasStructuralAnalysis": false
-    },
-    "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_yurygoryanoy_IMG_5784.webp": {
-      "filePath": "public/events/joechella-big-one/bali-bloom/BALIBLOOM3_yurygoryanoy_IMG_5784.webp",
-      "contentHash": "7491870dfbcd2bf4bff097f7fb948862357d4f95466d159738facc7bc62ede41",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 1114,
       "hasStructuralAnalysis": false
     },
     "public/events/joechella-big-one/hot-air-balloon-card.webp": {
@@ -952,16 +962,6 @@
       "imports": [],
       "exports": [],
       "totalLines": 118,
-      "hasStructuralAnalysis": true
-    },
-    "public/Lead-Machine-Quick-Start.pdf.kg.json": {
-      "filePath": "public/Lead-Machine-Quick-Start.pdf.kg.json",
-      "contentHash": "eb665786e3a1adac23c4434c99090aa72d425507ea5bb4092794dbbcd41761b1",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 17,
       "hasStructuralAnalysis": true
     },
     "public/lead-magnet.html": {
@@ -1229,7 +1229,7 @@
     },
     "scripts/giveaway-followups.mjs": {
       "filePath": "scripts/giveaway-followups.mjs",
-      "contentHash": "2c89b00e28bf2218ec2d1eeeca86bf5c6264fa1e68d0885e001bba1a8c34c3af",
+      "contentHash": "ce47781837a6cb4a99d72db89e25c7c038be09e60084248e897ae4124a64f9ad",
       "functions": [
         {
           "name": "flag",
@@ -1294,6 +1294,14 @@
           "lineCount": 8
         },
         {
+          "name": "reportFix",
+          "params": [
+            "text"
+          ],
+          "exported": false,
+          "lineCount": 6
+        },
+        {
           "name": "lina",
           "params": [
             "text"
@@ -1310,10 +1318,19 @@
           "lineCount": 7
         },
         {
+          "name": "sqliteRead",
+          "params": [
+            "db",
+            "sql"
+          ],
+          "exported": false,
+          "lineCount": 8
+        },
+        {
           "name": "participantEmails",
           "params": [],
           "exported": false,
-          "lineCount": 6
+          "lineCount": 5
         },
         {
           "name": "stripeBuyer",
@@ -1596,7 +1613,7 @@
         "stripeBuyer",
         "bonusLink"
       ],
-      "totalLines": 589,
+      "totalLines": 611,
       "hasStructuralAnalysis": true
     },
     "scripts/lib/estimate-ai-level.mjs": {
@@ -1787,51 +1804,6 @@
       "totalLines": 80,
       "hasStructuralAnalysis": true
     },
-    "src/app/ai-agent-income/page.tsx": {
-      "filePath": "src/app/ai-agent-income/page.tsx",
-      "contentHash": "d81411df046fb1ea6f198dc739b559c4ae6f7d372b765ef3dd4e1909b9905c6d",
-      "functions": [
-        {
-          "name": "AiAgentIncomePage",
-          "params": [],
-          "exported": true,
-          "lineCount": 140
-        }
-      ],
-      "classes": [],
-      "imports": [
-        {
-          "source": "next",
-          "specifiers": [
-            "Metadata"
-          ]
-        },
-        {
-          "source": "./AiAgentIncomeCheckoutForm",
-          "specifiers": [
-            "AiAgentIncomeCheckoutForm"
-          ]
-        },
-        {
-          "source": "./PromptPackRequestForm",
-          "specifiers": [
-            "PromptPackRequestForm"
-          ]
-        },
-        {
-          "source": "./PurchaseTracker",
-          "specifiers": [
-            "PurchaseTracker"
-          ]
-        }
-      ],
-      "exports": [
-        "metadata",
-        "AiAgentIncomePage"
-      ],
-      "totalLines": 179,
-      "hasStructuralAnalysis": true
-    },
     "src/app/ai-agent-income/PromptPackRequestForm.tsx": {
       "filePath": "src/app/ai-agent-income/PromptPackRequestForm.tsx",
       "contentHash": "e9cba7d4fc7c8a52346d383420389809b3313c5676011d3139e666aa06ab4952",
@@ -1890,6 +1862,51 @@
         "PurchaseTracker"
       ],
       "totalLines": 13,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/ai-agent-income/page.tsx": {
+      "filePath": "src/app/ai-agent-income/page.tsx",
+      "contentHash": "d81411df046fb1ea6f198dc739b559c4ae6f7d372b765ef3dd4e1909b9905c6d",
+      "functions": [
+        {
+          "name": "AiAgentIncomePage",
+          "params": [],
+          "exported": true,
+          "lineCount": 140
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next",
+          "specifiers": [
+            "Metadata"
+          ]
+        },
+        {
+          "source": "./AiAgentIncomeCheckoutForm",
+          "specifiers": [
+            "AiAgentIncomeCheckoutForm"
+          ]
+        },
+        {
+          "source": "./PromptPackRequestForm",
+          "specifiers": [
+            "PromptPackRequestForm"
+          ]
+        },
+        {
+          "source": "./PurchaseTracker",
+          "specifiers": [
+            "PurchaseTracker"
+          ]
+        }
+      ],
+      "exports": [
+        "metadata",
+        "AiAgentIncomePage"
+      ],
+      "totalLines": 179,
       "hasStructuralAnalysis": true
     },
     "src/app/ai-os-architecture/page.tsx": {
@@ -10749,468 +10766,6 @@
       "totalLines": 15,
       "hasStructuralAnalysis": true
     },
-    "src/app/session/[slug]/bonus/page 2.tsx": {
-      "filePath": "src/app/session/[slug]/bonus/page 2.tsx",
-      "contentHash": "cb0d3e2251d07eaf2b305fe0fdff6e97719683d8ef3beb29b57e890e6c62b446",
-      "functions": [
-        {
-          "name": "generateStaticParams",
-          "params": [],
-          "exported": true,
-          "lineCount": 3
-        },
-        {
-          "name": "generateMetadata",
-          "params": [
-            "{ params }"
-          ],
-          "exported": true,
-          "lineCount": 10
-        },
-        {
-          "name": "SessionBonusPage",
-          "params": [
-            "{ params }"
-          ],
-          "exported": true,
-          "lineCount": 36
-        }
-      ],
-      "classes": [],
-      "imports": [
-        {
-          "source": "next/link",
-          "specifiers": [
-            "Link"
-          ]
-        },
-        {
-          "source": "next/navigation",
-          "specifiers": [
-            "notFound"
-          ]
-        },
-        {
-          "source": "@/lib/sessions",
-          "specifiers": [
-            "getSession"
-          ]
-        },
-        {
-          "source": "@/content/session-1-bonus",
-          "specifiers": [
-            "Session1Bonus"
-          ]
-        },
-        {
-          "source": "react",
-          "specifiers": [
-            "ComponentType"
-          ]
-        }
-      ],
-      "exports": [
-        "generateStaticParams",
-        "generateMetadata",
-        "SessionBonusPage"
-      ],
-      "totalLines": 66,
-      "hasStructuralAnalysis": true
-    },
-    "src/app/session/[slug]/bonus/page.tsx": {
-      "filePath": "src/app/session/[slug]/bonus/page.tsx",
-      "contentHash": "cb0d3e2251d07eaf2b305fe0fdff6e97719683d8ef3beb29b57e890e6c62b446",
-      "functions": [
-        {
-          "name": "generateStaticParams",
-          "params": [],
-          "exported": true,
-          "lineCount": 3
-        },
-        {
-          "name": "generateMetadata",
-          "params": [
-            "{ params }"
-          ],
-          "exported": true,
-          "lineCount": 10
-        },
-        {
-          "name": "SessionBonusPage",
-          "params": [
-            "{ params }"
-          ],
-          "exported": true,
-          "lineCount": 36
-        }
-      ],
-      "classes": [],
-      "imports": [
-        {
-          "source": "next/link",
-          "specifiers": [
-            "Link"
-          ]
-        },
-        {
-          "source": "next/navigation",
-          "specifiers": [
-            "notFound"
-          ]
-        },
-        {
-          "source": "@/lib/sessions",
-          "specifiers": [
-            "getSession"
-          ]
-        },
-        {
-          "source": "@/content/session-1-bonus",
-          "specifiers": [
-            "Session1Bonus"
-          ]
-        },
-        {
-          "source": "react",
-          "specifiers": [
-            "ComponentType"
-          ]
-        }
-      ],
-      "exports": [
-        "generateStaticParams",
-        "generateMetadata",
-        "SessionBonusPage"
-      ],
-      "totalLines": 66,
-      "hasStructuralAnalysis": true
-    },
-    "src/app/session/[slug]/guide-brain/page.tsx": {
-      "filePath": "src/app/session/[slug]/guide-brain/page.tsx",
-      "contentHash": "10d22665ad0b8c7418eadf9c01cd6484c0d4465453d8c3abe02f8764599cb3c1",
-      "functions": [
-        {
-          "name": "generateStaticParams",
-          "params": [],
-          "exported": true,
-          "lineCount": 3
-        },
-        {
-          "name": "generateMetadata",
-          "params": [
-            "{ params }"
-          ],
-          "exported": true,
-          "lineCount": 9
-        },
-        {
-          "name": "SessionGuideBrainPage",
-          "params": [
-            "{ params }"
-          ],
-          "exported": true,
-          "lineCount": 52
-        }
-      ],
-      "classes": [],
-      "imports": [
-        {
-          "source": "next/link",
-          "specifiers": [
-            "Link"
-          ]
-        },
-        {
-          "source": "next/navigation",
-          "specifiers": [
-            "notFound"
-          ]
-        },
-        {
-          "source": "@/lib/sessions",
-          "specifiers": [
-            "getSession"
-          ]
-        },
-        {
-          "source": "@/content/session-4-guide",
-          "specifiers": [
-            "Session4Guide"
-          ]
-        }
-      ],
-      "exports": [
-        "generateStaticParams",
-        "generateMetadata",
-        "SessionGuideBrainPage"
-      ],
-      "totalLines": 76,
-      "hasStructuralAnalysis": true
-    },
-    "src/app/session/[slug]/guide/page.tsx": {
-      "filePath": "src/app/session/[slug]/guide/page.tsx",
-      "contentHash": "f876f9c02b9a96fd8a3c55e4e25f6d5b67a918c8e3be0f7ca96e0577fad9c527",
-      "functions": [
-        {
-          "name": "generateStaticParams",
-          "params": [],
-          "exported": true,
-          "lineCount": 9
-        },
-        {
-          "name": "generateMetadata",
-          "params": [
-            "{ params }"
-          ],
-          "exported": true,
-          "lineCount": 9
-        },
-        {
-          "name": "SessionGuidePage",
-          "params": [
-            "{ params }"
-          ],
-          "exported": true,
-          "lineCount": 55
-        }
-      ],
-      "classes": [],
-      "imports": [
-        {
-          "source": "next/link",
-          "specifiers": [
-            "Link"
-          ]
-        },
-        {
-          "source": "next/navigation",
-          "specifiers": [
-            "notFound"
-          ]
-        },
-        {
-          "source": "@/lib/sessions",
-          "specifiers": [
-            "getSession"
-          ]
-        },
-        {
-          "source": "@/lib/locks",
-          "specifiers": [
-            "LOCKS"
-          ]
-        },
-        {
-          "source": "@/content/session-1-guide",
-          "specifiers": [
-            "Session1Guide"
-          ]
-        },
-        {
-          "source": "@/content/session-2-guide",
-          "specifiers": [
-            "Session2Guide"
-          ]
-        },
-        {
-          "source": "@/content/session-3-guide",
-          "specifiers": [
-            "Session3Guide"
-          ]
-        },
-        {
-          "source": "@/content/session-6-guide",
-          "specifiers": [
-            "Session6Guide"
-          ]
-        },
-        {
-          "source": "@/content/session-7-guide",
-          "specifiers": [
-            "Session7Guide"
-          ]
-        },
-        {
-          "source": "react",
-          "specifiers": [
-            "ComponentType"
-          ]
-        }
-      ],
-      "exports": [
-        "generateStaticParams",
-        "generateMetadata",
-        "SessionGuidePage"
-      ],
-      "totalLines": 99,
-      "hasStructuralAnalysis": true
-    },
-    "src/app/session/[slug]/page.tsx": {
-      "filePath": "src/app/session/[slug]/page.tsx",
-      "contentHash": "f58eb1d2a4a5b4b0dbda094666f696dfb1eb12566893308a22c907de9927dd53",
-      "functions": [
-        {
-          "name": "generateStaticParams",
-          "params": [],
-          "exported": true,
-          "lineCount": 3
-        },
-        {
-          "name": "generateMetadata",
-          "params": [
-            "{ params }"
-          ],
-          "exported": true,
-          "lineCount": 9
-        },
-        {
-          "name": "SessionIndexPage",
-          "params": [
-            "{ params }"
-          ],
-          "exported": true,
-          "lineCount": 537
-        }
-      ],
-      "classes": [],
-      "imports": [
-        {
-          "source": "next/link",
-          "specifiers": [
-            "Link"
-          ]
-        },
-        {
-          "source": "next/navigation",
-          "specifiers": [
-            "notFound"
-          ]
-        },
-        {
-          "source": "@/lib/sessions",
-          "specifiers": [
-            "getSession"
-          ]
-        },
-        {
-          "source": "@/lib/locks",
-          "specifiers": [
-            "LOCKS"
-          ]
-        },
-        {
-          "source": "@/components/Reveal",
-          "specifiers": [
-            "Reveal"
-          ]
-        }
-      ],
-      "exports": [
-        "generateStaticParams",
-        "generateMetadata",
-        "SessionIndexPage"
-      ],
-      "totalLines": 562,
-      "hasStructuralAnalysis": true
-    },
-    "src/app/session/[slug]/prep/page.tsx": {
-      "filePath": "src/app/session/[slug]/prep/page.tsx",
-      "contentHash": "56d05c012ccd99b96373e343d320017d9dfd229f567ac1c23549693b953609a7",
-      "functions": [
-        {
-          "name": "generateStaticParams",
-          "params": [],
-          "exported": true,
-          "lineCount": 3
-        },
-        {
-          "name": "generateMetadata",
-          "params": [
-            "{ params }"
-          ],
-          "exported": true,
-          "lineCount": 9
-        },
-        {
-          "name": "SessionPrepPage",
-          "params": [
-            "{ params }"
-          ],
-          "exported": true,
-          "lineCount": 44
-        }
-      ],
-      "classes": [],
-      "imports": [
-        {
-          "source": "next/link",
-          "specifiers": [
-            "Link"
-          ]
-        },
-        {
-          "source": "next/navigation",
-          "specifiers": [
-            "notFound"
-          ]
-        },
-        {
-          "source": "@/lib/sessions",
-          "specifiers": [
-            "getSession"
-          ]
-        },
-        {
-          "source": "@/content/session-1-prep",
-          "specifiers": [
-            "Session1Prep"
-          ]
-        },
-        {
-          "source": "@/content/session-2-prep",
-          "specifiers": [
-            "Session2Prep"
-          ]
-        },
-        {
-          "source": "@/content/session-3-prep",
-          "specifiers": [
-            "Session3Prep"
-          ]
-        },
-        {
-          "source": "@/content/session-5-prep",
-          "specifiers": [
-            "Session5Prep"
-          ]
-        },
-        {
-          "source": "@/content/session-6-prep",
-          "specifiers": [
-            "Session6Prep"
-          ]
-        },
-        {
-          "source": "@/content/session-7-prep",
-          "specifiers": [
-            "Session7Prep"
-          ]
-        },
-        {
-          "source": "react",
-          "specifiers": [
-            "ComponentType"
-          ]
-        }
-      ],
-      "exports": [
-        "generateStaticParams",
-        "generateMetadata",
-        "SessionPrepPage"
-      ],
-      "totalLines": 84,
-      "hasStructuralAnalysis": true
-    },
     "src/app/session/1/prep-codex/page 2.tsx": {
       "filePath": "src/app/session/1/prep-codex/page 2.tsx",
       "contentHash": "696ab29fbe9b19395248cd2ae28b407a233e24ec979cb66d25cfccce9f89a097",
@@ -12456,6 +12011,468 @@
       "totalLines": 53,
       "hasStructuralAnalysis": true
     },
+    "src/app/session/[slug]/bonus/page 2.tsx": {
+      "filePath": "src/app/session/[slug]/bonus/page 2.tsx",
+      "contentHash": "cb0d3e2251d07eaf2b305fe0fdff6e97719683d8ef3beb29b57e890e6c62b446",
+      "functions": [
+        {
+          "name": "generateStaticParams",
+          "params": [],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "generateMetadata",
+          "params": [
+            "{ params }"
+          ],
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "SessionBonusPage",
+          "params": [
+            "{ params }"
+          ],
+          "exported": true,
+          "lineCount": 36
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/link",
+          "specifiers": [
+            "Link"
+          ]
+        },
+        {
+          "source": "next/navigation",
+          "specifiers": [
+            "notFound"
+          ]
+        },
+        {
+          "source": "@/lib/sessions",
+          "specifiers": [
+            "getSession"
+          ]
+        },
+        {
+          "source": "@/content/session-1-bonus",
+          "specifiers": [
+            "Session1Bonus"
+          ]
+        },
+        {
+          "source": "react",
+          "specifiers": [
+            "ComponentType"
+          ]
+        }
+      ],
+      "exports": [
+        "generateStaticParams",
+        "generateMetadata",
+        "SessionBonusPage"
+      ],
+      "totalLines": 66,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/session/[slug]/bonus/page.tsx": {
+      "filePath": "src/app/session/[slug]/bonus/page.tsx",
+      "contentHash": "cb0d3e2251d07eaf2b305fe0fdff6e97719683d8ef3beb29b57e890e6c62b446",
+      "functions": [
+        {
+          "name": "generateStaticParams",
+          "params": [],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "generateMetadata",
+          "params": [
+            "{ params }"
+          ],
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "SessionBonusPage",
+          "params": [
+            "{ params }"
+          ],
+          "exported": true,
+          "lineCount": 36
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/link",
+          "specifiers": [
+            "Link"
+          ]
+        },
+        {
+          "source": "next/navigation",
+          "specifiers": [
+            "notFound"
+          ]
+        },
+        {
+          "source": "@/lib/sessions",
+          "specifiers": [
+            "getSession"
+          ]
+        },
+        {
+          "source": "@/content/session-1-bonus",
+          "specifiers": [
+            "Session1Bonus"
+          ]
+        },
+        {
+          "source": "react",
+          "specifiers": [
+            "ComponentType"
+          ]
+        }
+      ],
+      "exports": [
+        "generateStaticParams",
+        "generateMetadata",
+        "SessionBonusPage"
+      ],
+      "totalLines": 66,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/session/[slug]/guide-brain/page.tsx": {
+      "filePath": "src/app/session/[slug]/guide-brain/page.tsx",
+      "contentHash": "10d22665ad0b8c7418eadf9c01cd6484c0d4465453d8c3abe02f8764599cb3c1",
+      "functions": [
+        {
+          "name": "generateStaticParams",
+          "params": [],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "generateMetadata",
+          "params": [
+            "{ params }"
+          ],
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "SessionGuideBrainPage",
+          "params": [
+            "{ params }"
+          ],
+          "exported": true,
+          "lineCount": 52
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/link",
+          "specifiers": [
+            "Link"
+          ]
+        },
+        {
+          "source": "next/navigation",
+          "specifiers": [
+            "notFound"
+          ]
+        },
+        {
+          "source": "@/lib/sessions",
+          "specifiers": [
+            "getSession"
+          ]
+        },
+        {
+          "source": "@/content/session-4-guide",
+          "specifiers": [
+            "Session4Guide"
+          ]
+        }
+      ],
+      "exports": [
+        "generateStaticParams",
+        "generateMetadata",
+        "SessionGuideBrainPage"
+      ],
+      "totalLines": 76,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/session/[slug]/guide/page.tsx": {
+      "filePath": "src/app/session/[slug]/guide/page.tsx",
+      "contentHash": "f876f9c02b9a96fd8a3c55e4e25f6d5b67a918c8e3be0f7ca96e0577fad9c527",
+      "functions": [
+        {
+          "name": "generateStaticParams",
+          "params": [],
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "generateMetadata",
+          "params": [
+            "{ params }"
+          ],
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "SessionGuidePage",
+          "params": [
+            "{ params }"
+          ],
+          "exported": true,
+          "lineCount": 55
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/link",
+          "specifiers": [
+            "Link"
+          ]
+        },
+        {
+          "source": "next/navigation",
+          "specifiers": [
+            "notFound"
+          ]
+        },
+        {
+          "source": "@/lib/sessions",
+          "specifiers": [
+            "getSession"
+          ]
+        },
+        {
+          "source": "@/lib/locks",
+          "specifiers": [
+            "LOCKS"
+          ]
+        },
+        {
+          "source": "@/content/session-1-guide",
+          "specifiers": [
+            "Session1Guide"
+          ]
+        },
+        {
+          "source": "@/content/session-2-guide",
+          "specifiers": [
+            "Session2Guide"
+          ]
+        },
+        {
+          "source": "@/content/session-3-guide",
+          "specifiers": [
+            "Session3Guide"
+          ]
+        },
+        {
+          "source": "@/content/session-6-guide",
+          "specifiers": [
+            "Session6Guide"
+          ]
+        },
+        {
+          "source": "@/content/session-7-guide",
+          "specifiers": [
+            "Session7Guide"
+          ]
+        },
+        {
+          "source": "react",
+          "specifiers": [
+            "ComponentType"
+          ]
+        }
+      ],
+      "exports": [
+        "generateStaticParams",
+        "generateMetadata",
+        "SessionGuidePage"
+      ],
+      "totalLines": 99,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/session/[slug]/page.tsx": {
+      "filePath": "src/app/session/[slug]/page.tsx",
+      "contentHash": "f58eb1d2a4a5b4b0dbda094666f696dfb1eb12566893308a22c907de9927dd53",
+      "functions": [
+        {
+          "name": "generateStaticParams",
+          "params": [],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "generateMetadata",
+          "params": [
+            "{ params }"
+          ],
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "SessionIndexPage",
+          "params": [
+            "{ params }"
+          ],
+          "exported": true,
+          "lineCount": 537
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/link",
+          "specifiers": [
+            "Link"
+          ]
+        },
+        {
+          "source": "next/navigation",
+          "specifiers": [
+            "notFound"
+          ]
+        },
+        {
+          "source": "@/lib/sessions",
+          "specifiers": [
+            "getSession"
+          ]
+        },
+        {
+          "source": "@/lib/locks",
+          "specifiers": [
+            "LOCKS"
+          ]
+        },
+        {
+          "source": "@/components/Reveal",
+          "specifiers": [
+            "Reveal"
+          ]
+        }
+      ],
+      "exports": [
+        "generateStaticParams",
+        "generateMetadata",
+        "SessionIndexPage"
+      ],
+      "totalLines": 562,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/session/[slug]/prep/page.tsx": {
+      "filePath": "src/app/session/[slug]/prep/page.tsx",
+      "contentHash": "56d05c012ccd99b96373e343d320017d9dfd229f567ac1c23549693b953609a7",
+      "functions": [
+        {
+          "name": "generateStaticParams",
+          "params": [],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "generateMetadata",
+          "params": [
+            "{ params }"
+          ],
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "SessionPrepPage",
+          "params": [
+            "{ params }"
+          ],
+          "exported": true,
+          "lineCount": 44
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/link",
+          "specifiers": [
+            "Link"
+          ]
+        },
+        {
+          "source": "next/navigation",
+          "specifiers": [
+            "notFound"
+          ]
+        },
+        {
+          "source": "@/lib/sessions",
+          "specifiers": [
+            "getSession"
+          ]
+        },
+        {
+          "source": "@/content/session-1-prep",
+          "specifiers": [
+            "Session1Prep"
+          ]
+        },
+        {
+          "source": "@/content/session-2-prep",
+          "specifiers": [
+            "Session2Prep"
+          ]
+        },
+        {
+          "source": "@/content/session-3-prep",
+          "specifiers": [
+            "Session3Prep"
+          ]
+        },
+        {
+          "source": "@/content/session-5-prep",
+          "specifiers": [
+            "Session5Prep"
+          ]
+        },
+        {
+          "source": "@/content/session-6-prep",
+          "specifiers": [
+            "Session6Prep"
+          ]
+        },
+        {
+          "source": "@/content/session-7-prep",
+          "specifiers": [
+            "Session7Prep"
+          ]
+        },
+        {
+          "source": "react",
+          "specifiers": [
+            "ComponentType"
+          ]
+        }
+      ],
+      "exports": [
+        "generateStaticParams",
+        "generateMetadata",
+        "SessionPrepPage"
+      ],
+      "totalLines": 84,
+      "hasStructuralAnalysis": true
+    },
     "src/app/sitemap.ts": {
       "filePath": "src/app/sitemap.ts",
       "contentHash": "e8d662c5dd783a5a33e90da98e4cad92ff9a4ac7bc51e8359999f12cf8cc1f4f",
@@ -12547,6 +12564,531 @@
       "totalLines": 158,
       "hasStructuralAnalysis": true
     },
+    "src/components/PageParticles.tsx": {
+      "filePath": "src/components/PageParticles.tsx",
+      "contentHash": "efccf081de2e367b9e43d6b82e9ac33ad66033aaf4f4801b5fced60c0b536775",
+      "functions": [
+        {
+          "name": "PageParticles",
+          "params": [],
+          "exported": true,
+          "lineCount": 100
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "useEffect",
+            "useRef"
+          ]
+        }
+      ],
+      "exports": [
+        "PageParticles"
+      ],
+      "totalLines": 111,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/ParticipantCarousel.tsx": {
+      "filePath": "src/components/ParticipantCarousel.tsx",
+      "contentHash": "d086c0131cb52de1e204de6186e16cdd0f1730e8289451a0184163c3026bfdaa",
+      "functions": [
+        {
+          "name": "Avatar",
+          "params": [
+            "{ photo, name }"
+          ],
+          "exported": false,
+          "lineCount": 20
+        },
+        {
+          "name": "ParticipantCarousel",
+          "params": [
+            "{ participants }"
+          ],
+          "exported": true,
+          "lineCount": 133
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/image",
+          "specifiers": [
+            "Image"
+          ]
+        }
+      ],
+      "exports": [
+        "ParticipantCarousel"
+      ],
+      "totalLines": 167,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/PrepChecklistItem.tsx": {
+      "filePath": "src/components/PrepChecklistItem.tsx",
+      "contentHash": "b9f8d8e0c06e451f9c7e57d69a7d1dc65b1084414bd02115d4678fd6d76274d4",
+      "functions": [
+        {
+          "name": "PrepChecklistItem",
+          "params": [
+            "{\n  number,\n  title,\n  required = true,\n  children,\n}"
+          ],
+          "exported": true,
+          "lineCount": 56
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React"
+          ]
+        }
+      ],
+      "exports": [
+        "PrepChecklistItem"
+      ],
+      "totalLines": 66,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/ProTip.tsx": {
+      "filePath": "src/components/ProTip.tsx",
+      "contentHash": "1e0b22935dbaa4fc4ff6a266c9d2757adf6a9666852e4881fe830f7237a96e02",
+      "functions": [
+        {
+          "name": "ProTip",
+          "params": [
+            "{ type = 'tip', title, className, children }"
+          ],
+          "exported": true,
+          "lineCount": 17
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React"
+          ]
+        }
+      ],
+      "exports": [
+        "ProTip"
+      ],
+      "totalLines": 50,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/Reveal.tsx": {
+      "filePath": "src/components/Reveal.tsx",
+      "contentHash": "2cb6834ceeffa86b505c6d7d68a2ef6dd2096ef47d491f4b4787363ce141bfec",
+      "functions": [
+        {
+          "name": "Reveal",
+          "params": [
+            "{\n  children,\n  delay = 0,\n  className = '',\n  direction = 'up',\n}"
+          ],
+          "exported": true,
+          "lineCount": 28
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "framer-motion",
+          "specifiers": [
+            "motion",
+            "useInView"
+          ]
+        },
+        {
+          "source": "react",
+          "specifiers": [
+            "useRef"
+          ]
+        }
+      ],
+      "exports": [
+        "Reveal"
+      ],
+      "totalLines": 41,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/ScreenshotCard.tsx": {
+      "filePath": "src/components/ScreenshotCard.tsx",
+      "contentHash": "1b7271084d3bc44dc92c99561fb89fa1434c252d43b6d853377cc85f7738f186",
+      "functions": [
+        {
+          "name": "ScreenshotCard",
+          "params": [
+            "{ src, alt, caption }"
+          ],
+          "exported": true,
+          "lineCount": 16
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "ScreenshotCard"
+      ],
+      "totalLines": 23,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/SessionCard.tsx": {
+      "filePath": "src/components/SessionCard.tsx",
+      "contentHash": "1c24ac512efa6ccf91198ad95b680cbd4310b793f4a90e6ec45ed39ddc65a180",
+      "functions": [
+        {
+          "name": "SessionCard",
+          "params": [
+            "{\n  slug,\n  number,\n  title,\n  description,\n  hasGuide,\n  hasPrep,\n  hasBonus,\n  hasWrapup,\n}"
+          ],
+          "exported": true,
+          "lineCount": 96
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/link",
+          "specifiers": [
+            "Link"
+          ]
+        }
+      ],
+      "exports": [
+        "SessionCard"
+      ],
+      "totalLines": 111,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/SiteChrome.tsx": {
+      "filePath": "src/components/SiteChrome.tsx",
+      "contentHash": "f08416bc2f84a8bb09c6d82010df1b61bb67e0c449dd9776e90ec658adb4dc21",
+      "functions": [
+        {
+          "name": "SiteChrome",
+          "params": [
+            "{ children }"
+          ],
+          "exported": true,
+          "lineCount": 32
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/navigation",
+          "specifiers": [
+            "usePathname"
+          ]
+        },
+        {
+          "source": "react",
+          "specifiers": [
+            "ReactNode"
+          ]
+        },
+        {
+          "source": "@/components/SiteFooter",
+          "specifiers": [
+            "SiteFooter"
+          ]
+        },
+        {
+          "source": "@/components/SiteHeader",
+          "specifiers": [
+            "SiteHeader"
+          ]
+        },
+        {
+          "source": "@/components/PageParticles",
+          "specifiers": [
+            "PageParticles"
+          ]
+        }
+      ],
+      "exports": [
+        "SiteChrome"
+      ],
+      "totalLines": 41,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/SiteFooter.tsx": {
+      "filePath": "src/components/SiteFooter.tsx",
+      "contentHash": "ae4f1ee0c1aa8c493641c24578dec5d4d573f9e498f75b06c60684951d11a03c",
+      "functions": [
+        {
+          "name": "SiteFooter",
+          "params": [],
+          "exported": true,
+          "lineCount": 71
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/components/consent/MetaPixelConsent",
+          "specifiers": [
+            "CookieSettingsLink"
+          ]
+        }
+      ],
+      "exports": [
+        "SiteFooter"
+      ],
+      "totalLines": 74,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/SiteHeader.tsx": {
+      "filePath": "src/components/SiteHeader.tsx",
+      "contentHash": "0414e6915c071942b8b2e0a8795952b5a304245d4162b3d27c6c1ea00f5f47b9",
+      "functions": [
+        {
+          "name": "SiteHeader",
+          "params": [],
+          "exported": true,
+          "lineCount": 27
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/link",
+          "specifiers": [
+            "Link"
+          ]
+        },
+        {
+          "source": "next/image",
+          "specifiers": [
+            "Image"
+          ]
+        },
+        {
+          "source": "next/navigation",
+          "specifiers": [
+            "usePathname"
+          ]
+        }
+      ],
+      "exports": [
+        "SiteHeader"
+      ],
+      "totalLines": 34,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/StaggerList.tsx": {
+      "filePath": "src/components/StaggerList.tsx",
+      "contentHash": "87c27e25882d8a19532d0fbf3ed5d1623fb96dad330475a87a9ca7d69ad6b8f3",
+      "functions": [
+        {
+          "name": "StaggerList",
+          "params": [
+            "{ children, className = '', staggerDelay = 0.07 }"
+          ],
+          "exported": true,
+          "lineCount": 19
+        },
+        {
+          "name": "StaggerItem",
+          "params": [
+            "{ children, className = '' }"
+          ],
+          "exported": true,
+          "lineCount": 17
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "framer-motion",
+          "specifiers": [
+            "motion",
+            "useInView"
+          ]
+        },
+        {
+          "source": "react",
+          "specifiers": [
+            "useRef"
+          ]
+        }
+      ],
+      "exports": [
+        "StaggerList",
+        "StaggerItem"
+      ],
+      "totalLines": 49,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/StepCard.tsx": {
+      "filePath": "src/components/StepCard.tsx",
+      "contentHash": "cded5cbcec558699f71bfe15a52b260d7ce63e7eddb222c6e50424abf9984487",
+      "functions": [
+        {
+          "name": "StepCard",
+          "params": [
+            "{ number, title, children }"
+          ],
+          "exported": true,
+          "lineCount": 22
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React"
+          ]
+        }
+      ],
+      "exports": [
+        "StepCard"
+      ],
+      "totalLines": 31,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/StickyVideoPlayer.tsx": {
+      "filePath": "src/components/StickyVideoPlayer.tsx",
+      "contentHash": "2a761b5d343f32f3ef2b77d0822dae7262293b01ffe9fbdebbb33f936f7f1a05",
+      "functions": [
+        {
+          "name": "InlineOnlyVideoPlayer",
+          "params": [
+            "{ src, title = 'Workshop Recording' }"
+          ],
+          "exported": false,
+          "lineCount": 17
+        },
+        {
+          "name": "StickyVideoPlayer",
+          "params": [
+            "props"
+          ],
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "StickyVideoPlayerWithStickyBehavior",
+          "params": [
+            "{ videoId, videos, src, title = 'Workshop Recording' }"
+          ],
+          "exported": false,
+          "lineCount": 460
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "useState",
+            "useRef",
+            "useEffect",
+            "useCallback",
+            "MouseEvent"
+          ]
+        }
+      ],
+      "exports": [
+        "StickyVideoPlayer"
+      ],
+      "totalLines": 504,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/TabNav.tsx": {
+      "filePath": "src/components/TabNav.tsx",
+      "contentHash": "70b01b51691d34d1333f41f3b0e1f1712d11598c898c1086010891046ce6961a",
+      "functions": [
+        {
+          "name": "TabNav",
+          "params": [],
+          "exported": true,
+          "lineCount": 38
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/link",
+          "specifiers": [
+            "Link"
+          ]
+        },
+        {
+          "source": "next/navigation",
+          "specifiers": [
+            "usePathname"
+          ]
+        }
+      ],
+      "exports": [
+        "TabNav"
+      ],
+      "totalLines": 50,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/TianaSessionFooter.tsx": {
+      "filePath": "src/components/TianaSessionFooter.tsx",
+      "contentHash": "9aa87a844520dc7916e566f89c09c00e324f593b3b1f391c92d9f4e719ef7c36",
+      "functions": [
+        {
+          "name": "TianaSessionFooter",
+          "params": [],
+          "exported": true,
+          "lineCount": 27
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "TianaSessionFooter"
+      ],
+      "totalLines": 28,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/VantaHero.tsx": {
+      "filePath": "src/components/VantaHero.tsx",
+      "contentHash": "cb79f90fe0058d811cd03f8e9463c364162aca7afc13142900018d08a3a93f22",
+      "functions": [
+        {
+          "name": "VantaHero",
+          "params": [
+            "{ sessionNumber, title, description, slug, subpage }"
+          ],
+          "exported": true,
+          "lineCount": 81
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "useEffect",
+            "useRef"
+          ]
+        },
+        {
+          "source": "next/link",
+          "specifiers": [
+            "Link"
+          ]
+        }
+      ],
+      "exports": [
+        "VantaHero"
+      ],
+      "totalLines": 95,
+      "hasStructuralAnalysis": true
+    },
     "src/components/consent/MetaPixelConsent.tsx": {
       "filePath": "src/components/consent/MetaPixelConsent.tsx",
       "contentHash": "a39fbcff5ff77daecc58a6ac2755fe947004b4a63e15adf47d44fc671a29e3dd",
@@ -12624,18 +13166,6 @@
         "CookieSettingsLink"
       ],
       "totalLines": 112,
-      "hasStructuralAnalysis": true
-    },
-    "src/components/events/ask-an-ai-expert-quotes.ts": {
-      "filePath": "src/components/events/ask-an-ai-expert-quotes.ts",
-      "contentHash": "038b7b3deaff449e5606a3a6b2aeb62094906c5f169539eb483def01116674bc",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [
-        "askAnAiExpertQuotes"
-      ],
-      "totalLines": 311,
       "hasStructuralAnalysis": true
     },
     "src/components/events/AskAnAiExpertQuoteStrip.tsx": {
@@ -13130,6 +13660,87 @@
       "totalLines": 55,
       "hasStructuralAnalysis": true
     },
+    "src/components/events/ScrollToRegisterButton.tsx": {
+      "filePath": "src/components/events/ScrollToRegisterButton.tsx",
+      "contentHash": "5eaa344845823fe7cc9e655b2c30d23c1bce2c57d04673606c921b15c6de16ea",
+      "functions": [
+        {
+          "name": "ScrollToRegisterButton",
+          "params": [
+            "{ className, children }"
+          ],
+          "exported": true,
+          "lineCount": 18
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "ReactNode"
+          ]
+        }
+      ],
+      "exports": [
+        "ScrollToRegisterButton"
+      ],
+      "totalLines": 28,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/events/WaitlistJoinForm.tsx": {
+      "filePath": "src/components/events/WaitlistJoinForm.tsx",
+      "contentHash": "4662f3b294ba3131ddaadbb4d679e287854f519cc2aa7fd2b44193481476e61a",
+      "functions": [
+        {
+          "name": "WaitlistJoinForm",
+          "params": [
+            "{ durationLabel, eventSlug, eventTitle, initialName = '', initialEmail = '' }"
+          ],
+          "exported": true,
+          "lineCount": 131
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/lib/meta-pixel",
+          "specifiers": [
+            "trackMeta"
+          ]
+        },
+        {
+          "source": "react",
+          "specifiers": [
+            "useState"
+          ]
+        },
+        {
+          "source": "@/lib/email-validation",
+          "specifiers": [
+            "isValidEmail",
+            "normaliseEmail"
+          ]
+        }
+      ],
+      "exports": [
+        "WaitlistJoinForm"
+      ],
+      "totalLines": 147,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/events/ask-an-ai-expert-quotes.ts": {
+      "filePath": "src/components/events/ask-an-ai-expert-quotes.ts",
+      "contentHash": "038b7b3deaff449e5606a3a6b2aeb62094906c5f169539eb483def01116674bc",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "askAnAiExpertQuotes"
+      ],
+      "totalLines": 311,
+      "hasStructuralAnalysis": true
+    },
     "src/components/events/joechella/AmbientHeroVideo.tsx": {
       "filePath": "src/components/events/joechella/AmbientHeroVideo.tsx",
       "contentHash": "ba2533a8d45d81c62fc3b8f5e0a22c3abe7c056d9e1c920d32fcc1838a8e9971",
@@ -13160,16 +13771,6 @@
       ],
       "totalLines": 121,
       "hasStructuralAnalysis": true
-    },
-    "src/components/events/joechella/festival.css": {
-      "filePath": "src/components/events/joechella/festival.css",
-      "contentHash": "613c1e5f0a3cabfa15afddaa730fff403dd1cfa5ca02e5561844ec49079c102f",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 169,
-      "hasStructuralAnalysis": false
     },
     "src/components/events/joechella/FestivalHero.tsx": {
       "filePath": "src/components/events/joechella/FestivalHero.tsx",
@@ -13403,33 +14004,15 @@
       "totalLines": 95,
       "hasStructuralAnalysis": true
     },
-    "src/components/events/ScrollToRegisterButton.tsx": {
-      "filePath": "src/components/events/ScrollToRegisterButton.tsx",
-      "contentHash": "5eaa344845823fe7cc9e655b2c30d23c1bce2c57d04673606c921b15c6de16ea",
-      "functions": [
-        {
-          "name": "ScrollToRegisterButton",
-          "params": [
-            "{ className, children }"
-          ],
-          "exported": true,
-          "lineCount": 18
-        }
-      ],
+    "src/components/events/joechella/festival.css": {
+      "filePath": "src/components/events/joechella/festival.css",
+      "contentHash": "613c1e5f0a3cabfa15afddaa730fff403dd1cfa5ca02e5561844ec49079c102f",
+      "functions": [],
       "classes": [],
-      "imports": [
-        {
-          "source": "react",
-          "specifiers": [
-            "ReactNode"
-          ]
-        }
-      ],
-      "exports": [
-        "ScrollToRegisterButton"
-      ],
-      "totalLines": 28,
-      "hasStructuralAnalysis": true
+      "imports": [],
+      "exports": [],
+      "totalLines": 169,
+      "hasStructuralAnalysis": false
     },
     "src/components/events/voice-studio/VoiceStudioPage.tsx": {
       "filePath": "src/components/events/voice-studio/VoiceStudioPage.tsx",
@@ -13583,47 +14166,6 @@
         "VoiceStudioPage"
       ],
       "totalLines": 794,
-      "hasStructuralAnalysis": true
-    },
-    "src/components/events/WaitlistJoinForm.tsx": {
-      "filePath": "src/components/events/WaitlistJoinForm.tsx",
-      "contentHash": "4662f3b294ba3131ddaadbb4d679e287854f519cc2aa7fd2b44193481476e61a",
-      "functions": [
-        {
-          "name": "WaitlistJoinForm",
-          "params": [
-            "{ durationLabel, eventSlug, eventTitle, initialName = '', initialEmail = '' }"
-          ],
-          "exported": true,
-          "lineCount": 131
-        }
-      ],
-      "classes": [],
-      "imports": [
-        {
-          "source": "@/lib/meta-pixel",
-          "specifiers": [
-            "trackMeta"
-          ]
-        },
-        {
-          "source": "react",
-          "specifiers": [
-            "useState"
-          ]
-        },
-        {
-          "source": "@/lib/email-validation",
-          "specifiers": [
-            "isValidEmail",
-            "normaliseEmail"
-          ]
-        }
-      ],
-      "exports": [
-        "WaitlistJoinForm"
-      ],
-      "totalLines": 147,
       "hasStructuralAnalysis": true
     },
     "src/components/giveaways/GiveawayAutoModal.tsx": {
@@ -13896,181 +14438,6 @@
       "totalLines": 795,
       "hasStructuralAnalysis": true
     },
-    "src/components/PageParticles.tsx": {
-      "filePath": "src/components/PageParticles.tsx",
-      "contentHash": "efccf081de2e367b9e43d6b82e9ac33ad66033aaf4f4801b5fced60c0b536775",
-      "functions": [
-        {
-          "name": "PageParticles",
-          "params": [],
-          "exported": true,
-          "lineCount": 100
-        }
-      ],
-      "classes": [],
-      "imports": [
-        {
-          "source": "react",
-          "specifiers": [
-            "useEffect",
-            "useRef"
-          ]
-        }
-      ],
-      "exports": [
-        "PageParticles"
-      ],
-      "totalLines": 111,
-      "hasStructuralAnalysis": true
-    },
-    "src/components/ParticipantCarousel.tsx": {
-      "filePath": "src/components/ParticipantCarousel.tsx",
-      "contentHash": "d086c0131cb52de1e204de6186e16cdd0f1730e8289451a0184163c3026bfdaa",
-      "functions": [
-        {
-          "name": "Avatar",
-          "params": [
-            "{ photo, name }"
-          ],
-          "exported": false,
-          "lineCount": 20
-        },
-        {
-          "name": "ParticipantCarousel",
-          "params": [
-            "{ participants }"
-          ],
-          "exported": true,
-          "lineCount": 133
-        }
-      ],
-      "classes": [],
-      "imports": [
-        {
-          "source": "next/image",
-          "specifiers": [
-            "Image"
-          ]
-        }
-      ],
-      "exports": [
-        "ParticipantCarousel"
-      ],
-      "totalLines": 167,
-      "hasStructuralAnalysis": true
-    },
-    "src/components/PrepChecklistItem.tsx": {
-      "filePath": "src/components/PrepChecklistItem.tsx",
-      "contentHash": "b9f8d8e0c06e451f9c7e57d69a7d1dc65b1084414bd02115d4678fd6d76274d4",
-      "functions": [
-        {
-          "name": "PrepChecklistItem",
-          "params": [
-            "{\n  number,\n  title,\n  required = true,\n  children,\n}"
-          ],
-          "exported": true,
-          "lineCount": 56
-        }
-      ],
-      "classes": [],
-      "imports": [
-        {
-          "source": "react",
-          "specifiers": [
-            "React"
-          ]
-        }
-      ],
-      "exports": [
-        "PrepChecklistItem"
-      ],
-      "totalLines": 66,
-      "hasStructuralAnalysis": true
-    },
-    "src/components/ProTip.tsx": {
-      "filePath": "src/components/ProTip.tsx",
-      "contentHash": "1e0b22935dbaa4fc4ff6a266c9d2757adf6a9666852e4881fe830f7237a96e02",
-      "functions": [
-        {
-          "name": "ProTip",
-          "params": [
-            "{ type = 'tip', title, className, children }"
-          ],
-          "exported": true,
-          "lineCount": 17
-        }
-      ],
-      "classes": [],
-      "imports": [
-        {
-          "source": "react",
-          "specifiers": [
-            "React"
-          ]
-        }
-      ],
-      "exports": [
-        "ProTip"
-      ],
-      "totalLines": 50,
-      "hasStructuralAnalysis": true
-    },
-    "src/components/Reveal.tsx": {
-      "filePath": "src/components/Reveal.tsx",
-      "contentHash": "2cb6834ceeffa86b505c6d7d68a2ef6dd2096ef47d491f4b4787363ce141bfec",
-      "functions": [
-        {
-          "name": "Reveal",
-          "params": [
-            "{\n  children,\n  delay = 0,\n  className = '',\n  direction = 'up',\n}"
-          ],
-          "exported": true,
-          "lineCount": 28
-        }
-      ],
-      "classes": [],
-      "imports": [
-        {
-          "source": "framer-motion",
-          "specifiers": [
-            "motion",
-            "useInView"
-          ]
-        },
-        {
-          "source": "react",
-          "specifiers": [
-            "useRef"
-          ]
-        }
-      ],
-      "exports": [
-        "Reveal"
-      ],
-      "totalLines": 41,
-      "hasStructuralAnalysis": true
-    },
-    "src/components/ScreenshotCard.tsx": {
-      "filePath": "src/components/ScreenshotCard.tsx",
-      "contentHash": "1b7271084d3bc44dc92c99561fb89fa1434c252d43b6d853377cc85f7738f186",
-      "functions": [
-        {
-          "name": "ScreenshotCard",
-          "params": [
-            "{ src, alt, caption }"
-          ],
-          "exported": true,
-          "lineCount": 16
-        }
-      ],
-      "classes": [],
-      "imports": [],
-      "exports": [
-        "ScreenshotCard"
-      ],
-      "totalLines": 23,
-      "hasStructuralAnalysis": true
-    },
     "src/components/sections/MastermindReactionsSection.tsx": {
       "filePath": "src/components/sections/MastermindReactionsSection.tsx",
       "contentHash": "26ee4f3bad82abda80ce1df53fce8d5cd60a3e636d48a77556546698b48ae9c1",
@@ -14103,356 +14470,6 @@
         "MastermindReactionsSection"
       ],
       "totalLines": 152,
-      "hasStructuralAnalysis": true
-    },
-    "src/components/SessionCard.tsx": {
-      "filePath": "src/components/SessionCard.tsx",
-      "contentHash": "1c24ac512efa6ccf91198ad95b680cbd4310b793f4a90e6ec45ed39ddc65a180",
-      "functions": [
-        {
-          "name": "SessionCard",
-          "params": [
-            "{\n  slug,\n  number,\n  title,\n  description,\n  hasGuide,\n  hasPrep,\n  hasBonus,\n  hasWrapup,\n}"
-          ],
-          "exported": true,
-          "lineCount": 96
-        }
-      ],
-      "classes": [],
-      "imports": [
-        {
-          "source": "next/link",
-          "specifiers": [
-            "Link"
-          ]
-        }
-      ],
-      "exports": [
-        "SessionCard"
-      ],
-      "totalLines": 111,
-      "hasStructuralAnalysis": true
-    },
-    "src/components/SiteChrome.tsx": {
-      "filePath": "src/components/SiteChrome.tsx",
-      "contentHash": "f08416bc2f84a8bb09c6d82010df1b61bb67e0c449dd9776e90ec658adb4dc21",
-      "functions": [
-        {
-          "name": "SiteChrome",
-          "params": [
-            "{ children }"
-          ],
-          "exported": true,
-          "lineCount": 32
-        }
-      ],
-      "classes": [],
-      "imports": [
-        {
-          "source": "next/navigation",
-          "specifiers": [
-            "usePathname"
-          ]
-        },
-        {
-          "source": "react",
-          "specifiers": [
-            "ReactNode"
-          ]
-        },
-        {
-          "source": "@/components/SiteFooter",
-          "specifiers": [
-            "SiteFooter"
-          ]
-        },
-        {
-          "source": "@/components/SiteHeader",
-          "specifiers": [
-            "SiteHeader"
-          ]
-        },
-        {
-          "source": "@/components/PageParticles",
-          "specifiers": [
-            "PageParticles"
-          ]
-        }
-      ],
-      "exports": [
-        "SiteChrome"
-      ],
-      "totalLines": 41,
-      "hasStructuralAnalysis": true
-    },
-    "src/components/SiteFooter.tsx": {
-      "filePath": "src/components/SiteFooter.tsx",
-      "contentHash": "ae4f1ee0c1aa8c493641c24578dec5d4d573f9e498f75b06c60684951d11a03c",
-      "functions": [
-        {
-          "name": "SiteFooter",
-          "params": [],
-          "exported": true,
-          "lineCount": 71
-        }
-      ],
-      "classes": [],
-      "imports": [
-        {
-          "source": "@/components/consent/MetaPixelConsent",
-          "specifiers": [
-            "CookieSettingsLink"
-          ]
-        }
-      ],
-      "exports": [
-        "SiteFooter"
-      ],
-      "totalLines": 74,
-      "hasStructuralAnalysis": true
-    },
-    "src/components/SiteHeader.tsx": {
-      "filePath": "src/components/SiteHeader.tsx",
-      "contentHash": "0414e6915c071942b8b2e0a8795952b5a304245d4162b3d27c6c1ea00f5f47b9",
-      "functions": [
-        {
-          "name": "SiteHeader",
-          "params": [],
-          "exported": true,
-          "lineCount": 27
-        }
-      ],
-      "classes": [],
-      "imports": [
-        {
-          "source": "next/link",
-          "specifiers": [
-            "Link"
-          ]
-        },
-        {
-          "source": "next/image",
-          "specifiers": [
-            "Image"
-          ]
-        },
-        {
-          "source": "next/navigation",
-          "specifiers": [
-            "usePathname"
-          ]
-        }
-      ],
-      "exports": [
-        "SiteHeader"
-      ],
-      "totalLines": 34,
-      "hasStructuralAnalysis": true
-    },
-    "src/components/StaggerList.tsx": {
-      "filePath": "src/components/StaggerList.tsx",
-      "contentHash": "87c27e25882d8a19532d0fbf3ed5d1623fb96dad330475a87a9ca7d69ad6b8f3",
-      "functions": [
-        {
-          "name": "StaggerList",
-          "params": [
-            "{ children, className = '', staggerDelay = 0.07 }"
-          ],
-          "exported": true,
-          "lineCount": 19
-        },
-        {
-          "name": "StaggerItem",
-          "params": [
-            "{ children, className = '' }"
-          ],
-          "exported": true,
-          "lineCount": 17
-        }
-      ],
-      "classes": [],
-      "imports": [
-        {
-          "source": "framer-motion",
-          "specifiers": [
-            "motion",
-            "useInView"
-          ]
-        },
-        {
-          "source": "react",
-          "specifiers": [
-            "useRef"
-          ]
-        }
-      ],
-      "exports": [
-        "StaggerList",
-        "StaggerItem"
-      ],
-      "totalLines": 49,
-      "hasStructuralAnalysis": true
-    },
-    "src/components/StepCard.tsx": {
-      "filePath": "src/components/StepCard.tsx",
-      "contentHash": "cded5cbcec558699f71bfe15a52b260d7ce63e7eddb222c6e50424abf9984487",
-      "functions": [
-        {
-          "name": "StepCard",
-          "params": [
-            "{ number, title, children }"
-          ],
-          "exported": true,
-          "lineCount": 22
-        }
-      ],
-      "classes": [],
-      "imports": [
-        {
-          "source": "react",
-          "specifiers": [
-            "React"
-          ]
-        }
-      ],
-      "exports": [
-        "StepCard"
-      ],
-      "totalLines": 31,
-      "hasStructuralAnalysis": true
-    },
-    "src/components/StickyVideoPlayer.tsx": {
-      "filePath": "src/components/StickyVideoPlayer.tsx",
-      "contentHash": "2a761b5d343f32f3ef2b77d0822dae7262293b01ffe9fbdebbb33f936f7f1a05",
-      "functions": [
-        {
-          "name": "InlineOnlyVideoPlayer",
-          "params": [
-            "{ src, title = 'Workshop Recording' }"
-          ],
-          "exported": false,
-          "lineCount": 17
-        },
-        {
-          "name": "StickyVideoPlayer",
-          "params": [
-            "props"
-          ],
-          "exported": true,
-          "lineCount": 7
-        },
-        {
-          "name": "StickyVideoPlayerWithStickyBehavior",
-          "params": [
-            "{ videoId, videos, src, title = 'Workshop Recording' }"
-          ],
-          "exported": false,
-          "lineCount": 460
-        }
-      ],
-      "classes": [],
-      "imports": [
-        {
-          "source": "react",
-          "specifiers": [
-            "useState",
-            "useRef",
-            "useEffect",
-            "useCallback",
-            "MouseEvent"
-          ]
-        }
-      ],
-      "exports": [
-        "StickyVideoPlayer"
-      ],
-      "totalLines": 504,
-      "hasStructuralAnalysis": true
-    },
-    "src/components/TabNav.tsx": {
-      "filePath": "src/components/TabNav.tsx",
-      "contentHash": "70b01b51691d34d1333f41f3b0e1f1712d11598c898c1086010891046ce6961a",
-      "functions": [
-        {
-          "name": "TabNav",
-          "params": [],
-          "exported": true,
-          "lineCount": 38
-        }
-      ],
-      "classes": [],
-      "imports": [
-        {
-          "source": "next/link",
-          "specifiers": [
-            "Link"
-          ]
-        },
-        {
-          "source": "next/navigation",
-          "specifiers": [
-            "usePathname"
-          ]
-        }
-      ],
-      "exports": [
-        "TabNav"
-      ],
-      "totalLines": 50,
-      "hasStructuralAnalysis": true
-    },
-    "src/components/TianaSessionFooter.tsx": {
-      "filePath": "src/components/TianaSessionFooter.tsx",
-      "contentHash": "9aa87a844520dc7916e566f89c09c00e324f593b3b1f391c92d9f4e719ef7c36",
-      "functions": [
-        {
-          "name": "TianaSessionFooter",
-          "params": [],
-          "exported": true,
-          "lineCount": 27
-        }
-      ],
-      "classes": [],
-      "imports": [],
-      "exports": [
-        "TianaSessionFooter"
-      ],
-      "totalLines": 28,
-      "hasStructuralAnalysis": true
-    },
-    "src/components/VantaHero.tsx": {
-      "filePath": "src/components/VantaHero.tsx",
-      "contentHash": "cb79f90fe0058d811cd03f8e9463c364162aca7afc13142900018d08a3a93f22",
-      "functions": [
-        {
-          "name": "VantaHero",
-          "params": [
-            "{ sessionNumber, title, description, slug, subpage }"
-          ],
-          "exported": true,
-          "lineCount": 81
-        }
-      ],
-      "classes": [],
-      "imports": [
-        {
-          "source": "react",
-          "specifiers": [
-            "useEffect",
-            "useRef"
-          ]
-        },
-        {
-          "source": "next/link",
-          "specifiers": [
-            "Link"
-          ]
-        }
-      ],
-      "exports": [
-        "VantaHero"
-      ],
-      "totalLines": 95,
       "hasStructuralAnalysis": true
     },
     "src/content/session-1-bonus.tsx": {
@@ -16843,7 +16860,7 @@
     },
     "src/lib/event-confirmation-email.ts": {
       "filePath": "src/lib/event-confirmation-email.ts",
-      "contentHash": "88a13bcc18abf2aa752ead2659354560421871f057f0aee29b4bd6713880adab",
+      "contentHash": "cd0db0fb78d2062520fd2deea6dc1de7ed98ff2d5f2280756315599eb7e9d641",
       "functions": [
         {
           "name": "getSiteUrl",
@@ -16929,7 +16946,7 @@
             "input"
           ],
           "exported": false,
-          "lineCount": 42
+          "lineCount": 44
         },
         {
           "name": "buildConfirmationIdempotencyKey",
@@ -16970,12 +16987,32 @@
           "lineCount": 3
         },
         {
+          "name": "escapeLetterHtml",
+          "params": [
+            "value"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "buildLetterConfirmation",
+          "params": [
+            "letter",
+            "attendeeName",
+            "zoomLink"
+          ],
+          "returnType": "{ html: string; text: string }",
+          "exported": true,
+          "lineCount": 25
+        },
+        {
           "name": "sendEventConfirmationEmail",
           "params": [
             "input"
           ],
           "exported": true,
-          "lineCount": 56
+          "lineCount": 63
         },
         {
           "name": "sendAiContentCreationSetupEmail",
@@ -17112,6 +17149,7 @@
         "buildWaitlistJoinIdempotencyKey",
         "buildAiContentCreationSetupIdempotencyKey",
         "buildAskAnAiExpertWelcomeIdempotencyKey",
+        "buildLetterConfirmation",
         "sendEventConfirmationEmail",
         "sendAiContentCreationSetupEmail",
         "sendAskAnAiExpertWelcomeEmail",
@@ -17121,7 +17159,7 @@
         "sendWaitlistSpotNotificationEmail",
         "sendRegistrationBackupAlert"
       ],
-      "totalLines": 966,
+      "totalLines": 1010,
       "hasStructuralAnalysis": true
     },
     "src/lib/event-email-ledger.ts": {
@@ -17751,7 +17789,7 @@
     },
     "src/lib/events.tsx": {
       "filePath": "src/lib/events.tsx",
-      "contentHash": "89f9e5a41a14cd6ad0f8bafee062ce77ac13e38fcc4bc6de2a67f135a1886250",
+      "contentHash": "240cbbaeb2cd3147f4b0b3d705faac6f1f2123421f0da2e28c79cf2d493cd085",
       "functions": [
         {
           "name": "getDiscountedPrice",
@@ -17862,7 +17900,7 @@
         "getLiveEvents",
         "getUpcomingLiveEvents"
       ],
-      "totalLines": 2270,
+      "totalLines": 2290,
       "hasStructuralAnalysis": true
     },
     "src/lib/free-ai-tool-email.ts": {
@@ -18632,7 +18670,7 @@
     },
     "src/lib/google-calendar-invite.ts": {
       "filePath": "src/lib/google-calendar-invite.ts",
-      "contentHash": "452d8ea3def208c8c1800e63f11cecfbeab9f91b60f29402258e2f6fb81e5061",
+      "contentHash": "b3d7b2a7d4a23f73f32cf2ecde89f825c7830bd58cd88bd23db09a5018dd944b",
       "functions": [
         {
           "name": "resolveCalendarEventId",
@@ -18658,7 +18696,7 @@
           ],
           "returnType": "Promise<CalendarInviteResult>",
           "exported": true,
-          "lineCount": 80
+          "lineCount": 81
         }
       ],
       "classes": [],
@@ -18686,7 +18724,7 @@
         "resolveCalendarEventId",
         "inviteAttendeeToEvent"
       ],
-      "totalLines": 122,
+      "totalLines": 123,
       "hasStructuralAnalysis": true
     },
     "src/lib/html-to-text.ts": {
@@ -22292,6 +22330,41 @@
       ],
       "exports": [],
       "totalLines": 20,
+      "hasStructuralAnalysis": true
+    },
+    "tests/letter-confirmation.test.ts": {
+      "filePath": "tests/letter-confirmation.test.ts",
+      "contentHash": "1a878e7fb3cc34e2c7811f7c933aa20df6b6b4e458eafbf678e631eee7e72f6e",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:test",
+          "specifiers": [
+            "test"
+          ]
+        },
+        {
+          "source": "node:assert/strict",
+          "specifiers": [
+            "assert"
+          ]
+        },
+        {
+          "source": "../src/lib/event-confirmation-email",
+          "specifiers": [
+            "buildLetterConfirmation"
+          ]
+        },
+        {
+          "source": "../src/lib/events",
+          "specifiers": [
+            "getEventBySlug"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 34,
       "hasStructuralAnalysis": true
     },
     "tests/linkedin-kit.test.ts": {

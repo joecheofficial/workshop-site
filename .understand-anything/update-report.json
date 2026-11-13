@@ -1,18 +1,19 @@
 {
   "mode": "incremental",
-  "filesAnalyzed": 6,
+  "filesAnalyzed": 5,
   "analyzedFilePaths": [
-    "src/components/events/DinnerPhotoCarousel.tsx",
-    "src/components/events/EventPageView.tsx",
-    "src/components/events/EventRegistrationSection.tsx",
-    "src/components/events/voice-studio/VoiceStudioPage.tsx",
-    "src/lib/event-intake.ts",
-    "src/lib/events.tsx"
+    "scripts/giveaway-followups.mjs",
+    "src/lib/event-confirmation-email.ts",
+    "src/lib/events.tsx",
+    "src/lib/google-calendar-invite.ts",
+    "tests/letter-confirmation.test.ts"
   ],
-  "nodeCount": 298,
-  "edgeCount": 560,
+  "inventoryFiles": 593,
+  "representedFilePaths": 136,
+  "nodeCount": 329,
+  "edgeCount": 646,
   "layerCount": 9,
-  "tourSteps": 13,
+  "tourSteps": 14,
   "validation": {
     "issues": [],
     "warnings": [
@@ -23,44 +24,96 @@
       "Node 'function:src/app/api/events/abandoned-checkout-followups/route.ts:acquireEventLock' has no edges (orphan)",
       "Node 'function:src/app/api/events/cancel/route.ts:escapeHtml' has no edges (orphan)",
       "Node 'function:src/app/api/events/session-reminders/route.ts:acquireEventWindowLock' has no edges (orphan)",
-      "Node 'file:src/app/api/unsubscribe/route.ts' has no edges (orphan)",
-      "Node 'file:src/app/bonus/auto-lead-magnet/page.tsx' has no edges (orphan)",
-      "Node 'file:src/lib/supabase.ts' has no edges (orphan)"
+      "Node 'file:src/app/bonus/auto-lead-magnet/page.tsx' has no edges (orphan)"
     ],
     "stats": {
-      "totalNodes": 298,
-      "totalEdges": 560,
+      "totalNodes": 329,
+      "totalEdges": 646,
       "totalLayers": 9,
-      "tourSteps": 13,
+      "tourSteps": 14,
       "nodeTypes": {
-        "file": 117,
-        "function": 179,
+        "file": 124,
+        "function": 203,
         "document": 1,
         "config": 1
       },
       "edgeTypes": {
-        "contains": 183,
-        "imports": 160,
-        "tested_by": 16,
-        "calls": 77,
+        "contains": 207,
+        "imports": 179,
+        "tested_by": 18,
+        "calls": 100,
         "related": 4,
-        "exports": 106,
+        "exports": 124,
         "configures": 2,
         "depends_on": 12
       }
     }
   },
+  "schemaValidation": "passed",
   "assembleReview": {
     "fixedSectionOk": true,
-    "nodesRecovered": 12,
-    "edgesRestored": 3,
-    "crossBatchEdgesAdded": 20,
+    "nodesRecovered": 5,
+    "edgesRestored": 5,
+    "crossBatchEdgesAdded": 10,
     "typesRemapped": 0,
     "complexityRemapped": 0,
     "notes": [
-      "No mechanical ID/type/complexity fixes were reported; the 12 dropped import targets were recovered only as inventory-verified reference nodes.",
-      "Restored three previously recorded calls from unchanged event-route functions to preserved catalog function identities.",
-      "32 additional import target paths remain outside this partial graph; no unchanged source files were re-analyzed."
+      "No mechanical corrections were reported; node IDs and complexity values needed no normalization.",
+      "Recovered five inventory-verified file reference nodes only; no unchanged source files were analyzed and no function nodes were invented.",
+      "Six call edges remain omitted because five target function identities lack extraction evidence in this partial graph.",
+      "Preserved all existing assembled relationships, including the previously recovered 24 unchanged-source incoming relationships.",
+      "28 imported dependency paths remain outside the partial graph."
+    ],
+    "recoveredNodeIds": [
+      "file:src/lib/email-logo.ts",
+      "file:src/lib/email-suppressions.ts",
+      "file:src/lib/list-unsubscribe.ts",
+      "file:src/lib/location-reminder.ts",
+      "file:src/lib/session-reminder.ts"
+    ],
+    "unresolvedEdges": [
+      {
+        "source": "function:scripts/giveaway-followups.mjs:resendSend",
+        "target": "function:src/lib/email-logo.ts:withEmailLogo",
+        "type": "calls",
+        "direction": "forward",
+        "weight": 0.8
+      },
+      {
+        "source": "function:scripts/giveaway-followups.mjs:renderAll",
+        "target": "function:src/lib/email-logo.ts:withEmailLogo",
+        "type": "calls",
+        "direction": "forward",
+        "weight": 0.8
+      },
+      {
+        "source": "function:src/lib/event-confirmation-email.ts:buildAskAnAiExpertWelcomeEmailHtml",
+        "target": "function:src/lib/utm.ts:withUtm",
+        "type": "calls",
+        "direction": "forward",
+        "weight": 0.8
+      },
+      {
+        "source": "function:src/lib/event-confirmation-email.ts:buildAskAnAiExpertWelcomeEmailHtml",
+        "target": "function:src/lib/list-unsubscribe.ts:buildUnsubscribeUrl",
+        "type": "calls",
+        "direction": "forward",
+        "weight": 0.8
+      },
+      {
+        "source": "function:src/lib/event-confirmation-email.ts:sendAskAnAiExpertWelcomeEmail",
+        "target": "function:src/lib/email-suppressions.ts:isSuppressed",
+        "type": "calls",
+        "direction": "forward",
+        "weight": 0.8
+      },
+      {
+        "source": "function:src/lib/event-confirmation-email.ts:sendAskAnAiExpertWelcomeEmail",
+        "target": "function:src/lib/list-unsubscribe.ts:buildUnsubscribeHeaders",
+        "type": "calls",
+        "direction": "forward",
+        "weight": 0.8
+      }
     ],
     "unrepresentedImportTargets": [
       "src/app/giveaways/claude-md/prompts.ts",
@@ -74,23 +127,19 @@
       "src/components/giveaways/GiveawayEmailModal.tsx",
       "src/components/giveaways/PackPage.module.css",
       "src/components/sections/MastermindReactionsSection.tsx",
-      "src/lib/email-logo.ts",
-      "src/lib/email-suppressions.ts",
       "src/lib/event-capacity.ts",
+      "src/lib/event-email-ledger.ts",
       "src/lib/event-registration-db.ts",
       "src/lib/free-ai-tools-hub-email.ts",
       "src/lib/giveaway-dm.ts",
       "src/lib/html-to-text.ts",
       "src/lib/insight-to-fix.ts",
       "src/lib/legacy-event-schedule.ts",
-      "src/lib/list-unsubscribe.ts",
-      "src/lib/location-reminder.ts",
       "src/lib/masterminds-checkout-branding.ts",
       "src/lib/meta-consent.ts",
       "src/lib/quiz-giveaway-email.ts",
       "src/lib/rate-limit.ts",
       "src/lib/registration-profile-token.ts",
-      "src/lib/session-reminder.ts",
       "src/lib/speak-human-email.ts",
       "src/lib/stripe-amount.ts",
       "src/lib/whatsapp-agent-email.ts",
@@ -98,13 +147,20 @@
     ]
   },
   "phaseWarnings": [
-    "Initial inherited-context agent dispatch failed with invalid thread-store request; the permitted fresh-context retry succeeded.",
-    "Batches originally included unchanged community members; filtered to exactly six changed source files before analysis.",
-    "Community splitting and neighbor soft-cap warnings emitted by batcher.",
-    "Existing partial coverage retained; twelve dependency reference nodes recovered without analyzing unchanged sources.",
-    "README.md absent; existing metadata and package manifest used."
+    "Initial inherited-context dispatch failed with invalid thread-store request; native fresh-context retry succeeded.",
+    "Computed batches included unchanged community files; filtered to exactly five changed files.",
+    "Batcher emitted community splitting and neighbor soft-cap warnings.",
+    "Merge script rejects documented batch-existing.json; unchanged graph supplied as numeric batch-0.json.",
+    "Preserved existing partial coverage. Five inventory-verified dependency reference nodes recovered without analyzing unchanged source.",
+    "Six call edges omitted because target functions lack extraction evidence; 28 imported dependency paths remain outside partial graph.",
+    "README absent and root page/layout absent from existing graph; tour explicitly states partial scope."
   ],
-  "fingerprintsBaseline": 592,
+  "fingerprintsBaseline": 593,
   "graphPath": "/Users/myos/.myos/workspace/projects/mastermind/workshop-site/.understand-anything/knowledge-graph.json",
-  "dashboardLaunched": false
+  "dashboardLaunched": false,
+  "fileCategoriesAnalyzed": {
+    "script": 1,
+    "code": 4
+  },
+  "backupPath": "/Users/myos/.myos/workspace/projects/mastermind/workshop-site/.understand-anything/backup-20261114T040415"
 }
