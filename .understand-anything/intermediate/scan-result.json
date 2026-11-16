@@ -2875,7 +2875,7 @@
     {
       "path": "src/lib/events.tsx",
       "language": "typescript",
-      "sizeLines": 2289,
+      "sizeLines": 2295,
       "fileCategory": "code"
     },
     {
@@ -3043,7 +3043,7 @@
     {
       "path": "src/lib/session-reminder.ts",
       "language": "typescript",
-      "sizeLines": 167,
+      "sizeLines": 168,
       "fileCategory": "code"
     },
     {
@@ -3523,7 +3523,7 @@
     {
       "path": "tests/session-reminder.test.ts",
       "language": "typescript",
-      "sizeLines": 156,
+      "sizeLines": 192,
       "fileCategory": "code"
     },
     {

@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "gitCommitHash": "a0947d51cb7eab20abf0326c98189ebb89784360",
-  "generatedAt": "2026-11-13T20:09:02.148Z",
+  "gitCommitHash": "8951baec1c521dbaab09992ff4a069e0554a6620",
+  "generatedAt": "2026-11-16T20:12:48.081Z",
   "files": {
     ".claude/settings.json": {
       "filePath": ".claude/settings.json",
@@ -17789,7 +17789,7 @@
     },
     "src/lib/events.tsx": {
       "filePath": "src/lib/events.tsx",
-      "contentHash": "240cbbaeb2cd3147f4b0b3d705faac6f1f2123421f0da2e28c79cf2d493cd085",
+      "contentHash": "248f43d2bee46e0f7bb3130b553247cff61174ce00292ee0b9c45bf2fb756688",
       "functions": [
         {
           "name": "getDiscountedPrice",
@@ -17900,7 +17900,7 @@
         "getLiveEvents",
         "getUpcomingLiveEvents"
       ],
-      "totalLines": 2290,
+      "totalLines": 2296,
       "hasStructuralAnalysis": true
     },
     "src/lib/free-ai-tool-email.ts": {
@@ -19875,7 +19875,7 @@
     },
     "src/lib/session-reminder.ts": {
       "filePath": "src/lib/session-reminder.ts",
-      "contentHash": "f22ca8887be6f0e89b5faa1fec5d1de71292cae4251399f766d2408ecc1ea9c6",
+      "contentHash": "fefedf1a949321e1537076251202e872050317c1c739ec7d1b25c68fe34a5b20",
       "functions": [
         {
           "name": "buildSessionReminderIdempotencyKey",
@@ -19918,7 +19918,7 @@
           ],
           "returnType": "Promise<{ results: SessionReminderRunResult[] }>",
           "exported": true,
-          "lineCount": 73
+          "lineCount": 74
         }
       ],
       "classes": [],
@@ -19943,7 +19943,7 @@
         "getDueSessionReminderWindows",
         "runSessionReminders"
       ],
-      "totalLines": 168,
+      "totalLines": 169,
       "hasStructuralAnalysis": true
     },
     "src/lib/sessions.ts": {
@@ -22879,7 +22879,7 @@
     },
     "tests/session-reminder.test.ts": {
       "filePath": "tests/session-reminder.test.ts",
-      "contentHash": "7770b8f947fd95ac8a181a15b0c91eaadaaefb88d590e8733f6b2514418fcd42",
+      "contentHash": "bb8ea57b53cdf794a5db08b692b343cbbaafb653bdd650022671b34b73cdf00f",
       "functions": [],
       "classes": [],
       "imports": [
@@ -22918,7 +22918,7 @@
         }
       ],
       "exports": [],
-      "totalLines": 157,
+      "totalLines": 193,
       "hasStructuralAnalysis": true
     },
     "tests/settle-attached-checkout.test.ts": {

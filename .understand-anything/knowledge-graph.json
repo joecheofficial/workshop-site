@@ -4869,157 +4869,6 @@
       "complexity": "simple"
     },
     {
-      "id": "file:src/lib/events.tsx",
-      "type": "file",
-      "name": "events.tsx",
-      "filePath": "src/lib/events.tsx",
-      "summary": "Defines the event catalog and event configuration types, including pricing, page content, hosts, and calendar details. Exposes promo pricing, donation selection, and live/upcoming event lookup helpers.",
-      "tags": [
-        "data-model",
-        "event-catalog",
-        "pricing",
-        "utility",
-        "tested"
-      ],
-      "complexity": "complex"
-    },
-    {
-      "id": "function:src/lib/events.tsx:getEventDiscountedPrice",
-      "type": "function",
-      "name": "getEventDiscountedPrice",
-      "filePath": "src/lib/events.tsx",
-      "lineRange": [
-        323,
-        325
-      ],
-      "summary": "Computes an event ticket price after an optional fixed or percentage discount, clamped to zero.",
-      "tags": [
-        "data-model",
-        "event-catalog",
-        "pricing"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/events.tsx:resolvePromoCode",
-      "type": "function",
-      "name": "resolvePromoCode",
-      "filePath": "src/lib/events.tsx",
-      "lineRange": [
-        327,
-        331
-      ],
-      "summary": "Finds an event promo code after trimming and case-normalizing the supplied value.",
-      "tags": [
-        "data-model",
-        "event-catalog",
-        "pricing"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/events.tsx:formatEventPrice",
-      "type": "function",
-      "name": "formatEventPrice",
-      "filePath": "src/lib/events.tsx",
-      "lineRange": [
-        333,
-        338
-      ],
-      "summary": "Formats the discounted ticket price with its currency symbol or returns the pending-price announcement.",
-      "tags": [
-        "data-model",
-        "event-catalog",
-        "pricing"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/events.tsx:formatDonationLabelNote",
-      "type": "function",
-      "name": "formatDonationLabelNote",
-      "filePath": "src/lib/events.tsx",
-      "lineRange": [
-        340,
-        350
-      ],
-      "summary": "Formats a custom donation note or a suggested amount and minimum donation note.",
-      "tags": [
-        "data-model",
-        "event-catalog",
-        "pricing"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/events.tsx:toggleDonationPreset",
-      "type": "function",
-      "name": "toggleDonationPreset",
-      "filePath": "src/lib/events.tsx",
-      "lineRange": [
-        352,
-        369
-      ],
-      "summary": "Adds or removes a donation preset while preserving the minimum donation and returning the next selection state.",
-      "tags": [
-        "data-model",
-        "event-catalog",
-        "pricing"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/events.tsx:getEventBySlug",
-      "type": "function",
-      "name": "getEventBySlug",
-      "filePath": "src/lib/events.tsx",
-      "lineRange": [
-        2266,
-        2268
-      ],
-      "summary": "Looks up the event definition with a matching slug.",
-      "tags": [
-        "data-model",
-        "event-catalog",
-        "pricing"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/events.tsx:getLiveEvents",
-      "type": "function",
-      "name": "getLiveEvents",
-      "filePath": "src/lib/events.tsx",
-      "lineRange": [
-        2270,
-        2272
-      ],
-      "summary": "Returns event definitions marked live.",
-      "tags": [
-        "data-model",
-        "event-catalog",
-        "pricing"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/events.tsx:getUpcomingLiveEvents",
-      "type": "function",
-      "name": "getUpcomingLiveEvents",
-      "filePath": "src/lib/events.tsx",
-      "lineRange": [
-        2274,
-        2289
-      ],
-      "summary": "Filters live events that have not ended and sorts them by start time, retaining undated events after dated ones.",
-      "tags": [
-        "data-model",
-        "event-catalog",
-        "pricing"
-      ],
-      "complexity": "simple"
-    },
-    {
       "id": "file:src/lib/google-calendar-invite.ts",
       "type": "file",
       "name": "google-calendar-invite.ts",
@@ -5449,20 +5298,268 @@
       ]
     },
     {
-      "id": "file:src/lib/session-reminder.ts",
-      "name": "session-reminder.ts",
+      "id": "file:src/lib/events.tsx",
       "type": "file",
-      "filePath": "src/lib/session-reminder.ts",
-      "path": "src/lib/session-reminder.ts",
-      "language": "typescript",
-      "category": "code",
-      "lineCount": 167,
-      "complexity": "moderate",
-      "summary": "Inventory-verified dependency reference; unchanged source was not analyzed in this incremental update.",
+      "name": "events.tsx",
+      "filePath": "src/lib/events.tsx",
+      "summary": "Defines the workshop and gathering catalog, event page content, calendar and registration settings, pricing, promotions, and donation helpers. Supplies event lookup and upcoming live-event ordering to pages and registration workflows.",
       "tags": [
-        "dependency-reference",
-        "partial-coverage"
-      ]
+        "event-catalog",
+        "data-model",
+        "pricing",
+        "calendar"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/lib/events.tsx:getEventDiscountedPrice",
+      "type": "function",
+      "name": "getEventDiscountedPrice",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        327,
+        329
+      ],
+      "summary": "Computes an event ticket price using an optional fixed or percentage promotion.",
+      "tags": [
+        "pricing",
+        "utility",
+        "discount"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/events.tsx:resolvePromoCode",
+      "type": "function",
+      "name": "resolvePromoCode",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        331,
+        335
+      ],
+      "summary": "Finds a configured event promotion using trimmed, case-insensitive code matching.",
+      "tags": [
+        "pricing",
+        "validation",
+        "promotion"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/events.tsx:formatEventPrice",
+      "type": "function",
+      "name": "formatEventPrice",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        337,
+        342
+      ],
+      "summary": "Formats the discounted ticket amount with its currency symbol, or returns the pending-price label.",
+      "tags": [
+        "pricing",
+        "formatting",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/events.tsx:formatDonationLabelNote",
+      "type": "function",
+      "name": "formatDonationLabelNote",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        344,
+        354
+      ],
+      "summary": "Formats a configured donation note or the suggested and minimum donation amounts.",
+      "tags": [
+        "donation",
+        "formatting",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/events.tsx:toggleDonationPreset",
+      "type": "function",
+      "name": "toggleDonationPreset",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        356,
+        373
+      ],
+      "summary": "Adds or subtracts a donation preset when toggled while enforcing the minimum donation.",
+      "tags": [
+        "donation",
+        "state-update",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/events.tsx:getEventBySlug",
+      "type": "function",
+      "name": "getEventBySlug",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        2272,
+        2274
+      ],
+      "summary": "Finds an event definition by its URL slug.",
+      "tags": [
+        "event-catalog",
+        "lookup",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/events.tsx:getLiveEvents",
+      "type": "function",
+      "name": "getLiveEvents",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        2276,
+        2278
+      ],
+      "summary": "Selects event definitions whose publication status is live.",
+      "tags": [
+        "event-catalog",
+        "filtering",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/events.tsx:getUpcomingLiveEvents",
+      "type": "function",
+      "name": "getUpcomingLiveEvents",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        2280,
+        2295
+      ],
+      "summary": "Filters live events against their calendar end or start time and sorts upcoming events by start time.",
+      "tags": [
+        "event-catalog",
+        "sorting",
+        "calendar"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/lib/session-reminder.ts",
+      "type": "file",
+      "name": "session-reminder.ts",
+      "filePath": "src/lib/session-reminder.ts",
+      "summary": "Schedules 24-hour and 2-hour reminders for eligible online events through injected registration, locking, and delivery dependencies. Deduplicates attendees, supports dry runs and forced scheduling, and skips events that disable default reminders.",
+      "tags": [
+        "service",
+        "scheduling",
+        "email",
+        "idempotency"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/session-reminder.ts:buildSessionReminderIdempotencyKey",
+      "type": "function",
+      "name": "buildSessionReminderIdempotencyKey",
+      "filePath": "src/lib/session-reminder.ts",
+      "lineRange": [
+        18,
+        26
+      ],
+      "summary": "Builds a reminder delivery key from the window, event slug, event start, and normalized attendee email.",
+      "tags": [
+        "idempotency",
+        "email",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/session-reminder.ts:buildSessionReminderLockKey",
+      "type": "function",
+      "name": "buildSessionReminderLockKey",
+      "filePath": "src/lib/session-reminder.ts",
+      "lineRange": [
+        28,
+        34
+      ],
+      "summary": "Builds a daily event and reminder-window lock key for suppressing repeated scheduler runs.",
+      "tags": [
+        "locking",
+        "idempotency",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/session-reminder.ts:isSessionReminderDue",
+      "type": "function",
+      "name": "isSessionReminderDue",
+      "filePath": "src/lib/session-reminder.ts",
+      "lineRange": [
+        36,
+        50
+      ],
+      "summary": "Checks whether the current time falls inside the reminder window offset from the event start.",
+      "tags": [
+        "scheduling",
+        "date-time",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/session-reminder.ts:getDueSessionReminderWindows",
+      "type": "function",
+      "name": "getDueSessionReminderWindows",
+      "filePath": "src/lib/session-reminder.ts",
+      "lineRange": [
+        52,
+        60
+      ],
+      "summary": "Selects the configured 24-hour and 2-hour windows currently due for an event.",
+      "tags": [
+        "scheduling",
+        "filtering",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/session-reminder.ts:runSessionReminders",
+      "type": "function",
+      "name": "runSessionReminders",
+      "filePath": "src/lib/session-reminder.ts",
+      "lineRange": [
+        95,
+        168
+      ],
+      "summary": "Processes eligible online events and due windows, deduplicates confirmed attendees, acquires run locks, and sends reminders through injected dependencies. Supports dry-run counting, collects delivery errors, and skips events disabling default reminders.",
+      "tags": [
+        "service",
+        "scheduling",
+        "email",
+        "dependency-injection"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/session-reminder.test.ts",
+      "type": "file",
+      "name": "session-reminder.test.ts",
+      "filePath": "tests/session-reminder.test.ts",
+      "summary": "Tests reminder timing, stable idempotency and lock keys, duplicate-recipient suppression, and reminder email content. Verifies that events disabling default reminders are skipped even during forced runs.",
+      "tags": [
+        "test",
+        "scheduling",
+        "email",
+        "regression"
+      ],
+      "complexity": "moderate"
     }
   ],
   "edges": [
@@ -8825,172 +8922,6 @@
       "weight": 0.7
     },
     {
-      "source": "file:src/components/events/EventRegistrationSection.tsx",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/components/events/voice-studio/VoiceStudioPage.tsx",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
-      "target": "function:src/lib/events.tsx:formatDonationLabelNote",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
-      "target": "function:src/lib/events.tsx:toggleDonationPreset",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "function:src/components/events/EventPageView.tsx:CtaSection",
-      "target": "function:src/lib/events.tsx:formatEventPrice",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/components/events/EventPageView.tsx:EventPageView",
-      "target": "function:src/lib/events.tsx:getEventDiscountedPrice",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/app/api/events/checkout-session/route.ts",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
-      "source": "file:src/app/events/[slug]/page.tsx",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
-      "source": "file:src/app/events/[slug]/setup/page.tsx",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
-      "source": "file:src/app/events/page.tsx",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
-      "source": "file:src/components/events/joechella/FestivalHero.tsx",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
-      "source": "file:src/components/events/joechella/ProgramTimeline.tsx",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
-      "source": "file:src/components/events/joechella/VenueGallery.tsx",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
-      "source": "file:src/lib/event-checkout.ts",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
-      "source": "file:src/lib/event-status.ts",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
-      "source": "file:tests/event-checkout.test.ts",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
-      "source": "file:tests/event-pricing-and-data.test.ts",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
-      "source": "file:tests/event-status.test.ts",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
-      "source": "function:src/app/events/[slug]/page.tsx:generateMetadata",
-      "target": "function:src/lib/events.tsx:getEventBySlug",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/events/[slug]/page.tsx:EventDetailPage",
-      "target": "function:src/lib/events.tsx:getEventBySlug",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/events/[slug]/page.tsx:EventDetailPage",
-      "target": "function:src/lib/events.tsx:resolvePromoCode",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
       "source": "file:src/lib/event-confirmation-email.ts",
       "target": "function:src/lib/event-confirmation-email.ts:buildAiContentCreationSetupEmailHtml",
       "type": "contains",
@@ -9265,133 +9196,7 @@
     },
     {
       "source": "file:src/lib/event-confirmation-email.ts",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/lib/event-confirmation-email.ts",
       "target": "file:src/lib/utm.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:getEventDiscountedPrice",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:getEventDiscountedPrice",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:resolvePromoCode",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:resolvePromoCode",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:formatEventPrice",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:formatEventPrice",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:formatDonationLabelNote",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:formatDonationLabelNote",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:toggleDonationPreset",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:toggleDonationPreset",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:getEventBySlug",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:getEventBySlug",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:getLiveEvents",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:getLiveEvents",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:getUpcomingLiveEvents",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "function:src/lib/events.tsx:getUpcomingLiveEvents",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/events.tsx",
-      "target": "file:src/components/events/DinnerPhotoCarousel.tsx",
       "type": "imports",
       "direction": "forward",
       "weight": 0.7
@@ -9427,13 +9232,6 @@
     {
       "source": "file:src/lib/google-calendar-invite.ts",
       "target": "file:src/lib/calendar.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/lib/google-calendar-invite.ts",
-      "target": "file:src/lib/events.tsx",
       "type": "imports",
       "direction": "forward",
       "weight": 0.7
@@ -9593,20 +9391,6 @@
       "weight": 0.8
     },
     {
-      "source": "function:src/lib/events.tsx:formatEventPrice",
-      "target": "function:src/lib/events.tsx:getEventDiscountedPrice",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/lib/events.tsx:getUpcomingLiveEvents",
-      "target": "function:src/lib/events.tsx:getLiveEvents",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
       "source": "function:src/lib/google-calendar-invite.ts:inviteAttendeeToEvent",
       "target": "function:src/lib/google-calendar-invite.ts:resolveCalendarEventId",
       "type": "calls",
@@ -9622,20 +9406,6 @@
     },
     {
       "source": "file:src/lib/event-confirmation-email.ts",
-      "target": "file:tests/letter-confirmation.test.ts",
-      "type": "tested_by",
-      "direction": "forward",
-      "weight": 0.5
-    },
-    {
-      "source": "file:tests/letter-confirmation.test.ts",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/lib/events.tsx",
       "target": "file:tests/letter-confirmation.test.ts",
       "type": "tested_by",
       "direction": "forward",
@@ -10006,13 +9776,6 @@
       "weight": 0.7
     },
     {
-      "source": "file:src/lib/event-confirmation-email.ts",
-      "target": "file:src/lib/session-reminder.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
       "source": "file:src/app/api/lead-magnet/route.ts",
       "target": "file:src/lib/email-logo.ts",
       "type": "imports",
@@ -10062,11 +9825,116 @@
       "weight": 0.7
     },
     {
-      "source": "file:src/lib/location-reminder.ts",
-      "target": "file:src/lib/events.tsx",
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:getEventDiscountedPrice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:resolvePromoCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:formatEventPrice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:formatDonationLabelNote",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:toggleDonationPreset",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:getEventBySlug",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:getLiveEvents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "function:src/lib/events.tsx:getUpcomingLiveEvents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/events.tsx",
+      "target": "file:src/components/events/DinnerPhotoCarousel.tsx",
       "type": "imports",
       "direction": "forward",
       "weight": 0.7
+    },
+    {
+      "source": "function:src/lib/events.tsx:formatEventPrice",
+      "target": "function:src/lib/events.tsx:getEventDiscountedPrice",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/lib/events.tsx:getUpcomingLiveEvents",
+      "target": "function:src/lib/events.tsx:getLiveEvents",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/session-reminder.ts",
+      "target": "function:src/lib/session-reminder.ts:buildSessionReminderIdempotencyKey",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/session-reminder.ts",
+      "target": "function:src/lib/session-reminder.ts:buildSessionReminderLockKey",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/session-reminder.ts",
+      "target": "function:src/lib/session-reminder.ts:isSessionReminderDue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/session-reminder.ts",
+      "target": "function:src/lib/session-reminder.ts:getDueSessionReminderWindows",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/lib/session-reminder.ts",
+      "target": "function:src/lib/session-reminder.ts:runSessionReminders",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
     },
     {
       "source": "file:src/lib/session-reminder.ts",
@@ -10081,8 +9949,237 @@
       "type": "imports",
       "direction": "forward",
       "weight": 0.7
+    },
+    {
+      "source": "function:src/lib/session-reminder.ts:getDueSessionReminderWindows",
+      "target": "function:src/lib/session-reminder.ts:isSessionReminderDue",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/lib/session-reminder.ts:runSessionReminders",
+      "target": "function:src/lib/session-reminder.ts:getDueSessionReminderWindows",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/lib/session-reminder.ts:runSessionReminders",
+      "target": "function:src/lib/session-reminder.ts:buildSessionReminderLockKey",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tests/session-reminder.test.ts",
+      "target": "file:src/lib/event-confirmation-email.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:tests/session-reminder.test.ts",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:tests/session-reminder.test.ts",
+      "target": "file:src/lib/session-reminder.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/api/events/checkout-session/route.ts",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/app/events/[slug]/page.tsx",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/app/events/[slug]/setup/page.tsx",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/app/events/page.tsx",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/components/events/EventRegistrationSection.tsx",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/components/events/joechella/FestivalHero.tsx",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/components/events/joechella/ProgramTimeline.tsx",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/components/events/joechella/VenueGallery.tsx",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/components/events/voice-studio/VoiceStudioPage.tsx",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/lib/event-checkout.ts",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/lib/event-confirmation-email.ts",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/lib/event-confirmation-email.ts",
+      "target": "file:src/lib/session-reminder.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/lib/event-status.ts",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/lib/google-calendar-invite.ts",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/lib/location-reminder.ts",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:tests/event-checkout.test.ts",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:tests/event-pricing-and-data.test.ts",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:tests/event-status.test.ts",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:tests/letter-confirmation.test.ts",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
     }
   ],
+  "version": "1.0.0",
+  "project": {
+    "name": "masterminds-workshop",
+    "languages": [
+      "TypeScript",
+      "JavaScript",
+      "CSS",
+      "HTML",
+      "JSON"
+    ],
+    "frameworks": [
+      "Next.js",
+      "React",
+      "React DOM",
+      "TailwindCSS",
+      "TypeScript",
+      "Stripe",
+      "Supabase",
+      "Framer Motion",
+      "GSAP",
+      "Three.js",
+      "Vanta"
+    ],
+    "description": "Masterminds Workshop Site \u2014 a Next.js application for displaying workshop information, courses, and giveaways with advanced animations and interactive components.",
+    "analyzedAt": "2026-11-16T20:12:38.746630+00:00",
+    "gitCommitHash": "8951baec1c521dbaab09992ff4a069e0554a6620"
+  },
   "layers": [
     {
       "id": "layer:api-routes",
@@ -10168,7 +10265,7 @@
     {
       "id": "layer:shared-libraries",
       "name": "Shared Libraries",
-      "description": "Event catalogs, pricing, intake validation, giveaway adapters, follow-up planning, confirmation emails and calendar invitations support registration and resource delivery, with inventory-only dependencies labeled separately.",
+      "description": "Event catalogs, pricing, intake validation, giveaway adapters, follow-up planning, confirmations, calendar invitations and injected reminder scheduling support registration and resource delivery, with inventory-only dependencies labeled separately.",
       "nodeIds": [
         "file:src/app/sitemap.ts",
         "file:src/data/ai-levels-signup.ts",
@@ -10228,7 +10325,7 @@
     {
       "id": "layer:test",
       "name": "Tests",
-      "description": "Catalog, giveaway, follow-up, checkout, registration and confirmation tests protect event rules, resource wiring, delivery controls and personalized attendee messages.",
+      "description": "Catalog, giveaway, follow-up, checkout, registration, confirmation and reminder tests protect event rules, resource wiring, delivery controls, timing, deduplication and reminder opt-out behavior.",
       "nodeIds": [
         "file:tests/desk-pet.test.ts",
         "file:tests/event-checkout.test.ts",
@@ -10238,7 +10335,8 @@
         "file:tests/giveaway-followups.test.ts",
         "file:tests/linkedin-kit.test.ts",
         "file:tests/video-editor.test.ts",
-        "file:tests/letter-confirmation.test.ts"
+        "file:tests/letter-confirmation.test.ts",
+        "file:tests/session-reminder.test.ts"
       ]
     },
     {
@@ -10277,9 +10375,10 @@
   "tour": [
     {
       "order": 1,
-      "title": "Workshop Site Entry",
-      "description": "Start at the dynamic event route to see how the workshop site turns an event slug into public content, promotion details, metadata, and an event presentation. This tour follows that visitor journey before connecting it to giveaways, resource delivery, and operational follow-ups; the represented graph is partial and omits the root page and layout, and no project README is available.",
+      "title": "Workshop Site Overview",
+      "description": "Start with the operational follow-up entry point and the public event routes to understand a workshop site that connects event registration, giveaways and resource delivery. The structural entry ranking favors the shallow operational script, whose short dependency traversal introduces follow-up planning and shared persistence. Continue through the visitor-facing event route before returning to that delivery workflow; this partial graph omits the root page and layout, and no project README is available.",
       "nodeIds": [
+        "file:scripts/giveaway-followups.mjs",
         "file:src/app/events/[slug]/page.tsx",
         "file:src/app/events/page.tsx"
       ],
@@ -10329,12 +10428,14 @@
     },
     {
       "order": 6,
-      "title": "Attendee Confirmation And Calendar",
-      "description": "After registration, the confirmation service builds attendee messages, reminders, waitlist updates and backup alerts, combining delivery deduplication with location timing and unsubscribe controls. The calendar helper validates event dates and guest privacy while returning invitation outcomes without propagating calendar API failures. The letter-confirmation tests connect these delivery responsibilities to personalized, escaped copy and the Voice Studio silent-invite configuration.",
+      "title": "Attendee Messages And Reminders",
+      "description": "After registration, the confirmation service builds attendee messages, reminders, waitlist updates and backup alerts using delivery deduplication, location timing and unsubscribe controls. The reminder scheduler injects registration, locking and delivery dependencies, deduplicates confirmed attendees, and skips events that disable default reminders even during forced runs. The calendar helper returns invitation outcomes without propagating calendar API failures, while the two test modules document personalized copy, silent invitations, reminder timing and opt-out behavior.",
       "nodeIds": [
         "file:src/lib/event-confirmation-email.ts",
         "file:src/lib/google-calendar-invite.ts",
-        "file:tests/letter-confirmation.test.ts"
+        "file:tests/letter-confirmation.test.ts",
+        "file:src/lib/session-reminder.ts",
+        "file:tests/session-reminder.test.ts"
       ]
     },
     {
@@ -10419,32 +10520,5 @@
         "file:src/app/giveaways/video-editor/page.tsx"
       ]
     }
-  ],
-  "version": "1.0.0",
-  "project": {
-    "name": "masterminds-workshop",
-    "languages": [
-      "TypeScript",
-      "JavaScript",
-      "CSS",
-      "HTML",
-      "JSON"
-    ],
-    "frameworks": [
-      "Next.js",
-      "React",
-      "React DOM",
-      "TailwindCSS",
-      "TypeScript",
-      "Stripe",
-      "Supabase",
-      "Framer Motion",
-      "GSAP",
-      "Three.js",
-      "Vanta"
-    ],
-    "description": "Masterminds Workshop Site \u2014 a Next.js application for displaying workshop information, courses, and giveaways with advanced animations and interactive components.",
-    "analyzedAt": "2026-11-13T20:09:00.847001+00:00",
-    "gitCommitHash": "a0947d51cb7eab20abf0326c98189ebb89784360"
-  }
+  ]
 }
