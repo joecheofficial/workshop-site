@@ -266,6 +266,10 @@ export type EventDefinition = {
     // Use when the confirmation email already carries the invite (.ics card),
     // so people get one email, not two (Illy 13 Nov 2026).
     silentGoogleInvite?: boolean
+    // Skip the site-wide default 24h + 2h branded reminders for this event.
+    // Use when the event has its own approved reminder emails
+    // (Illy 16 Nov 2026: "I only want the ones I set up").
+    disableDefaultReminders?: boolean
   }
   registrationClosesIso?: string
   capacity?: number
@@ -1842,6 +1846,8 @@ export const events: EventDefinition[] = [
       // Pinned in code so registrants never fall through to the shared fallback.
       googleCalendarEventId: '4plcuisn2vfe4okeiufi81bgak',
       silentGoogleInvite: true,
+      // Illy's own approved letters only, never the default purple 24h/2h ones.
+      disableDefaultReminders: true,
     },
     emailConfig: {
       // Approved v4 copy, Illy 13 Nov 2026 ("looks good" after test sends).

@@ -154,3 +154,39 @@ test('session reminder emails include the Zoom link and the workshop time', asyn
   assert.ok(requests[0].html.includes('Wednesday, July 29, 2026'))
   assert.ok(requests[0].html.includes('7:00 PM to 9:00 PM Asia/Makassar (Bali)'))
 })
+
+test('voice class never gets the default 24h or 2h reminders (Illy 16 Nov)', async () => {
+  const event = getEventBySlug('make-ai-sound-exactly-like-you')
+  assert.ok(event?.calendarEvent?.disableDefaultReminders)
+  let listed = 0
+  let sent = 0
+  for (const now of ['2026-11-30T20:10:00+08:00', '2026-12-01T18:10:00+08:00']) {
+    const run = await runSessionReminders(
+      { now: new Date(now), events: [event] },
+      {
+        acquireLock: async () => true,
+        listConfirmedRegistrations: async () => {
+          listed += 1
+          return [{ attendeeName: 'A', attendeeEmail: 'a@example.com' }]
+        },
+        sendReminder: async () => {
+          sent += 1
+        },
+      },
+    )
+    assert.equal(run.results.length, 0)
+  }
+  const forced = await runSessionReminders(
+    { now: new Date('2026-11-30T20:10:00+08:00'), force: true, events: [event] },
+    {
+      acquireLock: async () => true,
+      listConfirmedRegistrations: async () => [{ attendeeName: 'A', attendeeEmail: 'a@example.com' }],
+      sendReminder: async () => {
+        sent += 1
+      },
+    },
+  )
+  assert.equal(forced.results.length, 0)
+  assert.equal(listed, 0)
+  assert.equal(sent, 0)
+})

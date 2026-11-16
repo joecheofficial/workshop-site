@@ -106,6 +106,7 @@ export async function runSessionReminders(
   for (const event of targetEvents) {
     const startIso = event.calendarEvent?.startIso
     if (!event.zoomLink || !startIso) continue
+    if (event.calendarEvent?.disableDefaultReminders) continue
 
     const dueWindows = input.force
       ? SESSION_REMINDER_WINDOWS
