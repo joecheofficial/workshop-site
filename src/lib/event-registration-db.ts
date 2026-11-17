@@ -218,6 +218,29 @@ export async function saveRegistration(input: {
   return { id, cancelToken }
 }
 
+// Used after a save timed out: the insert often still lands a moment later,
+// so look for the row before raising a backup alert.
+export async function getConfirmedCancelToken(
+  eventSlug: string,
+  email: string,
+): Promise<string | null> {
+  const { data, error } = await supabase
+    .from('event_registrations')
+    .select('cancel_token')
+    .eq('event_slug', eventSlug)
+    .eq('attendee_email', email.trim().toLowerCase())
+    .eq('status', 'confirmed')
+    .limit(1)
+    .maybeSingle()
+
+  if (error) {
+    console.error('getConfirmedCancelToken error', error)
+    return null
+  }
+
+  return (data?.cancel_token as string | undefined) ?? null
+}
+
 export async function isAlreadyRegistered(eventSlug: string, email: string): Promise<boolean> {
   const { count, error } = await supabase
     .from('event_registrations')
