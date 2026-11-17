@@ -153,6 +153,30 @@ export type EventSection =
       note?: string
     }
 
+export type EventLetter = {
+  key: string
+  sendAtIso: string
+  // How long after sendAtIso the cron may still send it. Default 120.
+  windowMinutes?: number
+  subject: string
+  preview: string
+  // Paragraphs separated by a blank line. {first} = first name. A paragraph
+  // that exactly equals a key of `links` (or 'Join the class on Zoom') becomes
+  // that link.
+  body: string
+  links?: Record<string, string>
+  audience?: {
+    signedUpBeforeIso?: string
+    attended?: boolean
+    requiresEventFlag?: string
+    excludePersonFlag?: string
+    stopFlags?: string[]
+  }
+  variants?: Array<{ whenPersonLacksFlag: string; onlyIfSignedUpBeforeIso?: string; body: string }>
+  // Sales follow-ups carry the address + unsubscribe line (CAN-SPAM).
+  unsubscribeFooter?: boolean
+}
+
 export type EventDefinition = {
   slug: string
   status: 'live' | 'draft'
@@ -313,6 +337,10 @@ export type EventDefinition = {
       body: string
     }
   }
+  // Scheduled plain letters for this event (Illy's approved reminder and
+  // after-class emails). Sent by /api/events/letter-schedule, see
+  // src/lib/letter-schedule.ts.
+  letterSchedule?: EventLetter[]
   sections: EventSection[]
   metadata?: Partial<Metadata>
 }
@@ -1849,6 +1877,19 @@ export const events: EventDefinition[] = [
       // Illy's own approved letters only, never the default purple 24h/2h ones.
       disableDefaultReminders: true,
     },
+    // Illy's approved letters (pre-class v4 12-13 Nov, after-class v1 13 Nov,
+    // re-confirmed 17 Nov: 'i approved those'). Exact text, do not edit without her yes.
+    // Flags come from agents/events-manager/voice-class-letters (Studio).
+    letterSchedule: [
+      {"key": "e2-setup", "sendAtIso": "2026-11-27T17:00:00+08:00", "windowMinutes": 360, "subject": "Your 5-minute setup for Tuesday", "preview": "Two small things, then you're ready", "body": "Hi {first},\n\nHere's your 5-minute setup. Do it now and Tuesday is all building, no installing.\n\n1. Install one app and open it once, signed in: the ChatGPT desktop app (the free plan works) or the Claude desktop app (needs Claude Pro). Mac or Windows.\n\nGet the app here\n\n2. Put 3 to 5 things you've written into one document: an email to a client, a post, a newsletter. Take out anything private.\n\nReply DONE when the app opens. If it doesn't, reply with what you see and we'll get it working before Tuesday.\n\nJoe\n\nP.S. On Windows, open the app today. It can fail to start when your Windows username has non-English letters, and that's much easier to fix now than during class.", "links": {"Get the app here": "https://workshop.mastermindshq.business/voice-setup"}, "audience": {"signedUpBeforeIso": "2026-11-27T17:00:00+08:00"}},
+      {"key": "e3-tomorrow", "sendAtIso": "2026-11-30T16:00:00+08:00", "windowMinutes": 360, "subject": "Our class is tomorrow", "preview": "Your Zoom link is inside", "body": "Hi {first},\n\nQuick reminder, we're on tomorrow. It's in your calendar at your own time.\n\nJoin the class on Zoom\n\nHave your app open and your writing in one document, and you're ready.\n\nWhat's the first thing you want to write in your voice? Hit reply and tell me.\n\nJoe", "variants": [{"whenPersonLacksFlag": "setup_done", "onlyIfSignedUpBeforeIso": "2026-11-27T17:00:00+08:00", "body": "Hi {first},\n\nQuick reminder, we're on tomorrow. It's in your calendar at your own time.\n\nJoin the class on Zoom\n\nHave your app open and your writing in one document, and you're ready.\n\nApp not opening yet? Reply to this email and we'll help you today.\n\nJoe"}]},
+      {"key": "e4-one-hour", "sendAtIso": "2026-12-01T19:00:00+08:00", "windowMinutes": 45, "subject": "We start in 1 hour", "preview": "Here's your Zoom link", "body": "Hi {first},\n\nWe start in 1 hour.\n\nJoin the class on Zoom\n\nOpen your ChatGPT or Claude app and your writing document before you join. See you there.\n\nJoe"},
+      {"key": "e5-we-started", "sendAtIso": "2026-12-01T20:10:00+08:00", "windowMinutes": 15, "subject": "We started, jump in", "preview": "You haven't missed the building", "body": "Hi {first},\n\nWe just started and we're still getting everyone set up. Jump in now.\n\nJoin the class on Zoom\n\nJoe", "audience": {"requiresEventFlag": "zoom_live_attendance", "excludePersonFlag": "in_zoom"}},
+      {"key": "a1-came", "sendAtIso": "2026-12-01T23:00:00+08:00", "windowMinutes": 300, "subject": "Your recording from tonight", "preview": "So you can go back over any step", "body": "Hi {first},\n\nThank you for coming tonight. I loved building this with you.\n\nHere's the recording, so you can go back over any step:\n\nWatch the recording\n\nUse your voice profile on everything you write this week: emails, posts, replies. That's where it starts saving you time.\n\nOne question: what was the first thing you wrote in your voice? Hit reply and tell me.\n\nJoe", "links": {"Watch the recording": "https://a.mastermindshq.business/voice-recording"}, "audience": {"attended": true, "requiresEventFlag": "after_class_ready"}},
+      {"key": "a1-missed", "sendAtIso": "2026-12-01T23:00:00+08:00", "windowMinutes": 300, "subject": "Here's the recording", "preview": "Watch it when it suits you", "body": "Hi {first},\n\nWe missed you tonight, and that's completely fine. Life happens.\n\nHere's the full recording, so you can build your voice profile at your own pace:\n\nWatch the recording\n\nHave your ChatGPT or Claude app open and 3 to 5 things you've written in one document. Then follow along step by step.\n\nWhat do you want to write in your voice first? Hit reply and tell me.\n\nJoe", "links": {"Watch the recording": "https://a.mastermindshq.business/voice-recording"}, "audience": {"attended": false, "requiresEventFlag": "after_class_ready"}},
+      {"key": "a2-story", "sendAtIso": "2026-12-03T21:00:00+08:00", "windowMinutes": 360, "subject": "It thinks like me", "preview": "What happens after your voice profile", "body": "Hi {first},\n\nYour voice profile is step one. Here's what happens when you keep going.\n\nTiyana Jovic runs TI YA RA in Ubud. In my Mastermind she built AI agents that research and write for her. In her words, they're \"resonating with my voice, with my brand, with my way of thinking.\"\n\nLanding pages that used to take her three days or more now take her 30 minutes.\n\nThat's what we build together in Cohort 6, every Monday from 8 Feb. If you'd like to talk about your business, here's my calendar:\n\nBook a call with Joe\n\nOr hit reply: what's the one job you'd hand to your AI first?\n\nJoe", "links": {"Book a call with Joe": "https://a.mastermindshq.business/voice-f2-book"}, "audience": {"requiresEventFlag": "after_class_ready", "stopFlags": ["stop"]}, "unsubscribeFooter": true},
+      {"key": "a3-faq", "sendAtIso": "2026-12-05T21:00:00+08:00", "windowMinutes": 360, "subject": "Your questions about Cohort 6", "preview": "Price, times, and is it for you", "body": "Hi {first},\n\nHere are the three questions people ask me most.\n\nHow much is it? $2,400, or 3 payments of $899.\n\nWhen is it? 12 weeks live from Monday 8 Feb, plus 2 bonus sessions. Two session times every Monday, so one fits your time zone. Every session is recorded.\n\nI'm not technical. Is it for me? Quincee Lark said it best: \"I thought this was not for me. I was too creative, too soft, not techie. Let me be proof that this is for anyone.\"\n\nIf you'd like to talk it through:\n\nBook a call with Joe\n\nThis is my last email about it. What's the one question I didn't answer? Hit reply.\n\nJoe", "links": {"Book a call with Joe": "https://a.mastermindshq.business/voice-f3-book"}, "audience": {"requiresEventFlag": "after_class_ready", "stopFlags": ["stop"]}, "unsubscribeFooter": true},
+    ],
     emailConfig: {
       // Approved v4 copy, Illy 13 Nov 2026 ("looks good" after test sends).
       letterConfirmation: {

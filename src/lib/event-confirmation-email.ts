@@ -1,4 +1,4 @@
-import type { EventDefinition } from '@/lib/events'
+import type { EventDefinition, EventLetter } from '@/lib/events'
 import { buildLocationReminderIdempotencyKey, hasLocationRevealWindowClosed } from './location-reminder'
 import {
   buildSessionReminderIdempotencyKey,
@@ -615,19 +615,27 @@ export function buildLetterConfirmation(
   letter: { subject: string; preview: string; body: string },
   attendeeName: string,
   zoomLink?: string,
+  options?: { links?: Record<string, string>; unsubscribeUrl?: string | null },
 ): { html: string; text: string } {
   const first = (attendeeName || '').trim().split(/\s+/)[0] || 'there'
   const paragraphs = letter.body.replace(/\{first\}/g, first).split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean)
+  const links: Record<string, string> = { ...(options?.links ?? {}) }
+  if (zoomLink && !links['Join the class on Zoom']) links['Join the class on Zoom'] = zoomLink
   const linkStyle = 'color:#6f5cc4;font-weight:bold'
   const htmlParts = paragraphs.map((p) => {
-    if (p === 'Join the class on Zoom' && zoomLink) {
-      return `<p style="margin:0 0 18px"><a href="${escapeLetterHtml(zoomLink)}" style="${linkStyle}">Join the class on Zoom</a></p>`
+    const href = links[p]
+    if (href) {
+      return `<p style="margin:0 0 18px"><a href="${escapeLetterHtml(href)}" style="${linkStyle}">${escapeLetterHtml(p)}</a></p>`
     }
     return `<p style="margin:0 0 18px">${p.split('\n').map(escapeLetterHtml).join('<br>')}</p>`
   })
-  const textParts = paragraphs.map((p) =>
-    p === 'Join the class on Zoom' && zoomLink ? `Join the class on Zoom: ${zoomLink}` : p,
-  )
+  const textParts = paragraphs.map((p) => (links[p] ? `${p}: ${links[p]}` : p))
+  if (options?.unsubscribeUrl) {
+    htmlParts.push(
+      `<p style="margin:28px 0 0;font-size:12px;color:#999">Sent by Masterminds HQ. <a href="${escapeLetterHtml(options.unsubscribeUrl)}" style="color:#999">Unsubscribe</a> any time.</p>`,
+    )
+    textParts.push(`Sent by Masterminds HQ. Unsubscribe any time: ${options.unsubscribeUrl}`)
+  }
   const html =
     '<!doctype html><html><body style="margin:0;padding:0;background:#ffffff">' +
     `<div style="display:none;max-height:0;overflow:hidden;opacity:0">${escapeLetterHtml(letter.preview)}</div>` +
@@ -635,6 +643,34 @@ export function buildLetterConfirmation(
     htmlParts.join('') +
     '</div></body></html>'
   return { html, text: textParts.join('\n\n') + '\n' }
+}
+
+/** Sends one scheduled letter (src/lib/letter-schedule.ts). Same plain-letter
+ *  format as the confirmation. Sales letters (unsubscribeFooter) also get the
+ *  footer line and the one-click List-Unsubscribe header. */
+export async function sendScheduledLetter(input: {
+  event: EventDefinition
+  letter: EventLetter
+  body: string
+  attendeeName: string
+  attendeeEmail: string
+  idempotencyKey: string
+}) {
+  const unsubscribeUrl = input.letter.unsubscribeFooter ? buildUnsubscribeUrl(input.attendeeEmail) : null
+  const parts = buildLetterConfirmation(
+    { subject: input.letter.subject, preview: input.letter.preview, body: input.body },
+    input.attendeeName,
+    input.event.zoomLink,
+    { links: input.letter.links, unsubscribeUrl },
+  )
+  return sendResendEmail({
+    attendeeEmail: input.attendeeEmail,
+    subject: input.letter.subject,
+    html: parts.html,
+    text: parts.text,
+    idempotencyKey: input.idempotencyKey,
+    ...(input.letter.unsubscribeFooter ? { headers: buildUnsubscribeHeaders(input.attendeeEmail) } : {}),
+  })
 }
 
 export async function sendEventConfirmationEmail(input: {
