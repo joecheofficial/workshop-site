@@ -26,11 +26,11 @@ const person = (email: string, registeredAt: string, extra: Partial<LetterRecipi
   ...extra,
 })
 
-test('voice class carries all 8 approved letters and no default reminders', () => {
+test('voice class carries the 7 approved letters (email 5 dropped 17 Nov) and no default reminders', () => {
   assert.equal(event.calendarEvent?.disableDefaultReminders, true)
   assert.deepEqual(
     event.letterSchedule!.map((l) => l.key),
-    ['e2-setup', 'e3-tomorrow', 'e4-one-hour', 'e5-we-started', 'a1-came', 'a1-missed', 'a2-story', 'a3-faq'],
+    ['e2-setup', 'e3-tomorrow', 'e4-one-hour', 'a1-came', 'a1-missed', 'a2-story', 'a3-faq'],
   )
   for (const l of event.letterSchedule!) {
     assert.ok(!/[—]/.test(l.body + l.subject + l.preview), `${l.key} has an em dash`)
@@ -44,7 +44,6 @@ test('pre-class send times match the approved plan (Bali)', () => {
   assert.equal(letter('e2-setup').sendAtIso, '2026-11-27T17:00:00+08:00')
   assert.equal(letter('e3-tomorrow').sendAtIso, '2026-11-30T16:00:00+08:00')
   assert.equal(letter('e4-one-hour').sendAtIso, '2026-12-01T19:00:00+08:00')
-  assert.equal(letter('e5-we-started').sendAtIso, '2026-12-01T20:10:00+08:00')
   // the 1-hour email may never land after class starts
   assert.equal(isLetterDue(letter('e4-one-hour'), new Date('2026-12-01T19:50:00+08:00')), false)
   assert.equal(isLetterDue(letter('e4-one-hour'), new Date('2026-12-01T19:10:00+08:00')), true)
@@ -70,15 +69,8 @@ test('email 3 help line only for early sign-ups who did not reply DONE', () => {
   assert.ok(letterBodyFor(letter('e3-tomorrow'), person('late@x.com', '2026-11-29T00:00:00Z'), flags).includes(ask))
 })
 
-test('email 5 stays off until a live Zoom attendance source exists', () => {
-  const r = [person('a@x.com', '2026-11-20T00:00:00Z')]
-  assert.equal(letterAudience(letter('e5-we-started'), r, noFlags()).length, 0)
-  const flags = noFlags()
-  flags.event.add('zoom_live_attendance')
-  flags.person.set('a@x.com', new Set(['in_zoom']))
-  assert.equal(letterAudience(letter('e5-we-started'), r, flags).length, 0)
-  flags.person.clear()
-  assert.equal(letterAudience(letter('e5-we-started'), r, flags).length, 1)
+test('email 5 is gone for good (Illy 17 Nov)', () => {
+  assert.equal(event.letterSchedule!.some((l) => l.key.startsWith('e5')), false)
 })
 
 test('after-class letters wait for attendance + recording, split came / missed, honour stop', () => {
