@@ -607,7 +607,7 @@ function escapeLetterHtml(value: string): string {
 }
 
 /**
- * Plain-letter confirmation (Illy 12-13 Nov 2026): Georgia, no logo, no images,
+ * Plain-letter confirmation (Illy 12-13 Nov 2026; 17 Nov: normal sans email, inline links): no logo, no images,
  * no buttons, one text link, hidden preview line, plus a plain-text part. This
  * format landed in Gmail Primary where the branded template went to spam.
  */
@@ -621,25 +621,40 @@ export function buildLetterConfirmation(
   const paragraphs = letter.body.replace(/\{first\}/g, first).split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean)
   const links: Record<string, string> = { ...(options?.links ?? {}) }
   if (zoomLink && !links['Join the class on Zoom']) links['Join the class on Zoom'] = zoomLink
-  const linkStyle = 'color:#6f5cc4;font-weight:bold'
-  const htmlParts = paragraphs.map((p) => {
-    const href = links[p]
-    if (href) {
-      return `<p style="margin:0 0 18px"><a href="${escapeLetterHtml(href)}" style="${linkStyle}">${escapeLetterHtml(p)}</a></p>`
+  // Looks like a normal email Joe typed (Illy 17 Nov: "all in plain letter"):
+  // default sans font, left aligned, ordinary blue links inside the sentence.
+  const linkStyle = 'color:#1155cc;text-decoration:underline'
+  const labels = Object.keys(links).sort((x, y) => y.length - x.length)
+  const linkify = (escapedLine: string) => {
+    let out = escapedLine
+    for (const label of labels) {
+      const esc = escapeLetterHtml(label)
+      if (out.includes(esc)) {
+        out = out.replace(esc, `<a href="${escapeLetterHtml(links[label])}" style="${linkStyle}">${esc}</a>`)
+      }
     }
-    return `<p style="margin:0 0 18px">${p.split('\n').map(escapeLetterHtml).join('<br>')}</p>`
+    return out
+  }
+  const htmlParts = paragraphs.map(
+    (p) => `<p style="margin:0 0 14px">${p.split('\n').map((l) => linkify(escapeLetterHtml(l))).join('<br>')}</p>`,
+  )
+  const textParts = paragraphs.map((p) => {
+    let out = p
+    for (const label of labels) {
+      if (out.includes(label)) out = out.replace(label, `${label}: ${links[label]}`)
+    }
+    return out
   })
-  const textParts = paragraphs.map((p) => (links[p] ? `${p}: ${links[p]}` : p))
   if (options?.unsubscribeUrl) {
     htmlParts.push(
-      `<p style="margin:28px 0 0;font-size:12px;color:#999">Sent by Masterminds HQ. <a href="${escapeLetterHtml(options.unsubscribeUrl)}" style="color:#999">Unsubscribe</a> any time.</p>`,
+      `<p style="margin:24px 0 0;font-size:12px;color:#888">Sent by Masterminds HQ. <a href="${escapeLetterHtml(options.unsubscribeUrl)}" style="color:#888">Unsubscribe</a> any time.</p>`,
     )
     textParts.push(`Sent by Masterminds HQ. Unsubscribe any time: ${options.unsubscribeUrl}`)
   }
   const html =
-    '<!doctype html><html><body style="margin:0;padding:0;background:#ffffff">' +
+    '<!doctype html><html><body>' +
     `<div style="display:none;max-height:0;overflow:hidden;opacity:0">${escapeLetterHtml(letter.preview)}</div>` +
-    '<div style="max-width:560px;margin:0 auto;padding:24px 20px;font-family:Georgia,\'Times New Roman\',serif;font-size:16px;line-height:1.6;color:#2a2536">' +
+    '<div style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.5;color:#222222">' +
     htmlParts.join('') +
     '</div></body></html>'
   return { html, text: textParts.join('\n\n') + '\n' }
