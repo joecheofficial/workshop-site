@@ -11,7 +11,11 @@ import {
 import { withTimeout } from '@/lib/with-timeout'
 import { inviteAttendeeBestEffort, syncLegacyRegistration } from '@/lib/legacy-event-schedule'
 import { createStripeClient, getStripePublishableKey } from '@/lib/stripe'
-import { saveRegistration, saveRegistrationIntake } from '@/lib/event-registration-db'
+import {
+  getConfirmedCancelToken,
+  saveRegistration,
+  saveRegistrationIntake,
+} from '@/lib/event-registration-db'
 import {
   attachCheckoutToEventSeat,
   claimEventSeat,
@@ -302,6 +306,7 @@ export async function POST(request: Request) {
 
       // Save registration to Supabase and include cancel token in confirmation email
       let cancelToken: string | undefined
+      let saveError: unknown = null
       try {
         const saved = await withTimeout(
           saveRegistration({
@@ -321,6 +326,18 @@ export async function POST(request: Request) {
       } catch (regErr) {
         console.error('event registration save error', regErr)
         if (seatClaim) throw regErr
+        saveError = regErr
+        // A timed-out insert often still lands. Re-check before alerting, so
+        // a saved person does not trigger a false "[Backup] Unsaved" email.
+        const landedToken = await withTimeout(
+          getConfirmedCancelToken(slug, attendeeEmail),
+          3000,
+          'recheck registration',
+        ).catch(() => null)
+        if (landedToken) cancelToken = landedToken
+      }
+
+      if (saveError && !cancelToken) {
         // Confirmed to the attendee anyway, so keep a record they can be
         // re-added from. Never let the backup itself fail the sign-up.
         await withTimeout(
@@ -331,7 +348,7 @@ export async function POST(request: Request) {
             whatsappNumber: normalizeWhatsappNumber(whatsappNumber) || null,
             businessContext: businessContext || null,
             acquisitionRef,
-            reason: regErr instanceof Error ? regErr.message : 'unknown error',
+            reason: saveError instanceof Error ? saveError.message : 'unknown error',
           }),
           5000,
           'registration backup alert',
