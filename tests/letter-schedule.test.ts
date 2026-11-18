@@ -26,11 +26,11 @@ const person = (email: string, registeredAt: string, extra: Partial<LetterRecipi
   ...extra,
 })
 
-test('voice class carries the 6 approved letters (email 5 dropped 17 Nov) and no default reminders', () => {
+test('voice class carries the 7 approved letters (email 5 back 18 Nov) and no default reminders', () => {
   assert.equal(event.calendarEvent?.disableDefaultReminders, true)
   assert.deepEqual(
     event.letterSchedule!.map((l) => l.key),
-    ['e2-setup', 'e3-tomorrow', 'e4-one-hour', 'a1-came', 'a1-missed', 'a2-story'],
+    ['e2-setup', 'e3-tomorrow', 'e4-one-hour', 'e5-we-started', 'a1-came', 'a1-missed', 'a2-story'],
   )
   for (const l of event.letterSchedule!) {
     assert.ok(!/[—]/.test(l.body + l.subject + l.preview), `${l.key} has an em dash`)
@@ -69,8 +69,16 @@ test('email 3 help line only for early sign-ups who did not reply DONE', () => {
   assert.ok(letterBodyFor(letter('e3-tomorrow'), person('late@x.com', '2026-11-29T00:00:00Z'), flags).includes(ask))
 })
 
-test('email 5 is gone for good (Illy 17 Nov)', () => {
-  assert.equal(event.letterSchedule!.some((l) => l.key.startsWith('e5')), false)
+test('email 5 goes to EVERYONE at 20:05 Bali, only inside its window (Illy 18 Nov)', () => {
+  const e5 = letter('e5-we-started')
+  assert.equal(e5.sendAtIso, '2026-12-01T20:05:00+08:00')
+  assert.equal(e5.subject, 'We started, jump in')
+  assert.equal(e5.body, "Hi {first},\n\nWe just started and we're still getting everyone set up. Jump in now.\n\nJoin the class on Zoom\n\nJoe")
+  const r = [person('a@x.com', '2026-11-20T00:00:00Z'), person('dayof@x.com', '2026-12-01T10:00:00Z')]
+  assert.equal(letterAudience(e5, r, noFlags()).length, 2)
+  assert.equal(isLetterDue(e5, new Date('2026-12-01T20:00:00+08:00')), false)
+  assert.equal(isLetterDue(e5, new Date('2026-12-01T20:10:00+08:00')), true)
+  assert.equal(isLetterDue(e5, new Date('2026-12-01T20:30:00+08:00')), false)
 })
 
 test('after-class letters wait for attendance + recording, split came / missed, honour stop', () => {
