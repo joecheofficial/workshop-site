@@ -17,6 +17,7 @@
 // domains and anyone who wrote back are skipped; any lookup that fails skips the
 // person for this run rather than guessing.
 
+import { readSupabaseJson } from './lib/supabase-read.mjs'
 import { execFileSync } from 'node:child_process'
 import { createHash, createHmac, randomBytes } from 'node:crypto'
 import { promises as dns } from 'node:dns'
@@ -85,9 +86,7 @@ const sb = (p, init = {}) => fetch(`${SUPABASE_URL}/rest/v1/${p}`, {
   headers: { apikey: SUPABASE_KEY, Authorization: `Bearer ${SUPABASE_KEY}`, 'Content-Type': 'application/json', ...(init.headers || {}) },
 })
 async function sbJson(p) {
-  const res = await sb(p)
-  if (!res.ok) throw new Error(`Supabase ${p.split('?')[0]} ${res.status}: ${(await res.text()).slice(0, 200)}`)
-  return res.json()
+  return readSupabaseJson((signal) => sb(p, { signal }), p.split('?')[0])
 }
 const inList = (emails) => `(${emails.map((e) => `"${encodeURIComponent(e)}"`).join(',')})`
 
