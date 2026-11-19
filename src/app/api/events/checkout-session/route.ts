@@ -319,7 +319,10 @@ export async function POST(request: Request) {
             businessContext: businessContext || null,
             capacityReservationId: seatClaim?.reservationId,
           }),
-          intakeSaveError ? 500 : 3000,
+          // Always the full window. A slow intake save is usually a short DB
+          // blip, and cutting this one to 500ms lost real sign-ups (Frank 17 Nov,
+          // Kara 19 Nov): once we return, the in-flight insert dies with the function.
+          3000,
           'save registration',
         )
         cancelToken = saved.cancelToken
