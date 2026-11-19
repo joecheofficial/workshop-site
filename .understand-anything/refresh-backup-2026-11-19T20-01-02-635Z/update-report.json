@@ -1,0 +1,32 @@
+{
+  "mode": "incremental",
+  "analyzedAt": "2026-11-16T20:13:07.001589+00:00",
+  "filesAnalyzed": 3,
+  "changedFiles": [
+    "src/lib/events.tsx",
+    "src/lib/session-reminder.ts",
+    "tests/session-reminder.test.ts"
+  ],
+  "nodeCount": 335,
+  "edgeCount": 641,
+  "layerCount": 9,
+  "tourSteps": 14,
+  "validationIssues": [],
+  "warnings": [
+    "Node 'file:public/downloads/joes-linkedin-kit-v1.0.zip' has no edges (orphan)",
+    "Node 'file:public/downloads/joes-linkedin-kit-v1.0.zip.sha256' has no edges (orphan)",
+    "Node 'file:public/downloads/joes-salesman-v1.0.zip' has no edges (orphan)",
+    "Node 'file:public/downloads/joes-salesman-v1.0.zip.sha256' has no edges (orphan)",
+    "Node 'function:src/app/api/events/abandoned-checkout-followups/route.ts:acquireEventLock' has no edges (orphan)",
+    "Node 'function:src/app/api/events/cancel/route.ts:escapeHtml' has no edges (orphan)",
+    "Node 'function:src/app/api/events/session-reminders/route.ts:acquireEventWindowLock' has no edges (orphan)",
+    "Node 'file:src/app/bonus/auto-lead-magnet/page.tsx' has no edges (orphan)"
+  ],
+  "coverageNote": "Inherited partial graph coverage retained; 137 unique represented file paths, 593 inventory files. Only changed files re-analyzed.",
+  "pipelineNotes": [
+    "Initial analyzer dispatch failed with thread-store context error; one permitted retry succeeded.",
+    "Retained unchanged graph in batch-0.json because this merge version drops batch-existing.json.",
+    "Normalized all batches before Python 3.11 merge; merged edge density verified.",
+    "Dashboard not launched: request restricted mutations to graph directory and ignore file."
+  ]
+}
