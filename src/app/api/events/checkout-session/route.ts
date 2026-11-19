@@ -1,5 +1,5 @@
 import { buildMetaCheckoutMetadata } from '@/lib/meta-consent'
-import { NextResponse } from 'next/server'
+import { NextResponse, after } from 'next/server'
 import { createRegistrationProfileToken } from '@/lib/registration-profile-token'
 import { getEventBySlug } from '@/lib/events'
 import {
@@ -9,6 +9,7 @@ import {
   sendRegistrationBackupAlert,
 } from '@/lib/event-confirmation-email'
 import { withTimeout } from '@/lib/with-timeout'
+import { recoverRegistration } from '@/lib/registration-recovery'
 import { inviteAttendeeBestEffort, syncLegacyRegistration } from '@/lib/legacy-event-schedule'
 import { createStripeClient, getStripePublishableKey } from '@/lib/stripe'
 import {
@@ -307,18 +308,23 @@ export async function POST(request: Request) {
       // Save registration to Supabase and include cancel token in confirmation email
       let cancelToken: string | undefined
       let saveError: unknown = null
+      const registrationInput = {
+        eventSlug: slug,
+        attendeeName,
+        attendeeEmail,
+        acquisitionRef,
+        amountPaid: amount,
+        whatsappNumber: normalizeWhatsappNumber(whatsappNumber) || null,
+        businessContext: businessContext || null,
+        capacityReservationId: seatClaim?.reservationId,
+      }
+      // Kept so a slow first insert can still finish in the background below.
+      let firstSave: Promise<{ id: string; cancelToken: string }> | null = null
       try {
+        firstSave = saveRegistration(registrationInput)
+        firstSave.catch(() => {})
         const saved = await withTimeout(
-          saveRegistration({
-            eventSlug: slug,
-            attendeeName,
-            attendeeEmail,
-            acquisitionRef,
-            amountPaid: amount,
-            whatsappNumber: normalizeWhatsappNumber(whatsappNumber) || null,
-            businessContext: businessContext || null,
-            capacityReservationId: seatClaim?.reservationId,
-          }),
+          firstSave,
           // Always the full window. A slow intake save is usually a short DB
           // blip, and cutting this one to 500ms lost real sign-ups (Frank 17 Nov,
           // Kara 19 Nov): once we return, the in-flight insert dies with the function.
@@ -341,21 +347,32 @@ export async function POST(request: Request) {
       }
 
       if (saveError && !cancelToken) {
-        // Confirmed to the attendee anyway, so keep a record they can be
-        // re-added from. Never let the backup itself fail the sign-up.
-        await withTimeout(
-          sendRegistrationBackupAlert({
-            event,
-            attendeeName,
-            attendeeEmail,
-            whatsappNumber: normalizeWhatsappNumber(whatsappNumber) || null,
-            businessContext: businessContext || null,
-            acquisitionRef,
-            reason: saveError instanceof Error ? saveError.message : 'unknown error',
-          }),
-          5000,
-          'registration backup alert',
-        ).catch((alertErr) => console.error('registration backup alert failed', alertErr))
+        // Confirmed to the attendee anyway. Never drop them: keep the function
+        // alive after the response, let the first insert finish, then retry
+        // (re-checking first so nobody is saved twice). Only if every attempt
+        // fails, email a backup record they can be re-added from.
+        const pendingFirstSave = firstSave
+        const failedReason = saveError instanceof Error ? saveError.message : 'unknown error'
+        after(async () => {
+          const landed = await recoverRegistration({
+            firstSave: pendingFirstSave,
+            input: registrationInput,
+          })
+          if (landed) return
+          await withTimeout(
+            sendRegistrationBackupAlert({
+              event,
+              attendeeName,
+              attendeeEmail,
+              whatsappNumber: normalizeWhatsappNumber(whatsappNumber) || null,
+              businessContext: businessContext || null,
+              acquisitionRef,
+              reason: `${failedReason}; background retries also failed`,
+            }),
+            5000,
+            'registration backup alert',
+          ).catch((alertErr) => console.error('registration backup alert failed', alertErr))
+        })
       }
 
       seatReservationToRelease = null
