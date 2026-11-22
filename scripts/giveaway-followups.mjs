@@ -153,7 +153,7 @@ async function domainAlive(email) {
 // a SELECT writes nothing. Never use immutable=1 (it ignores the WAL and returns stale rows).
 function sqliteRead(db, sql) {
   try {
-    return execFileSync('/usr/bin/sqlite3', ['-readonly', db, sql], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] })
+    return execFileSync('/usr/bin/sqlite3', ['-readonly', '-cmd', '.timeout 5000', db, sql], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] })
   } catch (err) {
     if (!/\(14\)|unable to open database/i.test(`${err.stderr || ''} ${err.message}`)) throw err
     return execFileSync('/usr/bin/sqlite3', ['-cmd', '.timeout 5000', db, sql], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] })
