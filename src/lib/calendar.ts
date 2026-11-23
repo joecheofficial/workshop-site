@@ -24,6 +24,32 @@ export function buildGoogleCalendarUrl(params: {
   return url.toString()
 }
 
+/**
+ * Outlook web "add event" link. Works for outlook.com / hotmail / live
+ * accounts (host 'live') and Microsoft 365 work accounts (host 'office').
+ * Outlook desktop users take the .ics download instead. Added 23 Nov 2026
+ * after a registrant on Outlook could not use the Google-only button.
+ */
+export function buildOutlookCalendarUrl(params: {
+  title: string
+  startIso: string
+  endIso: string
+  location?: string
+  description?: string
+  host?: 'live' | 'office'
+}): string {
+  const base = params.host === 'office' ? 'https://outlook.office.com' : 'https://outlook.live.com'
+  const url = new URL(`${base}/calendar/0/deeplink/compose`)
+  url.searchParams.set('path', '/calendar/action/compose')
+  url.searchParams.set('rru', 'addevent')
+  url.searchParams.set('subject', params.title)
+  url.searchParams.set('startdt', new Date(params.startIso).toISOString().replace(/\.\d{3}Z$/, 'Z'))
+  url.searchParams.set('enddt', new Date(params.endIso).toISOString().replace(/\.\d{3}Z$/, 'Z'))
+  if (params.location) url.searchParams.set('location', params.location)
+  if (params.description) url.searchParams.set('body', params.description)
+  return url.toString()
+}
+
 export function buildIcalString(params: {
   uid: string
   title: string
