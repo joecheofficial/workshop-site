@@ -678,7 +678,7 @@ export function buildLetterConfirmation(
  *  format as the confirmation. Sales letters (unsubscribeFooter) also get the
  *  footer line and the one-click List-Unsubscribe header. */
 export async function sendScheduledLetter(input: {
-  event: EventDefinition
+  event: Pick<EventDefinition, 'zoomLink'>
   letter: EventLetter
   body: string
   attendeeName: string

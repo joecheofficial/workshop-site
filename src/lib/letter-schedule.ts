@@ -16,6 +16,10 @@ import { dedupeAttendeesByEmail } from './location-reminder'
  */
 
 export const EVENT_FLAG_EMAIL = '*'
+
+/** What the letter run needs from an event. Site events (EventDefinition) fit it,
+ *  and so do letter-only events with no page (src/lib/letter-only-events.ts). */
+export type LetterEvent = Pick<EventDefinition, 'slug' | 'zoomLink' | 'letterSchedule'>
 const DEFAULT_WINDOW_MINUTES = 120
 
 export type LetterRecipient = {
@@ -101,7 +105,7 @@ export type RunLetterScheduleDeps = {
   claim: (key: string) => Promise<boolean>
   release: (key: string) => Promise<void>
   sendLetter: (input: {
-    event: EventDefinition
+    event: LetterEvent
     letter: EventLetter
     body: string
     attendeeName: string
@@ -111,7 +115,7 @@ export type RunLetterScheduleDeps = {
 }
 
 export async function runLetterSchedule(
-  input: { now: Date; events: EventDefinition[]; dryRun?: boolean; onlyLetterKey?: string | null; force?: boolean },
+  input: { now: Date; events: LetterEvent[]; dryRun?: boolean; onlyLetterKey?: string | null; force?: boolean },
   deps: RunLetterScheduleDeps,
 ): Promise<{ results: LetterRunResult[] }> {
   const results: LetterRunResult[] = []
