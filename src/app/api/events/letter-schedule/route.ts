@@ -3,7 +3,8 @@ import { timingSafeEqual } from 'crypto'
 import { getEventBySlug, getLiveEvents } from '@/lib/events'
 import { sendScheduledLetter } from '@/lib/event-confirmation-email'
 import { isSuppressed } from '@/lib/email-suppressions'
-import { EVENT_FLAG_EMAIL, runLetterSchedule, type LetterFlags, type LetterRecipient } from '@/lib/letter-schedule'
+import { EVENT_FLAG_EMAIL, runLetterSchedule, type LetterEvent, type LetterFlags, type LetterRecipient } from '@/lib/letter-schedule'
+import { getLetterOnlyEvent, letterOnlyEvents } from '@/lib/letter-only-events'
 import { supabase } from '@/lib/supabase'
 
 export const runtime = 'nodejs'
@@ -77,9 +78,11 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: 'Invalid now parameter.' }, { status: 400 })
   }
 
-  const events = slug
-    ? ([getEventBySlug(slug)].filter(Boolean) as ReturnType<typeof getLiveEvents>)
-    : getLiveEvents()
+  // Letter-only events (e.g. the Maven lesson) have no page here; their sign-ups
+  // are copied into event_registrations by a Studio job.
+  const events: LetterEvent[] = slug
+    ? ([getEventBySlug(slug) ?? getLetterOnlyEvent(slug)].filter(Boolean) as LetterEvent[])
+    : [...getLiveEvents(), ...letterOnlyEvents]
 
   try {
     const run = await runLetterSchedule(
