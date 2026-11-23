@@ -61,3 +61,34 @@ test('invalid JSON fails closed without retry', async () => {
   }, 'leads', { wait: async () => { assert.fail('unexpected retry') } }), SyntaxError)
   assert.equal(calls, 1)
 })
+
+for (const name of ['TypeError', 'TimeoutError', 'AbortError']) {
+  test(`Supabase retries ${name} while consuming a successful response body`, async () => {
+    let calls = 0
+    const signals: AbortSignal[] = []
+    const result = await readSupabaseJson(async (signal: AbortSignal) => {
+      signals.push(signal)
+      calls++
+      if (calls === 1) return new Response(new ReadableStream({
+        start(controller) { controller.error(Object.assign(new Error('body interrupted'), { name })) },
+      }))
+      return Response.json([{ ok: true }])
+    }, 'leads', { wait: async () => {} })
+    assert.deepEqual(result, [{ ok: true }])
+    assert.equal(calls, 2)
+    assert.notEqual(signals[0], signals[1])
+  })
+}
+
+test('body timeouts stop after four attempts without returning partial data', async () => {
+  let calls = 0
+  const delays: number[] = []
+  await assert.rejects(readSupabaseJson(async () => {
+    calls++
+    return new Response(new ReadableStream({
+      start(controller) { controller.error(new DOMException('body timed out', 'TimeoutError')) },
+    }))
+  }, 'leads', { wait: async (ms: number) => { delays.push(ms) } }), { name: 'TimeoutError' })
+  assert.equal(calls, 4)
+  assert.deepEqual(delays, [1000, 2000, 4000])
+})
