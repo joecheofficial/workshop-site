@@ -693,12 +693,14 @@ export const events: EventDefinition[] = [
         ],
       },
     ],
+    zoomLink:
+      'https://us02web.zoom.us/j/5018352948?pwd=K08zQkU3Z05Jc3htSkkzTXNPeGNFZz09',
     pricing: {
       currencySymbol: '$',
       fullPrice: 0,
       checkoutHref: '',
       checkoutNote:
-        'Free for MHQ members. Mijgon\'s online joining link will be emailed once it is available.',
+        'Free for MHQ members. The Zoom link is emailed immediately after registration.',
     },
     calendarEvent: {
       startIso: '2026-11-30T18:30:00+08:00',
@@ -715,7 +717,7 @@ export const events: EventDefinition[] = [
         'Tell us about your work, the people you serve, and the opportunities you want your brand to create.',
     },
     successDetail:
-      'Your free seat is saved. A confirmation and calendar invite are on their way from joe@mastermindshq.business. Mijgon\'s online joining link will be sent as soon as it is available. If you do not see the confirmation within a couple of minutes, check your spam folder.',
+      'Your free seat is saved. Your confirmation email has the Zoom link, and a calendar invite is on its way from joe@mastermindshq.business. If you do not see it within a couple of minutes, check your spam folder.',
     emailConfig: {
       headerLabel: 'MHQ Community Masterclass',
       contactName: 'Joe Che',
