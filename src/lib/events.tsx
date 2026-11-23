@@ -645,6 +645,136 @@ export const events: EventDefinition[] = [
     },
   },
   {
+    slug: 'build-a-profitable-personal-brand',
+    status: 'live',
+    title: 'Build a Profitable Personal Brand',
+    shortTitle: 'Build a Profitable Personal Brand',
+    eyebrow: 'Free for the MHQ Community',
+    summary:
+      'Turn your expertise into high-quality leads, authority, and opportunities without losing the values that make your work yours. Mijgon Bakhti is opening this live masterclass to the MHQ community for free.',
+    description:
+      'A free online masterclass with personal branding strategist Mijgon Bakhti for founders, experts, and leaders who want their visibility to match the quality of their work.',
+    dateLabel: 'Monday, November 30, 2026',
+    timeLabel: '6:30 PM to 8:00 PM Singapore and Bali time',
+    locationLabel: 'Free online masterclass for MHQ members',
+    durationLabel: '90 minutes live',
+    heroImage: '/images/events/profitable-personal-brand-mijgon.jpg',
+    heroAlt:
+      'Mijgon Bakhti beside the title Build Your Profitable Personal Brand, November 30, 2026',
+    heroObjectFit: 'contain',
+    heroNoOverlay: true,
+    ctaLabel: 'Save My Free Seat',
+    audience: [
+      'Founders who want their visibility to match their expertise',
+      'Experts who want to become a trusted voice in their industry',
+      'Leaders ready to attract better clients and opportunities',
+      'Service-based business owners who want content to create demand',
+    ],
+    outcomes: [
+      'A clearer personal brand that attracts high-quality leads',
+      'A storytelling approach that builds authority and trust',
+      'A content direction designed to reach your ideal clients',
+      'A way to grow your visibility while staying true to your values',
+    ],
+    hosts: [
+      {
+        name: 'Mijgon Bakhti',
+        firstName: 'Mijgon',
+        role: 'Personal Branding Strategist • Founder, Magnetic Leaders Academy',
+        photoSrc: '/images/events/profitable-personal-brand-mijgon.jpg',
+        hideBestsellerBadge: true,
+        bio: [
+          'Mijgon Bakhti is a personal branding strategist and the founder of Magnetic Leaders Academy. She helps founders and experts turn their knowledge, experience, and stories into profitable personal brands.',
+          'Her work has helped clients attract high-ticket opportunities, close six-figure deals, land TEDx talks, and become recognized voices in their industries.',
+        ],
+        bioHtml: [
+          'Mijgon Bakhti is a personal branding strategist and the founder of Magnetic Leaders Academy. She helps founders and experts turn their knowledge, experience, and stories into profitable personal brands.',
+          'Her work has helped clients attract high-ticket opportunities, close six-figure deals, land TEDx talks, and become recognized voices in their industries. Follow Mijgon on <a href="https://www.linkedin.com/in/mijgonbakhti" target="_blank" rel="noopener noreferrer" class="text-[#BDB3E8] underline underline-offset-4 hover:text-[#FCF4EB]">LinkedIn</a>, or watch her <a href="https://youtu.be/-K3mwFIEz6k?si=7pnRq5qa1OUDuqsX" target="_blank" rel="noopener noreferrer" class="text-[#BDB3E8] underline underline-offset-4 hover:text-[#FCF4EB]">personal branding video on YouTube</a>.',
+        ],
+      },
+    ],
+    pricing: {
+      currencySymbol: '$',
+      fullPrice: 0,
+      checkoutHref: '',
+      checkoutNote:
+        'Free for MHQ members. Mijgon\'s online joining link will be emailed once it is available.',
+    },
+    calendarEvent: {
+      startIso: '2026-11-30T18:30:00+08:00',
+      endIso: '2026-11-30T20:00:00+08:00',
+      googleCalendarEventId: '1t5mhjlpmg2cmirlnalrj5hrhg',
+      silentGoogleInvite: true,
+    },
+    intakeFields: {
+      whatsappNumber: true,
+      businessContext: true,
+      businessContextLabel:
+        'What do you do, and what would you like your personal brand to help you become known for?',
+      businessContextPlaceholder:
+        'Tell us about your work, the people you serve, and the opportunities you want your brand to create.',
+    },
+    successDetail:
+      'Your free seat is saved. A confirmation and calendar invite are on their way from joe@mastermindshq.business. Mijgon\'s online joining link will be sent as soon as it is available. If you do not see the confirmation within a couple of minutes, check your spam folder.',
+    emailConfig: {
+      headerLabel: 'MHQ Community Masterclass',
+      contactName: 'Joe Che',
+      contactWhatsAppLink: 'https://wa.me/16462092333',
+      contactWhatsAppDisplay: '+1 (646) 209-2333',
+      signatureName: 'Joe Che\nMasterminds HQ',
+    },
+    sections: [
+      {
+        type: 'html',
+        id: 'about',
+        eyebrow: 'What This Is',
+        html: `
+          <div class="not-prose space-y-5">
+            <h2 class="event-gradient-title pt-2 text-[2rem] font-extrabold leading-[1.02] tracking-tight text-[#FCF4EB] md:text-[2.6rem]">
+              Being excellent at your work is not enough if the right people never see it.
+            </h2>
+            <p class="text-base leading-8 text-[#FCF4EB]/72 md:text-lg">
+              Some of the most capable founders and experts stay underrecognized because their online presence does not reflect the quality of what they do. This masterclass is about closing that gap without turning yourself into a louder, less authentic version of you.
+            </p>
+            <p class="text-base leading-8 text-[#FCF4EB]/72 md:text-lg">
+              Mijgon will show you how to turn your expertise, experience, and story into a personal brand that attracts better leads, builds trust, and creates real opportunities. The goal is not visibility for its own sake. It is to become known for the work and values you already stand for.
+            </p>
+            <p class="text-base leading-8 text-[#FCF4EB]/72 md:text-lg">
+              Mijgon is offering this live 90-minute class free to the MHQ community. It runs from 6:30 PM to 8:00 PM in Singapore and Bali, 11:30 AM to 1:00 PM CET, and 10:30 AM to noon GMT.
+            </p>
+          </div>
+        `,
+      },
+      {
+        type: 'checklist',
+        id: 'learn',
+        eyebrow: 'What You Will Learn',
+        title: 'A personal brand that does more than collect attention',
+        intro:
+          'You will leave with a practical direction for turning what you know into trust, demand, and opportunity.',
+        items: [
+          'How to attract high-quality leads through your personal brand',
+          'How to use storytelling to build authority and trust',
+          'How to create content that reaches your ideal clients',
+          'How to stay true to your core values while becoming more visible',
+        ],
+      },
+      {
+        type: 'hosts',
+        id: 'host',
+        eyebrow: 'Your Trainer',
+        title: 'Mijgon Bakhti',
+        intro: 'Founder of Magnetic Leaders Academy',
+        hosts: [],
+      },
+    ],
+    metadata: {
+      title: 'Build a Profitable Personal Brand with Mijgon Bakhti',
+      description:
+        'A free MHQ community masterclass with Mijgon Bakhti on attracting high-quality leads, building authority through storytelling, and creating content that reaches ideal clients.',
+    },
+  },
+  {
     ...connectionDinnerCangguTemplate,
     slug: 'joe-ches-connection-dinner-wednesday-december-16-2026',
     status: 'live',
