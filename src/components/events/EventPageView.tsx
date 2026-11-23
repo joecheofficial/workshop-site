@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import type { EventDefinition, EventPromoCode, EventSection } from '@/lib/events'
 import { formatEventPrice, getEventDiscountedPrice } from '@/lib/events'
-import { buildGoogleCalendarUrl } from '@/lib/calendar'
+import { buildGoogleCalendarUrl, buildOutlookCalendarUrl } from '@/lib/calendar'
 import { isEventEnded, isRegistrationWindowPassed } from '@/lib/event-status'
 import Reveal from '@/components/Reveal'
 import EventRegistrationSection from '@/components/events/EventRegistrationSection'
@@ -533,6 +533,17 @@ export default function EventPageView({
   const calendarEvent = event.calendarEvent
     ? {
         googleUrl: buildGoogleCalendarUrl({
+          title: event.title,
+          startIso: event.calendarEvent.startIso,
+          endIso: event.calendarEvent.endIso,
+          location: event.zoomLink ?? event.locationLabel,
+          description: event.privateLocationReminder
+            ? 'Exact address will be emailed to you before the event.'
+            : isVirtualEvent
+              ? `Join live on Zoom. Link: ${event.zoomLink}`
+              : undefined,
+        }),
+        outlookUrl: buildOutlookCalendarUrl({
           title: event.title,
           startIso: event.calendarEvent.startIso,
           endIso: event.calendarEvent.endIso,

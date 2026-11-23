@@ -148,3 +148,22 @@ test('buildIcalString: same UID across SEQUENCE:0 and SEQUENCE:1 (update, not du
   assert.ok(base.includes(`UID:${UID}`) && update.includes(`UID:${UID}`))
   assert.ok(base.includes('SEQUENCE:0') && update.includes('SEQUENCE:1'))
 })
+
+// --- buildOutlookCalendarUrl ---
+
+import { buildOutlookCalendarUrl } from '../src/lib/calendar'
+
+test('buildOutlookCalendarUrl: outlook.live.com compose link with UTC times', () => {
+  const url = new URL(buildOutlookCalendarUrl({ title: 'Voice & Class', startIso: START, endIso: END, location: 'https://zoom.us/j/1' }))
+  assert.equal(url.origin, 'https://outlook.live.com')
+  assert.equal(url.searchParams.get('rru'), 'addevent')
+  assert.equal(url.searchParams.get('subject'), 'Voice & Class')
+  assert.equal(url.searchParams.get('startdt'), '2026-05-30T02:30:00Z')
+  assert.equal(url.searchParams.get('enddt'), '2026-05-30T09:00:00Z')
+  assert.equal(url.searchParams.get('location'), 'https://zoom.us/j/1')
+})
+
+test('buildOutlookCalendarUrl: office host for Microsoft 365', () => {
+  const url = new URL(buildOutlookCalendarUrl({ title: 'E', startIso: START, endIso: END, host: 'office' }))
+  assert.equal(url.origin, 'https://outlook.office.com')
+})

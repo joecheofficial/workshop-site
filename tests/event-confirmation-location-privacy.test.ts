@@ -35,6 +35,7 @@ test('attendee questions route to Marina, not Joe', () => {
 
 test('calendar buttons do not rely on flexbox, which email clients strip', () => {
   assert.match(html, /Add to Google Calendar/)
-  assert.match(html, /Download iCal/)
+  assert.match(html, /Apple \/ Outlook app \(\.ics\)/)
+  assert.match(html, /Add to Outlook/)
   assert.doesNotMatch(html, /display:\s*flex/i, 'flex gap silently collapses in Gmail and Outlook')
 })
