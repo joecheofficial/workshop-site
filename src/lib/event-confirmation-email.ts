@@ -4,7 +4,7 @@ import {
   buildSessionReminderIdempotencyKey,
   type SessionReminderWindowLabel,
 } from './session-reminder'
-import { buildGoogleCalendarUrl, buildIcalString } from './calendar'
+import { buildGoogleCalendarUrl, buildIcalString, buildOutlookCalendarUrl } from './calendar'
 import { buildUnsubscribeHeaders, buildUnsubscribeUrl } from './list-unsubscribe'
 import { isSuppressed } from './email-suppressions'
 import { withUtm } from './utm'
@@ -299,6 +299,17 @@ export function buildConfirmationEmailHtml(event: EventDefinition, attendeeName:
               ? `Join live on Zoom: ${event.zoomLink}`
               : undefined,
         })
+        const outlookUrl = buildOutlookCalendarUrl({
+          title: event.title,
+          startIso: event.calendarEvent!.startIso,
+          endIso: event.calendarEvent!.endIso,
+          location: event.zoomLink ?? event.locationLabel,
+          description: event.privateLocationReminder
+            ? 'Exact address will be emailed to you before the event.'
+            : event.zoomLink
+              ? `Join live on Zoom: ${event.zoomLink}`
+              : undefined,
+        })
         const icalUrl = `${siteUrl}/api/events/${event.slug}/calendar`
         // No flexbox here. Gmail and Outlook strip `display:flex`, so the old
         // `gap:10px` never applied and the two buttons rendered touching.
@@ -314,8 +325,11 @@ export function buildConfirmationEmailHtml(event: EventDefinition, attendeeName:
           <a href="${googleUrl}" style="${calendarPrimaryStyle} margin: 0 16px 10px 0;">
             Add to Google Calendar
           </a>
+          <a href="${outlookUrl}" style="${calendarSecondaryStyle} margin: 0 10px 10px 0;">
+            Add to Outlook
+          </a>
           <a href="${icalUrl}" style="${calendarSecondaryStyle} margin: 0 0 10px 0;">
-            Download iCal
+            Apple / Outlook app (.ics)
           </a>
         </div>`
       })()
