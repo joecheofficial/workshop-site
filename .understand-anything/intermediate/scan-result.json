@@ -649,7 +649,7 @@
     {
       "path": "scripts/lib/supabase-read.mjs",
       "language": "javascript",
-      "sizeLines": 26,
+      "sizeLines": 23,
       "fileCategory": "code"
     },
     {
@@ -781,7 +781,7 @@
     {
       "path": "src/app/api/events/letter-schedule/route.ts",
       "language": "typescript",
-      "sizeLines": 94,
+      "sizeLines": 97,
       "fileCategory": "code"
     },
     {
@@ -2413,13 +2413,13 @@
     {
       "path": "src/components/events/EventPageView.tsx",
       "language": "typescript",
-      "sizeLines": 724,
+      "sizeLines": 735,
       "fileCategory": "code"
     },
     {
       "path": "src/components/events/EventRegistrationSection.tsx",
       "language": "typescript",
-      "sizeLines": 1110,
+      "sizeLines": 1122,
       "fileCategory": "code"
     },
     {
@@ -2785,7 +2785,7 @@
     {
       "path": "src/lib/calendar.ts",
       "language": "typescript",
-      "sizeLines": 94,
+      "sizeLines": 120,
       "fileCategory": "code"
     },
     {
@@ -2839,7 +2839,7 @@
     {
       "path": "src/lib/event-confirmation-email.ts",
       "language": "typescript",
-      "sizeLines": 1060,
+      "sizeLines": 1074,
       "fileCategory": "code"
     },
     {
@@ -2893,7 +2893,7 @@
     {
       "path": "src/lib/events.tsx",
       "language": "typescript",
-      "sizeLines": 2338,
+      "sizeLines": 2470,
       "fileCategory": "code"
     },
     {
@@ -2993,9 +2993,15 @@
       "fileCategory": "code"
     },
     {
+      "path": "src/lib/letter-only-events.ts",
+      "language": "typescript",
+      "sizeLines": 69,
+      "fileCategory": "code"
+    },
+    {
       "path": "src/lib/letter-schedule.ts",
       "language": "typescript",
-      "sizeLines": 180,
+      "sizeLines": 184,
       "fileCategory": "code"
     },
     {
@@ -3307,7 +3313,7 @@
     {
       "path": "tests/calendar.test.ts",
       "language": "typescript",
-      "sizeLines": 150,
+      "sizeLines": 169,
       "fileCategory": "code"
     },
     {
@@ -3385,7 +3391,7 @@
     {
       "path": "tests/event-confirmation-location-privacy.test.ts",
       "language": "typescript",
-      "sizeLines": 40,
+      "sizeLines": 41,
       "fileCategory": "code"
     },
     {
@@ -3509,6 +3515,12 @@
       "fileCategory": "code"
     },
     {
+      "path": "tests/letter-only-events.test.ts",
+      "language": "typescript",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
       "path": "tests/letter-schedule.test.ts",
       "language": "typescript",
       "sizeLines": 160,
@@ -3583,7 +3595,7 @@
     {
       "path": "tests/supabase-read.test.ts",
       "language": "typescript",
-      "sizeLines": 63,
+      "sizeLines": 94,
       "fileCategory": "code"
     },
     {
@@ -3629,10 +3641,10 @@
       "fileCategory": "config"
     }
   ],
-  "fileCount": 601,
+  "fileCount": 603,
   "totalLines": 95178,
   "complexity": "complex",
-  "filteredByIgnore": 74,
+  "filteredByIgnore": 85,
   "importMap": {
     ".claude/settings.json": [],
     ".claude/skills/gitnexus/gitnexus-cli/SKILL.md": [],
@@ -3843,6 +3855,7 @@
       "src/lib/email-suppressions.ts",
       "src/lib/event-confirmation-email.ts",
       "src/lib/events.tsx",
+      "src/lib/letter-only-events.ts",
       "src/lib/letter-schedule.ts",
       "src/lib/supabase.ts"
     ],
@@ -5021,6 +5034,9 @@
       "src/lib/location-reminder.ts",
       "src/lib/stripe.ts"
     ],
+    "src/lib/letter-only-events.ts": [
+      "src/lib/letter-schedule.ts"
+    ],
     "src/lib/letter-schedule.ts": [
       "src/lib/events.tsx",
       "src/lib/location-reminder.ts"
@@ -5253,6 +5269,11 @@
       "src/lib/event-confirmation-email.ts",
       "src/lib/events.tsx"
     ],
+    "tests/letter-only-events.test.ts": [
+      "src/lib/events.tsx",
+      "src/lib/letter-only-events.ts",
+      "src/lib/letter-schedule.ts"
+    ],
     "tests/letter-schedule.test.ts": [
       "src/lib/event-confirmation-email.ts",
       "src/lib/events.tsx",
@@ -5359,15 +5380,15 @@
       "total": 29
     }
   },
-  "totalFiles": 601,
+  "totalFiles": 603,
   "estimatedComplexity": "very-large",
   "scriptCompleted": true,
   "stats": {
-    "filesScanned": 601,
+    "filesScanned": 603,
     "byCategory": {
       "config": 22,
       "docs": 25,
-      "code": 520,
+      "code": 522,
       "markup": 12,
       "script": 1,
       "data": 21
@@ -5379,7 +5400,7 @@
       "patch": 2,
       "jsonl": 1,
       "unknown": 1,
-      "typescript": 471,
+      "typescript": 473,
       "html": 9,
       "javascript": 12,
       "txt": 3,

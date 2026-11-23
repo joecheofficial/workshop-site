@@ -828,7 +828,7 @@ export const events: EventDefinition[] = [
       "Two days of Joechella, Joe Che's 50th birthday celebration at a luxury oceanside resort in Tabanan, Bali. For friends, and friends of friends. Your IDR 500K ticket covers both days.",
     description: "Join us at a luxury oceanside resort in Tabanan, Bali for two unforgettable days of community, creativity and celebration. Your ticket helps bring the celebration to life, with the option to make an additional donation to PKP Women's Initiative, supporting women in Bali.",
     dateLabel: 'December 11th to 12th, 2026',
-    timeLabel: 'Friday from 11:30 AM; Saturday from 2:00 PM until late',
+    timeLabel: 'Friday from 11:00 AM; Saturday from 1:00 PM until late',
     locationLabel: 'Luxury resort, Tabanan, Bali. Address sent to ticket holders.',
     durationLabel: 'Come Friday, or Friday and Saturday. One contribution covers both.',
     heroImage: '/events/joechella-big-one/bbg-drone-shots.jpeg',
@@ -863,7 +863,7 @@ export const events: EventDefinition[] = [
       'Add an optional donation to support PKP Community Centre',
     ],
     calendarEvent: {
-      startIso: '2026-12-11T11:30:00+08:00',
+      startIso: '2026-12-11T11:00:00+08:00',
       endIso: '2026-12-13T04:00:00+08:00',
     },
     capacity: undefined,
@@ -907,7 +907,7 @@ export const events: EventDefinition[] = [
       setupPageTitle: "You're in for Joechella's weekend.",
       setupPageIntro: 'Friday and Saturday, December 11 and 12, 2026 at Bali Beach Glamping, Tabanan.',
       setupPageBody: [
-        'Join from 11:30 AM on Friday or 2:00 PM on Saturday. Your weekend pass covers either day or both. We will send directions closer to the date.',
+        'Join from 11:00 AM on Friday or 1:00 PM on Saturday. Your weekend pass covers either day or both. We will send directions closer to the date.',
         'Your ticket supports the celebration, with every dollar above the ticket amount going directly to PKP.',
       ],
       setupItems: [],
@@ -1045,16 +1045,20 @@ export const events: EventDefinition[] = [
         "id": "schedule",
         "eyebrow": "The Program",
         "title": "Friday, December 11",
-        "intro": "Friday begins at 11:30 AM. Come for Friday, or join us for Friday and Saturday. Your donation includes both days.",
+        "intro": "Friday begins at 11:00 AM. Come for Friday, or join us for Friday and Saturday. Your weekend pass covers both days.",
         "groups": [
           {
             "label": "Morning",
             "tone": "morning",
             "items": [
               {
-                "time": "8:00 AM to 11:30 AM",
-                "title": "Long, Slow Breakfast / Free Morning",
-                "body": "Rest by the pool, enjoy the sunshine and get ready for celebrations."
+                "time": "7:00 AM to 10:00 AM",
+                "title": "Long, Slow Breakfast"
+              },
+              {
+                "time": "10:00 AM to 11:00 AM",
+                "title": "Free Morning / Get Ready",
+                "body": "Rest and prepare for the celebrations."
               }
             ],
             "note": "For guests staying on site only."
@@ -1064,16 +1068,16 @@ export const events: EventDefinition[] = [
             "tone": "afternoon",
             "items": [
               {
-                "time": "11:30 AM to 2:30 PM",
+                "time": "11:00 AM to 2:30 PM",
                 "title": "An Afternoon of Ideas, Connection and Celebration",
-                "body": "AI lightning talks, somatic therapy for female leaders, relationship Q&A and Deep Dating."
+                "body": "AI lightning talks, decentralised technology, somatic therapy for female leaders, Deep Dating and an ask-me-anything on sex, love and relationships."
               },
               {
                 "time": "2:30 PM to 4:00 PM",
                 "title": "Connection Activation and Welcome Ceremony"
               }
             ],
-            "note": "Weekend guests join from 11:30 AM for talks and workshops."
+            "note": "Weekend-pass guests join from 11:00 AM for talks and workshops."
           },
           {
             "label": "Pool party and sunset",
@@ -1081,12 +1085,13 @@ export const events: EventDefinition[] = [
             "items": [
               {
                 "time": "4:00 PM to 6:30 PM",
-                "title": "Pool Party",
-                "body": "DJs, dancing, acro yoga and shenanigans."
+                "title": "Pool Party and Workshops",
+                "body": "DJs, dancing, floaties, bubbles, acro yoga, a PKP market stall, a Canang Sari offerings workshop, and a couples intimacy workshop through movement and dance."
               },
               {
                 "time": "6:30 PM to 8:00 PM",
-                "title": "Sunset Activation and Family Dinner"
+                "title": "Sunset, Community Photo and Bonfires",
+                "body": "Gather for a sunset community photo, then settle around the bonfires. Dinner is available at the restaurant."
               }
             ]
           },
@@ -1100,16 +1105,28 @@ export const events: EventDefinition[] = [
               },
               {
                 "time": "8:15 PM to 8:30 PM",
-                "title": "Lessons from 50 Years of Life"
+                "title": "PKP Community Fundraiser"
               },
               {
-                "time": "8:30 PM to midnight",
-                "title": "Live Interactive Music, DJs and a Birthday Surprise",
-                "body": "Jazzy O, international DJs and artists we can't mention, and the best musicians on the island."
+                "time": "8:30 PM to 9:45 PM",
+                "title": "Live Music"
               },
               {
-                "time": "Midnight until late",
-                "title": "Skin Bliss Temple and Tea Lounge Activations"
+                "time": "9:45 PM to 10:00 PM",
+                "title": "Birthday Moment"
+              },
+              {
+                "time": "10:00 PM to midnight",
+                "title": "DJs and Dancing"
+              },
+              {
+                "time": "Midnight to 1:30 AM",
+                "title": "Skin Bliss Temple and Tea Lounge"
+              },
+              {
+                "time": "1:30 AM until late",
+                "title": "Squish Delish",
+                "body": "Soft late-night lounge hangs."
               }
             ]
           }
@@ -1126,14 +1143,13 @@ export const events: EventDefinition[] = [
             "tone": "morning",
             "items": [
               {
-                "time": "9:00 AM to noon",
-                "title": "Recovery Brunch",
-                "body": "For guests staying on site only. A slow morning to rest and recharge."
+                "time": "8:00 AM to 11:00 AM",
+                "title": "Recovery Brunch"
               },
               {
-                "time": "Noon to 2:00 PM",
+                "time": "11:00 AM to 1:00 PM",
                 "title": "Free Time",
-                "body": "For guests staying on site only. Beach, pool, tea and relaxation."
+                "body": "Rest, relax and recharge."
               }
             ],
             "note": "For guests staying on site only."
@@ -1143,25 +1159,28 @@ export const events: EventDefinition[] = [
             "tone": "afternoon",
             "items": [
               {
-                "time": "2:00 PM to 6:00 PM",
+                "time": "1:00 PM to 5:45 PM",
                 "title": "An Afternoon of Ideas, Connection and Play",
-                "body": "Lightning talks, tea room, Dance of Connection, Tantra activations, pop-up styling and photo booth, PKP cultural activations, and Kizomba."
+                "body": "Lightning talks on intuition, consciousness, heart coherence and the nervous system; sensual Tantra, Dance of Connection, Archetypes of Desire, a conversation on same-sex intimacy, Kizomba, and pop-up styling."
+              },
+              {
+                "time": "5:00 PM to 7:00 PM",
+                "title": "Hot Air Balloon Rides"
               }
             ],
-            "note": "The event begins at 2:00 PM for weekend-pass guests."
+            "note": "The event begins at 1:00 PM for weekend-pass guests."
           },
           {
             "label": "Sunset",
             "tone": "sunset",
             "items": [
               {
-                "time": "6:00 PM to 7:30 PM",
-                "title": "PKP Community Performance and Sunset Dinner"
+                "time": "5:00 PM to 7:15 PM",
+                "title": "Family Sunset Dinner"
               },
               {
-                "time": "Sunset",
-                "title": "Hot Air Balloon",
-                "body": "Arthur's two-person hot air balloon goes up on a tether, two at a time, as the sun sets."
+                "time": "7:15 PM to 8:00 PM",
+                "title": "Live Music"
               }
             ]
           },
@@ -1170,17 +1189,19 @@ export const events: EventDefinition[] = [
             "tone": "night",
             "items": [
               {
-                "time": "7:30 PM to 8:00 PM",
-                "title": "Surprise Performance"
+                "time": "8:00 PM to 8:15 PM",
+                "title": "Collective Intention and Opening",
+                "body": "A moment to come together and open the evening."
               },
               {
-                "time": "8:00 PM to 10:00 PM",
+                "time": "8:15 PM to 10:00 PM",
                 "title": "Emergent Theatre",
-                "body": "Music, tarot, tea, Sensatorium, poetry and pop-up acts."
+                "body": "Music, tarot, tea, Sensatorium, poetry, pop-up acts and playful connection."
               },
               {
                 "time": "10:00 PM until late",
-                "title": "Archetypes of Desire and Tea Lounge Activations"
+                "title": "Squish Delish and Tea Lounge",
+                "body": "Cuddles, ambient music and soft social hangs."
               }
             ]
           }

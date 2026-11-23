@@ -3642,53 +3642,6 @@
       "complexity": "moderate"
     },
     {
-      "id": "file:src/components/events/EventRegistrationSection.tsx",
-      "type": "file",
-      "name": "EventRegistrationSection.tsx",
-      "filePath": "src/components/events/EventRegistrationSection.tsx",
-      "summary": "Client registration interface handling attendee intake, donations and promo codes, free reservations, embedded or hosted Stripe checkout, completion recovery, and waitlisting when capacity is reached.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "complex"
-    },
-    {
-      "id": "function:src/components/events/EventRegistrationSection.tsx:useAnimatedNumber",
-      "type": "function",
-      "name": "useAnimatedNumber",
-      "filePath": "src/components/events/EventRegistrationSection.tsx",
-      "lineRange": [
-        7,
-        41
-      ],
-      "summary": "Animates numeric price changes with requestAnimationFrame and cubic easing, cancelling pending frames when dependencies change or the component unmounts.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
-      "type": "function",
-      "name": "EventRegistrationSection",
-      "filePath": "src/components/events/EventRegistrationSection.tsx",
-      "lineRange": [
-        124,
-        1110
-      ],
-      "summary": "Client registration interface handling attendee intake, donations and promo codes, free reservations, embedded or hosted Stripe checkout, completion recovery, and waitlisting when capacity is reached.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "complex"
-    },
-    {
       "id": "file:src/components/events/voice-studio/VoiceStudioPage.tsx",
       "type": "file",
       "name": "VoiceStudioPage.tsx",
@@ -4051,240 +4004,6 @@
       "complexity": "simple"
     },
     {
-      "id": "file:src/components/events/EventPageView.tsx",
-      "type": "file",
-      "name": "EventPageView.tsx",
-      "filePath": "src/components/events/EventPageView.tsx",
-      "summary": "Composes event landing pages from typed sections, hero media, calendars, pricing, and registration state. Routes configured events into festival or Voice Studio layouts and presents closed or ended registration states.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "complex"
-    },
-    {
-      "id": "function:src/components/events/EventPageView.tsx:SectionShell",
-      "type": "function",
-      "name": "SectionShell",
-      "filePath": "src/components/events/EventPageView.tsx",
-      "lineRange": [
-        31,
-        64
-      ],
-      "summary": "Wraps event content in a consistent section layout with optional eyebrow, title, and introduction.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/components/events/EventPageView.tsx:StorySection",
-      "type": "function",
-      "name": "StorySection",
-      "filePath": "src/components/events/EventPageView.tsx",
-      "lineRange": [
-        76,
-        86
-      ],
-      "summary": "Renders a story content section using the shared section wrapper and paragraph formatting.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/components/events/EventPageView.tsx:ChecklistSection",
-      "type": "function",
-      "name": "ChecklistSection",
-      "filePath": "src/components/events/EventPageView.tsx",
-      "lineRange": [
-        88,
-        108
-      ],
-      "summary": "Renders event checklist items within the shared section presentation.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/components/events/EventPageView.tsx:CardsSection",
-      "type": "function",
-      "name": "CardsSection",
-      "filePath": "src/components/events/EventPageView.tsx",
-      "lineRange": [
-        110,
-        148
-      ],
-      "summary": "Renders a collection of event content cards with shared headings and layout.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/components/events/EventPageView.tsx:SplitSection",
-      "type": "function",
-      "name": "SplitSection",
-      "filePath": "src/components/events/EventPageView.tsx",
-      "lineRange": [
-        150,
-        170
-      ],
-      "summary": "Renders a split content section with its supplied text and visual content.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/components/events/EventPageView.tsx:ImageSection",
-      "type": "function",
-      "name": "ImageSection",
-      "filePath": "src/components/events/EventPageView.tsx",
-      "lineRange": [
-        172,
-        199
-      ],
-      "summary": "Renders an event image section with shared heading and descriptive content.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/components/events/EventPageView.tsx:HtmlSection",
-      "type": "function",
-      "name": "HtmlSection",
-      "filePath": "src/components/events/EventPageView.tsx",
-      "lineRange": [
-        201,
-        226
-      ],
-      "summary": "Renders configured HTML content, replacing registration-linked content with a disabled ended-event action after the event ends.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/components/events/EventPageView.tsx:QuoteCardSection",
-      "type": "function",
-      "name": "QuoteCardSection",
-      "filePath": "src/components/events/EventPageView.tsx",
-      "lineRange": [
-        228,
-        317
-      ],
-      "summary": "Renders quote-card content with image or video media and accompanying quotation text.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:src/components/events/EventPageView.tsx:HostsSection",
-      "type": "function",
-      "name": "HostsSection",
-      "filePath": "src/components/events/EventPageView.tsx",
-      "lineRange": [
-        319,
-        362
-      ],
-      "summary": "Renders event host profiles and their accompanying information.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/components/events/EventPageView.tsx:EventVideoSection",
-      "type": "function",
-      "name": "EventVideoSection",
-      "filePath": "src/components/events/EventPageView.tsx",
-      "lineRange": [
-        364,
-        388
-      ],
-      "summary": "Renders an event video block using the shared event media player.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/components/events/EventPageView.tsx:CtaSection",
-      "type": "function",
-      "name": "CtaSection",
-      "filePath": "src/components/events/EventPageView.tsx",
-      "lineRange": [
-        398,
-        464
-      ],
-      "summary": "Displays event pricing and promo details beside registration and optional secondary actions, disabling registration for ended events.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:src/components/events/EventPageView.tsx:renderSection",
-      "type": "function",
-      "name": "renderSection",
-      "filePath": "src/components/events/EventPageView.tsx",
-      "lineRange": [
-        466,
-        495
-      ],
-      "summary": "Dispatches typed event sections to the appropriate renderer, including festival timelines, galleries, custom content, and standard editorial sections.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/components/events/EventPageView.tsx:EventPageView",
-      "type": "function",
-      "name": "EventPageView",
-      "filePath": "src/components/events/EventPageView.tsx",
-      "lineRange": [
-        497,
-        724
-      ],
-      "summary": "Composes event landing pages from typed sections, hero media, calendars, pricing, and registration state. Routes configured events into festival or Voice Studio layouts and presents closed or ended registration states.",
-      "tags": [
-        "component",
-        "events",
-        "registration"
-      ],
-      "complexity": "complex"
-    },
-    {
       "id": "file:src/components/events/WaitlistJoinForm.tsx",
       "type": "file",
       "name": "WaitlistJoinForm.tsx",
@@ -4429,20 +4148,6 @@
       "type": "file",
       "name": "Reveal.tsx",
       "filePath": "src/components/Reveal.tsx",
-      "summary": "Inventory-verified dependency referenced by analyzed event code. Its implementation was not re-analyzed in this incremental update.",
-      "tags": [
-        "reference-only",
-        "dependency",
-        "inventory-verified"
-      ],
-      "complexity": "moderate",
-      "languageNotes": "Reference node only; no function-level analysis was performed in this update."
-    },
-    {
-      "id": "file:src/lib/calendar.ts",
-      "type": "file",
-      "name": "calendar.ts",
-      "filePath": "src/lib/calendar.ts",
       "summary": "Inventory-verified dependency referenced by analyzed event code. Its implementation was not re-analyzed in this incremental update.",
       "tags": [
         "reference-only",
@@ -4723,412 +4428,6 @@
       "complexity": "complex"
     },
     {
-      "id": "file:src/lib/event-confirmation-email.ts",
-      "type": "file",
-      "name": "event-confirmation-email.ts",
-      "filePath": "src/lib/event-confirmation-email.ts",
-      "summary": "Builds and sends event confirmations, scheduled plain letters, location and session reminders, waitlist messages, and backup alerts through Resend. Handles calendar attachments, location privacy, idempotency, and marketing unsubscribe controls.",
-      "tags": [
-        "email",
-        "event-registration",
-        "resend",
-        "scheduled-letters",
-        "tested"
-      ],
-      "complexity": "complex"
-    },
-    {
-      "id": "function:src/lib/event-confirmation-email.ts:buildAiContentCreationSetupEmailHtml",
-      "type": "function",
-      "name": "buildAiContentCreationSetupEmailHtml",
-      "filePath": "src/lib/event-confirmation-email.ts",
-      "lineRange": [
-        35,
-        112
-      ],
-      "summary": "Builds the personalized AI content creation workshop setup email with preparation instructions and venue details.",
-      "tags": [
-        "email",
-        "event-registration",
-        "resend"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:src/lib/event-confirmation-email.ts:buildAskAnAiExpertWelcomeEmailHtml",
-      "type": "function",
-      "name": "buildAskAnAiExpertWelcomeEmailHtml",
-      "filePath": "src/lib/event-confirmation-email.ts",
-      "lineRange": [
-        114,
-        174
-      ],
-      "summary": "Builds a personalized AI expert workshop welcome email with event links, host signature, and unsubscribe controls.",
-      "tags": [
-        "email",
-        "event-registration",
-        "resend"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:src/lib/event-confirmation-email.ts:buildSessionReminderEmailHtml",
-      "type": "function",
-      "name": "buildSessionReminderEmailHtml",
-      "filePath": "src/lib/event-confirmation-email.ts",
-      "lineRange": [
-        176,
-        218
-      ],
-      "summary": "Builds a personalized session reminder with its reminder window and event joining details.",
-      "tags": [
-        "email",
-        "event-registration",
-        "resend"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:src/lib/event-confirmation-email.ts:resolveHostContact",
-      "type": "function",
-      "name": "resolveHostContact",
-      "filePath": "src/lib/event-confirmation-email.ts",
-      "lineRange": [
-        229,
-        246
-      ],
-      "summary": "Chooses host identity, reply contact, and signature information from event email configuration and defaults.",
-      "tags": [
-        "email",
-        "event-registration",
-        "resend"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/event-confirmation-email.ts:buildConfirmationEmailHtml",
-      "type": "function",
-      "name": "buildConfirmationEmailHtml",
-      "filePath": "src/lib/event-confirmation-email.ts",
-      "lineRange": [
-        248,
-        460
-      ],
-      "summary": "Renders a branded reservation confirmation with event details, calendar actions, cancellation link, and timed private-location disclosure.",
-      "tags": [
-        "email",
-        "event-registration",
-        "resend"
-      ],
-      "complexity": "complex"
-    },
-    {
-      "id": "function:src/lib/event-confirmation-email.ts:buildLocationReminderEmailHtml",
-      "type": "function",
-      "name": "buildLocationReminderEmailHtml",
-      "filePath": "src/lib/event-confirmation-email.ts",
-      "lineRange": [
-        462,
-        536
-      ],
-      "summary": "Renders a personalized location reminder with exact venue details and event host contact information.",
-      "tags": [
-        "email",
-        "event-registration",
-        "resend"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:src/lib/event-confirmation-email.ts:sendResendEmail",
-      "type": "function",
-      "name": "sendResendEmail",
-      "filePath": "src/lib/event-confirmation-email.ts",
-      "lineRange": [
-        544,
-        587
-      ],
-      "summary": "Posts email payloads to Resend with optional plain text, calendar attachments, idempotency key, and message headers; throws on missing credentials or provider failure.",
-      "tags": [
-        "email",
-        "event-registration",
-        "resend"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:src/lib/event-confirmation-email.ts:buildConfirmationIdempotencyKey",
-      "type": "function",
-      "name": "buildConfirmationIdempotencyKey",
-      "filePath": "src/lib/event-confirmation-email.ts",
-      "lineRange": [
-        589,
-        591
-      ],
-      "summary": "Builds a normalized per-event and per-recipient confirmation delivery key.",
-      "tags": [
-        "email",
-        "event-registration",
-        "resend"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/event-confirmation-email.ts:buildWaitlistJoinIdempotencyKey",
-      "type": "function",
-      "name": "buildWaitlistJoinIdempotencyKey",
-      "filePath": "src/lib/event-confirmation-email.ts",
-      "lineRange": [
-        593,
-        595
-      ],
-      "summary": "Builds a normalized per-event and per-recipient waitlist confirmation key.",
-      "tags": [
-        "email",
-        "event-registration",
-        "resend"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/event-confirmation-email.ts:buildAiContentCreationSetupIdempotencyKey",
-      "type": "function",
-      "name": "buildAiContentCreationSetupIdempotencyKey",
-      "filePath": "src/lib/event-confirmation-email.ts",
-      "lineRange": [
-        597,
-        599
-      ],
-      "summary": "Builds a normalized per-recipient setup email key for the AI content creation workshop.",
-      "tags": [
-        "email",
-        "event-registration",
-        "resend"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/event-confirmation-email.ts:buildAskAnAiExpertWelcomeIdempotencyKey",
-      "type": "function",
-      "name": "buildAskAnAiExpertWelcomeIdempotencyKey",
-      "filePath": "src/lib/event-confirmation-email.ts",
-      "lineRange": [
-        601,
-        603
-      ],
-      "summary": "Builds a normalized per-recipient AI expert workshop welcome delivery key.",
-      "tags": [
-        "email",
-        "event-registration",
-        "resend"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/event-confirmation-email.ts:buildLetterConfirmation",
-      "type": "function",
-      "name": "buildLetterConfirmation",
-      "filePath": "src/lib/event-confirmation-email.ts",
-      "lineRange": [
-        614,
-        661
-      ],
-      "summary": "Personalizes approved letter paragraphs and safely renders HTML and plain-text versions with inline links, preview text, and optional unsubscribe footer.",
-      "tags": [
-        "email",
-        "event-registration",
-        "resend"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:src/lib/event-confirmation-email.ts:sendScheduledLetter",
-      "type": "function",
-      "name": "sendScheduledLetter",
-      "filePath": "src/lib/event-confirmation-email.ts",
-      "lineRange": [
-        666,
-        689
-      ],
-      "summary": "Renders and sends one scheduled event letter using its supplied claim key and optional marketing unsubscribe footer and headers.",
-      "tags": [
-        "email",
-        "event-registration",
-        "resend"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/event-confirmation-email.ts:sendEventConfirmationEmail",
-      "type": "function",
-      "name": "sendEventConfirmationEmail",
-      "filePath": "src/lib/event-confirmation-email.ts",
-      "lineRange": [
-        691,
-        753
-      ],
-      "summary": "Chooses plain-letter or branded confirmation content, attaches an iCalendar invitation, and sends with event-recipient idempotency while respecting private-location timing.",
-      "tags": [
-        "email",
-        "event-registration",
-        "resend"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:src/lib/event-confirmation-email.ts:sendAiContentCreationSetupEmail",
-      "type": "function",
-      "name": "sendAiContentCreationSetupEmail",
-      "filePath": "src/lib/event-confirmation-email.ts",
-      "lineRange": [
-        755,
-        765
-      ],
-      "summary": "Sends the personalized AI content creation workshop preparation email using its stable setup delivery key.",
-      "tags": [
-        "email",
-        "event-registration",
-        "resend"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/event-confirmation-email.ts:sendAskAnAiExpertWelcomeEmail",
-      "type": "function",
-      "name": "sendAskAnAiExpertWelcomeEmail",
-      "filePath": "src/lib/event-confirmation-email.ts",
-      "lineRange": [
-        767,
-        810
-      ],
-      "summary": "Checks global suppression and sends an AI expert workshop welcome with calendar invitation and marketing unsubscribe headers.",
-      "tags": [
-        "email",
-        "event-registration",
-        "resend"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:src/lib/event-confirmation-email.ts:sendEventLocationReminderEmail",
-      "type": "function",
-      "name": "sendEventLocationReminderEmail",
-      "filePath": "src/lib/event-confirmation-email.ts",
-      "lineRange": [
-        812,
-        858
-      ],
-      "summary": "Sends exact-location reminder content with a calendar attachment and location reminder idempotency key.",
-      "tags": [
-        "email",
-        "event-registration",
-        "resend"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:src/lib/event-confirmation-email.ts:sendSessionReminderEmail",
-      "type": "function",
-      "name": "sendSessionReminderEmail",
-      "filePath": "src/lib/event-confirmation-email.ts",
-      "lineRange": [
-        860,
-        884
-      ],
-      "summary": "Sends a session reminder for a specified time window using window-specific idempotency.",
-      "tags": [
-        "email",
-        "event-registration",
-        "resend"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/event-confirmation-email.ts:buildWaitlistConfirmationHtml",
-      "type": "function",
-      "name": "buildWaitlistConfirmationHtml",
-      "filePath": "src/lib/event-confirmation-email.ts",
-      "lineRange": [
-        886,
-        923
-      ],
-      "summary": "Builds waitlist enrollment confirmation content with a link for removing the recipient from the list.",
-      "tags": [
-        "email",
-        "event-registration",
-        "resend"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:src/lib/event-confirmation-email.ts:buildWaitlistSpotNotificationHtml",
-      "type": "function",
-      "name": "buildWaitlistSpotNotificationHtml",
-      "filePath": "src/lib/event-confirmation-email.ts",
-      "lineRange": [
-        925,
-        980
-      ],
-      "summary": "Builds a waitlist availability notification with event registration and list removal links, adapting copy to the notification variant.",
-      "tags": [
-        "email",
-        "event-registration",
-        "resend"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:src/lib/event-confirmation-email.ts:sendWaitlistConfirmationEmail",
-      "type": "function",
-      "name": "sendWaitlistConfirmationEmail",
-      "filePath": "src/lib/event-confirmation-email.ts",
-      "lineRange": [
-        982,
-        997
-      ],
-      "summary": "Sends waitlist enrollment confirmation with a stable event-recipient delivery key.",
-      "tags": [
-        "email",
-        "event-registration",
-        "resend"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/event-confirmation-email.ts:sendWaitlistSpotNotificationEmail",
-      "type": "function",
-      "name": "sendWaitlistSpotNotificationEmail",
-      "filePath": "src/lib/event-confirmation-email.ts",
-      "lineRange": [
-        999,
-        1025
-      ],
-      "summary": "Sends waitlist availability notifications with a delivery key and copy reflecting the notification variant.",
-      "tags": [
-        "email",
-        "event-registration",
-        "resend"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/event-confirmation-email.ts:sendRegistrationBackupAlert",
-      "type": "function",
-      "name": "sendRegistrationBackupAlert",
-      "filePath": "src/lib/event-confirmation-email.ts",
-      "lineRange": [
-        1032,
-        1060
-      ],
-      "summary": "Emails an operational alert containing registration context when registration persistence and recovery fail.",
-      "tags": [
-        "email",
-        "event-registration",
-        "resend"
-      ],
-      "complexity": "simple"
-    },
-    {
       "id": "file:src/lib/event-registration-db.ts",
       "type": "file",
       "name": "event-registration-db.ts",
@@ -5381,257 +4680,6 @@
       "complexity": "simple"
     },
     {
-      "id": "file:src/lib/events.tsx",
-      "type": "file",
-      "name": "events.tsx",
-      "filePath": "src/lib/events.tsx",
-      "summary": "Defines the shared event content model and catalog, including pricing, page sections, calendar settings, email configuration, and scheduled letters. Exposes event lookup, promotional pricing, donation selection, and upcoming-event helpers.",
-      "tags": [
-        "event-catalog",
-        "pricing",
-        "content-model",
-        "scheduled-letters",
-        "tested"
-      ],
-      "complexity": "complex"
-    },
-    {
-      "id": "function:src/lib/events.tsx:getEventDiscountedPrice",
-      "type": "function",
-      "name": "getEventDiscountedPrice",
-      "filePath": "src/lib/events.tsx",
-      "lineRange": [
-        355,
-        357
-      ],
-      "summary": "Computes an event price after applying an optional fixed-amount or percentage promotional discount.",
-      "tags": [
-        "event-catalog",
-        "pricing",
-        "content-model"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/events.tsx:resolvePromoCode",
-      "type": "function",
-      "name": "resolvePromoCode",
-      "filePath": "src/lib/events.tsx",
-      "lineRange": [
-        359,
-        363
-      ],
-      "summary": "Finds an event promotional code after trimming and case-normalizing the input.",
-      "tags": [
-        "event-catalog",
-        "pricing",
-        "content-model"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/events.tsx:formatEventPrice",
-      "type": "function",
-      "name": "formatEventPrice",
-      "filePath": "src/lib/events.tsx",
-      "lineRange": [
-        365,
-        370
-      ],
-      "summary": "Formats an event ticket price using its currency symbol and discount, or displays a pending-price label.",
-      "tags": [
-        "event-catalog",
-        "pricing",
-        "content-model"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/events.tsx:formatDonationLabelNote",
-      "type": "function",
-      "name": "formatDonationLabelNote",
-      "filePath": "src/lib/events.tsx",
-      "lineRange": [
-        372,
-        382
-      ],
-      "summary": "Formats the donation explanation from an explicit note or suggested and minimum donation amounts.",
-      "tags": [
-        "event-catalog",
-        "pricing",
-        "content-model"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/events.tsx:toggleDonationPreset",
-      "type": "function",
-      "name": "toggleDonationPreset",
-      "filePath": "src/lib/events.tsx",
-      "lineRange": [
-        384,
-        401
-      ],
-      "summary": "Adds or subtracts a preset donation amount when toggled and clamps the result to the minimum donation.",
-      "tags": [
-        "event-catalog",
-        "pricing",
-        "content-model"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/events.tsx:getEventBySlug",
-      "type": "function",
-      "name": "getEventBySlug",
-      "filePath": "src/lib/events.tsx",
-      "lineRange": [
-        2315,
-        2317
-      ],
-      "summary": "Returns the event catalog entry matching a route slug.",
-      "tags": [
-        "event-catalog",
-        "pricing",
-        "content-model"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/events.tsx:getLiveEvents",
-      "type": "function",
-      "name": "getLiveEvents",
-      "filePath": "src/lib/events.tsx",
-      "lineRange": [
-        2319,
-        2321
-      ],
-      "summary": "Returns catalog entries whose publication status is live.",
-      "tags": [
-        "event-catalog",
-        "pricing",
-        "content-model"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/events.tsx:getUpcomingLiveEvents",
-      "type": "function",
-      "name": "getUpcomingLiveEvents",
-      "filePath": "src/lib/events.tsx",
-      "lineRange": [
-        2323,
-        2338
-      ],
-      "summary": "Filters live events whose end time has not passed and sorts them chronologically by start time.",
-      "tags": [
-        "event-catalog",
-        "pricing",
-        "content-model"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "file:src/lib/letter-schedule.ts",
-      "type": "file",
-      "name": "letter-schedule.ts",
-      "filePath": "src/lib/letter-schedule.ts",
-      "summary": "Runs per-event scheduled letters using send windows, attendance and flag-based audience filters, body variants, suppression checks, and per-recipient claims. Injected dependencies support dry runs and release failed claims for retries.",
-      "tags": [
-        "scheduled-letters",
-        "audience-filtering",
-        "idempotency",
-        "email",
-        "tested"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:src/lib/letter-schedule.ts:isLetterDue",
-      "type": "function",
-      "name": "isLetterDue",
-      "filePath": "src/lib/letter-schedule.ts",
-      "lineRange": [
-        36,
-        41
-      ],
-      "summary": "Checks whether the current time falls within a letter send window, using a two-hour default duration.",
-      "tags": [
-        "scheduled-letters",
-        "audience-filtering",
-        "idempotency"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/letter-schedule.ts:letterAudience",
-      "type": "function",
-      "name": "letterAudience",
-      "filePath": "src/lib/letter-schedule.ts",
-      "lineRange": [
-        48,
-        69
-      ],
-      "summary": "Filters letter recipients by signup cutoff, attendance, required event flags, person flags, and stop flags while excluding internal test signups.",
-      "tags": [
-        "scheduled-letters",
-        "audience-filtering",
-        "idempotency"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/letter-schedule.ts:letterBodyFor",
-      "type": "function",
-      "name": "letterBodyFor",
-      "filePath": "src/lib/letter-schedule.ts",
-      "lineRange": [
-        72,
-        81
-      ],
-      "summary": "Selects the first applicable body variant based on signup time and a missing person flag, otherwise using the default letter body.",
-      "tags": [
-        "scheduled-letters",
-        "audience-filtering",
-        "idempotency"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/letter-schedule.ts:buildLetterClaimKey",
-      "type": "function",
-      "name": "buildLetterClaimKey",
-      "filePath": "src/lib/letter-schedule.ts",
-      "lineRange": [
-        83,
-        85
-      ],
-      "summary": "Builds a normalized event-letter-recipient claim key for once-only delivery.",
-      "tags": [
-        "scheduled-letters",
-        "audience-filtering",
-        "idempotency"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:src/lib/letter-schedule.ts:runLetterSchedule",
-      "type": "function",
-      "name": "runLetterSchedule",
-      "filePath": "src/lib/letter-schedule.ts",
-      "lineRange": [
-        113,
-        180
-      ],
-      "summary": "Finds due letters, deduplicates registrants, evaluates audience and suppression, and sends through per-recipient claims. Supports dry runs and forced selection, releasing claims after failed sends and collecting errors.",
-      "tags": [
-        "scheduled-letters",
-        "audience-filtering",
-        "idempotency"
-      ],
-      "complexity": "moderate"
-    },
-    {
       "id": "file:tests/letter-schedule.test.ts",
       "type": "file",
       "name": "letter-schedule.test.ts",
@@ -5642,356 +4690,6 @@
         "scheduled-letters",
         "email",
         "audience-filtering"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "file:scripts/giveaway-followups.mjs",
-      "type": "file",
-      "name": "giveaway-followups.mjs",
-      "filePath": "scripts/giveaway-followups.mjs",
-      "summary": "Runs giveaway follow-up planning and delivery using Supabase send claims, Stripe and CRM suppression checks, ManyChat DMs, and Resend email. Includes rendering, sink testing, reviewer delivery, and gated live modes.",
-      "tags": [
-        "giveaway",
-        "followup",
-        "cli",
-        "email",
-        "suppression"
-      ],
-      "complexity": "complex"
-    },
-    {
-      "id": "function:scripts/giveaway-followups.mjs:lina",
-      "type": "function",
-      "name": "lina",
-      "filePath": "scripts/giveaway-followups.mjs",
-      "lineRange": [
-        128,
-        139
-      ],
-      "summary": "Sends operational follow-up alerts to configured owner Telegram chats when a bot token and recipients are available.",
-      "tags": [
-        "giveaway",
-        "followup",
-        "utility"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:scripts/giveaway-followups.mjs:stripeBuyer",
-      "type": "function",
-      "name": "stripeBuyer",
-      "filePath": "scripts/giveaway-followups.mjs",
-      "lineRange": [
-        169,
-        185
-      ],
-      "summary": "Checks completed Stripe checkout sessions and successful paid customer charges to identify existing buyers for suppression.",
-      "tags": [
-        "giveaway",
-        "followup",
-        "utility"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:scripts/giveaway-followups.mjs:repliedByEmail",
-      "type": "function",
-      "name": "repliedByEmail",
-      "filePath": "scripts/giveaway-followups.mjs",
-      "lineRange": [
-        195,
-        204
-      ],
-      "summary": "Searches Joe and Illy mailboxes for inbound replies since the gift, propagating lookup errors to prevent unsafe follow-ups.",
-      "tags": [
-        "giveaway",
-        "followup",
-        "utility"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:scripts/giveaway-followups.mjs:crmFirstSource",
-      "type": "function",
-      "name": "crmFirstSource",
-      "filePath": "scripts/giveaway-followups.mjs",
-      "lineRange": [
-        209,
-        213
-      ],
-      "summary": "Reads first and latest giveaway acquisition sources from the local CRM for a matching email address.",
-      "tags": [
-        "giveaway",
-        "followup",
-        "utility"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:scripts/giveaway-followups.mjs:slugForKeyword",
-      "type": "function",
-      "name": "slugForKeyword",
-      "filePath": "scripts/giveaway-followups.mjs",
-      "lineRange": [
-        215,
-        224
-      ],
-      "summary": "Lazily loads configured Instagram keywords into a cached mapping and resolves a giveaway slug.",
-      "tags": [
-        "giveaway",
-        "followup",
-        "utility"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:scripts/giveaway-followups.mjs:checkoutStartedSince",
-      "type": "function",
-      "name": "checkoutStartedSince",
-      "filePath": "scripts/giveaway-followups.mjs",
-      "lineRange": [
-        228,
-        247
-      ],
-      "summary": "Caches paginated recent Stripe checkout sessions and checks whether the recipient started checkout after the specified date.",
-      "tags": [
-        "giveaway",
-        "followup",
-        "utility"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:scripts/giveaway-followups.mjs:bookedCall",
-      "type": "function",
-      "name": "bookedCall",
-      "filePath": "scripts/giveaway-followups.mjs",
-      "lineRange": [
-        250,
-        257
-      ],
-      "summary": "Searches Joe and Illy calendars and checks attendee email addresses for a call booked since the gift.",
-      "tags": [
-        "giveaway",
-        "followup",
-        "utility"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:scripts/giveaway-followups.mjs:findSubscriber",
-      "type": "function",
-      "name": "findSubscriber",
-      "filePath": "scripts/giveaway-followups.mjs",
-      "lineRange": [
-        264,
-        274
-      ],
-      "summary": "Looks up a ManyChat subscriber by email and collects identity, gift context, and recent Instagram interaction fields.",
-      "tags": [
-        "giveaway",
-        "followup",
-        "utility"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:scripts/giveaway-followups.mjs:bonusLink",
-      "type": "function",
-      "name": "bonusLink",
-      "filePath": "scripts/giveaway-followups.mjs",
-      "lineRange": [
-        315,
-        322
-      ],
-      "summary": "Builds a recipient-specific signed workshop bonus checkout URL and creates an expiring Shlink short link.",
-      "tags": [
-        "giveaway",
-        "followup",
-        "utility"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:scripts/giveaway-followups.mjs:renderEmailFor",
-      "type": "function",
-      "name": "renderEmailFor",
-      "filePath": "scripts/giveaway-followups.mjs",
-      "lineRange": [
-        324,
-        333
-      ],
-      "summary": "Selects the sales, quick-win, gift, live-event, or final-email renderer and supplies unsubscribe and optional bonus links.",
-      "tags": [
-        "giveaway",
-        "followup",
-        "utility"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:scripts/giveaway-followups.mjs:resendSend",
-      "type": "function",
-      "name": "resendSend",
-      "filePath": "scripts/giveaway-followups.mjs",
-      "lineRange": [
-        335,
-        349
-      ],
-      "summary": "Sends branded text and HTML email through Resend with idempotency, unsubscribe headers, reply routing, and flow tags.",
-      "tags": [
-        "giveaway",
-        "followup",
-        "delivery"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:scripts/giveaway-followups.mjs:sendOne",
-      "type": "function",
-      "name": "sendOne",
-      "filePath": "scripts/giveaway-followups.mjs",
-      "lineRange": [
-        359,
-        401
-      ],
-      "summary": "Claims a follow-up before dispatching email or Instagram DM, handles human escalation, and releases failed claims for retry.",
-      "tags": [
-        "giveaway",
-        "followup",
-        "delivery"
-      ],
-      "complexity": "complex"
-    },
-    {
-      "id": "function:scripts/giveaway-followups.mjs:allVariants",
-      "type": "function",
-      "name": "allVariants",
-      "filePath": "scripts/giveaway-followups.mjs",
-      "lineRange": [
-        405,
-        415
-      ],
-      "summary": "Enumerates representative quick-win, final, gift, live-event, and sales email variants for review.",
-      "tags": [
-        "giveaway",
-        "followup",
-        "utility"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:scripts/giveaway-followups.mjs:renderAll",
-      "type": "function",
-      "name": "renderAll",
-      "filePath": "scripts/giveaway-followups.mjs",
-      "lineRange": [
-        417,
-        428
-      ],
-      "summary": "Writes every email variant as text and HTML plus day-zero and DM review files into a chosen directory.",
-      "tags": [
-        "giveaway",
-        "followup",
-        "utility"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:scripts/giveaway-followups.mjs:testSends",
-      "type": "function",
-      "name": "testSends",
-      "filePath": "scripts/giveaway-followups.mjs",
-      "lineRange": [
-        430,
-        442
-      ],
-      "summary": "Sends all email variants exclusively to a Resend sink address and polls delivery status.",
-      "tags": [
-        "giveaway",
-        "followup",
-        "delivery"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "function:scripts/giveaway-followups.mjs:reviewSends",
-      "type": "function",
-      "name": "reviewSends",
-      "filePath": "scripts/giveaway-followups.mjs",
-      "lineRange": [
-        444,
-        485
-      ],
-      "summary": "Sends selected final sales or later follow-up variants to the fixed reviewer address with stable idempotency keys.",
-      "tags": [
-        "giveaway",
-        "followup",
-        "delivery"
-      ],
-      "complexity": "complex"
-    },
-    {
-      "id": "function:scripts/giveaway-followups.mjs:main",
-      "type": "function",
-      "name": "main",
-      "filePath": "scripts/giveaway-followups.mjs",
-      "lineRange": [
-        489,
-        599
-      ],
-      "summary": "Loads leads and suppression signals, skips recipients with failed lookups, plans due follow-ups, and supports preview or gated capped live dispatch.",
-      "tags": [
-        "giveaway",
-        "followup",
-        "orchestration"
-      ],
-      "complexity": "complex"
-    },
-    {
-      "id": "file:scripts/lib/supabase-read.mjs",
-      "type": "file",
-      "name": "supabase-read.mjs",
-      "filePath": "scripts/lib/supabase-read.mjs",
-      "summary": "Provides bounded retries for idempotent Supabase JSON reads, with per-attempt deadlines and fail-closed errors for permanent failures.",
-      "tags": [
-        "supabase",
-        "retry",
-        "timeout",
-        "read-only",
-        "tested"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:scripts/lib/supabase-read.mjs:readSupabaseJson",
-      "type": "function",
-      "name": "readSupabaseJson",
-      "filePath": "scripts/lib/supabase-read.mjs",
-      "lineRange": [
-        7,
-        26
-      ],
-      "summary": "Performs idempotent Supabase JSON reads with fresh 30-second deadlines and bounded backoff for transient HTTP or transport failures.",
-      "tags": [
-        "supabase",
-        "retry",
-        "timeout"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "file:tests/supabase-read.test.ts",
-      "type": "file",
-      "name": "supabase-read.test.ts",
-      "filePath": "tests/supabase-read.test.ts",
-      "summary": "Tests transient Supabase recovery, retry exhaustion, permanent HTTP failures, fresh transport deadlines, and malformed JSON handling using injected waits.",
-      "tags": [
-        "test",
-        "supabase",
-        "retry",
-        "timeout"
       ],
       "complexity": "moderate"
     },
@@ -6034,71 +4732,6 @@
         "routing"
       ],
       "complexity": "moderate"
-    },
-    {
-      "id": "file:src/app/api/events/letter-schedule/route.ts",
-      "type": "file",
-      "name": "route.ts",
-      "filePath": "src/app/api/events/letter-schedule/route.ts",
-      "summary": "Exposes the authenticated scheduled event letter endpoint, adapting confirmed registrations, external flags and cron locks to the scheduling engine with dry-run and targeted execution controls.",
-      "tags": [
-        "api-handler",
-        "letter-scheduling",
-        "cron",
-        "supabase"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:src/app/api/events/letter-schedule/route.ts:listRegistrations",
-      "type": "function",
-      "name": "listRegistrations",
-      "filePath": "src/app/api/events/letter-schedule/route.ts",
-      "summary": "Loads confirmed attendees for one event and maps registration data into scheduler recipients, failing on database read errors.",
-      "tags": [
-        "registration",
-        "supabase",
-        "letter-scheduling"
-      ],
-      "complexity": "simple",
-      "lineRange": [
-        21,
-        35
-      ]
-    },
-    {
-      "id": "function:src/app/api/events/letter-schedule/route.ts:loadFlags",
-      "type": "function",
-      "name": "loadFlags",
-      "filePath": "src/app/api/events/letter-schedule/route.ts",
-      "summary": "Reads scheduling flags into event-wide sets and normalized recipient-specific sets, propagating database errors.",
-      "tags": [
-        "event-flags",
-        "supabase",
-        "letter-scheduling"
-      ],
-      "complexity": "simple",
-      "lineRange": [
-        37,
-        51
-      ]
-    },
-    {
-      "id": "function:src/app/api/events/letter-schedule/route.ts:GET",
-      "type": "function",
-      "name": "GET",
-      "filePath": "src/app/api/events/letter-schedule/route.ts",
-      "summary": "Authorizes cron requests, validates the requested time and selects events before invoking the letter scheduler with persistence, suppression and delivery adapters.",
-      "tags": [
-        "api-handler",
-        "cron",
-        "letter-scheduling"
-      ],
-      "complexity": "moderate",
-      "lineRange": [
-        64,
-        94
-      ]
     },
     {
       "id": "file:src/app/voice-setup/page.tsx",
@@ -6159,6 +4792,1510 @@
         27,
         50
       ]
+    },
+    {
+      "id": "file:src/components/events/EventRegistrationSection.tsx",
+      "type": "file",
+      "name": "EventRegistrationSection.tsx",
+      "filePath": "src/components/events/EventRegistrationSection.tsx",
+      "summary": "Provides the shared client registration form for free, paid, donation and capacity-limited events. Coordinates intake validation, promo pricing, embedded or hosted Stripe checkout, optional attendee profiling, waitlisting and calendar links after confirmation.",
+      "tags": [
+        "react",
+        "registration",
+        "stripe-checkout",
+        "event-intake"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/components/events/EventRegistrationSection.tsx:useAnimatedNumber",
+      "type": "function",
+      "name": "useAnimatedNumber",
+      "filePath": "src/components/events/EventRegistrationSection.tsx",
+      "lineRange": [
+        7,
+        41
+      ],
+      "summary": "Animates changing prices with requestAnimationFrame and cubic easing, cancelling pending frames on updates and unmount.",
+      "tags": [
+        "react-hook",
+        "animation",
+        "pricing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
+      "type": "function",
+      "name": "EventRegistrationSection",
+      "filePath": "src/components/events/EventRegistrationSection.tsx",
+      "lineRange": [
+        125,
+        1122
+      ],
+      "summary": "Manages event registration and checkout state, validates attendee intake, handles Stripe fallback and completion, and presents profile and success dialogs with calendar links.",
+      "tags": [
+        "react-component",
+        "registration",
+        "stripe-checkout",
+        "validation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/app/api/events/letter-schedule/route.ts",
+      "type": "file",
+      "name": "route.ts",
+      "filePath": "src/app/api/events/letter-schedule/route.ts",
+      "summary": "Exposes the authenticated event letter scheduling cron endpoint. Loads confirmed registrations and suppression flags from Supabase, acquires delivery locks and delegates scheduled email decisions with dry-run and force options.",
+      "tags": [
+        "api-handler",
+        "cron",
+        "email-scheduling",
+        "supabase"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/app/api/events/letter-schedule/route.ts:listRegistrations",
+      "type": "function",
+      "name": "listRegistrations",
+      "filePath": "src/app/api/events/letter-schedule/route.ts",
+      "lineRange": [
+        22,
+        36
+      ],
+      "summary": "Loads confirmed attendee records for an event and maps database fields into letter recipients, throwing when the read fails.",
+      "tags": [
+        "database-query",
+        "email-recipients",
+        "registration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/app/api/events/letter-schedule/route.ts:loadFlags",
+      "type": "function",
+      "name": "loadFlags",
+      "filePath": "src/app/api/events/letter-schedule/route.ts",
+      "lineRange": [
+        38,
+        52
+      ],
+      "summary": "Loads event and per-person letter flags, normalizing recipient emails into sets and maps for scheduling decisions.",
+      "tags": [
+        "database-query",
+        "email-flags",
+        "normalization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/app/api/events/letter-schedule/route.ts:GET",
+      "type": "function",
+      "name": "GET",
+      "filePath": "src/app/api/events/letter-schedule/route.ts",
+      "lineRange": [
+        65,
+        97
+      ],
+      "summary": "Authenticates the cron request, validates scheduling overrides, selects page-backed or letter-only events and runs the letter scheduler with database and mail adapters.",
+      "tags": [
+        "api-handler",
+        "cron",
+        "authorization",
+        "email-scheduling"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/lib/calendar.ts",
+      "type": "file",
+      "name": "calendar.ts",
+      "filePath": "src/lib/calendar.ts",
+      "summary": "Builds Google Calendar and Outlook event URLs plus iCalendar downloads or RSVP invitations. Provides a shared event description containing joining details and the canonical event page.",
+      "tags": [
+        "calendar",
+        "icalendar",
+        "outlook",
+        "event-links"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/calendar.ts:buildGoogleCalendarUrl",
+      "type": "function",
+      "name": "buildGoogleCalendarUrl",
+      "filePath": "src/lib/calendar.ts",
+      "lineRange": [
+        9,
+        25
+      ],
+      "summary": "Builds a Google Calendar event template URL with UTC date range and optional location and description.",
+      "tags": [
+        "calendar",
+        "google-calendar",
+        "url-builder"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/calendar.ts:buildOutlookCalendarUrl",
+      "type": "function",
+      "name": "buildOutlookCalendarUrl",
+      "filePath": "src/lib/calendar.ts",
+      "lineRange": [
+        33,
+        51
+      ],
+      "summary": "Builds an Outlook web event compose URL for consumer or Microsoft 365 accounts, carrying UTC times and optional event details.",
+      "tags": [
+        "calendar",
+        "outlook",
+        "url-builder"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/calendar.ts:buildIcalString",
+      "type": "function",
+      "name": "buildIcalString",
+      "filePath": "src/lib/calendar.ts",
+      "lineRange": [
+        53,
+        101
+      ],
+      "summary": "Serializes an event into iCalendar with escaped content, sequence tracking and optional organizer and attendee fields for RSVP invitations.",
+      "tags": [
+        "calendar",
+        "icalendar",
+        "serialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/calendar.ts:buildEventCalendarDescription",
+      "type": "function",
+      "name": "buildEventCalendarDescription",
+      "filePath": "src/lib/calendar.ts",
+      "lineRange": [
+        107,
+        120
+      ],
+      "summary": "Composes the calendar description from event title, summary, optional Zoom and duration details, and the canonical event URL.",
+      "tags": [
+        "calendar",
+        "event-description",
+        "formatting"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/lib/event-confirmation-email.ts",
+      "type": "file",
+      "name": "event-confirmation-email.ts",
+      "filePath": "src/lib/event-confirmation-email.ts",
+      "summary": "Builds and sends event confirmations, setup instructions, scheduled letters, location and session reminders, waitlist updates and registration backup alerts through Resend. Handles calendar attachments, location privacy, idempotency and marketing unsubscribe controls.",
+      "tags": [
+        "email",
+        "events",
+        "resend",
+        "calendar"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/lib/event-confirmation-email.ts:buildAiContentCreationSetupEmailHtml",
+      "type": "function",
+      "name": "buildAiContentCreationSetupEmailHtml",
+      "filePath": "src/lib/event-confirmation-email.ts",
+      "lineRange": [
+        35,
+        112
+      ],
+      "summary": "Renders personalized AI Content Creation Lab setup instructions using the branded email template.",
+      "tags": [
+        "email",
+        "events",
+        "resend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/event-confirmation-email.ts:buildAskAnAiExpertWelcomeEmailHtml",
+      "type": "function",
+      "name": "buildAskAnAiExpertWelcomeEmailHtml",
+      "filePath": "src/lib/event-confirmation-email.ts",
+      "lineRange": [
+        114,
+        174
+      ],
+      "summary": "Renders a free expert-session welcome with Zoom access, tracked event links and unsubscribe access.",
+      "tags": [
+        "email",
+        "events",
+        "resend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/event-confirmation-email.ts:buildSessionReminderEmailHtml",
+      "type": "function",
+      "name": "buildSessionReminderEmailHtml",
+      "filePath": "src/lib/event-confirmation-email.ts",
+      "lineRange": [
+        176,
+        218
+      ],
+      "summary": "Builds the subject and branded Zoom reminder HTML for a 24-hour or 2-hour reminder window.",
+      "tags": [
+        "email",
+        "events",
+        "resend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/event-confirmation-email.ts:resolveHostContact",
+      "type": "function",
+      "name": "resolveHostContact",
+      "filePath": "src/lib/event-confirmation-email.ts",
+      "lineRange": [
+        229,
+        246
+      ],
+      "summary": "Resolves host contact overrides and renders a WhatsApp contact block when all required contact details are present.",
+      "tags": [
+        "email",
+        "events",
+        "resend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/event-confirmation-email.ts:buildConfirmationEmailHtml",
+      "type": "function",
+      "name": "buildConfirmationEmailHtml",
+      "filePath": "src/lib/event-confirmation-email.ts",
+      "lineRange": [
+        248,
+        474
+      ],
+      "summary": "Renders event details, Zoom and calendar links, optional setup and cancellation access while respecting private-address reveal timing.",
+      "tags": [
+        "email",
+        "events",
+        "resend"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/lib/event-confirmation-email.ts:buildLocationReminderEmailHtml",
+      "type": "function",
+      "name": "buildLocationReminderEmailHtml",
+      "filePath": "src/lib/event-confirmation-email.ts",
+      "lineRange": [
+        476,
+        550
+      ],
+      "summary": "Renders private address and arrival instructions, rejecting events without private-location configuration.",
+      "tags": [
+        "email",
+        "events",
+        "resend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/event-confirmation-email.ts:sendResendEmail",
+      "type": "function",
+      "name": "sendResendEmail",
+      "filePath": "src/lib/event-confirmation-email.ts",
+      "lineRange": [
+        558,
+        601
+      ],
+      "summary": "Posts content, attachments and optional message and idempotency headers to Resend, rejecting missing credentials and unsuccessful responses.",
+      "tags": [
+        "email",
+        "events",
+        "resend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/event-confirmation-email.ts:buildConfirmationIdempotencyKey",
+      "type": "function",
+      "name": "buildConfirmationIdempotencyKey",
+      "filePath": "src/lib/event-confirmation-email.ts",
+      "lineRange": [
+        603,
+        605
+      ],
+      "summary": "Creates a confirmation deduplication key from the event slug and normalized recipient email.",
+      "tags": [
+        "email",
+        "events",
+        "resend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/event-confirmation-email.ts:buildWaitlistJoinIdempotencyKey",
+      "type": "function",
+      "name": "buildWaitlistJoinIdempotencyKey",
+      "filePath": "src/lib/event-confirmation-email.ts",
+      "lineRange": [
+        607,
+        609
+      ],
+      "summary": "Creates a waitlist joining deduplication key from the event slug and normalized recipient email.",
+      "tags": [
+        "email",
+        "events",
+        "resend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/event-confirmation-email.ts:buildAiContentCreationSetupIdempotencyKey",
+      "type": "function",
+      "name": "buildAiContentCreationSetupIdempotencyKey",
+      "filePath": "src/lib/event-confirmation-email.ts",
+      "lineRange": [
+        611,
+        613
+      ],
+      "summary": "Creates a normalized-recipient deduplication key for the fixed content creation setup email.",
+      "tags": [
+        "email",
+        "events",
+        "resend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/event-confirmation-email.ts:buildAskAnAiExpertWelcomeIdempotencyKey",
+      "type": "function",
+      "name": "buildAskAnAiExpertWelcomeIdempotencyKey",
+      "filePath": "src/lib/event-confirmation-email.ts",
+      "lineRange": [
+        615,
+        617
+      ],
+      "summary": "Creates a normalized-recipient deduplication key for the expert-session welcome.",
+      "tags": [
+        "email",
+        "events",
+        "resend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/event-confirmation-email.ts:buildLetterConfirmation",
+      "type": "function",
+      "name": "buildLetterConfirmation",
+      "filePath": "src/lib/event-confirmation-email.ts",
+      "lineRange": [
+        628,
+        675
+      ],
+      "summary": "Renders personalized plain-letter HTML and text with escaped content, inline named links, preview text and an optional unsubscribe footer.",
+      "tags": [
+        "email",
+        "events",
+        "resend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/event-confirmation-email.ts:sendScheduledLetter",
+      "type": "function",
+      "name": "sendScheduledLetter",
+      "filePath": "src/lib/event-confirmation-email.ts",
+      "lineRange": [
+        680,
+        703
+      ],
+      "summary": "Formats and sends a scheduled letter, adding unsubscribe content and one-click headers for promotional letters.",
+      "tags": [
+        "email",
+        "events",
+        "resend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/event-confirmation-email.ts:sendEventConfirmationEmail",
+      "type": "function",
+      "name": "sendEventConfirmationEmail",
+      "filePath": "src/lib/event-confirmation-email.ts",
+      "lineRange": [
+        705,
+        767
+      ],
+      "summary": "Sends a plain-letter or branded confirmation with an idempotency key and calendar invitation that respects private-location timing.",
+      "tags": [
+        "email",
+        "events",
+        "resend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/event-confirmation-email.ts:sendAiContentCreationSetupEmail",
+      "type": "function",
+      "name": "sendAiContentCreationSetupEmail",
+      "filePath": "src/lib/event-confirmation-email.ts",
+      "lineRange": [
+        769,
+        779
+      ],
+      "summary": "Sends the dedicated AI Content Creation Lab setup email with a stable recipient idempotency key.",
+      "tags": [
+        "email",
+        "events",
+        "resend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/event-confirmation-email.ts:sendAskAnAiExpertWelcomeEmail",
+      "type": "function",
+      "name": "sendAskAnAiExpertWelcomeEmail",
+      "filePath": "src/lib/event-confirmation-email.ts",
+      "lineRange": [
+        781,
+        824
+      ],
+      "summary": "Checks suppression before sending a promotional expert-session welcome with calendar attachment and unsubscribe headers.",
+      "tags": [
+        "email",
+        "events",
+        "resend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/event-confirmation-email.ts:sendEventLocationReminderEmail",
+      "type": "function",
+      "name": "sendEventLocationReminderEmail",
+      "filePath": "src/lib/event-confirmation-email.ts",
+      "lineRange": [
+        826,
+        872
+      ],
+      "summary": "Sends private location details and a sequence-one calendar update using the original invitation UID and a reminder idempotency key.",
+      "tags": [
+        "email",
+        "events",
+        "resend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/event-confirmation-email.ts:sendSessionReminderEmail",
+      "type": "function",
+      "name": "sendSessionReminderEmail",
+      "filePath": "src/lib/event-confirmation-email.ts",
+      "lineRange": [
+        874,
+        898
+      ],
+      "summary": "Validates calendar start details and sends the selected session reminder with an event, recipient and time-window idempotency key.",
+      "tags": [
+        "email",
+        "events",
+        "resend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/event-confirmation-email.ts:buildWaitlistConfirmationHtml",
+      "type": "function",
+      "name": "buildWaitlistConfirmationHtml",
+      "filePath": "src/lib/event-confirmation-email.ts",
+      "lineRange": [
+        900,
+        937
+      ],
+      "summary": "Renders waitlist acknowledgement content and a tokenized self-removal link.",
+      "tags": [
+        "email",
+        "events",
+        "resend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/event-confirmation-email.ts:buildWaitlistSpotNotificationHtml",
+      "type": "function",
+      "name": "buildWaitlistSpotNotificationHtml",
+      "filePath": "src/lib/event-confirmation-email.ts",
+      "lineRange": [
+        939,
+        994
+      ],
+      "summary": "Renders cancellation or two-hour available-seat copy with registration and tokenized waitlist removal links.",
+      "tags": [
+        "email",
+        "events",
+        "resend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/event-confirmation-email.ts:sendWaitlistConfirmationEmail",
+      "type": "function",
+      "name": "sendWaitlistConfirmationEmail",
+      "filePath": "src/lib/event-confirmation-email.ts",
+      "lineRange": [
+        996,
+        1011
+      ],
+      "summary": "Sends waitlist acknowledgement with the joining idempotency key.",
+      "tags": [
+        "email",
+        "events",
+        "resend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/event-confirmation-email.ts:sendWaitlistSpotNotificationEmail",
+      "type": "function",
+      "name": "sendWaitlistSpotNotificationEmail",
+      "filePath": "src/lib/event-confirmation-email.ts",
+      "lineRange": [
+        1013,
+        1039
+      ],
+      "summary": "Sends variant-specific available-seat notifications with an optional caller-provided idempotency key.",
+      "tags": [
+        "email",
+        "events",
+        "resend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/event-confirmation-email.ts:sendRegistrationBackupAlert",
+      "type": "function",
+      "name": "sendRegistrationBackupAlert",
+      "filePath": "src/lib/event-confirmation-email.ts",
+      "lineRange": [
+        1046,
+        1074
+      ],
+      "summary": "Emails an escaped backup registration record to the configured operator when the attendee was confirmed but the database write failed.",
+      "tags": [
+        "email",
+        "events",
+        "resend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/lib/events.tsx",
+      "type": "file",
+      "name": "events.tsx",
+      "filePath": "src/lib/events.tsx",
+      "summary": "Defines the event catalog and rich page, pricing, registration and email configuration types. Provides promotion, donation, event lookup and upcoming-event helpers.",
+      "tags": [
+        "events",
+        "catalog",
+        "pricing",
+        "react"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/lib/events.tsx:getEventDiscountedPrice",
+      "type": "function",
+      "name": "getEventDiscountedPrice",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        355,
+        357
+      ],
+      "summary": "Computes an event ticket price using an optional fixed or percentage discount, clamped at zero.",
+      "tags": [
+        "events",
+        "catalog",
+        "pricing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/events.tsx:resolvePromoCode",
+      "type": "function",
+      "name": "resolvePromoCode",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        359,
+        363
+      ],
+      "summary": "Finds an event promotion using a trimmed and case-normalized supplied code.",
+      "tags": [
+        "events",
+        "catalog",
+        "pricing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/events.tsx:formatEventPrice",
+      "type": "function",
+      "name": "formatEventPrice",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        365,
+        370
+      ],
+      "summary": "Formats a discounted event price and currency symbol or returns the pending-price announcement.",
+      "tags": [
+        "events",
+        "catalog",
+        "pricing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/events.tsx:formatDonationLabelNote",
+      "type": "function",
+      "name": "formatDonationLabelNote",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        372,
+        382
+      ],
+      "summary": "Formats configured donation guidance or the suggested and minimum amounts.",
+      "tags": [
+        "events",
+        "catalog",
+        "pricing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/events.tsx:toggleDonationPreset",
+      "type": "function",
+      "name": "toggleDonationPreset",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        384,
+        401
+      ],
+      "summary": "Adds or removes a selected donation preset while enforcing the minimum and returning the next selected state.",
+      "tags": [
+        "events",
+        "catalog",
+        "pricing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/events.tsx:getEventBySlug",
+      "type": "function",
+      "name": "getEventBySlug",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        2447,
+        2449
+      ],
+      "summary": "Finds an event definition by its public slug.",
+      "tags": [
+        "events",
+        "catalog",
+        "pricing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/events.tsx:getLiveEvents",
+      "type": "function",
+      "name": "getLiveEvents",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        2451,
+        2453
+      ],
+      "summary": "Returns catalog events whose status is live.",
+      "tags": [
+        "events",
+        "catalog",
+        "pricing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/events.tsx:getUpcomingLiveEvents",
+      "type": "function",
+      "name": "getUpcomingLiveEvents",
+      "filePath": "src/lib/events.tsx",
+      "lineRange": [
+        2455,
+        2470
+      ],
+      "summary": "Filters live events by calendar end or start time and sorts them chronologically, retaining undated events.",
+      "tags": [
+        "events",
+        "catalog",
+        "pricing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/lib/letter-only-events.ts",
+      "type": "file",
+      "name": "letter-only-events.ts",
+      "filePath": "src/lib/letter-only-events.ts",
+      "summary": "Defines approved Maven voice lesson letters for an event without a public site page, with approval and stop-check audience gates. Exposes slug lookup for scheduler consumers.",
+      "tags": [
+        "email",
+        "events",
+        "maven",
+        "scheduled-letters"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/letter-only-events.ts:getLetterOnlyEvent",
+      "type": "function",
+      "name": "getLetterOnlyEvent",
+      "filePath": "src/lib/letter-only-events.ts",
+      "lineRange": [
+        67,
+        69
+      ],
+      "summary": "Finds a letter-only event by slug.",
+      "tags": [
+        "email",
+        "events",
+        "maven"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/lib/letter-schedule.ts",
+      "type": "file",
+      "name": "letter-schedule.ts",
+      "filePath": "src/lib/letter-schedule.ts",
+      "summary": "Runs time-windowed letters using injected registration, flag, suppression, claim and delivery dependencies. Applies audience rules and body variants and releases failed send claims for retry.",
+      "tags": [
+        "email",
+        "scheduler",
+        "audience",
+        "idempotency"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/letter-schedule.ts:isLetterDue",
+      "type": "function",
+      "name": "isLetterDue",
+      "filePath": "src/lib/letter-schedule.ts",
+      "lineRange": [
+        40,
+        45
+      ],
+      "summary": "Checks whether the current time is inside the configured letter send window, with a two-hour default.",
+      "tags": [
+        "email",
+        "scheduler",
+        "audience"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/letter-schedule.ts:letterAudience",
+      "type": "function",
+      "name": "letterAudience",
+      "filePath": "src/lib/letter-schedule.ts",
+      "lineRange": [
+        52,
+        73
+      ],
+      "summary": "Filters recipients using event flags, signup cutoff, attendance, personal stop flags and internal-test exclusion.",
+      "tags": [
+        "email",
+        "scheduler",
+        "audience"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/letter-schedule.ts:letterBodyFor",
+      "type": "function",
+      "name": "letterBodyFor",
+      "filePath": "src/lib/letter-schedule.ts",
+      "lineRange": [
+        76,
+        85
+      ],
+      "summary": "Selects the first body variant matching signup cutoff and missing-person-flag conditions, falling back to default copy.",
+      "tags": [
+        "email",
+        "scheduler",
+        "audience"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/letter-schedule.ts:buildLetterClaimKey",
+      "type": "function",
+      "name": "buildLetterClaimKey",
+      "filePath": "src/lib/letter-schedule.ts",
+      "lineRange": [
+        87,
+        89
+      ],
+      "summary": "Creates a per-event, per-letter normalized-recipient claim key for delivery deduplication.",
+      "tags": [
+        "email",
+        "scheduler",
+        "audience"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/letter-schedule.ts:runLetterSchedule",
+      "type": "function",
+      "name": "runLetterSchedule",
+      "filePath": "src/lib/letter-schedule.ts",
+      "lineRange": [
+        117,
+        184
+      ],
+      "summary": "Finds due letters, deduplicates registrants, applies flags and suppression, claims recipients and sends through injected dependencies. Supports dry runs and selected-letter forcing and releases failed send claims for retry.",
+      "tags": [
+        "email",
+        "scheduler",
+        "audience"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/calendar.test.ts",
+      "type": "file",
+      "name": "calendar.test.ts",
+      "filePath": "tests/calendar.test.ts",
+      "summary": "Verifies Google and Outlook calendar links and iCalendar invitations, including UTC formatting, escaping, organizer and attendee fields, optional locations, and update sequences.",
+      "tags": [
+        "test",
+        "calendar",
+        "serialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/event-confirmation-location-privacy.test.ts",
+      "type": "file",
+      "name": "event-confirmation-location-privacy.test.ts",
+      "filePath": "tests/event-confirmation-location-privacy.test.ts",
+      "summary": "Checks confirmation emails keep private venue details and map links hidden before the reveal window while retaining area guidance, the attendee contact, and email-compatible calendar buttons.",
+      "tags": [
+        "test",
+        "email",
+        "privacy"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:tests/letter-only-events.test.ts",
+      "type": "file",
+      "name": "letter-only-events.test.ts",
+      "filePath": "tests/letter-only-events.test.ts",
+      "summary": "Tests off-site Maven lesson schedules against public event slugs and approved letter copy, including approval flags, stop checks, due times, and recipient suppression.",
+      "tags": [
+        "test",
+        "event-scheduling",
+        "email"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:scripts/giveaway-followups.mjs",
+      "type": "file",
+      "name": "giveaway-followups.mjs",
+      "filePath": "scripts/giveaway-followups.mjs",
+      "summary": "Runs giveaway follow-up planning and guarded Instagram or email delivery with claims, suppression and customer checks, retrying idempotent reads, dry-run output, review rendering, and limited live modes.",
+      "tags": [
+        "entry-point",
+        "giveaway",
+        "email",
+        "automation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:scripts/giveaway-followups.mjs:lina",
+      "type": "function",
+      "name": "lina",
+      "filePath": "scripts/giveaway-followups.mjs",
+      "lineRange": [
+        128,
+        139
+      ],
+      "summary": "Sends human-reply escalation messages to configured owner chats through the Lina Telegram bot.",
+      "tags": [
+        "giveaway",
+        "automation",
+        "email"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/giveaway-followups.mjs:stripeBuyer",
+      "type": "function",
+      "name": "stripeBuyer",
+      "filePath": "scripts/giveaway-followups.mjs",
+      "lineRange": [
+        169,
+        185
+      ],
+      "summary": "Checks completed Stripe checkout sessions and successful customer charges to identify existing buyers.",
+      "tags": [
+        "giveaway",
+        "automation",
+        "email"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/giveaway-followups.mjs:repliedByEmail",
+      "type": "function",
+      "name": "repliedByEmail",
+      "filePath": "scripts/giveaway-followups.mjs",
+      "lineRange": [
+        195,
+        204
+      ],
+      "summary": "Searches Joe and Illy Gmail accounts for replies since the gift and propagates lookup failures.",
+      "tags": [
+        "giveaway",
+        "automation",
+        "email"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/giveaway-followups.mjs:crmFirstSource",
+      "type": "function",
+      "name": "crmFirstSource",
+      "filePath": "scripts/giveaway-followups.mjs",
+      "lineRange": [
+        209,
+        213
+      ],
+      "summary": "Reads first and latest giveaway source identifiers from the local CRM contact record.",
+      "tags": [
+        "giveaway",
+        "automation",
+        "email"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/giveaway-followups.mjs:slugForKeyword",
+      "type": "function",
+      "name": "slugForKeyword",
+      "filePath": "scripts/giveaway-followups.mjs",
+      "lineRange": [
+        215,
+        224
+      ],
+      "summary": "Caches the Instagram giveaway keyword configuration and resolves a keyword to its gift slug.",
+      "tags": [
+        "giveaway",
+        "automation",
+        "email"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/giveaway-followups.mjs:checkoutStartedSince",
+      "type": "function",
+      "name": "checkoutStartedSince",
+      "filePath": "scripts/giveaway-followups.mjs",
+      "lineRange": [
+        228,
+        247
+      ],
+      "summary": "Caches paginated recent Stripe checkout sessions and checks whether a recipient began checkout after a given time.",
+      "tags": [
+        "giveaway",
+        "automation",
+        "email"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/giveaway-followups.mjs:bookedCall",
+      "type": "function",
+      "name": "bookedCall",
+      "filePath": "scripts/giveaway-followups.mjs",
+      "lineRange": [
+        250,
+        257
+      ],
+      "summary": "Searches Joe and Illy calendars for events listing the recipient as an attendee after the gift.",
+      "tags": [
+        "giveaway",
+        "automation",
+        "email"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/giveaway-followups.mjs:findSubscriber",
+      "type": "function",
+      "name": "findSubscriber",
+      "filePath": "scripts/giveaway-followups.mjs",
+      "lineRange": [
+        264,
+        274
+      ],
+      "summary": "Looks up a ManyChat subscriber by email and returns identity, gift answers, and recent interaction fields for planning.",
+      "tags": [
+        "giveaway",
+        "automation",
+        "email"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/giveaway-followups.mjs:bonusLink",
+      "type": "function",
+      "name": "bonusLink",
+      "filePath": "scripts/giveaway-followups.mjs",
+      "lineRange": [
+        315,
+        322
+      ],
+      "summary": "Signs a recipient-specific workshop bonus checkout deal and creates a short link expiring after the bonus window.",
+      "tags": [
+        "giveaway",
+        "automation",
+        "email"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/giveaway-followups.mjs:renderEmailFor",
+      "type": "function",
+      "name": "renderEmailFor",
+      "filePath": "scripts/giveaway-followups.mjs",
+      "lineRange": [
+        324,
+        333
+      ],
+      "summary": "Selects the giveaway email renderer and supplies personalized unsubscribe and workshop bonus links.",
+      "tags": [
+        "giveaway",
+        "automation",
+        "email"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/giveaway-followups.mjs:resendSend",
+      "type": "function",
+      "name": "resendSend",
+      "filePath": "scripts/giveaway-followups.mjs",
+      "lineRange": [
+        335,
+        349
+      ],
+      "summary": "Delivers a branded email through Resend with idempotency, unsubscribe headers, reply routing, and follow-up tags.",
+      "tags": [
+        "giveaway",
+        "automation",
+        "email"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/giveaway-followups.mjs:sendOne",
+      "type": "function",
+      "name": "sendOne",
+      "filePath": "scripts/giveaway-followups.mjs",
+      "lineRange": [
+        359,
+        401
+      ],
+      "summary": "Claims one follow-up before delivery, handles human escalation or Instagram and email sends, records success, and releases failed claims.",
+      "tags": [
+        "giveaway",
+        "automation",
+        "email"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/giveaway-followups.mjs:allVariants",
+      "type": "function",
+      "name": "allVariants",
+      "filePath": "scripts/giveaway-followups.mjs",
+      "lineRange": [
+        405,
+        415
+      ],
+      "summary": "Builds example content for each quick-win, final-offer, second-gift, live-event, and sales email variant.",
+      "tags": [
+        "giveaway",
+        "automation",
+        "email"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/giveaway-followups.mjs:renderAll",
+      "type": "function",
+      "name": "renderAll",
+      "filePath": "scripts/giveaway-followups.mjs",
+      "lineRange": [
+        417,
+        428
+      ],
+      "summary": "Writes HTML and text review artifacts for every email variant and the initial gift and Instagram messages.",
+      "tags": [
+        "giveaway",
+        "automation",
+        "email"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/giveaway-followups.mjs:testSends",
+      "type": "function",
+      "name": "testSends",
+      "filePath": "scripts/giveaway-followups.mjs",
+      "lineRange": [
+        430,
+        442
+      ],
+      "summary": "Restricts test delivery to Resend sink addresses, sends every variant, and polls delivery events.",
+      "tags": [
+        "giveaway",
+        "automation",
+        "email"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/giveaway-followups.mjs:reviewSends",
+      "type": "function",
+      "name": "reviewSends",
+      "filePath": "scripts/giveaway-followups.mjs",
+      "lineRange": [
+        444,
+        485
+      ],
+      "summary": "Sends the selected sales or later-stage review copies only to the approved reviewer using stable idempotency keys.",
+      "tags": [
+        "giveaway",
+        "automation",
+        "email"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/giveaway-followups.mjs:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "scripts/giveaway-followups.mjs",
+      "lineRange": [
+        489,
+        599
+      ],
+      "summary": "Loads leads and send history, evaluates suppression and engagement safeguards, plans follow-ups, and executes capped sends only when live mode is enabled.",
+      "tags": [
+        "giveaway",
+        "automation",
+        "email"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:scripts/lib/supabase-read.mjs",
+      "type": "file",
+      "name": "supabase-read.mjs",
+      "filePath": "scripts/lib/supabase-read.mjs",
+      "summary": "Provides bounded retries for idempotent Supabase JSON reads, covering transient HTTP and transport failures with a fresh deadline for headers and response bodies.",
+      "tags": [
+        "utility",
+        "supabase",
+        "retry",
+        "error-handling"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/lib/supabase-read.mjs:readSupabaseJson",
+      "type": "function",
+      "name": "readSupabaseJson",
+      "filePath": "scripts/lib/supabase-read.mjs",
+      "lineRange": [
+        7,
+        23
+      ],
+      "summary": "Reads Supabase JSON with up to four attempts for transient HTTP and transport failures, applying exponential delays and a fresh response-body deadline.",
+      "tags": [
+        "utility",
+        "supabase",
+        "retry"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:tests/supabase-read.test.ts",
+      "type": "file",
+      "name": "supabase-read.test.ts",
+      "filePath": "tests/supabase-read.test.ts",
+      "summary": "Verifies Supabase reads recover from transient HTTP, transport, and response-body errors, stop after four attempts, and fail immediately for permanent HTTP errors or invalid JSON.",
+      "tags": [
+        "test",
+        "supabase",
+        "retry"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/components/events/EventPageView.tsx",
+      "type": "file",
+      "name": "EventPageView.tsx",
+      "filePath": "src/components/events/EventPageView.tsx",
+      "summary": "Renders data-driven event landing pages, including standard workshop, Voice Studio and festival layouts. Composes typed content sections and media, derives registration availability and promotional prices, and passes Google, Outlook and iCalendar links to the registration form.",
+      "tags": [
+        "react",
+        "event-page",
+        "content-rendering",
+        "calendar"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/components/events/EventPageView.tsx:SectionShell",
+      "type": "function",
+      "name": "SectionShell",
+      "filePath": "src/components/events/EventPageView.tsx",
+      "lineRange": [
+        31,
+        64
+      ],
+      "summary": "Wraps event content in the shared section layout with optional eyebrow, heading and introduction.",
+      "tags": [
+        "react-component",
+        "layout",
+        "event-section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/events/EventPageView.tsx:StorySection",
+      "type": "function",
+      "name": "StorySection",
+      "filePath": "src/components/events/EventPageView.tsx",
+      "lineRange": [
+        76,
+        86
+      ],
+      "summary": "Presents a story section using shared headings and paragraph styling.",
+      "tags": [
+        "react-component",
+        "story",
+        "event-section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/events/EventPageView.tsx:ChecklistSection",
+      "type": "function",
+      "name": "ChecklistSection",
+      "filePath": "src/components/events/EventPageView.tsx",
+      "lineRange": [
+        88,
+        108
+      ],
+      "summary": "Displays checklist items as numbered event content cards.",
+      "tags": [
+        "react-component",
+        "checklist",
+        "event-section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/events/EventPageView.tsx:CardsSection",
+      "type": "function",
+      "name": "CardsSection",
+      "filePath": "src/components/events/EventPageView.tsx",
+      "lineRange": [
+        110,
+        148
+      ],
+      "summary": "Renders event content cards with optional kickers, text and bullet lists, adapting headings for curriculum sections.",
+      "tags": [
+        "react-component",
+        "cards",
+        "curriculum"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/events/EventPageView.tsx:SplitSection",
+      "type": "function",
+      "name": "SplitSection",
+      "filePath": "src/components/events/EventPageView.tsx",
+      "lineRange": [
+        150,
+        170
+      ],
+      "summary": "Combines event narrative paragraphs with a captioned feature image.",
+      "tags": [
+        "react-component",
+        "media",
+        "event-section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/events/EventPageView.tsx:ImageSection",
+      "type": "function",
+      "name": "ImageSection",
+      "filePath": "src/components/events/EventPageView.tsx",
+      "lineRange": [
+        172,
+        199
+      ],
+      "summary": "Renders an image or video section with optional caption and compact visual-marker sizing.",
+      "tags": [
+        "react-component",
+        "media",
+        "event-section"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/events/EventPageView.tsx:HtmlSection",
+      "type": "function",
+      "name": "HtmlSection",
+      "filePath": "src/components/events/EventPageView.tsx",
+      "lineRange": [
+        201,
+        226
+      ],
+      "summary": "Renders authored HTML event content and substitutes a disabled button when ended-event content links to registration.",
+      "tags": [
+        "react-component",
+        "html-content",
+        "registration-status"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/events/EventPageView.tsx:QuoteCardSection",
+      "type": "function",
+      "name": "QuoteCardSection",
+      "filePath": "src/components/events/EventPageView.tsx",
+      "lineRange": [
+        228,
+        317
+      ],
+      "summary": "Presents a responsive testimonial card with image or video, quotation and attribution details.",
+      "tags": [
+        "react-component",
+        "testimonial",
+        "responsive-media"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/events/EventPageView.tsx:HostsSection",
+      "type": "function",
+      "name": "HostsSection",
+      "filePath": "src/components/events/EventPageView.tsx",
+      "lineRange": [
+        319,
+        362
+      ],
+      "summary": "Renders host profiles with photos, biography text or HTML and optional bestseller badges.",
+      "tags": [
+        "react-component",
+        "host-profile",
+        "event-section"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/events/EventPageView.tsx:EventVideoSection",
+      "type": "function",
+      "name": "EventVideoSection",
+      "filePath": "src/components/events/EventPageView.tsx",
+      "lineRange": [
+        364,
+        388
+      ],
+      "summary": "Embeds an event YouTube video inside the shared section layout with optional explanatory caption.",
+      "tags": [
+        "react-component",
+        "youtube",
+        "video"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/events/EventPageView.tsx:CtaSection",
+      "type": "function",
+      "name": "CtaSection",
+      "filePath": "src/components/events/EventPageView.tsx",
+      "lineRange": [
+        398,
+        464
+      ],
+      "summary": "Displays workshop pricing and promo context with registration navigation or an ended-event button and optional secondary link.",
+      "tags": [
+        "react-component",
+        "pricing",
+        "call-to-action"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/events/EventPageView.tsx:renderSection",
+      "type": "function",
+      "name": "renderSection",
+      "filePath": "src/components/events/EventPageView.tsx",
+      "lineRange": [
+        466,
+        495
+      ],
+      "summary": "Dispatches each typed event section to its matching content component, including timeline, gallery and custom-rendered sections.",
+      "tags": [
+        "section-dispatch",
+        "discriminated-union",
+        "rendering"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/events/EventPageView.tsx:EventPageView",
+      "type": "function",
+      "name": "EventPageView",
+      "filePath": "src/components/events/EventPageView.tsx",
+      "lineRange": [
+        497,
+        735
+      ],
+      "summary": "Derives event availability, pricing and calendar links, chooses the event layout, and assembles content, hero media and the shared registration form.",
+      "tags": [
+        "react-component",
+        "event-page",
+        "registration",
+        "calendar"
+      ],
+      "complexity": "complex"
     }
   ],
   "edges": [
@@ -7315,14 +7452,14 @@
     {
       "source": "function:src/app/giveaways/free-ai-youtube-skills/page.tsx:FreeAiYoutubeSkillsPage",
       "target": "function:src/components/giveaways/PackPage.tsx:PackPage",
-      "type": "contains",
+      "type": "calls",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "function:src/app/giveaways/guardog/page.tsx:GuardogPage",
       "target": "function:src/components/giveaways/PackPage.tsx:PackPage",
-      "type": "contains",
+      "type": "calls",
       "direction": "forward",
       "weight": 1
     },
@@ -7574,7 +7711,7 @@
     {
       "source": "function:src/app/giveaways/stop-paying/page.tsx:StopPayingPage",
       "target": "function:src/components/giveaways/PackPage.tsx:PackPage",
-      "type": "contains",
+      "type": "calls",
       "direction": "forward",
       "weight": 1
     },
@@ -8776,34 +8913,6 @@
       "weight": 0.7
     },
     {
-      "source": "file:src/components/events/EventRegistrationSection.tsx",
-      "target": "function:src/components/events/EventRegistrationSection.tsx:useAnimatedNumber",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/components/events/EventRegistrationSection.tsx",
-      "target": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/components/events/EventRegistrationSection.tsx",
-      "target": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/components/events/EventRegistrationSection.tsx",
-      "target": "file:src/lib/event-intake.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
       "source": "file:src/components/events/voice-studio/VoiceStudioPage.tsx",
       "target": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:drawPrint",
       "type": "contains",
@@ -8881,13 +8990,6 @@
       "weight": 0.8
     },
     {
-      "source": "file:src/components/events/voice-studio/VoiceStudioPage.tsx",
-      "target": "file:src/components/events/EventRegistrationSection.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
       "source": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:VoicePrint",
       "target": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:drawPrint",
       "type": "calls",
@@ -8900,41 +9002,6 @@
       "type": "calls",
       "direction": "forward",
       "weight": 0.8
-    },
-    {
-      "source": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
-      "target": "function:src/components/events/EventRegistrationSection.tsx:useAnimatedNumber",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
-      "target": "function:src/lib/event-intake.ts:validateIntakeFields",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
-      "target": "function:src/lib/event-intake.ts:hasIntakeErrors",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
-      "target": "function:src/lib/event-intake.ts:validateBusinessContext",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:VoiceStudioPage",
-      "target": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
     },
     {
       "source": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:VoiceStudioPage",
@@ -9133,282 +9200,8 @@
       "weight": 0.8
     },
     {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "function:src/components/events/EventPageView.tsx:SectionShell",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "function:src/components/events/EventPageView.tsx:StorySection",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "function:src/components/events/EventPageView.tsx:ChecklistSection",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "function:src/components/events/EventPageView.tsx:CardsSection",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "function:src/components/events/EventPageView.tsx:SplitSection",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "function:src/components/events/EventPageView.tsx:ImageSection",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "function:src/components/events/EventPageView.tsx:HtmlSection",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "function:src/components/events/EventPageView.tsx:QuoteCardSection",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "function:src/components/events/EventPageView.tsx:HostsSection",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "function:src/components/events/EventPageView.tsx:EventVideoSection",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "function:src/components/events/EventPageView.tsx:CtaSection",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "function:src/components/events/EventPageView.tsx:renderSection",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "function:src/components/events/EventPageView.tsx:EventPageView",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "function:src/components/events/EventPageView.tsx:EventPageView",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "file:src/components/events/EventRegistrationSection.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "file:src/components/events/joechella/FestivalHero.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "file:src/components/events/joechella/ProgramTimeline.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "file:src/components/events/joechella/VenueGallery.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "file:src/components/events/ScrollToRegisterButton.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "file:src/components/events/voice-studio/VoiceStudioPage.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "file:src/lib/event-status.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "function:src/components/events/EventPageView.tsx:EventPageView",
-      "target": "function:src/lib/event-status.ts:isEventEnded",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/components/events/EventPageView.tsx:EventPageView",
-      "target": "function:src/lib/event-status.ts:isRegistrationWindowPassed",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/components/events/EventPageView.tsx:EventPageView",
-      "target": "function:src/components/events/EventPageView.tsx:renderSection",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/components/events/EventPageView.tsx:EventPageView",
-      "target": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:VoiceStudioPage",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "function:src/components/events/EventPageView.tsx:EventPageView",
-      "target": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/app/events/[slug]/page.tsx",
-      "target": "file:src/components/events/EventPageView.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
       "source": "file:src/app/events/page.tsx",
       "target": "file:src/components/Reveal.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "file:src/components/events/AskAnAiExpertQuoteStrip.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "file:src/components/events/EventMediaVideo.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "file:src/components/events/HeroVideo.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "file:src/components/events/joechella/FestivalMotion.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "file:src/components/Reveal.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "file:src/lib/calendar.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/components/events/EventRegistrationSection.tsx",
-      "target": "file:src/components/events/WaitlistJoinForm.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/components/events/EventRegistrationSection.tsx",
-      "target": "file:src/data/ai-levels-signup.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/components/events/EventRegistrationSection.tsx",
-      "target": "file:src/lib/celebrate.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/components/events/EventRegistrationSection.tsx",
-      "target": "file:src/lib/email-validation.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/components/events/EventRegistrationSection.tsx",
-      "target": "file:src/lib/event-registration-flow.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/components/events/EventRegistrationSection.tsx",
-      "target": "file:src/lib/meta-pixel.ts",
       "type": "imports",
       "direction": "forward",
       "weight": 0.7
@@ -9468,13 +9261,6 @@
       "type": "exports",
       "direction": "forward",
       "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/google-calendar-invite.ts",
-      "target": "file:src/lib/calendar.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
     },
     {
       "source": "function:src/lib/google-calendar-invite.ts:inviteAttendeeToEvent",
@@ -9632,13 +9418,6 @@
     },
     {
       "source": "file:src/app/api/events/checkout-session/route.ts",
-      "target": "file:src/lib/event-confirmation-email.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/app/api/events/checkout-session/route.ts",
       "target": "file:src/lib/event-intake.ts",
       "type": "imports",
       "direction": "forward",
@@ -9667,13 +9446,6 @@
     },
     {
       "source": "file:src/app/api/events/checkout-session/route.ts",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/app/api/events/checkout-session/route.ts",
       "target": "file:src/lib/registration-recovery.ts",
       "type": "imports",
       "direction": "forward",
@@ -9692,34 +9464,6 @@
       "type": "imports",
       "direction": "forward",
       "weight": 0.7
-    },
-    {
-      "source": "function:src/app/api/events/checkout-session/route.ts:POST",
-      "target": "function:src/lib/event-confirmation-email.ts:sendAiContentCreationSetupEmail",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/api/events/checkout-session/route.ts:POST",
-      "target": "function:src/lib/event-confirmation-email.ts:sendAskAnAiExpertWelcomeEmail",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/api/events/checkout-session/route.ts:POST",
-      "target": "function:src/lib/event-confirmation-email.ts:sendEventConfirmationEmail",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/api/events/checkout-session/route.ts:POST",
-      "target": "function:src/lib/event-confirmation-email.ts:sendRegistrationBackupAlert",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
     },
     {
       "source": "function:src/app/api/events/checkout-session/route.ts:POST",
@@ -9743,9 +9487,592 @@
       "weight": 0.8
     },
     {
+      "source": "file:src/lib/event-registration-db.ts",
+      "target": "function:src/lib/event-registration-db.ts:saveRegistrationProfile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/event-registration-db.ts",
+      "target": "function:src/lib/event-registration-db.ts:saveRegistrationProfile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/event-registration-db.ts",
+      "target": "function:src/lib/event-registration-db.ts:saveRegistrationIntake",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/event-registration-db.ts",
+      "target": "function:src/lib/event-registration-db.ts:saveRegistrationIntake",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/event-registration-db.ts",
+      "target": "function:src/lib/event-registration-db.ts:getRegistrationIntake",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/event-registration-db.ts",
+      "target": "function:src/lib/event-registration-db.ts:getRegistrationIntake",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/event-registration-db.ts",
+      "target": "function:src/lib/event-registration-db.ts:saveRegistration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/event-registration-db.ts",
+      "target": "function:src/lib/event-registration-db.ts:saveRegistration",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/event-registration-db.ts",
+      "target": "function:src/lib/event-registration-db.ts:getConfirmedCancelToken",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/event-registration-db.ts",
+      "target": "function:src/lib/event-registration-db.ts:getConfirmedCancelToken",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/event-registration-db.ts",
+      "target": "function:src/lib/event-registration-db.ts:isAlreadyRegistered",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/event-registration-db.ts",
+      "target": "function:src/lib/event-registration-db.ts:isAlreadyRegistered",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/event-registration-db.ts",
+      "target": "function:src/lib/event-registration-db.ts:isAlreadyOnWaitlist",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/event-registration-db.ts",
+      "target": "function:src/lib/event-registration-db.ts:isAlreadyOnWaitlist",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/event-registration-db.ts",
+      "target": "function:src/lib/event-registration-db.ts:cancelRegistration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/event-registration-db.ts",
+      "target": "function:src/lib/event-registration-db.ts:cancelRegistration",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/event-registration-db.ts",
+      "target": "function:src/lib/event-registration-db.ts:getConfirmedCount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/event-registration-db.ts",
+      "target": "function:src/lib/event-registration-db.ts:getConfirmedCount",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/event-registration-db.ts",
+      "target": "function:src/lib/event-registration-db.ts:getConfirmedRegistrationsForEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/event-registration-db.ts",
+      "target": "function:src/lib/event-registration-db.ts:getConfirmedRegistrationsForEvent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/event-registration-db.ts",
+      "target": "function:src/lib/event-registration-db.ts:addToWaitlist",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/event-registration-db.ts",
+      "target": "function:src/lib/event-registration-db.ts:addToWaitlist",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/event-registration-db.ts",
+      "target": "function:src/lib/event-registration-db.ts:removeFromWaitlist",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/event-registration-db.ts",
+      "target": "function:src/lib/event-registration-db.ts:removeFromWaitlist",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/event-registration-db.ts",
+      "target": "function:src/lib/event-registration-db.ts:getActiveWaitlist",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/event-registration-db.ts",
+      "target": "function:src/lib/event-registration-db.ts:getActiveWaitlist",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/event-registration-db.ts",
+      "target": "function:src/lib/event-registration-db.ts:hasOpenSpots",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/event-registration-db.ts",
+      "target": "function:src/lib/event-registration-db.ts:hasOpenSpots",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/event-registration-db.ts",
+      "target": "file:src/lib/event-registration-flow.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/event-registration-db.ts",
+      "target": "file:src/lib/supabase.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "table:supabase/migrations/021_event_letter_flags.sql",
+      "target": "table:supabase/migrations/021_event_letter_flags.sql:event_letter_flags",
+      "type": "migrates",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/voice-setup/page.tsx",
+      "target": "function:src/app/voice-setup/page.tsx:VoiceSetupPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/app/voice-setup/page.tsx",
+      "target": "function:src/app/voice-setup/page.tsx:VoiceSetupPage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/registration-recovery.ts",
+      "target": "function:src/lib/registration-recovery.ts:recoverRegistration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/registration-recovery.ts",
+      "target": "function:src/lib/registration-recovery.ts:recoverRegistration",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/registration-recovery.ts",
+      "target": "file:src/lib/event-registration-db.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:tests/event-pricing-and-data.test.ts",
+      "target": "file:src/app/api/events/checkout-session/route.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
       "source": "function:src/app/api/events/checkout-session/route.ts:POST",
+      "target": "function:src/lib/event-status.ts:isEventEnded",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/app/api/events/checkout-session/route.ts:POST",
+      "target": "function:src/lib/event-status.ts:isEventRegistrationClosed",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/app/api/events/checkout-session/route.ts:POST",
+      "target": "function:src/lib/event-intake.ts:validateIntakeFields",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/app/api/events/checkout-session/route.ts:POST",
+      "target": "function:src/lib/event-intake.ts:normalizeWhatsappNumber",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/app/api/events/checkout-session/route.ts:POST",
+      "target": "function:src/lib/event-checkout.ts:resolveEventCheckoutAmount",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/app/api/events/checkout-session/route.ts:POST",
+      "target": "function:src/lib/registration-recovery.ts:recoverRegistration",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/app/api/events/checkout-session/route.ts:POST",
+      "target": "function:src/lib/event-checkout.ts:resolveCheckoutMode",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/app/api/events/checkout-session/route.ts:POST",
+      "target": "function:src/lib/event-checkout.ts:buildEventCheckoutSessionParams",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/lib/registration-recovery.ts:recoverRegistration",
+      "target": "function:src/lib/event-registration-db.ts:saveRegistration",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/events/EventRegistrationSection.tsx",
+      "target": "function:src/components/events/EventRegistrationSection.tsx:useAnimatedNumber",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/EventRegistrationSection.tsx",
+      "target": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/EventRegistrationSection.tsx",
+      "target": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/events/EventRegistrationSection.tsx",
+      "target": "file:src/components/events/WaitlistJoinForm.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventRegistrationSection.tsx",
+      "target": "file:src/data/ai-levels-signup.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventRegistrationSection.tsx",
+      "target": "file:src/lib/celebrate.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventRegistrationSection.tsx",
+      "target": "file:src/lib/email-validation.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventRegistrationSection.tsx",
+      "target": "file:src/lib/event-intake.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventRegistrationSection.tsx",
+      "target": "file:src/lib/event-registration-flow.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventRegistrationSection.tsx",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventRegistrationSection.tsx",
+      "target": "file:src/lib/meta-pixel.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
+      "target": "function:src/lib/events.tsx:formatDonationLabelNote",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
+      "target": "function:src/lib/events.tsx:toggleDonationPreset",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
+      "target": "function:src/lib/event-intake.ts:validateIntakeFields",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
+      "target": "function:src/lib/event-intake.ts:validateBusinessContext",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
+      "target": "function:src/lib/event-intake.ts:hasIntakeErrors",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/api/events/letter-schedule/route.ts",
+      "target": "function:src/app/api/events/letter-schedule/route.ts:listRegistrations",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/app/api/events/letter-schedule/route.ts",
+      "target": "function:src/app/api/events/letter-schedule/route.ts:loadFlags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/app/api/events/letter-schedule/route.ts",
+      "target": "function:src/app/api/events/letter-schedule/route.ts:GET",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/app/api/events/letter-schedule/route.ts",
+      "target": "function:src/app/api/events/letter-schedule/route.ts:GET",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/api/events/letter-schedule/route.ts",
+      "target": "file:src/lib/email-suppressions.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/api/events/letter-schedule/route.ts",
+      "target": "file:src/lib/event-confirmation-email.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/api/events/letter-schedule/route.ts",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/api/events/letter-schedule/route.ts",
+      "target": "file:src/lib/letter-only-events.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/api/events/letter-schedule/route.ts",
+      "target": "file:src/lib/letter-schedule.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/api/events/letter-schedule/route.ts",
+      "target": "file:src/lib/supabase.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:src/app/api/events/letter-schedule/route.ts:GET",
       "target": "function:src/lib/events.tsx:getEventBySlug",
       "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/app/api/events/letter-schedule/route.ts:GET",
+      "target": "function:src/lib/letter-only-events.ts:getLetterOnlyEvent",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/app/api/events/letter-schedule/route.ts:GET",
+      "target": "function:src/lib/events.tsx:getLiveEvents",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/app/api/events/letter-schedule/route.ts:GET",
+      "target": "function:src/lib/letter-schedule.ts:runLetterSchedule",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/calendar.ts",
+      "target": "function:src/lib/calendar.ts:buildGoogleCalendarUrl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/calendar.ts",
+      "target": "function:src/lib/calendar.ts:buildGoogleCalendarUrl",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/calendar.ts",
+      "target": "function:src/lib/calendar.ts:buildOutlookCalendarUrl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/calendar.ts",
+      "target": "function:src/lib/calendar.ts:buildOutlookCalendarUrl",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/calendar.ts",
+      "target": "function:src/lib/calendar.ts:buildIcalString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/calendar.ts",
+      "target": "function:src/lib/calendar.ts:buildIcalString",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/calendar.ts",
+      "target": "function:src/lib/calendar.ts:buildEventCalendarDescription",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/calendar.ts",
+      "target": "function:src/lib/calendar.ts:buildEventCalendarDescription",
+      "type": "exports",
       "direction": "forward",
       "weight": 0.8
     },
@@ -10079,221 +10406,39 @@
       "weight": 0.7
     },
     {
-      "source": "file:src/lib/event-registration-db.ts",
-      "target": "function:src/lib/event-registration-db.ts:saveRegistrationProfile",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/lib/event-registration-db.ts",
-      "target": "function:src/lib/event-registration-db.ts:saveRegistrationProfile",
-      "type": "exports",
+      "source": "function:src/lib/event-confirmation-email.ts:buildConfirmationEmailHtml",
+      "target": "function:src/lib/calendar.ts:buildGoogleCalendarUrl",
+      "type": "calls",
       "direction": "forward",
       "weight": 0.8
     },
     {
-      "source": "file:src/lib/event-registration-db.ts",
-      "target": "function:src/lib/event-registration-db.ts:saveRegistrationIntake",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/lib/event-registration-db.ts",
-      "target": "function:src/lib/event-registration-db.ts:saveRegistrationIntake",
-      "type": "exports",
+      "source": "function:src/lib/event-confirmation-email.ts:buildConfirmationEmailHtml",
+      "target": "function:src/lib/calendar.ts:buildOutlookCalendarUrl",
+      "type": "calls",
       "direction": "forward",
       "weight": 0.8
     },
     {
-      "source": "file:src/lib/event-registration-db.ts",
-      "target": "function:src/lib/event-registration-db.ts:getRegistrationIntake",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/lib/event-registration-db.ts",
-      "target": "function:src/lib/event-registration-db.ts:getRegistrationIntake",
-      "type": "exports",
+      "source": "function:src/lib/event-confirmation-email.ts:sendEventConfirmationEmail",
+      "target": "function:src/lib/calendar.ts:buildIcalString",
+      "type": "calls",
       "direction": "forward",
       "weight": 0.8
     },
     {
-      "source": "file:src/lib/event-registration-db.ts",
-      "target": "function:src/lib/event-registration-db.ts:saveRegistration",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/lib/event-registration-db.ts",
-      "target": "function:src/lib/event-registration-db.ts:saveRegistration",
-      "type": "exports",
+      "source": "function:src/lib/event-confirmation-email.ts:sendAskAnAiExpertWelcomeEmail",
+      "target": "function:src/lib/calendar.ts:buildIcalString",
+      "type": "calls",
       "direction": "forward",
       "weight": 0.8
     },
     {
-      "source": "file:src/lib/event-registration-db.ts",
-      "target": "function:src/lib/event-registration-db.ts:getConfirmedCancelToken",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/lib/event-registration-db.ts",
-      "target": "function:src/lib/event-registration-db.ts:getConfirmedCancelToken",
-      "type": "exports",
+      "source": "function:src/lib/event-confirmation-email.ts:sendEventLocationReminderEmail",
+      "target": "function:src/lib/calendar.ts:buildIcalString",
+      "type": "calls",
       "direction": "forward",
       "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/event-registration-db.ts",
-      "target": "function:src/lib/event-registration-db.ts:isAlreadyRegistered",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/lib/event-registration-db.ts",
-      "target": "function:src/lib/event-registration-db.ts:isAlreadyRegistered",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/event-registration-db.ts",
-      "target": "function:src/lib/event-registration-db.ts:isAlreadyOnWaitlist",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/lib/event-registration-db.ts",
-      "target": "function:src/lib/event-registration-db.ts:isAlreadyOnWaitlist",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/event-registration-db.ts",
-      "target": "function:src/lib/event-registration-db.ts:cancelRegistration",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/lib/event-registration-db.ts",
-      "target": "function:src/lib/event-registration-db.ts:cancelRegistration",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/event-registration-db.ts",
-      "target": "function:src/lib/event-registration-db.ts:getConfirmedCount",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/lib/event-registration-db.ts",
-      "target": "function:src/lib/event-registration-db.ts:getConfirmedCount",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/event-registration-db.ts",
-      "target": "function:src/lib/event-registration-db.ts:getConfirmedRegistrationsForEvent",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/lib/event-registration-db.ts",
-      "target": "function:src/lib/event-registration-db.ts:getConfirmedRegistrationsForEvent",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/event-registration-db.ts",
-      "target": "function:src/lib/event-registration-db.ts:addToWaitlist",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/lib/event-registration-db.ts",
-      "target": "function:src/lib/event-registration-db.ts:addToWaitlist",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/event-registration-db.ts",
-      "target": "function:src/lib/event-registration-db.ts:removeFromWaitlist",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/lib/event-registration-db.ts",
-      "target": "function:src/lib/event-registration-db.ts:removeFromWaitlist",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/event-registration-db.ts",
-      "target": "function:src/lib/event-registration-db.ts:getActiveWaitlist",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/lib/event-registration-db.ts",
-      "target": "function:src/lib/event-registration-db.ts:getActiveWaitlist",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/event-registration-db.ts",
-      "target": "function:src/lib/event-registration-db.ts:hasOpenSpots",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/lib/event-registration-db.ts",
-      "target": "function:src/lib/event-registration-db.ts:hasOpenSpots",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:src/lib/event-registration-db.ts",
-      "target": "file:src/lib/event-registration-flow.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/lib/event-registration-db.ts",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "file:src/lib/event-registration-db.ts",
-      "target": "file:src/lib/supabase.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
     },
     {
       "source": "file:src/lib/events.tsx",
@@ -10415,6 +10560,27 @@
       "weight": 0.7
     },
     {
+      "source": "file:src/lib/letter-only-events.ts",
+      "target": "function:src/lib/letter-only-events.ts:getLetterOnlyEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/letter-only-events.ts",
+      "target": "function:src/lib/letter-only-events.ts:getLetterOnlyEvent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/letter-only-events.ts",
+      "target": "file:src/lib/letter-schedule.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
       "source": "file:src/lib/letter-schedule.ts",
       "target": "function:src/lib/letter-schedule.ts:isLetterDue",
       "type": "contains",
@@ -10499,53 +10665,109 @@
       "weight": 0.7
     },
     {
-      "source": "function:src/lib/event-registration-db.ts:saveRegistration",
-      "target": "function:src/lib/events.tsx:getEventBySlug",
-      "type": "calls",
+      "source": "file:tests/calendar.test.ts",
+      "target": "file:src/lib/calendar.ts",
+      "type": "imports",
       "direction": "forward",
-      "weight": 0.8
+      "weight": 0.7
     },
     {
-      "source": "file:tests/letter-schedule.test.ts",
+      "source": "file:tests/event-confirmation-location-privacy.test.ts",
       "target": "file:src/lib/event-confirmation-email.ts",
       "type": "imports",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "file:tests/letter-schedule.test.ts",
+      "source": "file:tests/event-confirmation-location-privacy.test.ts",
       "target": "file:src/lib/events.tsx",
       "type": "imports",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "file:tests/letter-schedule.test.ts",
+      "source": "file:tests/letter-only-events.test.ts",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:tests/letter-only-events.test.ts",
+      "target": "file:src/lib/letter-only-events.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:tests/letter-only-events.test.ts",
       "target": "file:src/lib/letter-schedule.ts",
       "type": "imports",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "file:src/lib/event-confirmation-email.ts",
-      "target": "file:tests/letter-schedule.test.ts",
-      "type": "tested_by",
+      "source": "file:tests/calendar.test.ts",
+      "target": "function:src/lib/calendar.ts:buildGoogleCalendarUrl",
+      "type": "related",
       "direction": "forward",
       "weight": 0.5
     },
     {
-      "source": "file:src/lib/events.tsx",
-      "target": "file:tests/letter-schedule.test.ts",
-      "type": "tested_by",
+      "source": "file:tests/calendar.test.ts",
+      "target": "function:src/lib/calendar.ts:buildOutlookCalendarUrl",
+      "type": "related",
       "direction": "forward",
       "weight": 0.5
     },
     {
-      "source": "file:src/lib/letter-schedule.ts",
-      "target": "file:tests/letter-schedule.test.ts",
-      "type": "tested_by",
+      "source": "file:tests/calendar.test.ts",
+      "target": "function:src/lib/calendar.ts:buildIcalString",
+      "type": "related",
       "direction": "forward",
       "weight": 0.5
+    },
+    {
+      "source": "file:tests/event-confirmation-location-privacy.test.ts",
+      "target": "function:src/lib/event-confirmation-email.ts:buildConfirmationEmailHtml",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:tests/letter-only-events.test.ts",
+      "target": "function:src/lib/letter-schedule.ts:runLetterSchedule",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:tests/letter-only-events.test.ts",
+      "target": "function:src/lib/letter-schedule.ts:letterAudience",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:scripts/giveaway-followups.mjs",
+      "target": "file:scripts/lib/supabase-read.mjs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:scripts/giveaway-followups.mjs",
+      "target": "file:src/lib/email-logo.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:scripts/giveaway-followups.mjs",
+      "target": "file:src/lib/giveaway-followups.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
@@ -10563,13 +10785,6 @@
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
-      "target": "function:scripts/giveaway-followups.mjs:stripeBuyer",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:scripts/giveaway-followups.mjs",
       "target": "function:scripts/giveaway-followups.mjs:repliedByEmail",
       "type": "contains",
       "direction": "forward",
@@ -10584,24 +10799,10 @@
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
-      "target": "function:scripts/giveaway-followups.mjs:crmFirstSource",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:scripts/giveaway-followups.mjs",
       "target": "function:scripts/giveaway-followups.mjs:slugForKeyword",
       "type": "contains",
       "direction": "forward",
       "weight": 1
-    },
-    {
-      "source": "file:scripts/giveaway-followups.mjs",
-      "target": "function:scripts/giveaway-followups.mjs:slugForKeyword",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
@@ -10612,24 +10813,10 @@
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
-      "target": "function:scripts/giveaway-followups.mjs:checkoutStartedSince",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:scripts/giveaway-followups.mjs",
       "target": "function:scripts/giveaway-followups.mjs:bookedCall",
       "type": "contains",
       "direction": "forward",
       "weight": 1
-    },
-    {
-      "source": "file:scripts/giveaway-followups.mjs",
-      "target": "function:scripts/giveaway-followups.mjs:bookedCall",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
@@ -10644,13 +10831,6 @@
       "type": "contains",
       "direction": "forward",
       "weight": 1
-    },
-    {
-      "source": "file:scripts/giveaway-followups.mjs",
-      "target": "function:scripts/giveaway-followups.mjs:bonusLink",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
     },
     {
       "source": "file:scripts/giveaway-followups.mjs",
@@ -10709,25 +10889,158 @@
       "weight": 1
     },
     {
+      "source": "function:scripts/giveaway-followups.mjs:renderEmailFor",
+      "target": "function:scripts/giveaway-followups.mjs:bonusLink",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:sendOne",
+      "target": "function:scripts/giveaway-followups.mjs:lina",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:sendOne",
+      "target": "function:scripts/giveaway-followups.mjs:renderEmailFor",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:sendOne",
+      "target": "function:scripts/giveaway-followups.mjs:resendSend",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:renderAll",
+      "target": "function:scripts/giveaway-followups.mjs:allVariants",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:testSends",
+      "target": "function:scripts/giveaway-followups.mjs:allVariants",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:testSends",
+      "target": "function:scripts/giveaway-followups.mjs:resendSend",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:reviewSends",
+      "target": "function:scripts/giveaway-followups.mjs:bonusLink",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:reviewSends",
+      "target": "function:scripts/giveaway-followups.mjs:resendSend",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:main",
+      "target": "function:scripts/giveaway-followups.mjs:renderAll",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:main",
+      "target": "function:scripts/giveaway-followups.mjs:testSends",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:main",
+      "target": "function:scripts/giveaway-followups.mjs:reviewSends",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:main",
+      "target": "function:scripts/giveaway-followups.mjs:stripeBuyer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:main",
+      "target": "function:scripts/giveaway-followups.mjs:findSubscriber",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:main",
+      "target": "function:scripts/giveaway-followups.mjs:repliedByEmail",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:main",
+      "target": "function:scripts/giveaway-followups.mjs:checkoutStartedSince",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:main",
+      "target": "function:scripts/giveaway-followups.mjs:bookedCall",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:main",
+      "target": "function:scripts/giveaway-followups.mjs:crmFirstSource",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:main",
+      "target": "function:scripts/giveaway-followups.mjs:slugForKeyword",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:main",
+      "target": "function:scripts/giveaway-followups.mjs:renderEmailFor",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/giveaway-followups.mjs:main",
+      "target": "function:scripts/giveaway-followups.mjs:sendOne",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
       "source": "file:scripts/lib/supabase-read.mjs",
       "target": "function:scripts/lib/supabase-read.mjs:readSupabaseJson",
       "type": "contains",
       "direction": "forward",
       "weight": 1
-    },
-    {
-      "source": "file:scripts/lib/supabase-read.mjs",
-      "target": "function:scripts/lib/supabase-read.mjs:readSupabaseJson",
-      "type": "exports",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "file:scripts/giveaway-followups.mjs",
-      "target": "file:scripts/lib/supabase-read.mjs",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7
     },
     {
       "source": "file:tests/supabase-read.test.ts",
@@ -10737,101 +11050,266 @@
       "weight": 0.7
     },
     {
-      "source": "file:scripts/lib/supabase-read.mjs",
-      "target": "file:tests/supabase-read.test.ts",
-      "type": "tested_by",
+      "source": "file:tests/supabase-read.test.ts",
+      "target": "function:scripts/lib/supabase-read.mjs:readSupabaseJson",
+      "type": "related",
       "direction": "forward",
       "weight": 0.5
     },
     {
-      "source": "table:supabase/migrations/021_event_letter_flags.sql",
-      "target": "table:supabase/migrations/021_event_letter_flags.sql:event_letter_flags",
-      "type": "migrates",
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "function:src/components/events/EventPageView.tsx:SectionShell",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "function:src/components/events/EventPageView.tsx:StorySection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "function:src/components/events/EventPageView.tsx:ChecklistSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "function:src/components/events/EventPageView.tsx:CardsSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "function:src/components/events/EventPageView.tsx:SplitSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "function:src/components/events/EventPageView.tsx:ImageSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "function:src/components/events/EventPageView.tsx:HtmlSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "function:src/components/events/EventPageView.tsx:QuoteCardSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "function:src/components/events/EventPageView.tsx:HostsSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "function:src/components/events/EventPageView.tsx:EventVideoSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "function:src/components/events/EventPageView.tsx:CtaSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "function:src/components/events/EventPageView.tsx:renderSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "function:src/components/events/EventPageView.tsx:EventPageView",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "function:src/components/events/EventPageView.tsx:EventPageView",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "file:src/components/events/AskAnAiExpertQuoteStrip.tsx",
+      "type": "imports",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "file:src/app/api/events/letter-schedule/route.ts",
-      "target": "function:src/app/api/events/letter-schedule/route.ts:listRegistrations",
-      "type": "contains",
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "file:src/components/events/EventMediaVideo.tsx",
+      "type": "imports",
       "direction": "forward",
-      "weight": 1
+      "weight": 0.7
     },
     {
-      "source": "file:src/app/api/events/letter-schedule/route.ts",
-      "target": "function:src/app/api/events/letter-schedule/route.ts:loadFlags",
-      "type": "contains",
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "file:src/components/events/EventRegistrationSection.tsx",
+      "type": "imports",
       "direction": "forward",
-      "weight": 1
+      "weight": 0.7
     },
     {
-      "source": "file:src/app/api/events/letter-schedule/route.ts",
-      "target": "function:src/app/api/events/letter-schedule/route.ts:GET",
-      "type": "contains",
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "file:src/components/events/HeroVideo.tsx",
+      "type": "imports",
       "direction": "forward",
-      "weight": 1
+      "weight": 0.7
     },
     {
-      "source": "file:src/app/api/events/letter-schedule/route.ts",
-      "target": "function:src/app/api/events/letter-schedule/route.ts:GET",
-      "type": "exports",
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "file:src/components/events/joechella/FestivalHero.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "file:src/components/events/joechella/FestivalMotion.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "file:src/components/events/joechella/ProgramTimeline.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "file:src/components/events/joechella/VenueGallery.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "file:src/components/events/ScrollToRegisterButton.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "file:src/components/events/voice-studio/VoiceStudioPage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "file:src/components/Reveal.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "file:src/lib/calendar.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "file:src/lib/event-status.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/events/EventPageView.tsx",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:src/components/events/EventPageView.tsx:CtaSection",
+      "target": "function:src/lib/events.tsx:formatEventPrice",
+      "type": "calls",
       "direction": "forward",
       "weight": 0.8
     },
     {
-      "source": "file:src/app/voice-setup/page.tsx",
-      "target": "function:src/app/voice-setup/page.tsx:VoiceSetupPage",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/app/voice-setup/page.tsx",
-      "target": "function:src/app/voice-setup/page.tsx:VoiceSetupPage",
-      "type": "exports",
+      "source": "function:src/components/events/EventPageView.tsx:EventPageView",
+      "target": "function:src/lib/event-status.ts:isEventEnded",
+      "type": "calls",
       "direction": "forward",
       "weight": 0.8
     },
     {
-      "source": "file:src/lib/registration-recovery.ts",
-      "target": "function:src/lib/registration-recovery.ts:recoverRegistration",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1
-    },
-    {
-      "source": "file:src/lib/registration-recovery.ts",
-      "target": "function:src/lib/registration-recovery.ts:recoverRegistration",
-      "type": "exports",
+      "source": "function:src/components/events/EventPageView.tsx:EventPageView",
+      "target": "function:src/lib/event-status.ts:isRegistrationWindowPassed",
+      "type": "calls",
       "direction": "forward",
       "weight": 0.8
     },
     {
-      "source": "file:scripts/giveaway-followups.mjs",
-      "target": "file:src/lib/email-logo.ts",
-      "type": "imports",
+      "source": "function:src/components/events/EventPageView.tsx:EventPageView",
+      "target": "function:src/lib/calendar.ts:buildGoogleCalendarUrl",
+      "type": "calls",
       "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
+      "weight": 0.8
     },
     {
-      "source": "file:scripts/giveaway-followups.mjs",
-      "target": "file:src/lib/giveaway-followups.ts",
-      "type": "imports",
+      "source": "function:src/components/events/EventPageView.tsx:EventPageView",
+      "target": "function:src/lib/calendar.ts:buildOutlookCalendarUrl",
+      "type": "calls",
       "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
+      "weight": 0.8
     },
     {
-      "source": "file:src/app/api/events/letter-schedule/route.ts",
-      "target": "file:src/lib/email-suppressions.ts",
-      "type": "imports",
+      "source": "function:src/components/events/EventPageView.tsx:EventPageView",
+      "target": "function:src/lib/events.tsx:getEventDiscountedPrice",
+      "type": "calls",
       "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
+      "weight": 0.8
     },
     {
-      "source": "file:src/app/api/events/letter-schedule/route.ts",
+      "source": "function:src/components/events/EventPageView.tsx:EventPageView",
+      "target": "function:src/components/events/EventRegistrationSection.tsx:EventRegistrationSection",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:src/components/events/EventPageView.tsx:EventPageView",
+      "target": "function:src/components/events/voice-studio/VoiceStudioPage.tsx:VoiceStudioPage",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/app/api/events/checkout-session/route.ts",
       "target": "file:src/lib/event-confirmation-email.ts",
       "type": "imports",
       "direction": "forward",
@@ -10839,7 +11317,7 @@
       "recoveredFromImportMap": true
     },
     {
-      "source": "file:src/app/api/events/letter-schedule/route.ts",
+      "source": "file:src/app/api/events/checkout-session/route.ts",
       "target": "file:src/lib/events.tsx",
       "type": "imports",
       "direction": "forward",
@@ -10847,16 +11325,8 @@
       "recoveredFromImportMap": true
     },
     {
-      "source": "file:src/app/api/events/letter-schedule/route.ts",
-      "target": "file:src/lib/letter-schedule.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
-      "source": "file:src/app/api/events/letter-schedule/route.ts",
-      "target": "file:src/lib/supabase.ts",
+      "source": "file:src/app/events/[slug]/page.tsx",
+      "target": "file:src/components/events/EventPageView.tsx",
       "type": "imports",
       "direction": "forward",
       "weight": 0.7,
@@ -10880,22 +11350,6 @@
     },
     {
       "source": "file:src/app/events/page.tsx",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
-      "source": "file:src/components/events/EventPageView.tsx",
-      "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
-      "source": "file:src/components/events/EventRegistrationSection.tsx",
       "target": "file:src/lib/events.tsx",
       "type": "imports",
       "direction": "forward",
@@ -10928,6 +11382,14 @@
     },
     {
       "source": "file:src/components/events/voice-studio/VoiceStudioPage.tsx",
+      "target": "file:src/components/events/EventRegistrationSection.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/components/events/voice-studio/VoiceStudioPage.tsx",
       "target": "file:src/lib/events.tsx",
       "type": "imports",
       "direction": "forward",
@@ -10943,8 +11405,24 @@
       "recoveredFromImportMap": true
     },
     {
+      "source": "file:src/lib/event-registration-db.ts",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
       "source": "file:src/lib/event-status.ts",
       "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:src/lib/google-calendar-invite.ts",
+      "target": "file:src/lib/calendar.ts",
       "type": "imports",
       "direction": "forward",
       "weight": 0.7,
@@ -10967,14 +11445,6 @@
       "recoveredFromImportMap": true
     },
     {
-      "source": "file:src/lib/registration-recovery.ts",
-      "target": "file:src/lib/event-registration-db.ts",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
       "source": "file:src/lib/session-reminder.ts",
       "target": "file:src/lib/events.tsx",
       "type": "imports",
@@ -10985,14 +11455,6 @@
     {
       "source": "file:tests/event-checkout.test.ts",
       "target": "file:src/lib/events.tsx",
-      "type": "imports",
-      "direction": "forward",
-      "weight": 0.7,
-      "recoveredFromImportMap": true
-    },
-    {
-      "source": "file:tests/event-pricing-and-data.test.ts",
-      "target": "file:src/app/api/events/checkout-session/route.ts",
       "type": "imports",
       "direction": "forward",
       "weight": 0.7,
@@ -11039,6 +11501,30 @@
       "recoveredFromImportMap": true
     },
     {
+      "source": "file:tests/letter-schedule.test.ts",
+      "target": "file:src/lib/event-confirmation-email.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:tests/letter-schedule.test.ts",
+      "target": "file:src/lib/events.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
+      "source": "file:tests/letter-schedule.test.ts",
+      "target": "file:src/lib/letter-schedule.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7,
+      "recoveredFromImportMap": true
+    },
+    {
       "source": "file:tests/session-reminder.test.ts",
       "target": "file:src/lib/event-confirmation-email.ts",
       "type": "imports",
@@ -11053,265 +11539,6 @@
       "direction": "forward",
       "weight": 0.7,
       "recoveredFromImportMap": true
-    },
-    {
-      "source": "function:src/lib/event-confirmation-email.ts:sendSessionReminderEmail",
-      "target": "function:src/lib/session-reminder.ts:buildSessionReminderIdempotencyKey",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/api/events/checkout-session/route.ts:POST",
-      "target": "function:src/lib/event-status.ts:isEventEnded",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/api/events/checkout-session/route.ts:POST",
-      "target": "function:src/lib/event-status.ts:isEventRegistrationClosed",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/api/events/checkout-session/route.ts:POST",
-      "target": "function:src/lib/event-intake.ts:validateIntakeFields",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/api/events/checkout-session/route.ts:POST",
-      "target": "function:src/lib/event-intake.ts:normalizeWhatsappNumber",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/api/events/checkout-session/route.ts:POST",
-      "target": "function:src/lib/event-checkout.ts:resolveEventCheckoutAmount",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/api/events/checkout-session/route.ts:POST",
-      "target": "function:src/lib/registration-recovery.ts:recoverRegistration",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/api/events/checkout-session/route.ts:POST",
-      "target": "function:src/lib/event-checkout.ts:resolveCheckoutMode",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/api/events/checkout-session/route.ts:POST",
-      "target": "function:src/lib/event-checkout.ts:buildEventCheckoutSessionParams",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/lib/registration-recovery.ts:recoverRegistration",
-      "target": "function:src/lib/event-registration-db.ts:saveRegistration",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:scripts/giveaway-followups.mjs:renderEmailFor",
-      "target": "function:src/lib/giveaway-followups.ts:renderSalesDay2",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:scripts/giveaway-followups.mjs:renderEmailFor",
-      "target": "function:src/lib/giveaway-followups.ts:renderSalesDay5",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:scripts/giveaway-followups.mjs:renderEmailFor",
-      "target": "function:src/lib/giveaway-followups.ts:renderQuickwin",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:scripts/giveaway-followups.mjs:renderEmailFor",
-      "target": "function:src/lib/giveaway-followups.ts:renderGift2",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:scripts/giveaway-followups.mjs:renderEmailFor",
-      "target": "function:src/lib/giveaway-followups.ts:renderLive",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:scripts/giveaway-followups.mjs:renderEmailFor",
-      "target": "function:src/lib/giveaway-followups.ts:renderLast",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:scripts/giveaway-followups.mjs:resendSend",
-      "target": "function:src/lib/giveaway-followups.ts:toHtml",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:scripts/giveaway-followups.mjs:sendOne",
-      "target": "function:src/lib/giveaway-followups.ts:renderDmLevel",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:scripts/giveaway-followups.mjs:allVariants",
-      "target": "function:src/lib/giveaway-followups.ts:renderQuickwin",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:scripts/giveaway-followups.mjs:allVariants",
-      "target": "function:src/lib/giveaway-followups.ts:renderLast",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:scripts/giveaway-followups.mjs:allVariants",
-      "target": "function:src/lib/giveaway-followups.ts:renderGift2",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:scripts/giveaway-followups.mjs:allVariants",
-      "target": "function:src/lib/giveaway-followups.ts:renderLive",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:scripts/giveaway-followups.mjs:allVariants",
-      "target": "function:src/lib/giveaway-followups.ts:renderSalesDay2",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:scripts/giveaway-followups.mjs:allVariants",
-      "target": "function:src/lib/giveaway-followups.ts:renderSalesDay5",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:scripts/giveaway-followups.mjs:renderAll",
-      "target": "function:src/lib/giveaway-followups.ts:toHtml",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:scripts/giveaway-followups.mjs:renderAll",
-      "target": "function:src/lib/giveaway-followups.ts:dayZeroPs",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:scripts/giveaway-followups.mjs:renderAll",
-      "target": "function:src/lib/giveaway-followups.ts:renderDmLevel",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:scripts/giveaway-followups.mjs:reviewSends",
-      "target": "function:src/lib/giveaway-followups.ts:renderSalesDay2",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:scripts/giveaway-followups.mjs:reviewSends",
-      "target": "function:src/lib/giveaway-followups.ts:renderSalesDay5",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:scripts/giveaway-followups.mjs:reviewSends",
-      "target": "function:src/lib/giveaway-followups.ts:renderGift2",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:scripts/giveaway-followups.mjs:reviewSends",
-      "target": "function:src/lib/giveaway-followups.ts:renderLive",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:scripts/giveaway-followups.mjs:main",
-      "target": "function:src/lib/giveaway-followups.ts:salesOfferFor",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:scripts/giveaway-followups.mjs:main",
-      "target": "function:src/lib/giveaway-followups.ts:planFollowups",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:scripts/giveaway-followups.mjs:main",
-      "target": "function:src/lib/giveaway-followups.ts:renderDmLevel",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/api/events/letter-schedule/route.ts:GET",
-      "target": "function:src/lib/events.tsx:getEventBySlug",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/api/events/letter-schedule/route.ts:GET",
-      "target": "function:src/lib/events.tsx:getLiveEvents",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/app/api/events/letter-schedule/route.ts:GET",
-      "target": "function:src/lib/letter-schedule.ts:runLetterSchedule",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
     }
   ],
   "version": "1.0.0",
@@ -11338,8 +11565,8 @@
       "Vanta"
     ],
     "description": "Masterminds Workshop Site — a Next.js application for displaying workshop information, courses, and giveaways with advanced animations and interactive components.",
-    "analyzedAt": "2026-11-19T20:09:13.223Z",
-    "gitCommitHash": "8d3e0529e2463ef03982a3e9f8d6a532554c828e"
+    "analyzedAt": "2026-11-23T20:12:02.101Z",
+    "gitCommitHash": "0a0b774799692f2da45d1412caa82282d54ee059"
   },
   "layers": [
     {
@@ -11467,7 +11694,8 @@
         "file:src/lib/letter-schedule.ts",
         "table:supabase/migrations/021_event_letter_flags.sql",
         "file:src/lib/registration-recovery.ts",
-        "table:supabase/migrations/021_event_letter_flags.sql:event_letter_flags"
+        "table:supabase/migrations/021_event_letter_flags.sql:event_letter_flags",
+        "file:src/lib/letter-only-events.ts"
       ]
     },
     {
@@ -11507,7 +11735,10 @@
         "file:tests/letter-confirmation.test.ts",
         "file:tests/session-reminder.test.ts",
         "file:tests/letter-schedule.test.ts",
-        "file:tests/supabase-read.test.ts"
+        "file:tests/supabase-read.test.ts",
+        "file:tests/calendar.test.ts",
+        "file:tests/event-confirmation-location-privacy.test.ts",
+        "file:tests/letter-only-events.test.ts"
       ]
     },
     {
@@ -11547,163 +11778,125 @@
   "tour": [
     {
       "order": 1,
-      "title": "Workshop Site Overview",
-      "description": "Start with the public event listing and dynamic event route to see how the site connects workshops, attendee registration, giveaways and resource delivery. The event routes introduce the visitor journey, while the operational follow-up entry point shows the second major workflow. No root README is present in this graph, so these application entry points provide the overview.",
+      "title": "Workshop Portal Overview",
+      "description": "Start at the event listing to see the public purpose of this workshop and giveaway portal: helping visitors discover upcoming live sessions and learning resources. The dynamic event page then resolves an event slug, promotional codes and page metadata before handing data to the shared event view.",
       "nodeIds": [
         "file:src/app/events/page.tsx",
-        "file:src/app/events/[slug]/page.tsx",
-        "file:scripts/giveaway-followups.mjs"
-      ],
-      "languageLesson": "In the Next.js App Router, a [slug] directory captures a dynamic URL segment, while page.tsx defines its page component."
+        "file:src/app/events/[slug]/page.tsx"
+      ]
     },
     {
       "order": 2,
-      "title": "Shared Event Rules",
-      "description": "The entry route depends on the central event catalog for schedules, pricing, registration settings, and presentation variants. Read the status helpers beside it to understand how scheduled cutoffs, ended events, and manual closure shape the page and registration decisions.",
+      "title": "Event Catalog And Rules",
+      "description": "The event catalog is the most widely referenced file in the graph and supplies the vocabulary behind the listing from Step 1. Its types and helpers describe page content, pricing, promotions and registration options, while event status rules determine when visitors can register.",
       "nodeIds": [
         "file:src/lib/events.tsx",
-        "file:src/lib/event-status.ts"
+        "file:src/lib/event-status.ts",
+        "file:src/lib/event-checkout.ts"
       ]
     },
     {
       "order": 3,
-      "title": "Event Page Composition",
-      "description": "The event view turns the catalog into typed content sections, hero media, calendar links, and registration data. Festival-specific components and the dinner photo carousel show how distinct presentations fit around that shared content model without becoming separate checkout systems.",
+      "title": "Reusable Event Experiences",
+      "description": "Building on that catalog, EventPageView composes standard workshop, festival and Voice Studio experiences from shared sections and media. The registration component turns those choices into one form supporting free, paid, donation and capacity-limited events.",
       "nodeIds": [
         "file:src/components/events/EventPageView.tsx",
-        "file:src/components/events/joechella/FestivalHero.tsx",
-        "file:src/components/events/DinnerPhotoCarousel.tsx"
+        "file:src/components/events/EventRegistrationSection.tsx",
+        "file:src/components/events/voice-studio/VoiceStudioPage.tsx"
       ]
     },
     {
       "order": 4,
-      "title": "Interactive Voice Studio",
-      "description": "The event view can also select the opt-in Voice Studio presentation, which combines canvas visuals, copy comparisons, tone controls, and testimonials. Its local-time hook formats the start time for the visitor, while the page reuses the shared registration component explored next.",
+      "title": "Checkout And Registration",
+      "description": "The checkout route receives the form data from Step 3, validates attendee and pricing inputs and creates a Stripe checkout session or confirms a free registration. Shared intake validation keeps browser and server rules aligned, while Supabase persistence and bounded recovery handle registration storage after the response.",
       "nodeIds": [
-        "file:src/components/events/voice-studio/VoiceStudioPage.tsx",
-        "function:src/components/events/voice-studio/VoiceStudioPage.tsx:VoicePrint",
-        "function:src/components/events/voice-studio/VoiceStudioPage.tsx:useLocalTime"
-      ],
-      "languageLesson": "React effects coordinate browser-only animation and timezone formatting after hydration; cleanup functions release animation frames and observers."
-    },
-    {
-      "order": 5,
-      "title": "Registration And Intake",
-      "description": "The shared registration form turns event rules into attendee intake, donation and promotion choices, free reservations, waitlisting and Stripe checkout. Follow the checkout endpoint into registration persistence and recovery to see how the server saves intake before payment, reserves capacity and handles delayed registration writes. This path connects the page composition from the previous steps to the confirmed attendee records needed for communications.",
-      "nodeIds": [
-        "file:src/components/events/EventRegistrationSection.tsx",
-        "file:src/lib/event-intake.ts",
         "file:src/app/api/events/checkout-session/route.ts",
+        "file:src/lib/event-intake.ts",
         "file:src/lib/event-registration-db.ts",
         "file:src/lib/registration-recovery.ts"
-      ],
-      "languageLesson": "A TypeScript type predicate such as isValidAiLevel narrows unknown input only after the runtime integer and range checks succeed."
-    },
-    {
-      "order": 6,
-      "title": "Attendee Messages And Reminders",
-      "description": "After registration, the confirmation service renders attendee messages, reminders, waitlist updates and backup alerts with delivery deduplication and location timing controls. The session-reminder scheduler injects registration, locking and delivery dependencies, deduplicates confirmed attendees and respects events that disable default reminders. Calendar invitations complete this attendee workflow, while the accompanying tests explain personalized copy and reminder behavior.",
-      "nodeIds": [
-        "file:src/lib/event-confirmation-email.ts",
-        "file:src/lib/google-calendar-invite.ts",
-        "file:tests/letter-confirmation.test.ts",
-        "file:src/lib/session-reminder.ts",
-        "file:tests/session-reminder.test.ts"
       ]
     },
     {
-      "title": "Scheduled Event Letters",
-      "description": "Building on attendee records and confirmation rendering, the scheduled-letter engine selects recipients using send windows, signup cutoffs, attendance and externally supplied flags. The authenticated API adapts registrations, flags, suppression checks and cron locks to the engine, which claims each recipient delivery and releases failed claims for retry. The SQL migration defines event-wide and recipient-specific flags with row level security, while tests document audience selection, variants, deduplication and retry behavior.",
+      "order": 5,
+      "title": "Confirmations And Calendars",
+      "description": "After registration, the email service builds confirmations, setup instructions and reminder messages with privacy and idempotency controls. Calendar helpers produce provider links and iCalendar invitations, while the Google invitation adapter validates dates and enforces guest privacy.",
       "nodeIds": [
-        "file:src/lib/letter-schedule.ts",
+        "file:src/lib/event-confirmation-email.ts",
+        "file:src/lib/calendar.ts",
+        "file:src/lib/google-calendar-invite.ts"
+      ]
+    },
+    {
+      "order": 6,
+      "title": "Scheduled Event Letters",
+      "description": "The authenticated cron route connects confirmed registrations and suppression flags to a time-windowed letter scheduler. Building on Step 5 delivery, injected dependencies enforce audience rules, deduplication and send claims, with approved off-site lesson letters represented separately from public event pages.",
+      "nodeIds": [
         "file:src/app/api/events/letter-schedule/route.ts",
-        "table:supabase/migrations/021_event_letter_flags.sql:event_letter_flags",
-        "file:tests/letter-schedule.test.ts"
-      ],
-      "order": 7
+        "file:src/lib/letter-schedule.ts",
+        "file:src/lib/letter-only-events.ts",
+        "file:src/lib/session-reminder.ts"
+      ]
+    },
+    {
+      "order": 7,
+      "title": "Letter Signal Storage",
+      "description": "The event-letter migration supplies persistent signals used by the scheduling flow from Step 6. Its row-level-secured table records an event slug, recipient, flag and optional note; an asterisk recipient supports event-wide flags.",
+      "nodeIds": [
+        "table:supabase/migrations/021_event_letter_flags.sql",
+        "table:supabase/migrations/021_event_letter_flags.sql:event_letter_flags"
+      ]
     },
     {
       "order": 8,
-      "title": "Giveaway Content Contracts",
-      "description": "The second major experience is the giveaway system, organized around a registry, a reusable pack content model and a shared free AI tool catalog. The tool-pack adapter transforms that catalog into setup guides and structured search data, letting many routes reuse the same source content.",
+      "title": "Reusable Giveaway Pages",
+      "description": "The portal also offers downloadable tools and guides, with many routes depending on the shared PackPage renderer. Content adapters and the free AI tool catalog supply reusable page data, so individual giveaway routes can present distinct resources through a common experience.",
       "nodeIds": [
-        "file:src/lib/giveaways.ts",
+        "file:src/components/giveaways/PackPage.tsx",
         "file:src/lib/pack-page.ts",
+        "file:src/lib/free-ai-tool-pack.ts",
         "file:src/lib/free-ai-tools.ts",
-        "file:src/lib/free-ai-tool-pack.ts"
+        "file:src/app/giveaways/desk-pet/page.tsx"
       ]
     },
     {
       "order": 9,
-      "title": "Reusable Giveaway Rendering",
-      "description": "PackPage turns those content contracts into an interactive page with optional sections, copyable commands, personalized prompts and contextual email capture. The Claude Video Skills route is a concrete example of a small route module rendering catalog-backed content, while the offer selector adds the appropriate follow-on call to action.",
+      "title": "Resources And Lead Capture",
+      "description": "The downloadable Desk Pet prompt demonstrates how the giveaway content from Step 8 becomes a public resource visitors can use. Lead capture and giveaway email helpers connect resource requests to delivery, while offer definitions supply targeting data for subsequent follow-ups.",
       "nodeIds": [
-        "file:src/components/giveaways/PackPage.tsx",
-        "file:src/app/giveaways/free-ai-youtube-skills/page.tsx",
+        "document:public/desk-pet-prompt.txt",
+        "file:src/app/api/lead-magnet/route.ts",
+        "file:src/lib/generic-giveaway-email.ts",
         "file:src/lib/giveaway-offers.ts"
       ]
     },
     {
       "order": 10,
-      "title": "Distributed Resource Instructions",
-      "description": "The Desk Pet pack shows how a giveaway includes both website content and a reusable setup prompt. Compare the source prompt with its downloadable text document to understand why distribution parity matters when users follow installation instructions outside the site.",
+      "title": "Guarded Follow-up Operations",
+      "description": "The operational runner builds on giveaway offers and delivery services to plan follow-ups and support previews and limited live delivery modes. Eligibility, suppression and claims constrain each action, while the shared Supabase reader retries transient read failures with bounded deadlines.",
       "nodeIds": [
-        "file:src/app/giveaways/desk-pet/pack.ts",
-        "file:src/app/giveaways/desk-pet/prompt.ts",
-        "document:public/desk-pet-prompt.txt"
+        "file:scripts/giveaway-followups.mjs",
+        "file:src/lib/giveaway-followups.ts",
+        "file:scripts/lib/supabase-read.mjs"
       ]
     },
     {
       "order": 11,
-      "title": "Lead Capture And Delivery",
-      "description": "The lead-magnet API connects giveaway engagement to email delivery, analytics and CRM records while applying rate limits, suppression checks and source-specific routing. Its email helpers build approved resource messages, and the unsubscribe route closes the loop by verifying tokens and recording list suppressions.",
+      "title": "Behavior And Failure Checks",
+      "description": "The tests exercise the registration, privacy and scheduling rules introduced earlier in the tour. Checkout scenarios, hidden venue details, scheduled-letter retry behavior and transient Supabase failures provide concrete examples of the system’s expected behavior under success and failure conditions.",
       "nodeIds": [
-        "file:src/app/api/lead-magnet/route.ts",
-        "file:src/lib/generic-giveaway-email.ts",
-        "file:src/lib/free-ai-tool-email.ts",
-        "file:src/app/api/unsubscribe/route.ts"
-      ]
-    },
-    {
-      "order": 12,
-      "title": "Guarded Follow-up Operations",
-      "description": "After initial resource delivery, the follow-up planner selects eligible email and Instagram steps using timing, suppression and human-handoff rules. The operational runner combines that plan with provider checks, previews, dry runs and claimed sends. Its shared Supabase reader retries only idempotent reads with bounded backoff and fresh deadlines; the tests distinguish transient recovery from permanent failures.",
-      "nodeIds": [
-        "file:src/lib/giveaway-followups.ts",
-        "file:scripts/giveaway-followups.mjs",
-        "file:scripts/lib/supabase-read.mjs",
+        "file:tests/event-checkout.test.ts",
+        "file:tests/event-confirmation-location-privacy.test.ts",
+        "file:tests/letter-schedule.test.ts",
         "file:tests/supabase-read.test.ts"
       ]
     },
     {
-      "order": 13,
-      "title": "Workshop Learning Content",
-      "description": "Beyond registration and giveaways, the site also carries instructional workshop material. The session guide demonstrates this content role through browser workflows, local transcription, GuardDog setup and Git checkpoints, complementing the attendee setup page's post-purchase instructions.",
-      "nodeIds": [
-        "file:src/content/session-8-guide.tsx",
-        "file:src/app/events/[slug]/setup/page.tsx"
-      ]
-    },
-    {
-      "order": 14,
-      "title": "Behavior And Resource Checks",
-      "description": "The represented tests document important contracts across event pricing, Stripe checkout, tool catalog wiring and follow-up eligibility. Read them after the corresponding features to see both behavioral assertions and source or asset checks; these graph entries do not establish a current test run or a verified production experience.",
-      "nodeIds": [
-        "file:tests/event-checkout.test.ts",
-        "file:tests/event-pricing-and-data.test.ts",
-        "file:tests/free-ai-tools.test.ts",
-        "file:tests/giveaway-followups.test.ts",
-        "file:tests/desk-pet.test.ts"
-      ]
-    },
-    {
-      "order": 15,
-      "title": "Routing And Delivery Configuration",
-      "description": "Finish with the configuration that determines how the routes and automation from earlier steps are delivered. Next.js controls build tracing, media exclusions, legacy redirects and host rewrites, while Vercel declares the deployment region, hostname-specific roots and scheduled event jobs, including the letter scheduler. The legacy Video Editor route illustrates why source content and visitor routing must be understood together.",
+      "order": 12,
+      "title": "Build And Deployment Configuration",
+      "description": "Finish with the configuration that exposes the pages and schedules the automation described in this tour. Next.js config controls tracing, media exclusions and legacy redirects, while Vercel config declares regional deployment, host-specific rewrites and recurring event routes.",
       "nodeIds": [
         "config:next.config.ts",
-        "config:vercel.json",
-        "file:src/app/giveaways/video-editor/page.tsx"
+        "config:vercel.json"
       ]
     }
   ]

@@ -1,100 +1,92 @@
 {
   "mode": "incremental",
-  "analyzedAt": "2026-11-19T20:09:13.223Z",
+  "analyzedAt": "2026-11-23T20:12:02.101Z",
   "filesAnalyzed": 14,
   "changedFiles": [
     "scripts/giveaway-followups.mjs",
     "scripts/lib/supabase-read.mjs",
-    "src/app/api/events/checkout-session/route.ts",
     "src/app/api/events/letter-schedule/route.ts",
-    "src/app/voice-setup/page.tsx",
+    "src/components/events/EventPageView.tsx",
+    "src/components/events/EventRegistrationSection.tsx",
+    "src/lib/calendar.ts",
     "src/lib/event-confirmation-email.ts",
-    "src/lib/event-registration-db.ts",
     "src/lib/events.tsx",
+    "src/lib/letter-only-events.ts",
     "src/lib/letter-schedule.ts",
-    "src/lib/registration-recovery.ts",
-    "supabase/migrations/021_event_letter_flags.sql",
-    "tests/letter-schedule.test.ts",
-    "tests/supabase-read.test.ts",
-    "vercel.json"
+    "tests/calendar.test.ts",
+    "tests/event-confirmation-location-privacy.test.ts",
+    "tests/letter-only-events.test.ts",
+    "tests/supabase-read.test.ts"
   ],
   "deletedFiles": [],
-  "nodeCount": 372,
-  "edgeCount": 720,
-  "layerCount": 9,
-  "tourSteps": 15,
+  "totalNodes": 381,
+  "totalEdges": 733,
+  "totalLayers": 9,
+  "tourSteps": 12,
+  "sourceFilesValidated": 603,
+  "representedPaths": 151,
   "validationIssues": [],
   "warnings": [
-    "Orphan node file:public/downloads/joes-linkedin-kit-v1.0.zip",
-    "Orphan node file:public/downloads/joes-linkedin-kit-v1.0.zip.sha256",
-    "Orphan node file:public/downloads/joes-salesman-v1.0.zip",
-    "Orphan node file:public/downloads/joes-salesman-v1.0.zip.sha256",
-    "Orphan node function:src/app/api/events/abandoned-checkout-followups/route.ts:acquireEventLock",
-    "Orphan node function:src/app/api/events/cancel/route.ts:escapeHtml",
-    "Orphan node function:src/app/api/events/session-reminders/route.ts:acquireEventWindowLock",
-    "Orphan node file:src/app/bonus/auto-lead-magnet/page.tsx",
-    "Orphan node config:vercel.json",
-    "Inherited partial coverage: 147 represented paths / 601 inventory files; incremental refresh only."
+    "Orphan: file:public/downloads/joes-linkedin-kit-v1.0.zip",
+    "Orphan: file:public/downloads/joes-linkedin-kit-v1.0.zip.sha256",
+    "Orphan: file:public/downloads/joes-salesman-v1.0.zip",
+    "Orphan: file:public/downloads/joes-salesman-v1.0.zip.sha256",
+    "Orphan: function:src/app/api/events/abandoned-checkout-followups/route.ts:acquireEventLock",
+    "Orphan: function:src/app/api/events/cancel/route.ts:escapeHtml",
+    "Orphan: function:src/app/api/events/session-reminders/route.ts:acquireEventWindowLock",
+    "Orphan: file:src/app/bonus/auto-lead-magnet/page.tsx",
+    "Orphan: config:vercel.json",
+    "Inherited partial coverage: 151 represented paths / 603 inventory files"
   ],
-  "sourceFilesValidated": 601,
-  "fingerprintsValidated": 601,
-  "pipelineNotes": [
-    "All batches normalized before Python 3.11 merge; graph edge density verified.",
-    "Retained unchanged graph in batch-0.json; all eight changed batches verified.",
-    "Regenerated deterministic import map with full inventory for tsconfig alias resolution.",
-    "Initial analyzer dispatch failed thread-store context initialization; permitted retry succeeded.",
-    "Dashboard launch skipped to preserve graph-only scope."
-  ],
+  "fingerprintsValidated": 603,
   "assembleReview": {
     "fixedSectionOk": true,
     "nodesRecovered": 0,
     "edgesRestored": 0,
-    "crossBatchEdgesAdded": 37,
+    "crossBatchEdgesAdded": 0,
     "typesRemapped": 0,
     "complexityRemapped": 0,
-    "importsAdded": 0,
-    "exportsAdded": 0,
-    "callsAdded": 37,
-    "nodeCount": 372,
-    "edgeCount": 720,
-    "danglingEdges": 0,
-    "semanticallyAnalyzedChangedFiles": 14,
-    "missingImportTargetPaths": [
-      "src/app/giveaways/claude-md/prompts.ts",
-      "src/components/CodeBlock.tsx",
-      "src/components/ProTip.tsx",
-      "src/components/StepCard.tsx",
-      "src/components/StickyVideoPlayer.tsx",
-      "src/components/TabNav.tsx",
-      "src/components/events/ask-an-ai-expert-quotes.ts",
-      "src/components/giveaways/GiveawayAutoModal.tsx",
-      "src/components/giveaways/GiveawayEmailModal.tsx",
-      "src/components/giveaways/PackPage.module.css",
-      "src/components/sections/MastermindReactionsSection.tsx",
-      "src/lib/event-capacity.ts",
-      "src/lib/event-email-ledger.ts",
-      "src/lib/event-tokens.ts",
-      "src/lib/free-ai-tools-hub-email.ts",
-      "src/lib/giveaway-dm.ts",
-      "src/lib/html-to-text.ts",
-      "src/lib/insight-to-fix.ts",
-      "src/lib/legacy-event-schedule.ts",
-      "src/lib/masterminds-checkout-branding.ts",
-      "src/lib/meta-consent.ts",
-      "src/lib/quiz-giveaway-email.ts",
-      "src/lib/rate-limit.ts",
-      "src/lib/registration-profile-token.ts",
-      "src/lib/speak-human-email.ts",
-      "src/lib/stripe-amount.ts",
-      "src/lib/whatsapp-agent-email.ts",
-      "src/lib/with-timeout.ts"
-    ],
     "notes": [
-      "Merge fixes are consistent; no systemic ID or complexity corrections reported.",
-      "All 10 dropped import edges point to inherited coverage gaps: no corresponding analyzed batch or retained node. No generic nodes synthesized.",
-      "Corrected deterministic importMap already recovered all imports between represented files; no further missing imports or proven exported-function edges.",
-      "Added cross-file calls only when extracted callGraph, explicit named source imports, deterministic importMap and existing function nodes agree.",
-      "Incremental semantic coverage remains 14 changed files; inherited partial graph coverage is retained."
-    ]
-  }
+      "Merge reported no normalization fixes or malformed node types/complexities. The five dropped edges reference function nodes absent from every analyzed batch; their files exist as inventory-only dependencies. They remain omitted rather than inventing semantic analysis of unchanged source.",
+      "The EventPageView → Reveal dropped contains edge is also not a valid ownership relationship between functions in separate files; the verified file import is retained.",
+      "Checked the complete 603-source import map; added 0 proven file import edges. 464 sources and 37 targets have no represented file node and were not fabricated.",
+      "This incremental graph intentionally represents only previously analyzed and changed source plus inventory-verified dependency file nodes; it is not full semantic coverage of the repository.",
+      "Corrected 5 cross-file function contains edges to calls; retained four Next.js file layout-hierarchy contains edges."
+    ],
+    "droppedEdgeReview": [
+      {
+        "id": "function:src/lib/celebrate.ts:celebrate",
+        "inBatches": false,
+        "fileRepresented": true
+      },
+      {
+        "id": "function:src/lib/event-registration-flow.ts:buildEventCheckoutRequestBody",
+        "inBatches": false,
+        "fileRepresented": true
+      },
+      {
+        "id": "function:src/lib/utm.ts:withUtm",
+        "inBatches": false,
+        "fileRepresented": true
+      },
+      {
+        "id": "function:src/lib/email-suppressions.ts:isSuppressed",
+        "inBatches": false,
+        "fileRepresented": true
+      },
+      {
+        "id": "function:src/components/Reveal.tsx:Reveal",
+        "inBatches": false,
+        "fileRepresented": true
+      }
+    ],
+    "crossFileContainsCorrected": 5
+  },
+  "pipelineNotes": [
+    "All batch nodes and edges normalized before Python 3.11 merge.",
+    "Only changed files semantically re-analyzed; existing partial source coverage retained.",
+    "Final graph passed strict core schema, topology, layer, tour, source inventory and content-hash validation.",
+    "One context-initialization dispatch failure; permitted retry succeeded.",
+    "Dashboard launch skipped to preserve graph-only scope."
+  ]
 }

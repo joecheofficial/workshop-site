@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "gitCommitHash": "8d3e0529e2463ef03982a3e9f8d6a532554c828e",
-  "generatedAt": "2026-11-19T20:09:21.633Z",
+  "gitCommitHash": "0a0b774799692f2da45d1412caa82282d54ee059",
+  "generatedAt": "2026-11-23T20:12:08.378Z",
   "files": {
     ".claude/settings.json": {
       "filePath": ".claude/settings.json",
@@ -1229,7 +1229,7 @@
     },
     "scripts/giveaway-followups.mjs": {
       "filePath": "scripts/giveaway-followups.mjs",
-      "contentHash": "b36c964a895e90dd56b44d03866e1e9f9727f6efc2cb2b60c650bc4393806ee9",
+      "contentHash": "a5499b10039cb8ee9bf737a14381a90076166297c0accc7b2843cb0be7b52d8f",
       "functions": [
         {
           "name": "flag",
@@ -1645,7 +1645,7 @@
     },
     "scripts/lib/supabase-read.mjs": {
       "filePath": "scripts/lib/supabase-read.mjs",
-      "contentHash": "c212d99963294cc7a02e5e1a9929a84f3679f06f845a24bac9a2c79ec4fbf97b",
+      "contentHash": "bee4cbd9aa2885d4f62b32b02e247e8f5bdd08ef16100cda41a4ee4f12a92caa",
       "functions": [
         {
           "name": "readSupabaseJson",
@@ -1654,7 +1654,7 @@
             "table"
           ],
           "exported": true,
-          "lineCount": 20
+          "lineCount": 17
         }
       ],
       "classes": [],
@@ -1669,7 +1669,7 @@
       "exports": [
         "readSupabaseJson"
       ],
-      "totalLines": 27,
+      "totalLines": 24,
       "hasStructuralAnalysis": true
     },
     "scripts/send-dinner-tonight-reminder.mjs": {
@@ -2912,7 +2912,7 @@
     },
     "src/app/api/events/letter-schedule/route.ts": {
       "filePath": "src/app/api/events/letter-schedule/route.ts",
-      "contentHash": "be7390823e559e2a3a992cd4ec210534b5f3d4775533c8d1c48e5ee5ab052d9b",
+      "contentHash": "62653e1d211bac60ebd56c2133c6ad2f1c9d87cdd103fcfdcd425c77fd6df0c2",
       "functions": [
         {
           "name": "isAuthorized",
@@ -2962,7 +2962,7 @@
             "request"
           ],
           "exported": true,
-          "lineCount": 31
+          "lineCount": 33
         }
       ],
       "classes": [],
@@ -3004,8 +3004,16 @@
           "specifiers": [
             "EVENT_FLAG_EMAIL",
             "runLetterSchedule",
+            "LetterEvent",
             "LetterFlags",
             "LetterRecipient"
+          ]
+        },
+        {
+          "source": "@/lib/letter-only-events",
+          "specifiers": [
+            "getLetterOnlyEvent",
+            "letterOnlyEvents"
           ]
         },
         {
@@ -3019,7 +3027,7 @@
         "runtime",
         "GET"
       ],
-      "totalLines": 95,
+      "totalLines": 98,
       "hasStructuralAnalysis": true
     },
     "src/app/api/events/location-reminders/route.ts": {
@@ -12921,7 +12929,7 @@
     },
     "src/components/events/EventPageView.tsx": {
       "filePath": "src/components/events/EventPageView.tsx",
-      "contentHash": "2e9d58f0cf232711cd462630e513fc3debb6ba9324b13c4467bb970b9c98158d",
+      "contentHash": "941fb11cba00af29387a7919e88485aaf7885643895184366467af22b09982e5",
       "functions": [
         {
           "name": "sectionTitleClass",
@@ -13060,7 +13068,7 @@
             "{\n  event,\n  promo,\n  publishableKey,\n  initialPromoCode,\n}"
           ],
           "exported": true,
-          "lineCount": 228
+          "lineCount": 239
         }
       ],
       "classes": [],
@@ -13095,7 +13103,8 @@
         {
           "source": "@/lib/calendar",
           "specifiers": [
-            "buildGoogleCalendarUrl"
+            "buildGoogleCalendarUrl",
+            "buildOutlookCalendarUrl"
           ]
         },
         {
@@ -13181,12 +13190,12 @@
       "exports": [
         "EventPageView"
       ],
-      "totalLines": 725,
+      "totalLines": 736,
       "hasStructuralAnalysis": true
     },
     "src/components/events/EventRegistrationSection.tsx": {
       "filePath": "src/components/events/EventRegistrationSection.tsx",
-      "contentHash": "e3c1c07ba9f748893747a0d8663dfa9c8ac68ea43fd7bccd6fedaf6db05eec18",
+      "contentHash": "435e42d4926e523c5f50cf3e53a931592a325bdad250d6530a68f71b0c6a7cb3",
       "functions": [
         {
           "name": "useAnimatedNumber",
@@ -13204,7 +13213,7 @@
             "{\n  event,\n  publishableKey,\n  initialPromoCode,\n  initialPromoAmount,\n  initialPromoMessage,\n}"
           ],
           "exported": true,
-          "lineCount": 987
+          "lineCount": 998
         }
       ],
       "classes": [],
@@ -13291,7 +13300,7 @@
       "exports": [
         "EventRegistrationSection"
       ],
-      "totalLines": 1111,
+      "totalLines": 1123,
       "hasStructuralAnalysis": true
     },
     "src/components/events/HeroVideo.tsx": {
@@ -16647,7 +16656,7 @@
     },
     "src/lib/calendar.ts": {
       "filePath": "src/lib/calendar.ts",
-      "contentHash": "0e10b063a0e9a9bc88f2d43af733119fd894cbabff7ea00cb916cafdaa7f1e23",
+      "contentHash": "e1b69b38ae64ad41feb7fc62c45f770c563a08d18ae0fac66a3b84d7cad8ff2c",
       "functions": [
         {
           "name": "toIcalDate",
@@ -16677,6 +16686,15 @@
           "lineCount": 17
         },
         {
+          "name": "buildOutlookCalendarUrl",
+          "params": [
+            "params"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 19
+        },
+        {
           "name": "buildIcalString",
           "params": [
             "params"
@@ -16698,10 +16716,11 @@
       "imports": [],
       "exports": [
         "buildGoogleCalendarUrl",
+        "buildOutlookCalendarUrl",
         "buildIcalString",
         "buildEventCalendarDescription"
       ],
-      "totalLines": 95,
+      "totalLines": 121,
       "hasStructuralAnalysis": true
     },
     "src/lib/celebrate.ts": {
@@ -17042,7 +17061,7 @@
     },
     "src/lib/event-confirmation-email.ts": {
       "filePath": "src/lib/event-confirmation-email.ts",
-      "contentHash": "16e14c9875ae99a031e6bf7ed52cd6462cb86b03381507f9fa9e1c83cdf23251",
+      "contentHash": "3c3eef2c1424cf684f374fdb7daafb5a1b7629900354a9a0abc0b3fbe457ad89",
       "functions": [
         {
           "name": "getSiteUrl",
@@ -17111,7 +17130,7 @@
             "now"
           ],
           "exported": true,
-          "lineCount": 213
+          "lineCount": 227
         },
         {
           "name": "buildLocationReminderEmailHtml",
@@ -17310,7 +17329,8 @@
           "source": "./calendar",
           "specifiers": [
             "buildGoogleCalendarUrl",
-            "buildIcalString"
+            "buildIcalString",
+            "buildOutlookCalendarUrl"
           ]
         },
         {
@@ -17352,7 +17372,7 @@
         "sendWaitlistSpotNotificationEmail",
         "sendRegistrationBackupAlert"
       ],
-      "totalLines": 1061,
+      "totalLines": 1075,
       "hasStructuralAnalysis": true
     },
     "src/lib/event-email-ledger.ts": {
@@ -17993,7 +18013,7 @@
     },
     "src/lib/events.tsx": {
       "filePath": "src/lib/events.tsx",
-      "contentHash": "d62418f56a8e7b0a478c275cfbc9bde14c16a7c1076469a2e1ede2757d27989b",
+      "contentHash": "5194087281f6b5240ffc68f83ad227bf9068747c1d2b6f77fe4f034cfc5334a9",
       "functions": [
         {
           "name": "getDiscountedPrice",
@@ -18104,7 +18124,7 @@
         "getLiveEvents",
         "getUpcomingLiveEvents"
       ],
-      "totalLines": 2339,
+      "totalLines": 2471,
       "hasStructuralAnalysis": true
     },
     "src/lib/free-ai-tool-email.ts": {
@@ -19370,9 +19390,40 @@
       "totalLines": 761,
       "hasStructuralAnalysis": true
     },
+    "src/lib/letter-only-events.ts": {
+      "filePath": "src/lib/letter-only-events.ts",
+      "contentHash": "3f24fb31e1c89bee814f2836add6d28dd3c3dafe8f06eb086bb1829d97e825ec",
+      "functions": [
+        {
+          "name": "getLetterOnlyEvent",
+          "params": [
+            "slug"
+          ],
+          "returnType": "LetterEvent | undefined",
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "./letter-schedule",
+          "specifiers": [
+            "LetterEvent"
+          ]
+        }
+      ],
+      "exports": [
+        "MAVEN_VOICE_LESSON_SLUG",
+        "letterOnlyEvents",
+        "getLetterOnlyEvent"
+      ],
+      "totalLines": 70,
+      "hasStructuralAnalysis": true
+    },
     "src/lib/letter-schedule.ts": {
       "filePath": "src/lib/letter-schedule.ts",
-      "contentHash": "2fa2e2ba14931f44bac36a890dbf9d171b6baa3a9d8dfb18cd809a047e73efa1",
+      "contentHash": "58464a570f92175836dbe79c6ab252490b2e8ef7db6c874d2e7f0593b8b9a0b1",
       "functions": [
         {
           "name": "isLetterDue",
@@ -19463,7 +19514,7 @@
         "buildLetterClaimKey",
         "runLetterSchedule"
       ],
-      "totalLines": 181,
+      "totalLines": 185,
       "hasStructuralAnalysis": true
     },
     "src/lib/list-unsubscribe.ts": {
@@ -21059,7 +21110,7 @@
     },
     "tests/calendar.test.ts": {
       "filePath": "tests/calendar.test.ts",
-      "contentHash": "3d2f2f606d81dfdf12cc5a22840b9f74916ffc1077254d0ed5aec5d68e5e6370",
+      "contentHash": "62f11feed298ae5e2df7b990c895c0582d26f82bc2b2e57e400363b6fdfc4da8",
       "functions": [],
       "classes": [],
       "imports": [
@@ -21081,10 +21132,16 @@
             "buildGoogleCalendarUrl",
             "buildIcalString"
           ]
+        },
+        {
+          "source": "../src/lib/calendar",
+          "specifiers": [
+            "buildOutlookCalendarUrl"
+          ]
         }
       ],
       "exports": [],
-      "totalLines": 151,
+      "totalLines": 170,
       "hasStructuralAnalysis": true
     },
     "tests/checkout-branding.test.ts": {
@@ -21636,7 +21693,7 @@
     },
     "tests/event-confirmation-location-privacy.test.ts": {
       "filePath": "tests/event-confirmation-location-privacy.test.ts",
-      "contentHash": "e8f58b2bcf8b9afeff6e36783665b6a7a515409d48ca3740377a54b36c71daa6",
+      "contentHash": "ef9beeb20d2ace40cbeba55299171a853d0c8d78daec14a252dee98bc3a49611",
       "functions": [],
       "classes": [],
       "imports": [
@@ -21666,7 +21723,7 @@
         }
       ],
       "exports": [],
-      "totalLines": 41,
+      "totalLines": 42,
       "hasStructuralAnalysis": true
     },
     "tests/event-followup.test.ts": {
@@ -22730,6 +22787,89 @@
       "totalLines": 34,
       "hasStructuralAnalysis": true
     },
+    "tests/letter-only-events.test.ts": {
+      "filePath": "tests/letter-only-events.test.ts",
+      "contentHash": "058ce52f62690cd625e21321e7c9f44bcfcc6a88a0d391f5ab0001686f6e1de5",
+      "functions": [
+        {
+          "name": "m",
+          "params": [
+            "key"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "v",
+          "params": [
+            "key"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "flags",
+          "params": [
+            "event",
+            "person"
+          ],
+          "returnType": "LetterFlags",
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "who",
+          "params": [
+            "email",
+            "registeredAt"
+          ],
+          "returnType": "LetterRecipient",
+          "exported": false,
+          "lineCount": 7
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:assert/strict",
+          "specifiers": [
+            "assert"
+          ]
+        },
+        {
+          "source": "node:test",
+          "specifiers": [
+            "test"
+          ]
+        },
+        {
+          "source": "../src/lib/events",
+          "specifiers": [
+            "getEventBySlug"
+          ]
+        },
+        {
+          "source": "../src/lib/letter-only-events",
+          "specifiers": [
+            "getLetterOnlyEvent",
+            "letterOnlyEvents",
+            "MAVEN_VOICE_LESSON_SLUG"
+          ]
+        },
+        {
+          "source": "../src/lib/letter-schedule",
+          "specifiers": [
+            "letterAudience",
+            "runLetterSchedule",
+            "LetterFlags",
+            "LetterRecipient"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 78,
+      "hasStructuralAnalysis": true
+    },
     "tests/letter-schedule.test.ts": {
       "filePath": "tests/letter-schedule.test.ts",
       "contentHash": "89a317e5c6893c7e3b156f3fe5997112b21d12540655b28c59ef415c90ddc900",
@@ -23473,7 +23613,7 @@
     },
     "tests/supabase-read.test.ts": {
       "filePath": "tests/supabase-read.test.ts",
-      "contentHash": "c50ea3309ea66cdafe8d11b488b7c7724a95c1a8c8d77af3522ddb9fd111bd5d",
+      "contentHash": "a31d240f0adfc7f27640034584480c4330bc7d2e37735bc4d673bfb78aedd8e9",
       "functions": [],
       "classes": [],
       "imports": [
@@ -23497,7 +23637,7 @@
         }
       ],
       "exports": [],
-      "totalLines": 64,
+      "totalLines": 95,
       "hasStructuralAnalysis": true
     },
     "tests/utm.test.ts": {
