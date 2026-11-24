@@ -194,3 +194,12 @@ test('only the free task class opts into the AI level step', () => {
   assert.equal(validateBusinessContext('abc', 3), undefined)
   assert.ok(validateBusinessContext('ab', 3))
 })
+
+test('phone numbers pasted with invisible iOS marks are accepted and cleaned', () => {
+  const pasted = '\u202A+37126546953\u202C'
+  assert.equal(validateWhatsappNumber(pasted), undefined)
+  assert.equal(validateWhatsappNumber('+371\u00A026546953'), undefined)
+  assert.equal(validateWhatsappNumber('\u200B+62 812 3456 7890'), undefined)
+  assert.equal(normalizeWhatsappNumber(pasted), '+37126546953')
+  assert.ok(validateWhatsappNumber('\u202A\u202C'), 'only marks is still empty')
+})
