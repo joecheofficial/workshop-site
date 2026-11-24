@@ -34,8 +34,18 @@ const WHATSAPP_INVALID_MESSAGE =
  * ever assumed: this audience is international and guessing one silently mangles
  * everyone else's number.
  */
+// Phones paste numbers with invisible formatting marks: iOS wraps a number copied
+// from Contacts or autofill in U+202A/U+202C direction marks, and some keyboards
+// add zero-width or non-breaking spaces. They are invisible to the person, so we
+// strip them before validating instead of rejecting a correct number.
+const INVISIBLE_PHONE_CHARS = /[\u00A0\u200B-\u200F\u202A-\u202E\u2060-\u2069\uFEFF]/g
+
+export function stripInvisiblePhoneChars(value: string): string {
+  return String(value ?? '').replace(INVISIBLE_PHONE_CHARS, (ch) => (ch === '\u00A0' ? ' ' : ''))
+}
+
 function toDialableCandidate(value: string): string {
-  const trimmed = String(value ?? '').trim()
+  const trimmed = stripInvisiblePhoneChars(value).trim()
   if (!trimmed) return ''
   if (trimmed.startsWith('+')) return trimmed
   return `+${trimmed.replace(/[^\d]/g, '')}`
@@ -65,11 +75,11 @@ export function normalizeWhatsappNumber(value: string): string {
   // Fall back to the raw trimmed input rather than dropping it. Validation
   // rejects unparseable numbers before this runs on the happy path, and losing
   // a number outright would be worse than storing an odd one.
-  return toE164(value) ?? value.trim()
+  return toE164(value) ?? stripInvisiblePhoneChars(value).trim()
 }
 
 export function validateWhatsappNumber(value: string): string | undefined {
-  const trimmed = value.trim()
+  const trimmed = stripInvisiblePhoneChars(value).trim()
   if (!trimmed) return 'Please add your WhatsApp or phone number.'
   if (trimmed.length > WHATSAPP_MAX_LENGTH) return 'That number looks too long.'
   if (/[^\d\s+()\-.]/.test(trimmed)) return 'Use digits only, with an optional + for the country code.'
