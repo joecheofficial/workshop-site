@@ -112,7 +112,9 @@ test('letters render as plain letters with their one link', () => {
   assert.doesNotMatch(e2.html, /Georgia|font-weight:bold|max-width/)
   assert.ok(e2.text.includes('Get the app here: https://workshop.mastermindshq.business/voice-setup'))
   assert.ok(e2.text.startsWith('Hi Ann,'))
-  assert.equal((e2.html.match(/<a /g) ?? []).length, 1)
+  // P.S. calendar link added 24 Nov 2026 (Illy): setup link + calendar link.
+  assert.equal((e2.html.match(/<a /g) ?? []).length, 2)
+  assert.match(e2.html, /P\.S\. <a href="https:\/\/workshop\.mastermindshq\.business\/voice-calendar"[^>]*>Add Tuesday to your calendar here<\/a>\. On Windows/)
   assert.doesNotMatch(e2.html, /<img/)
   const e4 = buildLetterConfirmation(letter('e4-one-hour'), '', event.zoomLink)
   assert.ok(e4.text.startsWith('Hi there,'))
