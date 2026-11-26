@@ -80,7 +80,9 @@ function setupNotesPack(t: FreeAiTool): PackPageContent {
   sections.push({ title: 'Links', links: t.links.map((l) => ({ label: l.label, href: l.url })) })
   sections.push({
     title: 'Why I share it',
-    text: `I don't make ${t.name} and nobody pays me to share it. It's a free tool I think is worth ten minutes of your time. Try it this week and tell me what you used it for first.`,
+    text: t.ownTool
+      ? t.ownTool.whyIShare
+      : `I don't make ${t.name} and nobody pays me to share it. It's a free tool I think is worth ten minutes of your time. Try it this week and tell me what you used it for first.`,
   })
   return {
     slug: t.slug,
@@ -118,7 +120,9 @@ function setupNotesPack(t: FreeAiTool): PackPageContent {
     stuck: [
       ...(t.stuck ?? []),
       { q: 'Is there a catch?', a: t.goodToKnow },
-      { q: 'My screen looks different from the steps', a: `Apps change their screens. Use the official links above, which the people who make ${t.name} keep up to date.` },
+      ...(t.ownTool
+        ? []
+        : [{ q: 'My screen looks different from the steps', a: `Apps change their screens. Use the official links above, which the people who make ${t.name} keep up to date.` }]),
       { q: 'None of these fixed it', email: 'joe@mastermindshq.business', a: 'Say which step you were on and paste what you saw.' },
     ],
     bridge: `You came for a free tool. The next step is a website you own, built by you, that you can change any time.`,
