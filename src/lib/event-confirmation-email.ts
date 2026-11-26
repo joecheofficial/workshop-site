@@ -259,6 +259,7 @@ export function buildConfirmationEmailHtml(event: EventDefinition, attendeeName:
   const eventUrl = `${siteUrl}/events/${event.slug}`
 
   const cfg = event.emailConfig
+  const content = cfg?.confirmationContent
   const { contactBlockHtml } = resolveHostContact(event)
   const detailsLabel = cfg?.detailsLabel ?? 'Workshop Details'
   const signatureName = cfg?.signatureName ?? 'Joe Che\nMasterminds HQ'
@@ -355,7 +356,7 @@ export function buildConfirmationEmailHtml(event: EventDefinition, attendeeName:
   // the exact address arrives.
   const locationRowHtml = locationIsStillPrivate
     ? ''
-    : `<p style="margin: 0${mapsButtonHtml ? ' 0 10px' : ''}; font-size: 15px; line-height: 1.7; color: #2d2442;"><strong>Location:</strong> ${event.locationLabel}</p>
+    : `<p style="margin: 0${mapsButtonHtml ? ' 0 10px' : ''}; font-size: 15px; line-height: 1.7; color: #2d2442;"><strong>Location:</strong> ${escapeLetterHtml(content?.locationLabel ?? event.locationLabel)}</p>
             ${mapsButtonHtml}`
 
   const cancelHtml = cancelToken
@@ -366,20 +367,30 @@ export function buildConfirmationEmailHtml(event: EventDefinition, attendeeName:
       </div>`
     : ''
 
+  const weekendInformationHtml = content
+    ? `${content.paragraphs.map((paragraph) => `<p style="margin:0 0 18px;font-size:16px;line-height:1.75;color:#4b4263;">${escapeLetterHtml(paragraph)}</p>`).join('')}
+       ${content.actions.map((action) => `<div style="border:1px solid rgba(139,121,212,0.16);border-radius:18px;padding:22px 24px;margin-bottom:20px;background:#faf8ff;">
+         <a href="${escapeLetterHtml(action.href)}" style="display:inline-block;background:#8B79D4;color:#ffffff;text-decoration:none;padding:14px 20px;border-radius:12px;font-size:16px;font-weight:700;">${escapeLetterHtml(action.label)}</a>
+         <p style="margin:14px 0 0;font-size:15px;line-height:1.75;color:#4b4263;">${escapeLetterHtml(action.description)}</p>
+       </div>`).join('')}
+`
+    : ''
+
   return `
     <div style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f6f2ff; margin: 0; padding: 32px 16px; color: #1a1a1a;">
       <div style="max-width: 640px; margin: 0 auto; background: #ffffff; border-radius: 22px; overflow: hidden; box-shadow: 0 24px 80px rgba(26, 14, 56, 0.12); border: 1px solid rgba(139, 121, 212, 0.12);">
         <div style="background: linear-gradient(135deg, #110f17 0%, #1a1526 55%, #8B79D4 100%); padding: 36px 32px 32px;">
           ${headerLabelHtml}
           <h1 style="margin: 0; font-size: 34px; line-height: 1.02; font-weight: 800; color: #ffffff;">
-            Your seat is reserved.
+            ${content ? escapeLetterHtml(content.headline) : 'Your seat is reserved.'}
           </h1>
           <p style="margin: 18px 0 0; font-size: 17px; line-height: 1.7; color: rgba(252,244,235,0.84);">
-            ${attendeeName ? `Hi ${attendeeName.split(' ')[0]},` : 'Hi,'} you are confirmed for <strong style="color:#ffffff;">${event.title.replace(/\.\s*$/, '')}</strong>.
+            ${content ? `Hey ${escapeLetterHtml(getFirstName(attendeeName) || 'there')}, ${escapeLetterHtml(content.intro)}` : `${attendeeName ? `Hi ${attendeeName.split(' ')[0]},` : 'Hi,'} you are confirmed for <strong style="color:#ffffff;">${event.title.replace(/\.\s*$/, '')}</strong>.`}
           </p>
         </div>
 
         <div style="padding: 30px 32px 10px;">
+          ${weekendInformationHtml}
           ${calendarButtonsHtml}
 
           <div style="border: 1px solid rgba(139, 121, 212, 0.16); border-radius: 18px; background: #faf8ff; padding: 22px 24px; margin-bottom: 24px;">
@@ -723,7 +734,7 @@ export async function sendEventConfirmationEmail(input: {
   const letterParts = letter
     ? buildLetterConfirmation(letter, input.attendeeName, input.event.zoomLink)
     : null
-  const subject = letter ? letter.subject : `Your seat is reserved for ${input.event.title}`
+  const subject = letter ? letter.subject : input.event.emailConfig?.confirmationContent?.subject ?? `Your seat is reserved for ${input.event.title}`
   const html = letterParts
     ? letterParts.html
     : buildConfirmationEmailHtml(input.event, input.attendeeName, input.cancelToken, now)
