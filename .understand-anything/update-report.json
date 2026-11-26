@@ -1,31 +1,61 @@
 {
   "mode": "incremental",
-  "analyzedAt": "2026-11-23T20:12:02.101Z",
-  "filesAnalyzed": 14,
+  "analyzedAt": "2026-11-26T20:19:03.135Z",
+  "filesAnalyzed": 21,
   "changedFiles": [
-    "scripts/giveaway-followups.mjs",
-    "scripts/lib/supabase-read.mjs",
-    "src/app/api/events/letter-schedule/route.ts",
-    "src/components/events/EventPageView.tsx",
+    "public/downloads/mhq-fx-pack-v1.0.zip.sha256",
+    "scripts/replay-backup-registrations.mjs",
+    "src/app/api/events/checkout-session/route.ts",
+    "src/app/giveaways/free-ai-fx-pack/layout.tsx",
+    "src/app/giveaways/free-ai-fx-pack/page.tsx",
+    "src/app/voice-calendar/page.tsx",
     "src/components/events/EventRegistrationSection.tsx",
-    "src/lib/calendar.ts",
+    "src/lib/email-validation.ts",
     "src/lib/event-confirmation-email.ts",
+    "src/lib/event-intake.ts",
     "src/lib/events.tsx",
-    "src/lib/letter-only-events.ts",
-    "src/lib/letter-schedule.ts",
-    "tests/calendar.test.ts",
-    "tests/event-confirmation-location-privacy.test.ts",
-    "tests/letter-only-events.test.ts",
-    "tests/supabase-read.test.ts"
+    "src/lib/free-ai-tool-pack.ts",
+    "src/lib/free-ai-tools.ts",
+    "src/lib/giveaway-offers.ts",
+    "src/lib/giveaways.ts",
+    "tests/email-typo-guard.test.ts",
+    "tests/event-intake.test.ts",
+    "tests/event-pricing-and-data.test.ts",
+    "tests/free-ai-tools.test.ts",
+    "tests/joechella-confirmation.test.ts",
+    "tests/letter-schedule.test.ts"
   ],
   "deletedFiles": [],
-  "totalNodes": 381,
-  "totalEdges": 733,
+  "extraVerifiedAsset": "public/downloads/mhq-fx-pack-v1.0.zip",
+  "totalNodes": 403,
+  "totalEdges": 789,
   "totalLayers": 9,
   "tourSteps": 12,
-  "sourceFilesValidated": 603,
-  "representedPaths": 151,
+  "sourceFilesValidated": 610,
+  "representedPaths": 160,
   "validationIssues": [],
+  "nodeTypes": {
+    "file": 146,
+    "function": 252,
+    "document": 1,
+    "config": 2,
+    "table": 2
+  },
+  "edgeTypes": {
+    "contains": 252,
+    "exports": 156,
+    "imports": 218,
+    "calls": 109,
+    "depends_on": 7,
+    "tested_by": 31,
+    "related": 12,
+    "configures": 2,
+    "migrates": 1,
+    "validates": 1
+  },
+  "categoriesAnalyzed": {
+    "code": 21
+  },
   "warnings": [
     "Orphan: file:public/downloads/joes-linkedin-kit-v1.0.zip",
     "Orphan: file:public/downloads/joes-linkedin-kit-v1.0.zip.sha256",
@@ -36,9 +66,8 @@
     "Orphan: function:src/app/api/events/session-reminders/route.ts:acquireEventWindowLock",
     "Orphan: file:src/app/bonus/auto-lead-magnet/page.tsx",
     "Orphan: config:vercel.json",
-    "Inherited partial coverage: 151 represented paths / 603 inventory files"
+    "Inherited partial coverage: 160 represented paths / 610 scanned source files plus verified archives."
   ],
-  "fingerprintsValidated": 603,
   "assembleReview": {
     "fixedSectionOk": true,
     "nodesRecovered": 0,
@@ -47,46 +76,12 @@
     "typesRemapped": 0,
     "complexityRemapped": 0,
     "notes": [
-      "Merge reported no normalization fixes or malformed node types/complexities. The five dropped edges reference function nodes absent from every analyzed batch; their files exist as inventory-only dependencies. They remain omitted rather than inventing semantic analysis of unchanged source.",
-      "The EventPageView → Reveal dropped contains edge is also not a valid ownership relationship between functions in separate files; the verified file import is retained.",
-      "Checked the complete 603-source import map; added 0 proven file import edges. 464 sources and 37 targets have no represented file node and were not fabricated.",
-      "This incremental graph intentionally represents only previously analyzed and changed source plus inventory-verified dependency file nodes; it is not full semantic coverage of the repository.",
-      "Corrected 5 cross-file function contains edges to calls; retained four Next.js file layout-hierarchy contains edges."
-    ],
-    "droppedEdgeReview": [
-      {
-        "id": "function:src/lib/celebrate.ts:celebrate",
-        "inBatches": false,
-        "fileRepresented": true
-      },
-      {
-        "id": "function:src/lib/event-registration-flow.ts:buildEventCheckoutRequestBody",
-        "inBatches": false,
-        "fileRepresented": true
-      },
-      {
-        "id": "function:src/lib/utm.ts:withUtm",
-        "inBatches": false,
-        "fileRepresented": true
-      },
-      {
-        "id": "function:src/lib/email-suppressions.ts:isSuppressed",
-        "inBatches": false,
-        "fileRepresented": true
-      },
-      {
-        "id": "function:src/components/Reveal.tsx:Reveal",
-        "inBatches": false,
-        "fileRepresented": true
-      }
-    ],
-    "crossFileContainsCorrected": 5
-  },
-  "pipelineNotes": [
-    "All batch nodes and edges normalized before Python 3.11 merge.",
-    "Only changed files semantically re-analyzed; existing partial source coverage retained.",
-    "Final graph passed strict core schema, topology, layer, tour, source inventory and content-hash validation.",
-    "One context-initialization dispatch failure; permitted retry succeeded.",
-    "Dashboard launch skipped to preserve graph-only scope."
-  ]
+      "The linker dropped four duplicate tested_by edges and one orphaned tested_by edge. The orphan links tests/event-intake.test.ts to src/lib/stripe-amount.ts, which the test exercises and the inherited graph does not represent.",
+      "The 40 reported dangling edges reference 36 absent entities across 19 unchanged paths. One of those edges incorrectly claimed that EventRegistrationSection contains WaitlistJoinForm. The graph retains the file import, and the unchanged WaitlistJoinForm symbol remains absent.",
+      "Removed a false contains edge from events.tsx to the imported DinnerPhotoCarousel component. The imports edge still records the dependency.",
+      "Changed the FX Pack page relationship to PackPage from contains to calls, consistent with other pages that render the imported component.",
+      "Added the FX Pack layout-to-page relationship, using the same layout-hierarchy kind as other Next.js route layouts in this graph.",
+      "The import map covers 610 source paths. 463 have no file-level graph node, including 226 paths with no imports. Represented sources reference 38 imports across 28 absent target paths. All imports with both endpoints represented are present."
+    ]
+  }
 }

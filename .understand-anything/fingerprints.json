@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "gitCommitHash": "0a0b774799692f2da45d1412caa82282d54ee059",
-  "generatedAt": "2026-11-23T20:12:08.378Z",
+  "gitCommitHash": "34452930aa0cb7854f1b34d66b88739f4e72517d",
+  "generatedAt": "2026-11-26T20:12:10.554Z",
   "files": {
     ".claude/settings.json": {
       "filePath": ".claude/settings.json",
@@ -613,6 +613,16 @@
       "exports": [],
       "totalLines": 36,
       "hasStructuralAnalysis": true
+    },
+    "public/downloads/mhq-fx-pack-v1.0.zip.sha256": {
+      "filePath": "public/downloads/mhq-fx-pack-v1.0.zip.sha256",
+      "contentHash": "3cb45a09950a4d32362305a57f852a4662231a7faf5ba2472e87236a3fa17984",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
     },
     "public/events/joechella-big-one/bali-bloom/balibloom3_arronshoots_012.webp": {
       "filePath": "public/events/joechella-big-one/bali-bloom/balibloom3_arronshoots_012.webp",
@@ -1672,6 +1682,115 @@
       "totalLines": 24,
       "hasStructuralAnalysis": true
     },
+    "scripts/replay-backup-registrations.mjs": {
+      "filePath": "scripts/replay-backup-registrations.mjs",
+      "contentHash": "622a1b2da118ec6c9b0e43f810d23c97c4893307fa6c934b0033c18ca000861f",
+      "functions": [
+        {
+          "name": "log",
+          "params": [
+            "...a"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "readMasterEnv",
+          "params": [
+            "key"
+          ],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "vercelEnv",
+          "params": [
+            "keys"
+          ],
+          "exported": false,
+          "lineCount": 19
+        },
+        {
+          "name": "loadState",
+          "params": [],
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "saveState",
+          "params": [
+            "state"
+          ],
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "unescape",
+          "params": [
+            "s"
+          ],
+          "exported": false,
+          "lineCount": 2
+        },
+        {
+          "name": "parseBackupHtml",
+          "params": [
+            "html"
+          ],
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "listBackupAlerts",
+          "params": [
+            "resendKey"
+          ],
+          "exported": false,
+          "lineCount": 22
+        },
+        {
+          "name": "main",
+          "params": [],
+          "exported": false,
+          "lineCount": 85
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:crypto",
+          "specifiers": [
+            "createHmac",
+            "randomUUID"
+          ]
+        },
+        {
+          "source": "node:fs",
+          "specifiers": [
+            "readFileSync",
+            "writeFileSync",
+            "mkdirSync"
+          ]
+        },
+        {
+          "source": "node:path",
+          "specifiers": [
+            "dirname"
+          ]
+        },
+        {
+          "source": "node:os",
+          "specifiers": [
+            "homedir"
+          ]
+        }
+      ],
+      "exports": [
+        "parseBackupHtml"
+      ],
+      "totalLines": 203,
+      "hasStructuralAnalysis": true
+    },
     "scripts/send-dinner-tonight-reminder.mjs": {
       "filePath": "scripts/send-dinner-tonight-reminder.mjs",
       "contentHash": "54ee0ddb844e980b5384eb911e7f085dbb62b39b9692f4c93d5e7098acb9a1fe",
@@ -2612,7 +2731,7 @@
     },
     "src/app/api/events/checkout-session/route.ts": {
       "filePath": "src/app/api/events/checkout-session/route.ts",
-      "contentHash": "9ad433c0c73cccea96d123e9f0df888e2a94b20e954eab1b14ea8a0cd6556e34",
+      "contentHash": "0c5217077903e6b161fd10fe5824ffab01d07e4e51b0b44a55bef842fbb781cd",
       "functions": [
         {
           "name": "getBaseUrl",
@@ -2628,7 +2747,7 @@
             "request"
           ],
           "exported": true,
-          "lineCount": 497
+          "lineCount": 498
         }
       ],
       "classes": [],
@@ -2760,7 +2879,7 @@
         {
           "source": "@/lib/email-validation",
           "specifiers": [
-            "isValidEmail"
+            "emailProblem"
           ]
         },
         {
@@ -2775,7 +2894,7 @@
         "runtime",
         "POST"
       ],
-      "totalLines": 550,
+      "totalLines": 551,
       "hasStructuralAnalysis": true
     },
     "src/app/api/events/finalize-registration/route.ts": {
@@ -7020,6 +7139,74 @@
       ],
       "exports": [
         "FreeAiFirecrawlPage"
+      ],
+      "totalLines": 16,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/free-ai-fx-pack/layout.tsx": {
+      "filePath": "src/app/giveaways/free-ai-fx-pack/layout.tsx",
+      "contentHash": "e147debcc6210c3c607a13b1cee241795e481d9d33d59bc4fa35d09f7fdd1fa8",
+      "functions": [
+        {
+          "name": "Layout",
+          "params": [
+            "{ children }"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "ReactNode"
+          ]
+        },
+        {
+          "source": "next",
+          "specifiers": [
+            "Metadata"
+          ]
+        }
+      ],
+      "exports": [
+        "metadata",
+        "Layout"
+      ],
+      "totalLines": 22,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/giveaways/free-ai-fx-pack/page.tsx": {
+      "filePath": "src/app/giveaways/free-ai-fx-pack/page.tsx",
+      "contentHash": "a8efda0244c3dc8e14047769357af352c8b18d94be6d4523bf22f6f744ca494b",
+      "functions": [
+        {
+          "name": "FreeAiFxPackPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/components/giveaways/PackPage",
+          "specifiers": [
+            "PackPage"
+          ]
+        },
+        {
+          "source": "@/lib/free-ai-tool-pack",
+          "specifiers": [
+            "freeAiToolJsonLd",
+            "freeAiToolPack"
+          ]
+        }
+      ],
+      "exports": [
+        "FreeAiFxPackPage"
       ],
       "totalLines": 16,
       "hasStructuralAnalysis": true
@@ -12669,6 +12856,55 @@
       "totalLines": 38,
       "hasStructuralAnalysis": true
     },
+    "src/app/voice-calendar/page.tsx": {
+      "filePath": "src/app/voice-calendar/page.tsx",
+      "contentHash": "bd76c7a58ecded8f7d45662e6c7544eca89d029f51c5a04ccf7b145168294787",
+      "functions": [
+        {
+          "name": "googleInviteUrl",
+          "params": [
+            "eventId"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "VoiceCalendarPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 100
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next",
+          "specifiers": [
+            "Metadata"
+          ]
+        },
+        {
+          "source": "@/lib/events",
+          "specifiers": [
+            "getEventBySlug"
+          ]
+        },
+        {
+          "source": "@/lib/calendar",
+          "specifiers": [
+            "buildGoogleCalendarUrl",
+            "buildOutlookCalendarUrl"
+          ]
+        }
+      ],
+      "exports": [
+        "metadata",
+        "VoiceCalendarPage"
+      ],
+      "totalLines": 124,
+      "hasStructuralAnalysis": true
+    },
     "src/app/voice-setup/page.tsx": {
       "filePath": "src/app/voice-setup/page.tsx",
       "contentHash": "bd340477ae74ed3cfe3307bd4c7ed6068e6ace254353ae0e7f70ad79533b39ee",
@@ -13195,7 +13431,7 @@
     },
     "src/components/events/EventRegistrationSection.tsx": {
       "filePath": "src/components/events/EventRegistrationSection.tsx",
-      "contentHash": "435e42d4926e523c5f50cf3e53a931592a325bdad250d6530a68f71b0c6a7cb3",
+      "contentHash": "c18b224317d2f880398812a18edb96d3ba52501a312456125074955294d4f8b8",
       "functions": [
         {
           "name": "useAnimatedNumber",
@@ -13213,7 +13449,7 @@
             "{\n  event,\n  publishableKey,\n  initialPromoCode,\n  initialPromoAmount,\n  initialPromoMessage,\n}"
           ],
           "exported": true,
-          "lineCount": 998
+          "lineCount": 1000
         }
       ],
       "classes": [],
@@ -13263,7 +13499,7 @@
         {
           "source": "@/lib/email-validation",
           "specifiers": [
-            "isValidEmail"
+            "emailProblem"
           ]
         },
         {
@@ -13300,7 +13536,7 @@
       "exports": [
         "EventRegistrationSection"
       ],
-      "totalLines": 1123,
+      "totalLines": 1125,
       "hasStructuralAnalysis": true
     },
     "src/components/events/HeroVideo.tsx": {
@@ -16864,7 +17100,7 @@
     },
     "src/lib/email-validation.ts": {
       "filePath": "src/lib/email-validation.ts",
-      "contentHash": "46e4e9d646f51dfd37bdab70c1d211d41312ca043b4a339db9864fdfc6c8830a",
+      "contentHash": "91c16b2f9f73137f9a5c25216bad121857a4fe4fa93eb7773405c7b32f99f0f2",
       "functions": [
         {
           "name": "normaliseEmail",
@@ -16875,12 +17111,39 @@
           "lineCount": 3
         },
         {
+          "name": "distance",
+          "params": [
+            "a",
+            "b"
+          ],
+          "exported": false,
+          "lineCount": 13
+        },
+        {
+          "name": "suggestEmailFix",
+          "params": [
+            "email"
+          ],
+          "returnType": "string | null",
+          "exported": true,
+          "lineCount": 34
+        },
+        {
           "name": "isValidEmail",
           "params": [
             "email"
           ],
           "exported": true,
           "lineCount": 3
+        },
+        {
+          "name": "emailProblem",
+          "params": [
+            "email"
+          ],
+          "returnType": "string | null",
+          "exported": true,
+          "lineCount": 7
         }
       ],
       "classes": [],
@@ -16888,9 +17151,11 @@
       "exports": [
         "EMAIL_RE",
         "normaliseEmail",
-        "isValidEmail"
+        "suggestEmailFix",
+        "isValidEmail",
+        "emailProblem"
       ],
-      "totalLines": 10,
+      "totalLines": 86,
       "hasStructuralAnalysis": true
     },
     "src/lib/event-capacity.ts": {
@@ -17061,7 +17326,7 @@
     },
     "src/lib/event-confirmation-email.ts": {
       "filePath": "src/lib/event-confirmation-email.ts",
-      "contentHash": "3c3eef2c1424cf684f374fdb7daafb5a1b7629900354a9a0abc0b3fbe457ad89",
+      "contentHash": "aac396c090176e79a99a3befe347617a19c130f9e4f58541835b58dffc7650bc",
       "functions": [
         {
           "name": "getSiteUrl",
@@ -17130,7 +17395,7 @@
             "now"
           ],
           "exported": true,
-          "lineCount": 227
+          "lineCount": 238
         },
         {
           "name": "buildLocationReminderEmailHtml",
@@ -17372,7 +17637,7 @@
         "sendWaitlistSpotNotificationEmail",
         "sendRegistrationBackupAlert"
       ],
-      "totalLines": 1075,
+      "totalLines": 1086,
       "hasStructuralAnalysis": true
     },
     "src/lib/event-email-ledger.ts": {
@@ -17556,7 +17821,7 @@
     },
     "src/lib/event-intake.ts": {
       "filePath": "src/lib/event-intake.ts",
-      "contentHash": "5dd7b85029d8075ca719902b93f23f6b725aa0d0e881504b04c525d439dcc215",
+      "contentHash": "f86df829ee7724dac7c8522f74ebcbe7342b2454407b681d92a0b9ba6153da52",
       "functions": [
         {
           "name": "countPhoneDigits",
@@ -17564,6 +17829,15 @@
             "value"
           ],
           "returnType": "number",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "stripInvisiblePhoneChars",
+          "params": [
+            "value"
+          ],
+          "returnType": "string",
           "exported": true,
           "lineCount": 3
         },
@@ -17657,6 +17931,7 @@
         "WHATSAPP_MAX_DIGITS",
         "WHATSAPP_MAX_LENGTH",
         "countPhoneDigits",
+        "stripInvisiblePhoneChars",
         "toE164",
         "normalizeWhatsappNumber",
         "validateWhatsappNumber",
@@ -17665,7 +17940,7 @@
         "hasIntakeErrors",
         "isValidAiLevel"
       ],
-      "totalLines": 128,
+      "totalLines": 138,
       "hasStructuralAnalysis": true
     },
     "src/lib/event-registration-db.ts": {
@@ -18013,7 +18288,7 @@
     },
     "src/lib/events.tsx": {
       "filePath": "src/lib/events.tsx",
-      "contentHash": "5194087281f6b5240ffc68f83ad227bf9068747c1d2b6f77fe4f034cfc5334a9",
+      "contentHash": "7008de5428d73be9d25e26161268d29bcce110b49a1ed373fccf4f1cd1274e04",
       "functions": [
         {
           "name": "getDiscountedPrice",
@@ -18124,7 +18399,7 @@
         "getLiveEvents",
         "getUpcomingLiveEvents"
       ],
-      "totalLines": 2471,
+      "totalLines": 2524,
       "hasStructuralAnalysis": true
     },
     "src/lib/free-ai-tool-email.ts": {
@@ -18172,7 +18447,7 @@
     },
     "src/lib/free-ai-tool-pack.ts": {
       "filePath": "src/lib/free-ai-tool-pack.ts",
-      "contentHash": "34d24f0c259c45e34c72a9c09eb2be81673532766dd18078a84dd24b01b88d62",
+      "contentHash": "d60399d288237b9263134cdeb030e170118b90c499289425edf00dd957f64a9e",
       "functions": [
         {
           "name": "freeAiToolPack",
@@ -18190,7 +18465,7 @@
           ],
           "returnType": "PackPageContent",
           "exported": false,
-          "lineCount": 58
+          "lineCount": 62
         },
         {
           "name": "freeAiToolJsonLd",
@@ -18228,7 +18503,7 @@
         "freeAiToolPack",
         "freeAiToolJsonLd"
       ],
-      "totalLines": 143,
+      "totalLines": 147,
       "hasStructuralAnalysis": true
     },
     "src/lib/free-ai-tools-hub-email.ts": {
@@ -18313,7 +18588,7 @@
     },
     "src/lib/free-ai-tools.ts": {
       "filePath": "src/lib/free-ai-tools.ts",
-      "contentHash": "04e3d68d038a36fbb07cdb5b5ea648bb23e324458b6e6af16eb2ca1b373930f9",
+      "contentHash": "17b9d54aede558af5b0117d88dab6b65a2ef10085b8ce698059f1fbb537aacb4",
       "functions": [
         {
           "name": "getFreeAiTool",
@@ -18360,7 +18635,7 @@
         "isFreeAiToolSource",
         "formatStars"
       ],
-      "totalLines": 1935,
+      "totalLines": 2037,
       "hasStructuralAnalysis": true
     },
     "src/lib/generic-giveaway-email.ts": {
@@ -18842,7 +19117,7 @@
     },
     "src/lib/giveaway-offers.ts": {
       "filePath": "src/lib/giveaway-offers.ts",
-      "contentHash": "27aded58dbe2f8b9aac68a1a5e04dbaf8d96da1682a52d80d25a673909841336",
+      "contentHash": "36cceb7302656ff1b2676b40d82c89e5d0046815b54bc7c73b0f6fc898e271a9",
       "functions": [
         {
           "name": "offerForLevel",
@@ -18866,12 +19141,12 @@
         "offerForLevel",
         "PAGE_OFFERS"
       ],
-      "totalLines": 181,
+      "totalLines": 209,
       "hasStructuralAnalysis": true
     },
     "src/lib/giveaways.ts": {
       "filePath": "src/lib/giveaways.ts",
-      "contentHash": "0b6d795d425e83e6b673449bace3587b9b80a35ed761fd9db681375f1b3c4133",
+      "contentHash": "a40c213504f59ea718ae17a790e796fbd67af521841fbb838094c4b77c212202",
       "functions": [
         {
           "name": "getGiveaway",
@@ -18889,7 +19164,7 @@
         "giveaways",
         "getGiveaway"
       ],
-      "totalLines": 509,
+      "totalLines": 517,
       "hasStructuralAnalysis": true
     },
     "src/lib/google-calendar-invite.ts": {
@@ -21474,6 +21749,36 @@
       "totalLines": 29,
       "hasStructuralAnalysis": true
     },
+    "tests/email-typo-guard.test.ts": {
+      "filePath": "tests/email-typo-guard.test.ts",
+      "contentHash": "013737b858c3236283512b6c021563e63cef585f55464f403a753c06371b0e02",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:test",
+          "specifiers": [
+            "test"
+          ]
+        },
+        {
+          "source": "node:assert/strict",
+          "specifiers": [
+            "assert"
+          ]
+        },
+        {
+          "source": "../src/lib/email-validation",
+          "specifiers": [
+            "emailProblem",
+            "suggestEmailFix"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 34,
+      "hasStructuralAnalysis": true
+    },
     "tests/estimate-ai-level.test.ts": {
       "filePath": "tests/estimate-ai-level.test.ts",
       "contentHash": "9ed8121b2d652122efeec4f6fe328b1832b17fef6fa31781e57722f6e05fe8f9",
@@ -21770,7 +22075,7 @@
     },
     "tests/event-intake.test.ts": {
       "filePath": "tests/event-intake.test.ts",
-      "contentHash": "37e46945c274e19db4406cea2dd25a040aa2af0d87237e1c4b2305238ae17a8a",
+      "contentHash": "3aa0494b43c8f8f6138cc63359dff152845323c0674dcd59613ef1c9ef7a1b34",
       "functions": [],
       "classes": [],
       "imports": [
@@ -21819,7 +22124,7 @@
         }
       ],
       "exports": [],
-      "totalLines": 197,
+      "totalLines": 206,
       "hasStructuralAnalysis": true
     },
     "tests/event-location-reminder-dedupe.test.ts": {
@@ -21935,7 +22240,7 @@
     },
     "tests/event-pricing-and-data.test.ts": {
       "filePath": "tests/event-pricing-and-data.test.ts",
-      "contentHash": "b9d2e9c5751083108923622f16ac7f1e869049a6ccaf52248611e28727eec421",
+      "contentHash": "09c1c60e6c49e6bd4802a1c61832bd7b74f696c48437d282a4701b155ed25bf6",
       "functions": [
         {
           "name": "nowAt",
@@ -22006,7 +22311,7 @@
         }
       ],
       "exports": [],
-      "totalLines": 415,
+      "totalLines": 416,
       "hasStructuralAnalysis": true
     },
     "tests/event-registration-flow.test.ts": {
@@ -22248,7 +22553,7 @@
     },
     "tests/free-ai-tools.test.ts": {
       "filePath": "tests/free-ai-tools.test.ts",
-      "contentHash": "51798a933da2c28727ef32040ae8b4cc71a6cc209633fef7a93d6d1b83d89a60",
+      "contentHash": "f9e8a8c421319390191f0f464e22ab930e320527e2108e85e35b553d8a1a2371",
       "functions": [],
       "classes": [],
       "imports": [
@@ -22315,7 +22620,7 @@
         }
       ],
       "exports": [],
-      "totalLines": 129,
+      "totalLines": 130,
       "hasStructuralAnalysis": true
     },
     "tests/generic-giveaway-email.test.ts": {
@@ -22694,6 +22999,41 @@
       "totalLines": 259,
       "hasStructuralAnalysis": true
     },
+    "tests/joechella-confirmation.test.ts": {
+      "filePath": "tests/joechella-confirmation.test.ts",
+      "contentHash": "b742b307e883c23e7dcc133ec06be003e3057b47a64fe16663c178c5a883ef00",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:assert/strict",
+          "specifiers": [
+            "assert"
+          ]
+        },
+        {
+          "source": "node:test",
+          "specifiers": [
+            "test"
+          ]
+        },
+        {
+          "source": "../src/lib/event-confirmation-email",
+          "specifiers": [
+            "buildConfirmationEmailHtml"
+          ]
+        },
+        {
+          "source": "../src/lib/events",
+          "specifiers": [
+            "getEventBySlug"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 39,
+      "hasStructuralAnalysis": true
+    },
     "tests/lead-magnet-day-zero-ps.test.ts": {
       "filePath": "tests/lead-magnet-day-zero-ps.test.ts",
       "contentHash": "ddc99fe21eff3db9bb09498d21be01d696513a70ed5b959d4063129aa9fab71b",
@@ -22872,7 +23212,7 @@
     },
     "tests/letter-schedule.test.ts": {
       "filePath": "tests/letter-schedule.test.ts",
-      "contentHash": "89a317e5c6893c7e3b156f3fe5997112b21d12540655b28c59ef415c90ddc900",
+      "contentHash": "336533da8215bcf47430170b3331495c3a8c1b2a5779ef40153d3d864a8ba2b4",
       "functions": [
         {
           "name": "letter",
@@ -22942,7 +23282,7 @@
         }
       ],
       "exports": [],
-      "totalLines": 161,
+      "totalLines": 163,
       "hasStructuralAnalysis": true
     },
     "tests/linkedin-kit.test.ts": {

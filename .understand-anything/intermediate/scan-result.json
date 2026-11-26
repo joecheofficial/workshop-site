@@ -1,26 +1,5 @@
 {
-  "projectName": "masterminds-workshop",
-  "projectDescription": "Masterminds Workshop Site — a Next.js application for displaying workshop information, courses, and giveaways with advanced animations and interactive components.",
-  "languages": [
-    "TypeScript",
-    "JavaScript",
-    "CSS",
-    "HTML",
-    "JSON"
-  ],
-  "frameworks": [
-    "Next.js",
-    "React",
-    "React DOM",
-    "TailwindCSS",
-    "TypeScript",
-    "Stripe",
-    "Supabase",
-    "Framer Motion",
-    "GSAP",
-    "Three.js",
-    "Vanta"
-  ],
+  "scriptCompleted": true,
   "files": [
     {
       "path": ".claude/settings.json",
@@ -359,6 +338,12 @@
       "fileCategory": "script"
     },
     {
+      "path": "public/downloads/mhq-fx-pack-v1.0.zip.sha256",
+      "language": "sha256",
+      "sizeLines": 1,
+      "fileCategory": "code"
+    },
+    {
       "path": "public/events/joechella-big-one/bali-bloom/balibloom3_arronshoots_012.webp",
       "language": "webp",
       "sizeLines": 858,
@@ -653,6 +638,12 @@
       "fileCategory": "code"
     },
     {
+      "path": "scripts/replay-backup-registrations.mjs",
+      "language": "javascript",
+      "sizeLines": 202,
+      "fileCategory": "code"
+    },
+    {
       "path": "scripts/send-dinner-tonight-reminder.mjs",
       "language": "javascript",
       "sizeLines": 117,
@@ -763,7 +754,7 @@
     {
       "path": "src/app/api/events/checkout-session/route.ts",
       "language": "typescript",
-      "sizeLines": 549,
+      "sizeLines": 550,
       "fileCategory": "code"
     },
     {
@@ -1392,6 +1383,18 @@
     },
     {
       "path": "src/app/giveaways/free-ai-firecrawl/page.tsx",
+      "language": "typescript",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/giveaways/free-ai-fx-pack/layout.tsx",
+      "language": "typescript",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/giveaways/free-ai-fx-pack/page.tsx",
       "language": "typescript",
       "sizeLines": 15,
       "fileCategory": "code"
@@ -2369,6 +2372,12 @@
       "fileCategory": "code"
     },
     {
+      "path": "src/app/voice-calendar/page.tsx",
+      "language": "typescript",
+      "sizeLines": 123,
+      "fileCategory": "code"
+    },
+    {
       "path": "src/app/voice-setup/page.tsx",
       "language": "typescript",
       "sizeLines": 98,
@@ -2419,7 +2428,7 @@
     {
       "path": "src/components/events/EventRegistrationSection.tsx",
       "language": "typescript",
-      "sizeLines": 1122,
+      "sizeLines": 1124,
       "fileCategory": "code"
     },
     {
@@ -2821,7 +2830,7 @@
     {
       "path": "src/lib/email-validation.ts",
       "language": "typescript",
-      "sizeLines": 9,
+      "sizeLines": 85,
       "fileCategory": "code"
     },
     {
@@ -2839,7 +2848,7 @@
     {
       "path": "src/lib/event-confirmation-email.ts",
       "language": "typescript",
-      "sizeLines": 1074,
+      "sizeLines": 1085,
       "fileCategory": "code"
     },
     {
@@ -2857,7 +2866,7 @@
     {
       "path": "src/lib/event-intake.ts",
       "language": "typescript",
-      "sizeLines": 127,
+      "sizeLines": 137,
       "fileCategory": "code"
     },
     {
@@ -2893,7 +2902,7 @@
     {
       "path": "src/lib/events.tsx",
       "language": "typescript",
-      "sizeLines": 2470,
+      "sizeLines": 2523,
       "fileCategory": "code"
     },
     {
@@ -2905,7 +2914,7 @@
     {
       "path": "src/lib/free-ai-tool-pack.ts",
       "language": "typescript",
-      "sizeLines": 142,
+      "sizeLines": 146,
       "fileCategory": "code"
     },
     {
@@ -2923,7 +2932,7 @@
     {
       "path": "src/lib/free-ai-tools.ts",
       "language": "typescript",
-      "sizeLines": 1934,
+      "sizeLines": 2036,
       "fileCategory": "code"
     },
     {
@@ -2947,13 +2956,13 @@
     {
       "path": "src/lib/giveaway-offers.ts",
       "language": "typescript",
-      "sizeLines": 180,
+      "sizeLines": 208,
       "fileCategory": "code"
     },
     {
       "path": "src/lib/giveaways.ts",
       "language": "typescript",
-      "sizeLines": 508,
+      "sizeLines": 516,
       "fileCategory": "code"
     },
     {
@@ -3353,6 +3362,12 @@
       "fileCategory": "code"
     },
     {
+      "path": "tests/email-typo-guard.test.ts",
+      "language": "typescript",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
       "path": "tests/estimate-ai-level.test.ts",
       "language": "typescript",
       "sizeLines": 100,
@@ -3403,7 +3418,7 @@
     {
       "path": "tests/event-intake.test.ts",
       "language": "typescript",
-      "sizeLines": 196,
+      "sizeLines": 205,
       "fileCategory": "code"
     },
     {
@@ -3421,7 +3436,7 @@
     {
       "path": "tests/event-pricing-and-data.test.ts",
       "language": "typescript",
-      "sizeLines": 414,
+      "sizeLines": 415,
       "fileCategory": "code"
     },
     {
@@ -3457,7 +3472,7 @@
     {
       "path": "tests/free-ai-tools.test.ts",
       "language": "typescript",
-      "sizeLines": 128,
+      "sizeLines": 129,
       "fileCategory": "code"
     },
     {
@@ -3497,6 +3512,12 @@
       "fileCategory": "code"
     },
     {
+      "path": "tests/joechella-confirmation.test.ts",
+      "language": "typescript",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
       "path": "tests/lead-magnet-day-zero-ps.test.ts",
       "language": "typescript",
       "sizeLines": 29,
@@ -3523,7 +3544,7 @@
     {
       "path": "tests/letter-schedule.test.ts",
       "language": "typescript",
-      "sizeLines": 160,
+      "sizeLines": 162,
       "fileCategory": "code"
     },
     {
@@ -3641,10 +3662,72 @@
       "fileCategory": "config"
     }
   ],
-  "fileCount": 603,
-  "totalLines": 95178,
-  "complexity": "complex",
+  "totalFiles": 610,
   "filteredByIgnore": 85,
+  "estimatedComplexity": "very-large",
+  "stats": {
+    "filesScanned": 610,
+    "byCategory": {
+      "config": 22,
+      "docs": 25,
+      "code": 529,
+      "markup": 12,
+      "script": 1,
+      "data": 21
+    },
+    "byLanguage": {
+      "json": 21,
+      "markdown": 22,
+      "config": 1,
+      "patch": 2,
+      "jsonl": 1,
+      "unknown": 1,
+      "typescript": 478,
+      "html": 9,
+      "javascript": 13,
+      "txt": 3,
+      "sha256": 4,
+      "shell": 1,
+      "webp": 30,
+      "css": 3,
+      "sql": 21
+    }
+  },
+  "projectName": "masterminds-workshop",
+  "projectDescription": "Masterminds Workshop Site — a Next.js application for displaying workshop information, courses, and giveaways with advanced animations and interactive components.",
+  "languages": [
+    "TypeScript",
+    "JavaScript",
+    "CSS",
+    "HTML",
+    "JSON"
+  ],
+  "frameworks": [
+    "Next.js",
+    "React",
+    "React DOM",
+    "TailwindCSS",
+    "TypeScript",
+    "Stripe",
+    "Supabase",
+    "Framer Motion",
+    "GSAP",
+    "Three.js",
+    "Vanta"
+  ],
+  "summary": {
+    "srcFiles": 365,
+    "configFiles": 15,
+    "docFiles": 13,
+    "codeFiles": 9,
+    "styleFiles": 2,
+    "dependencies": {
+      "production": 19,
+      "development": 10,
+      "total": 29
+    }
+  },
+  "fileCount": 610,
   "importMap": {
     ".claude/settings.json": [],
     ".claude/skills/gitnexus/gitnexus-cli/SKILL.md": [],
@@ -3702,6 +3785,7 @@
     "public/downloads/joes-linkedin-kit-v1.0.zip.sha256": [],
     "public/downloads/joes-salesman-v1.0.zip.sha256": [],
     "public/downloads/maccleaner-installer.sh": [],
+    "public/downloads/mhq-fx-pack-v1.0.zip.sha256": [],
     "public/events/joechella-big-one/bali-bloom/balibloom3_arronshoots_012.webp": [],
     "public/events/joechella-big-one/bali-bloom/balibloom3_arronshoots_018.webp": [],
     "public/events/joechella-big-one/bali-bloom/balibloom3_arronshoots_041.webp": [],
@@ -3759,6 +3843,7 @@
     ],
     "scripts/lib/estimate-ai-level.mjs": [],
     "scripts/lib/supabase-read.mjs": [],
+    "scripts/replay-backup-registrations.mjs": [],
     "scripts/send-dinner-tonight-reminder.mjs": [],
     "scripts/sync-abandoned-checkout-suppressions.mjs": [],
     "src/app/100-ai/page.tsx": [
@@ -4191,6 +4276,11 @@
     ],
     "src/app/giveaways/free-ai-firecrawl/layout.tsx": [],
     "src/app/giveaways/free-ai-firecrawl/page.tsx": [
+      "src/components/giveaways/PackPage.tsx",
+      "src/lib/free-ai-tool-pack.ts"
+    ],
+    "src/app/giveaways/free-ai-fx-pack/layout.tsx": [],
+    "src/app/giveaways/free-ai-fx-pack/page.tsx": [
       "src/components/giveaways/PackPage.tsx",
       "src/lib/free-ai-tool-pack.ts"
     ],
@@ -4685,6 +4775,10 @@
     "src/app/sitemap.ts": [
       "src/lib/free-ai-tools.ts"
     ],
+    "src/app/voice-calendar/page.tsx": [
+      "src/lib/calendar.ts",
+      "src/lib/events.tsx"
+    ],
     "src/app/voice-setup/page.tsx": [],
     "src/components/CodeBlock.tsx": [
       "src/lib/copyWithConfetti.ts"
@@ -5156,6 +5250,9 @@
     "tests/email-logo.test.ts": [
       "src/lib/email-logo.ts"
     ],
+    "tests/email-typo-guard.test.ts": [
+      "src/lib/email-validation.ts"
+    ],
     "tests/estimate-ai-level.test.ts": [
       "scripts/estimate-ai-levels.mjs",
       "scripts/lib/estimate-ai-level.mjs"
@@ -5258,6 +5355,10 @@
       "src/lib/events.tsx",
       "src/lib/stripe-amount.ts",
       "src/lib/waitlist-notify-windows.ts"
+    ],
+    "tests/joechella-confirmation.test.ts": [
+      "src/lib/event-confirmation-email.ts",
+      "src/lib/events.tsx"
     ],
     "tests/lead-magnet-day-zero-ps.test.ts": [
       "src/lib/giveaway-followups.ts"
@@ -5367,48 +5468,5 @@
     ],
     "tsconfig.json": [],
     "vercel.json": []
-  },
-  "summary": {
-    "srcFiles": 365,
-    "configFiles": 15,
-    "docFiles": 13,
-    "codeFiles": 9,
-    "styleFiles": 2,
-    "dependencies": {
-      "production": 19,
-      "development": 10,
-      "total": 29
-    }
-  },
-  "totalFiles": 603,
-  "estimatedComplexity": "very-large",
-  "scriptCompleted": true,
-  "stats": {
-    "filesScanned": 603,
-    "byCategory": {
-      "config": 22,
-      "docs": 25,
-      "code": 522,
-      "markup": 12,
-      "script": 1,
-      "data": 21
-    },
-    "byLanguage": {
-      "json": 21,
-      "markdown": 22,
-      "config": 1,
-      "patch": 2,
-      "jsonl": 1,
-      "unknown": 1,
-      "typescript": 473,
-      "html": 9,
-      "javascript": 12,
-      "txt": 3,
-      "sha256": 3,
-      "shell": 1,
-      "webp": 30,
-      "css": 3,
-      "sql": 21
-    }
   }
 }
