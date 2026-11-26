@@ -888,7 +888,7 @@ export const events: EventDefinition[] = [
         intro: "Thanks for joining me for my 50th. I can't wait to spend this weekend with you.",
         locationLabel: 'Bali Beach Glamping, Tabanan, Bali',
         paragraphs: [
-          'Your weekend pass covers Friday, December 11 and Saturday, December 12, 2026. Come for either day or both. Friday starts at 11 am and Saturday at 1 pm, until late. All times are Bali time.',
+          'Your weekend pass covers Friday, December 11 and Saturday, December 12, 2026. Come for either day or both. Friday starts at 11 am and Saturday at 1 pm, until late.',
           'Before you arrive, please join the weekend WhatsApp group and complete the guest intake form below.',
           'Bring your swimmers, something comfortable to move in, and your favourite playful outfits. Food and drinks are purchased separately from the venue. Accommodation is not included in the weekend pass.',
         ],

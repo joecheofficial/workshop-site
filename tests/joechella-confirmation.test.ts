@@ -17,7 +17,7 @@ test('weekend buyers receive the weekend chat and intake links with clear food p
   assert.match(html, /covers Friday, December 11 and Saturday, December 12, 2026/)
   assert.match(html, /either day or both/)
   assert.match(html, /Friday starts at 11 am and Saturday at 1 pm/)
-  assert.match(html, /All times are Bali time/)
+  assert.doesNotMatch(html, /All times are Bali time/)
   assert.match(html, /Bali Beach Glamping, Tabanan, Bali/)
   assert.doesNotMatch(html, /H7XWWyKz6kl85qPTJQCqI9/)
   assert.match(html, /Add to Google Calendar/)
