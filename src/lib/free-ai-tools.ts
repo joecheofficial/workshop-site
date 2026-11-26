@@ -51,6 +51,8 @@ export type FreeAiTool = {
   stuck?: { q: string; a: string }[]
   /** A named paid offer that fits this gift better than the level default (giveaway-offers PAGE_OFFERS). */
   offerId?: GiveawayOfferId
+  /** Our own tool (made by Masterminds HQ): replaces the third-party "Why I share it" line and drops the "screens change" question. */
+  ownTool?: { whyIShare: string }
 }
 
 export const FREE_AI_TOOLS: FreeAiTool[] = [
@@ -1947,6 +1949,9 @@ Do not sign me up for anything.`,
     why: 'The 20 effects from Joe\'s "20 video effects in 20 seconds, built by Claude" reel, as a free pack that puts them on your own talking video, on your Mac.',
     level: 'builder',
     offerId: 'video-agent-fx',
+    ownTool: {
+      whyIShare: "I made FX Pack with Claude for my own reel. It's free. Try it this week and tell me what you made first.",
+    },
     who: 'Business owners and coaches who film themselves talking and want their reels to stop the scroll.',
     needs:
       'A Mac, and a vertical video of you talking. Claude Code makes setup one paste. Without it, you can install ffmpeg, Node and Python yourself and run one command.',
