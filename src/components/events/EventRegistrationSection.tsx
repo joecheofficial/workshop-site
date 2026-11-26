@@ -43,7 +43,7 @@ import { EmbeddedCheckout, EmbeddedCheckoutProvider } from '@stripe/react-stripe
 import { loadStripe } from '@stripe/stripe-js'
 import { celebrate } from '@/lib/celebrate'
 import { AI_LEVELS_SIGNUP } from '@/data/ai-levels-signup'
-import { isValidEmail } from '@/lib/email-validation'
+import { emailProblem } from '@/lib/email-validation'
 import WaitlistJoinForm from '@/components/events/WaitlistJoinForm'
 import { formatDonationLabelNote, toggleDonationPreset } from '@/lib/events'
 import { buildEventCheckoutRequestBody } from '@/lib/event-registration-flow'
@@ -459,8 +459,9 @@ export default function EventRegistrationSection({
       return
     }
 
-    if (!isValidEmail(nextEmail)) {
-      setError('Please enter a valid email address, like name@example.com.')
+    const nextEmailProblem = emailProblem(nextEmail)
+    if (nextEmailProblem) {
+      setError(nextEmailProblem)
       return
     }
 
@@ -543,8 +544,9 @@ export default function EventRegistrationSection({
       return
     }
 
-    if (!isValidEmail(nextEmail)) {
-      setError('Please enter a valid email address, like name@example.com.')
+    const nextEmailProblem = emailProblem(nextEmail)
+    if (nextEmailProblem) {
+      setError(nextEmailProblem)
       return
     }
 

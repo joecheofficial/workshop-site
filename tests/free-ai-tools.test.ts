@@ -13,7 +13,7 @@ const KEYWORDS = ['SKILL', 'HANDY', 'BRAIN', 'PAPER', 'CALLS', 'SHARP', 'SLOTS',
 
 // Week 2 reels (Illy approved 2026-10-16): keyword, slug and the honest level
 // (terminal or Claude Code setup = builder, an app or a website = beginner).
-const WEEK2: Record<string, { slug: string; level: 'beginner' | 'builder'; offer?: 'video-agent' }> = {
+const WEEK2: Record<string, { slug: string; level: 'beginner' | 'builder'; offer?: 'video-agent' | 'video-agent-fx' }> = {
   VOICE: { slug: 'free-ai-voicestudio', level: 'beginner' },
   DATA: { slug: 'free-ai-firecrawl', level: 'beginner' },
   NOTES: { slug: 'free-ai-meetily', level: 'beginner' },
@@ -34,6 +34,7 @@ const WEEK2: Record<string, { slug: string; level: 'beginner' | 'builder'; offer
   SHOT: { slug: 'free-ai-draw-things', level: 'beginner' },
   // Week 5 Sunday (preview 9 Nov, awaits Illy): Claude Code skills = builder, ends on the $27 Video Agent.
   SCRIPT: { slug: 'free-ai-youtube-skills', level: 'builder', offer: 'video-agent' },
+  EDIT: { slug: 'free-ai-fx-pack', level: 'builder', offer: 'video-agent-fx' },
 }
 
 test('every Free AI Tool is present, one per keyword', () => {

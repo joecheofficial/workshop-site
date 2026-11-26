@@ -15,7 +15,7 @@ export function freeAiToolPack(slug: string): PackPageContent {
   // Week 2 tools (2026-10-16) carry a one-prompt Claude Code setup and honest limits.
   // The first ten have none of the optional fields and render exactly as before.
   if (t.claudePrompt) return setupNotesPack(t)
-  const sameAsTool = t.githubUrl === t.toolUrl
+  const sameAsTool = !t.githubUrl || t.githubUrl === t.toolUrl
   return {
     slug: t.slug,
     level: t.level ?? 'beginner',
@@ -68,7 +68,7 @@ export function freeAiToolPack(slug: string): PackPageContent {
 
 /** Setup-notes page: the one Claude Code prompt and the download first, then the manual steps, limits and fixes. */
 function setupNotesPack(t: FreeAiTool): PackPageContent {
-  const sameAsTool = t.githubUrl === t.toolUrl
+  const sameAsTool = !t.githubUrl || t.githubUrl === t.toolUrl
   const n = t.steps.length
   const sections: PackGuideSection[] = []
   if (t.who) sections.push({ title: "Who it's for", text: t.who })
