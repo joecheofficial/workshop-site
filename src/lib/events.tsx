@@ -327,6 +327,14 @@ export type EventDefinition = {
     mapsUrl?: string
     skipSetupInstructions?: boolean
     signatureName?: string
+    confirmationContent?: {
+      subject: string
+      headline: string
+      intro: string
+      locationLabel: string
+      paragraphs: string[]
+      actions: Array<{ label: string; description: string; href: string }>
+    }
     // Plain-letter confirmation from Joe instead of the branded template
     // (Illy 12 Nov 2026: free-class emails are short letters). Paragraphs are
     // separated by a blank line. {first} = first name. A paragraph that is
@@ -874,6 +882,29 @@ export const events: EventDefinition[] = [
     emailConfig: {
       ...connectionDinnerCangguTemplate.emailConfig,
       mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Bali+Beach+Glamping+Tabanan',
+      confirmationContent: {
+        subject: "You're in for Joechella! Your weekend details",
+        headline: "You're in for Joechella!",
+        intro: "Thanks for joining me for my 50th. I can't wait to spend this weekend with you.",
+        locationLabel: 'Bali Beach Glamping, Tabanan, Bali',
+        paragraphs: [
+          'Your weekend pass covers Friday, December 11 and Saturday, December 12, 2026. Come for either day or both. Friday starts at 11 am and Saturday at 1 pm, until late.',
+          'Before you arrive, please join the weekend WhatsApp group and complete the guest intake form below.',
+          'Bring your swimmers, something comfortable to move in, and your favourite playful outfits. Food and drinks are purchased separately from the venue. Accommodation is not included in the weekend pass.',
+        ],
+        actions: [
+          {
+            label: 'Join Weekenders Chat - Joechella',
+            description: 'This group is just for ticket holders joining us for the weekend. It is our central place for schedule updates, practical details and reminders throughout the celebration.',
+            href: 'https://chat.whatsapp.com/G58cN1CwdSLELkdjOxexyA?mode=gi_t',
+          },
+          {
+            label: 'Complete the guest intake form',
+            description: 'Tell us when you are coming, your food preferences and any allergies. This helps us give BBG a clearer idea of guest numbers and prepare food for the weekend. Menu selections are preferences, not pre-orders.',
+            href: 'https://forms.gle/LRhp7sehzzpMPVtbA',
+          },
+        ],
+      },
     },
     pricing: {
       currencySymbol: '$',
