@@ -35,7 +35,7 @@ import {
   resolveEventCheckoutAmount,
 } from '@/lib/event-checkout'
 import { toStripeUnitAmount } from '@/lib/stripe-amount'
-import { isValidEmail } from '@/lib/email-validation'
+import { emailProblem } from '@/lib/email-validation'
 import { isEventEnded, isEventRegistrationClosed } from '@/lib/event-status'
 
 export const runtime = 'nodejs'
@@ -96,12 +96,13 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Invalid input.' }, { status: 400 })
     }
 
-    if (!isValidEmail(attendeeEmail)) {
+    const attendeeEmailProblem = emailProblem(attendeeEmail)
+    if (attendeeEmailProblem) {
       await trackInsightEvent('checkout_failed', {
         route: '/events/checkout',
         properties: { reason: 'invalid_email', slug },
       })
-      return NextResponse.json({ error: 'Please enter a valid email address.' }, { status: 400 })
+      return NextResponse.json({ error: attendeeEmailProblem }, { status: 400 })
     }
 
     if (
