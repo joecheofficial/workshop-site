@@ -158,6 +158,14 @@ export const giveaways: Giveaway[] = [
     badgeVariant: 'pink',
   },
   {
+    slug: 'free-ai-fx-pack',
+    title: 'Free AI Tools: FX Pack setup notes',
+    description: 'The 20 video effects from the "20 effects in 20 seconds" reel, as a free pack for your own talking video, on your Mac.',
+    icon: '◆',
+    badge: 'Free Tool',
+    badgeVariant: 'purple',
+  },
+  {
     slug: 'free-ai-youtube-skills',
     title: 'Free AI Tools: Claude Video Skills setup notes',
     description: 'Eleven free Claude skills for your videos: scored hooks, scripts, title and cover checks, cut lists and comment replies.',

@@ -1911,6 +1911,103 @@ Do not sign me up for anything.`,
         "a": "Use /yt-script, /yt-package for the cover words, /yt-edit and /yt-comment. Skip the chapters, search and retention skills, those are for long videos."
       }
     ]
+  },
+  {
+    slug: 'free-ai-fx-pack',
+    keyword: 'EDIT',
+    name: 'FX Pack', // email subject becomes "Your FX Pack setup notes"
+    tagline: '20 video effects. Your video. Built by Claude.',
+    subline:
+      'The 20 effects from my "20 video effects in 20 seconds" reel, as a free pack. Give it a video of you talking and it puts all 20 on it, on your Mac.',
+    toolUrl: 'https://workshop.mastermindshq.business/downloads/mhq-fx-pack-v1.0.zip',
+    primaryLabel: 'Download the pack',
+    intro:
+      'Every effect in that reel is a short program Claude wrote: the cursor that boxes your head, the clones that slide out behind you, the newspaper front page, the dust you turn into at the end, and 16 more. Here they are, all 20, ready for your own video. You put your name, handle and comment word in one file, run it, and get your video back with the effects on it. Your sound stays as it was.',
+    steps: [
+      'Download the pack and unzip it.',
+      'Open Claude Code in the unzipped folder and paste the setup prompt from this page. Claude checks your Mac has what it needs and asks before it installs anything.',
+      'Tell Claude your name, your Instagram handle and your comment word, then drag in a vertical video of you talking, 20 to 40 seconds.',
+      'Wait a few minutes. Your video comes back as out/fx-video.mp4 with all 20 effects on it.',
+    ],
+    howIUse: [
+      'Film it on a plain wall with the camera still. The pack cuts you out of the background, and a plain wall gives the cleanest edges.',
+      'Say the name of each effect as it plays, like in my reel, then ask Claude to "retime the effects to my words". Each one lands on its word.',
+      'You do not need all 20. Ask Claude to "keep only clone row, orbit ring and blow away" for a shorter, calmer video.',
+    ],
+    goodToKnow:
+      'It all runs on your Mac. Nothing is uploaded, and there is no account and no API key. It uses Apple\'s own on-device tool to cut you out of the picture, so it is Mac only. The pack is free and open source (MIT). Claude Code needs a paid Claude plan, but you can also run it from Terminal without Claude.',
+    links: [
+      { label: 'Download the pack', url: 'https://workshop.mastermindshq.business/downloads/mhq-fx-pack-v1.0.zip' },
+      { label: 'Claude Code (needs a paid Claude plan)', url: 'https://claude.com/product/claude-code' },
+      { label: 'Remotion, the free video tool it renders with', url: 'https://www.remotion.dev' },
+    ],
+    githubUrl: '',
+    stars: 0,
+    license: 'MIT',
+    why: 'The 20 effects from Joe\'s "20 video effects in 20 seconds, built by Claude" reel, as a free pack that puts them on your own talking video, on your Mac.',
+    level: 'builder',
+    offerId: 'video-agent-fx',
+    who: 'Business owners and coaches who film themselves talking and want their reels to stop the scroll.',
+    needs:
+      'A Mac, and a vertical video of you talking. Claude Code makes setup one paste. Without it, you can install ffmpeg, Node and Python yourself and run one command.',
+    ticks: ['No sign-up here', 'Runs on your Mac, nothing uploaded', 'All 20 effects from the reel'],
+    claudePrompt: `Install the MHQ FX Pack on this Mac and put the effects on my video.
+
+My rules:
+1. Only download from https://workshop.mastermindshq.business/downloads/mhq-fx-pack-v1.0.zip and its checksum at https://workshop.mastermindshq.business/downloads/mhq-fx-pack-v1.0.zip.sha256
+2. Download both into a new empty folder. Check that the zip matches the checksum. If it does not, stop and tell me.
+3. Unzip it. Read README.md, SKILL.md and make.sh first and tell me in one line what make.sh does.
+4. Check my Mac has what make.sh needs. Ask me before you install anything.
+5. Ask me for my name, Instagram handle, comment word and real post count, and put them in config.json.
+6. Run ./make.sh on my video: (drag your video file here). Show me two frames before you say it is done.`,
+    requirements: [
+      'A Mac. Apple Silicon is fastest, Intel works but slower.',
+      'A vertical video of you talking, camera still, 20 to 40 seconds.',
+      'Claude Code for the one-paste setup (paid Claude plan), or Terminal if you are happy typing commands.',
+      'About 2 GB of free space while it works.',
+    ],
+    usePrompt: {
+      title: 'Three things to try after the first video',
+      text: `Retime the effects to my words. Each effect should start on the word that names it.
+
+Keep only clone row, orbit ring, banknote and blow away, and stretch them over the whole video.
+
+Change the banknote to my number: (your number) and (what it counts).`,
+    },
+    does: [
+      'Put all 20 effects from the reel on your own talking video',
+      'Cut you out of the background on your Mac, frame by frame',
+      'Follow your head, so the effects line up with you as you move',
+      'Put your name, handle and comment word in the effects',
+      'Keep your own sound exactly as it was',
+    ],
+    doesNot: [
+      'Film or edit your video. Bring a finished take',
+      'Add music or sound effects',
+      'Work on Windows or in the browser',
+      'Post anything for you',
+    ],
+    limits: [
+      'Mac only. It uses Apple\'s on-device person cut-out.',
+      'A busy background or a moving camera makes the cut-out messier. A plain wall works best.',
+      'The effects are spread evenly over your video at first. Retiming them to your words is one ask in Claude Code.',
+      'Rendering takes a few minutes on an Apple Silicon Mac.',
+      'Free and open source under the MIT licence, made by Masterminds HQ with Claude.',
+    ],
+    stuck: [
+      {
+        q: 'It says ffmpeg, node or swiftc is missing',
+        a: 'Ask Claude Code to install what is missing. Or install Homebrew from brew.sh, run "brew install ffmpeg node python", and run "xcode-select --install" for swiftc.',
+      },
+      {
+        q: 'The edges around me look rough',
+        a: 'Film again on a plain wall with even light and the camera on a stand. The cut-out is only as clean as the picture it gets.',
+      },
+      {
+        q: 'The render stops with a timeout',
+        a: 'Close other big apps and run ./make.sh again. It starts from the beginning and takes a few minutes.',
+      },
+    ],
   }
 ]
 
